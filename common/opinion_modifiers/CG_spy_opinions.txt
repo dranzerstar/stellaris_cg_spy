@@ -1,0 +1,39 @@
+opinion_stole_pops = {
+	opinion = {
+		base = -60
+
+		modifier = {
+			add = -20
+			NOT = { has_policy_flag = slavery_allowed }
+			is_gestalt = no
+		}
+		modifier = {
+			add = -10
+			has_ethic = ethic_egalitarian
+		}
+		modifier = {
+			add = -20
+			has_ethic = ethic_fanatic_egalitarian
+		}
+		modifier = {
+			add = -40
+			has_valid_civic = civic_machine_servitor
+		}
+
+	}
+
+	decay = {
+		base = 1
+	}
+}
+
+
+opinion_hypno = {
+	opinion = {
+		base = 40
+	}
+	accumulative = yes
+	decay = {
+		base = 1
+	}
+}

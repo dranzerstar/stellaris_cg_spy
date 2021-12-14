@@ -1,0 +1,146 @@
+#############################
+# ESPIONAGE SCRIPTED EFFECTS
+#############################
+
+@AssetCategoryDownWeight = 0.4 #Factor for however *less* likely you are to receive an Asset which is in the same category as the current Operation
+@AssetTypeWeight = 10 #Factor for however more or less likely you are to receive an Asset in the same category as one which is assigned to Acquire Asset
+
+# Operation scope (for Acquire Asset and operation random events)
+CG_espionage_acquire_asset_ero = {
+	random_list = {
+		1 = {
+			modifier = {
+				factor = @AssetTypeWeight
+				has_espionage_type = operation_acquire_lust_asset
+				NOT = { has_espionage_asset = asset_maid }
+			}
+			owner = {
+				set_country_flag = asset_maid
+			}
+		}
+		1 = {
+			modifier = {
+				factor = @AssetTypeWeight
+				has_espionage_type = operation_acquire_lust_asset
+				NOT = { has_espionage_asset = asset_sister }
+			}
+			owner = {
+				set_country_flag = asset_sister
+			}
+		}
+		1 = {
+			modifier = {
+				factor = @AssetTypeWeight
+				has_espionage_type = operation_acquire_lust_asset
+				NOT = { has_espionage_asset = asset_webshop }
+			}
+			owner = {
+				set_country_flag = asset_webshop
+			}
+		}
+		1 = {
+			modifier = {
+				factor = @AssetTypeWeight
+				has_espionage_type = operation_acquire_lust_asset
+				NOT = { has_espionage_asset = asset_hresearch }
+			}
+			owner = {
+				set_country_flag = asset_hresearch
+			}
+		}
+		1 = {
+			modifier = {
+				factor = @AssetTypeWeight
+				has_espionage_type = operation_acquire_lust_asset
+				NOT = { has_espionage_asset = asset_warden }
+			}
+			owner = {
+				set_country_flag = asset_warden
+			}
+		}
+
+	}
+}
+
+CG_espionage_acquire_ero_asset_create_asset = {
+	switch = {
+		trigger = has_country_flag
+		asset_maid = {
+				from.spynetwork = { create_espionage_asset = { type = asset_maid } }
+				remove_country_flag = asset_maid
+		}
+		asset_sister = {
+			from.spynetwork = { create_espionage_asset = { type = asset_sister } }
+			remove_country_flag = asset_sister
+		}
+		asset_webshop = {
+			from.spynetwork = { create_espionage_asset = { type = asset_webshop } }
+			remove_country_flag = asset_webshop
+		}
+		asset_hresearch = {
+			from.spynetwork = { create_espionage_asset = { type = asset_hresearch } }
+			remove_country_flag = asset_hresearch
+		}
+		asset_warden = {
+			from.spynetwork = { create_espionage_asset = { type = asset_warden } }
+			remove_country_flag = asset_warden
+		}
+	}
+	
+}
+
+
+
+
+# Each of the following events is weighted down if the empire has already rolled that particular event recently. Timed flags are set in the event itself, using @RandomOperationEventTimer. The modifier factor used below is explicitly not '0' for repeatable events - to prevent the pool from running out of 'fresh' events entirely.
+
+# Regular empire acting upon a regular empire
+# country (operation owner) scope | root = operation; from = target
+CG_operation_MM_failed_random_events = {
+	random_list = {
+		1 = { #失去联络
+			modifier = {
+				factor = 0.1
+				has_country_flag = recent_op_contact_lost
+			}
+			owner={
+			country_event = { id = CG_operation_failed.5000 }
+			}
+		}
+		1 = { #直接被抓
+			modifier = {
+				factor = 0.1
+				has_country_flag = recent_op_operative_spooked
+			}
+			owner={
+			country_event = { id = CG_operation_failed.5005 }}
+		}
+		1 = { #战斗
+
+			modifier = {
+				factor = 0.1
+				has_country_flag = recent_op_snuffed_out
+			}
+			owner={
+			country_event = { id = CG_operation_failed.5030 }}
+		}
+		1 = { #要求资源
+
+			modifier = {
+				factor = 0.1
+				has_country_flag = recent_op_drain_resources
+			}
+			owner={
+				country_event = { id = operation.5040 }}
+		}
+		1 = { #性骚扰
+			modifier = {
+				factor = 0.1
+				has_country_flag = recent_op_confidence_wavers
+			}
+			owner={
+			country_event = { id = CG_operation_failed.5050 }}
+		}
+	}
+}
+

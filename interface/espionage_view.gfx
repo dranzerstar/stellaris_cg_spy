@@ -1,0 +1,146 @@
+# Espionage event icons
+spriteTypes = {
+	spriteType = {
+		name = "GFX_espionage_asset_icon"
+		textureFile = "gfx/interface/espionage/operations/option_asset_event_action.dds"
+	}
+	spriteType = {
+		name = "GFX_espionage_chapter_icon_document"
+		textureFile = "gfx/interface/espionage/operations/espionage_chapter_icons/espionage_chapter_icon_1.dds"
+	}
+	spriteType = {
+		name = "GFX_espionage_chapter_icon_surveillance"
+		textureFile = "gfx/interface/espionage/operations/espionage_chapter_icons/espionage_chapter_icon_2.dds"
+	}
+	spriteType = {
+		name = "GFX_espionage_chapter_icon_security"
+		textureFile = "gfx/interface/espionage/operations/espionage_chapter_icons/espionage_chapter_icon_3.dds"
+	}
+	spriteType = {
+		name = "GFX_espionage_chapter_icon_motion"
+		textureFile = "gfx/interface/espionage/operations/espionage_chapter_icons/espionage_chapter_icon_4.dds"
+	}
+	spriteType = {
+		name = "GFX_espionage_chapter_icon_success"
+		textureFile = "gfx/interface/espionage/operations/espionage_chapter_icons/espionage_chapter_icon_5.dds"
+	}
+	spriteType = {
+		name = "GFX_espionage_chapter_icon_target"
+		textureFile = "gfx/interface/espionage/operations/espionage_chapter_icons/espionage_chapter_icon_6.dds"
+	}
+	spriteType = {
+		name = "GFX_espionage_chapter_progress_icon_op_cat_manipulation"
+		textureFile = "gfx/interface/espionage/chapter_in_progress_manipulation.dds"
+		noOfFrames = 3
+	}
+	spriteType = {
+		name = "GFX_espionage_chapter_progress_icon_op_cat_provocation"
+		textureFile = "gfx/interface/espionage/chapter_in_progress_blackops.dds"
+		noOfFrames = 3
+	}
+	spriteType = {
+		name = "GFX_espionage_chapter_progress_icon_op_cat_sabotage"
+		textureFile = "gfx/interface/espionage/chapter_in_progress_sabotage.dds"
+		noOfFrames = 3
+	}
+	spriteType = {
+		name = "GFX_espionage_chapter_progress_icon_op_cat_subterfuge"
+		textureFile = "gfx/interface/espionage/chapter_in_progress_subterfuge.dds"
+		noOfFrames = 3
+	}
+	spriteType = {
+		name = "GFX_espionage_chapter_progress_icon_op_cat_ero"
+		textureFile = "gfx/interface/chapter_in_progress_ero.dds"
+		noOfFrames = 3
+	}
+	spriteType = {
+		name = "GFX_espionage_chapter_progress_icon_op_cat_holy"
+		textureFile = "gfx/interface/chapter_in_progress_holy.dds"
+		noOfFrames = 3
+	}
+	spriteType = {
+		name = "GFX_espionage_blackops_sign"
+		textureFile = "gfx/interface/espionage/espionage_blackops_sign.dds"
+	}
+	spriteType = {
+		name = "GFX_espionage_op_cat_blackops_sign"
+		textureFile = "gfx/interface/espionage/espionage_blackops_sign.dds"
+	}
+	spriteType = {
+		name = "GFX_espionage_manipulation_sign"
+		textureFile = "gfx/interface/espionage/espionage_manipulation_sign.dds"
+	}
+	spriteType = {
+		name = "GFX_espionage_op_cat_manipulation_sign"
+		textureFile = "gfx/interface/espionage/espionage_manipulation_sign.dds"
+	}
+	spriteType = {
+		name = "GFX_espionage_sabotage_sign"
+		textureFile = "gfx/interface/espionage/espionage_sabotage_sign.dds"
+	}
+	spriteType = {
+		name = "GFX_espionage_op_cat_sabotage_sign"
+		textureFile = "gfx/interface/espionage/espionage_sabotage_sign.dds"
+	}
+	spriteType = {
+		name = "GFX_espionage_subterfuge_sign"
+		textureFile = "gfx/interface/espionage/espionage_subterfuge_sign.dds"
+	}
+	spriteType = {
+		name = "GFX_espionage_op_cat_subterfuge_sign"
+		textureFile = "gfx/interface/espionage/espionage_subterfuge_sign.dds"
+	}
+	spriteType = {
+		name = "GFX_espionage_ero_sign"
+		textureFile = "gfx/interface/espionage_ero_sign.dds"
+	}
+	spriteType = {
+		name = "GFX_espionage_op_cat_ero_sign"
+		textureFile = "gfx/interface/espionage_ero_sign.dds"
+	}
+	spriteType = {
+		name = "GFX_espionage_holy_sign"
+		textureFile = "gfx/interface/espionage_holy_sign.dds"
+	}
+	spriteType = {
+		name = "GFX_espionage_op_cat_holy_sign"
+		textureFile = "gfx/interface/espionage_holy_sign.dds"
+	}
+	# Static Appearance Assets
+	spriteType = {
+		name = "GFX_espionage_asset_hive"
+		textureFile = "gfx/interface/espionage/assetCard_Hive.dds"
+	}
+	spriteType = {
+		name = "GFX_espionage_asset_machine"
+		textureFile = "gfx/interface/espionage/assetCard_Robot.dds"
+	}
+	spriteType = {
+		name = "GFX_espionage_asset_organs"
+		textureFile = "gfx/interface/espionage/assetCard_InternalOrgans.dds"
+	}
+	spriteType = {
+		name = "GFX_spypower_trend_stagnant_arrow"
+		textureFile = "gfx/interface/espionage/spypower_trend_stagnant_arrow.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_espionage_difficulty_easy"
+		textureFile = "gfx/interface/espionage/operations/icon_difficulty_operations_easy.dds"
+	}
+
+	spriteType = {
+		name = "GFX_espionage_difficulty_normal"
+		textureFile = "gfx/interface/espionage/operations/icon_difficulty_operations_normal.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_espionage_difficulty_hard"
+		textureFile = "gfx/interface/espionage/operations/icon_difficulty_operations_hard.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_espionage_difficulty_hell"
+		textureFile = "gfx/interface/espionage/operations/icon_difficulty_operations_hell.dds"
+	}
+}

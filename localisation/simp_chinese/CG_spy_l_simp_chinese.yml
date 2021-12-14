@@ -1,0 +1,159 @@
+﻿l_simp_chinese:
+ op_cat_ero:0 "欲望渗透"
+ mod_op_cat_ero:0 "行动技能（欲望渗透）"
+ op_cat_ero_desc:0 "把色色直接放到圣女面前就不信连一眼都不看!"
+ operation_undercover:0 "潜入捜査"
+ operation_undercover_on_success:0 "$IF_SUCCESSFUL|E$\n获得[root.target.GetName]的情报和最大渗透等级。"
+ CG_operation_undercover_desc:0 "招务特工、对魔忍、兔女郎、潜入目标国家的色色场所，进行情报收集。这将会暴露对方的弱点，在一定时间内增加我方的§Y最大渗透等级§!。"
+ 
+
+
+ operation_acquire_lust_asset:0 "圣女诱堕"
+ operation_acquire_lust_asset_on_success:0 "$IF_SUCCESSFUL|E$\n在[root.target.GetName]获得线人，以便落实其他欲望类渗透"
+ CG_operation_acquire_lust_asset_desc:0 "发掘那些口不对心的[root.target.GetName]，邀请她们跟我们一起堕落，让她们尝到天堂的高潮，而代价只是仅仅告诉我们今天主教大人吃了什么。\n\n指派一名§Y线人§!执行这样的行动可能会有悖于他们的利益。"
+
+ operation_abduct_pops:0 "拐带少女"
+ operation_abduct_pops_on_success:0 "$IF_SUCCESSFUL|E$\n在[root.target.GetName]进行拐带行动，并获得一定目的地的人口"
+ CG_operation_abduct_pops_desc:0 "在当地照幕小型货车司机，提供免费前往游乐园服务。"
+ operation_abduct_pops_recent:0 "$TRIGGER_FAIL$ §R还需要等待 §Y[Root.recent_steal_pops]§! 才能再次行动.§!\n"
+ operation_abduct_pops_five_pops:0 "$TRIGGER_FAIL$ §目的地没有足够人口。§!\n"
+
+ operation_hypno:0 "催眠暗示"
+ operation_hypno_on_success:0 "$IF_SUCCESSFUL|E$\n在[root.target.GetName]获得定量外交支持和有机会获得正向外交关系"
+ CG_operation_hypno_desc:0 "潜入队伍将在[root.target.GetName]寻找适合的高级外交人员，并尝试对其施加催眠暗示，使其在作出偏向有利我方的外交决定。"
+
+#########################
+# undercover
+###########################
+
+ CG_operation.7000.desc:1 "我们的潜入兔女郎已经成功上岗，并发送回来一封内经常出入场所的重要人物名单。"
+ CG_operation.7000.a:0 "任务完成。"
+
+
+
+
+#########################
+# accquire lust assest
+###########################
+
+ CG_operation.1000.name:0 "动员兔女郎"
+ CG_operation.1000.desc.hostile:0 "找到那些偷偷自慰的小修女了。"
+ CG_operation.1000.desc.friendly:0 "我们的“兔女郎”正开始和那些被我们标记为有潜在用处的目标套近乎。"
+ CG_operation.1001.name:0 "收缩势力范围"
+ CG_operation.1001.desc:1 "一份目标的候选名单已经拟定。"
+ CG_operation.1002.name:0 "建立线人联系"
+ CG_operation.1002.desc:3 "随着行动接近尾声，$role_spymaster$[spynetwork.leader.GetName]已经转而保护我们在[target.GetName]内的新线人。其余特工随时准备着为[spynetwork.leader.GetHeShe]提供任何可能需要的掩护措施。"
+ CG_operation.1006.name:0 "线人已获取"
+ CG_operation.1006.desc.intro:1 "$role_spymaster$[from.spynetwork.leader.GetName]从[from.target.GetName]发回报告：到目前为止此项计划进展顺利。"
+ CG_operation.1006.desc.maid:1 "$operation.1006.desc.intro$我们的间谍网络现在允许我们接触到§H一位在[from.target.GetAdj]在首都宫殿工作的女仆§!，我们可以通过催眠术式控制她，并为我们诡探宫殿内的程报。"
+ CG_operation.1006.desc.sister:1 "$operation.1006.desc.intro$我们成功伪装成以圣光显现的身份和§H一位[from.target.GetAdj]修女联系§!。我们可以圣光之名开展异端活动。"
+ CG_operation.1006.desc.webshop:1 "$operation.1006.desc.intro$我们的间谍网络现在能支持我们接触到§H一位在的[from.GetName]的电商§!，我们可以透过她出口魅魔专用强度的情趣用品，拓展在当地生产淫能的机会。"
+ CG_operation.1006.desc.hresearch:1 "$operation.1006.desc.intro$我们已经取得了§H一位[from.target.GetAdj]圣光学士!的联系，，这位学士对这块纯白色的欲望宝石非常感兴趣。我们可以以此作为交换筹码，套取当地的程报。。"
+ CG_operation.1006.desc.warden:1 "$operation.1006.desc.intro$我们引诱到了一名欲求不满的调教人员§!，因为长期从事调教工作而得到了M型职业病，我们来帮她解放吧。"
+ CG_operation.1006.desc.drone:1 "$operation.1006.desc.intro$我们间谍网络现已获取到了§H一位已改造的[from.target.GetAdj]无人机§!，我们能通过入侵其意识或是其他方法操控[from.target.GetName]实体，这样的好处是显而易见的。"
+ CG_operation.1006.desc.organ:1 "$operation.1006.desc.intro$我们已经控制了§H[from.target.GetName]实体的一部分§!，这位反常工蜂使我们得以接入主蜂巢思维，负责掩护我们针对主脑的行动以及达成更多目的。"
+ CG_operation.1006.desc.component:1 "$operation.1006.desc.intro$我们已经控制了§H[from.target.GetName]实体的一部分§!，这一异常无人机使我们得以接入其中央主控智能并发动直接而毁灭性的打击。"
+ CG_operation.1006.desc.network:1 "$operation.1006.desc.intro$我们的间谍网络现在能支持我们连接§H部分[from.target.GetName]用于运算的网络§!。如果我们要掩盖自己对于机器实体的行动，传送错误的信息或是开展其他干扰的话，我们可以将其自身的协议武器化来对付它自己。"
+ CG_operation.1006.desc.default:0 "$operation.1006.desc.intro$我们刚刚招募了一名有价值的线人，此人会协助我们在[from.target.GetAdj]国内的情报搜集工作和间谍活动。"
+ CG_operation.1006.b:0 "立即将该线人投入行动。"
+
+#CG ASSETS
+ asset_maid:0 "女仆"
+ asset_maid_desc:0 "主教大人昨晚也是自慰到天亮呢"
+ asset_sister:0 "修女"
+ asset_sister_desc:0 "今天忏悔室的等候队又排到哪里去了。。。。"
+ asset_webshop:0 "电商"
+ asset_webshop_desc:0 "城里谁拍下最多按摩器我当然知道啦!"
+ asset_hresearch:0 "圣光学士"
+ asset_hresearch_desc:0 "这位学士对这块纯白色的欲望宝石非常感兴趣。"
+ asset_warden:0 "调教人员"
+ asset_warden_desc:0 "她天天让罪人们感受圣光的爱，但谁能让她也能被爱呢?"
+
+
+#########################
+# abduct event
+###########################
+
+
+ CG_operation.2000.desc:0 "TOYOTA HiACE。准备出发!"
+ CG_operation.2001.desc:0 "[root.target.GetSpeciesName]发现! TOYOTA HiACE 全速前进! 让每个[root.target.GetSpeciesName]也能体验到安全，快速的交通服务。"
+ CG_operation.2001.desc.next:0 "一! 库! 走!"
+ CG_operation.2002.name:0 "极速航行"
+ CG_operation.2002.desc:0 "欢迎[root.target.GetSpeciesName]乘坐这HiACE，为保证阁下在航行时候的安全，请扣好安全装置。"
+ CG_operation.2002.desc.next:0 "好耶!"
+ CG_operation.2003.name:0 "娱兴节目"
+ CG_operation.2003.name.next:0 "开始长途娱兴节目"
+ CG_operation.2003.desc:0 "由于旅途航程遥远，为确保行程的质量，HiAce为阁下准备了娱兴节目。"
+ CG_operation.2005.name:0 "关口"
+ CG_operation.2005.desc.smooth:0 "我们抵达了[fromfrom.target.GetName]的关口, 并成功过关。"
+ CG_operation.2005.desc.messy:0 "我们抵达了[fromfrom.target.GetName]的关口, 但是我们的车牌号码被[fromfrom.target.GetName]的口岸人员记录了。"
+ CG_operation.2005.tooltip.pops:0 "§Y3 个[from.from.target.GetName] 人口§! 安全到达 §Y[steal_pops_planet.GetName].§!"
+ CG_operation.2005.tooltip.cooldown:0 "§H还有再等 §Y6 年§! 才能再次发车到[from.from.target.GetName].§!"
+ CG_operation.2006.name:0 "失踪人口!!"
+ CG_operation.2006.desc.smooth.reg:0 "我们发现几个修女在回家路上失踪!!"
+ CG_operation.2006.desc.messy.reg:0 "我们发现几个修女在回家路上失踪!! [Root.GetSpeciesName] ，幸好监控镜头拍到作案的车子是来致§H[blamed_empire.GetName]§的!!"
+ CG_operation.2006.a.tooltip:0 "§R3 名人口被带走了!!§!"
+ CG_operation.2006.a:0 "寄!"
+
+
+#########################
+# hypno event
+###########################
+ CG_operation.3000.name:0 "催眠术式"
+ CG_operation.3000.next:0 "继续施术！"
+ CG_operation.3000.final.1:0 "设定暗示语：西瓜"
+ CG_operation.3000.final.2:0 "设定暗示语：苹果"
+ CG_operation.3000.final.3:0 "设定暗示语：橙"
+ CG_operation.3000.desc:0 "已经找到合适人员，控制目标完成。\n展开屏蔽结界\n调教术式强度。\n进行第一阶催眠暗示。"
+ CG_operation.3001.desc:0 "发现目标圣光保护刻印，正在进行破解。。。\n破解成功。。\n提高催眠强度。"
+ CG_operation.3002.desc:0 "基本催眠术式成功完成！\n只剩下设置好暗示语，并可以在适合的时候启动催眠状态！"
+ CG_operation.3004.name:0 "催眠术式：完成"
+ CG_operation.3004.desc:0 "我们成功在[fromfrom.target.GetName]的外交人员施展催眠术式，日后在我他们进行外交交涉的时候就可以发动术式，并获得外交支持。"
+ CG_operation.2004.a.tooltip:0 "获得些许外交支持"
+ CG_operation.2004.b.tooltip:0 "获得大量外交支持和国家评价。"
+ CG_operation.3004.a:0 "非常好！"
+ CG_operation.3004.b:0 "计划完美执行！"
+ CG_operation.3004.c:0 "尝试利用实验术式。加强催眠效果。"
+ CG_operation.3005.name:0 "术式过载！"
+ CG_operation.3005.desc:0 "被摆了一道，我们的术式触发了另外一个圣光保险！解除了催眠术式。"
+ CG_operation.3005.a:0 "为了不暴露我们的行踪，只能把目标灭口了。（把目榨干）"
+
+
+
+#########################
+# cg_operation fail event
+###########################
+ CG_operation_failed.5000.name:0 "失去联络"
+ CG_operation_failed.5000.desc:0 "我们的潜入[fromfrom.target.GetName]的兔兔没有向我们定期通信。"
+ CG_operation_failed.5000.a:0 "调动同一个区域的兔兔去找找她吧。"
+ CG_operation_failed.5000.a.tooltip:0 "花费能源"
+ CG_operation_failed.5000.b:0 "在摸鱼是吧，在等一下就该有报告了。"
+ CG_operation_failed.5000.b.tooltip:0 "这么简单的工作就别烦我了。"
+ CG_operation_failed.5001.name:0 "找回兔兔"
+ CG_operation_failed.5001.desc:0 "联络恢复了，回去工作吧"
+ CG_operation_failed.5002.name:0 "找回兔兔，但是"
+ CG_operation_failed.5002.desc:0 "兔兔被顾客们玩坏了，任务失败！"
+
+ CG_operation_failed.5050.name:0 "性骚扰投诉"
+ CG_operation_failed.5050.desc:0 "新人兔兔在活动场所遭到性骚扰"
+ CG_operation_failed.5050.a:0 "就这丁点事打电话给我你还算是个魅魔吗？"
+
+ CG_operation_failed.5005.name:0 "露馅了！"
+ CG_operation_failed.5005.desc:0 "我们的潜入兔兔被抽出了，并成为当晚的特别凌辱节目！"
+ CG_operation_failed.5005.a:0 "寄了！"
+ CG_operation_failed.5005.b:0 "专业的兔兔可是受过凌辱拷问特训的呢！小儿科。继续任务。"
+
+ CG_operation_failed.5030.name:0 "进入战斗"
+ CG_operation_failed.5030.desc:0 "我们潜入兔兔的安全屋被发现！在转移阵地的时候和[from.target.GetName]的国安人员打起来了！"
+ CG_operation_failed.5030.a:0 "空投两个弹夹！"
+ CG_operation_failed.5030.b:0 "我们没有足够的资源，只能靠兔兔自己了。"  
+ CG_operation_failed.5030.b.tooltip:0 "赌一把吧！"
+
+ CG_operation_failed.5051.name:0 "战斗胜利"
+ CG_operation_failed.5051.desc:0 "兔兔最高，回到原来在[root.target.GetName]任务吧！"
+
+ CG_operation_failed.5052.name:0 "战败。。"
+ CG_operation_failed.5052.desc:0 "兔兔战败了，还被活抓！大概现在被狠狠地啪啪啪。。"
+
+
+

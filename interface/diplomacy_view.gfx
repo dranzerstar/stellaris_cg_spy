@@ -1,0 +1,683 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_ai_acceptance"
+		texturefile = "gfx/interface/icons/diplomacy/ai_acceptance.dds"
+		noOfFrames = 3			
+	}
+
+	spriteType = {
+		name = "GFX_our_rivalry_icon"
+		texturefile = "gfx/interface/icons/diplomacy/our_rivalry_icon.dds"
+	}
+
+	spriteType = {
+		name = "GFX_their_rivalry_icon"
+		texturefile = "gfx/interface/icons/diplomacy/their_rivalry_icon.dds"
+	}
+
+	spriteType = {
+		name = "GFX_relative_power_icon"
+		texturefile = "gfx/interface/icons/diplomacy/relative_power_icon.dds"
+	}
+	
+	#	spriteType = {
+	#		name = "GFX_species_portrait_placeholder"
+	#		texturefile = "gfx/interface/old/species/placeholder.dds"
+	#		noOfFrames = 1
+	#	}
+	
+	corneredTileSpriteType = {
+		name = "GFX_diplomacy_frame"
+		texturefile = "gfx/interface/tiles/green_frame_tile.dds"
+		borderSize = { x=15 y=15 }
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+	}
+	
+	spriteType = {
+		name = "GFX_diplomacy_long_button"
+		texturefile = "gfx/interface/buttons/button_211_animated.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+		noOfFrames = 3			
+		animation = {
+			animationmaskfile = "gfx/interface/buttons/button_211_animated_mask.dds"
+			animationtexturefile = "gfx/interface/buttons/button_211_animated_texture.dds"
+			animationrotation = 180.0
+			animationlooping = yes
+			animationtime = 40.0
+			animationdelay = 0.0
+			animationblendmode = "overlay"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 } 
+			animationframes = { 1 2 3 }
+		}
+	}
+	
+	spriteType = {
+		name = "GFX_info_background"
+		texturefile = "gfx/interface/diplomacy/info_background.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_info_background_125"
+		texturefile = "gfx/interface/diplomacy/info_background_125.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_info_background_148"
+		texturefile = "gfx/interface/diplomacy/info_background_148.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_embassy_their"
+		texturefile = "gfx/interface/icons/diplomacy/embassy_their.dds"
+	}
+	spriteType = {
+		name = "GFX_embassy_our"
+		texturefile = "gfx/interface/icons/diplomacy/embassy_our.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_diplomacy_dark_fade_bg"
+		texturefile = "gfx/interface/diplomacy/diplomacy_dark_fade_bg.dds"
+	}
+
+	spriteType = {
+		name = "GFX_opinion_level_bars"
+		texturefile = "gfx/interface/diplomacy/opinion_level_bars.dds"
+		noOfFrames = 5			
+	}
+
+	corneredTileSpriteType = {
+		name = "GFX_diplomacy_empire_chat_box"
+		textureFile = "gfx/interface/diplomacy/diplomacy_chat_box.dds"
+		borderSize = { x=8 y=8 }
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+	}
+
+	progressbarType = {
+		name = "GFX_diplomacy_opinion_terrible"
+		color = { 1.0 1.0 1.0 }
+		colorTwo = { 1.0 1.0 1.0 }
+		textureFile1 = "gfx/interface/diplomacy/opinion_progressBar_red.dds"
+		textureFile2 = "gfx/interface/diplomacy/opinion_progressBar_redBg.dds"
+		size = { x = 158 y = 27 }
+		effectFile = "gfx/FX/progress.lua"
+	}
+
+	progressbarType = {
+		name = "GFX_diplomacy_opinion_poor"
+		color = { 1.0 1.0 1.0 }
+		colorTwo = { 1.0 1.0 1.0 }
+		textureFile1 = "gfx/interface/diplomacy/opinion_progressBar_orange.dds"
+		textureFile2 = "gfx/interface/diplomacy/opinion_progressBar_orangeBg.dds"
+		size = { x = 158 y = 27 }
+		effectFile = "gfx/FX/progress.lua"
+	}
+
+	progressbarType = {
+		name = "GFX_diplomacy_opinion_neutral"
+		color = { 1.0 1.0 1.0 }
+		colorTwo = { 1.0 1.0 1.0 }
+		textureFile1 = "gfx/interface/diplomacy/opinion_progressBar_grey.dds"
+		textureFile2 = "gfx/interface/diplomacy/opinion_progressBar_greyBg.dds"
+		size = { x = 158 y = 27 }
+		effectFile = "gfx/FX/progress.lua"
+	}
+
+	progressbarType = {
+		name = "GFX_diplomacy_opinion_good"
+		color = { 1.0 1.0 1.0 }
+		colorTwo = { 1.0 1.0 1.0 }
+		textureFile1 = "gfx/interface/diplomacy/opinion_progressBar_green.dds"
+		textureFile2 = "gfx/interface/diplomacy/opinion_progressBar_greenBg.dds"
+		size = { x = 158 y = 27 }
+		effectFile = "gfx/FX/progress.lua"
+	}
+
+	progressbarType = {
+		name = "GFX_diplomacy_opinion_excellent"
+		color = { 1.0 1.0 1.0 }
+		colorTwo = { 1.0 1.0 1.0 }
+		textureFile1 = "gfx/interface/diplomacy/opinion_progressBar_blue.dds"
+		textureFile2 = "gfx/interface/diplomacy/opinion_progressBar_blueBg.dds"
+		size = { x = 158 y = 27 }
+		effectFile = "gfx/FX/progress.lua"
+	}
+
+	##Diplomacy Popups Between Other Empires
+	spriteType = {
+		name = "GFX_diplomacy_icon_bg_ring"
+		texturefile = "gfx/interface/diplomacy/diplomacy_popup_diplomatic_icon_ring.dds"	
+	}
+
+	##Diplomacy Actions BG Boxes
+	corneredTileSpriteType = {
+		name = "GFX_diplomacy_textbox_neutral"
+		textureFile = "gfx/interface/tiles/diplomacy_textbox_neutral.dds"
+	}
+		
+	corneredTileSpriteType = {
+		name = "GFX_diplomacy_textbox_aggressive"
+		textureFile = "gfx/interface/tiles/diplomacy_textbox_aggressive.dds"
+	}
+		
+	corneredTileSpriteType = {
+		name = "GFX_diplomacy_textbox_positive"
+		textureFile = "gfx/interface/tiles/diplomacy_textbox_positive.dds"
+	}
+		
+	corneredTileSpriteType = {
+		name = "GFX_diplomacy_textbox_negative"
+		textureFile = "gfx/interface/tiles/diplomacy_textbox_negative.dds"
+	}	
+
+	spriteType = {
+		name = "GFX_diplomacy_icons_shadow"
+		texturefile = "gfx/interface/diplomacy/diplomacy_icons_shadow.dds"
+	}
+
+	spriteType = {
+		name = "GFX_galactic_council_member"
+		texturefile = "gfx/interface/icons/federation/galactic_council_member.dds"
+	}
+
+	
+	spriteType = {
+		name = "GFX_call_in_favor"
+		texturefile = "gfx/interface/icons/diplomacy/call_in_favor.dds"
+	}
+
+	spriteType = {
+		name = "GFX_council_frame_128"
+		texturefile = "gfx/interface/flags/custodian_council_128_frame.dds"
+	}
+
+	spriteType = {
+		name = "GFX_emperor_council_frame_128"
+		texturefile = "gfx/interface/flags/emperor_council_128_frame.dds"
+	}
+
+	spriteType = {
+		name = "GFX_custodian_frame_128"
+		texturefile = "gfx/interface/flags/custodian_128_frame.dds"
+	}
+
+	spriteType = {
+		name = "GFX_emperor_frame_128"
+		texturefile = "gfx/interface/flags/emperor_128_frame.dds"
+	}
+
+	spriteType = {
+		name = "GFX_diplomacy_keyrelationship"
+		texturefile = "gfx/interface/intel/intel_icon_keyrelationship.dds"
+	}
+
+
+	###########################################
+	### Espionage Tab GFX
+	###########################################
+
+	spriteType = {
+		name = "GFX_spynetwork_header_bg"
+		texturefile = "gfx/interface/espionage/spyNetwork_panel_BG.dds"
+	}
+
+	spriteType = {
+		name = "GFX_spynetwork_bonus_bg"
+		texturefile = "gfx/interface/espionage/spynetwork_bonus_panel.dds"
+	}
+
+	spriteType = {
+		name = "GFX_intel_panel_bg"
+		texturefile = "gfx/interface/espionage/intel_panel_BG.dds"
+	}
+
+	spriteType = {
+		name = "GFX_assets_panel_bg"
+		texturefile = "gfx/interface/espionage/spyNetwork_assets_BG.dds"
+	}
+
+	spriteType = {
+		name = "GFX_assets_selected_overlay"
+		texturefile = "gfx/interface/espionage/assetCard_highlight.dds"
+	}
+
+	spriteType = {
+		name = "GFX_operations_header_bg"
+		texturefile = "gfx/interface/espionage/operations_panel_BG.dds"
+	}
+
+	spriteType = {
+		name = "GFX_operation_chapter_length_icon"
+		texturefile = "gfx/interface/espionage/operationButton_chaptersIcon.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_operation_chapter_difficulty_icon"
+		texturefile = "gfx/interface/espionage/operationButton_difficultyIcon.dds"
+	}
+
+	progressbarType = {
+		name = "GFX_espionage_spypowerbar_total_power_large"
+		color = { 1.0 1.0 1.0 }
+		colorTwo = { 1.0 1.0 1.0 }
+		textureFile1 = "gfx/interface/espionage/spyPowerBar_filled.dds"
+		textureFile2 = "gfx/interface/espionage/spyPowerBar_BG.dds"
+		size = { x = 343 y = 10 }
+		effectFile = "gfx/FX/progress.lua"
+	}
+
+	progressbarType = {
+		name = "GFX_espionage_spypowerbar_used_power_large"
+		color = { 1.0 1.0 1.0 }
+		colorTwo = { 1.0 1.0 1.0 }
+		textureFile1 = "gfx/interface/espionage/spy_power_bar_used_power.dds"
+		textureFile2 = "gfx/interface/espionage/spy_power_bar_transparant.dds"
+		size = { x = 343 y = 10 }
+		effectFile = "gfx/FX/progress.lua"
+	}
+
+	progressbarType = {
+		name = "GFX_espionage_spypowerbar_suspended_power_large"
+		color = { 1.0 1.0 1.0 }
+		colorTwo = { 1.0 1.0 1.0 }
+		textureFile1 = "gfx/interface/espionage/spy_power_bar_paused_operations.dds"
+		textureFile2 = "gfx/interface/espionage/spy_power_bar_transparant.dds"
+		size = { x = 343 y = 10 }
+		effectFile = "gfx/FX/progress.lua"
+	}
+
+	progressbarType = {
+		name = "GFX_espionage_spypowerbar_lacking_power_large"
+		color = { 1.0 1.0 1.0 }
+		colorTwo = { 1.0 1.0 1.0 }
+		textureFile1 = "gfx/interface/espionage/spy_power_bar_needed_power.dds"
+		textureFile2 = "gfx/interface/espionage/spy_power_bar_transparant.dds"
+		size = { x = 343 y = 10 }
+		effectFile = "gfx/FX/progress.lua"
+	}
+
+	progressbarType = {
+		name = "GFX_operationbutton_chapter_progressbar_three"
+		color = { 1.0 1.0 1.0 }
+		colorTwo = { 1.0 1.0 1.0 }
+		textureFile1 = "gfx/interface/espionage/operationButton_chapterInProgress_3_filled.dds"
+		textureFile2 = "gfx/interface/espionage/operationButton_chapterInProgress_3_bg.dds"
+		size = { x = 47 y = 15 }
+		effectFile = "gfx/FX/progress.lua"
+	}
+	
+	spriteType = {
+		name = "GFX_operation_stage_progress_entry_untouched"
+		texturefile = "gfx/interface/espionage/operationButton_chapterInProgress_3_bg.dds"
+		noOfFrames = 3
+	}
+	
+	spriteType = {
+		name = "GFX_operation_stage_progress_entry_completed"
+		texturefile = "gfx/interface/espionage/operationButton_chapterInProgress_3_filled.dds"
+		noOfFrames = 3
+	}
+
+	spriteType = {
+		name = "GFX_toggle_allitems"
+		texturefile = "gfx/interface/espionage/toggle_allItems.dds"
+	}
+
+	spriteType = {
+		name = "GFX_pause_operation"
+		texturefile = "gfx/interface/espionage/pauseOperation.dds"
+	}
+
+	spriteType = {
+		name = "GFX_spynetwork_no_envoy"
+		texturefile = "gfx/interface/espionage/spynetwork_no_envoy.dds"
+	}
+
+	spriteType = {
+		name = "GFX_empire_dropdown_btn"
+		texturefile = "gfx/interface/espionage/spynetwork_sort_BG.dds"
+	}
+
+	spriteType = {
+		name = "GFX_line_intel_espionage"
+		texturefile = "gfx/interface/espionage/line_intel_espionage.dds"
+	}
+
+	spriteType = {
+		name = "GFX_line_operations"
+		texturefile = "gfx/interface/espionage/spynetwork_operations_purpleseparator.dds"
+	}
+
+	spriteType = {
+		name = "GFX_line_main_operations"
+		texturefile = "gfx/interface/espionage/spynetwork_operations_greenseparator.dds"
+	}
+
+	spriteType = {
+		name = "GFX_spynetwork_hex"
+		texturefile = "gfx/interface/espionage/spynetwork_operations_greenglow.dds"
+	}
+
+	spriteType = {
+		name = "GFX_operations_probability_icon"
+		texturefile = "gfx/interface/espionage/Probability_Icon.dds"
+	}
+
+	spriteType = {
+		name = "GFX_operations_hex"
+		texturefile = "gfx/interface/espionage/spynetwork_operations_purpleglow.dds"
+	}
+
+	spriteType = {
+		name = "GFX_asset_active_icon"
+		texturefile = "gfx/interface/espionage/spynetwork_assetactive_icon.dds"
+	}
+
+	## Operation Category Icons
+	## 1. Manipulation  2. Sabotage  3. Subterfuge  4. Blackops 5.ero 6.holy
+
+	spriteType = {
+		name = "GFX_operation_categories_small"
+		texturefile = "gfx/interface/operationIcons_small.dds"
+		noOfFrames = 6
+	}
+
+	spriteType = {
+		name = "GFX_operation_categories_large"
+		texturefile = "gfx/interface/operationIcons_large.dds"
+		noOfFrames = 6
+	}
+
+	spriteType = {
+		name = "GFX_op_cat_diplomacy"
+		texturefile = "gfx/interface/espionage/asset_type_categories/op_cat_diplomacy.dds"
+	}
+
+	spriteType = {
+		name = "GFX_op_cat_economy"
+		texturefile = "gfx/interface/espionage/asset_type_categories/op_cat_economy.dds"
+	}
+
+	spriteType = {
+		name = "GFX_op_cat_government"
+		texturefile = "gfx/interface/espionage/asset_type_categories/op_cat_government.dds"
+	}
+
+	spriteType = {
+		name = "GFX_op_cat_military"
+		texturefile = "gfx/interface/espionage/asset_type_categories/op_cat_military.dds"
+	}
+
+	spriteType = {
+		name = "GFX_op_cat_technology"
+		texturefile = "gfx/interface/espionage/asset_type_categories/op_cat_technology.dds"
+	}
+
+	spriteType = {
+		name = "GFX_op_cat_manipulation"
+		texturefile = "gfx/interface/espionage/asset_type_categories/op_cat_manipulation_small.dds"
+	}
+
+	spriteType = {
+		name = "GFX_op_cat_provocation"
+		texturefile = "gfx/interface/espionage/asset_type_categories/op_cat_provocation_small.dds"
+	}
+
+	spriteType = {
+		name = "GFX_op_cat_sabotage"
+		texturefile = "gfx/interface/espionage/asset_type_categories/op_cat_sabotage_small.dds"
+	}
+
+	spriteType = {
+		name = "GFX_op_cat_subterfuge"
+		texturefile = "gfx/interface/espionage/asset_type_categories/op_cat_subterfuge_small.dds"
+	}
+
+	spriteType = {
+		name = "GFX_op_cat_ero"
+		texturefile = "gfx/interface/asset_type_categories/op_cat_ero_small.dds"
+	}
+	spriteType = {
+		name = "GFX_op_cat_holy"
+		texturefile = "gfx/interface/asset_type_categories/op_cat_holy_small.dds"
+	}
+	spriteType = {
+		name = "GFX_asset_away_on_mission"
+		texturefile = "gfx/interface/espionage/assetCard_awayaOnMission.dds"
+	}
+
+	spriteType = {
+		name = "GFX_asset_empty_hive"
+		texturefile = "gfx/interface/espionage/assetCard_Empty_Hive.dds"
+	}
+
+	spriteType = {
+		name = "GFX_asset_empty_nongestalt"
+		texturefile = "gfx/interface/espionage/assetCard_Empty_NonGestalt.dds"
+	}
+
+	spriteType = {
+		name = "GFX_asset_empty_robot"
+		texturefile = "gfx/interface/espionage/assetCard_Empty_Robot.dds"
+	}
+
+	spriteType = {
+		name = "GFX_asset_GRD"
+		texturefile = "gfx/interface/espionage/assetCard_GRD.dds"
+	}
+
+	# TODO: discuss if it's needed
+	#spriteType = {
+	#	name = "GFX_spyPowerBar_threshold"
+	#	texturefile = "gfx/interface/espionage/spyPowerBar_threshold.dds"
+	#}
+
+	## Intel Ledger and Assets Icons
+	## 1. Military  2. Science  3. Gov  4. Diplomacy 5. Commerce
+
+	spriteType = {
+		name = "GFX_intel_ledger_icons"
+		texturefile = "gfx/interface/espionage/spynetwork_intel_ledger_icons.dds"
+		noOfFrames = 5
+	}
+
+	###########################################
+	### Intel GFX
+	###########################################
+
+	## Intel level icon 
+	## 1. low  2. medium  3. high
+
+	spriteType = {
+		name = "GFX_intel_level"
+		textureFile = "gfx/interface/intel/intel_level_icon.dds"
+		noOfFrames = 3
+	}
+
+	spriteType = {
+		name = "GFX_intel_level_0"
+		texturefile = "gfx/interface/intel/intel_icon_intel_level_low.dds"
+	}
+
+	spriteType = {
+		name = "GFX_intel_level_1"
+		texturefile = "gfx/interface/intel/intel_icon_intel_level_low.dds"
+	}
+
+	spriteType = {
+		name = "GFX_intel_level_2"
+		texturefile = "gfx/interface/intel/intel_icon_intel_level_mid.dds"
+	}
+
+	spriteType = {
+		name = "GFX_intel_level_3"
+		texturefile = "gfx/interface/intel/intel_icon_intel_level_high.dds"
+	}
+
+	spriteType = {
+		name = "GFX_intel_level_4"
+		texturefile = "gfx/interface/intel/intel_icon_intel_level_full.dds"
+	}
+
+	## Unknown icons when there's not enough intel 
+	spriteType = {
+		name = "GFX_unknown_civics"
+		texturefile = "gfx/interface/intel/intel_icon_unknown_civics.dds"
+	}
+
+	spriteType = {
+		name = "GFX_unknown_empire"
+		texturefile = "gfx/interface/intel/intel_icon_unknown_empire.dds"
+	}
+
+	spriteType = {
+		name = "GFX_unknown_federation"
+		texturefile = "gfx/interface/intel/intel_icon_unknown_federation.dds"
+	}
+
+	spriteType = {
+		name = "GFX_unknown_government"
+		texturefile = "gfx/interface/intel/intel_icon_unknown_government.dds"
+	}
+
+	spriteType = {
+		name = "GFX_stale_intel"
+		texturefile = "gfx/interface/intel/intel_icon_unknown_16x16.dds"
+	}
+
+	progressbarType = {
+		name = "GFX_intel_progressbar"
+		color = { 1.0 1.0 1.0 }
+		colorTwo = { 1.0 1.0 1.0 }
+		textureFile1 = "gfx/interface/intel/Intel_ProgressBar_filled.dds"
+		textureFile2 = "gfx/interface/intel/Intel_ProgressBar_bg.dds"
+		size = { x = 79 y = 6 }
+		effectFile = "gfx/FX/progress.lua"
+	}
+	
+	progressbarType = {
+		name = "GFX_operation_progressbar_5_boxes"
+		color = { 1.0 1.0 1.0 }
+		colorTwo = { 1.0 1.0 1.0 }
+		textureFile1 = "gfx/interface/espionage/operationButton_chapterInProgress_Bar_filled.dds"
+		textureFile2 = "gfx/interface/espionage/operationButton_chapterInProgress_Bar_bg.dds"
+		size = { x = 44 y = 8 }
+		effectFile = "gfx/FX/progress.lua"
+	}
+	
+
+	###########################################
+	### Operations UI GFX
+	###########################################
+
+	spriteType = {
+		name = "GFX_operations_progressframe"
+		textureFile = "gfx/interface/espionage/operations/operations_progressbar.dds"
+	}
+
+	spriteType = {
+		name = "GFX_operations_blocked_phase"
+		textureFile = "gfx/interface/espionage/operations/operations_frame_blocked.dds"
+	}
+	spriteType = {
+		name = "GFX_operations_file_bg"
+		texturefile = "gfx/interface/espionage/operations/operations_right_frame.dds"
+	}
+	spriteType = {
+		name = "GFX_op_cat_provocation_ui_icon"
+		texturefile = "gfx/interface/espionage/operations/operations_blackops_icon.dds"
+	}
+	spriteType = {
+		name = "GFX_op_cat_manipulation_ui_icon"
+		texturefile = "gfx/interface/espionage/operations/operations_manipulation_icon.dds"
+	}
+	spriteType = {
+		name = "GFX_op_cat_sabotage_ui_icon"
+		texturefile = "gfx/interface/espionage/operations/operations_sabotage_icon.dds"
+	}
+	spriteType = {
+		name = "GFX_op_cat_subterfuge_ui_icon"
+		texturefile = "gfx/interface/espionage/operations/operations_subterfuge_icon.dds"
+	}
+	spriteType = {
+		name = "GFX_op_cat_ero_ui_icon"
+		texturefile = "gfx/interface/operations/operations_ero_icon.dds"
+	}
+	spriteType = {
+		name = "GFX_op_cat_holy_ui_icon"
+		texturefile = "gfx/interface/operations/operations_holy_icon.dds"
+	}
+	spriteType = {
+		name = "GFX_operations_target_frame"
+		texturefile = "gfx/interface/espionage/operations/operations_target_frame_left.dds"
+	}
+	spriteType = {
+		name = "GFX_operations_target_intelframe"
+		texturefile = "gfx/interface/espionage/operations/operattions_target_frame_left_intelframe.dds"
+	}
+	spriteType = {
+		name = "GFX_operations_hex_title"
+		texturefile = "gfx/interface/espionage/operations/operations_title_hexpattern.dds"
+	}
+	spriteType = {
+		name = "GFX_operations_detail_line"
+		texturefile = "gfx/interface/espionage/operations/operations_detail_line.dds"
+	}
+	spriteType = {
+		name = "GFX_operations_chapter_op_cat_provocation"
+		textureFile = "gfx/interface/espionage/operations/operations_chapter0_blackops.dds"
+		noOfFrames = 3
+	}
+	spriteType = {
+		name = "GFX_operations_chapter_op_cat_manipulation"
+		textureFile = "gfx/interface/espionage/operations/operations_chapter0_manipulation.dds"
+		noOfFrames = 3
+	}
+	spriteType = {
+		name = "GFX_operations_chapter_op_cat_sabotage"
+		textureFile = "gfx/interface/espionage/operations/operations_chapter0_sabotage.dds"
+		noOfFrames = 3
+	}
+	spriteType = {
+		name = "GFX_operations_chapter_op_cat_subterfuge"
+		textureFile = "gfx/interface/espionage/operations/operations_chapter0_subterfuge.dds"
+		noOfFrames = 3
+	}
+	spriteType = {
+		name = "GFX_operations_chapter_op_cat_ero"
+		textureFile = "gfx/interface/operations/operations_chapter0_ero.dds"
+		noOfFrames = 3
+	}
+	spriteType = {
+		name = "GFX_operations_chapter_op_cat_holy"
+		textureFile = "gfx/interface/operations/operations_chapter0_holy.dds"
+		noOfFrames = 3
+	}
+	spriteType = {
+		name = "GFX_launch_operation_bg"
+		textureFile = "gfx/interface/espionage/operations/launch_operation_bg.dds"
+	}
+	spriteType = {
+		name = "GFX_assetcard_available"
+		textureFile = "gfx/interface/espionage/operations/assetCard_Available.dds"
+	}
+	spriteType = {
+		name = "GFX_assetcard_unavailable"
+		textureFile = "gfx/interface/espionage/operations/assetCard_Unavailable.dds"
+	}
+	spriteType = {
+		name = "GFX_operations_phase_bg"
+		texturefile = "gfx/interface/espionage/operations/operation_title_bg.dds"
+	}
+	portraitType = {
+		name = "GFX_Asset_portrait_character_masked"
+		masking_texture = "gfx/interface/espionage/mask.dds"
+		texturefile = "gfx/interface/main/unselected_portrait.dds"
+		effectFile = "gfx/FX/buttonstate_rendertarget.lua"
+		type = character
+		character = yes
+	}	
+}

@@ -1,0 +1,96 @@
+# Espionage Assets
+#
+# asset_name_key = {
+#	 passive = { spy_network_levels_add = @asset_spy_network_max } #passive modifier
+#	 active = {} #active modifier
+#	 possible = {} #trigger
+#	 potential = {} # trigger
+#	 categories = {} # primary category always goes first!
+# }
+
+# Gov, Dip, Eco, Tec, Mil , ero , holy
+
+@category_mod = 4
+@asset_spy_network_max = 5
+
+## Subterfuge Assets
+## 女仆
+asset_maid = {
+	appearance = {
+		name_generation_method = random_person
+		portrait_generation_method = random_person
+	}
+	passive = { spy_network_levels_add = @asset_spy_network_max }
+	active = {
+		op_cat_ero_skill_add = @category_mod
+		op_cat_government_skill_add = @category_mod
+	}
+	possible = {}
+	potential = {}
+	categories = { op_cat_ero op_cat_government }
+}
+
+## 修女
+asset_sister = {
+	appearance = {
+		name_generation_method = random_person
+		portrait_generation_method = random_person
+	}
+
+	passive = { spy_network_levels_add = @asset_spy_network_max }
+	active = {
+		op_cat_ero_skill_add = @category_mod
+		op_cat_diplomacy_skill_add = @category_mod
+	}
+	possible = {}
+	potential = {}
+	categories = { op_cat_ero op_cat_diplomacy }
+}
+## 电商
+asset_webshop = {
+	appearance = {
+		name_generation_method = random_person
+		portrait_generation_method = random_person
+	}
+
+	passive = { spy_network_levels_add = @asset_spy_network_max }
+	active = {
+		op_cat_ero_skill_add = @category_mod
+		op_cat_economy_skill_add = @category_mod
+	}
+	possible = {}
+	potential = {}
+	categories = { op_cat_ero op_cat_economy }
+}
+## 圣光学士
+asset_hresearch = {
+	appearance = {
+		name_generation_method = random_person
+		portrait_generation_method = random_person
+	}
+	passive = { spy_network_levels_add = @asset_spy_network_max }
+	active = {
+		op_cat_ero_skill_add = @category_mod
+		op_cat_technology_skill_add = @category_mod
+	}
+	possible = {}
+	potential = {}
+	categories = { op_cat_ero op_cat_technology }
+}
+
+##  调教人员
+asset_warden = {
+	appearance = {
+		name_generation_method = random_person
+		portrait_generation_method = random_person
+	}
+	passive = { spy_network_levels_add = @asset_spy_network_max }
+	active = {
+		op_cat_ero_skill_add = @category_mod
+		op_cat_military_skill_add = @category_mod
+	}
+	possible = {}
+	potential = {}
+	categories = { op_cat_ero op_cat_military }
+}
+

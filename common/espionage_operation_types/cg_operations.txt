@@ -1,0 +1,518 @@
+# operation_type_name = {			# Key of the site, used for name lookup etc.
+#	target = <target type>			# Valid target types are country, megastructure, starbase, fleet, army, pop_faction, spynetwork, federation and none (spy network target is the target then)
+#	picture = <sprite key>			# GFX_* sprite key for the operation image
+#	desc = <triggered event desc>	# Description generator for the operation, with scope this=spy network
+#	stages = <int>					# Should match number of defined stages below.
+#	potential = <trigger>			# Trigger checking if a scope with this=spy network is potential to use (this will add/remove this operation without giving the player a reason).
+#	allow = <trigger>				# Trigger checking if a scope with this=spy network is allowed to use (this will toggle enable/disabled mode on buttons etc).
+#	stage = {						# Stage definition, order dependent.
+#		difficulty = <interval int>	# min max interval type. interval is defined either by '<int>' or '{ min = <int> max=<int> }' where the later will randomize a value between min and max.
+#		icon = <string>				# icon gfx type.
+#		event = <string>			# event to fire when finished the state.
+#	}
+#	stage = {...}					# Second stage, the total number of 'stage' entries should match value of 'stages'
+#	on_roll_failed = <effect>		# Effect to fire when a roll fails, with scope this=spy operation.
+#	on_create = <effect>			# Effect to fire upon operation creation, with scope this=spy operation.
+#}
+
+
+@diff_t0 = 4
+@diff_t1 = 5
+@diff_t2 = 6
+@diff_t3 = 7
+@diff_t4 = 8
+@diff_t5 = 9
+@diff_t6 = 10
+@diff_t7 = 11
+@diff_t8 = 12
+@diff_t9 = 13
+
+@operationTargetedByTimer = 10800 #30 years during which the effects of an operation may be felt by select Spy Network events
+
+# this = operation
+# from = operation target
+
+operation_undercover = {
+	target = none
+	categories = { op_cat_ero op_cat_government }
+	picture = GFX_evt_undercover
+	desc = {
+		trigger = { has_nemesis = yes }
+		text = CG_operation_undercover_desc
+	}
+	desc = {
+		trigger = { has_nemesis = no }
+		text = CG_operation_undercover_desc
+	}
+	stages = 1
+	potential = { owner = {has_country_flag = carnalism_flag}}
+	resources = {
+		category = operations
+		cost = {
+			love_juice = 300
+		}
+	}
+
+	spy_power_cost = 10
+	potential = {}
+	allow = {
+		custom_tooltip = {
+			is_running_espionage_operation = no
+			fail_text = operation_one_at_a_time
+		}
+	}
+	stage = {
+		difficulty = @diff_t0
+		icon = GFX_espionage_chapter_icon_document
+		event = CG_operation.7000
+	}
+
+	on_roll_failed = {
+		standard_espionage_operation_on_roll_failed = {
+			RANDOM_EVENTS = CG_operation_failed_random_events_low
+		}
+	}
+	on_create = {
+		target = {
+			set_timed_country_flag = {
+				flag = espionage_operation_targeted_by@root.owner #Used in random Spy Network events
+				days = @operationTargetedByTimer
+			}
+		}
+	}
+}
+
+operation_sneak = {
+	target = none
+	categories = { op_cat_holy op_cat_government }
+	picture = GFX_evt_undercover
+	desc = {
+		trigger = { has_nemesis = yes }
+		text = CG_operation_undercover_desc
+	}
+	desc = {
+		trigger = { has_nemesis = no }
+		text = CG_operation_undercover_desc
+	}
+	stages = 1
+	potential = {owner={has_country_flag = asceticism_flag}}
+	resources = {
+		category = operations
+		cost = {
+			love_juice = 300
+		}
+	}
+
+	spy_power_cost = 10
+
+	allow = {
+		custom_tooltip = {
+			is_running_espionage_operation = no
+			fail_text = operation_one_at_a_time
+		}
+	}
+	stage = {
+		difficulty = @diff_t0
+		icon = GFX_espionage_chapter_icon_document
+		event = CG_operation.7000
+	}
+
+	on_roll_failed = {
+		standard_espionage_operation_on_roll_failed = {
+			RANDOM_EVENTS = operation_random_events_low_stakes_low
+		}
+	}
+	on_create = {
+		target = {
+			set_timed_country_flag = {
+				flag = espionage_operation_targeted_by@root.owner #Used in random Spy Network events
+				days = @operationTargetedByTimer
+			}
+		}
+	}
+}
+
+# operation_diplomatic_incident = {
+# 	target = none
+# 	categories = { op_cat_manipulation op_cat_diplomacy }
+# 	picture = GFX_evt_tradedeal
+# 	desc = operation_diplomatic_incident_desc
+# 	stages = 3
+
+# 	resources = {
+# 		category = operations
+# 		cost = {
+# 			energy = 300
+# 		}
+# 		upkeep = {
+# 			energy = 5
+# 		}
+# 	}
+
+# 	spy_power_cost = 25
+# 	potential = {
+# 		has_nemesis = yes
+# 		owner = { num_communications > 3 }
+# 		target = { is_homicidal = no }
+# 	}
+# 	allow = {
+# 		custom_tooltip = {
+# 			fail_text = saturated_with_scandals
+# 			NOT = { has_spynetwork_flag = operation_diplomatic_incident_timer }
+# 		}
+# 		target = {
+# 			num_communications > 3
+# 			custom_tooltip = {
+# 				fail_text = gestalts_are_boring
+# 				is_gestalt = no
+# 			}
+# 		}
+# 		custom_tooltip = {
+# 			is_running_espionage_operation = no
+# 			fail_text = operation_one_at_a_time
+# 		}
+# 	}
+# 	stage = {
+# 		difficulty = @diff_t1
+# 		icon = GFX_espionage_chapter_icon_surveillance
+# 		event = operation.8200
+# 	}
+# 	stage = {
+# 		difficulty = @diff_t1
+# 		icon = GFX_espionage_chapter_icon_motion
+# 		event = operation.8205
+# 	}
+# 	stage = {
+# 		difficulty = @diff_t1
+# 		icon = GFX_espionage_chapter_icon_target
+# 		event = operation.8210
+# 	}
+# 	on_roll_failed = {
+# 		standard_espionage_operation_on_roll_failed = { RANDOM_EVENTS = operation_random_events_generic }
+# 	}
+# 	on_create = {
+# 	}
+# }
+
+
+
+operation_acquire_lust_asset = {
+	target = none
+	categories = { op_cat_ero op_cat_government }
+	picture = GFX_evt_recruit_bunny
+	desc = CG_operation_acquire_lust_asset_desc
+	stages = 3
+	potential = { owner = {has_country_flag = carnalism_flag}}
+	resources = {
+		category = operations
+		cost = {
+			love_juice = 450
+		}
+		upkeep = {
+			love_juice = 2
+		}
+	}
+
+	spy_power_cost = 30
+	potential = { has_nemesis = yes }
+	allow = {
+		AND ={
+		custom_tooltip = {
+			is_running_espionage_operation = no
+					fail_text = operation_one_at_a_time
+			}
+		
+		}
+		
+	}
+	stage = { #Install operatives
+		difficulty = @diff_t1
+		icon = GFX_espionage_chapter_icon_surveillance
+		event = CG_operation.1000
+	}
+	stage = { #Target identified
+		difficulty = @diff_t1
+		icon = GFX_espionage_chapter_icon_target
+		event = CG_operation.1001
+	}
+	stage = { #Result
+		difficulty = @diff_t1
+		icon = GFX_espionage_chapter_icon_motion
+		event = CG_operation.1002
+	}
+	on_roll_failed = {
+		standard_espionage_operation_on_roll_failed = { RANDOM_EVENTS = CG_operation_MM_failed_random_events }
+		 #RANDOM_EVENTS = CG_operation_MM_failed_random_events }
+
+	}
+	on_create = {
+		target = {
+			set_timed_country_flag = {
+				flag = espionage_operation_targeted_by@root.owner #Used in random Spy Network events
+				days = @operationTargetedByTimer
+			}
+		}
+	}
+}
+
+
+
+
+#################################################
+#  level 4 
+#  拐带少女
+
+#
+#################################################
+operation_abduct_pops = {
+	target = none
+	categories = { op_cat_ero op_cat_economy }
+	picture = GFX_evt_abdct
+	desc = CG_operation_abduct_pops_desc
+	stages = 4
+	spy_power_cost = 60
+	potential = { owner = {has_country_flag = carnalism_flag}}
+	resources = {
+		category = operations
+		cost = {
+			love_juice = 1000
+		}
+		upkeep = {
+			love_juice = 10
+		}
+	}
+	
+	potential = {
+		has_nemesis = yes
+		target = { OR = { is_country_type = default 
+
+						} 
+					}
+	}
+	allow = {
+		custom_tooltip = {
+			fail_text = operation_abduct_pops_recent
+			owner = {
+				NOT = { has_country_flag = recent_steal_pops@root.target }
+			}
+		}
+		custom_tooltip = {
+			fail_text = operation_abduct_pops_five_pops
+			target = {
+				count_owned_pop = {
+					limit = {
+						is_sapient = yes
+						is_robot_pop = no
+						NOT = { has_trait = trait_hive_mind }
+					}
+					count >= 3
+				}
+			}
+		}
+		custom_tooltip = {
+			is_running_espionage_operation = no
+			fail_text = operation_one_at_a_time
+		}
+	}
+	stage = {
+		difficulty = @diff_t6
+		icon = GFX_espionage_chapter_icon_surveillance
+		event = CG_operation.2000
+	}
+	stage = {
+		difficulty = @diff_t6
+		icon = GFX_espionage_chapter_icon_target
+		event = CG_operation.2001
+	}
+	stage = {
+		difficulty = @diff_t6
+		icon = GFX_espionage_chapter_icon_motion
+		event = CG_operation.2002
+	}
+	stage = {
+		difficulty = @diff_t6
+		icon = GFX_espionage_chapter_icon_success
+		event = CG_operation.2003
+	}
+	on_roll_failed = {
+		standard_espionage_operation_on_roll_failed = { RANDOM_EVENTS = CG_operation_MM_failed_random_events }
+	}
+	on_create = {
+		target = {
+			set_timed_country_flag = {
+				flag = espionage_operation_targeted_by@root.owner #Used in random Spy Network events
+				days = @operationTargetedByTimer
+			}
+		}
+	}
+}
+
+
+#################################################
+#  level 3 
+#  催眠暗示
+#
+#################################################
+operation_hypno = {
+	target = none
+	categories = { op_cat_ero op_cat_diplomacy }
+	picture = GFX_evt_hypno_1
+	desc = CG_operation_hypno_desc
+	stages = 3
+	potential = { owner = {has_country_flag = carnalism_flag}}
+	spy_power_cost = 35
+	resources = {
+		category = operations
+		cost = {
+			love_juice = 600
+		}
+		upkeep = {
+			love_juice = 7
+		}
+	}
+
+
+	allow = {
+		custom_tooltip = {
+			is_running_espionage_operation = no
+			fail_text = operation_one_at_a_time
+		}
+	}
+	stage = {
+		difficulty = @diff_t2
+		icon = GFX_espionage_chapter_progress_icon_op_cat_ero
+		event = CG_operation.3000
+	}
+	stage = {
+		difficulty = @diff_t2
+		icon = GFX_espionage_chapter_progress_icon_op_cat_ero
+		event = CG_operation.3001
+	}
+	stage = {
+		difficulty = @diff_t2
+		icon = GFX_espionage_chapter_progress_icon_op_cat_ero
+		event = CG_operation.3002
+	}
+	on_roll_failed = {
+		standard_espionage_operation_on_roll_failed = { RANDOM_EVENTS = CG_operation_MM_failed_random_events }
+		country_event = {
+			RANDOM_EVENTS = CG_operation_MM_failed_random_events
+		}	
+	}
+	on_create = {}
+}
+
+# operation_extort_favors = {
+# 	target = none
+# 	categories = { op_cat_manipulation op_cat_diplomacy }
+# 	picture = GFX_evt_galactic_senate
+# 	desc = operation_extort_favors_desc
+# 	stages = 3
+# 	spy_power_cost = 35
+# 	resources = {
+# 		category = operations
+# 		cost = {
+# 			energy = 600
+# 		}
+# 		upkeep = {
+# 			energy = 7
+# 		}
+# 	}
+
+# 	potential = {
+# 		has_nemesis = yes
+# 		owner = { is_homicidal = no }
+# 		target = { is_homicidal = no }
+# 	}
+# 	allow = {
+# 		custom_tooltip = {
+# 			is_running_espionage_operation = no
+# 			fail_text = operation_one_at_a_time
+# 		}
+# 	}
+# 	stage = {
+# 		difficulty = @diff_t2
+# 		icon = GFX_espionage_chapter_progress_icon_op_cat_ero
+# 		event = operation.6250
+# 	}
+# 	stage = {
+# 		difficulty = @diff_t2
+# 		icon = GFX_espionage_chapter_progress_icon_op_cat_ero
+# 		event = operation.6251
+# 	}
+# 	stage = {
+# 		difficulty = @diff_t2
+# 		icon = GFX_espionage_chapter_progress_icon_op_cat_ero
+# 		event = operation.6252
+# 	}
+# 	on_roll_failed = {
+# 		standard_espionage_operation_on_roll_failed = { RANDOM_EVENTS = operation_random_events_generic }
+# 	}
+# 	on_create = {}
+# }
+
+# operation_smear_campaign = {
+# 	target = none
+# 	categories = { op_cat_manipulation op_cat_diplomacy }
+# 	picture = GFX_evt_smear_campaign
+# 	desc = operation_smear_campaign_desc
+# 	stages = 3
+
+# 	resources = {
+# 		category = operations
+# 		cost = {
+# 			energy = 600
+# 		}
+# 		upkeep = {
+# 			energy = 7
+# 		}
+# 	}
+
+# 	spy_power_cost = 35
+# 	potential = {
+# 		has_nemesis = yes
+# 		owner = {
+# 			num_communications > 3
+# 		}
+# 	}
+# 	allow = {
+# 		target = {
+# 			num_communications > 3
+# 			is_fallen_empire = no
+# 		}
+# 		custom_tooltip = {
+# 			is_running_espionage_operation = no
+# 			fail_text = operation_one_at_a_time
+# 		}
+# 	}
+# 	stage = {
+# 		difficulty = @diff_t3
+# 		icon = GFX_espionage_chapter_icon_target
+# 		event = operation.3000
+# 	}
+# 	stage = {
+# 		difficulty = @diff_t3
+# 		icon = GFX_espionage_chapter_icon_document
+# 		event = operation.3001
+# 	}
+# 	stage = {
+# 		difficulty = @diff_t3
+# 		icon = GFX_espionage_chapter_icon_motion
+# 		event = operation.3002
+# 	}
+# 	on_roll_failed = {
+# 		standard_espionage_operation_on_roll_failed = { RANDOM_EVENTS = operation_random_events_generic }
+# 	}
+# 	on_create = {
+# 		target = {
+# 			set_timed_country_flag = {
+# 				flag = espionage_operation_targeted_by@root.owner #Used in random Spy Network events
+# 				days = @operationTargetedByTimer
+# 			}
+# 		}
+# 	}
+# }
+
+
+
+

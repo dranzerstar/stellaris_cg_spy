@@ -1,0 +1,97 @@
+guiTypes = {
+	containerWindowType = {
+		name = "espionage_asset_selection_window"
+		orientation = center
+		origo = center
+		moveable = yes
+		size = { width=400 height=500 }
+
+		background = {
+			name = "bg"
+			quadTextureSprite ="GFX_tile_large_bg"
+		}
+
+		containerWindowType = {
+			name = "assets_header"
+			size = {width = 80% height = 40}
+			position = { x = 0 y = 15 }
+
+			iconType = {
+				name = "hex_bg"
+				spriteType = "GFX_hex_bg"
+				position = { x = -20 y = -15 }
+				alwaysTransparent = yes
+			}
+		
+			instantTextBoxType={
+				name = "assets_title"
+				font = "malgun_goth_24"
+				position = { x = 14 y = 2 }
+				maxWidth = 150
+				maxHeight = 20
+				fixedSize = no
+				text = "SPYNETWORK_ASSETS"
+				format = left
+			}
+
+			iconType = {
+				name = "empire_header_line"
+				quadTextureSprite = "GFX_line_medium"
+				position = { x = 5 y = 30 }
+				alwaysTransparent = yes
+			}
+		}
+
+		containerWindowType = {
+			name = "assets_list"
+			position = { x = 5 y = 70 }
+			size = { width = -5 height = -52 }
+			verticalScrollbar = "right_vertical_slider_s"
+
+			background = {
+				name = "bg"
+				spriteType = "GFX_tiles_dark_area_cut_8"
+			}
+
+			gridBoxType = {
+				name = "assets_grid"
+				position = { x = 0 y = 0 }
+				size = { width = 0 height = 0 }
+				slotsize = { width = 92 height = 100 }
+				add_horizontal = yes
+				max_slots_horizontal = 4
+				format = "UPPER_LEFT"
+			}
+		}
+
+		buttonType = {
+			name = "close"
+			quadTextureSprite = "GFX_close"
+			position = { x= -50 y = 12 }
+			Orientation = "UPPER_RIGHT"
+			shortcut = "ESCAPE"
+			clicksound = "back_click"
+			actionShortcut = "cancel"
+		}
+
+		buttonType = {
+			name = "accept"
+			quadTextureSprite = "GFX_standard_button_142_34_button"
+			position = { x = 240 y = -55  }
+			Orientation = "LOWER_LEFT"
+			font = "cg_16b"
+			clicksound = back_click
+			buttonText = "ACCEPT"
+		}
+
+		buttonType = {
+			name = "cancel"
+			quadTextureSprite = "GFX_standard_button_142_34_button"
+			position = { x = -405 y = -55  }
+			Orientation = "LOWER_RIGHT"
+			font = "cg_16b"
+			clicksound = back_click
+			buttonText = "CANCEL"
+		}
+	}
+}

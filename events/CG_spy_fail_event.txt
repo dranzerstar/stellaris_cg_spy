@@ -1,0 +1,302 @@
+namespace = CG_operation_failed
+@RandomOperationEventTimer = 10
+
+
+# 失去联络
+country_event = {
+	id = CG_operation_failed.5000
+	title = CG_operation_failed.5000.name
+	desc = CG_operation_failed.5000.desc
+	picture = GFX_evt_fail_neut_1
+	show_sound = event_radio_chatter
+	is_triggered_only = yes
+
+	trigger = {
+		exists = from
+		is_gestalt = no
+	}
+
+	immediate = {
+		from = { set_espionage_operation_progress_locked = yes }
+		set_timed_country_flag = {
+			flag = recent_op_contact_lost
+			days = @RandomOperationEventTimer
+		}
+	}
+
+	option = { #Find operatives
+		name = CG_operation_failed.5000.a
+		custom_tooltip = CG_operation_failed.5000.a.tooltip
+		# allow = {
+		# 	from.spynetwork = { has_available_spy_power >= 10 }
+		# }
+		from.spynetwork = {
+			add_spy_network_level = -10 #Returned in subsequent events, or when the Spy Network disbands - whichever comes first
+		}
+		#add_resource = { energy = -1000 }
+		hidden_effect = {
+			random_list = {
+				8 = { #Re-establish contact
+					country_event = { id = CG_operation_failed.5001 days = 34 } #"Contact Re-Established"
+				}
+	
+				2 = { #Contact lost
+
+					modifier = {
+						factor = 4
+						from.target = {
+							relative_encryption_decryption = { target = root value > 1.2 }
+						}
+					}
+					country_event = { id = CG_operation_failed.5002 days = 34 } #"Contact Confirmed Lost"
+
+				}
+			}
+		}
+	}
+	option = {
+		name = CG_operation_failed.5000.b
+		custom_tooltip = CG_operation_failed.5000.b.tooltip
+		
+			hidden_effect = {
+				random_list = {
+					8 = { #Re-establish contact
+						country_event = { id = CG_operation_failed.5001 days = 34 } #"Contact Re-Established"
+					}
+		
+					2 = { #Contact lost
+
+						modifier = {
+							factor = 4
+							from.target = {
+								relative_encryption_decryption = { target = root value > 1.2 }
+							}
+						}
+						country_event = { id = CG_operation_failed.5002 days = 34 } #"Contact Confirmed Lost"
+
+					}
+				}
+			# from = {
+			# 	set_espionage_operation_progress_locked = no
+			# 	fire_on_action = { on_action = on_operation_cancelled }
+			# 	destroy_espionage_operation = this
+			# }
+			}
+
+		
+
+	
+	}
+}
+#Contact Lost: Re-established
+#fromfrom = operation
+
+country_event = {
+	id = CG_operation_failed.5001
+	title = CG_operation_failed.5001.name
+	desc = CG_operation_failed.5001.desc
+	picture = GFX_evt_fail_ok_1
+	show_sound = event_radio_chatter
+	is_triggered_only = yes
+
+	trigger = {
+		exists = fromfrom
+	}
+
+	immediate = {
+		fromfrom.spynetwork = { add_spy_network_level = 10 }
+		fromfrom = { set_espionage_operation_progress_locked = no }
+	}
+
+	option = { name = GOOD }
+}
+#Contact Lost: Proper Lost
+#fromfrom = operation
+country_event = {
+	id = CG_operation_failed.5002
+	title = CG_operation_failed.5002.name
+	desc = CG_operation_failed.5002.desc
+	picture = GFX_evt_fail_fail_1
+	show_sound = event_radio_chatter
+	is_triggered_only = yes
+
+	trigger = {
+		exists = fromfrom
+	}
+
+	option = {
+		name = UNFORTUNATE
+		fromfrom.spynetwork = {
+			add_spy_network_level = -5
+		}
+	}
+
+	after = { fromfrom = { set_espionage_operation_progress_locked = no
+							fire_on_action = { on_action = on_operation_cancelled }
+							destroy_espionage_operation = this }
+					
+
+		 }
+
+}
+
+
+
+country_event = {
+	id = CG_operation_failed.5050
+	title = CG_operation_failed.5050.name
+	desc = CG_operation_failed.5050.desc
+	picture = GFX_evt_fail_fail_2
+	#show_sound = event_radio_chatter
+	is_triggered_only = yes
+
+	trigger = {
+		exists = fromfrom
+	}
+
+	option = {
+		name = CG_operation_failed.5050.a
+		from.spynetwork = {
+			add_spy_network_level = -5
+		}
+	}
+
+
+}
+
+country_event = {
+	id = CG_operation_failed.5005
+	title = CG_operation_failed.5005.name
+	desc = CG_operation_failed.5005.desc
+	picture = GFX_evt_fail_fail_3
+	#show_sound = event_radio_chatter
+	is_triggered_only = yes
+
+	trigger = {
+		exists = fromfrom
+	}
+
+	option = {
+		name = CG_operation_failed.5005.a
+		from.spynetwork = {
+			add_spy_network_level = -15
+			destroy_espionage_operation = from
+		}
+	}
+
+	option = {
+		name = CG_operation_failed.5005.b
+		allow = {
+			# Condition statement(s)
+			from.target = {
+				relative_encryption_decryption = { target = root value > 0.8 }
+			}
+		}
+	}
+
+}
+
+country_event = {
+	id = CG_operation_failed.5030
+	title = CG_operation_failed.5030.name
+	desc = CG_operation_failed.5030.desc
+	picture = GFX_evt_fail_neut_3
+	#show_sound = event_radio_chatter
+	is_triggered_only = yes
+
+	trigger = {
+		exists = fromfrom
+	}
+	immediate = {
+		from = { set_espionage_operation_progress_locked = yes }
+	}
+	option = {
+		name = CG_operation_failed.5030.a
+		add_resource = {
+			alloys=-2000
+		}
+		hidden_effect = {
+			random_list = {
+				4 = { #Re-establish contact
+					modifier = {
+					factor = 5	
+					}				
+					country_event = { id = CG_operation_failed.5051 days = 36 } 
+				}
+	
+				4 = { #Contact lost
+					country_event = { id = CG_operation_failed.5052 days = 36 } 
+				}
+			}
+
+		}
+	}
+	option = {
+		name = CG_operation_failed.5030.b
+		custom_tooltip = CG_operation_failed.5030.b.tooltip
+		hidden_effect = {
+			random_list = {
+				2 = { #Re-establish contact
+									
+					country_event = { id = CG_operation_failed.5051 days = 100 } 
+				}
+	
+				4 = { #Contact lost
+					country_event = { id = CG_operation_failed.5052 days = 100 } 
+				}
+			}
+
+		}
+
+	}
+
+
+}
+
+
+
+country_event = {
+	id = CG_operation_failed.5051
+	title = CG_operation_failed.5051.name
+	desc = CG_operation_failed.5051.desc
+	picture = GFX_evt_fail_ok_1
+	show_sound = event_radio_chatter
+	is_triggered_only = yes
+
+	trigger = {
+		exists = fromfrom
+	}
+
+	option = {
+		name = GOOD
+		fromfrom = { set_espionage_operation_progress_locked = no}
+	}
+
+
+
+}
+
+country_event = {
+	id = CG_operation_failed.5052
+	title = CG_operation_failed.5052.name
+	desc = CG_operation_failed.5052.desc
+	picture = GFX_evt_fail_fail_4
+	show_sound = event_radio_chatter
+	is_triggered_only = yes
+
+	trigger = {
+		exists = fromfrom
+	}
+
+	option = {
+		name = CG_operation_failed.5005.a
+		fromfrom = { set_espionage_operation_progress_locked = no}
+		fromfrom.spynetwork = {
+			add_spy_network_level = -15
+			destroy_espionage_operation = fromfrom
+		}
+	}
+
+
+
+}

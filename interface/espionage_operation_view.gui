@@ -1,0 +1,1173 @@
+guiTypes = {
+	positionType = {
+		name = "espionage_operation_view_operation_stats_wide_position"
+		position = { x = 0 y = 1 }
+	}
+	positionType = {
+		name = "espionage_operation_view_operation_stats_wide_size"
+		position = { x = 351 y = -20 }
+	}
+	containerWindowType = {
+		name = "espionage_operation_view"
+		orientation = center
+		size = { width = 1092 height = 872 }
+		position = { x = 0 y = 0 }
+		origo = center
+		moveable = yes
+		clipping = no
+		background = {
+			name = "background"
+			quadTextureSprite = "GFX_tile_large_center_bg"
+		}
+		#iconType = {
+		#   name = "vertical_divider"
+		#   spriteType = "GFX_vertical_line"
+		#   position = { x = 567 y = 52 }
+		#   alwaysTransparent = yes
+		#}
+		# Header ----------------------------------------------------------------
+		iconType = {
+			name = "hex_bg_left"
+			position = { x = -79 y = 22 }
+			spriteType = "GFX_hex_center_bg"
+			orientation = center_up
+			centerPosition = yes
+			alwaysTransparent = yes
+		}
+		iconType = {
+			name = "hex_bg_right"
+			position = { x = 79 y = 22 }
+			spriteType = "GFX_hex_center_bg"
+			orientation = center_up
+			centerPosition = yes
+			alwaysTransparent = yes
+		}
+		iconType = {
+			name = "header_line"
+			position = { x = 0 y = 42 }
+			spriteType = "GFX_line_center"
+			orientation = center_up
+			centerPosition = yes
+			alwaysTransparent = yes
+		}
+		instantTextBoxType = {
+			name = "site_name"
+			font = "malgun_goth_24"
+			text = "THIS IS A SITE NAME"
+			position = { x = 100 y = 9 }
+			maxWidth = 892
+			maxHeight = 40
+			fixedSize = yes
+			format = center
+			alwaysTransparent = yes
+		}
+		buttonType = {
+			name = "goto_site_button"
+			quadTextureSprite = "GFX_fleetview_focus"
+			position = { x = -80 y = 16 }
+			orientation = upper_right
+			pdx_tooltip = "ARC_GO_TO"
+			shortCut = "q"
+		}
+		buttonType = {
+			name = "close"
+			quadTextureSprite = "GFX_close"
+			position = { x = -45 y = 16 }
+			orientation = upper_right
+			pdx_tooltip = "CLOSE_TITLE"
+			shortcut = "ESCAPE"
+		}
+		# -------------------------------------------------------------------
+		# Site Type ---------------------------------------------------------
+		containerWindowType = {
+			name = "site_type_window"
+			size = { width = 700 height = 175 }
+			position = { x = 10 y = 170 }
+			iconType = {
+				name = "event_picture"
+				spriteType = "GFX_event_frame"
+				orientation = center_up
+				centerPosition = yes
+				scale = 1.5
+				alwaysTransparent = yes
+			}
+			iconType = {
+				name = "event_shadow"
+				spriteType = "GFX_ui_event_shadow_frame"
+				orientation = center_up
+				centerPosition = yes
+				alwaysTransparent = yes
+			}
+			iconType = {
+				name = "event_stripes"
+				spriteType = "GFX_ui_event_stripes"
+				orientation = center_up
+				centerPosition = yes
+				alwaysTransparent = yes
+			}
+			iconType = {
+				name = "event_frame"
+				spriteType = "GFX_ui_event_frame"
+				orientation = center_up
+				centerPosition = yes
+				alwaysTransparent = yes
+			}
+			containerWindowType = {
+				name = "operations_target_frame"
+				position = { x = 0 y = -118 }
+				size = { width = 245 height = 105 }
+				iconType = {
+					name = "operations_target_frame"
+					quadTextureSprite = "GFX_operations_target_frame"
+					position = { x = 20 y = 2 }
+					alwaysTransparent = yes
+				}
+				iconType = {
+					name = "operations_target_intel_frame"
+					quadTextureSprite = "GFX_operations_target_intelframe"
+					position = { x = 300 y = 8 }
+					alwaysTransparent = yes
+				}
+				buttonType = {
+					name = "flag_button"
+					quadTextureSprite = "GFX_empire_flag_64"
+					position = { x = -22 y = -14 }
+				}
+				instantTextBoxType = {
+					name = "target_name"
+					font = "cg_16b"
+					maxWidth = 230
+					maxHeight = 20
+					position = { x = 50 y = 12 }
+					orientation = left
+					text = "TARGET"
+					format = left
+				}
+				iconType = {
+					name = "intel_icon"
+					spriteType = "GFX_intel_level_0"
+					position = { x = 302 y = 7 }
+					frame = 1
+				}
+				instantTextBoxType = {
+					name = "intel_label"
+					font = "cg_16b"
+					maxWidth = 30
+					maxHeight = 20
+					position = { x = 329 y = 12 }
+					orientation = left
+					text = "999"
+					format = left
+				}
+			}
+			containerWindowType = {
+				name = "upkeep"
+				position = { x = 498 y = 56 }
+				size = { width = 180 height = 40 }
+				moveable = no
+				background = {
+					name = "bg"
+					quadTextureSprite = "GFX_tiles_dark_area_cut_8"
+				}
+				instantTextBoxType = {
+					name = "upkeep_label"
+					font = "cg_16b"
+					position = { x = 10 y = 3 }
+					maxWidth = 100
+					maxHeight = 20
+					text = "UPKEEP"
+					format = left
+				}
+				instantTextBoxType = {
+					name = "upkeep_cost"
+					font = "cg_16b"
+					position = { x = 109 y = 3 }
+					maxWidth = 60
+					maxHeight = 20
+					text = "0"
+					format = right
+				}
+			}
+		}
+		# ---------------------------------------------------------------------
+		# Expedition Progress ------------------------------------------------
+		containerWindowType = {
+			name = "chapters_window"
+			size = { width = 430 height = 60 }
+			position = { x = 131 y = 281 }
+			background = {
+				name = "background"
+				quadTextureSprite = "GFX_firstcontact_progressframe"
+				position = { x = -53 y = -25 }
+				alwaysTransparent = yes
+			}
+			iconType = {
+				name = "rune_background_bar"
+				quadTextureSprite = "GFX_rune_background_bar"
+				position = { x = 53 y = 19 }
+			}
+			buttonType = {
+				name = "chapters_button"
+				spriteType = "GFX_operations_chapter_op_cat_provocation"
+				position = { x = 24 y = 8 }
+				frame = 3
+			}
+			overlappingElementsBoxType = {
+				name = "chapters_box"
+				position = { x = 69 y = 10 }
+				size = { x = 385 y = 60 }
+				format = left
+			}
+		}
+		containerWindowType = {
+			name = "chapter_subtitle_header"
+			position = { x = 17 y = 365 }
+			size = { width = 693 height = 50 }
+			iconType = {
+				name = "hex_bg_left"
+				position = { x = -79 y = 0 }
+				spriteType = "GFX_hex_center_bg"
+				orientation = center_up
+				centerPosition = yes
+				alwaysTransparent = yes
+			}
+			iconType = {
+				name = "hex_bg_right"
+				position = { x = 79 y = 0 }
+				spriteType = "GFX_hex_center_bg"
+				orientation = center_up
+				centerPosition = yes
+				alwaysTransparent = yes
+			}
+			iconType = {
+				name = "species_header_line"
+				spriteType = "GFX_line_center"
+				position = { x = 0 y = 20 }
+				orientation = center_up
+				centerPosition = yes
+				alwaysTransparent = yes
+			}
+		}
+		instantTextBoxType = {
+			name = "chapter_subtitle"
+			font = "malgun_goth_24"
+			text = "THIS IS A CHAPTER SUBTITLE"
+			position = { x = 94 y = 352 }
+			maxWidth = 535
+			maxHeight = 40
+			format = center
+			text_color_code = "H"
+			alwaysTransparent = yes
+		}
+		# ---------------------------------------------------------------------
+		# Expedition Text & Buttons -------------------------------------------
+		containerWindowType = {
+			name = "operation_event_window"
+			size = { width = 693 height = 295 } # this will be dynamically resized, see ESPIONAGE_OPERATION_VIEW_TEXTBOX_*
+			position = { x = 17 y = 399 }
+			background = {
+				name = "background"
+				quadTextureSprite = "GFX_tiles_dark_area_cut_8"
+			}
+			smoothListBoxType = {
+				name = "event_text_list"
+				position = { x = 20 y = 10 }
+				size = { x = 653 y = 275 } # this will be dynamically resized, see ESPIONAGE_OPERATION_VIEW_TEXTBOX_*
+				borderSize = { x = 0 y = 0 }
+				scrollbartype = "standardlistbox_slider_thick"
+			}
+		}
+		# VM: Temp icon. It should change depending on the type of operation
+		iconType = {
+			name = "no_report_icon"
+			quadTextureSprite = "GFX_espionage_blackops_sign"
+			position = { x = 336 y = 480 }
+			alwaysTransparent = yes
+		}
+		instantTextBoxType = {
+			name = "no_report_text"
+			font = "cg_16b"
+			text = "STAGE_NOTHING_TO_REPORT"
+			position = { x = 17 y = 432 }
+			maxWidth = 693
+			maxHeight = 40
+			fixedSize = yes
+			format = center
+			alwaysTransparent = yes
+		}
+		containerWindowType = {
+			name = "options_box_background"
+			position = { x = 17 y = -168 }
+			size = { width = 693 height = 154 }
+			orientation = lower_left
+			background = {
+				name = "options_box_background"
+				quadTextureSprite = "GFX_tiles_dark_area_cut_8"
+			}
+		}
+		gridBoxType = {
+			name = "event_options_box"
+			position = { x = 26 y = -163 }
+			orientation = lower_left
+			size = { width = 674 height = 144 }
+			format = "UPPER_LEFT"
+			slotSize = { width = 530 height = 48 }
+			max_slots_horizontal = 1
+			max_slots_vertical = 3
+		}
+		# ---------------------------------------------------------------------
+		# Expedition Chapter --------------------------------------------------
+		containerWindowType = {
+			name = "title_chapter"
+			size = { width = 351 height = 758 }
+			position = { x = -20 y = 30 }
+			orientation = upper_right
+			origo = upper_right
+			iconType = {
+				name = "operations_file_bg"
+				quadTextureSprite = "GFX_operations_file_bg"
+				position = { x = 0 y = 26 }
+			}
+			iconType = {
+				name = "title_hex"
+				quadTextureSprite = "GFX_operations_hex_title"
+				position = { x = 12 y = 26 }
+			}
+			iconType = {
+				name = "title_line"
+				quadTextureSprite = "GFX_operations_detail_line"
+				position = { x = 46 y = 53 }
+			}
+			iconType = {
+				name = "category"
+				position = { x = -17 y = 10 }
+				quadTextureSprite = "GFX_op_cat_provocation_ui_icon"
+			}
+			instantTextBoxType = {
+				name = "title_text"
+				font = "malgun_goth_24"
+				position = { x = 49 y = 35 }
+				text = "CURRENT CHAPTER"
+				maxWidth = 200
+				maxHeight = 24
+				fixedSize = yes
+				format = left
+			}
+		}
+		containerWindowType = {
+			name = "operation_stats"
+			position = { x = 0 y = 0 }
+			size = { width = 351 height = -20 }
+			orientation = upper_right
+			origo = upper_right
+			background = {
+				name = "background"
+				spriteType = "GFX_invisible"
+				alwaysTransparent = yes
+			}
+			containerWindowType = {
+				name = "chapter_progress"
+				size = { width = 212 height = 34 }
+				position = { x = -149 y = 361 }
+				orientation = upper_right
+				origo = upper_right
+				background = {
+					name = "background"
+					spriteType = "GFX_dark_area_cut"
+				}
+				iconType = {
+					name = "progress_time_icon"
+					position = { x = 150 y = 9 }
+					spriteType = "GFX_resource_time"
+				}
+				iconType = {
+					name = "progress_bar"
+					spriteType = "GFX_ui_progressbar_thick_117"
+					position = { x = 17 y = 7 }
+				}
+				instantTextBoxType = {
+					name = "progress_text"
+					font = "malgun_goth_24"
+					position = { x = 170 y = 4 }
+					text = "DAYS LEFT: 2000"
+					maxWidth = 35
+					maxHeight = 24
+					fixedSize = yes
+					format = left
+				}
+			}
+			containerWindowType = {
+				name = "chapter_difficulty"
+				size = { width = 110 height = 80 }
+				position = { x = -30 y = 100 }
+				orientation = upper_right
+				origo = upper_right
+				background = {
+					name = "background"
+					spriteType = "GFX_dark_area_cut"
+				}
+				iconType = {
+					name = "difficulty_icon"
+				position = { x = 8 y = 40 }
+					spriteType = "GFX_difficulty_range"
+					frame = 1
+					pdx_tooltip = "espionage_operation_roll_header"
+				}
+				instantTextBoxType = {
+					name = "roll_chance_label"
+					font = "cg_16b"
+					position = { x = 5 y = 12 }
+					text = "ARCHAEOLOGICAL_SITE_BREAKTHROUGH"
+					maxWidth = 100
+					maxHeight = 16
+					vertical_alignment = center
+					format = center
+					pdx_tooltip = "espionage_operation_roll_header"
+				}
+				instantTextBoxType = {
+					name = "roll_chance_text"
+					font = "malgun_goth_24"
+					position = { x = 40 y = 43 }
+					text = "15%"
+					maxWidth = 55
+					maxHeight = 20
+					fixedSize = yes
+					format = center
+					pdx_tooltip = "espionage_operation_roll_header"
+				}
+			}
+			containerWindowType = {
+				name = "chapter_modifiers"
+				size = { width = 110 height = 160 }
+				position = { x = -30 y = 190 }
+				orientation = upper_right
+				origo = upper_right
+				background = {
+					name = "background"
+					spriteType = "GFX_dark_area_cut"
+				}
+				containerWindowType = {
+					name = "difficulty_type_background"
+					size = { width = 106 height = 20 }
+					position = { x = 2 y = 2 }
+					background = {
+						name = "background"
+						spriteType = "GFX_dark_area_cut"
+					}
+				}
+				instantTextBoxType = {
+					name = "difficulty_type_text"
+					font = "cg_16b"
+					position = { x = 5 y = 3 }
+					text = "ARC_DIFFICULTY_TYPE"
+					maxWidth = 100
+					maxHeight = 20
+					fixedSize = yes
+					format = center
+				}
+				iconType = {
+					name = "difficulty_type_icon"
+					position = { x = 5 y = 27 }
+					spriteType = "GFX_archaeology_difficulty_normal"
+					scale = 0.74
+				}
+				instantTextBoxType = {
+					name = "difficulty_type_value"
+					font = "cg_16b"
+					position = { x = 36 y = 30 }
+					text = "-15"
+					maxWidth = 60
+					maxHeight = 20
+					fixedSize = yes
+					format = left
+				}
+				containerWindowType = {
+					name = "skill_bonus_background"
+					size = { width = 106 height = 20 }
+					position = { x = 2 y = 54 }
+					background = {
+						name = "background"
+						spriteType = "GFX_dark_area_cut"
+					}
+				}
+				instantTextBoxType = {
+					name = "skill_bonus_text"
+					font = "cg_16b"
+					position = { x = 5 y = 57 }
+					text = "ARC_LEADER_BONUS"
+					maxWidth = 100
+					maxHeight = 20
+					fixedSize = yes
+					format = center
+				}
+				iconType = {
+					name = "skill_bonus_icon"
+					position = { x = 5 y = 79 }
+					spriteType = "GFX_leader_bonus"
+					scale = 0.74
+				}
+				instantTextBoxType = {
+					name = "skill_bonus_value"
+					font = "cg_16b"
+					position = { x = 36 y = 82 }
+					text = "+2"
+					maxWidth = 60
+					maxHeight = 20
+					fixedSize = yes
+					format = left
+				}
+				containerWindowType = {
+					name = "clues_background"
+					size = { width = 106 height = 20 }
+					position = { x = 2 y = 106 }
+					background = {
+						name = "background"
+						spriteType = "GFX_dark_area_cut"
+					}
+				}
+				instantTextBoxType = {
+					name = "clues_text"
+					font = "cg_16b"
+					position = { x = 5 y = 109 }
+					text = "ESPIONAGE_OPERATION_CLUES"
+					maxWidth = 100
+					maxHeight = 20
+					fixedSize = yes
+					format = center
+					pdx_tooltip = "ESPIONAGE_OPERATION_CLUES_TOOLTIP"
+				}
+				iconType = {
+					name = "clues_icon"
+					position = { x = 5 y = 131 }
+					spriteType = "GFX_clue"
+					pdx_tooltip = "ESPIONAGE_OPERATION_CLUES_TOOLTIP"
+					scale = 0.74
+				}
+				instantTextBoxType = {
+					name = "clues_value"
+					font = "cg_16b"
+					position = { x = 36 y = 134 }
+					text = "3"
+					maxWidth = 60
+					maxHeight = 20
+					fixedSize = yes
+					format = left
+					pdx_tooltip = "ESPIONAGE_OPERATION_CLUES_TOOLTIP"
+				}
+			}
+		}
+		## OPERATION LAYERS
+		# Create Operation
+		containerWindowType = {
+			name = "create_operation_layer"
+			position = { x = -20 y = 11 }
+			size = { width = 351 height = -20 }
+			orientation = upper_right
+			origo = upper_right
+			containerWindowType = {
+				name = "assets_list"
+				position = { x = 10 y = 90 }
+				size = { width = 211 height = 250 }
+				background = {
+					name = "bg"
+					spriteType = "GFX_tiles_dark_area_cut_8"
+				}
+				gridBoxType = {
+					name = "assets_grid"
+					position = { x = 0 y = 0 }
+					size = { width = 0 height = 0 }
+					slotsize = { width = 72 height = 80 }
+					add_horizontal = yes
+					max_slots_horizontal = 1
+					format = "UPPER_LEFT"
+				}
+			}
+			containerWindowType = {
+				name = "cost_operation"
+				position = { x = -213 y = 215 }
+				size = { width = 180 height = 40 }
+				background = {
+					name = "background"
+					quadTextureSprite = "GFX_invisible"
+					alwaysTransparent = yes
+				}
+				instantTextBoxType = {
+					name = "operation_cost"
+					font = "cg_16b"
+					position = { x = 10 y = 21 }
+					text = "COST"
+					maxWidth = 100
+					maxHeight = 20
+					fixedSize = yes
+					format = left
+				}
+				instantTextBoxType = {
+					name = "resources"
+					font = "cg_16b"
+					position = { x = 109 y = 21 }
+					maxWidth = 60
+					maxHeight = 20
+					text = "resources"
+					format = right
+					pdx_tooltip = "OPERATION_COST_TOOLTIP_STATIC"
+				}
+			}
+			containerWindowType = {
+				name = "autolaunch_area"
+				position = { x = 0 y = 762 }
+				size = { width = 351 height = 47 }
+				iconType = {
+					name = "background"
+					spriteType = "GFX_launch_operation_bg"
+					position = { x = 0 y = 0 }
+				}
+				checkboxType = {
+					name = "checked"
+					position = { x = 12 y = 6 }
+					spriteType = "GFX_checkbox_20_20_01"
+					pdx_tooltip = "OPERATION_AUTO_LAUNCH_STATIC"
+					oversound = mouse_over
+				}
+				instantTextBoxType = {
+					name = "autolaunch_operation"
+					font = "cg_16b"
+					position = { x = 46 y = 13 }
+					text = "AUTO_LAUNCH"
+					maxWidth = 300
+					maxHeight = 64
+					fixedSize = yes
+					format = left
+					text_color_code = "W"
+					pdx_tooltip = "OPERATION_AUTO_LAUNCH_STATIC"
+				}
+			}
+			# Target info
+			containerWindowType = {
+				name = "target_info"
+				size = { width = 330 height = 209 }
+				position = { x = 10 y = 538 }
+				background = {
+					name = "background"
+					quadTextureSprite = "GFX_dark_area_cut"
+				}
+				containerWindowType = {
+					name = "target_info_header"
+					position = { x = 0 y = 0 }
+					background = {
+						name = "background_expedition_title"
+						quadTextureSprite = "GFX_operations_phase_bg"
+						alwaysTransparent = yes
+					}
+				}
+				instantTextBoxType = {
+					name = "header_target_info"
+					font = "cg_16b"
+					position = { x = 15 y = 10 }
+					text = "TARGET_INFO"
+					maxWidth = 180
+					maxHeight = 20
+					fixedSize = yes
+					format = left
+					pdx_tooltip = "ESPIONAGE_OPERATION_TARGET_INFORMATION"
+				}
+				containerWindowType = {
+					name = "target_info_area"
+					position = { x = 10 y = 48 }
+					size = { width = 200 height = 42 }
+					moveable = no
+					iconType = {
+						name = "relative_power_icon"
+						spriteType = "GFX_relative_power_icon"
+						position = { x = 8 y = 4 }
+					}
+					iconType = {
+						name = "background_power"
+						spriteType = "GFX_info_background_148"
+						position = { x = 35 y = 3 }
+					}
+					instantTextBoxType = {
+						name = "relative_power"
+						font = "cg_16b"
+						maxWidth = 148
+						maxHeight = 20
+						position = { x = 35 y = 9 }
+						format = center
+					}
+					iconType = {
+						name = "background"
+						spriteType = "GFX_info_background_148"
+						position = { x = 35 y = 40 }
+					}
+					iconType = {
+						name = "relative_encryption_icon"
+						spriteType = "GFX_resource_intel_decryption"
+						position = { x = 5 y = 40 }
+						scale = 1
+					}
+					instantTextBoxType = {
+						name = "relative_encryption"
+						position = { x = 35 y = 46 }
+						font = "cg_16b"
+						maxWidth = 150
+						maxHeight = 22
+						fixedSize = yes
+						format = center
+					}
+				}
+			}
+			containerWindowType = {
+				name = "target_selection"
+				position = { x = 10 y = 394 }
+				size = { width = 330 height = 359 }
+				# Select Target
+				containerWindowType = {
+					name = "target_list"
+					position = { x = 0 y = 32 }
+					size = { width = 100% height = -10 }
+					margin = { top = 5 bottom = 5 }
+					verticalScrollbar = "right_vertical_slider_thick"
+					background = {
+						name = "bg"
+						spriteType = "GFX_tiles_dark_area_cut_8"
+					}
+					gridBoxType = {
+						name = "target_grid"
+						slotsize = { width = 320 height = 50 }
+						add_horizontal = no
+						max_slots_horizontal = 1
+						format = "UPPER_LEFT"
+					}
+				}
+				iconType = {
+					name = "header_background"
+					quadTextureSprite = "GFX_operations_phase_bg"
+					alwaysTransparent = yes
+				}
+				instantTextBoxType = {
+					name = "header_select_target"
+					font = "cg_16b"
+					position = { x = 15 y = 10 }
+					text = "SELECT_TARGET"
+					maxWidth = 120
+					maxHeight = 20
+					fixedSize = yes
+					format = left
+				}
+			}
+			buttonType = {
+				name = "cancel_button"
+				quadTextureSprite = "GFX_standard_button_142_34_button"
+				position = { x = -340 y = -38 }
+				orientation = lower_right
+				font = "cg_16b"
+				clicksound = back_click
+				#shortCut = "ESCAPE"
+				buttonText = "CANCEL"
+			}
+			buttonType = {
+				name = "create_button"
+				quadTextureSprite = "GFX_standard_button_142_34_button"
+				position = { x = -177 y = -38 }
+				orientation = lower_right
+				font = "cg_16b"
+				clicksound = back_click
+				#shortCut = "ESCAPE"
+				buttonText = "LAUNCH"
+			}
+		}
+		# Ongoing Operation
+		containerWindowType = {
+			name = "ongoing_operation_layer"
+			position = { x = -20 y = 11 }
+			size = { width = 351 height = -20 }
+			orientation = upper_right
+			origo = upper_right
+			containerWindowType = {
+				name = "assets_list"
+				position = { x = 10 y = 90 }
+				size = { width = 211 height = 250 }
+				background = {
+					name = "bg"
+					spriteType = "GFX_tiles_dark_area_cut_8"
+				}
+				gridBoxType = {
+					name = "assets_grid"
+					position = { x = 0 y = 0 }
+					size = { width = 0 height = 0 }
+					slotsize = { width = 72 height = 80 }
+					add_horizontal = yes
+					max_slots_horizontal = 1
+					format = "UPPER_LEFT"
+				}
+				#instantTextBoxType = {
+				#   name = "asset_label"
+				#   font = "cg_16b"
+				#   position = { x = 10 y = 108 }
+				#   text = "3"
+				#   maxWidth = 40
+				#   maxHeight = 20
+				#   fixedSize = yes
+				#   text = "ASSET"
+				#   format = left
+				#}
+				#
+				#instantTextBoxType = {
+				#   name = "assets_text"
+				#   font = "cg_16b"
+				#   position = { x = 10 y = 125 }
+				#   text = "ASSIGN_ASSET"
+				#   maxWidth = 125
+				#   maxHeight = 64
+				#   fixedSize = yes
+				#   format = left
+				#   
+				#   text_color_code = "H"
+				#}
+				#
+				## VM: need code support to make the portraits work
+				#
+				#containerWindowType = {
+				#   name = "assets_portraits"
+				#   position = { x = 9 y = 10 }
+				#   size = { width = 82 height = 92 }
+				#   moveable = no
+				#   clipping = yes
+				#
+				#   iconType = {
+				#       name = "asset_GRD"
+				#       spriteType = "GFX_asset_GRD"
+				#       position = { x = -4 y = -5 }
+				#       alwaysTransparent = yes
+				#   }
+				#
+				#   iconType = {
+				#       name = "asset_portrait"
+				#       quadTextureSprite = "GFX_portrait_character"
+				#       position = { x = 40 y = 515 }
+				#       scale = 0.5
+				#   }
+				#
+				#   iconType = {
+				#       name = "asset_card_empty_nongestalt"
+				#       quadTextureSprite = "GFX_asset_empty_nongestalt"
+				#       position = { x = 0 y = 0 }
+				#       alwaysTransparent = yes
+				#   }
+				#}
+			}
+			containerWindowType = {
+				name = "autolaunch_area"
+				position = { x = 0 y = 762 }
+				size = { width = 351 height = 47 }
+				iconType = {
+					name = "background"
+					spriteType = "GFX_launch_operation_bg"
+					position = { x = 0 y = 0 }
+				}
+				checkboxType = {
+					name = "checked"
+					position = { x = 12 y = 6 }
+					spriteType = "GFX_checkbox_20_20_01"
+					pdx_tooltip = "OPERATION_AUTO_LAUNCH_STATIC"
+					oversound = mouse_over
+				}
+				instantTextBoxType = {
+					name = "autolaunch_operation"
+					font = "cg_16b"
+					position = { x = 46 y = 13 }
+					text = "AUTO_LAUNCH"
+					maxWidth = 300
+					maxHeight = 64
+					fixedSize = yes
+					format = left
+					text_color_code = "W"
+					pdx_tooltip = "OPERATION_AUTO_LAUNCH_STATIC"
+				}
+			}
+			containerWindowType = {
+				name = "expedition_log"
+				size = { width = 330 height = 350 }
+				position = { x = 10 y = 397 }
+				background = {
+					name = "background"
+					quadTextureSprite = "GFX_dark_area_cut"
+				}
+				#
+				#"GFX_tiles_frame"
+				containerWindowType = {
+					name = "expedition_bg"
+					position = { x = 0 y = 0 }
+					background = {
+						name = "background_expedition_title"
+						quadTextureSprite = "GFX_operations_phase_bg"
+						alwaysTransparent = yes
+					}
+				}
+				instantTextBoxType = {
+					name = "header_phase"
+					font = "cg_16b"
+					position = { x = 15 y = 10 }
+					text = "PHASE_REPORT"
+					maxWidth = 120
+					maxHeight = 20
+					fixedSize = yes
+					format = left
+					pdx_tooltip = "ESPIONAGE_OPERATION_PHASE_REPORT_TOOLTIP"
+				}
+				smoothListBoxType = {
+					name = "log_list"
+					position = { x = 7 y = 45 }
+					size = { x = 310 y = 296 }
+					borderSize = { x = 0 y = 0 }
+					scrollbartype = "standardlistbox_slider_thick"
+				}
+			}
+			# Operation Blocked
+			containerWindowType = {
+				name = "block_window"
+				size = { width = 351 height = 100% }
+				position = { x = 0 y = 46 }
+				clipping = yes
+				##Full Block Image -- No Animation --
+				#background = {
+				#   name = "background"
+				#   quadTextureSprite = "GFX_expedition_file_blocked"
+				#}
+				##Sliding Doors --------------------------------------
+				iconType = {
+					name = "doorRight"
+					spriteType = "GFX_expedition_file_blocked_doorRight"
+					orientation = upper_right
+					position = { x = -184 y = 0 }
+				}
+				iconType = {
+					name = "doorLeft"
+					spriteType = "GFX_expedition_file_blocked_doorLeft"
+					position = { x = 0 y = 0 }
+				}
+				iconType = {
+					name = "blocked_phase"
+					spriteType = "GFX_operations_blocked_phase"
+					orientation = upper_right
+					position = { x = -352 y = 0 }
+				}
+				instantTextBoxType = {
+					name = "text"
+					font = "malgun_goth_24"
+					position = { x = 0 y = 429 }
+					text = "WAITING FOR YOUR DECISION"
+					maxWidth = 352
+					maxHeight = 20
+					fixedSize = yes
+					format = center
+				}
+				iconType = {
+					name = "category"
+					quadTextureSprite = "GFX_op_cat_provocation_ui_icon"
+					position = { x = 153 y = 342 }
+				}
+			}
+			buttonType = {
+				name = "abort"
+				quadTextureSprite = "GFX_standard_button_142_34_button"
+				position = { x = -340 y = -38 }
+				orientation = lower_right
+				text = "ABORT"
+				font = "cg_16b"
+				clicksound = back_click
+			}
+		}
+	}
+	# ---------------------------------------------------------------------
+	# Event ---------------------------------------------------------------
+	containerWindowType = {
+		name = "espionage_operation_event_entry"
+		position = { x = 0 y = 0 }
+		size = { width = 653 height = 245 } # might be resized in code
+		instantTextBoxType = {
+			name = "name"
+			font = "malgun_goth_24"
+			position = { x = 0 y = 5 }
+			text = "NAME OF EVENT"
+			maxWidth = 653
+			maxHeight = 20
+			format = left
+		}
+		instantTextBoxType = {
+			name = "description"
+			font = "cg_16b"
+			position = { x = 0 y = 35 } # will be moved up in code if name is empty
+			text = "THIS HERE IS A LONG DESCRIPTION OF AN EVENT"
+			maxWidth = 653
+			format = left
+		}
+		instantTextBoxType = {
+			name = "effects"
+			font = "malgun_goth_24"
+			position = { x = 0 y = 35 } # will be moved down below the desc dynamically
+			text = "THIS IS AN EFFECT"
+			maxWidth = 653
+			format = left
+		}
+	}
+	containerWindowType = {
+		name = "espionage_operation_event_option"
+		position = { x = 0 y = 0 }
+		size = { width = 674 height = 48 }
+		background = {
+			name = "background"
+			spriteType = "GFX_ui_button_650_34"
+			position = { x = 0 y = -5 }
+		}
+		instantTextBoxType = {
+			name = "text"
+			font = "malgun_goth_24"
+			position = { x = 20 y = 11 }
+			text = "THIS IS AN EVENT OPTION"
+			maxWidth = 634
+			maxHeight = 24
+			fixedSize = yes
+			format = center
+			alwaysTransparent = yes
+		}
+		overlappingElementsBoxType = {
+			name = "trigger_icons"
+			position = { x = -120 y = 9 }
+			orientation = upper_right
+			size = { x = 90 y = 30 }
+			format = right
+		}
+	}
+	# ----------------------------------------------------------------------
+	containerWindowType = {
+		name = "espionage_operation_chapters_box_entry"
+		position = { x = 0 y = 0 }
+		size = { width = 50 height = 50 }
+		iconType = {
+			name = "rune_background"
+			quadTextureSprite = "GFX_chapter_button"
+			position = { x = -1 y = -6 }
+			frame = 1
+		}
+		buttonType = {
+			name = "rune_button"
+			quadTextureSprite = "GFX_archaeology_runes_A1"
+			position = { x = 4 y = -1 }
+		}
+		buttonType = {
+			name = "chapter_button"
+			quadTextureSprite = "GFX_chapter_in_progress"
+			position = { x = 6 y = 2 }
+			frame = 1
+		}
+		iconType = {
+			name = "chapter_progress"
+			quadTextureSprite = "GFX_chapter_progress_bar"
+			position = { x = 5 y = 0 }
+			frame = 1
+		}
+	}
+	containerWindowType = {
+		name = "espionage_operation_log_entry"
+		position = { x = 0 y = 0 }
+		size = { width = 310 height = 50 }
+		background = {
+			name = "background"
+			spriteType = "GFX_dark_area_cut"
+		}
+		iconType = {
+			name = "tab_icon"
+			quadTextureSprite = "GFX_expedition_log_tab"
+			position = { x = 0 y = 8 }
+			frame = 2 # yellow by default
+		}
+		instantTextBoxType = {
+			name = "date"
+			font = "cg_16b"
+			position = { x = 10 y = 17 }
+			text = "1100.02.10"
+			maxWidth = 120
+			maxHeight = 30
+			fixedSize = yes
+			format = left
+		}
+		iconType = {
+			name = "roll_icon"
+			quadTextureSprite = "GFX_icon_archaeology_dieroll"
+			position = { x = 140 y = 12 }
+			scale = 0.9
+		}
+		instantTextBoxType = {
+			name = "roll_text"
+			font = "cg_16b"
+			position = { x = 180 y = 17 }
+			text = "9"
+			maxWidth = 40
+			maxHeight = 30
+			fixedSize = yes
+			format = left
+		}
+		iconType = {
+			name = "clue_icon"
+			quadTextureSprite = "GFX_log_clue"
+			position = { x = 235 y = 13 }
+		}
+		instantTextBoxType = {
+			name = "info_text"
+			font = "cg_16b"
+			position = { x = 270 y = 17 }
+			text = "+2"
+			maxWidth = 40
+			maxHeight = 30
+			fixedSize = yes
+			format = left
+		}
+	}
+	containerWindowType = {
+		name = "espionage_operation_target_entry"
+		size = { width = 320 height = 50 }
+		background = {
+			name = "background"
+			spriteType = "GFX_tiles_frame_light"
+			size = { x = 674 y = 47 }
+			position = { x = 0 y = 0 }
+			oversound = no_sound
+			clicksound = select_click
+		}
+		containerWindowType = {
+			name = "target_selected_overlay"
+			position = { x = 5 y = 5 }
+			size = { width = 310 height = 40 }
+			background = {
+				name = "target_selected_bg"
+				spriteType = "GFX_glow_tile_orange_no_padding"
+				alwaysTransparent = yes
+			}
+		}
+		instantTextBoxType = {
+			name = "name"
+			font = "cg_16b"
+			position = { x = 40 y = 17 }
+			maxWidth = 260
+			maxHeight = 16
+			fixedSize = yes
+			format = left
+			#alwaysTransparent = yes
+		}
+		iconType = {
+			name = "type"
+			position = { x = 7 y = 7 }
+			spriteType = "GFX_starbase_outliner"
+		}
+		containerWindowType = {
+			name = "selected_overlay"
+			position = { x = 0 y = 0 }
+			size = { width = 100% height = 44 }
+			background = {
+				name = "selected_bg"
+				spriteType = "GFX_glow_tile_orange_no_padding"
+				alwaysTransparent = yes
+			}
+		}
+	}
+}
