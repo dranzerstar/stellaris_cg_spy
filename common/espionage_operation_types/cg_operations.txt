@@ -514,5 +514,58 @@ operation_hypno = {
 # }
 
 
+operation_	 = {
+	target = none
+	categories = { op_cat_holy op_cat_economy }
+	picture = GFX_evt_financial_instruments
+	desc = CG_operation_expel_corp
+	stages = 2
 
+	resources = {
+		category = operations
+		cost = {
+			holylight_crystal = 600
+		}
+		upkeep = {
+			holylight_crystal = 3
+		}
+	}
 
+	spy_power_cost = 35
+	
+	potential = {owner={has_country_flag = asceticism_flag}}
+	allow = {
+		custom_tooltip = {
+			owner = {
+				any_owned_planet = {
+					has_branch_office = yes
+					branch_office_owner = { is_same_value = root.target }
+				}
+			}
+			fail_text = CG_operation_expel_corp_no
+		}
+
+	}
+	stage = {
+		difficulty = @diff_t3
+		icon = GFX_espionage_chapter_icon_surveillance
+		event = CG_operation.5000
+	}
+	stage = {
+		difficulty = @diff_t3
+		icon = GFX_espionage_chapter_icon_security
+		event = CG_operation.5001
+	}
+	on_roll_failed = {
+		standard_espionage_operation_on_roll_failed = { RANDOM_EVENTS = operation_random_events_low_stakes }
+	}
+	on_create = {
+	#	espionage_operation_event = { id = onactiondiplo.34 days = 1 }
+		target = {
+			set_timed_country_flag = {
+				flag = espionage_operation_targeted_by@root.owner #Used in random Spy Network events
+				days = @operationTargetedByTimer
+			}
+		}
+	}
+}

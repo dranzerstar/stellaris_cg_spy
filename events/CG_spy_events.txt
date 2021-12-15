@@ -1570,20 +1570,331 @@ country_event = {
 }
 
 
-country_event = {
-	id = CG_operation.3005
-	title = CG_operation.3005.name
-	desc = CG_operation.3005.desc
-	picture = GFX_evt_hypno_5
-	show_sound = event_spymaster
+####################################
+#  expel 
+# 驱离分部
+#######################################
 
+espionage_operation_event = {
+	id = CG_operation.5000
+	title = CG_operation.5000.name
+	desc = CG_operation.5000.desc
+	picture = GFX_evt_hypno_1 #TODO
+	show_sound = event_spymaster
+	espionage_operation = yes
 
 	is_triggered_only = yes
+
+	option = {
+		name = CG_operation.5000.next
+	}
+}
+
+espionage_operation_event = {
+	id = CG_operation.5001
+	title = CG_operation.5001.name
+	desc = CG_operation.5001.desc
+	picture = GFX_evt_hypno_1 #TODO
+	show_sound = event_spymaster
+	espionage_operation = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = CG_operation.5001.next
+		country_event = {id = CG_operation.5002  days = 1  }
+
+	}
+}
+
+
+# 出警1
+country_event = {
+    id = CG_operation.5002
+    hide_window = yes
+    is_triggered_only = yes
+
+    immediate = {
+
+		
+			
+			random_owned_planet = {
+				limit = {
+					has_branch_office = yes
+					branch_office_owner = { is_same_value = from.target }
+				}
+				save_event_target_as = corp_planet_target
+			}
+			country_event = { id = CG_operation.5002 }
+		
+    }
+}
+
+# 出警2
+country_event = { #TODO
+	id = CG_operation.5003
+	title = diplospy.193.name
+    desc = {
+        trigger = {
+			fromfrom = {
+                has_espionage_operation_flag = smooth_exit
+				target = { is_criminal_syndicate = no }
+            }
+        }
+        text = diplospy.193.desc.smooth
+    }
+
+	picture = GFX_evt_financial_instruments
+	show_sound = event_espionage_concluded
+	location = event_target:corp_planet_target
+	
+	is_triggered_only = yes
+	
+	trigger = {
+        exists = fromfrom
+    }
+	
 	immediate = {
-		add_resource = { influence = -100 }	
+    }
+	
+	option = {
+		name = EXCELLENT
+		trigger = {
+            fromfrom = { has_espionage_operation_flag = smooth_exit }
+        }
+        fromfrom.spynetwork = {
+            add_spy_network_level = -20
+        }
+		custom_tooltip = diplospy.193.a.tooltip
+		hidden_effect = {
+			event_target:corp_planet_target = {
+				close_branch_office = yes
+				set_timed_planet_flag = { flag = criminal_branch_closed_cooldown_planet days = @StealTechnologyTimer }
+			}
+		}
+		hidden_effect = {
+			fromfrom.target = {
+				country_event = { id = diplospy.194 }
+			}
+		}
+		if = { 
+			limit = { has_ascension_perk = ap_become_the_crisis }
+			complete_crisis_objective = crisobj_perform_upsetting_operations 
+		}
 	}
 	option = {
-		name = CG_operation.3005.a
-		add_resource = { love_juice = 3000 sr_beauty = 1}	
+		name = {
+			text = diplospy.193.b
+			trigger = {
+				fromfrom.target = { is_criminal_syndicate = no }
+            }
+		}
+		name = {
+			text = diplospy.193.b.crime
+			trigger = {
+				fromfrom.target = { is_criminal_syndicate = yes }
+            }
+		}
+		trigger = {
+            fromfrom = { NOT = { has_espionage_operation_flag = smooth_exit } }
+        }
+		allow = { resource_stockpile_compare = { resource = energy value >= 2000 } }
+		add_resource = { energy = -2000 }
+		if = {
+			limit = {
+				fromfrom.target = { is_criminal_syndicate = yes }
+			}
+			event_target:corp_planet_target = {
+				add_modifier = { modifier = rooting_out_criminals days = 3600 }
+			}
+		}
+		else = {
+			hidden_effect = {
+				fromfrom.target = { add_resource = { energy = 2000 } }
+			}
+		}
+		custom_tooltip = diplospy.193.a.tooltip
+		hidden_effect = {
+			event_target:corp_planet_target = {
+				close_branch_office = yes
+				set_timed_planet_flag = { flag = criminal_branch_closed_cooldown_planet days = @StealTechnologyTimer }
+			}
+		}
+        fromfrom.spynetwork = {
+            add_spy_network_level = -30
+        }
+		hidden_effect = {
+			fromfrom.target = {
+				country_event = { id = diplospy.194 }
+			}
+		}
+		if = { 
+			limit = { has_ascension_perk = ap_become_the_crisis }
+			complete_crisis_objective = crisobj_perform_upsetting_operations 
+		}
 	}
+	option = {
+		name = diplospy.184.c
+		icon = {
+			icon = GFX_espionage_asset_icon
+			text = ESPIONAGE_OPERATION_ASSET_EVENT_OPTION
+		}
+		trigger = {
+            fromfrom = {
+				NOT = { has_espionage_operation_flag = smooth_exit }
+				has_espionage_asset_economy = yes
+				target = { is_criminal_syndicate = no }
+			}
+        }
+		fromfrom = {
+			destroy_espionage_asset_economy = yes
+		}
+		custom_tooltip = diplospy.193.a.tooltip
+		hidden_effect = {
+			event_target:corp_planet_target = {
+				close_branch_office = yes
+				set_timed_planet_flag = { flag = criminal_branch_closed_cooldown_planet days = @StealTechnologyTimer }
+			}
+		}
+        fromfrom.spynetwork = {
+            add_spy_network_level = -30
+        }
+		hidden_effect = {
+			fromfrom.target = {
+				country_event = { id = diplospy.194 }
+			}
+		}
+		if = { 
+			limit = { has_ascension_perk = ap_become_the_crisis }
+			complete_crisis_objective = crisobj_perform_upsetting_operations 
+		}
+	}
+	option = {
+		name = diplospy.184.c
+		icon = {
+			icon = GFX_espionage_asset_icon
+			text = ESPIONAGE_OPERATION_ASSET_EVENT_OPTION
+		}
+		trigger = {
+            fromfrom = {
+				NOT = { has_espionage_operation_flag = smooth_exit }
+				has_espionage_asset_criminal = yes
+				target = { is_criminal_syndicate = yes }
+			}
+        }
+		fromfrom = {
+			destroy_espionage_asset_criminal = yes
+		}
+		custom_tooltip = diplospy.193.a.tooltip
+		hidden_effect = {
+			event_target:corp_planet_target = {
+				close_branch_office = yes
+				set_timed_planet_flag = { flag = criminal_branch_closed_cooldown_planet days = @StealTechnologyTimer }
+			}
+		}
+        fromfrom.spynetwork = {
+            add_spy_network_level = -30
+        }
+		hidden_effect = {
+			fromfrom.target = {
+				country_event = { id = diplospy.194 }
+			}
+		}
+		if = { 
+			limit = { has_ascension_perk = ap_become_the_crisis }
+			complete_crisis_objective = crisobj_perform_upsetting_operations 
+		}
+	}
+	option = {
+		name = diplospy.184.d
+		trigger = {
+            fromfrom = { NOT = { has_espionage_operation_flag = smooth_exit } }
+			OR = {
+				is_ai = no
+				resource_stockpile_compare = { resource = energy value < 2000 }
+			}
+        }
+	}
+	after = {
+        destroy_espionage_operation = fromfrom
+    }
+}
+
+# Branch Office Closed! (victim) | from = instigating country
+country_event = {
+    id = diplospy.194
+    title = diplospy.194.name
+    desc = {
+		text = diplospy.194.desc
+		trigger = { is_criminal_syndicate = no }
+	}
+	desc = {
+		text = diplospy.194.desc.crime
+		trigger = { is_criminal_syndicate = yes }
+	}
+    picture = GFX_evt_financial_instruments
+    show_sound = event_default
+    is_triggered_only = yes
+    location = event_target:corp_planet_target
+
+    trigger = {
+        exists = from
+        exists = event_target:corp_planet_target
+    }
+
+    immediate = {
+        random_list = {
+            1 = { #Saboteurs caught
+                modifier = {
+                    factor = 0
+                    OR = {
+                        NOT = {
+                            any_spynetwork = {
+                                owner = { is_same_value = root }
+                                target = { is_same_value = from }
+                            }
+                        }
+                        has_country_flag = recently_received_espionage_asset
+                    }
+                }
+                modifier = {
+                    factor = 3
+                    relative_encryption_decryption = { target = from value > 0.8 }
+                    relative_encryption_decryption = { target = from value < 1.6 }
+                }
+                modifier = {
+                    factor = 10
+                    relative_encryption_decryption = { target = from value >= 1.6 }
+                }
+                set_timed_country_flag = {
+                    flag = espionage_caught_spies
+                    days = 20
+                }
+                if = {
+                    limit = {
+                        any_spynetwork = {
+                            owner = { is_same_value = root }
+                            target = { is_same_value = from }
+                            is_spynetwork_level > 5
+                        }
+                        NOT = { has_country_flag = recently_received_espionage_asset }
+                    }
+                    country_event = { #A Surprise Catch (asset granted)
+                        id = espionage.1040
+                        days = 15
+                        scopes = { from = fromfrom }
+                    }
+                }
+            }
+            9 = { } #Nothing
+        }
+    }
+	
+	immediate = {
+	}
+
+    option = {
+        name = TERRIBLE
+		custom_tooltip = diplospy.186.a.tooltip
+    }
 }

@@ -1,4 +1,7 @@
 ﻿l_simp_chinese:
+##########################
+# CG operation list
+##########################
  op_cat_ero:0 "欲望渗透"
  mod_op_cat_ero:0 "行动技能（欲望渗透）"
  op_cat_ero_desc:0 "把色色直接放到圣女面前就不信连一眼都不看!"
@@ -22,6 +25,9 @@
  operation_hypno_on_success:0 "$IF_SUCCESSFUL|E$\n在[root.target.GetName]获得定量外交支持和有机会获得正向外交关系"
  CG_operation_hypno_desc:0 "潜入队伍将在[root.target.GetName]寻找适合的高级外交人员，并尝试对其施加催眠暗示，使其在作出偏向有利我方的外交决定。"
 
+ operation_expel_corp:0 "净化淫魔分支部"
+ operation_abduct_pops_on_success:0 "在随机领地星球上，把随属于目标国的分部清除。"
+ CG_operation_expel_corp:0 "根据情报显示，魅魔已经在我们国土组织并开多种具规模的卖淫场所。我们必须立即展开调查及瓦解这些地下组织。" 
 #########################
 # undercover
 ###########################
@@ -95,8 +101,8 @@
  CG_operation.2006.a.tooltip:0 "§R3 名人口被带走了!!§!"
  CG_operation.2006.a:0 "寄!"
  CG_operation.2007.name:0 "到达目的地"
- CG_operation.2007.desc:0 "乘客已经安全[event_target:steal_pops_planet]"
- CG_operation.2007.a:0 "[steal_pops_planet.GetName]"
+ CG_operation.2007.desc:0 "乘客已经安全[event_target:steal_pops_planet],请带好随身物品。祝你有快乐的新生活。"
+ CG_operation.2007.a:0 "去[steal_pops_planet.GetName]看看"
 
 #########################
 # hypno event
@@ -123,7 +129,7 @@
 
 
 #########################
-# cg_operation fail event
+# cg_operation MM fail event
 ###########################
  CG_operation_failed.5000.name:0 "失去联络"
  CG_operation_failed.5000.desc:0 "我们的潜入[fromfrom.target.GetName]的兔兔没有向我们定期通信。"
@@ -158,4 +164,15 @@
  CG_operation_failed.5052.desc:0 "兔兔战败了，还被活抓！大概现在被狠狠地啪啪啪。。"
 
 
+
+#########################
+# operation_expel_corp
+###########################
+ CG_operation_expel_corp_no:0 "对象没有在我们的星球上开设分部。"
+ CG_operation.5000.name:0 "搜查行动"
+ CG_operation.5000.desc:0 "搜查员会依据所得的情报，并找到魅魔分部的具体位置，规模和安保等级。\n完成并可以开始定制应对方案。"
+ CG_operation.5000.next:0 "以圣歌之名义！"
+ CG_operation.5001.name:0 "收网行动"
+ CG_operation.5001.desc:0 "报告长官，我们已经完成清除行动部署，随时可以行动！"
+ CG_operation.5001.next:0 "准备就绪，出警！"
 
