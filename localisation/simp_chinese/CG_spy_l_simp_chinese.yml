@@ -85,8 +85,8 @@
  CG_operation.2003.name.next:0 "开始长途娱兴节目"
  CG_operation.2003.desc:0 "由于旅途航程遥远，为确保行程的质量，HiAce为阁下准备了娱兴节目。"
  CG_operation.2005.name:0 "关口"
- CG_operation.2005.desc.smooth:0 "我们抵达了[fromfrom.target.GetName]的关口, 并成功过关。"
- CG_operation.2005.desc.messy:0 "我们抵达了[fromfrom.target.GetName]的关口, 但是我们的车牌号码被[fromfrom.target.GetName]的口岸人员记录了。"
+ CG_operation.2005.desc.smooth:0 "我们抵达了[fromfrom.target.GetName]的关口, 并成功过关。乘客很快就会到达[steal_pops_planet.GetName]。"
+ CG_operation.2005.desc.messy:0 "我们抵达了[fromfrom.target.GetName]的关口, 但是我们的车牌号码被[fromfrom.target.GetName]的口岸人员记录了。但乘客很快就会到达目[steal_pops_planet.GetName]。"
  CG_operation.2005.tooltip.pops:0 "§Y3 个[from.from.target.GetName] 人口§! 安全到达 §Y[steal_pops_planet.GetName].§!"
  CG_operation.2005.tooltip.cooldown:0 "§H还有再等 §Y6 年§! 才能再次发车到[from.from.target.GetName].§!"
  CG_operation.2006.name:0 "失踪人口!!"
@@ -94,7 +94,9 @@
  CG_operation.2006.desc.messy.reg:0 "我们发现几个修女在回家路上失踪!! [Root.GetSpeciesName] ，幸好监控镜头拍到作案的车子是来致§H[blamed_empire.GetName]§的!!"
  CG_operation.2006.a.tooltip:0 "§R3 名人口被带走了!!§!"
  CG_operation.2006.a:0 "寄!"
-
+ CG_operation.2007.name:0 "到达目的地"
+ CG_operation.2007.desc:0 "乘客已经安全[event_target:steal_pops_planet]"
+ CG_operation.2007.a:0 "[steal_pops_planet.GetName]"
 
 #########################
 # hypno event

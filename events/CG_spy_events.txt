@@ -1167,6 +1167,9 @@ country_event = {
 						limit = {
 							is_sapient = yes
 							is_robot_pop = no
+							has_citizenship_type = {
+								type = citizenship_full
+							}
 							NOT = { has_trait = trait_hive_mind }
 						}
 						weights = {
@@ -1198,21 +1201,38 @@ country_event = {
 						resettle_pop = {
 							pop = this
 							planet = event_target:steal_pops_planet
+							
 						}
 					}
 				}
 			}
-			country_event = { id = CG_operation.2006 }
+			country_event = { id = CG_operation.2006 } #target scope
 		}
         destroy_espionage_operation = fromfrom
-		
+		#player country event 
+		country_event = { id = CG_operation.2007  days= 30 }
 		if = { 
 			limit = { has_ascension_perk = ap_become_the_crisis }
 			complete_crisis_objective = crisobj_perform_upsetting_operations 
 		}
     }
 }
+country_event = {
+	id = CG_operation.2007
+	title = CG_operation.2007.name
+	desc = CG_operation.2007.desc
+	picture = GFX_evt_hypno_5
 
+    trigger = {
+        exists = from
+    }
+	is_triggered_only = yes
+
+	option = {
+		name = CG_operation.2007.a
+
+	}
+}
 # Pops Stolen (victim) | from = instigating country
 country_event = {
     id = CG_operation.2006
@@ -1233,7 +1253,7 @@ country_event = {
 		text = CG_operation.2006.desc.messy.reg
 	}
 
-    picture = GFX_evt_alien_segregation
+    picture = GFX_evt_abduct_encounter_5
     show_sound = event_public_unrest
     is_triggered_only = yes
 
