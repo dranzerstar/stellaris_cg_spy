@@ -175,4 +175,19 @@
  CG_operation.5001.name:0 "收网行动"
  CG_operation.5001.desc:0 "报告长官，我们已经完成清除行动部署，随时可以行动！"
  CG_operation.5001.next:0 "准备就绪，出警！"
+ CG_operation.5002.name:0 "突击据点"
+ CG_operation.5002.desc:0 "以圣歌之名，把这我藏在[event_target:corp_planet_target]的淫乱鼠窝重世界之中消失！"
+ CG_operation.5003.name:0 "净化完成"
+ CG_operation.5003.desc:0 "成功把淫乱团伙瓦解，活抓的就留给审判局处理，现在开始打扫战场。"
+ CG_operation.5003.a:0 "把有用的武器和生产道具通通拆解。"
+ CG_operation.5003.b:0 "先检查有没有隐藏的能源币保险箱。"
+ CG_operation.5003.c:0 "通通以最高焦尔强度的圣光净化！"
+ CG_operation.5003.d:0 "我全都要！"
+ CG_operation.5004.name:0 "分部被摧毁"
+ CG_operation.5004.desc:0 "我们在[location]的分部被当地执法人员摧毁了!"
+
+
+
+
+
 

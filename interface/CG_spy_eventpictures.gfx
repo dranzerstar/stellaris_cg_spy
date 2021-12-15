@@ -171,4 +171,16 @@ spriteTypes = {
 		##masking_texture = "gfx/interface/situation_log/event_mask.dds"
 		alwaystransparent = yes
 	}
+	spriteType = {
+		name = "GFX_evt_spymaster_01"
+		texturefile = "gfx/event_pictures/cg_spymaster.dds" 
+		##masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_explode_01"
+		texturefile = "gfx/event_pictures/cg_explode.dds" 
+		##masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
 }

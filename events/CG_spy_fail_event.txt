@@ -23,6 +23,7 @@ country_event = {
 			days = @RandomOperationEventTimer
 		}
 	}
+	
 
 	option = { #Find operatives
 		name = CG_operation_failed.5000.a

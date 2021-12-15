@@ -514,7 +514,7 @@ operation_hypno = {
 # }
 
 
-operation_	 = {
+operation_expel_corp= {
 	target = none
 	categories = { op_cat_holy op_cat_economy }
 	picture = GFX_evt_financial_instruments
