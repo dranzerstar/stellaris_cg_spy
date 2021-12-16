@@ -90,7 +90,7 @@ espionage_operation_event = {
 
 	immediate = {
 
-			espionage_acquire_asset_regular = yes
+			#espionage_acquire_asset_regular = yes
 			CG_espionage_acquire_asset_ero = yes
 		
 	}
@@ -1780,4 +1780,170 @@ country_event= {
         name = CG_operation_failed.5005.a
 		
     }
+}
+
+
+
+###########################
+# CG spy install asset 派遣特战人员
+###########################
+
+# this = operation; from = target (country)
+
+# Install operatives
+espionage_operation_event = {
+	id = CG_operation.9000
+	title = CG_operation.9000.name
+	espionage_operation = yes
+	desc = {
+
+		text = CG_operation.9000.desc
+	}
+
+	picture = GFX_evt_spymaster_01
+	show_sound = event_default
+	is_triggered_only = yes
+
+	immediate = { }
+
+	option = { name = CG_operation.9000.next }
+}
+# Target identified
+espionage_operation_event = {
+	id = CG_operation.9001
+	title = CG_operation.9001.name
+	desc = CG_operation.9001.desc
+
+	espionage_operation = yes
+	
+	picture = GFX_evt_spymaster_01
+	
+
+	show_sound = event_default
+	is_triggered_only = yes
+
+	immediate = { }
+
+	option = { name = CG_operation.9001.next }
+}
+# Result
+espionage_operation_event = {
+	id = CG_operation.9002
+	title = CG_operation.9002.name
+	desc = CG_operation.9002.desc
+	espionage_operation = yes
+	picture = GFX_evt_spymaster_01
+	show_sound = event_default
+	is_triggered_only = yes
+
+	immediate = {
+
+			#espionage_acquire_asset_regular = yes
+		#	CG_espionage_acquire_asset_ero = yes
+			CG_espionage_acquire_asset_holy = yes
+		
+	}
+
+	option = {
+		name = CG_operation.9002.next
+		hidden_effect = {
+			owner = {
+				country_event = { id = CG_operation.9006 days = 1 }
+			}
+		}
+	}
+
+	after = {
+		set_espionage_operation_progress_locked = no
+	}
+}
+# Finalé | from = operation
+country_event = {
+	id = CG_operation.9006
+	title = CG_operation.9006.name
+	desc = {
+		trigger = {
+			switch = {
+				trigger = has_country_flag
+				asset_knight = { text = CG_operation.9006.desc.asset_knight }
+				asset_kunoichi = { text = CG_operation.9006.desc.asset_kunoichi }
+				asset_battlenun = { text = CG_operation.9006.desc.asset_battlenun }
+				asset_agent = { text = CG_operation.9006.desc.asset_agent }
+				asset_mahosj = { text = CG_operation.9006.desc.asset_mahosj }
+				default = { text = CG_operation.9006.desc.asset_mahosj }
+			}
+		}
+	}
+
+
+
+	# picture = {
+	# 	trigger = {
+	# 		switch = {
+	# 			trigger = has_country_flag
+	# 			flag_asset_maid = { picture = GFX_evt_sapient_AI }
+	# 			flag_asset_sister = { picture = CG_operation.1006.desc.official }
+	# 			flag_asset_webshop = { picture = CG_operation.1006.desc.professional }
+	# 			flag_asset_hresearch = { picture = CG_operation.1006.desc.professional }
+	# 			flag_asset_warden = { picture = CG_operation.1006.desc.underling }
+	# 			default = { picture = CG_operation.1006.desc.default }
+	# 		}
+	# 	}
+	# }
+    picture = GFX_evt_intro_tmn
+	picture = {
+		trigger = {
+			from.owner = { has_country_flag = asset_mahosj }
+		}
+		picture = GFX_evt_intro_mhsj
+	}
+	picture = {
+		trigger = {
+			from.owner = { has_country_flag = asset_battlenun }
+		}
+		picture = GFX_evt_intro_nun
+	}
+	picture = {
+		trigger = {
+			from.owner = { has_country_flag = asset_agent }
+		}
+		picture = GFX_evt_intro_agent
+	}
+	picture = {
+		trigger = {
+			from.owner = { has_country_flag = asset_knight }
+		}
+		picture = GFX_evt_intro_knight
+	}
+	picture = {
+		trigger = {
+			from.owner = { has_country_flag = asset_kunoichi }
+		}
+		picture = GFX_evt_intro_tmn
+	}
+
+	location = from.target.capital_scope
+	show_sound = event_nem_asset_acquired_positive
+	is_triggered_only = yes
+
+	immediate = {
+		country_event = { id = tutorial.2010 } #Assigning Assets
+	}
+
+	option = {
+		name = CG_operation.9006.next
+		root = {
+			CG_espionage_acquire_asset_holy_create_asset = yes
+
+			#espionage_acquire_ero_asset_create_asset
+		}
+		from.spynetwork = {
+			add_spy_network_level_on_success_effect = { VALUE = -15 }
+		}
+	}
+
+	after = {
+
+		destroy_espionage_operation = from
+	}
 }

@@ -13,7 +13,9 @@
  operation_undercover_on_success:0 "$IF_SUCCESSFUL|E$\n获得[root.target.GetName]的情报和最大渗透等级。"
  CG_operation_undercover_desc:0 "招务特工、对魔忍、兔女郎、潜入目标国家的色色场所，进行情报收集。这将会暴露对方的弱点，在一定时间内增加我方的§Y最大渗透等级§!。"
  
-
+ operation_sneak:0 "潜入捜査"
+ operation_sneak_on_success:0 "$IF_SUCCESSFUL|E$\n获得[root.target.GetName]的情报和最大渗透等级。"
+ CG_operation_undercover_desc:0 "招务人员潜入目标国家，进行情报收集。这将会暴露对方的弱点，在一定时间内增加我方的§Y最大渗透等级§!。"
 
  operation_acquire_lust_asset:0 "圣女诱堕"
  operation_acquire_lust_asset_on_success:0 "$IF_SUCCESSFUL|E$\n在[root.target.GetName]获得线人，以便落实其他欲望类渗透"
@@ -30,20 +32,53 @@
  CG_operation_hypno_desc:0 "潜入队伍将在[root.target.GetName]寻找适合的高级外交人员，并尝试对其施加催眠暗示，使其在作出偏向有利我方的外交决定。"
 
  operation_expel_corp:0 "净化淫魔分支部"
- operation_abduct_pops_on_success:0 "在随机领地星球上，把随属于目标国的分部清除。"
+ operation_expel_corp_on_success:0 "在随机领地星球上，把随属于目标国的分部清除。"
  CG_operation_expel_corp:0 "根据情报显示，魅魔已经在我们国土组织并开多种具规模的卖淫场所。我们必须立即展开调查及瓦解这些地下组织。" 
 
 
+ operation_send_warrior_asset:0 "派遣特战人员"
+ operation_abduct_pops_on_success:0 "成功后会把随机特战人员送达目标国家，特战人员可以在执行 福音传播间谍活动的【圣歌计划】时对应不同种类的特战人员得出不同的结果。"
+ CG_operation_send_warrior_asset_desc:0 "派遣随机特战人员到目标国家境内进行待机，现在有五种特战人员可以投放。"
+
+ operation_holy_project:0 "圣歌计划"
+ operation_holy_project_on_success:0 "在线人区划选择不同特战人员可以获取不同任务结果。"
+ CG_operation_holy_project_desc:0 "圣歌会带领我们走上最终的胜利！"
 
 #########################
 # undercover
 ###########################
-
- CG_operation.7000.desc:1 "我们的潜入兔女郎已经成功上岗，并发送回来一封内经常出入场所的重要人物名单。"
+ CG_operation.7000.name:1 "潜入捜査"
+ CG_operation.7000.desc:0 "我们的潜入兔女郎已经成功上岗，并发送回来一封内经常出入场所的重要人物名单。"
  CG_operation.7000.a:0 "任务完成。"
 
 
 
+#########################
+# send holy warrior
+#
+###########################
+
+ CG_operation.9000.name:0 "战术评估"
+ CG_operation.9000.desc:1 "我们与魅魔水火不用，可惜的是我们处于同一个宇宙。问题终须要去面对。来，我们从长计议，找出一个应对方案吧。"
+ CG_operation.9000.next:1 "看看我们的人才列表。"
+ 
+ CG_operation.9001.name:0 "人员联络"
+ CG_operation.9001.desc:1 "骑士,对魔忍,战斗修女,特工,魔法少女吗？\n都是顶级的战士。"
+ CG_operation.9001.next:1 "就这样吧。"
+
+ CG_operation.9002.name:0 "人员投送"
+ CG_operation.9002.desc:1 "你们将会投入淫魔的领地，记住圣歌的教诲，执行圣歌的任务，然后带来胜利。"
+ CG_operation.9002.next:1 "祝您好运。"
+
+ CG_operation.9006.name:0 "成功到达"
+ CG_operation.9006.desc.asset_knight:0 "圣歌成功到达" 
+ CG_operation.9006.desc.asset_kunoichi:0 "成功到达" 
+ CG_operation.9006.desc.asset_battlenun:0 "成功到达" 
+ CG_operation.9006.desc.asset_agent:0 "成功到达" 
+ CG_operation.9006.desc.asset_mahosj:0 "成功到达" 
+
+ CG_operation.9006.next:0 "进入待命状态吧。"
+#TODO
 
 #########################
 # accquire lust assest
@@ -90,9 +125,9 @@
  asset_battlenun:0 "战斗修女"
  asset_battlenun_desc:0 "圣音传播（物理）\n教化众生（物理）\n拯救罪人（物理）\n净化邪淫（物理）"
  asset_agent:0 "特工"
- asset_agent_desc:0 "这位学士对这块纯白色的欲望宝石非常感兴趣。"
+ asset_agent_desc:0 "最先进的雷达系统，最昂贵的机动辅助装备，最严密的隐秘系统，最快的骇客系统，但武器却是个古董。。"
  asset_mahosj:0 "魔法少女"
- asset_mahosj_desc:0 "她天天让罪人们感受圣光的爱，但谁能让她也能被爱呢?"
+ asset_mahosj_desc:0 "代替黑洞惩罚你！嘎哈！"
 #########################
 # abduct event
 ###########################
@@ -202,6 +237,8 @@
  CG_operation.5003.d:0 "我全都要！"
  CG_operation.5004.name:0 "分部被摧毁"
  CG_operation.5004.desc:0 "我们在[location]的分部被当地执法人员摧毁了!"
+
+
 
 
 

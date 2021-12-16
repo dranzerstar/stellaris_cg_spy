@@ -183,4 +183,38 @@ spriteTypes = {
 		##masking_texture = "gfx/interface/situation_log/event_mask.dds"
 		alwaystransparent = yes
 	}
+
+	spriteType = {
+		name = "GFX_evt_intro_tmn"
+		texturefile = "gfx/event_pictures/tmn_reg_01.dds" 
+		##masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_evt_intro_knight"
+		texturefile = "gfx/event_pictures/knight_reg_01.dds" 
+		##masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_evt_intro_agent"
+		texturefile = "gfx/event_pictures/agent_reg_01.dds" 
+		##masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_evt_intro_nun"
+		texturefile = "gfx/event_pictures/nun_reg_01.dds" 
+		##masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_intro_mhsj"
+		texturefile = "gfx/event_pictures/mhsj_reg_01.dds" 
+		##masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
 }

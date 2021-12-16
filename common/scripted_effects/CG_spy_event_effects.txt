@@ -95,7 +95,7 @@ CG_espionage_acquire_ero_asset_create_asset = {
 #
 # 投放圣战士
 # 如已经有该战士种类，降低机率
-CG_espionage_send_warrior_asset = {
+CG_espionage_acquire_asset_holy = {
 	random_list = {
 		1 = {
 			modifier = {
@@ -151,7 +151,7 @@ CG_espionage_send_warrior_asset = {
 	}
 }
 
-CG_espionage_send_warrior_asset_create_asset = {
+CG_espionage_acquire_asset_holy_create_asset = {
 	switch = {
 		trigger = has_country_flag
 		asset_knight = {

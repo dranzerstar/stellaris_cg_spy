@@ -95,14 +95,16 @@ asset_warden = {
 }
 
 ##INN operatives
+@asset_spy_network_max_INN = 10
 
 # 骑士  对魔忍   战斗修女   特工  魔法少女
 asset_knight = {
 	appearance = {
-		name_generation_method = random_person ## TODO static potrait
-		portrait_generation_method = random_person
+		name_generation_method = nongenerated ## TODO static potrait
+		portrait_generation_method = nongenerated
+		default_portrait = GFX_asset_knight
 	}
-	passive = { spy_network_levels_add = @asset_spy_network_max }  ##TODO infiltration  mod
+	passive = { spy_network_levels_add = @asset_spy_network_max_INN  }  ##TODO infiltration  mod
 	active = {
 		op_cat_holy_skill_add = @category_mod
 		op_cat_military_skill_add = @category_mod
@@ -114,8 +116,9 @@ asset_knight = {
 
 asset_kunoichi = {
 	appearance = {
-		name_generation_method = random_person ## TODO static potrait
-		portrait_generation_method = random_person
+		name_generation_method = nongenerated ## TODO static potrait
+		portrait_generation_method = nongenerated
+		default_portrait = GFX_asset_tmn
 	}
 	passive = { spy_network_levels_add = @asset_spy_network_max }  ##TODO infiltration  mod
 	active = {
@@ -129,8 +132,9 @@ asset_kunoichi = {
 
 asset_battlenun = {
 	appearance = {
-		name_generation_method = random_person ## TODO static potrait
-		portrait_generation_method = random_person
+		name_generation_method = nongenerated ## TODO static potrait
+		portrait_generation_method = nongenerated
+		default_portrait = GFX_asset_nun
 	}
 	passive = { spy_network_levels_add = @asset_spy_network_max }  ##TODO infiltration  mod
 	active = {
@@ -145,8 +149,9 @@ asset_battlenun = {
 
 asset_agent = {
 	appearance = {
-		name_generation_method = random_person ## TODO static potrait
-		portrait_generation_method = random_person
+		name_generation_method = nongenerated ## TODO static potrait
+		portrait_generation_method = nongenerated
+		default_portrait = GFX_asset_agent
 	}
 	passive = { spy_network_levels_add = @asset_spy_network_max }  ##TODO infiltration  mod
 	active = {
@@ -160,8 +165,10 @@ asset_agent = {
 
 asset_mahosj = {
 	appearance = {
-		name_generation_method = random_person ## TODO static potrait
-		portrait_generation_method = random_person
+		name_generation_method = nongenerated ## TODO static potrait
+		portrait_generation_method = nongenerated
+		default_portrait = GFX_asset_mhsj
+
 	}
 	passive = { spy_network_levels_add = @asset_spy_network_max }  ##TODO infiltration  mod
 	active = {

@@ -263,11 +263,13 @@ operation_acquire_lust_asset = {
 
 operation_send_warrior_asset = {
 	target = none
-	categories = { op_cat_ero op_cat_government }
+	categories = { op_cat_holy op_cat_government }
 	picture = GFX_evt_recruit_bunny
 	desc = CG_operation_send_warrior_asset_desc
-	stages = 2
-	potential = { owner = {has_country_flag = asceticism_flag}}
+	stages = 3
+	potential = { owner = {has_country_flag = asceticism_flag}
+				  target = {has_country_flag = carnalism_flag}
+				}
 	resources = {
 		category = operations
 		cost = {
@@ -278,7 +280,7 @@ operation_send_warrior_asset = {
 		}
 	}
 
-	spy_power_cost = 30
+	spy_power_cost = 50
 	#potential = { has_nemesis = yes }
 	allow = {
 		AND ={
@@ -322,7 +324,7 @@ operation_send_warrior_asset = {
 
 
 #################################################
-#  level 4 
+#  t6 
 #  拐带少女
 
 #
@@ -345,13 +347,13 @@ operation_abduct_pops = {
 		}
 	}
 	
-	potential = {
-		has_nemesis = yes
-		target = { OR = { is_country_type = default 
+	# potential = {
+	# 	has_nemesis = yes
+	# 	target = { OR = { is_country_type = default 
 
-						} 
-					}
-	}
+	# 					} 
+	# 				}
+	# }
 	allow = {
 		custom_tooltip = {
 			fail_text = operation_abduct_pops_recent
@@ -458,9 +460,7 @@ operation_hypno = {
 	}
 	on_roll_failed = {
 		standard_espionage_operation_on_roll_failed = { RANDOM_EVENTS = CG_operation_MM_failed_random_events }
-		country_event = {
-			RANDOM_EVENTS = CG_operation_MM_failed_random_events
-		}	
+
 	}
 	on_create = {}
 }
