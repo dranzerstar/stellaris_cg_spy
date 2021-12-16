@@ -90,7 +90,94 @@ CG_espionage_acquire_ero_asset_create_asset = {
 }
 
 
+# Operation scope (for Acquire Asset and operation random events)
 
+#
+# 投放圣战士
+# 如已经有该战士种类，降低机率
+CG_espionage_send_warrior_asset = {
+	random_list = {
+		1 = {
+			modifier = {
+				factor = 0.1
+				#has_espionage_type = operation_acquire_lust_asset
+				has_espionage_asset = asset_knight 
+			}
+			owner = {
+				set_country_flag = asset_knight
+			}
+		}
+		1 = {
+			modifier = {
+				factor = 0.1
+				
+				has_espionage_asset = asset_kunoichi 
+			}
+			owner = {
+				set_country_flag = asset_kunoichi
+			}
+		}
+		1 = {
+			modifier = {
+				factor =  0.1
+				#has_espionage_type = operation_acquire_lust_asset
+				has_espionage_asset = asset_battlenun 
+			}
+			owner = {
+				set_country_flag = asset_battlenun
+			}
+		}
+		1 = {
+			modifier = {
+				factor = 0.1
+				#has_espionage_type = operation_acquire_lust_asset
+				has_espionage_asset = asset_agent 
+			}
+			owner = {
+				set_country_flag = asset_agent
+			}
+		}
+		1 = {
+			modifier = {
+				factor = 0.1
+				#has_espionage_type = operation_acquire_lust_asset
+				has_espionage_asset = asset_mahosj 
+			}
+			owner = {
+				set_country_flag = asset_mahosj
+			}
+		}
+
+	}
+}
+
+CG_espionage_send_warrior_asset_create_asset = {
+	switch = {
+		trigger = has_country_flag
+		asset_knight = {
+				from.spynetwork = { create_espionage_asset = { type = asset_knight } }
+				remove_country_flag = asset_knight
+		}
+		asset_kunoichi = {
+			from.spynetwork = { create_espionage_asset = { type = asset_kunoichi } }
+			remove_country_flag = asset_kunoichi
+		}
+		asset_battlenun = {
+			from.spynetwork = { create_espionage_asset = { type = asset_battlenun } }
+			remove_country_flag = asset_battlenun
+		}
+		asset_agent = {
+			from.spynetwork = { create_espionage_asset = { type = asset_agent } }
+			remove_country_flag = asset_agent
+		}
+		asset_mahosj = {
+			from.spynetwork = { create_espionage_asset = { type = asset_mahosj } }
+			remove_country_flag = asset_mahosj
+		}
+
+	}
+	
+}
 
 # Each of the following events is weighted down if the empire has already rolled that particular event recently. Timed flags are set in the event itself, using @RandomOperationEventTimer. The modifier factor used below is explicitly not '0' for repeatable events - to prevent the pool from running out of 'fresh' events entirely.
 

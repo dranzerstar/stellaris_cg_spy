@@ -94,3 +94,81 @@ asset_warden = {
 	categories = { op_cat_ero op_cat_military }
 }
 
+##INN operatives
+
+# 骑士  对魔忍   战斗修女   特工  魔法少女
+asset_knight = {
+	appearance = {
+		name_generation_method = random_person ## TODO static potrait
+		portrait_generation_method = random_person
+	}
+	passive = { spy_network_levels_add = @asset_spy_network_max }  ##TODO infiltration  mod
+	active = {
+		op_cat_holy_skill_add = @category_mod
+		op_cat_military_skill_add = @category_mod
+	}
+	possible = {}
+	potential = {}
+	categories = { op_cat_holy op_cat_military }
+}
+
+asset_kunoichi = {
+	appearance = {
+		name_generation_method = random_person ## TODO static potrait
+		portrait_generation_method = random_person
+	}
+	passive = { spy_network_levels_add = @asset_spy_network_max }  ##TODO infiltration  mod
+	active = {
+		op_cat_holy_skill_add = @category_mod
+		op_cat_military_skill_add = @category_mod
+	}
+	possible = {}
+	potential = {}
+	categories = { op_cat_holy op_cat_military }
+}
+
+asset_battlenun = {
+	appearance = {
+		name_generation_method = random_person ## TODO static potrait
+		portrait_generation_method = random_person
+	}
+	passive = { spy_network_levels_add = @asset_spy_network_max }  ##TODO infiltration  mod
+	active = {
+		op_cat_holy_skill_add = @category_mod
+		op_cat_military_skill_add = @category_mod
+	}
+	possible = {}
+	potential = {}
+	categories = { op_cat_holy op_cat_diplomacy }
+}
+
+
+asset_agent = {
+	appearance = {
+		name_generation_method = random_person ## TODO static potrait
+		portrait_generation_method = random_person
+	}
+	passive = { spy_network_levels_add = @asset_spy_network_max }  ##TODO infiltration  mod
+	active = {
+		op_cat_holy_skill_add = @category_mod
+		op_cat_military_skill_add = @category_mod
+	}
+	possible = {}
+	potential = {}
+	categories = { op_cat_holy op_cat_technology }
+}
+
+asset_mahosj = {
+	appearance = {
+		name_generation_method = random_person ## TODO static potrait
+		portrait_generation_method = random_person
+	}
+	passive = { spy_network_levels_add = @asset_spy_network_max }  ##TODO infiltration  mod
+	active = {
+		op_cat_holy_skill_add = @category_mod
+		op_cat_military_skill_add = @category_mod
+	}
+	possible = {}
+	potential = {}
+	categories = { op_cat_holy op_cat_diplomacy }
+}

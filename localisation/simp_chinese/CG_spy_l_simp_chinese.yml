@@ -4,6 +4,10 @@
 ##########################
  op_cat_ero:0 "欲望渗透"
  mod_op_cat_ero:0 "行动技能（欲望渗透）"
+
+ op_cat_holy:0 "福音传播"
+ mod_op_cat_ero:0 "行动技能（福音传播）"
+
  op_cat_ero_desc:0 "把色色直接放到圣女面前就不信连一眼都不看!"
  operation_undercover:0 "潜入捜査"
  operation_undercover_on_success:0 "$IF_SUCCESSFUL|E$\n获得[root.target.GetName]的情报和最大渗透等级。"
@@ -28,6 +32,9 @@
  operation_expel_corp:0 "净化淫魔分支部"
  operation_abduct_pops_on_success:0 "在随机领地星球上，把随属于目标国的分部清除。"
  CG_operation_expel_corp:0 "根据情报显示，魅魔已经在我们国土组织并开多种具规模的卖淫场所。我们必须立即展开调查及瓦解这些地下组织。" 
+
+
+
 #########################
 # undercover
 ###########################
@@ -75,7 +82,17 @@
  asset_warden:0 "调教人员"
  asset_warden_desc:0 "她天天让罪人们感受圣光的爱，但谁能让她也能被爱呢?"
 
-
+#CG ASSETS
+ asset_knight:0 "骑士"
+ asset_knight_desc:0 "‘以圣歌之名，斩断一切淫邪！’骑士当然会赌性命，战斗到最后一口气。"
+ asset_kunoichi:0 "对魔忍"
+ asset_kunoichi_desc:0 "贴身紧衣战士，利于高速潜入敌阵。奇特的武器机关，善于执行各种忍密行动。当然还有绝密的房中术，套取最最重要的秘密。"
+ asset_battlenun:0 "战斗修女"
+ asset_battlenun_desc:0 "圣音传播（物理）\n教化众生（物理）\n拯救罪人（物理）\n净化邪淫（物理）"
+ asset_agent:0 "特工"
+ asset_agent_desc:0 "这位学士对这块纯白色的欲望宝石非常感兴趣。"
+ asset_mahosj:0 "魔法少女"
+ asset_mahosj_desc:0 "她天天让罪人们感受圣光的爱，但谁能让她也能被爱呢?"
 #########################
 # abduct event
 ###########################

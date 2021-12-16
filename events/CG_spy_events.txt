@@ -1708,7 +1708,7 @@ country_event= { #TODO
 	}
 }
 
-# Branch Office Closed! (victim) | from = instigating country
+# 分部被关
 country_event= {
     id = CG_operation.5004
     title =CG_operation.5004.name

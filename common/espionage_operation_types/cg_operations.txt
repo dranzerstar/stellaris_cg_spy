@@ -54,7 +54,7 @@ operation_undercover = {
 	}
 
 	spy_power_cost = 10
-	potential = {}
+	#potential = {}
 	allow = {
 		custom_tooltip = {
 			is_running_espionage_operation = no
@@ -99,7 +99,7 @@ operation_sneak = {
 	resources = {
 		category = operations
 		cost = {
-			love_juice = 300
+			holylight_crystal = 300
 		}
 	}
 
@@ -214,7 +214,7 @@ operation_acquire_lust_asset = {
 	}
 
 	spy_power_cost = 30
-	potential = { has_nemesis = yes }
+	#potential = { has_nemesis = yes }
 	allow = {
 		AND ={
 		custom_tooltip = {
@@ -256,6 +256,69 @@ operation_acquire_lust_asset = {
 }
 
 
+#############################################33
+# INN 派遣特战人员
+#
+###############################################
+
+operation_send_warrior_asset = {
+	target = none
+	categories = { op_cat_ero op_cat_government }
+	picture = GFX_evt_recruit_bunny
+	desc = CG_operation_send_warrior_asset_desc
+	stages = 2
+	potential = { owner = {has_country_flag = asceticism_flag}}
+	resources = {
+		category = operations
+		cost = {
+			holylight_crystal = 600
+		}
+		upkeep = {
+			holylight_crystal = 2
+		}
+	}
+
+	spy_power_cost = 30
+	#potential = { has_nemesis = yes }
+	allow = {
+		AND ={
+		custom_tooltip = {
+			is_running_espionage_operation = no
+					fail_text = operation_one_at_a_time
+			}
+		
+		}
+		
+	}
+	stage = { #调查可用方案
+		difficulty = @diff_t1
+		icon = GFX_espionage_chapter_icon_surveillance
+		event = CG_operation.9000
+	}
+	stage = { #装备人员
+		difficulty = @diff_t1
+		icon = GFX_espionage_chapter_icon_target
+		event = CG_operation.9001
+	}
+	stage = { #发射
+		difficulty = @diff_t1
+		icon = GFX_espionage_chapter_icon_motion
+		event = CG_operation.9002
+	}
+	on_roll_failed = {
+		# standard_espionage_operation_on_roll_failed = { RANDOM_EVENTS = CG_operation_MM_failed_random_events }
+		 #RANDOM_EVENTS = CG_operation_MM_failed_random_events }
+
+	}
+	on_create = {
+		target = {
+			set_timed_country_flag = {
+				flag = espionage_operation_targeted_by@root.owner #Used in random Spy Network events
+				days = @operationTargetedByTimer
+			}
+		}
+	}
+}
 
 
 #################################################
