@@ -45,3 +45,10 @@ op_cat_technology = {
 op_cat_military = {
 
 }
+
+
+op_cat_knight = {}
+op_cat_kunoichi = {}
+op_cat_battlenun = {}
+op_cat_agent = {}
+op_cat_mahosj = {}

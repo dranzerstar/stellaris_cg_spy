@@ -8,7 +8,12 @@
  op_cat_holy:0 "福音传播"
  mod_op_cat_ero:0 "行动技能（福音传播）"
 
+
+
+
  op_cat_ero_desc:0 "把色色直接放到圣女面前就不信连一眼都不看!"
+ op_cat_holy_desc:0 "传播圣歌的福音是我族之命运。"
+
  operation_undercover:0 "潜入捜査"
  operation_undercover_on_success:0 "$IF_SUCCESSFUL|E$\n获得[root.target.GetName]的情报和最大渗透等级。"
  CG_operation_undercover_desc:0 "招务特工、对魔忍、兔女郎、潜入目标国家的色色场所，进行情报收集。这将会暴露对方的弱点，在一定时间内增加我方的§Y最大渗透等级§!。"
@@ -71,13 +76,13 @@
  CG_operation.9002.next:1 "祝您好运。"
 
  CG_operation.9006.name:0 "成功到达"
- CG_operation.9006.desc.asset_knight:0 "圣歌成功到达" 
- CG_operation.9006.desc.asset_kunoichi:0 "成功到达" 
- CG_operation.9006.desc.asset_battlenun:0 "成功到达" 
- CG_operation.9006.desc.asset_agent:0 "成功到达" 
- CG_operation.9006.desc.asset_mahosj:0 "成功到达" 
+ CG_operation.9006.desc.asset_knight:0 "圣歌骑士安全到达[from.target.GetName]并于派往当地间谍据点人员联系。接下来的时间圣歌骑士得检查分开运输的装备和机械侍从。擅长据点攻破任务的愿圣歌祝福这位骑士接下来的行动。" 
+ CG_operation.9006.desc.asset_kunoichi:0 "退魔忍安全到达[from.target.GetName]并于派往当地间谍据点人员联系。擅长近接战斗和潜入破坏，他将转移到最近的恒星基地进行埋伏，等待任务指令。祝任务顺利。\n" 
+ CG_operation.9006.desc.asset_battlenun:0 "战斗修女安全到达[from.target.GetName]。修女先要把随行装备进行祝圣仪式，之后将会转移到帝国首都地下组织成立教会，进行福音传播活动。擅长煽动，传播与拷问类任务。愿圣歌与她们同在。\n" 
+ CG_operation.9006.desc.asset_agent:0 "特工安全到达[from.target.GetName]。由于我们与当地国的网络端口没有进行链接，特工必须亲自到达[from.target.GetName]进行骇客活动。这可不代表特工没有足够的武装力量进行实地任务。特工会转移到\n" 
+ CG_operation.9006.desc.asset_mahosj:0 "魔法少女安全到达[from.target.GetName]。每一个也拥有超越常识的力量，最适合进行艇内进行突袭。魔法少女解除变身时与普通人没有任何差别，非常容易融入[from.target.GetName]的社区。\n魔法少女会转移到恒星基地的生活区，收到指令后能进行破坏舰船任务。" 
 
- CG_operation.9006.next:0 "进入待命状态吧。"
+ CG_operation.9006.next:0 "进入待命状态，等待指令。"
 #TODO
 
 #########################
@@ -116,6 +121,14 @@
  asset_hresearch_desc:0 "这位学士对这块纯白色的欲望宝石非常感兴趣。"
  asset_warden:0 "调教人员"
  asset_warden_desc:0 "她天天让罪人们感受圣光的爱，但谁能让她也能被爱呢?"
+
+
+
+op_cat_knight:0 "骑士"
+op_cat_kunoichi:0 "对魔忍"
+op_cat_battlenun:0 "战斗修女"
+op_cat_agent:0 "特工"
+op_cat_mahosj:0 "魔法少女"
 
 #CG ASSETS
  asset_knight:0 "骑士"
@@ -237,6 +250,19 @@
  CG_operation.5003.d:0 "我全都要！"
  CG_operation.5004.name:0 "分部被摧毁"
  CG_operation.5004.desc:0 "我们在[location]的分部被当地执法人员摧毁了!"
+
+
+#########################
+# 圣歌计划op text
+###########################
+ need_asset_kunoichi:0 "需要使用对魔忍执行此项计划"
+ need_asset_knight:0 "需要使用圣音骑士执行此项计划"
+ need_asset_agent:0 "需要使用对魔忍执行此项计划"
+ need_asset_battlenun:0 "需要使用对魔忍执行此项计划"
+ need_asset_mhsj:0 "需要使用对魔忍执行此项计划"
+ cg_not_finished:0 "还没做完"
+
+
 
 
 

@@ -1,7 +1,14 @@
 namespace = CG_operation
 
 
-
+###########################
+# 圣歌计划事件 8000-8999
+# 800X tmn
+# 810X knight
+# 820X battlenun
+# 830X agent
+# 840X mhsj
+###########################
 
 @StealTechnologyTimer = 2160 #days (6 years)
 
@@ -45,6 +52,7 @@ espionage_operation_event = {
 		}
 		text = CG_operation.1000.desc.friendly
 	}
+
 	picture = GFX_evt_bunnychange
 	show_sound = event_default
 	is_triggered_only = yes
@@ -1946,4 +1954,472 @@ country_event = {
 
 		destroy_espionage_operation = from
 	}
+}
+
+
+
+
+
+###########################
+# 圣歌计划事件 8000-8999
+# 800X tmn
+# 810X knight
+# 820X battlenun
+# 830X agent
+# 840X mhsj
+###########################
+# this = operation; from = target (starbase)
+
+# Finalé | from = operation; fromfrom = target (starbase)
+country_event = {
+    id = CG_operation.8000
+    title = CG_operation.8000.name
+    desc = operation.8000.destroy_espionage_asset_diplomacy
+
+
+    location = event_target:sabotaged_starbase_system
+    picture = GFX_evt_archaeologists_escaping
+    show_sound = event_espionage_concluded
+    is_triggered_only = yes
+
+    trigger = {
+        exists = from
+        exists = event_target:sabotaged_starbase
+    }
+
+    immediate = {
+        from.target = {
+            espionage_sabotage_starbase_diplo = yes
+        }
+        #Bonus actions
+        if = {
+            limit = {
+                from = { has_espionage_asset_sabotage = yes }
+            }
+            random_list = {
+                1 = { #Take down another module
+                    modifier = {
+                        factor = 6
+                        from = { has_espionage_asset_technology = yes }
+                    }
+                    modifier = {
+                        factor = 0
+                        from.target = {
+                            count_starbase_modules = {
+                                type != shipyard
+                                count < 2
+                            }
+                        }
+                    }
+                    set_country_flag = sabotage_starbase_collateral@from.target.owner
+                }
+				1 = { #Take down another building
+                    modifier = {
+                        factor = 6
+                        from = { has_espionage_asset_economy = yes }
+                    }
+                    modifier = {
+                        factor = 0
+                        from.target = {
+                            has_nonshipyard_starbase_buildings = no
+                        }
+                    }
+                    set_country_flag = sabotage_building_collateral@from.target.owner
+                }
+				1 = { #Take down a shipyard module
+                    modifier = {
+                        factor = 6
+                        from = { has_espionage_asset_government = yes }
+                    }
+                    modifier = {
+                        factor = 0
+                        from.target = {
+                            count_starbase_modules = {
+                                type = shipyard
+                                count < 2
+                            }
+                        }
+                    }
+                    set_country_flag = sabotage_shipyard_collateral@from.target.owner
+                }
+                1 = { #Take down a defense platform
+                    modifier = {
+                        factor = 6
+                        from = { has_espionage_asset_military = yes }
+                    }
+                    set_country_flag = sabotage_starbase_defence@from.target.owner
+                }
+                6 = {
+                    modifier = {
+                        factor = 2.5
+                        root = {
+                            relative_encryption_decryption = { target = from.target.owner value < 0.6 }
+                        }
+                    }
+                    #No bonus action
+                }
+            }
+        }
+    }
+
+    option = { #We're done here (smooth)
+        name = operation.2005.a
+        trigger = {
+            from.target.owner = {
+                NOR = {
+                    has_hostile_espionage_operation_ethics = yes
+                    has_closed_borders = root
+                    is_at_war_with = root
+                }
+            }
+        }
+        from.spynetwork = {
+            add_spy_network_level = -30
+        }
+        owner = {
+            if = {
+                limit = { has_ascension_perk = ap_become_the_crisis }
+                complete_crisis_objective = crisobj_perform_upsetting_operations
+            }
+        }
+    }
+    option = { #We're done here (messy)
+        name = operation.2005.a
+        trigger = {
+            from.target.owner = {
+                OR = {
+                    has_hostile_espionage_operation_ethics = yes
+                    has_closed_borders = root
+                    is_at_war_with = root
+                }
+            }
+        }
+        from.spynetwork = {
+            add_spy_network_level = -45
+        }
+        owner = {
+            if = {
+                limit = { has_ascension_perk = ap_become_the_crisis }
+                complete_crisis_objective = crisobj_perform_upsetting_operations
+            }
+        }
+    }
+    option = { #Collateral damage (module)
+        name = operation.2005.b
+        icon = {
+			icon = GFX_espionage_asset_icon
+			text = ESPIONAGE_OPERATION_ASSET_EVENT_OPTION
+		}
+        trigger = {
+            has_country_flag = sabotage_starbase_collateral@from.target.owner
+        }
+        hidden_effect = {
+            remove_country_flag = sabotage_starbase_collateral@from.target.owner
+        }
+        from = {
+            destroy_espionage_asset_technology = yes
+            target = {
+                remove_random_starbase_module = {
+                    type != shipyard
+                    count = 1
+                }
+            }
+            spynetwork = { add_spy_network_level = -45 }
+        }
+        owner = {
+            if = {
+                limit = { has_ascension_perk = ap_become_the_crisis }
+                complete_crisis_objective = crisobj_perform_upsetting_operations
+            }
+        }
+    }
+	option = { #Collateral damage (building)
+        name = operation.2005.b
+        icon = {
+			icon = GFX_espionage_asset_icon
+			text = ESPIONAGE_OPERATION_ASSET_EVENT_OPTION
+		}
+        trigger = {
+            has_country_flag = sabotage_building_collateral@from.target.owner
+        }
+        hidden_effect = {
+            remove_country_flag = sabotage_building_collateral@from.target.owner
+        }
+        from = {
+            destroy_espionage_asset_technology = yes
+            target = {
+                remove_random_starbase_building = {
+                    count = 1
+                }
+            }
+            spynetwork = { add_spy_network_level = -45 }
+        }
+        owner = {
+            if = {
+                limit = { has_ascension_perk = ap_become_the_crisis }
+                complete_crisis_objective = crisobj_perform_upsetting_operations
+            }
+        }
+    }
+	option = { #Collateral damage (shipyard)
+        name = operation.2005.b
+        icon = {
+			icon = GFX_espionage_asset_icon
+			text = ESPIONAGE_OPERATION_ASSET_EVENT_OPTION
+		}
+        trigger = {
+            has_country_flag = sabotage_shipyard_collateral@from.target.owner
+        }
+		allow = { resource_stockpile_compare = { resource = volatile_motes value >= 1 } }
+        hidden_effect = {
+            remove_country_flag = sabotage_shipyard_collateral@from.target.owner
+        }
+        from = {
+            destroy_espionage_asset_technology = yes
+            target = {
+                remove_random_starbase_module = {
+                    type = shipyard
+                    count = 1
+                }
+            }
+            spynetwork = { add_spy_network_level = -45 }
+        }
+		root = {
+            add_resource = { volatile_motes = -1 }
+        }
+        owner = {
+            if = {
+                limit = { has_ascension_perk = ap_become_the_crisis }
+                complete_crisis_objective = crisobj_perform_upsetting_operations
+            }
+        }
+    }
+    option = { #Collateral damage (defense platform)
+        name = operation.2005.c
+        icon = {
+			icon = GFX_espionage_asset_icon
+			text = ESPIONAGE_OPERATION_ASSET_EVENT_OPTION
+		}
+        trigger = {
+            has_country_flag = sabotage_starbase_defence@from.target.owner
+        }
+        custom_tooltip = operation.2005.c.tooltip
+        allow = {
+            custom_tooltip = {
+                fail_text = STARBASE_NO_PLATFORMS
+                from.target = {
+                    fleet = {
+                        count_owned_ship = {
+                            count > 0
+                            limit = {
+                                exists = owner
+                                is_ship_size = military_station_small
+                            }
+                        }
+                    }
+                }
+            }
+            resource_stockpile_compare = { resource = volatile_motes value >= 2 }
+        }
+        hidden_effect = {
+            from.target = {
+                fleet = {
+					while = {
+						count = 3
+						random_owned_ship = {
+							limit = { is_ship_size = military_station_small }
+							destroy_ship = this
+						}
+					}
+                }
+            }
+        }
+        root = {
+            add_resource = { volatile_motes = -2 }
+        }
+        from.spynetwork = { add_spy_network_level = -45 }
+        owner = {
+            if = {
+                limit = { has_ascension_perk = ap_become_the_crisis }
+                complete_crisis_objective = crisobj_perform_upsetting_operations
+            }
+        }
+    }
+
+    after = {
+		if = {
+			limit = {
+				from.target.owner = {
+					has_country_flag = military_sabotaged
+				}
+			}
+			from.target = {
+				custom_tooltip = starbase_sabotaged_tooltip
+				hidden_effect = {
+					fleet = {
+						every_owned_ship = {
+							limit = {
+								OR = {
+									is_ship_size = military_station_small
+									is_ship_size = ion_cannon
+								}
+							}
+							remove_modifier = sabotaged_starbase
+							add_modifier = { modifier = sabotaged_starbase days = 720 }
+						}
+					}
+				}
+			}
+		}
+		else = {
+			from.target = {
+				custom_tooltip = starbase_sabotaged_tooltip
+				hidden_effect = {
+					fleet = {
+						every_owned_ship = {
+							limit = {
+								OR = {
+									is_ship_size = military_station_small
+									is_ship_size = ion_cannon
+								}
+							}
+							remove_modifier = sabotaged_starbase
+							add_modifier = { modifier = sabotaged_starbase days = 360 }
+						}
+					}
+				}
+			}
+		}
+        hidden_effect = {
+            if = {
+                limit = {
+                    owner = { NOT = { has_country_flag = operation_complete_sabotage_starbase } }
+                }
+                owner = {
+                    change_variable = {
+                        which = tinker_tailor_soldier_blorg_achievement_count
+                        value = 1
+                    }
+                    set_country_flag = operation_complete_sabotage_starbase
+                }
+            }
+            from.target.owner = {
+                set_timed_country_flag = {
+                    flag = sabotaged_starbase_alert@root
+                    days = @SabotageStarbaseTimer
+                }
+                country_event = { id = operation.2010 } #Notification of sabotage
+            }
+        }
+        destroy_espionage_operation = from
+    }
+}
+
+# Starbase sabotaged! (victim) | from = instigating country; event_target:sabotaged_starbase = target
+country_event = {
+    id = operation.2010
+    title = operation.2010.name
+    desc = {
+        text = operation.2010.desc.phobe
+        trigger = {
+            is_xenophobe = yes
+        }
+    }
+    desc = {
+        text = operation.2010.desc.regular
+        trigger = {
+            is_xenophobe = no
+            is_gestalt = no
+        }
+    }
+    desc = {
+        text = operation.2010.desc.gestalt
+        trigger = {
+            is_gestalt = yes
+        }
+    }
+    picture = GFX_evt_archaeologists_escaping
+    show_sound = event_default
+    is_triggered_only = yes
+    location = event_target:sabotaged_starbase
+
+    trigger = {
+        exists = from
+        exists = event_target:sabotaged_starbase
+    }
+
+    immediate = {
+        random_list = {
+            1 = { #Saboteurs caught
+                modifier = {
+                    factor = 0
+                    OR = {
+                        NOT = {
+                            any_spynetwork = {
+                                owner = { is_same_value = root }
+                                target = { is_same_value = from }
+                            }
+                        }
+                        has_country_flag = recently_received_espionage_asset
+                    }
+                }
+                modifier = {
+                    factor = 3
+                    relative_encryption_decryption = { target = from value > 0.8 }
+                    relative_encryption_decryption = { target = from value < 1.6 }
+                }
+                modifier = {
+                    factor = 10
+                    relative_encryption_decryption = { target = from value >= 1.6 }
+                }
+                set_timed_country_flag = {
+                    flag = espionage_caught_saboteurs
+                    days = 20
+                }
+                if = {
+                    limit = {
+                        any_spynetwork = {
+                            owner = { is_same_value = root }
+                            target = { is_same_value = from }
+                            is_spynetwork_level > 5
+                        }
+                        NOT = { has_country_flag = recently_received_espionage_asset }
+                    }
+                    country_event = { #A Surprise Catch (asset granted)
+                        id = espionage.1040
+                        days = 15
+                        scopes = { from = fromfrom }
+                    }
+                }
+            }
+            9 = { } #Nothing
+        }
+    }
+
+    option = {
+        name = {
+            text = APPALLING
+            trigger = {
+                OR = {
+                    is_xenophobe = yes
+                    is_gestalt = yes
+                }
+            }
+        }
+        name = {
+            text = CURSES
+            trigger = {
+                NOT = {
+                    OR = {
+                        is_xenophobe = yes
+                        is_gestalt = yes
+                    }
+                }
+            }
+        }
+    }
+
+    after = {
+        remove_sabotage_starbase_flag_diplo = yes
+    }
 }

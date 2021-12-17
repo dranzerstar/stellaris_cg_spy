@@ -632,3 +632,392 @@ operation_expel_corp= {
 		}
 	}
 }
+
+
+
+
+operation_holy_proj_tmn = {
+	categories = { op_cat_holy op_cat_kunoichi }
+	picture = GFX_evt_space_station
+	desc = operation_sabotage_starbase_desc
+	stages = 3
+
+	resources = {
+		category = operations
+		cost = {
+			sr_christian = 2000
+		}
+		upkeep = {
+			sr_christian = 20
+		}
+	}
+
+	spy_power_cost = 50
+	target = starbase
+
+	potential = { has_nemesis = yes
+				custom_tooltip = {
+					has_espionage_asset = asset_kunoichi 
+					fail_text=need_asset_kunoichi
+				}
+				owner={has_country_flag = asceticism_flag}
+	}
+	target_potential = {
+		has_starbase_size > starbase_outpost
+	}
+	allow = {
+		custom_tooltip = {
+			fail_text = operation_sabotage_starbase_no_targets
+			#years_passed < 0
+			target = {
+				any_owned_starbase = {
+
+				}
+				
+			}
+		}
+		custom_tooltip = {
+			is_running_espionage_operation = no
+			fail_text = operation_one_at_a_time
+		}
+		custom_tooltip = {
+			has_espionage_asset = asset_kunoichi 
+			fail_text=need_asset_kunoichi
+		}
+	}
+	target_allow = {
+		custom_tooltip = {
+			fail_text = operation_sabotage_starbase_no_targets
+			OR = {
+				count_starbase_modules = { type != shipyard count > 0 }
+				has_nonshipyard_starbase_buildings = yes
+			}
+		}
+	}
+	stage = {
+		difficulty = @diff_t5
+		icon = GFX_espionage_chapter_icon_motion
+		event = operation.2000
+	}
+	stage = {
+		difficulty = @diff_t5
+		icon = GFX_espionage_chapter_icon_target
+		event = operation.2001
+	}
+	stage = {
+		difficulty = @diff_t5
+		icon = GFX_espionage_chapter_icon_success
+		event = operation.2002
+	}
+	on_roll_failed = {
+		standard_espionage_operation_on_roll_failed = { RANDOM_EVENTS = operation_random_events_sabotage_targeted } #Requires a bespoke set of trigger scopes given 'target' is not a country
+	}
+	on_create = {
+		target.owner = {
+			set_timed_country_flag = {
+				flag = espionage_operation_targeted_by@root.owner #Used in random Spy Network events
+				days = @operationTargetedByTimer
+			}
+		}
+	}
+}
+
+
+
+
+operation_holy_proj_knight = {
+	categories = { op_cat_holy op_cat_knight }
+	picture = GFX_evt_space_station
+	desc = operation_sabotage_starbase_desc
+	stages = 3
+
+	resources = {
+		category = operations
+		cost = {
+			sr_christian = 2000
+		}
+		upkeep = {
+			sr_christian = 20
+		}
+	}
+
+	spy_power_cost = 50
+	target = planet
+
+	potential = { has_nemesis = yes
+					custom_tooltip = {
+					has_espionage_asset = asset_knight 
+					fail_text=need_asset_knight
+				}
+				owner={has_country_flag = asceticism_flag}
+	}
+
+	allow = {
+		custom_tooltip = {
+			fail_text=cg_not_finished
+			years_passed < 0
+
+		}
+		custom_tooltip = {
+			has_espionage_asset = asset_knight 
+			fail_text=need_asset_knight
+		}
+
+
+		custom_tooltip = {
+			is_running_espionage_operation = no
+			fail_text = operation_one_at_a_time
+		}
+
+	}
+
+	stage = {
+		difficulty = @diff_t5
+		icon = GFX_espionage_chapter_icon_motion
+		event = operation.2000
+	}
+	stage = {
+		difficulty = @diff_t5
+		icon = GFX_espionage_chapter_icon_target
+		event = operation.2001
+	}
+	stage = {
+		difficulty = @diff_t5
+		icon = GFX_espionage_chapter_icon_success
+		event = operation.2002
+	}
+	on_roll_failed = {
+		standard_espionage_operation_on_roll_failed = { RANDOM_EVENTS = operation_random_events_sabotage_targeted } #Requires a bespoke set of trigger scopes given 'target' is not a country
+	}
+	on_create = {
+		target.owner = {
+			set_timed_country_flag = {
+				flag = espionage_operation_targeted_by@root.owner #Used in random Spy Network events
+				days = @operationTargetedByTimer
+			}
+		}
+	}
+}
+
+
+operation_holy_proj_battlenun = {
+	categories = { op_cat_holy op_cat_battlenun }
+	picture = GFX_evt_space_station
+	desc = operation_sabotage_starbase_desc
+	stages = 3
+
+	resources = {
+		category = operations
+		cost = {
+			sr_christian = 2000
+		}
+		upkeep = {
+			sr_christian = 20
+		}
+	}
+
+	spy_power_cost = 50
+	target = planet
+
+	potential = { has_nemesis = yes
+					custom_tooltip = {
+					has_espionage_asset = asset_battlenun
+					fail_text=need_asset_battlenun
+				}
+				owner={has_country_flag = asceticism_flag}
+	}
+
+	allow = {
+		custom_tooltip = {
+			fail_text=cg_not_finished
+			years_passed < 0
+
+		}
+		custom_tooltip = {
+			has_espionage_asset = asset_battlenun 
+			fail_text=need_asset_battlenun
+		}
+
+
+		custom_tooltip = {
+			is_running_espionage_operation = no
+			fail_text = operation_one_at_a_time
+		}
+
+	}
+
+	stage = {
+		difficulty = @diff_t5
+		icon = GFX_espionage_chapter_icon_motion
+		event = operation.2000
+	}
+	stage = {
+		difficulty = @diff_t5
+		icon = GFX_espionage_chapter_icon_target
+		event = operation.2001
+	}
+	stage = {
+		difficulty = @diff_t5
+		icon = GFX_espionage_chapter_icon_success
+		event = operation.2002
+	}
+	on_roll_failed = {
+		standard_espionage_operation_on_roll_failed = { RANDOM_EVENTS = operation_random_events_sabotage_targeted } #Requires a bespoke set of trigger scopes given 'target' is not a country
+	}
+	on_create = {
+		target.owner = {
+			set_timed_country_flag = {
+				flag = espionage_operation_targeted_by@root.owner #Used in random Spy Network events
+				days = @operationTargetedByTimer
+			}
+		}
+	}
+}
+
+operation_holy_proj_agent = {
+	categories = { op_cat_holy op_cat_agent }
+	picture = GFX_evt_space_station
+	desc = operation_sabotage_starbase_desc
+	stages = 3
+
+	resources = {
+		category = operations
+		cost = {
+			sr_christian = 2000
+		}
+		upkeep = {
+			sr_christian = 20
+		}
+	}
+
+	spy_power_cost = 50
+	target = planet
+
+	potential = {  has_nemesis = yes
+					custom_tooltip = {
+					has_espionage_asset = asset_agent
+					fail_text=need_asset_agent
+				}
+				owner={has_country_flag = asceticism_flag}
+	}
+
+	allow = {
+		custom_tooltip = {
+			fail_text=cg_not_finished
+			years_passed < 0
+
+		}
+		custom_tooltip = {
+			has_espionage_asset = asset_agent
+			fail_text=need_asset_agent
+		}
+
+
+		custom_tooltip = {
+			is_running_espionage_operation = no
+			fail_text = operation_one_at_a_time
+		}
+
+	}
+
+	stage = {
+		difficulty = @diff_t5
+		icon = GFX_espionage_chapter_icon_motion
+		event = operation.2000
+	}
+	stage = {
+		difficulty = @diff_t5
+		icon = GFX_espionage_chapter_icon_target
+		event = operation.2001
+	}
+	stage = {
+		difficulty = @diff_t5
+		icon = GFX_espionage_chapter_icon_success
+		event = operation.2002
+	}
+	on_roll_failed = {
+		standard_espionage_operation_on_roll_failed = { RANDOM_EVENTS = operation_random_events_sabotage_targeted } #Requires a bespoke set of trigger scopes given 'target' is not a country
+	}
+	on_create = {
+		target.owner = {
+			set_timed_country_flag = {
+				flag = espionage_operation_targeted_by@root.owner #Used in random Spy Network events
+				days = @operationTargetedByTimer
+			}
+		}
+	}
+}
+
+operation_holy_proj_mhsj = {
+	categories = { op_cat_holy op_cat_mahosj }
+	picture = GFX_evt_space_station
+	desc = operation_sabotage_starbase_desc
+	stages = 3
+
+	resources = {
+		category = operations
+		cost = {
+			sr_christian = 2000
+		}
+		upkeep = {
+			sr_christian = 20
+		}
+	}
+
+	spy_power_cost = 50
+	target = planet
+
+	potential = {  has_nemesis = yes
+					custom_tooltip = {
+					has_espionage_asset = asset_mahosj
+					fail_text=need_asset_mhsj
+				}
+				owner={has_country_flag = asceticism_flag}
+	}
+
+	allow = {
+		custom_tooltip = {
+			fail_text=cg_not_finished
+			years_passed < 0
+
+		}
+		custom_tooltip = {
+			has_espionage_asset = asset_mahosj
+			fail_text=need_asset_mhsj
+		}
+
+
+		custom_tooltip = {
+			is_running_espionage_operation = no
+			fail_text = operation_one_at_a_time
+		}
+
+	}
+
+	stage = {
+		difficulty = @diff_t5
+		icon = GFX_espionage_chapter_icon_motion
+		event = operation.2000
+	}
+	stage = {
+		difficulty = @diff_t5
+		icon = GFX_espionage_chapter_icon_target
+		event = operation.2001
+	}
+	stage = {
+		difficulty = @diff_t5
+		icon = GFX_espionage_chapter_icon_success
+		event = operation.2002
+	}
+	on_roll_failed = {
+		standard_espionage_operation_on_roll_failed = { RANDOM_EVENTS = operation_random_events_sabotage_targeted } #Requires a bespoke set of trigger scopes given 'target' is not a country
+	}
+	on_create = {
+		target.owner = {
+			set_timed_country_flag = {
+				flag = espionage_operation_targeted_by@root.owner #Used in random Spy Network events
+				days = @operationTargetedByTimer
+			}
+		}
+	}
+}
