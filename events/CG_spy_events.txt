@@ -11,7 +11,7 @@ namespace = CG_operation
 ###########################
 
 @StealTechnologyTimer = 2160 #days (6 years)
-
+@SabotageStarbaseTimer = 1080 #days (3 years)
 
 ###########################
 # CG spy accquire lust asset
@@ -149,7 +149,7 @@ country_event = {
 	# 		}
 	# 	}
 	# }
-    picture = GFX_evt_asset_sister
+    #picture = GFX_evt_asset_sister
 	picture = {
 		trigger = {
 			from.owner = { has_country_flag = asset_maid }
@@ -856,6 +856,7 @@ country_event = {
     is_triggered_only = yes
 
     immediate = {
+
 		random_list = {
 			3 = {
 				modifier = {
@@ -1229,7 +1230,7 @@ country_event = {
 	id = CG_operation.2007
 	title = CG_operation.2007.name
 	desc = CG_operation.2007.desc
-	picture = GFX_evt_hypno_5
+	picture = GFX_evt_abduct_encounter_5
 
     trigger = {
         exists = from
@@ -1491,10 +1492,14 @@ country_event = {
 	
 	option = {
 		name = CG_operation.3004.b
-
+		icon={
+			icon = GFX_espionage_asset_icon
+			text= ap_lustgod_perfect_idiosoma
+		}
 		trigger = {
 			owner = { has_ascension_perk = ap_lustgod_perfect_idiosoma  }
 		}
+		
 		locked_random_list = {
 			70 = {
 				add_favors = {
@@ -1502,28 +1507,44 @@ country_event = {
 					value = 3
 					#TODO add opinon mod
 				}
-				add_opinion_modifier = {
-					who = event_target:target_country
-					modifier = opinion_hypno
-				}
+				# from.target={
+				# 	add_opinion_modifier = {
+				# 		who = this
+				# 		modifier = opinion_hypno
+				# 		}
+				# 	}
 			}
 			30 = {
 				add_favors = {
 					target = event_target:target_country
 					value = 6
 				}
-				add_opinion_modifier = {
-					who = event_target:target_country
-					modifier = opinion_hypno
-				}
-				add_opinion_modifier = {
-					who = event_target:target_country
-					modifier = opinion_hypno
-				}
+
+				# from.target={
+				# 	add_opinion_modifier = {
+				# 		who = this
+				# 		modifier = opinion_hypno
+				# 		}
+				# }
+				
+				# from.target={
+				# 	add_opinion_modifier = {
+				# 		who = this
+				# 		modifier = opinion_hypno
+				# 		}
+				# }
+
+				
+			}
+
+
+		}
+		from.target={
+			country_event = {
+				id = CG_operation.3006 days = 5
 			}
 		}
 		add_resource = { influence = 100 }
-		from = { destroy_espionage_asset_diplomacy = yes }
 		from.spynetwork = {
 			add_spy_network_level = -20
 		}
@@ -1592,7 +1613,32 @@ country_event={
 	}
 
 }
+country_event={
+	id=CG_operation.3006
+	title= CG_operation.3006.name
+	desc=CG_operation.3006.desc
+	picture = GFX_evt_hypno_4
+	is_triggered_only = yes
+	trigger={
+		 exists = from
+	}
+	option={
 
+		name=CG_operation.3006.a
+	}
+	after={
+		hidden_effect = {
+			
+		
+			add_opinion_modifier = {
+			who = from
+			modifier = opinion_hypno
+			}
+		}	
+
+	}
+
+}
 
 
 
@@ -1898,7 +1944,7 @@ country_event = {
 	# 		}
 	# 	}
 	# }
-    picture = GFX_evt_intro_tmn
+    #picture = GFX_evt_intro_tmn
 	picture = {
 		trigger = {
 			from.owner = { has_country_flag = asset_mahosj }
@@ -1970,108 +2016,124 @@ country_event = {
 ###########################
 # this = operation; from = target (starbase)
 
+
+
+
+#-------8000-------tmn
+espionage_operation_event = {
+	id = CG_operation.8000
+	title = CG_operation.8000.name # Making Contact
+	desc = CG_operation.8000.desc
+	picture = GFX_evt_intro_tmn
+	show_sound = event_default
+	espionage_operation = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+		set_espionage_operation_progress_locked = yes
+	}
+
+	option = {
+		name = ACKNOWLEDGED
+	}
+	after = {
+		set_espionage_operation_progress_locked = no
+	}
+
+}
+
+espionage_operation_event = {
+	id = CG_operation.8001
+	title = CG_operation.8001.name
+	desc = {
+		text = CG_operation.8001.desc
+	}
+
+
+	picture = GFX_evt_intro_tmn
+
+
+	show_sound = event_default
+	espionage_operation = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+		set_espionage_operation_progress_locked = yes
+	}
+
+	option = {
+		name = ACKNOWLEDGED
+	}
+	after = {
+		set_espionage_operation_progress_locked = no
+	}
+}
+
+espionage_operation_event = {
+	id = CG_operation.8002
+	title = CG_operation.8002.name
+	desc = CG_operation.8002.desc
+	
+	picture = GFX_evt_intro_tmn
+	
+	show_sound = event_criminal_activity
+	espionage_operation = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+		set_espionage_operation_progress_locked = yes
+	}
+
+	option = {
+		name = LAUNCH_OPERATION
+		hidden_effect = {
+			owner = {
+				country_event = { id = CG_operation.8004 days = 1 }
+			}
+		}
+	}
+	after = {
+		set_espionage_operation_progress_locked = no
+	}
+}
+
+
 # Finalé | from = operation; fromfrom = target (starbase)
 country_event = {
-    id = CG_operation.8000
-    title = CG_operation.8000.name
-    desc = operation.8000.destroy_espionage_asset_diplomacy
+    id = CG_operation.8004
+    title = CG_operation.8004.name
+    desc = CG_operation.8004.desc
 
 
-    location = event_target:sabotaged_starbase_system
-    picture = GFX_evt_archaeologists_escaping
+    #location = event_target:sabotaged_starbase_system
+    picture = GFX_evt_battle_tmn_01
     show_sound = event_espionage_concluded
     is_triggered_only = yes
 
     trigger = {
         exists = from
-        exists = event_target:sabotaged_starbase
+       ## exists = event_target:sabotaged_starbase
     }
+	
+    immediate = { ##炸光
+		target = {
+			remove_random_starbase_module = {
 
-    immediate = {
-        from.target = {
-            espionage_sabotage_starbase_diplo = yes
-        }
-        #Bonus actions
-        if = {
-            limit = {
-                from = { has_espionage_asset_sabotage = yes }
-            }
-            random_list = {
-                1 = { #Take down another module
-                    modifier = {
-                        factor = 6
-                        from = { has_espionage_asset_technology = yes }
-                    }
-                    modifier = {
-                        factor = 0
-                        from.target = {
-                            count_starbase_modules = {
-                                type != shipyard
-                                count < 2
-                            }
-                        }
-                    }
-                    set_country_flag = sabotage_starbase_collateral@from.target.owner
-                }
-				1 = { #Take down another building
-                    modifier = {
-                        factor = 6
-                        from = { has_espionage_asset_economy = yes }
-                    }
-                    modifier = {
-                        factor = 0
-                        from.target = {
-                            has_nonshipyard_starbase_buildings = no
-                        }
-                    }
-                    set_country_flag = sabotage_building_collateral@from.target.owner
-                }
-				1 = { #Take down a shipyard module
-                    modifier = {
-                        factor = 6
-                        from = { has_espionage_asset_government = yes }
-                    }
-                    modifier = {
-                        factor = 0
-                        from.target = {
-                            count_starbase_modules = {
-                                type = shipyard
-                                count < 2
-                            }
-                        }
-                    }
-                    set_country_flag = sabotage_shipyard_collateral@from.target.owner
-                }
-                1 = { #Take down a defense platform
-                    modifier = {
-                        factor = 6
-                        from = { has_espionage_asset_military = yes }
-                    }
-                    set_country_flag = sabotage_starbase_defence@from.target.owner
-                }
-                6 = {
-                    modifier = {
-                        factor = 2.5
-                        root = {
-                            relative_encryption_decryption = { target = from.target.owner value < 0.6 }
-                        }
-                    }
-                    #No bonus action
-                }
-            }
-        }
+				count = 6
+			}
+		}
+      
     }
 
     option = { #We're done here (smooth)
-        name = operation.2005.a
+        name = CG_operation.8004.a
         trigger = {
-            from.target.owner = {
-                NOR = {
-                    has_hostile_espionage_operation_ethics = yes
-                    has_closed_borders = root
-                    is_at_war_with = root
-                }
-            }
+			relative_encryption_decryption = { target = from.owner value > 0.81 } ##encryption less
+ 
+ 
         }
         from.spynetwork = {
             add_spy_network_level = -30
@@ -2083,19 +2145,15 @@ country_event = {
             }
         }
     }
-    option = { #We're done here (messy)
-        name = operation.2005.a
+    option = { #We're done here (smooth)
+        name = CG_operation.8004.b
         trigger = {
-            from.target.owner = {
-                OR = {
-                    has_hostile_espionage_operation_ethics = yes
-                    has_closed_borders = root
-                    is_at_war_with = root
-                }
-            }
+			relative_encryption_decryption = { target = from.owner value < 0.8 } ##encryption less
+ 
+ 
         }
         from.spynetwork = {
-            add_spy_network_level = -45
+            add_spy_network_level = -30
         }
         owner = {
             if = {
@@ -2103,106 +2161,17 @@ country_event = {
                 complete_crisis_objective = crisobj_perform_upsetting_operations
             }
         }
-    }
-    option = { #Collateral damage (module)
-        name = operation.2005.b
-        icon = {
-			icon = GFX_espionage_asset_icon
-			text = ESPIONAGE_OPERATION_ASSET_EVENT_OPTION
-		}
-        trigger = {
-            has_country_flag = sabotage_starbase_collateral@from.target.owner
-        }
-        hidden_effect = {
-            remove_country_flag = sabotage_starbase_collateral@from.target.owner
-        }
-        from = {
-            destroy_espionage_asset_technology = yes
-            target = {
-                remove_random_starbase_module = {
-                    type != shipyard
-                    count = 1
-                }
-            }
-            spynetwork = { add_spy_network_level = -45 }
-        }
-        owner = {
-            if = {
-                limit = { has_ascension_perk = ap_become_the_crisis }
-                complete_crisis_objective = crisobj_perform_upsetting_operations
-            }
-        }
-    }
-	option = { #Collateral damage (building)
-        name = operation.2005.b
-        icon = {
-			icon = GFX_espionage_asset_icon
-			text = ESPIONAGE_OPERATION_ASSET_EVENT_OPTION
-		}
-        trigger = {
-            has_country_flag = sabotage_building_collateral@from.target.owner
-        }
-        hidden_effect = {
-            remove_country_flag = sabotage_building_collateral@from.target.owner
-        }
-        from = {
-            destroy_espionage_asset_technology = yes
-            target = {
-                remove_random_starbase_building = {
-                    count = 1
-                }
-            }
-            spynetwork = { add_spy_network_level = -45 }
-        }
-        owner = {
-            if = {
-                limit = { has_ascension_perk = ap_become_the_crisis }
-                complete_crisis_objective = crisobj_perform_upsetting_operations
-            }
-        }
-    }
-	option = { #Collateral damage (shipyard)
-        name = operation.2005.b
-        icon = {
-			icon = GFX_espionage_asset_icon
-			text = ESPIONAGE_OPERATION_ASSET_EVENT_OPTION
-		}
-        trigger = {
-            has_country_flag = sabotage_shipyard_collateral@from.target.owner
-        }
-		allow = { resource_stockpile_compare = { resource = volatile_motes value >= 1 } }
-        hidden_effect = {
-            remove_country_flag = sabotage_shipyard_collateral@from.target.owner
-        }
-        from = {
-            destroy_espionage_asset_technology = yes
-            target = {
-                remove_random_starbase_module = {
-                    type = shipyard
-                    count = 1
-                }
-            }
-            spynetwork = { add_spy_network_level = -45 }
-        }
-		root = {
-            add_resource = { volatile_motes = -1 }
-        }
-        owner = {
-            if = {
-                limit = { has_ascension_perk = ap_become_the_crisis }
-                complete_crisis_objective = crisobj_perform_upsetting_operations
-            }
-        }
-    }
+    }   
+   
     option = { #Collateral damage (defense platform)
-        name = operation.2005.c
+        name = CG_operation.8004.c
         icon = {
 			icon = GFX_espionage_asset_icon
 			text = ESPIONAGE_OPERATION_ASSET_EVENT_OPTION
 		}
         trigger = {
             has_country_flag = sabotage_starbase_defence@from.target.owner
-        }
+       }
         custom_tooltip = operation.2005.c.tooltip
         allow = {
             custom_tooltip = {
@@ -2308,7 +2277,7 @@ country_event = {
                     flag = sabotaged_starbase_alert@root
                     days = @SabotageStarbaseTimer
                 }
-                country_event = { id = operation.2010 } #Notification of sabotage
+                country_event = { id = CG_operation.8005 } #Notification of sabotage
             }
         }
         destroy_espionage_operation = from
@@ -2317,35 +2286,18 @@ country_event = {
 
 # Starbase sabotaged! (victim) | from = instigating country; event_target:sabotaged_starbase = target
 country_event = {
-    id = operation.2010
-    title = operation.2010.name
-    desc = {
-        text = operation.2010.desc.phobe
-        trigger = {
-            is_xenophobe = yes
-        }
-    }
-    desc = {
-        text = operation.2010.desc.regular
-        trigger = {
-            is_xenophobe = no
-            is_gestalt = no
-        }
-    }
-    desc = {
-        text = operation.2010.desc.gestalt
-        trigger = {
-            is_gestalt = yes
-        }
-    }
-    picture = GFX_evt_archaeologists_escaping
+    id =  CG_operation.8005
+    title = CG_operation.8005.name
+    desc =  CG_operation.8005.desc
+
+    picture = GFX_evt_battle_tmn_02
     show_sound = event_default
     is_triggered_only = yes
     location = event_target:sabotaged_starbase
 
     trigger = {
         exists = from
-        exists = event_target:sabotaged_starbase
+     ##   exists = event_target:sabotaged_starbase
     }
 
     immediate = {
@@ -2376,21 +2328,7 @@ country_event = {
                     flag = espionage_caught_saboteurs
                     days = 20
                 }
-                if = {
-                    limit = {
-                        any_spynetwork = {
-                            owner = { is_same_value = root }
-                            target = { is_same_value = from }
-                            is_spynetwork_level > 5
-                        }
-                        NOT = { has_country_flag = recently_received_espionage_asset }
-                    }
-                    country_event = { #A Surprise Catch (asset granted)
-                        id = espionage.1040
-                        days = 15
-                        scopes = { from = fromfrom }
-                    }
-                }
+
             }
             9 = { } #Nothing
         }
@@ -2398,7 +2336,7 @@ country_event = {
 
     option = {
         name = {
-            text = APPALLING
+            text = cg_targeted
             trigger = {
                 OR = {
                     is_xenophobe = yes
@@ -2406,20 +2344,1741 @@ country_event = {
                 }
             }
         }
-        name = {
-            text = CURSES
-            trigger = {
-                NOT = {
-                    OR = {
-                        is_xenophobe = yes
-                        is_gestalt = yes
-                    }
-                }
+		hidden_effect={
+			if = {
+                limit = {has_country_flag =espionage_caught_saboteurs}
+				from.owner={
+					country_event={
+						id = CG_operation.8006
+						days = 15
+					}
+				}
+				country_event={ #trigger caught for target
+				id = CG_operation.8006
+				days = 15
+				}
+					if = {
+						limit={		
+							fromfrom.spynetwork = {	
+							has_espionage_asset = asset_kunoichi}
+						}
+						fromfrom.spynetwork = {
+							destroy_espionage_asset = asset_kunoichi
+							create_espionage_asset = { type = asset_kunoichi_rbq }
+						}
+					}	
+					fromfrom.spynetwork.owner={
+						set_country_flag=add_rbq
+						} 
+
+
+
+			}
+
+		}
+    }
+
+
+    option = {
+		name = cg_atallcost
+		add_resource = {
+			unity  = -10000
+			energy = -10000
+		}
+		country_event = { #A Surprise Catch (asset granted)
+		id = CG_operation.8006
+		days = 15
+		}
+		from.owner={
+			country_event={
+				id = CG_operation.8006
+				days = 15
+			}
+		}
+		if = {
+			limit={		
+				fromfrom.spynetwork = {	
+				has_espionage_asset = asset_kunoichi}
+			}
+			fromfrom.spynetwork = {
+				destroy_espionage_asset = asset_kunoichi
+				create_espionage_asset = { type = asset_kunoichi_rbq }
+			}
+		}	
+		fromfrom.spynetwork.owner={
+			set_country_flag=add_rbq
+			}
+	}
+    after = {
+     ##   remove_sabotage_starbase_flag_diplo = yes
+    }
+}
+# 被抓
+country_event = {
+    id =  CG_operation.8006
+    title = CG_operation.8006.name
+    desc =  cg_not_finished
+
+    picture = GFX_evt_failed_tmn_01
+    show_sound = event_default
+    is_triggered_only = yes
+    location = event_target:sabotaged_starbase
+
+    # trigger = {
+    #     exists = from
+    #     exists = event_target:sabotaged_starbase
+    # }
+	immediate = {
+		if={
+		limit = {
+			has_country_flag = add_rbq
+		}
+		remove_country_flag = add_rbq
+		fromfromfrom.spynetwork = {
+			destroy_espionage_asset = asset_kunoichi
+			create_espionage_asset = { type = asset_kunoichi_rbq }
+		}
+		}
+	}
+
+	option={
+		name=cg_ops
+		add_resource = {
+			energy = -5000
+		}
+	}
+}
+
+
+
+#-------8400------mhsj
+espionage_operation_event = {
+	id = CG_operation.8400
+	title = CG_operation.8400.name # Making Contact
+	desc = CG_operation.8400.desc
+	picture = GFX_evt_intro_mhsj
+	show_sound = event_default
+	espionage_operation = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+		set_espionage_operation_progress_locked = yes
+	}
+
+	option = {
+		name = ACKNOWLEDGED
+	}
+	after = {
+		set_espionage_operation_progress_locked = no
+	}
+
+}
+
+espionage_operation_event = {
+	id = CG_operation.8401
+	title = CG_operation.8401.name
+	desc = {
+		text = CG_operation.8401.desc
+	}
+
+
+	picture = GFX_evt_intro_mhsj
+
+
+	show_sound = event_default
+	espionage_operation = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+		set_espionage_operation_progress_locked = yes
+	}
+
+	option = {
+		name = ACKNOWLEDGED
+	}
+	after = {
+		set_espionage_operation_progress_locked = no
+	}
+}
+
+espionage_operation_event = {
+	id = CG_operation.8402
+	title = CG_operation.8402.name
+	desc = CG_operation.8402.desc
+	
+	picture = GFX_evt_intro_mhsj
+	
+	show_sound = event_criminal_activity
+	espionage_operation = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+		set_espionage_operation_progress_locked = yes
+	}
+
+	option = {
+		name = LAUNCH_OPERATION
+		hidden_effect = {
+			owner = {
+				country_event = { id = CG_operation.8404 days = 1 }
+			}
+		}
+	}
+	after = {
+		set_espionage_operation_progress_locked = no
+	}
+}
+
+
+# 炸舰队 from:operation
+country_event = {
+    id = CG_operation.8404
+    title = CG_operation.8404.name
+    desc = CG_operation.8404.desc
+
+    location = event_target:sabotaged_starbase_system
+    picture = GFX_evt_battle_mhsj_01
+    show_sound = event_espionage_concluded
+    is_triggered_only = yes
+
+    trigger = {
+        exists = from
+        #exists = event_target:sabotaged_starbase
+    }
+	
+    immediate = { ##炸随机船
+		from.target = {
+			while = {
+				count=15 
+				random_owned_ship = {
+				
+					destroy_ship = this
+				}
+			}
+		}
+      
+    }
+
+    option = { #完成，撤退
+        name = CG_operation.8404.a
+        trigger = {
+			relative_encryption_decryption = { target = from.owner value > 0.81 } ##encryption less
+ 
+ 
+        }
+        from.spynetwork = {
+            add_spy_network_level = -30
+        }
+        owner = {
+            if = {
+                limit = { has_ascension_perk = ap_become_the_crisis }
+                complete_crisis_objective = crisobj_perform_upsetting_operations
             }
         }
     }
+    option = { #完成，撤退 但是被察觉
+        name = CG_operation.8404.b
+        trigger = {
+			relative_encryption_decryption = { target = from.owner value < 0.8 } ##encryption less
+ 
+
+        }
+        from.spynetwork = {
+            add_spy_network_level = -45
+        }
+        owner = {
+            if = {
+                limit = { has_ascension_perk = ap_become_the_crisis }
+                complete_crisis_objective = crisobj_perform_upsetting_operations
+            }
+        }
+    }   
+   
+    option = { #再炸10搜
+        name = CG_operation.8404.c
+        icon = {
+			icon = GFX_espionage_asset_icon
+			text = ESPIONAGE_OPERATION_ASSET_EVENT_OPTION
+		}
+		 ##炸随机船
+		from.target = {
+			while = {
+				count=10 
+				random_owned_ship = {
+				
+					destroy_ship = this
+				}
+			}
+		}
+        root = {
+            add_resource = { volatile_motes = -2 }
+        }
+        from.spynetwork = { add_spy_network_level = -45 }
+        owner = {
+            if = {
+                limit = { has_ascension_perk = ap_become_the_crisis }
+                complete_crisis_objective = crisobj_perform_upsetting_operations
+            }
+        }
+    }
+    option = { #再炸30搜,同归于尽毁灭
+        name = CG_operation.8404.d
+
+		 ##炸随机船
+		from.target = {
+			while = {
+				count=30 
+				random_owned_ship = {
+				
+					destroy_ship = this
+				}
+			}
+		}
+		add_resource = {
+		
+		unity  = -10000
+		}
+        root = {
+            add_resource = { volatile_motes = -2 }
+        }
+		hidden_effect={
+			from.target = {
+				set_timed_country_flag = {
+					flag = cg_operation_always_get_caught
+					days=30
+				}
+			}
+		}
+        from.spynetwork = { add_spy_network_level = -45 }
+        owner = {
+            if = {
+                limit = { has_ascension_perk = ap_become_the_crisis }
+                complete_crisis_objective = crisobj_perform_upsetting_operations
+            }
+        }
+    }
+    after = {
+
+        hidden_effect = {
+            if = {
+                limit = {
+                    owner = { NOT = { has_country_flag = operation_complete_sabotage_starbase } }
+                }
+                owner = {
+                    change_variable = {
+                        which = tinker_tailor_soldier_blorg_achievement_count
+                        value = 1
+                    }
+                    set_country_flag = operation_complete_sabotage_starbase
+                }
+            }
+            from.target.owner = {
+                set_timed_country_flag = {
+                    flag = sabotaged_starbase_alert@root
+                    days = @SabotageStarbaseTimer
+                }
+                country_event = { id = CG_operation.8405 } #Notification of sabotage
+            }
+        }
+        destroy_espionage_operation = from
+    }
+}
+
+# 被炸舰队! (victim) | from = instigating country;  fromfrom=operation
+country_event = {
+    id =  CG_operation.8405
+    title = CG_operation.8405.name
+    desc =  CG_operation.8405.desc
+
+    picture = GFX_evt_battle_mhsj_01
+    show_sound = event_default
+    is_triggered_only = yes
+    #location = event_target:sabotaged_starbase #TODI
+
+    trigger = {
+        exists = from
+        #exists = event_target:sabotaged_starbase
+    }
+
+    immediate = {
+        random_list = {
+            1 = { #Saboteurs caught
+                modifier = {
+                    factor = 0
+                    OR = {
+                        NOT = {
+                            any_spynetwork = {
+                                owner = { is_same_value = root }
+                                target = { is_same_value = from }
+                            }
+                        }
+                        has_country_flag = recently_received_espionage_asset
+                    }
+                }
+                modifier = {
+                    factor = 3
+                    relative_encryption_decryption = { target = from value > 0.8 }
+                    relative_encryption_decryption = { target = from value < 1.6 }
+                }
+                modifier = {
+                    factor = 10
+                    relative_encryption_decryption = { target = from value >= 1.6 }
+                }
+				modifier = {
+                    factor = 10
+                    relative_encryption_decryption = { target = from value >= 1.6 }
+                }
+				modifier={
+					factor=100
+					has_country_flag = cg_operation_always_get_caught
+
+				}
+                set_timed_country_flag = {
+                    flag = espionage_caught_saboteurs
+                    days = 20
+                }
+
+            }
+            9 = { } #Nothing
+        }
+    }
+
+    option = {
+        name = {
+            text = cg_targeted
+            trigger = {
+                OR = {
+                    is_xenophobe = yes
+                    is_gestalt = yes
+                }
+            }
+        }
+		hidden_effect={
+			if = {
+                limit = {has_country_flag =espionage_caught_saboteurs}
+				from.owner={
+					country_event={
+						id = CG_operation.8406
+						days = 15
+					}
+				}
+				country_event={ #trigger caught for target
+				id = CG_operation.8406
+				days = 15
+				}
+					if = {
+						limit={		
+							fromfrom.spynetwork = {	
+							has_espionage_asset = asset_mahosj}
+						}
+						fromfrom.spynetwork = {
+							destroy_espionage_asset = asset_mahosj
+							create_espionage_asset = { type = asset_mahosj_rbq }
+						}
+					}	
+					fromfrom.spynetwork.owner={
+						set_country_flag=add_rbq
+						}
+
+
+
+			}
+
+		}
+    }
+
+
+    option = {
+		name = cg_atallcost
+		add_resource = {
+			unity  = -10000
+			energy = -10000
+		}
+		country_event = { #A Surprise Catch (asset granted)
+		id = CG_operation.8406
+		days = 15
+		}
+		from.owner={
+			country_event={
+				id = CG_operation.8406
+				days = 15
+			}
+		}
+		if = {
+			limit={		
+				fromfrom.spynetwork = {	
+				has_espionage_asset = asset_mahosj}
+			}
+			fromfrom.spynetwork = {
+				destroy_espionage_asset = asset_mahosj
+				create_espionage_asset = { type = asset_mahosj_rbq }
+			}
+		}	
+		fromfrom.spynetwork.owner={
+			set_country_flag=add_rbq
+			}
+	}
+    after = {
+     ##   remove_sabotage_starbase_flag_diplo = yes
+    }
+}
+
+# 人员被抓
+country_event = {
+    id =  CG_operation.8406
+    title = CG_operation.8406.desc
+    desc =  cg_not_finished
+
+    picture = GFX_evt_failed_mhsj_01
+    show_sound = event_default
+    is_triggered_only = yes
+    #location = event_target:sabotaged_starbase
+
+    # trigger = {
+    #     exists = from
+    #     exists = event_target:sabotaged_starbase
+    # }
+
+	immediate = {
+		if={
+		limit = {
+			has_country_flag = add_rbq
+		}
+		remove_country_flag = add_rbq
+		fromfromfrom.spynetwork = {
+			destroy_espionage_asset = asset_mahosj
+			create_espionage_asset = { type = asset_mahosj_rbq }
+		}
+		}
+	}
+	option={
+		name=cg_ops
+		add_resource = {
+			energy = -5000
+		}
+	}
+}
+
+
+
+
+#-------8100-------knight
+espionage_operation_event = {
+	id = CG_operation.8100
+	title = CG_operation.8100.name # Making Contact
+	desc = CG_operation.8100.desc
+	picture = GFX_evt_intro_knight
+	show_sound = event_default
+	espionage_operation = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+		set_espionage_operation_progress_locked = yes
+	}
+
+	option = {
+		name = ACKNOWLEDGED
+	}
+	after = {
+		set_espionage_operation_progress_locked = no
+	}
+
+}
+
+espionage_operation_event = {
+	id = CG_operation.8101
+	title = CG_operation.8101.name
+	desc = {
+		text = CG_operation.8101.desc
+	}
+
+
+	picture = GFX_evt_intro_knight
+
+
+	show_sound = event_default
+	espionage_operation = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+		set_espionage_operation_progress_locked = yes
+	}
+
+	option = {
+		name = ACKNOWLEDGED
+	}
+	after = {
+		set_espionage_operation_progress_locked = no
+	}
+}
+
+espionage_operation_event = {
+	id = CG_operation.8102
+	title = CG_operation.8102.name
+	desc = CG_operation.8102.desc
+	
+	picture = GFX_evt_intro_knight
+	
+	show_sound = event_criminal_activity
+	espionage_operation = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+		set_espionage_operation_progress_locked = yes
+	}
+
+	option = {
+		name = LAUNCH_OPERATION
+		hidden_effect = {
+			owner = {
+				country_event = { id = CG_operation.8104 days = 1 }
+			}
+		}
+	}
+	after = {
+		set_espionage_operation_progress_locked = no
+	}
+}
+
+
+# 炸地块
+#from operation
+country_event = {
+    id = CG_operation.8104
+    title = CG_operation.8104.name
+    desc = CG_operation.8104.desc
+
+    #location = event_target:sabotaged_starbase_system
+    picture = GFX_evt_battle_knight_01
+    show_sound = event_espionage_concluded
+    is_triggered_only = yes
+
+    trigger = {
+        exists = from
+        #exists = event_target:sabotaged_starbase
+    }
+
+    immediate = { ##炸地块 炸点有5块地块以上的
+		from.target={
+				random_owned_planet = {
+					limit={  	
+						num_districts ={type=any value > 5}
+					}
+
+					save_event_target_as = destroy_district_target_planet
+					
+
+				}
+		}
+
+		from.target={
+			while={
+				count=5
+				event_target:destroy_district_target_planet={
+					remove_last_built_district =yes
+
+				}
+			}
+		}
+
+    }
+
+    option = { #完成，撤退
+        name = CG_operation.8104.a
+        trigger = {
+			relative_encryption_decryption = { target = from.owner value > 0.81 } ##encryption less
+ 
+            from.target.owner = {
+                NOR = {
+                    has_hostile_espionage_operation_ethics = yes
+                    has_closed_borders = root
+                    is_at_war_with = root
+                }
+            }
+        }
+        from.spynetwork = {
+            add_spy_network_level = -30
+        }
+        owner = {
+            if = {
+                limit = { has_ascension_perk = ap_become_the_crisis }
+                complete_crisis_objective = crisobj_perform_upsetting_operations
+            }
+        }
+    }
+    option = { #完成，撤退 但是被察觉
+        name = CG_operation.8104.b
+        trigger = {
+			relative_encryption_decryption = { target = from.owner value < 0.8 } ##encryption less
+ 
+            from.target.owner = {
+                NOR = {
+                    has_hostile_espionage_operation_ethics = yes
+                    has_closed_borders = root
+                    is_at_war_with = root
+                }
+            }
+        }
+        from.spynetwork = {
+            add_spy_network_level = -45
+        }
+        owner = {
+            if = {
+                limit = { has_ascension_perk = ap_become_the_crisis }
+                complete_crisis_objective = crisobj_perform_upsetting_operations
+            }
+        }
+    }   
+   
+    option = { #再炸3块
+        name = CG_operation.8104.c
+        icon = {
+			icon = GFX_espionage_asset_icon
+			text = ESPIONAGE_OPERATION_ASSET_EVENT_OPTION
+		}
+		 ##炸随机船
+		 from.target={
+			while={
+				count=3
+				event_target:destroy_district_target_planet={
+					remove_last_built_district =yes
+
+				}
+			}
+		}
+        root = {
+            add_resource = { volatile_motes = -2 }
+        }
+        from.spynetwork = { add_spy_network_level = -45 }
+        owner = {
+            if = {
+                limit = { has_ascension_perk = ap_become_the_crisis }
+                complete_crisis_objective = crisobj_perform_upsetting_operations
+            }
+        }
+    }
+    option = { #同归于尽毁灭
+        name = CG_operation.8104.d
+
+		 ##清光
+		from.target={
+			while={
+				
+				event_target:destroy_district_target_planet={
+					remove_all_districts =yes
+
+				}
+			}
+		}
+		add_resource = {
+		
+		unity  = -10000
+		}
+        root = {
+            add_resource = { volatile_motes = -2 }
+        }
+		hidden_effect={
+			from.target = {
+				set_timed_country_flag = {
+					flag = cg_operation_always_get_caught
+					days=30
+				}
+			}
+		}
+        from.spynetwork = { add_spy_network_level = -45 }
+        owner = {
+            if = {
+                limit = { has_ascension_perk = ap_become_the_crisis }
+                complete_crisis_objective = crisobj_perform_upsetting_operations
+            }
+        }
+    }
+    after = {
+
+        hidden_effect = {
+            if = {
+                limit = {
+                    owner = { NOT = { has_country_flag = operation_complete_sabotage_starbase } }
+                }
+                owner = {
+                    change_variable = {
+                        which = tinker_tailor_soldier_blorg_achievement_count
+                        value = 1
+                    }
+                    set_country_flag = operation_complete_sabotage_starbase
+                }
+            }
+            from.target.owner = {
+   #             set_timed_country_flag = {
+   #                 flag = sabotaged_starbase_alert@root
+   #                 days = @SabotageStarbaseTimer
+   #             }
+                country_event = { id = CG_operation.8105 } #Notification of sabotage
+            }
+        }
+        destroy_espionage_operation = from
+    }
+}
+
+# 被炸舰队! (victim) | from = instigating country; event_target:sabotaged_starbase = target
+country_event = {
+    id =  CG_operation.8105
+    title = CG_operation.8105.name
+    desc =  CG_operation.8105.desc
+
+    picture = GFX_evt_battle_knight_01
+    show_sound = event_default
+    is_triggered_only = yes
+    #location = event_target:sabotaged_starbase #TODI
+
+    trigger = {
+        exists = from
+        #exists = event_target:sabotaged_starbase
+    }
+
+    immediate = {
+        random_list = {
+            1 = { #Saboteurs caught
+                modifier = {
+                    factor = 0
+                    OR = {
+                        NOT = {
+                            any_spynetwork = {
+                                owner = { is_same_value = root }
+                                target = { is_same_value = from }
+                            }
+                        }
+                        has_country_flag = recently_received_espionage_asset
+                    }
+                }
+                modifier = {
+                    factor = 3
+                    relative_encryption_decryption = { target = from value > 0.8 }
+                    relative_encryption_decryption = { target = from value < 1.6 }
+                }
+                modifier = {
+                    factor = 10
+                    relative_encryption_decryption = { target = from value >= 1.6 }
+                }
+				modifier = {
+                    factor = 10
+                    relative_encryption_decryption = { target = from value >= 1.6 }
+                }
+				modifier={
+					factor=100
+					has_country_flag = cg_operation_always_get_caught
+
+				}
+                set_timed_country_flag = {
+                    flag = espionage_caught_saboteurs
+                    days = 20
+                }
+
+            }
+            9 = { } #Nothing
+        }
+    }
+
+    option = {
+        name = {
+            text = CG_operation.8105.a
+            trigger = {
+                OR = {
+                    is_xenophobe = yes
+                    is_gestalt = yes
+                }
+            }
+        }
+		hidden_effect={
+			if = {
+                limit = {has_country_flag =espionage_caught_saboteurs}
+				from.owner={ #trigger caught for owner
+					country_event={
+						id = CG_operation.8106
+						days = 15
+					}
+				}
+				country_event={ #trigger caught for target
+					id = CG_operation.8106
+					days = 15
+				}
+			
+					if = {
+						limit={		
+							fromfrom.spynetwork = {	
+							has_espionage_asset = asset_knight }
+						}
+						fromfrom.spynetwork = {
+							destroy_espionage_asset = asset_knight
+							create_espionage_asset = { type = asset_knight_rbq }
+						}
+					}	
+					fromfrom.spynetwork.owner={
+						set_country_flag=add_rbq
+						}
+
+
+
+			}
+
+		}
+    }
+
+
+    option = {
+		name = cg_atallcost
+		add_resource = {
+			unity  = -10000
+			energy = -10000
+		}
+		country_event = { #A Surprise Catch (asset granted)
+		id = CG_operation.8106
+		days = 15
+		}
+		from.owner={
+			country_event={
+				id = CG_operation.8106
+				days = 15
+			}
+		}
+		if = {
+			limit={		
+				fromfrom.spynetwork = {	
+				has_espionage_asset = asset_knight}
+			}
+			fromfrom.spynetwork = {
+				destroy_espionage_asset = asset_knight
+				create_espionage_asset = { type = asset_knight_rbq }
+			}
+		}	
+		fromfrom.spynetwork.owner={
+			set_country_flag=add_rbq
+			}
+	}
+    after = {
+     ##   remove_sabotage_starbase_flag_diplo = yes
+    }
+}
+
+# 人员被抓
+country_event = {
+    id =  CG_operation.8106
+    title = CG_operation.8106.name
+    desc =  CG_operation.8106.desc
+
+    picture = GFX_evt_failed_knight_01
+    show_sound = event_default
+    is_triggered_only = yes
+    location = event_target:destroy_district_target_planet
+
+    # trigger = {
+    #     exists = from
+    #     exists = event_target:sabotaged_starbase
+    # }
+	immediate = {
+		if={
+		limit = {
+			has_country_flag = add_rbq
+		}
+		remove_country_flag = add_rbq
+		fromfromfrom.spynetwork = {
+			destroy_espionage_asset = asset_knight
+			create_espionage_asset = { type = asset_knight_rbq }
+		}
+		}
+	}
+
+	option={
+		name=cg_ops
+		add_resource = {
+			energy = -5000
+		}
+	}
+}
+
+
+
+
+#-------8300-------agent
+espionage_operation_event = {
+	id = CG_operation.8300
+	title = CG_operation.8300.name # Making Contact
+	desc = CG_operation.8300.desc
+	picture = GFX_evt_intro_agent
+	show_sound = event_default
+	espionage_operation = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+		set_espionage_operation_progress_locked = yes
+	}
+
+	option = {
+		name = ACKNOWLEDGED
+	}
+	after = {
+		set_espionage_operation_progress_locked = no
+	}
+
+}
+
+espionage_operation_event = {
+	id = CG_operation.8301
+	title = CG_operation.8301.name
+	desc = {
+		text = CG_operation.8301.desc
+	}
+
+
+	picture = GFX_evt_intro_agent
+
+
+	show_sound = event_default
+	espionage_operation = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+		set_espionage_operation_progress_locked = yes
+	}
+
+	option = {
+		name = ACKNOWLEDGED
+	}
+	after = {
+		set_espionage_operation_progress_locked = no
+	}
+}
+
+espionage_operation_event = {
+	id = CG_operation.8302
+	title = CG_operation.8302.name
+	desc = CG_operation.8302.desc
+	
+	picture = GFX_evt_intro_knight
+	
+	show_sound = event_criminal_activity
+	espionage_operation = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+		set_espionage_operation_progress_locked = yes
+	}
+
+	option = {
+		name = LAUNCH_OPERATION
+		hidden_effect = {
+			owner = {
+				country_event = { id = CG_operation.8304 days = 1 }
+			}
+		}
+	}
+	after = {
+		set_espionage_operation_progress_locked = no
+	}
+}
+
+
+# 上debuff
+#from operation
+country_event = {
+    id = CG_operation.8304
+    title = CG_operation.8304.name
+    desc = CG_operation.8304.desc
+
+    #location = event_target:sabotaged_starbase_system
+    picture = GFX_evt_battle_agent_01
+    show_sound = event_espionage_concluded
+    is_triggered_only = yes
+
+    trigger = {
+        exists = from
+        #exists = event_target:sabotaged_starbase
+    }
+
+    immediate = { ##机械人口整活
+		from.target={
+			add_modifier = { modifier = mod_holy_proj_country_hacked_agent years = 10 }
+			every_owned_pop = {
+				limit = { is_robot_pop =yes }
+				add_modifier={ modifier = mod_holy_proj_robot_hacked_agent years=10                }	
+			}
+		}
+
+    }
+
+    option = { #完成，撤退
+        name = CG_operation.8304.a
+        trigger = {
+			relative_encryption_decryption = { target = from.owner value > 0.81 } ##encryption less
+ 
+
+        }
+        from.spynetwork = {
+            add_spy_network_level = -30
+        }
+        owner = {
+            if = {
+                limit = { has_ascension_perk = ap_become_the_crisis }
+                complete_crisis_objective = crisobj_perform_upsetting_operations
+            }
+        }
+    }
+    option = { #完成，撤退 但是被察觉
+        name = CG_operation.8304.b
+        trigger = {
+			relative_encryption_decryption = { target = from.owner value < 0.8 } ##encryption less
+ 
+ 
+        }
+        from.spynetwork = {
+            add_spy_network_level = -45
+        }
+        owner = {
+            if = {
+                limit = { has_ascension_perk = ap_become_the_crisis }
+                complete_crisis_objective = crisobj_perform_upsetting_operations
+            }
+        }
+    }   
+   
 
     after = {
-        remove_sabotage_starbase_flag_diplo = yes
+
+        hidden_effect = {
+            if = {
+                limit = {
+                    owner = { NOT = { has_country_flag = operation_complete_sabotage_starbase } }
+                }
+                owner = {
+                    change_variable = {
+                        which = tinker_tailor_soldier_blorg_achievement_count
+                        value = 1
+                    }
+                    set_country_flag = operation_complete_sabotage_starbase
+                }
+            }
+            from.target.owner = {
+   #             set_timed_country_flag = {
+   #                 flag = sabotaged_starbase_alert@root
+   #                 days = @SabotageStarbaseTimer
+   #             }
+                country_event = { id = CG_operation.8305 } #Notification of sabotage
+            }
+        }
+        destroy_espionage_operation = from
     }
+}
+
+# 被炸舰队! (victim) | from = instigating country; event_target:sabotaged_starbase = target
+country_event = {
+    id =  CG_operation.8305
+    title = CG_operation.8305.name
+    desc =  CG_operation.8305.desc
+
+    picture = GFX_evt_battle_agent_02
+    show_sound = event_default
+    is_triggered_only = yes
+    #location = event_target:sabotaged_starbase #TODI
+
+    trigger = {
+        exists = from
+        #exists = event_target:sabotaged_starbase
+    }
+
+    immediate = {
+        random_list = {
+            1 = { #Saboteurs caught
+                modifier = {
+                    factor = 0
+                    OR = {
+                        NOT = {
+                            any_spynetwork = {
+                                owner = { is_same_value = root }
+                                target = { is_same_value = from }
+                            }
+                        }
+                        has_country_flag = recently_received_espionage_asset
+                    }
+                }
+                modifier = {
+                    factor = 3
+                    relative_encryption_decryption = { target = from value > 0.8 }
+                    relative_encryption_decryption = { target = from value < 1.6 }
+                }
+                modifier = {
+                    factor = 10
+                    relative_encryption_decryption = { target = from value >= 1.6 }
+                }
+				modifier = {
+                    factor = 10
+                    relative_encryption_decryption = { target = from value >= 1.6 }
+                }
+				modifier={
+					factor=100
+					has_country_flag = cg_operation_always_get_caught
+
+				}
+                set_timed_country_flag = {
+                    flag = espionage_caught_saboteurs
+                    days = 20
+                }
+
+            }
+            9 = { } #Nothing
+        }
+    }
+
+    option = {
+        name =  CG_operation.8305.a
+        
+		trigger={}
+		hidden_effect={
+			if = {
+                limit = {has_country_flag =espionage_caught_saboteurs}
+				from.owner={ #trigger caught for owner
+					country_event={
+						id = CG_operation.8306
+						days = 15
+					}
+				}
+				country_event={ #trigger caught for target
+					id = CG_operation.8306
+					days = 15
+				}
+			
+					if = {
+						limit={		
+							fromfrom.spynetwork = {	
+							has_espionage_asset = asset_agent }
+						}
+						fromfrom.spynetwork = {
+							destroy_espionage_asset = asset_agent
+							create_espionage_asset = { type = asset_agent_rbq }
+						}
+					}	
+				
+					fromfrom.spynetwork.owner={
+						set_country_flag=add_rbq
+						}
+
+
+			}
+
+		}
+    }
+
+
+    option = {
+		name = cg_atallcost
+		add_resource = {
+			unity  = -10000
+			energy = -10000
+		}
+		country_event = { #A Surprise Catch (asset granted)
+		id = CG_operation.8306
+		days = 15
+		}
+		from.owner={
+			country_event={
+				id = CG_operation.8306
+				days = 15
+			}
+		}
+		if = {
+			limit={		
+				fromfrom.spynetwork = {	
+				has_espionage_asset = asset_agent}
+			}
+			fromfrom.spynetwork = {
+				destroy_espionage_asset = asset_agent
+				create_espionage_asset = { type = asset_agent_rbq }
+			}
+			
+		}
+		fromfrom.spynetwork.owner={
+			set_country_flag=add_rbq
+			}	
+	}
+    after = {
+     ##   remove_sabotage_starbase_flag_diplo = yes
+    }
+}
+
+# 人员被抓
+country_event = {
+    id =  CG_operation.8306
+    title = CG_operation.8306.name
+    desc =  CG_operation.8306.desc
+
+
+    picture = GFX_evt_failed_agent_01
+    show_sound = event_default
+    is_triggered_only = yes
+    location = event_target:destroy_district_target_planet
+	immediate = {
+		if={
+		limit = {
+			has_country_flag = add_rbq
+		}
+		remove_country_flag = add_rbq
+		fromfromfrom.spynetwork = {
+			destroy_espionage_asset = asset_agent
+			create_espionage_asset = { type = asset_agent_rbq }
+		}
+		}
+	}
+    # trigger = {
+    #     exists = from
+    #     exists = event_target:sabotaged_starbase
+    # }
+
+
+	option={
+		name=cg_ops
+		add_resource = {
+			energy = -5000
+		}
+	}
+}
+
+
+#-------8200-------battlenun
+espionage_operation_event = {
+	id = CG_operation.8200
+	title = CG_operation.8200.name # Making Contact
+	desc = CG_operation.8200.desc
+	picture = GFX_evt_intro_nun
+	show_sound = event_default
+	espionage_operation = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+		set_espionage_operation_progress_locked = yes
+	}
+
+	option = {
+		name = ACKNOWLEDGED
+	}
+	after = {
+		set_espionage_operation_progress_locked = no
+	}
+
+}
+
+espionage_operation_event = {
+	id = CG_operation.8201
+	title = CG_operation.8201.name
+	desc = {
+		text = CG_operation.8201.desc
+	}
+
+
+	picture = GFX_evt_intro_nun
+
+
+	show_sound = event_default
+	espionage_operation = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+		set_espionage_operation_progress_locked = yes
+	}
+
+	option = {
+		name = ACKNOWLEDGED
+	}
+	after = {
+		set_espionage_operation_progress_locked = no
+	}
+}
+
+espionage_operation_event = {
+	id = CG_operation.8202
+	title = CG_operation.8202.name
+	desc = CG_operation.8202.desc
+	
+	picture = GFX_evt_battle_nun_01
+	
+	show_sound = event_criminal_activity
+	espionage_operation = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+		set_espionage_operation_progress_locked = yes
+	}
+
+	option = {
+		name = LAUNCH_OPERATION
+		hidden_effect = {
+			owner = {
+				country_event = { id = CG_operation.8204 days = 1 }
+			}
+		}
+	}
+	after = {
+		set_espionage_operation_progress_locked = no
+	}
+}
+
+
+# 改造人口  建教会
+#from operation
+country_event = {
+    id = CG_operation.8204
+    title = CG_operation.8204.name
+    desc = CG_operation.8204.desc
+
+    #location = event_target:sabotaged_starbase_system
+    picture = GFX_evt_battle_nun_02
+    show_sound = event_espionage_concluded
+    is_triggered_only = yes
+
+    trigger = {
+        exists = from
+        #exists = event_target:sabotaged_starbase
+    }
+
+    immediate = { ##改造人口  建教会
+		from.target={
+			while={
+			count=10
+				random_owned_pop = {
+					limit={NOT={ is_robot_pop=yes }}
+					#limit = { is_species  = Magical_Bitch }
+					 
+					modify_species = {
+						add_trait = trait_holy_suc
+					}
+				}
+			}
+			capital_scope = {
+				if={
+					limit={ free_building_slots < 1 }
+					remove_last_built_building = yes
+				}
+				add_building =  building_underground_church
+			}
+
+
+
+
+
+
+
+		}
+
+    }
+
+    option = { #完成，撤退
+        name = CG_operation.8204.a
+        trigger = {
+			relative_encryption_decryption = { target = from.owner value > 0.81 } ##encryption less
+ 
+
+        }
+        from.spynetwork = {
+            add_spy_network_level = -30
+        }
+
+    }
+    option = { #完成，撤退 但是被察觉
+        name = CG_operation.8204.b
+        trigger = {
+			relative_encryption_decryption = { target = from.owner value < 0.8 } ##encryption less
+ 
+
+        }
+        from.spynetwork = {
+            add_spy_network_level = -45
+        }
+
+    }   
+    option = { ##再改造一点点
+		name = CG_operation.8204.c
+		while={
+			count=10
+			from.target={
+				random_owned_pop = {
+						limit={
+							NOT={ is_robot_pop=yes }
+						}
+				#limit = { is_species  = Magical_Bitch }
+						modify_species = {
+							add_trait = trait_holy_suc
+						}
+				}
+			}
+			}
+		from.spynetwork = {
+				add_spy_network_level = -30
+		}	
+
+	}
+
+    option = { ##甚至再改造成无心
+		name = CG_operation.8204.d
+		custom_tooltip = CG_operation.8204.d.tooltip
+		add_resource = {	
+			unity  = -10000
+		}
+		hidden_effect = {
+			from.target={
+				create_species = {
+						name = "holy_suc"
+						name_list = "FIJN"
+						class = Magical_Bitch			#-3
+						portrait = "pure"
+						traits = {
+							trait = trait_holy_suc				#迷途知返	-6
+							trait = trait_zealot_shojo				#狂热修女	2		
+							trait = trait_coquettish				#丰姿冶丽	2
+							trait = trait_bright				#古灵精怪	3
+							trait = trait_inner_peace				#心如止水	2
+						}
+				}
+		
+				while={
+					count=10
+					random_owned_pop = {
+						limit = {
+							has_trait = trait_holy_suc
+						}
+						change_species = last_created_species
+					}
+				}
+			}
+
+			from.target = {
+					set_timed_country_flag = {
+						flag = cg_operation_always_get_caught
+						days=30
+						}
+					}
+			
+
+		
+		}
+		from.spynetwork = {
+				add_spy_network_level = -30
+		}	
+
+	}
+
+    after = {
+
+        hidden_effect = {
+            if = {
+                limit = {
+                    owner = { NOT = { has_country_flag = operation_complete_sabotage_starbase } }
+                }
+                owner = {
+                    change_variable = {
+                        which = tinker_tailor_soldier_blorg_achievement_count
+                        value = 1
+                    }
+                    set_country_flag = operation_complete_sabotage_starbase
+                }
+            }
+            from.target.owner = {
+   #             set_timed_country_flag = {
+   #                 flag = sabotaged_starbase_alert@root
+   #                 days = @SabotageStarbaseTimer
+   #             }
+                country_event = { id = CG_operation.8205 } #Notification of sabotage
+            }
+        }
+        destroy_espionage_operation = from
+    }
+}
+
+# 被炸舰队! (victim) | from = instigating country; event_target:sabotaged_starbase = target
+country_event = {
+    id =  CG_operation.8205
+    title = CG_operation.8205.name
+    desc =  CG_operation.8205.desc
+
+    picture = GFX_evt_battle_nun_02
+    show_sound = event_default
+    is_triggered_only = yes
+    #location = event_target:sabotaged_starbase #TODI
+
+    trigger = {
+        exists = from
+        #exists = event_target:sabotaged_starbase
+    }
+
+    immediate = {
+        random_list = {
+            1 = { #Saboteurs caught
+                modifier = {
+                    factor = 0
+                    OR = {
+                        NOT = {
+                            any_spynetwork = {
+                                owner = { is_same_value = root }
+                                target = { is_same_value = from }
+                            }
+                        }
+                        has_country_flag = recently_received_espionage_asset
+                    }
+                }
+                modifier = {
+                    factor = 3
+                    relative_encryption_decryption = { target = from value > 0.8 }
+                    relative_encryption_decryption = { target = from value < 1.6 }
+                }
+                modifier = {
+                    factor = 10
+                    relative_encryption_decryption = { target = from value >= 1.6 }
+                }
+				modifier = {
+                    factor = 10
+                    relative_encryption_decryption = { target = from value >= 1.6 }
+                }
+				modifier={
+					factor=100
+					has_country_flag = cg_operation_always_get_caught
+
+				}
+                set_timed_country_flag = {
+                    flag = espionage_caught_saboteurs
+                    days = 20
+                }
+
+            }
+            9 = { } #Nothing
+        }
+    }
+
+    option = {
+        name =  CG_operation.8205.a
+        
+		trigger={}
+		hidden_effect={
+			if = {
+                limit = {has_country_flag =espionage_caught_saboteurs}
+				from.owner={ #trigger caught for owner
+					country_event={
+						id = CG_operation.8206
+						days = 15
+					}
+				}
+				country_event={ #trigger caught for target
+					id = CG_operation.8206
+					days = 15
+				}
+			
+					if = {
+						limit={		
+							fromfrom.spynetwork = {	
+							has_espionage_asset = asset_battlenun }
+						}
+						fromfrom.spynetwork = {
+							destroy_espionage_asset = asset_battlenun
+							create_espionage_asset = { type = asset_battlenun_rbq }
+						}
+						fromfrom.spynetwork.owner={
+							set_country_flag=add_rbq
+						}
+
+					}	
+					fromfrom.spynetwork.owner={
+						set_country_flag=add_rbq
+						}
+				
+
+
+
+			}
+
+		}
+    }
+
+
+    option = {
+		name =  CG_operation.8205.b
+		add_resource = {
+			unity  = -10000
+			energy = -10000
+		}
+		country_event = { #A Surprise Catch (asset granted)
+		id = CG_operation.8206
+		days = 15
+		}
+		from.owner={
+			country_event={
+				id = CG_operation.8206
+				days = 15
+			}
+		}
+		if = {
+			limit={		
+				fromfrom.spynetwork = {	
+				has_espionage_asset = asset_battlenun }
+			}
+			fromfrom.spynetwork = {
+				destroy_espionage_asset = asset_battlenun
+				create_espionage_asset = { type = asset_battlenun_rbq }
+				
+			}
+			
+
+		}	
+		fromfrom.spynetwork.owner={
+			set_country_flag=add_rbq
+			}
+	}
+    after = {
+     ##   remove_sabotage_starbase_flag_diplo = yes
+    }
+}
+
+# 人员被抓
+country_event = {
+    id =  CG_operation.8206
+    title = CG_operation.8206.name
+    desc =  CG_operation.8206.desc
+	immediate = {
+		if={
+		limit = {
+			has_country_flag = add_rbq
+		}
+		remove_country_flag = add_rbq
+		fromfromfrom.spynetwork = {
+			destroy_espionage_asset = asset_battlenun
+			create_espionage_asset = { type = asset_battlenun_rbq }
+		}
+		}
+	}
+
+    picture = GFX_evt_failed_nun_01
+    show_sound = event_default
+    is_triggered_only = yes
+    location = event_target:destroy_district_target_planet
+
+    # trigger = {
+    #     exists = from
+    #     exists = event_target:sabotaged_starbase
+    # }
+
+
+	option={
+		name=cg_ops
+		add_resource = {
+			energy = -5000
+		}
+
+	}
 }

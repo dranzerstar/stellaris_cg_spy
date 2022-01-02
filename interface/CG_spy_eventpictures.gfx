@@ -143,7 +143,7 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_evt_fail_fail_1"
 		texturefile = "gfx/event_pictures/fail_1.dds" 
-		##masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
 		alwaystransparent = yes
 	}
 
@@ -190,6 +190,24 @@ spriteTypes = {
 		##masking_texture = "gfx/interface/situation_log/event_mask.dds"
 		alwaystransparent = yes
 	}
+	spriteType = {
+		name = "GFX_evt_battle_tmn_01"
+		texturefile = "gfx/event_pictures/tmn_battle_01.dds" 
+		##masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_battle_tmn_02"
+		texturefile = "gfx/event_pictures/tmn_battle_02.dds" 
+		##masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_failed_tmn_01"
+		texturefile = "gfx/event_pictures/tmn_failed_01.dds" 
+		##masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
 
 	spriteType = {
 		name = "GFX_evt_intro_knight"
@@ -197,24 +215,83 @@ spriteTypes = {
 		##masking_texture = "gfx/interface/situation_log/event_mask.dds"
 		alwaystransparent = yes
 	}
-
+	spriteType = {
+		name = "GFX_evt_battle_knight_01"
+		texturefile = "gfx/event_pictures/knight_battle_01.dds" 
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_failed_knight_01"
+		texturefile = "gfx/event_pictures/knight_failed_01.dds" 
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
 	spriteType = {
 		name = "GFX_evt_intro_agent"
 		texturefile = "gfx/event_pictures/agent_reg_01.dds" 
-		##masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
 		alwaystransparent = yes
 	}
-
+	
+	spriteType = {
+		name = "GFX_evt_battle_agent_01"
+		texturefile = "gfx/event_pictures/agent_battle_01.dds" 
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_battle_agent_02"1
+		texturefile = "gfx/event_pictures/agent_battle_02.dds" 
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_failed_agent_01"
+		texturefile = "gfx/event_pictures/agent_failed_02.dds" 
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
 	spriteType = {
 		name = "GFX_evt_intro_nun"
 		texturefile = "gfx/event_pictures/nun_reg_01.dds" 
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_battle_nun_01"
+		texturefile = "gfx/event_pictures/nun_battle_01.dds" 
 		##masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_battle_nun_02"
+		texturefile = "gfx/event_pictures/nun_battle_02.dds" 
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_failed_nun_01"
+		texturefile = "gfx/event_pictures/nun_failed_01.dds" 
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
 		alwaystransparent = yes
 	}
 	spriteType = {
 		name = "GFX_evt_intro_mhsj"
 		texturefile = "gfx/event_pictures/mhsj_reg_01.dds" 
-		##masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_battle_mhsj_01"
+		texturefile = "gfx/event_pictures/mhsj_battle_01.dds" 
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_failed_mhsj_01"
+		texturefile = "gfx/event_pictures/mhsj_failed_01.dds" 
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
 		alwaystransparent = yes
 	}
 }

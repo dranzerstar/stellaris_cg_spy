@@ -99,9 +99,9 @@ CG_espionage_acquire_asset_holy = {
 	random_list = {
 		1 = {
 			modifier = {
-				factor = 0.1
+				factor = @AssetTypeWeight
 				#has_espionage_type = operation_acquire_lust_asset
-				has_espionage_asset = asset_knight 
+				NOT = { has_espionage_asset = asset_knight }
 			}
 			owner = {
 				set_country_flag = asset_knight
@@ -109,9 +109,9 @@ CG_espionage_acquire_asset_holy = {
 		}
 		1 = {
 			modifier = {
-				factor = 0.1
+				factor = @AssetTypeWeight
 				
-				has_espionage_asset = asset_kunoichi 
+				NOT = { has_espionage_asset = asset_kunoichi }
 			}
 			owner = {
 				set_country_flag = asset_kunoichi
@@ -119,9 +119,9 @@ CG_espionage_acquire_asset_holy = {
 		}
 		1 = {
 			modifier = {
-				factor =  0.1
+				factor = @AssetTypeWeight
 				#has_espionage_type = operation_acquire_lust_asset
-				has_espionage_asset = asset_battlenun 
+				NOT = { has_espionage_asset = asset_battlenun }
 			}
 			owner = {
 				set_country_flag = asset_battlenun
@@ -129,9 +129,9 @@ CG_espionage_acquire_asset_holy = {
 		}
 		1 = {
 			modifier = {
-				factor = 0.1
+				factor = @AssetTypeWeight
 				#has_espionage_type = operation_acquire_lust_asset
-				has_espionage_asset = asset_agent 
+				NOT = { has_espionage_asset = asset_agent }
 			}
 			owner = {
 				set_country_flag = asset_agent
@@ -139,9 +139,9 @@ CG_espionage_acquire_asset_holy = {
 		}
 		1 = {
 			modifier = {
-				factor = 0.1
+				factor = @AssetTypeWeight
 				#has_espionage_type = operation_acquire_lust_asset
-				has_espionage_asset = asset_mahosj 
+				NOT = { has_espionage_asset = asset_mahosj }
 			}
 			owner = {
 				set_country_flag = asset_mahosj

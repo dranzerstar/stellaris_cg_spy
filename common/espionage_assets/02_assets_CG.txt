@@ -107,11 +107,11 @@ asset_knight = {
 	passive = { spy_network_levels_add = @asset_spy_network_max_INN  }  ##TODO infiltration  mod
 	active = {
 		op_cat_holy_skill_add = @category_mod
-		op_cat_military_skill_add = @category_mod
+		op_cat_knight_skill_add = @category_mod
 	}
 	possible = {}
 	potential = {}
-	categories = { op_cat_holy op_cat_military }
+	categories = { op_cat_holy op_cat_knight }
 }
 
 asset_kunoichi = {
@@ -123,11 +123,11 @@ asset_kunoichi = {
 	passive = { spy_network_levels_add = @asset_spy_network_max }  ##TODO infiltration  mod
 	active = {
 		op_cat_holy_skill_add = @category_mod
-		op_cat_military_skill_add = @category_mod
+		op_cat_kunoichi_skill_add = @category_mod
 	}
 	possible = {}
 	potential = {}
-	categories = { op_cat_holy op_cat_military }
+	categories = { op_cat_holy op_cat_kunoichi  }
 }
 
 asset_battlenun = {
@@ -139,11 +139,11 @@ asset_battlenun = {
 	passive = { spy_network_levels_add = @asset_spy_network_max }  ##TODO infiltration  mod
 	active = {
 		op_cat_holy_skill_add = @category_mod
-		op_cat_military_skill_add = @category_mod
+		op_cat_battlenun_skill_add = @category_mod
 	}
 	possible = {}
 	potential = {}
-	categories = { op_cat_holy op_cat_diplomacy }
+	categories = { op_cat_holy op_cat_battlenun }
 }
 
 
@@ -156,11 +156,11 @@ asset_agent = {
 	passive = { spy_network_levels_add = @asset_spy_network_max }  ##TODO infiltration  mod
 	active = {
 		op_cat_holy_skill_add = @category_mod
-		op_cat_military_skill_add = @category_mod
+		op_cat_agent_skill_add = @category_mod
 	}
 	possible = {}
 	potential = {}
-	categories = { op_cat_holy op_cat_technology }
+	categories = { op_cat_holy op_cat_agent }
 }
 
 asset_mahosj = {
@@ -173,9 +173,88 @@ asset_mahosj = {
 	passive = { spy_network_levels_add = @asset_spy_network_max }  ##TODO infiltration  mod
 	active = {
 		op_cat_holy_skill_add = @category_mod
-		op_cat_military_skill_add = @category_mod
+		op_cat_mahosj_skill_add = @category_mod
 	}
 	possible = {}
 	potential = {}
-	categories = { op_cat_holy op_cat_diplomacy }
+	categories = { op_cat_holy op_cat_mahosj }
+}
+
+
+# 骑士  对魔忍   战斗修女   特工  魔法少女 rbq 版本
+asset_knight_rbq = {
+	appearance = {
+		name_generation_method = nongenerated ## TODO static potrait
+		portrait_generation_method = nongenerated
+		default_portrait = GFX_asset_knight_rbq
+	}
+	passive = {  }  ##TODO infiltration  mod
+	active = {
+
+	}
+	possible = {}
+	potential = {}
+	categories = { op_cat_ero op_cat_knight }
+}
+
+asset_kunoichi_rbq = {
+	appearance = {
+		name_generation_method = nongenerated ## TODO static potrait
+		portrait_generation_method = nongenerated
+		default_portrait = GFX_asset_tmn_rbq
+	}
+	passive = {  }  ##TODO infiltration  mod
+	active = {
+
+	}
+	possible = {}
+	potential = {}
+	categories = { op_cat_ero op_cat_kunoichi }
+}
+
+asset_battlenun_rbq = {
+	appearance = {
+		name_generation_method = nongenerated ## TODO static potrait
+		portrait_generation_method = nongenerated
+		default_portrait = GFX_asset_nun_rbq
+	}
+	passive = { }  ##TODO infiltration  mod
+	active = {
+
+	}
+	possible = {}
+	potential = {}
+	categories = { op_cat_ero op_cat_battlenun }
+}
+
+
+asset_agent_rbq = {
+	appearance = {
+		name_generation_method = nongenerated ## TODO static potrait
+		portrait_generation_method = nongenerated
+		default_portrait = GFX_asset_agent_rbq
+	}
+	passive = { }  ##TODO infiltration  mod
+	active = {
+	
+	}
+	possible = {}
+	potential = {}
+	categories = { op_cat_ero op_cat_agent }
+}
+
+asset_mahosj_rbq = {
+	appearance = {
+		name_generation_method = nongenerated ## TODO static potrait
+		portrait_generation_method = nongenerated
+		default_portrait = GFX_asset_mhsj_rbq
+
+	}
+	passive = { }  ##TODO infiltration  mod
+	active = {
+	
+	}
+	possible = {}
+	potential = {}
+	categories = { op_cat_ero op_cat_mahosj }
 }

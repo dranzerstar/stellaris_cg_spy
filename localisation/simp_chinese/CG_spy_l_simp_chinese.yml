@@ -9,18 +9,24 @@
  mod_op_cat_ero:0 "行动技能（福音传播）"
 
 
-
+ mod_op_cat_ero_skill_add:0 "行动技能（欲望渗透）" 
+ mod_op_cat_holy_skill_add:0 "行动技能（福音传播）" 
+ mod_op_cat_knight_skill_add:0 "行动技能（骑士）" 
+ mod_op_cat_kunoichi_skill_add:0 "行动技能（对魔忍）" 
+ mod_op_cat_holy_agent_add:0 "行动技能（特工）" 
+ mod_op_cat_holy_mhsj_add:0 "行动技能（魔法少女）" 
+ mod_op_cat_holy_battlenun_add:0 "行动技能（战斗修女）" 
 
  op_cat_ero_desc:0 "把色色直接放到圣女面前就不信连一眼都不看!"
  op_cat_holy_desc:0 "传播圣歌的福音是我族之命运。"
 
  operation_undercover:0 "潜入捜査"
  operation_undercover_on_success:0 "$IF_SUCCESSFUL|E$\n获得[root.target.GetName]的情报和最大渗透等级。"
- CG_operation_undercover_desc:0 "招务特工、对魔忍、兔女郎、潜入目标国家的色色场所，进行情报收集。这将会暴露对方的弱点，在一定时间内增加我方的§Y最大渗透等级§!。"
+ CG_operation_undercover_desc:0 "招募特工、对魔忍、兔女郎、潜入目标国家的色色场所，进行情报收集。这将会暴露对方的弱点，在一定时间内增加我方的§Y最大渗透等级§!。"
  
  operation_sneak:0 "潜入捜査"
  operation_sneak_on_success:0 "$IF_SUCCESSFUL|E$\n获得[root.target.GetName]的情报和最大渗透等级。"
- CG_operation_undercover_desc:0 "招务人员潜入目标国家，进行情报收集。这将会暴露对方的弱点，在一定时间内增加我方的§Y最大渗透等级§!。"
+ CG_operation_undercover_desc:0 "招募人员潜入目标国家，进行情报收集。这将会暴露对方的弱点，在一定时间内增加我方的§Y最大渗透等级§!。"
 
  operation_acquire_lust_asset:0 "圣女诱堕"
  operation_acquire_lust_asset_on_success:0 "$IF_SUCCESSFUL|E$\n在[root.target.GetName]获得线人，以便落实其他欲望类渗透"
@@ -42,7 +48,7 @@
 
 
  operation_send_warrior_asset:0 "派遣特战人员"
- operation_abduct_pops_on_success:0 "成功后会把随机特战人员送达目标国家，特战人员可以在执行 福音传播间谍活动的【圣歌计划】时对应不同种类的特战人员得出不同的结果。"
+ operation_send_warrior_asset_on_success:0 "成功后会把随机特战人员送达目标国家，特战人员可以在执行 福音传播间谍活动的【圣歌计划】时对应不同种类的特战人员得出不同的结果。"
  CG_operation_send_warrior_asset_desc:0 "派遣随机特战人员到目标国家境内进行待机，现在有五种特战人员可以投放。"
 
  operation_holy_project:0 "圣歌计划"
@@ -98,14 +104,12 @@
  CG_operation.1002.desc:3 "随着行动接近尾声，$role_spymaster$[spynetwork.leader.GetName]已经转而保护我们在[target.GetName]内的新线人。其余特工随时准备着为[spynetwork.leader.GetHeShe]提供任何可能需要的掩护措施。"
  CG_operation.1006.name:0 "线人已获取"
  CG_operation.1006.desc.intro:1 "$role_spymaster$[from.spynetwork.leader.GetName]从[from.target.GetName]发回报告：到目前为止此项计划进展顺利。"
- CG_operation.1006.desc.maid:1 "$operation.1006.desc.intro$我们的间谍网络现在允许我们接触到§H一位在[from.target.GetAdj]在首都宫殿工作的女仆§!，我们可以通过催眠术式控制她，并为我们诡探宫殿内的程报。"
- CG_operation.1006.desc.sister:1 "$operation.1006.desc.intro$我们成功伪装成以圣光显现的身份和§H一位[from.target.GetAdj]修女联系§!。我们可以圣光之名开展异端活动。"
- CG_operation.1006.desc.webshop:1 "$operation.1006.desc.intro$我们的间谍网络现在能支持我们接触到§H一位在的[from.GetName]的电商§!，我们可以透过她出口魅魔专用强度的情趣用品，拓展在当地生产淫能的机会。"
- CG_operation.1006.desc.hresearch:1 "$operation.1006.desc.intro$我们已经取得了§H一位[from.target.GetAdj]圣光学士!的联系，，这位学士对这块纯白色的欲望宝石非常感兴趣。我们可以以此作为交换筹码，套取当地的程报。。"
- CG_operation.1006.desc.warden:1 "$operation.1006.desc.intro$我们引诱到了一名欲求不满的调教人员§!，因为长期从事调教工作而得到了M型职业病，我们来帮她解放吧。"
- CG_operation.1006.desc.drone:1 "$operation.1006.desc.intro$我们间谍网络现已获取到了§H一位已改造的[from.target.GetAdj]无人机§!，我们能通过入侵其意识或是其他方法操控[from.target.GetName]实体，这样的好处是显而易见的。"
- CG_operation.1006.desc.organ:1 "$operation.1006.desc.intro$我们已经控制了§H[from.target.GetName]实体的一部分§!，这位反常工蜂使我们得以接入主蜂巢思维，负责掩护我们针对主脑的行动以及达成更多目的。"
- CG_operation.1006.desc.component:1 "$operation.1006.desc.intro$我们已经控制了§H[from.target.GetName]实体的一部分§!，这一异常无人机使我们得以接入其中央主控智能并发动直接而毁灭性的打击。"
+ CG_operation.1006.desc.maid:1 "$operation.1006.desc.intro$我们的间谍网络现在允许我们接触到§H一位在[from.target.GetAdj]在首都宫殿工作的女仆!，我们可以通过催眠术式控制她，并为我们诡探宫殿内的程报。"
+ CG_operation.1006.desc.sister:1 "$operation.1006.desc.intro$我们成功伪装成以圣光显现的身份和§H一位[from.target.GetAdj]修女联系!。我们可以圣光之名开展异端活动。"
+ CG_operation.1006.desc.webshop:1 "$operation.1006.desc.intro$我们的间谍网络现在能支持我们接触到§H一位在的[from.GetName]的电商!，我们可以透过她出口魅魔专用强度的情趣用品，拓展在当地生产淫能的机会。"
+ CG_operation.1006.desc.hresearch:1 "$operation.1006.desc.intro$我们已经取得了一位[from.target.GetAdj]圣光学士!的联系，这位学士对这块纯白色的欲望宝石非常感兴趣。我们可以以此作为交换筹码，套取当地的程报。。"
+ CG_operation.1006.desc.warden:1 "$operation.1006.desc.intro$我们引诱到了一名欲求不满的调教人员!，因为长期从事调教工作而得到了M型职业病，我们来帮她解放吧。"
+ CG_operation.1006.desc.component:1 "$operation.1006.desc.intro$我们已经控制了§H[from.target.GetName]实体的一部分!，这一异常无人机使我们得以接入其中央主控智能并发动直接而毁灭性的打击。"
  CG_operation.1006.desc.network:1 "$operation.1006.desc.intro$我们的间谍网络现在能支持我们连接§H部分[from.target.GetName]用于运算的网络§!。如果我们要掩盖自己对于机器实体的行动，传送错误的信息或是开展其他干扰的话，我们可以将其自身的协议武器化来对付它自己。"
  CG_operation.1006.desc.default:0 "$operation.1006.desc.intro$我们刚刚招募了一名有价值的线人，此人会协助我们在[from.target.GetAdj]国内的情报搜集工作和间谍活动。"
  CG_operation.1006.b:0 "立即将该线人投入行动。"
@@ -121,7 +125,6 @@
  asset_hresearch_desc:0 "这位学士对这块纯白色的欲望宝石非常感兴趣。"
  asset_warden:0 "调教人员"
  asset_warden_desc:0 "她天天让罪人们感受圣光的爱，但谁能让她也能被爱呢?"
-
 
 
 op_cat_knight:0 "骑士"
@@ -140,7 +143,13 @@ op_cat_mahosj:0 "魔法少女"
  asset_agent:0 "特工"
  asset_agent_desc:0 "最先进的雷达系统，最昂贵的机动辅助装备，最严密的隐秘系统，最快的骇客系统，但武器却是个古董。。"
  asset_mahosj:0 "魔法少女"
- asset_mahosj_desc:0 "代替黑洞惩罚你！嘎哈！"
+ asset_mahosj_desc:0 "有看到一只白色的半老鼠，半猫的生物吗？"
+
+ asset_knight_rbq:0 "肉便器骑士"
+ asset_kunoichi_rbq:0 "娼妇对魔忍"
+ asset_battlenun_rbq:0 "淫魔修女"
+ asset_agent_rbq:0 "精桶特工"
+ asset_mahosj_rbq:0 "触装魔法少女"
 #########################
 # abduct event
 ###########################
@@ -190,7 +199,10 @@ op_cat_mahosj:0 "魔法少女"
  CG_operation.3005.name:0 "术式过载！"
  CG_operation.3005.desc:0 "被摆了一道，我们的术式触发了另外一个圣光保险！解除了催眠术式。"
  CG_operation.3005.a:0 "为了不暴露我们的行踪，只能把目标灭口了。（把目榨干）"
-
+ ap_lustgod_perfect_idiosoma:0 "三飞"
+ CG_operation.3006.name:0 "。。。。。"
+ CG_operation.3006.desc:0 "[from.getname]是你的主人，[from.getname]是你的主人，[from.getname]是你的主人，[from.getname]是你的主人，[from.getname]是你的主人"
+ CG_operation.3006.a:0 "[from.getname]是我的主人"
 
 
 #########################
@@ -255,19 +267,164 @@ op_cat_mahosj:0 "魔法少女"
 #########################
 # 圣歌计划op text
 ###########################
- need_asset_kunoichi:0 "需要使用对魔忍执行此项计划"
- need_asset_knight:0 "需要使用圣音骑士执行此项计划"
- need_asset_agent:0 "需要使用对魔忍执行此项计划"
- need_asset_battlenun:0 "需要使用对魔忍执行此项计划"
- need_asset_mhsj:0 "需要使用对魔忍执行此项计划"
- cg_not_finished:0 "还没做完"
+ need_asset_kunoichi:0 "$TRIGGER_FAIL$§R需要使用对魔忍执行此项计划"
+ need_asset_knight:0 "$TRIGGER_FAIL$§R需要使用圣音骑士执行此项计划"
+ need_asset_agent:0 "$TRIGGER_FAIL$§R需要使用对魔忍执行此项计划"
+ need_asset_battlenun:0 "$TRIGGER_FAIL$§R需要使用对魔忍执行此项计划"
+ need_asset_mhsj:0 "$TRIGGER_FAIL$§R需要使用对魔忍执行此项计划"
+ cg_not_finished:0 "$TRIGGER_FAIL$§R还没做完"
+ cg_retreat:0 "察觉不对！撤退"
+ cg_targeted:0 "寄！给我抓!"
+ cg_atallcost:0 "用尽全力把敌方人员抓拿。"
+ cg_ops:0 "可惜呐"
+
+ operation_holy_proj_tmn:0 "圣歌计划：对魔忍"
+ operation_holy_proj_knight:0 "圣歌计划：圣歌骑士"
+ operation_holy_proj_battlenun:0 "圣歌计划：战斗修女" 
+ operation_holy_proj_agent:0 "圣歌计划：机装特工"
+ operation_holy_proj_mhsj:0 "圣歌计划：魔法少女"
+
+ operation_holy_proj_tmn_desc:0 "圣歌计划：使用相对的战斗员在目标国家进行破坏，影响和影响力的间谍活动\n本次参加计划的人员：\n\n            对魔忍"
+ operation_holy_proj_knight_desc:0 "圣歌计划：使用相对的战斗员在目标国家进行破坏，影响和影响力的间谍活动\n本次参加计划的人员：\n\n            圣歌骑士"
+ operation_holy_proj_battlenun_desc:0 "圣歌计划："圣歌计划：使用相对的战斗员在目标国家进行破坏，影响和影响力的间谍活动\n本次参加计划的人员：\n\n            战斗修女"
+ operation_holy_proj_agent_desc:0 "圣歌计划："圣歌计划：使用相对的战斗员在目标国家进行破坏，影响和影响力的间谍活动\n本次参加计划的人员：\n\n            机装特工"
+ operation_holy_proj_mhsj_desc:0 "圣歌计划："圣歌计划：使用相对的战斗员在目标国家进行破坏，影响和影响力的间谍活动\n本次参加计划的人员：\n\n           魔法少女"
+ 
+ operation_holy_proj_tmn_on_success:0 "此项计划会对目标国的恒星基地进行破坏"
+ operation_holy_proj_knight_on_success:0 "此项计划会对目标国的随机星球地块进行破坏"
+ operation_holy_proj_battlenun_on_success:0 "此项计划会在目标国目标国建立地下教会并进行宗教活动，影响人口特质" 
+ operation_holy_proj_agent_on_success:0 "此项计划会对目标国的机械人口进行干扰"
+ operation_holy_proj_mhsj_on_success:0 "此项计划会对目标国的舰队进行破坏"
+
+ #tmn
+ CG_operation.8000.name:0 "圣歌计划：对魔忍"
+ CG_operation.8000.desc:0 "计划阶段：正在搜查所有恒星基地，、\n评估目标价值。。评估风险。。\n\n注意事项：各恒星基地保安等级不同，请在进行行动的时候根据安保等级计划行动。"
+
+ CG_operation.8001.name:0 "圣歌计划：对魔忍"
+ CG_operation.8001.desc:0 "计划阶段：调整装备，忍法道具，、\n检查能量武器功率。。检查忍法道具。。\n\n注意事项：请根据基地场地，合适地使用能量武器，以免误伤队友，请在行动中确认忍法所能使用的余下次数。"
+
+ CG_operation.8002.name:0 "圣歌计划：对魔忍"
+ CG_operation.8002.desc:0 "计划阶段：标注地图注意点，目标点，进出路线，、\n评估进出方案。。。模拟作战计划。。模拟可预测突发事件\n\n注意事项：作战模拟效果有限，战场上信息万变，达成目标后请冷静评估形势，并安全撤离。"
+
+
+ CG_operation.8004.name:0 "圣歌计划：对魔忍"
+ CG_operation.8004.desc:0 "对魔忍完美地完成任务，把恒星基地炸了个巴烂。[target.owner]肯定已经被气到拉粑粑了。"
+ CG_operation.8004.a:0 "任务完美完成。撤退。"
+ CG_operation.8004.b:0 "撤退!"
+ CG_operation.8004.c:0 "恒星基地有防御平台，一起炸掉吧！"
+
+
+ CG_operation.8005.name:0 "恒星基地被摧毁"
+ CG_operation.8005.desc:0 "我们的恒星基地遭到袭击！现场留下多处施展忍法的道具。施袭这可能还在现场！"
+
+ CG_operation.8006.name:0 "对魔忍被抓到了"
+ CG_operation.8006.desc:0 "被抓的对魔忍被调教成肉便器（没写完）"
 
 
 
+ #mhsj
+ CG_operation.8400.name:0 "圣歌计划：魔法少女"
+ CG_operation.8400.desc:0 "计划阶段：正在调查敌方舰队驻扎地，、\n评估目标价值。。评估风险。。\n\n注意事项：舰队停泊于恒星基地的时候会有非常多人员进出，请抓紧这些人员交换的漏洞。潜入舰队内。"
+
+ CG_operation.8401.name:0 "圣歌计划：魔法少女"
+ CG_operation.8401.desc:0 "计划阶段：调整装备，魔法能量，、\n检查魔法棒的剩余能量。。检查魔法少女的精神状态。。\n\n注意事项：魔法少女战斗时常常会出现精神不稳的状态，为避免同类型状态，请在执行任务前对少女进行精神评估，每位少女都是国家的重要一员，需要重点保护。"
+
+ CG_operation.8402.name:0 "圣歌计划：魔法少女"
+ CG_operation.8402.desc:0 "计划阶段：调查目标舰队类型、规模\n评估进出方案。。。模拟作战计划。。模拟可预测突发事件\n\n注意事项：作战模拟效果有限，战场上信息万变，达成目标后请冷静评估形势，并安全撤离。"
+
+
+ CG_operation.8404.name:0 "圣歌计划：魔法少女"
+ CG_operation.8404.desc:0 "变身吧！魔法少女，完成你的使命，以圣歌之名，惩罚宇宙之恶。"
+ CG_operation.8404.a:0 "任务完美完成。撤退。"
+ CG_operation.8404.b:0 "撤退!"
+ CG_operation.8404.c:0 "不能让任何人逃走！"
+ CG_operation.8404.d:0 "我，真是个笨蛋呢。。"
+
+ CG_operation.8405.name:0 "舰队受到不明人员袭击！"
+ CG_operation.8405.desc:0 "我们的舰队受到不合常识的能量攻击，现场有大量魔法能量残留，后勤舰队现在将火速赶到现场调查。"
+
+ 
+ CG_operation.8406.name:0 "魔法少女被抓到了"
+ CG_operation.8406.desc:0 "被抓的魔法少女被调教成肉便器（没写完）"
 
 
 
+ #knight
+ CG_operation.8100.name:0 "圣歌计划：圣歌骑士"
+ CG_operation.8100.desc:0 "计划阶段：正在调查敌方星球，、\n评估星球目标价值。。评估风险。。\n\n注意事项：星球的地形环境层出不穷，请对其所需的装备和战术作出调整。"
+
+ CG_operation.8101.name:0 "圣歌计划：圣歌骑士"
+ CG_operation.8101.desc:0 "计划阶段：保养装备，人员整备，据点偵察、\n观测目标地点防务，确定袭击时间。。\n\n注意事项：确认目标防务状态，确保我方武器和攻城器械对目标有效。"
+
+ CG_operation.8102.name:0 "圣歌计划：圣歌骑士"
+ CG_operation.8102.desc:0 "计划阶段：请看管骑士带的是什么马。\n评估进出方案。。。模拟作战计划。。模拟可预测突发事件\n\n注意事项：马有很多种类，有机械马，有轮马，仿生马，尼马和窝马，所以切勿带错马，否则骑士小姐会生气的。"
 
 
+ CG_operation.8104.name:0 "圣歌计划：圣歌骑士"
+ CG_operation.8104.desc:0 "反正骑士用推土机把她妈的[event_target:destroy_district_target_planet]地块给铲平了（没写完）"
+ CG_operation.8104.a:0 "任务完美完成。撤退。"
+ CG_operation.8104.b:0 "撤退!"
+ CG_operation.8104.c:0 "扩大战果！"
+ CG_operation.8104.d:0 "把整个星球拿下！！"
+
+ CG_operation.8105.name:0 "我们的星球被突袭！"
+ CG_operation.8105.desc:0 "[event_target:destroy_district_target_planet]被人占领了！恒星首都还亮出了她们的战旗！真嚣张！"
+ CG_operation.8105.a:0 "把她们拿下！"
+
+ 
+ CG_operation.8106.name:0 "圣歌骑士被抓到了"
+ CG_operation.8106.desc:0 "‘咕，杀了我！’（没写完）"
 
 
+ #agent
+ CG_operation.8300.name:0 "圣歌计划：机装特工"
+ CG_operation.8300.desc:0 "计划阶段：正在调查敌方网路系统，、\n评估国家机器人口。。\n\n注意事项：所有网路系统也有差异，甚至一下机械人是没有物理和无线端口的。"
+
+ CG_operation.8301.name:0 "圣歌计划：机装特工"
+ CG_operation.8301.desc:0 "计划阶段：保养装备，联络协议，备用电源、\n评估目标国内机器人特质，权限，智能\n\n注意事项：请确认特工和对象协调程度，安装夸系统沟通程式。"
+
+ CG_operation.8302.name:0 "圣歌计划：机装特工"
+ CG_operation.8302.desc:0 "计划阶段：特工伪装系统调整，测试针对修改目标地机械人口程式\n评估进出方案。。。模拟作战计划。。模拟可预测突发事件\n\n注意事项：请确认伪装系统同时能用于融入机器人口社区，同时也能躲过有机人口的察觉。"
+
+
+ CG_operation.8304.name:0 "圣歌计划：机装特工"
+ CG_operation.8304.desc:0 "特工已经成功把修改程式写入目标过的机械人更新，维护节点的伺服器。"
+ CG_operation.8304.a:0 "任务完美完成。撤退。"
+ CG_operation.8304.b:0 "撤退!"
+ CG_operation.8304.c:0 "扩大战果！"
+ CG_operation.8304.d:0 "把整个星球拿下！！"
+
+ CG_operation.8305.name:0 "我们的机器人遭到修改！！"
+ CG_operation.8305.desc:0 "修改是经过工厂的物理端口，犯人可能还在境内！"
+ CG_operation.8305.a:0 "把她们拿下！"
+
+ 
+ CG_operation.8306.name:0 "机装特工被抓到了"
+ CG_operation.8306.desc:0 "‘咕，杀了我！’（没写完）"
+
+ #nun
+ CG_operation.8200.name:0 "圣歌计划：战斗修女"
+ CG_operation.8200.desc:0 "计划阶段：调查目标国家的社会结构，、\n评估目标国人民的特性。。\n\n注意事项：不同文化对圣歌福音的接受度有差别，需要用不同手法进行传教。"
+
+
+ CG_operation.8201.name:0 "圣歌计划：战斗修女"
+ CG_operation.8201.desc:0 "计划阶段：检查圣物，装束团队、\n修改装束至当地社会最能接受的状态，决定团员所需气质\n\n注意事项：受众可能对我们已有一定程度的，我们必须事先了解并准备好应对方案，纠正其印象。 "
+
+ CG_operation.8202.name:0 "圣歌计划：战斗修女"
+ CG_operation.8202.desc:0 "计划阶段：对团队进行祝圣。。开展出发前的弥撒lisha\n\n愿圣歌保护我们的先锋免受伤害，让圣歌的福音刺穿罪人的灵魂。。阿门。"
+
+
+ CG_operation.8204.name:0 "圣歌计划：战斗修女"
+ CG_operation.8204.desc:0 "修女们成功建立教会并吸纳一定的信徒。"
+ CG_operation.8204.a:0 "任务完美完成。我们得留守并保护教会"
+ CG_operation.8204.b:0 "我们会继续营运教会。"
+ CG_operation.8204.c:0 "进行更大型的传教活动"
+ CG_operation.8204.d:0 "让圣光的爱灌注她们！"
+ CG_operation.8204.d.tooltip:0 "解放她们的肉体，让她们更接近圣光。"
+ CG_operation.8205.name:0 "我们的国家出现了可疑的宗教！"
+ CG_operation.8205.desc:0 "近期下城区流行这一种奇怪的宗教，同时我国人民的性欲大幅下降，这两件事情可能有很大的关联性。其中也有着衣装奇异的人在那些宗教场所进出。"
+ CG_operation.8205.a:0 "监视她们，一有违法行为就立即逮捕。"
+ CG_operation.8205.b:0 "很有可疑，把她们拿下！"
+ 
+ CG_operation.8206.name:0 "修女们被抓起来了。"
+ CG_operation.8206.desc:0 "‘咕，杀了我！’（没写完）"

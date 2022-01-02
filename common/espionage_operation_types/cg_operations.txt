@@ -202,7 +202,7 @@ operation_acquire_lust_asset = {
 	picture = GFX_evt_recruit_bunny
 	desc = CG_operation_acquire_lust_asset_desc
 	stages = 3
-	potential = { owner = {has_country_flag = carnalism_flag}}
+	potential = { owner = {has_country_flag = carnalism_flag} }
 	resources = {
 		category = operations
 		cost = {
@@ -214,13 +214,15 @@ operation_acquire_lust_asset = {
 	}
 
 	spy_power_cost = 30
-	#potential = { has_nemesis = yes }
+	
 	allow = {
+		target = {has_country_flag = asceticism_flag}
 		AND ={
 		custom_tooltip = {
 			is_running_espionage_operation = no
 					fail_text = operation_one_at_a_time
 			}
+
 		
 		}
 		
@@ -264,7 +266,7 @@ operation_acquire_lust_asset = {
 operation_send_warrior_asset = {
 	target = none
 	categories = { op_cat_holy op_cat_government }
-	picture = GFX_evt_recruit_bunny
+	picture = GFX_evt_spymaster_01
 	desc = CG_operation_send_warrior_asset_desc
 	stages = 3
 	potential = { owner = {has_country_flag = asceticism_flag}
@@ -308,7 +310,7 @@ operation_send_warrior_asset = {
 		event = CG_operation.9002
 	}
 	on_roll_failed = {
-		# standard_espionage_operation_on_roll_failed = { RANDOM_EVENTS = CG_operation_MM_failed_random_events }
+		 standard_espionage_operation_on_roll_failed = { RANDOM_EVENTS = CG_operation_failed_random_events_low }
 		 #RANDOM_EVENTS = CG_operation_MM_failed_random_events }
 
 	}
@@ -355,6 +357,7 @@ operation_abduct_pops = {
 	# 				}
 	# }
 	allow = {
+		target = {has_country_flag = asceticism_flag}
 		custom_tooltip = {
 			fail_text = operation_abduct_pops_recent
 			owner = {
@@ -438,6 +441,7 @@ operation_hypno = {
 
 
 	allow = {
+		target = {has_country_flag = asceticism_flag}
 		custom_tooltip = {
 			is_running_espionage_operation = no
 			fail_text = operation_one_at_a_time
@@ -596,7 +600,9 @@ operation_expel_corp= {
 
 	spy_power_cost = 35
 	
-	potential = {owner={has_country_flag = asceticism_flag}}
+	potential = {owner={has_country_flag = asceticism_flag}
+				target= {has_country_flag = carnalism_flag}
+	}
 	allow = {
 		custom_tooltip = {
 			owner = {
@@ -634,12 +640,12 @@ operation_expel_corp= {
 }
 
 
-
+#炸基地
 
 operation_holy_proj_tmn = {
 	categories = { op_cat_holy op_cat_kunoichi }
 	picture = GFX_evt_space_station
-	desc = operation_sabotage_starbase_desc
+	desc =   operation_holy_proj_tmn_desc
 	stages = 3
 
 	resources = {
@@ -671,7 +677,8 @@ operation_holy_proj_tmn = {
 			#years_passed < 0
 			target = {
 				any_owned_starbase = {
-
+					count_starbase_modules = { type = shipyard count > 0 } #至少拆一个
+					#has_nonshipyard_starbase_buildings = yes
 				}
 				
 			}
@@ -685,6 +692,7 @@ operation_holy_proj_tmn = {
 			fail_text=need_asset_kunoichi
 		}
 	}
+	
 	target_allow = {
 		custom_tooltip = {
 			fail_text = operation_sabotage_starbase_no_targets
@@ -697,17 +705,17 @@ operation_holy_proj_tmn = {
 	stage = {
 		difficulty = @diff_t5
 		icon = GFX_espionage_chapter_icon_motion
-		event = operation.2000
+		event = CG_operation.8000
 	}
 	stage = {
 		difficulty = @diff_t5
 		icon = GFX_espionage_chapter_icon_target
-		event = operation.2001
+		event = CG_operation.8001
 	}
 	stage = {
 		difficulty = @diff_t5
 		icon = GFX_espionage_chapter_icon_success
-		event = operation.2002
+		event = CG_operation.8002
 	}
 	on_roll_failed = {
 		standard_espionage_operation_on_roll_failed = { RANDOM_EVENTS = operation_random_events_sabotage_targeted } #Requires a bespoke set of trigger scopes given 'target' is not a country
@@ -723,12 +731,12 @@ operation_holy_proj_tmn = {
 }
 
 
-
+#炸星球地块
 
 operation_holy_proj_knight = {
 	categories = { op_cat_holy op_cat_knight }
-	picture = GFX_evt_space_station
-	desc = operation_sabotage_starbase_desc
+	picture = GFX_evt_intro_knight
+	desc =  operation_holy_proj_knight_desc
 	stages = 3
 
 	resources = {
@@ -742,8 +750,8 @@ operation_holy_proj_knight = {
 	}
 
 	spy_power_cost = 50
-	target = planet
-
+	
+	
 	potential = { has_nemesis = yes
 					custom_tooltip = {
 					has_espionage_asset = asset_knight 
@@ -753,11 +761,7 @@ operation_holy_proj_knight = {
 	}
 
 	allow = {
-		custom_tooltip = {
-			fail_text=cg_not_finished
-			years_passed < 0
 
-		}
 		custom_tooltip = {
 			has_espionage_asset = asset_knight 
 			fail_text=need_asset_knight
@@ -774,17 +778,17 @@ operation_holy_proj_knight = {
 	stage = {
 		difficulty = @diff_t5
 		icon = GFX_espionage_chapter_icon_motion
-		event = operation.2000
+		event = CG_operation.8100
 	}
 	stage = {
 		difficulty = @diff_t5
 		icon = GFX_espionage_chapter_icon_target
-		event = operation.2001
+		event = CG_operation.8101
 	}
 	stage = {
 		difficulty = @diff_t5
 		icon = GFX_espionage_chapter_icon_success
-		event = operation.2002
+		event = CG_operation.8102
 	}
 	on_roll_failed = {
 		standard_espionage_operation_on_roll_failed = { RANDOM_EVENTS = operation_random_events_sabotage_targeted } #Requires a bespoke set of trigger scopes given 'target' is not a country
@@ -799,11 +803,11 @@ operation_holy_proj_knight = {
 	}
 }
 
-
+#加星球特性，加地下教会岗位，改造人口
 operation_holy_proj_battlenun = {
 	categories = { op_cat_holy op_cat_battlenun }
-	picture = GFX_evt_space_station
-	desc = operation_sabotage_starbase_desc
+	picture = GFX_evt_intro_nun
+	desc =  operation_holy_proj_battlenun_desc
 	stages = 3
 
 	resources = {
@@ -817,7 +821,7 @@ operation_holy_proj_battlenun = {
 	}
 
 	spy_power_cost = 50
-	target = planet
+
 
 	potential = { has_nemesis = yes
 					custom_tooltip = {
@@ -828,11 +832,7 @@ operation_holy_proj_battlenun = {
 	}
 
 	allow = {
-		custom_tooltip = {
-			fail_text=cg_not_finished
-			years_passed < 0
 
-		}
 		custom_tooltip = {
 			has_espionage_asset = asset_battlenun 
 			fail_text=need_asset_battlenun
@@ -849,17 +849,17 @@ operation_holy_proj_battlenun = {
 	stage = {
 		difficulty = @diff_t5
 		icon = GFX_espionage_chapter_icon_motion
-		event = operation.2000
+		event = CG_operation.8200
 	}
 	stage = {
 		difficulty = @diff_t5
 		icon = GFX_espionage_chapter_icon_target
-		event = operation.2001
+		event = CG_operation.8201
 	}
 	stage = {
 		difficulty = @diff_t5
 		icon = GFX_espionage_chapter_icon_success
-		event = operation.2002
+		event = CG_operation.8202
 	}
 	on_roll_failed = {
 		standard_espionage_operation_on_roll_failed = { RANDOM_EVENTS = operation_random_events_sabotage_targeted } #Requires a bespoke set of trigger scopes given 'target' is not a country
@@ -874,10 +874,11 @@ operation_holy_proj_battlenun = {
 	}
 }
 
+#降低机器人效率
 operation_holy_proj_agent = {
 	categories = { op_cat_holy op_cat_agent }
-	picture = GFX_evt_space_station
-	desc = operation_sabotage_starbase_desc
+	picture = GFX_evt_intro_agent
+	desc = operation_holy_proj_agent_desc
 	stages = 3
 
 	resources = {
@@ -891,8 +892,7 @@ operation_holy_proj_agent = {
 	}
 
 	spy_power_cost = 50
-	target = planet
-
+	
 	potential = {  has_nemesis = yes
 					custom_tooltip = {
 					has_espionage_asset = asset_agent
@@ -902,11 +902,7 @@ operation_holy_proj_agent = {
 	}
 
 	allow = {
-		custom_tooltip = {
-			fail_text=cg_not_finished
-			years_passed < 0
 
-		}
 		custom_tooltip = {
 			has_espionage_asset = asset_agent
 			fail_text=need_asset_agent
@@ -923,17 +919,17 @@ operation_holy_proj_agent = {
 	stage = {
 		difficulty = @diff_t5
 		icon = GFX_espionage_chapter_icon_motion
-		event = operation.2000
+		event = CG_operation.8300
 	}
 	stage = {
 		difficulty = @diff_t5
 		icon = GFX_espionage_chapter_icon_target
-		event = operation.2001
+		event = CG_operation.8301
 	}
 	stage = {
 		difficulty = @diff_t5
 		icon = GFX_espionage_chapter_icon_success
-		event = operation.2002
+		event = CG_operation.8302
 	}
 	on_roll_failed = {
 		standard_espionage_operation_on_roll_failed = { RANDOM_EVENTS = operation_random_events_sabotage_targeted } #Requires a bespoke set of trigger scopes given 'target' is not a country
@@ -948,10 +944,11 @@ operation_holy_proj_agent = {
 	}
 }
 
+#炸舰队
 operation_holy_proj_mhsj = {
 	categories = { op_cat_holy op_cat_mahosj }
-	picture = GFX_evt_space_station
-	desc = operation_sabotage_starbase_desc
+	picture = GFX_evt_intro_mhsj
+	desc =   operation_holy_proj_mhsj_desc
 	stages = 3
 
 	resources = {
@@ -965,8 +962,8 @@ operation_holy_proj_mhsj = {
 	}
 
 	spy_power_cost = 50
-	target = planet
-
+	
+	#target=country
 	potential = {  has_nemesis = yes
 					custom_tooltip = {
 					has_espionage_asset = asset_mahosj
@@ -976,11 +973,7 @@ operation_holy_proj_mhsj = {
 	}
 
 	allow = {
-		custom_tooltip = {
-			fail_text=cg_not_finished
-			years_passed < 0
 
-		}
 		custom_tooltip = {
 			has_espionage_asset = asset_mahosj
 			fail_text=need_asset_mhsj
@@ -997,17 +990,17 @@ operation_holy_proj_mhsj = {
 	stage = {
 		difficulty = @diff_t5
 		icon = GFX_espionage_chapter_icon_motion
-		event = operation.2000
+		event = CG_operation.8400
 	}
 	stage = {
 		difficulty = @diff_t5
 		icon = GFX_espionage_chapter_icon_target
-		event = operation.2001
+		event = CG_operation.8401
 	}
 	stage = {
 		difficulty = @diff_t5
 		icon = GFX_espionage_chapter_icon_success
-		event = operation.2002
+		event = CG_operation.8402
 	}
 	on_roll_failed = {
 		standard_espionage_operation_on_roll_failed = { RANDOM_EVENTS = operation_random_events_sabotage_targeted } #Requires a bespoke set of trigger scopes given 'target' is not a country
