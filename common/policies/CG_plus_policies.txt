@@ -1,0 +1,317 @@
+
+##
+#做完大概会有这么 7个选项的新政策 ，效果会和娇艳绝色的相关，
+#会有附带事件
+#和恒星会议决议，全宇宙的政策标准，和违法事件和制裁决议
+#
+#
+#
+#building_beauty_college:0 "绝色学院"
+#building_beauty_college_desc:0 "送来的各式各样的美人，经过多个课程，百里挑一，留下了极品中的极品，才能称作娇艳绝色！"
+#building_heaven_college:0 "天堂学园"
+#building_heaven_college_desc:0 "这座坐落在天堂般的环境中的综合性教导学园，只有那些秘密筛选过，从一出生就经过各种严苛检验的美人才会被送到这里。最顶级的资源倾斜加上宛如天堂的环境，确保了没有缺陷的极品佳人极高的产出率。\n\n§R对环境的要求及其严苛,仅能在极少数特殊地块上建造!§!"
+# tech_beauty_theory
+#  ####职业类别####
+#  planet_beauty:0"美学职业"
+#  tech_beauty_theory:0"美丽学说"
+#  tech_beauty_theory_desc:0"美是一种能引起人们美感的客观事物共同的本质属性，美的定义、感觉、形态及审美等问题的认识、判断、应用的研究，为美学。"
+#  planet_master:0"调教师职业"
+
+#绝色/天堂学院校服标准
+# 修道女服 nun_uniform
+# 公主礼装 princess_uniform
+# 群星军服 army_uniform
+# 衬衣中裙 school_uniform
+# 短水手服 sailorfuku_uniform
+# 绝兔女郎 bunny_uniform
+# 微比坚尼 microbikini_uniform
+
+# has_global_flag <-恒星会议规范
+# is_active_resolution <- 恒星会议规范
+CG_school_uniform = {
+	potential = {
+		#has_technology = tech_beauty_theory  # 美丽学说 后开放
+		has_DC_framework_trait = yes
+		
+	}
+	allow = {
+		#has_technology = tech_beauty_theory 
+	}
+	#修道女服
+	option = {
+		name = "nun_uniform"		#修道女服
+		policy_flags = {
+			nun_uniform
+		}
+		potential = {
+			always = yes
+		}
+		valid = {
+				#has_country_flag = asceticism_flag	
+				OR={
+				and={
+					has_trait = trait_DC_ethic_asceticism	
+					has_technology = tech_beauty_theory 
+					}
+				is_active_resolution = "resolution_uniform_nun"
+				}
+		}
+		modifier = {
+			CG_plus_mod_uniform_nun_uniform = 1
+		}
+
+		AI_weight = {
+			modifier = {
+				add = 10
+				has_country_flag = asceticism_flag
+			}
+			modifier = {
+				add = 20
+				is_active_resolution = "resolution_uniform_nun"
+			}
+			modifier = {
+				add=100
+				has_technology = tech_beauty_theory 
+			}
+		}
+	}
+	#公主礼装
+	option = {
+		name = "princess_uniform"		#公主礼装
+		policy_flags = {
+			princess_uniform
+		}
+		potential = {
+			always = yes
+		}
+		valid = {
+			#has_country_flag = asceticism_flag	
+			OR={
+				and={
+					has_trait = trait_DC_ethic_asceticism	
+					has_technology = tech_beauty_theory 
+					}
+				is_active_resolution = "resolution_uniform_princess"
+				}
+		}
+		modifier = {
+			CG_plus_mod_uniform_princess_uniform = 1
+		}
+		AI_weight = {
+			modifier = {
+				add = 10
+				has_country_flag = asceticism_flag
+			}
+			modifier = {
+				add = 20
+				is_active_resolution = "resolution_uniform_princess"
+			}
+			modifier = {
+				add=100
+				has_technology = tech_beauty_theory 
+			}
+			modifier = {
+				factor = 20
+				is_spiritualist  = yes
+			}	
+		}
+
+	}
+	#群星军服
+	option = {
+		name = "army_uniform"		
+		policy_flags = {
+			army_uniform
+		}
+		potential = {
+			always = yes
+		}
+		valid = {
+			#has_country_flag = asceticism_flag	
+			OR={
+				and={
+					has_trait = trait_DC_ethic_asceticism	
+					has_technology = tech_beauty_theory 
+					}
+				is_active_resolution = "resolution_uniform_army"
+				}
+		}
+		modifier = {
+			CG_plus_mod_uniform_army_uniform = 1
+		}
+		AI_weight = {
+			weight =10
+			modifier = {
+				add = 10
+				has_country_flag = asceticism_flag
+			}
+			modifier={
+				add = 20
+				is_active_resolution = "resolution_uniform_army"
+			}
+			modifier = {
+				add = 100
+				has_technology = tech_beauty_theory 
+			}
+			modifier = {
+				factor = 20
+				is_militarist = yes
+			}	
+		}
+
+	}
+	#m默认制服选项
+	option = {   #m默认选项
+		name = "school_uniform"		
+		policy_flags = {
+			school_uniform
+		}
+		modifier = {
+			CG_plus_mod_uniform_school_uniform = 1
+		}
+		valid = {
+			OR={
+			has_country_flag = asceticism_flag  #圣女系 
+			has_country_flag = carnalism_flag   #魅魔系
+			}
+		}
+		AI_weight = {
+			modifier = {
+				add = 100  ## 默认
+				OR = {
+					has_country_flag = asceticism_flag  #圣女系 
+					has_country_flag = carnalism_flag   #魅魔系
+				}
+			}
+			modifier = {
+				add=-100
+				has_technology = tech_beauty_theory 
+			}
+		}
+	}
+	#短水手服
+	option = {
+		name = "sailorfuku_uniform"		
+		policy_flags = {
+			sailorfuku_uniform
+		}
+		potential = {
+			always = yes
+		}
+		valid = {
+				#has_country_flag = carnalism_flag	
+				OR={
+				and={
+					has_trait = trait_DC_ethic_carnalism	
+					has_technology = tech_beauty_theory 
+					}
+				is_active_resolution = "resolution_uniform_sailorfuku"
+				}
+		}
+		modifier = {
+			CG_plus_mod_uniform_sailorfuku_uniform = 1
+		}
+		AI_weight = {
+			modifier = {
+				add = 10
+				has_country_flag = carnalism_flag
+			}
+			modifier = {
+				add=20
+				is_active_resolution = "resolution_uniform_sailorfuku"
+			}
+			modifier = {
+				add=100
+				has_technology = tech_beauty_theory 
+			}
+		}
+	}
+	#绝兔女郎
+	option = {
+		name = "bunny_uniform"		#情趣内衣
+		policy_flags = {
+			bunny_uniform
+		}
+		potential = {
+			always = yes
+		}
+		valid = {
+			OR={
+			and={
+				has_trait = trait_DC_ethic_carnalism	
+				has_technology = tech_beauty_theory 
+				}
+			is_active_resolution = "resolution_uniform_bunny"
+			}
+		}
+	
+		modifier = {
+			CG_plus_mod_uniform_bunny_uniform = 1
+		}		
+		AI_weight = {
+			modifier = {
+				add = 10
+				has_country_flag = carnalism_flag
+			}
+			modifier = {
+				add = 20
+				is_active_resolution = "resolution_uniform_bunny"
+			}			
+			modifier = {
+				add=100
+				has_technology = tech_beauty_theory 
+			}
+		}
+
+	}
+	# 微比坚尼
+	option = {
+		name = "microbikini_uniform"		
+		policy_flags = {
+			microbikini_uniform
+		}
+		potential = {
+			always = yes
+		}
+		valid = {
+			OR={
+			and={
+				has_trait = trait_DC_ethic_carnalism	
+				has_technology = tech_beauty_theory 
+				}
+			is_active_resolution = "resolution_uniform_microbikini"
+			}
+		}
+		modifier = {
+			CG_plus_mod_uniform_microbikini_uniform = 1
+		}
+		AI_weight = {
+			modifier = {
+				factor = 10
+				has_country_flag = carnalism_flag
+			}
+			modifier = {
+				factor = 20
+				is_active_resolution = "resolution_uniform_microbikini"
+			}	
+			modifier = {
+				factor = 20
+				is_authoritarian = yes
+			}						
+			modifier = {
+				factor=100
+				has_technology = tech_beauty_theory 
+			}
+		}
+
+	}
+
+
+
+
+
+
+
+}
+
+

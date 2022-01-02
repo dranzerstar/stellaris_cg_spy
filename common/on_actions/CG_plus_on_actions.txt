@@ -1,0 +1,25 @@
+on_tech_increased ={
+
+	events = {
+		CG_plus_policy_uniform.0001 #学园研究完成
+	}
+
+	
+}
+
+on_five_year_pulse = {
+	events = {
+
+	}
+}
+
+
+
+on_decade_pulse_country  = {
+
+	events = {
+		
+		CG_plus_policy_uniform.1000 #学园派送函数
+		}
+	
+}

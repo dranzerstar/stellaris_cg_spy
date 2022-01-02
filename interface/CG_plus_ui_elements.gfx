@@ -1,0 +1,158 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_cg_dialogue_window_bg"
+		texturefile = "gfx/interface/cg_dialogue/bg.dds"
+	}
+	spriteType = {
+		name = "GFX_cg_dialogue_window_bg_new"
+		texturefile = "gfx/interface/cg_dialogue/bg_new.dds"
+	}
+	spriteType = {
+		name = "GFX_evt_menu_bg_L"
+		texturefile = "gfx/interface/bg_L.dds"
+	}	
+	spriteType = {
+		name = "GFX_evt_menu_bg_P"
+		texturefile = "gfx/interface/bg_P.dds"
+	}
+	spriteType = {
+		name = "GFX_cg_dialogue_above_elements"
+		texturefile = "gfx/interface/cg_dialogue/cg_dialogue_above_elements.png"
+		alwaysTransparent = yes
+	}
+	spriteType = {
+		name = "GFX_cg_dialogue_above_elements_new"
+		texturefile = "gfx/interface/cg_dialogue/cg_dialogue_above_elements_new.dds"
+	}
+	spriteType = {
+		name = "GFX_cg_dialogue_above_elements_no_option"
+		texturefile = "gfx/interface/cg_dialogue/cg_dialogue_above_elements_no_option.dds"
+	}
+	# title
+	spriteType = {
+		name = "GFX_cg_dialogue_title_kdc_distant_star"
+		texturefile = "gfx/interface/cg_dialogue/icon_title/kdc_distant_star.dds"
+		alwaysTransparent = yes
+	}
+	# bg
+	spriteType = {
+		name = "GFX_cg_dialogue_bg_mumu"
+		texturefile = "gfx/interface/cg_dialogue/bg/mumu_bg.dds"
+		masking_texture = "gfx/interface/cg_dialogue/gal_bg_mask.dds"
+		alwaysTransparent = yes
+	}
+
+
+
+
+	# 按钮
+	spriteType = {
+		name = "GFX_cg_dialogue_button_log"
+		texturefile = "gfx/interface/cg_dialogue/button_log.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+		noOfFrames = 3
+	}
+	spriteType = {
+		name = "GFX_cg_dialogue_button_skip"
+		texturefile = "gfx/interface/cg_dialogue/button_skip.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+		noOfFrames = 3
+	}
+	spriteType = {
+		name = "GFX_cg_dialogue_click_any_option"
+		texturefile = "gfx/interface/cg_dialogue/click_any_option.dds"
+		# masking_texture = "gfx/interface/cg_dialogue/click_any_option_mask.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+		noOfFrames = 3
+	}
+	spriteType = {
+		name = "GFX_cg_dialogue_button_460_56"
+		texturefile = "gfx/interface/cg_dialogue/cg_button_460.png"
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+		noOfFrames = 3
+		animation = {
+			animationmaskfile = "gfx/interface/cg_dialogue/cg_button_460_animation_mask.dds"
+			animationtexturefile = "gfx/interface/cg_dialogue/cg_button_460_animated_texture.dds"
+			animationrotation = 180
+			animationlooping = yes
+			animationtime = 40
+			animationdelay = 0
+			animationblendmode = "overlay"			#add, multiply, overlay
+			animationtype = "scrolling"			#scrolling, rotating, pulsing
+			animationrotationoffset = {
+				x = 0
+				y = 0
+			}
+			animationtexturescale = {
+				x = 1
+				y = 1
+			}
+			animationframes = {
+				1
+				2
+				3
+			}
+		}
+	}
+	spriteType = {
+		name = "GFX_cg_dialogue_button_460_56_new"
+		texturefile = "gfx/interface/cg_dialogue/cg_button_460_new.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+		noOfFrames = 3
+		animation = {
+			animationmaskfile = "gfx/interface/cg_dialogue/cg_button_460_animation_mask.dds"
+			animationtexturefile = "gfx/interface/cg_dialogue/cg_button_460_animated_texture.dds"
+			animationrotation = 50
+			animationlooping = yes
+			animationtime = 40
+			animationdelay = 0
+			animationblendmode = "overlay"			#add, multiply, overlay
+			animationtype = "scrolling"			#scrolling, rotating, pulsing
+			animationrotationoffset = {
+				x = 0
+				y = 0
+			}
+			animationtexturescale = {
+				x = 1
+				y = 1
+			}
+			animationframes = {
+				1
+				2
+				3
+			}
+		}
+	}
+
+
+spriteType = {
+	name = "GFX_cg_plus_evt_menu_L_button"
+	texturefile = "gfx/interface/bg_L_button.dds"
+	effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+	noOfFrames = 3
+	animation = {
+		animationmaskfile = "gfx/interface/cg_button_460_animation_mask.dds"
+		animationtexturefile = "gfx/interface/cg_button_460_animated_texture.dds"
+		animationrotation = 50
+		animationlooping = yes
+		animationtime = 40
+		animationdelay = 0
+		animationblendmode = "overlay"			#add, multiply, overlay
+		animationtype = "scrolling"			#scrolling, rotating, pulsing
+		animationrotationoffset = {
+			x = 0
+			y = 0
+		}
+		animationtexturescale = {
+			x = 1
+			y = 1
+		}
+		animationframes = {
+			1
+			2
+			3
+		}
+	}
+	}
+
+}

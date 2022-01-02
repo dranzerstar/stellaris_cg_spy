@@ -1,0 +1,256 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_evt_college_light_01"
+		texturefile = "gfx/event_pictures/castle_light_01.dds" 
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_college_dark_01"
+		texturefile = "gfx/event_pictures/castle_dark_01.dds" 
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_evt_uniform_nun_01"
+		texturefile = "gfx/event_pictures/castle_dark_01.dds" 
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_evt_uniform_princess_01"
+		texturefile = "gfx/event_pictures/castle_dark_01.dds" 
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_evt_uniform_army_01"
+		texturefile = "gfx/event_pictures/castle_dark_01.dds" 
+		
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_uniform_school_01"
+		texturefile = "gfx/event_pictures/castle_dark_01.dds" 
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_uniform_sailorfuku_L_01"
+		texturefile = "gfx/event_pictures/uniform_daily/sailr_L_01.dds" 
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_uniform_sailorfuku_P_01"
+		texturefile = "gfx/event_pictures/uniform_daily/sailr_P_01.dds" 
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_uniform_sailorfuku_P_02"
+		texturefile = "gfx/event_pictures/uniform_daily/sailr_P_02.dds" 
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_uniform_bunny_01"
+		texturefile = "gfx/event_pictures/castle_dark_01.dds" 
+		alwaystransparent = yes
+	}
+
+
+
+
+
+	spriteType = {
+		name = "GFX_evt_uniform_microbikini_01"
+		texturefile = "gfx/event_pictures/castle_dark_01.dds" 
+		alwaystransparent = yes
+	}
+
+
+	spriteType = {
+		name = "GFX_evt_uniform_active_nun_L_01"
+		texturefile = "gfx/event_pictures/uniform_daily/nun_L_active.dds" 
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_evt_uniform_active_princess_L_01"
+		texturefile = "gfx/event_pictures/uniform_daily/princess_L_active.dds" 
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_evt_uniform_active_army_L_01"
+		texturefile = "gfx/event_pictures/uniform_daily/army_L_active.dds" 
+		
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_uniform_active_sailorfuku_L_01"
+		texturefile = "gfx/event_pictures/uniform_daily/sailr_L_active.dds" 
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_uniform_active_bunny_L_01"
+		texturefile = "gfx/event_pictures/uniform_daily/bunny_L_active.dds" 
+		alwaystransparent = yes
+	}
+
+
+	#############################################################
+	spriteType = {
+		name = "GFX_evt_uniform_active_microbikini_L_01"
+		texturefile = "gfx/event_pictures/uniform_daily/micro_L_active.dds" 
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_evt_uniform_microbikini_P_01"
+		texturefile = "gfx/event_pictures/uniform_daily/micro_P_01.dds" 
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_evt_uniform_microbikini_P_02"
+		texturefile = "gfx/event_pictures/uniform_daily/micro_P_02.dds" 
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_evt_uniform_microbikini_P_03"
+		texturefile = "gfx/event_pictures/uniform_daily/micro_P_03.dds" 
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_evt_uniform_bunny_P_01"
+		texturefile = "gfx/event_pictures/uniform_daily/bunny_P_01.dds" 
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_evt_uniform_bunny_P_02"
+		texturefile = "gfx/event_pictures/uniform_daily/bunny_P_02.dds" 
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_uniform_bunny_P_03"
+		texturefile = "gfx/event_pictures/uniform_daily/bunny_P_03.dds" 
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_uniform_bunny_P_04"
+		texturefile = "gfx/event_pictures/uniform_daily/bunny_P_04.dds" 
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_uniform_bunny_P_041"
+		texturefile = "gfx/event_pictures/uniform_daily/bunny_P_041.dds" 
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_uniform_bunny_P_042"
+		texturefile = "gfx/event_pictures/uniform_daily/bunny_P_042.dds" 
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_uniform_bunny_P_05"
+		texturefile = "gfx/event_pictures/uniform_daily/bunny_P_05.dds" 
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_uniform_bunny_P_06"
+		texturefile = "gfx/event_pictures/uniform_daily/bunny_P_06.dds" 
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_uniform_bunny_1602bb"
+		texturefile = "gfx/event_pictures/uniform_daily/bunny_small_01.dds" 
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_uniform_bunny_1602ab"
+		texturefile = "gfx/event_pictures/uniform_daily/bunny_small_02.dds" 
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_uniform_bunny_1602ba"
+		texturefile = "gfx/event_pictures/uniform_daily/bunny_small_03.dds" 
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_uniform_princess_P_03"
+		texturefile = "gfx/event_pictures/uniform_daily/princess_P_03.dds" 
+		alwaystransparent = yes
+	}
+
+
+	spriteType = {
+		name = "GFX_evt_uniform_army_L_01"
+		texturefile = "gfx/event_pictures/uniform_daily/army_L_01.dds" 
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_evt_uniform_army_L_02"
+		texturefile = "gfx/event_pictures/uniform_daily/army_L_02.dds" 
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_evt_uniform_army_P_01"
+		texturefile = "gfx/event_pictures/uniform_daily/army_P_01.dds" 
+		alwaystransparent = yes
+	}	
+
+	spriteType = {
+		name = "GFX_evt_uniform_nun_P_01"
+		texturefile = "gfx/event_pictures/uniform_daily/nun_P_01.dds" 
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_evt_uniform_nun_P_02"
+		texturefile = "gfx/event_pictures/uniform_daily/nun_P_02.dds" 
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_evt_uniform_nun_P_03"
+		texturefile = "gfx/event_pictures/uniform_daily/nun_P_03.dds" 
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_evt_uniform_princess_L_01"
+		texturefile = "gfx/event_pictures/uniform_daily/princess_L_01.dds" 
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_uniform_princess_small_01"
+		texturefile = "gfx/event_pictures/uniform_daily/princess_small_01.dds" 
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_uniform_princess_L_02"
+		texturefile = "gfx/event_pictures/uniform_daily/princess_L_02.dds" 
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_evt_uniform_princess_P_03"
+		texturefile = "gfx/event_pictures/uniform_daily/princess_P_03.dds" 
+		alwaystransparent = yes
+	}
+
+
+
+
+
+
+}

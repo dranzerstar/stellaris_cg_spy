@@ -1,0 +1,53 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_asset_mhsj"
+		texturefile = "gfx\interface\espionage\mhsj.dds" 
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_asset_agent"
+		texturefile = "gfx/interface/espionage/agent.dds" 
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_asset_knight"
+		texturefile = "gfx/interface/espionage/knight.dds" 
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_asset_nun"
+		texturefile = "gfx/interface/espionage/nun.dds" 
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_asset_tmn"
+		texturefile = "gfx/interface/espionage/tmn.dds" 
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_asset_mhsj_rbq"
+		texturefile = "gfx\interface\espionage\mhsj_r.dds" 
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_asset_agent_rbq"
+		texturefile = "gfx/interface/espionage/agent_r.dds" 
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_asset_knight_rbq"
+		texturefile = "gfx/interface/espionage/knight_r.dds" 
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_asset_nun_rbq"
+		texturefile = "gfx/interface/espionage/nun_r.dds" 
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_asset_tmn_rbq"
+		texturefile = "gfx/interface/espionage/tmn.dds" 
+		alwaystransparent = yes
+	}
+
+}

@@ -1,0 +1,72 @@
+# Example Resolution Cateogry
+# NOTE: Resolution types specified here need to exist in the type database!
+#example_category = {
+#	group = none			# determines how the categories are grouped in the UI
+#	icon = "key"			# sets icon in the dropdown menu
+#	resolution_types = {
+#		"resolution_type_1"
+#		"resolution_type_2"
+#		"resolution_type_3"
+#	}
+#}
+resolution_category_beauty_college = {
+	group = beauty_college
+	icon = "GFX_resolution_category_college"
+	resolution_types = {
+		"resolution_category_college_joint"
+		"resolution_category_repel_college_joint"
+	}
+}
+resolution_category_uniform_nun = {
+	group = beauty_college
+	icon = "GFX_resolution_category_nun"
+	resolution_types = {
+		"resolution_uniform_nun"
+	}
+}
+resolution_category_uniform_princess = {
+	group = beauty_college
+	icon = "GFX_resolution_category_princess"
+	resolution_types = {
+		"resolution_uniform_princess"
+	}
+}
+resolution_category_uniform_army = {
+	group = beauty_college
+	icon = "GFX_resolution_category_army"
+	resolution_types = {
+		"resolution_uniform_army"
+	}
+}
+resolution_category_uniform_sailorfuku = {
+	group = beauty_college
+	icon = "GFX_resolution_category_college"
+	resolution_types = {
+		"resolution_uniform_sailorfuku"
+	}
+}
+resolution_category_uniform_bunny = {
+	group = beauty_college
+	icon = "GFX_resolution_category_bunny"
+	resolution_types = {
+		"resolution_uniform_bunny"
+	}
+}
+resolution_category_uniform_microbikini = {
+	group = beauty_college
+	icon = "GFX_resolution_category_microbikini"
+	resolution_types = {
+		"resolution_uniform_microbikini"
+	}
+}
+
+
+resolution_category_beauty_sanctions = {
+	group = beauty_college
+	icon = "GFX_resolution_category_ero_sanctions"
+	resolution_types = {
+		"resolution_sanctions_uniform_1"	
+		"resolution_sanctions_uniform_repeal_1"	
+	}
+}
+

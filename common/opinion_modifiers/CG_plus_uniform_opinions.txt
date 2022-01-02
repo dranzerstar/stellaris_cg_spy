@@ -1,0 +1,42 @@
+triggered_opinion_uniform_princess_evt_01 = {
+	trigger = {
+		FROM = {
+			has_country_flag = princess_evt_opinion_01
+		}
+	}
+
+	opinion = {
+		base = 80 # remember to update the ascension perk's tooltip
+	}
+}
+
+triggered_opinion_uniform_bunny_evt_01 = {
+	trigger = {
+		FROM = {
+			has_country_flag = bunny_evt_opinion_01
+		}
+		NOT={
+			has_country_flag = asceticism_flag
+		}
+	}
+
+	opinion = {
+		base = 80 # remember to update the ascension perk's tooltip
+	}
+}
+
+
+triggered_opinion_uniform_bunny_evt_02 = {
+	trigger = {
+		FROM = {
+			has_country_flag = bunny_evt_opinion_02
+		}
+	}
+
+	opinion = {
+		base = -50 # remember to update the ascension perk's tooltip
+	}
+}
+
+
+

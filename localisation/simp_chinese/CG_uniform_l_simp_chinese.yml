@@ -1,0 +1,140 @@
+﻿l_simp_chinese:
+ CG_school_uniform:0 "学院制服规格"
+ CG_school_uniform_desc:0 "决定学院的制服类型，不同类型代表着学院会有不同的培训重点或是元首大人有特定的色批"
+ policy_CG_school_uniform:0 "学院制服规格"
+ policy_CG_school_uniform_desc:0 "决定学院的制服类型，不同类型代表着学院会有不同的培训重点，但有可能只是元首大人有特定的色批"
+
+ nun_uniform:0 "修道女服"
+ nun_uniform_name:0 "修道女服"
+ nun_uniform_desc:0 "把学院校服设定为修道女服，非常保守的服装，辟除多余的欲望，使学员专注学习，也为毕业后投身奉献圣歌的职业。\n\n"
+ CG_plus_mod_uniform_nun_uniform:0 "修道女服附带效果"
+ mod_pop_ethic_fanatic_spiritualist_attraction_mult:0 "极端唯心主义引领"
+ mod_pop_ethic_spiritualist_attraction_mult:0 "唯心主义引领"
+
+ princess_uniform:0 "公主礼装"
+ princess_uniform_name:0 "公主礼装"
+ princess_uniform_desc:0 "把学院校服设定为公主礼装，层层叠叠的复杂浮夸的礼装，衬托出高贵优雅的公主，学习着繁星中各个物种的复杂礼仪，也为习惯毕业后投身于社交类职业。\n\n"
+ CG_plus_mod_uniform_princess_uniform:0 "公主礼装附带效果"
+ mod_pop_ethic_fanatic_xenophile_attraction_mult:0 "极端亲外主义引领"
+ mod_pop_ethic_xenophile_attraction_mult:0 "亲外主义引领"
+
+ army_uniform:0 "群星军服"
+ army_uniform_name:0 "群星军服"
+ army_uniform_desc:0 "把学院校服设定为群星军服，圣白舰队的标准海军服装，这也代表着学员毕业后会立即投身于帝国的海军。\n\n"
+ CG_plus_mod_uniform_army_uniform:0 "群星军服附带效果"
+ mod_pop_ethic_fanatic_militarist_attraction_mult:0 "极端军国主义引领"
+ mod_pop_ethic_militarist_attraction_mult:0 "军国主义引领"
+ mod_country_command_limit_mult:0 "舰队指挥容量"
+ mod_starbase_building_build_speed_mult:0 "恒星基地建筑速度"
+
+ school_uniform:0 "衬衣中裙"
+ school_uniform_name:0 "衬衣中裙"
+ school_uniform_desc:0 "平平无奇的制服，或许是因为某个传统习俗把这种服装当成了校服。甚至还有运动服的版本。\n\n"
+ CG_plus_mod_uniform_school_uniform:0 "衬衣中裙附带效果"
+
+ sailorfuku_uniform:0 "短水手服"
+ sailorfuku_uniform_name:0 "短水手服"
+ sailorfuku_uniform_desc:0 "把学院校服设定为短水手服，轻快活泼的装束，需然名字是水手服但是穿的人根本和水手没有关系，反之成为年轻的象征。\n\n"
+ CG_plus_mod_uniform_sailorfuku_uniform:0 "短水手服附带效果"
+ mod_pop_ethic_fanatic_egalitarian_attraction_mult:0 "极端平等主义引领"
+ mod_pop_ethic_egalitarian_attraction_mult:0 "平等主义引领"
+ 
+ bunny_uniform:0 "艳兔女郎"
+ bunny_uniform_name:0 "艳兔女郎"
+ bunny_uniform_desc:0 "把学院校服设定为兔女郎服，紧身连衣，胸口剪裁五花百门，搭配的丝袜层出不穷，总有一个搭配能勾起顾客的欲望，而这套装束也是为毕业后投身色情服务业而设定的。\n\n"
+ CG_plus_mod_uniform_bunny_uniform:0 "绝兔女郎附带效果"
+ mod_pop_ethic_fanatic_materialist_attraction_mult:0 "极端唯物主义引领"
+ mod_pop_ethic_materialist_attraction_mult:0 "唯物主义引领"
+
+ microbikini_uniform:0 "微比坚尼"
+ microbikini_uniform_name:0 "微比坚尼"
+ microbikini_uniform_desc:0 "把学院校服设定为微比坚尼，绝色学院里面本来就是训练用的触手巢穴，到处都是白汁淫液，所穿泳装本来就很合理。\n\n"
+ CG_plus_mod_uniform_microbikini_uniform:0 "微比坚尼附带效果"
+ mod_pop_ethic_fanatic_authoritarian_attraction_mult:0 "极端权威主义引领"
+ mod_pop_ethic_authoritarian_attraction_mult:0 "权威主义引领"
+
+
+
+##############################################################################
+
+ resolution_category_college_joint:0 "星际学院联合招生系统：提升绝色绝娇生产效率"
+ resolution_category_college_joint_desc:0 "星际学院联合招生系统：提升绝色绝娇生产效率"
+
+ resolution_category_college_joint:0 "星际学院联合招生系统"
+ resolution_category_college_joint_desc:0 "美是一种能引起人们美感的客观事物共同的本质属性，美的定义、感觉、形态及审美等问题的认识、判断、应用的研究，为美学。\n而在寻求这美学的学院不应该受到国家政治而受到限制。让追求着美丽的真理的学生学者可以自由到各个国家的学院修学和研究。"
+
+ resolution_category_beauty_college:0 "繁星美学院学术整合"
+ beauty_college:0 "繁星美学院"
+
+ resolution_category_repel_college_joint:0 "废除星际学院联合招生系统"
+ resolution_category_repel_college_joint_desc:0 "废除星际学院联合招生系统"
+
+ need_resolution_category_college_joint:0 "需要先通过星际学院联合招生系统法案"
+ galactic_community_resolution_uniform_changed:0 "需要等待上一期校服定制时限完结"
+
+ galactic_community_uniform_resolution_submited:0 "$TRIGGER_FAIL$近期提交过校服定制决议" 
+
+ resolution_category_uniform_nun:0 "设定星际学院校服：修道女服"
+ resolution_category_uniform_nun_desc:0 "设定星际学院校服：修道女服, CG_plus_policy_uniform.2001.desc:0 "联合星际学院把学院校服色定位 §R修道女服§!\n\n你以为这个世界什么都是必然的吗？你觉得我们的船舰厉炮真的确保我们在这个深不可测的宇宙不被毁灭？没有时间了，穿上这套服装，摒弃心中一切欲望，我们必得在末日来临之前达到美的真理，只有借着此真理，才能避过灾难。\n\n"
+
+ resolution_uniform_nun:0 "设定星际学院校服：修道女服"
+ resolution_uniform_nun_desc:0 "议案会使联合星际学院把学院校服色定位 §R修道女服§!\n\n你以为这个世界什么都是必然的吗？你觉得我们的船舰厉炮真的确保我们在这个深不可测的宇宙不被毁灭？没有时间了，穿上这套服装，摒弃心中一切欲望，我们必得在末日来临之前达到美的真理，只有借着此真理，才能避过灾难。\n\n"
+
+
+ resolution_category_uniform_princess:0 "设定星际学院校服：公主礼装"
+ resolution_category_uniform_princess_desc:0 "设定星际学院校服：公主礼装§!。繁星下的生物，物种，文化层出不穷，作为一名合格的公主得精通各个文化的礼仪习俗。更重要的是利用这些礼节，在外交场合上获取最大的利益和避免两国之间的毁灭性后果。当然，这些知识也包括各个异星人的交配方法，你可不想含错多头龟族的五个鸡巴？"
+ resolution_uniform_princess:0 "设定星际学院校服：公主礼装"
+ resolution_uniform_princess_desc:0 "议案会使联合星际学院把学院校服色定位：§R公主礼装\n\n繁星下的生物，物种，文化层出不穷，作为一名合格的公主得精通各个文化的礼仪习俗。更重要的是利用这些礼节，在外交场合上获取最大的利益和避免两国之间的毁灭性后果。当然，这些知识也包括各个异星人的交配方法，你可不想含错多头龟族的五个鸡巴？"
+
+ resolution_category_uniform_army:0 "设定星际学院校服：群星军服"
+ resolution_category_uniform_army_desc:0 "设定星际学院校服：群星军服,\n\n群星下争端不断，特别是对付一堆不讲道理的外星人，只能用船舰的炮火来说服他们，那么美学院得培训我们的学员该如何华丽地与这些外星人交涉，然后华丽地把问题解决。需然新兵蛋子大多只是司令官的花瓶而已。"
+ resolution_uniform_army:0 "设定星际学院校服：群星军服"
+ resolution_uniform_army_desc:0 "议案会使联合星际学院把学院校服色定位：§R群星军服§!,\n\n群星下争端不断，特别是对付一堆不讲道理的外星人，只能用船舰的炮火来说服他们，那么美学院得培训我们的学员该如何华丽地与这些外星人交涉，然后华丽地把问题解决。需然新兵蛋子大多只是司令官的花瓶而已。"
+
+ resolution_category_uniform_sailorfuku:0 "设定星际学院校服：短水手服"
+ resolution_category_uniform_sailorfuku_desc:0 "设定星际学院校服：短水手服,星际学院是个学园，学生的年龄的也是十六左右吧？能校服怎能不是水手服呢？你选别的才是有问题吧？作死工色，J！K！，女高中生，懂不懂？爷的青春所在的地方。标标准准的校服但是内外配搭到超高的服装耶，就这让吧，别再装糊涂了，明天都让学生们换成水手服回来吧。"
+ resolution_uniform_sailorfuku:0 "设定星际学院校服：短水手服"
+ resolution_uniform_sailorfuku_desc:0 "议案会使联合星际学院把学院校服色定位：§R短水手服§!\n\n星际学院是个学园，学生的年龄的也是十六左右吧？能校服怎能不是水手服呢？你选别的才是有问题吧？作死工色，J！K！，女高中生，懂不懂？爷的青春所在的地方。标标准准的校服但是内外配搭到超高的服装耶，就这让吧，别再装糊涂了，明天都让学生们换成水手服回来吧。"
+
+ resolution_category_uniform_bunny:0 "设定星际学院校服：艳兔女郎"
+ resolution_category_uniform_bunny_desc:0 "设定星际学院校服：艳兔女郎,高级身色情服务的人手面临短缺，我们不得不提出以下建议，把学院校服设置为兔女郎服，并把各种场所的经营，设计和管理立入绝色学院的课纲，希望增加未来能投身这个行业的劳动力。"
+ resolution_uniform_bunny:0 "设定星际学院校服：艳兔女郎"
+ resolution_uniform_bunny_desc:0 "议案会使联合星际学院把学院校服色定位：§R艳兔女郎§!\n\n高级身色情服务的人手面临短缺，我们不得不提出以下建议，把学院校服设置为兔女郎服，并把各种场所的经营，设计和管理立入绝色学院的课纲，希望增加未来能投身这个行业的劳动力。"
+
+ resolution_category_uniform_microbikini:0 "设定星际学院校服：微比坚尼"
+ resolution_category_uniform_microbikini_desc:0 "设定星际学院校服：微比坚尼,繁星之下最美的是什么？就是完美身躯，而要表现这完美的身躯的最完美的方法就是这微比坚尼，不用害羞，当你来到学院后就能理解到我们如何得到这完美的身躯。\n\n通过极致的乱交性爱，让身体每一刻都在美颜淫液中修改，进化，体验着永远的年轻，幼嫩。这样才能寻找到繁星的极致之美。"
+ resolution_uniform_microbikini:0 "设定星际学院校服：微比坚尼"
+ resolution_uniform_microbikini_desc:0 "议案会使联合星际学院把学院校服色定位：§R微比坚尼§!\n\n繁星之下最美的是什么？就是[from.getname]的完美身躯，而要表现这完美的身躯的最完美的方法就是这微比坚尼，不用害羞，当你来到学院后就能理解到我们如何得到这完美的身躯。\n\n通过极致的乱交性爱，让身体每一刻都在美颜淫液中修改，进化，体验着永远的年轻，幼嫩。这样才能寻找到繁星的极致之美。"
+
+
+ resolution_category_beauty_sanctions:0 "美学制裁"
+ resolution_sanctions_uniform_1_desc:0 "对于不好好穿校服的坏孩子进行制裁。"
+
+ resolution_sanctions_uniform_1:0 "进行轻度绝艳绝娇制裁"
+ resolution_sanctions_uniform_1_desc:0 "对于不好好穿校服的坏孩子进行制裁。"
+ resolution_sanctions_uniform_2:0 "进行中度绝艳绝娇制裁"
+ resolution_sanctions_uniform_2_desc:0 "对于不好好穿校服的坏孩子进行制裁。"
+ resolution_sanctions_uniform_3:0 "进行高度绝艳绝娇制裁"
+ resolution_sanctions_uniform_3_desc:0 "对于不好好穿校服的坏孩子进行制裁。"
+
+ resolution_sanctions_uniform_repeal_1:0 "移除轻度绝艳绝娇制裁"
+ resolution_sanctions_uniform_repeal_1_desc:0 "移除轻度绝艳绝娇制裁"
+ resolution_sanctions_uniform_repeal_2:0 "移除中度绝艳绝娇制裁"
+ resolution_sanctions_uniform_repeal_2_desc:0 "移除高度绝艳绝娇制裁"
+ resolution_sanctions_uniform_repeal_3:0 "移除高度绝艳绝娇制裁"
+ resolution_sanctions_uniform_repeal_3_desc:0 "移除高度绝艳绝娇制裁"
+
+
+
+ triggered_opinion_uniform_princess_evt_01:0 "优秀的外交公主"
+ princess_evt_opinion_01:0 "优秀的外交公主"
+
+ 
+ CG_plus_policy_uniform.1600.a:0 "查封相关网络言论"
+ CG_plus_policy_uniform.1600.o1 "获得圣兔女郎风评£opinion£"
+ triggered_opinion_uniform_bunny_evt_01:0 "这里有圣兔女郎主题夜店"
+ CG_plus_policy_uniform.1600.b:0 "维护我们的圣女，严惩这些罪犯！"
+ CG_plus_policy_uniform.1600.o2 "获得待客态度0£empire£差评£opinion£"
+ triggered_opinion_uniform_bunny_evt_02:0 "0£empire£差评"
+
+ 

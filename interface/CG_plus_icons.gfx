@@ -1,0 +1,38 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_resolution_category_college"
+		texturefile = "gfx/interface/resolution/resolution_galactic_sr_beauty.dds"
+	}
+	spriteType = {
+		name = "GFX_cg_dialogue_window_bg_new"
+		texturefile = "gfx/interface/cg_dialogue/bg_new.dds"
+	}
+	spriteType = {
+		name = "GFX_resolution_category_nun"
+		texturefile = "gfx/interface/resolution/resolution_galactic_uniform_nun.dds"
+	}
+	spriteType = {
+		name = "GFX_resolution_category_princess"
+		texturefile = "gfx/interface/resolution/resolution_galactic_uniform_princess.dds"
+	}
+	spriteType = {
+		name = "GFX_resolution_category_army"
+		texturefile = "gfx/interface/resolution/resolution_galactic_uniform_army.dds"
+	}
+	spriteType = {
+		name = "GFX_resolution_category_sailor"
+		texturefile = "gfx/interface/resolution/resolution_galactic_uniform_seira.dds"
+	}
+	spriteType = {
+		name = "GFX_resolution_category_bunny"
+		texturefile = "gfx/interface/resolution/resolution_galactic_uniform_bunny.dds"
+	}
+	spriteType = {
+		name = "GFX_resolution_category_microbikini"
+		texturefile = "gfx/interface/resolution/resolution_galactic_uniform_bikini.dds"
+	}
+	spriteType = {
+		name = "GFX_resolution_category_ero_sanctions"
+		texturefile = "gfx/interface/resolution/resolution_galactic_uniform_scantion.dds"
+	}
+}

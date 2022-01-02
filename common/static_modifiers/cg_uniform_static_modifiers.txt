@@ -1,0 +1,180 @@
+# resolution_category_CG_common_clothsexy = {
+# 	diplo_weight_envoys_mult = -0.1
+# 	pop_growth_speed = 0.1
+# 	planet_pops_consumer_goods_upkeep_mult = 0.2
+# 	planet_crime_add = 10
+# 	army_health = -0.2
+# }
+
+# resolution_category_CG_common_slave = {
+# 	diplo_weight_envoys_mult = -0.1
+# 	planet_jobs_slave_produces_mult = 0.1
+# 	pop_category_slave_upkeep_mult = -0.2
+# 	trade_value_mult = 0.2
+# 	slave_market_cost_mult = 0.2
+# }
+
+# resolution_category_CG_common_border = {
+# 	diplo_weight_envoys_mult = -0.1
+# 	trade_value_mult = 0.1
+# 	country_trust_cap_add = 20
+# 	country_trust_growth = 0.2
+# 	spy_network_value_mult = 0.1
+# 	planet_stability_add = -20
+# 	planet_crime_add = 10
+# }
+
+# resolution_category_CG_common_beauty = {
+# 	diplo_weight_envoys_mult = -0.1
+# 	pop_happiness = 0.2
+# 	pop_growth_speed = 0.1
+# 	planet_pops_food_upkeep_mult = -0.2
+# 	planet_pops_consumer_goods_upkeep_mult = -0.2
+# 	planet_jobs_sr_beauty_produces_mult = -0.1
+# }
+
+# resolution_category_CG_common_country = {
+# 	diplo_weight_envoys_mult = -0.1
+# 	planet_jobs_slave_produces_mult = 0.3
+# 	pop_category_slave_upkeep_mult = -0.3
+# }
+
+# resolution_category_INN_reproduce_plan = {
+# 	diplo_weight_pops_mult = -0.2
+# 	planet_holyclergy_upkeep_mult = -0.15
+# 	job_beauty_master2_add = -1
+# }
+
+# resolution_category_SUC_reproduce_plan = {
+# 	diplo_weight_pops_mult = -0.2
+# 	planet_beauty_upkeep_mult = -0.2
+# 	job_beauty_teacher2_add = -1
+# }
+
+
+CG_plus_mod_uniform_nun_uniform={
+
+	country_unity_produces_mult = 0.2
+	
+	planet_jobs_sr_christian_produces_mult = 0.2
+	planet_jobs_holylight_crystal_produces_mult = 0.2
+	planet_stability_add = 20
+	planet_holyclergy_upkeep_mult = 0.2
+
+
+	pop_ethic_fanatic_spiritualist_attraction_mult  = 0.3
+	pop_ethic_spiritualist_attraction_mult  = 0.3 
+}
+
+
+CG_plus_mod_uniform_princess_uniform={
+	diplo_weight_envoys_mult = 0.3
+	job_beauty_teacher2_upkeep_mult = 0.2
+	job_beauty_master2_upkeep_mult = 0.2
+	country_claim_influence_cost_mult = -0.4
+	diplomacy_upkeep_mult = -0.4
+	empire_size_pops_mult= -0.4
+	pop_ethic_fanatic_xenophile_attraction_mult  = 0.2 
+	pop_ethic_xenophile_attraction_mult   = 0.2 
+
+}
+
+CG_plus_mod_uniform_army_uniform={
+	starbase_building_build_speed_mult = 0.2
+	pop_ethic_fanatic_militarist_attraction_mult  = 0.2 
+	pop_ethic_militarist_attraction_mult  = 0.2 
+	country_command_limit_mult = 0.2
+	planet_jobs_sr_beauty_produces_mult = 0.15
+
+}
+
+
+CG_plus_mod_uniform_school_uniform={
+	planet_jobs_sr_beauty_produces_mult = 0.3
+}
+
+CG_plus_mod_uniform_sailorfuku_uniform={
+	pop_happiness = 0.2
+	pop_growth_speed = 0.1
+	planet_crime_add = 30
+	planet_jobs_sr_beauty_produces_mult = 0.1
+	pop_ethic_fanatic_egalitarian_attraction_mult  = 0.2 
+	pop_ethic_egalitarian_attraction_mult  = 0.2 
+
+}
+
+
+CG_plus_mod_uniform_bunny_uniform={
+	planet_jobs_consumer_goods_produces_mult = 0.2
+	planet_jobs_energy_produces_mult = 0.2
+	planet_jobs_sr_beauty_produces_mult = 0.1
+	pop_ethic_fanatic_materialist_attraction_mult  = 0.2 
+	pop_ethic_materialist_attraction_mult  = 0.2 
+
+}
+
+CG_plus_mod_uniform_microbikini_uniform={
+	planet_jobs_excellent_slave_produces_mult = 0.2
+	planet_jobs_sr_beauty_produces_mult = 0.2
+	planet_jobs_love_juice_produces_mult = 0.2
+	planet_erotic_upkeep_mult = 0.3
+	pop_happiness = 0.2
+	pop_ethic_fanatic_authoritarian_attraction_mult =  0.3 
+	pop_ethic_authoritarian_attraction_mult  = 0.3 	
+
+
+}
+
+
+resolution_category_college_joint={
+	planet_jobs_sr_beauty_produces_mult = 0.1
+
+}
+
+
+resolution_cg_plus_sanction_1={
+	planet_jobs_sr_beauty_produces_mult = -0.2
+	diplo_weight_envoys_mult = -0.2
+}
+resolution_cg_plus_sanction_2={
+	job_beauty_master2_add = -1
+	job_beauty_teacher2_add = -1
+}
+
+CG_plus_mod_uniform_event_happiness={
+	pop_happiness = 1.5
+	planet_stability_add = 30
+}
+
+CG_plus_mod_uniform_sailr_immigration={
+	planet_immigration_pull_add = 6
+	planet_stability_add = -20
+}
+
+CG_plus_mod_add_bunny_post_job={
+	job_bunny_post_add = 2
+	
+}
+CG_plus_mod_add_bunny_spy_mod={
+	spy_network_daily_value_mult = 0.5
+	
+	
+}
+
+CG_plus_mod_uniform_event_health = {
+	pop_growth_speed = 1
+
+}
+
+
+CG_plus_mod_uniform_event_army_1 = {
+	planet_army_build_speed_mult = 2
+
+}
+
+
+
+
+
+
+

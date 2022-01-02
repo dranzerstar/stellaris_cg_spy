@@ -1,0 +1,756 @@
+@resolution_weight_hated = 3
+@resolution_weight_disliked = 4
+@resolution_weight_unpopular = 5
+@resolution_weight_normal = 6
+@resolution_weight_popular = 6.5
+@resolution_weight_loved = 7
+@resolution_cost_t1 = 100
+@resolution_cost_t2 = 150
+@resolution_cost_t3 = 200
+@resolution_cost_t4 = 250
+@resolution_cost_t5 = 300
+@resolution_cost_denounce = 25
+@resolution_flag_timer = 360
+
+# Example Resolution Type
+# NOTE: Remember to add Resolutions to a Resolution Category!
+
+#example_resolution = {
+#	icon = "name of the icon key"
+#	resources = {} # cost and category
+#	target = yes/no # if this resolution requires a target country
+#	modifier = {} # modifier to be applied to all community members if passed
+#	effect = {} # effect to be applied if passed, scope is proposer unless there is a target country - then scope is target country, with proposer in from scope
+#	fail_effects = {} # effect to be applied if failed, scope is proposer unless there is a target country - then scope is target country, with proposer in from scope
+#	potential = {} # potential trigger, scope is country
+#	allow = {} # allow trigger, scope is country, from is target if valid
+#	active = {} # can be active trigger, scope is country
+#	breach = {} # in breach trigger, scope is country
+#	valid_target = {} # valid target trigger, scope is country
+#	ai_weight = {} # ai weight modifiers, scope is country
+#}
+
+
+
+resolution_category_college_joint = {
+	icon = "GFX_resolution_category_college"
+	resources = {
+		category = resolutions
+		cost = {
+			influence = @resolution_cost_t1
+		}
+	}
+	target = no
+	level = 1
+	modifier = {
+		resolution_category_college_joint = 1
+	}
+
+	effect = {
+		hidden_effect = {
+			set_global_flag = galactic_community_resolution_passed
+			set_timed_country_flag = {
+				flag = galactic_community_resolution_passed_common
+				days = @resolution_flag_timer
+			}
+			add_modifier = {
+				modifier = resolution_passed_diplomatic_weight
+				days = 2200
+			}
+			every_playable_country = {
+				limit = {
+					is_cg_empire = yes
+				}
+				country_event = { 
+				  	id = CG_plus_policy_uniform.2000
+					days = 20
+				#	id = 
+				}
+			}
+		}
+	}
+	fail_effects = {
+		hidden_effect = {
+			set_timed_country_flag = {
+				flag = galactic_community_resolution_failed_common
+				days = @resolution_flag_timer
+			}
+			add_modifier = {
+				modifier = resolution_failed_diplomatic_weight
+				days = 2200
+			}
+		}
+	}
+	allow = {
+		custom_tooltip = {
+			fail_text = "resolution_already_active"
+			NOR = {
+				is_active_resolution = "resolution_category_college_joint"
+			}
+		}
+	}
+	ai_weight = {
+		weight = @resolution_weight_popular
+
+		modifier = {
+			factor = 2
+			has_authority = auth_corporate
+		}
+		modifier = {
+			factor = 2
+			is_cg_empire = yes
+		}
+
+		modifier = {
+			factor = 1.25
+			OR = {
+				has_ai_personality = peaceful_traders
+				has_ai_personality = ruthless_capitalists
+			}
+		}
+
+		modifier = {
+			factor = 0.5
+			has_ai_personality = xenophobic_isolationists
+		}
+
+		modifier = {
+			factor = 0.8
+			is_xenophobe = yes
+		}
+
+		modifier = {
+			factor = 2
+			years_passed > 50
+		}
+
+		modifier = {
+			factor = 2
+			years_passed > 100
+		}
+
+		modifier = {
+			factor = 2
+			years_passed > 150
+		}
+	}
+}
+
+
+resolution_category_repel_college_joint = {
+	icon = "GFX_repeal_CG"
+	resources = {
+		category = resolutions
+		cost = {
+			influence = @resolution_cost_t1
+		}
+	}
+	target = no
+
+	potential = {
+		
+		is_active_resolution = "resolution_category_college_joint"
+	}
+	effect = {
+		custom_tooltip = resolution_ecology_repeal_1_effect_success
+
+		hidden_effect = {
+			cancel_resolution = "resolution_category_college_joint"
+			#set_timed_country_flag = { flag = galactic_community_resolution_passed_ecology_repeal days = @resolution_flag_timer }
+			add_modifier = {
+				modifier = resolution_passed_diplomatic_weight
+				days = 2200
+			}
+		}
+	}
+	fail_effects = {
+		hidden_effect = {
+
+			add_modifier = {
+				modifier = resolution_failed_diplomatic_weight
+				days = 2200
+			}
+		}
+	}
+
+	ai_weight = {
+		weight = @resolution_weight_popular
+
+		modifier = {
+			factor = 0.1
+			is_cg_empire = yes
+		}
+
+	}
+}
+
+
+
+
+
+
+
+#SANCATIONS
+
+resolution_sanctions_uniform_1 = {
+	icon = "GFX_resolution_category_ero_sanctions"
+	level = 1
+
+	resources = {
+		category = resolutions
+		cost = {
+			influence = @resolution_cost_denounce
+		}
+	}
+
+	target = no
+	sanction = yes
+
+	effect = {
+		custom_tooltip = sanctions_effect
+		hidden_effect = {
+			set_timed_country_flag = { flag = galactic_community_resolution_passed_general days = @resolution_flag_timer }
+			add_modifier = {
+				modifier = resolution_passed_diplomatic_weight
+				days = 2200
+			}
+			set_timed_global_flag = {
+				flag = recent_galcom_sanctions_passed
+				years = 10
+			}
+		}
+	}
+
+	fail_effects = {
+		hidden_effect = {
+			set_timed_country_flag = { flag = galactic_community_resolution_failed_general days = @resolution_flag_timer }
+			add_modifier = {
+				modifier = resolution_failed_diplomatic_weight
+				days = 2200
+			}
+		}
+	}
+
+	triggered_modifier = {
+		potential = {
+			OR = {
+				is_in_breach_of_any = yes
+				#之后写成只是校服类
+				has_modifier = resolution_denounced
+			}
+		}
+		modifier = {
+			#CG SANCTION
+			resolution_cg_plus_sanction_1=1
+
+		}
+	}
+	
+	allow = {
+		custom_tooltip = {
+			fail_text = "requires_something_illegal"
+			has_global_flag = resolution_with_breach_effect_passed
+		}
+		custom_tooltip = {
+			fail_text = "resolution_already_active"
+			NOR = {
+				is_active_resolution = "resolution_sanctions_uniform_1"
+				is_active_resolution = "resolution_sanctions_uniform_2"
+				is_active_resolution = "resolution_sanctions_uniform_3"
+			}
+		}
+	}
+
+	ai_weight = {
+		weight = @resolution_weight_normal
+
+		modifier = {
+			factor = 0
+			is_in_breach_of_any = yes
+		}
+
+		modifier = {
+			factor = 0.33
+			has_global_flag = recent_galcom_sanctions_passed
+		}
+
+		modifier = {
+			factor = 1.25
+			is_in_breach_of_any = no
+			is_materialist = yes
+		}
+
+		modifier = {
+			factor = 0.5
+			any_federation_ally = {
+				OR = {
+					is_in_breach_of_any = yes
+					has_modifier = resolution_denounced
+				}
+			}
+		}
+
+		modifier = {
+			factor = 1.25
+			any_rival_country = {
+				OR = {
+					is_in_breach_of_any = yes
+					has_modifier = resolution_denounced
+				}
+			}
+		}
+	}
+}
+
+resolution_sanctions_uniform_2 = {
+	icon = "GFX_resolution_category_ero_sanctions"
+	level = 3
+
+	resources = {
+		category = resolutions
+		cost = {
+			influence = @resolution_cost_denounce
+		}
+	}
+
+	target = no
+	sanction = yes
+
+	effect = {
+		custom_tooltip = sanctions_effect
+		hidden_effect = {
+			set_timed_country_flag = { flag = galactic_community_resolution_passed_general days = @resolution_flag_timer }
+			add_modifier = {
+				modifier = resolution_passed_diplomatic_weight
+				days = 2200
+			}
+			set_timed_global_flag = {
+				flag = recent_galcom_sanctions_passed
+				years = 10
+			}
+		}
+	}
+
+	fail_effects = {
+		hidden_effect = {
+			set_timed_country_flag = { flag = galactic_community_resolution_failed_general days = @resolution_flag_timer }
+			add_modifier = {
+				modifier = resolution_failed_diplomatic_weight
+				days = 2200
+			}
+		}
+	}
+
+	triggered_modifier = {
+		potential = {
+			OR = {
+				is_in_breach_of_any = yes
+				#之后写成只是校服类
+				has_modifier = resolution_denounced
+			}
+		}
+		modifier = {
+			#CG SANCTION
+			resolution_cg_plus_sanction_1=2
+			resolution_cg_plus_sanction_2 = 1
+		}
+	}
+	
+	allow = {
+		is_active_resolution = "resolution_sanctions_uniform_1"
+		is_part_of_galactic_council = yes
+	}
+
+	ai_weight = {
+		weight = @resolution_weight_normal
+
+		modifier = {
+			factor = 0
+			is_in_breach_of_any = yes
+		}
+
+		modifier = {
+			factor = 0.33
+			has_global_flag = recent_galcom_sanctions_passed
+		}
+
+		modifier = {
+			factor = 1.25
+			is_in_breach_of_any = no
+			is_materialist = yes
+		}
+
+		modifier = {
+			factor = 0.5
+			any_federation_ally = {
+				OR = {
+					is_in_breach_of_any = yes
+					has_modifier = resolution_denounced
+				}
+			}
+		}
+
+		modifier = {
+			factor = 1.25
+			any_rival_country = {
+				OR = {
+					is_in_breach_of_any = yes
+					has_modifier = resolution_denounced
+				}
+			}
+		}
+	}
+}
+
+resolution_sanctions_uniform_3 = {
+	icon = "GFX_resolution_category_ero_sanctions"
+	level = 2
+
+	resources = {
+		category = resolutions
+		cost = {
+			influence = @resolution_cost_denounce
+		}
+	}
+
+	target = no
+	sanction = yes
+
+	effect = {
+		custom_tooltip = sanctions_effect
+		hidden_effect = {
+			set_timed_country_flag = { flag = galactic_community_resolution_passed_general days = @resolution_flag_timer }
+			add_modifier = {
+				modifier = resolution_passed_diplomatic_weight
+				days = 2200
+			}
+			set_timed_global_flag = {
+				flag = recent_galcom_sanctions_passed
+				years = 10
+			}
+		}
+	}
+
+	fail_effects = {
+		hidden_effect = {
+			set_timed_country_flag = { flag = galactic_community_resolution_failed_general days = @resolution_flag_timer }
+			add_modifier = {
+				modifier = resolution_failed_diplomatic_weight
+				days = 2200
+			}
+		}
+	}
+
+	triggered_modifier = {
+		potential = {
+			OR = {
+				is_in_breach_of_any = yes
+				#之后写成只是校服类
+				has_modifier = resolution_denounced
+			}
+		}
+		modifier = {
+			#CG SANCTION
+			resolution_cg_plus_sanction_1=3
+			resolution_cg_plus_sanction_2 = 2
+		}
+	}
+	
+	allow = {
+		is_active_resolution = "resolution_sanctions_uniform_2"
+		is_part_of_galactic_council = yes
+	}
+
+	ai_weight = {
+		weight = @resolution_weight_normal
+
+		modifier = {
+			factor = 0
+			is_in_breach_of_any = yes
+		}
+
+		modifier = {
+			factor = 0.33
+			has_global_flag = recent_galcom_sanctions_passed
+		}
+
+		modifier = {
+			factor = 1.25
+			is_in_breach_of_any = no
+			is_materialist = yes
+		}
+
+		modifier = {
+			factor = 0.5
+			any_federation_ally = {
+				OR = {
+					is_in_breach_of_any = yes
+					has_modifier = resolution_denounced
+				}
+			}
+		}
+
+		modifier = {
+			factor = 1.25
+			any_rival_country = {
+				OR = {
+					is_in_breach_of_any = yes
+					has_modifier = resolution_denounced
+				}
+			}
+		}
+	}
+}
+
+resolution_sanctions_uniform_repeal_1 = {
+	icon = "GFX_repeal_blue"
+
+	resources = {
+		category = resolutions
+		cost = {
+			influence = @resolution_cost_denounce
+		}
+	}
+	target = no
+	sanction = yes
+	fire_and_forget = yes
+
+	effect = {
+		custom_tooltip = resolution_sanctions_tech_repeal_1_effect_success
+		hidden_effect = {
+			cancel_resolution = "resolution_sanctions_uniform_1"
+			set_timed_country_flag = { flag = galactic_community_resolution_passed_general days = @resolution_flag_timer }
+			add_modifier = {
+				modifier = resolution_passed_diplomatic_weight
+				days = 2200
+			}
+		}
+	}
+
+	fail_effects = {
+		hidden_effect = {
+			set_timed_country_flag = { flag = galactic_community_resolution_failed_general days = @resolution_flag_timer }
+			add_modifier = {
+				modifier = resolution_failed_diplomatic_weight
+				days = 2200
+			}
+		}
+	}
+
+	potential = {
+		is_active_resolution = "resolution_sanctions_uniform_1"
+	}
+
+	ai_weight = {
+		weight = @resolution_weight_unpopular
+
+		modifier = {
+			factor = 2
+			is_in_breach_of_any = yes
+		}
+
+		modifier = {
+			factor = 0.25
+			is_in_breach_of_any = no
+			is_materialist = yes
+		}
+
+		modifier = {
+			factor = 2
+			any_federation_ally = {
+				OR = {
+					is_in_breach_of_any = yes
+					has_modifier = resolution_denounced
+				}
+			}
+		}
+
+		modifier = {
+			factor = 0.75
+			any_rival_country = {
+				OR = {
+					is_in_breach_of_any = yes
+					has_modifier = resolution_denounced
+				}
+			}
+		}
+	}
+}
+
+resolution_sanctions_uniform_repeal_2 = {
+	icon = "GFX_repeal_blue"
+
+	resources = {
+		category = resolutions
+		cost = {
+			influence = @resolution_cost_denounce
+		}
+	}
+	target = no
+	sanction = yes
+	fire_and_forget = yes
+
+	effect = {
+		custom_tooltip = resolution_sanctions_uniform_repeal_2
+		hidden_effect = {
+			cancel_resolution = "resolution_sanctions_uniform_2"
+			set_timed_country_flag = { flag = galactic_community_resolution_passed_general days = @resolution_flag_timer }
+			add_modifier = {
+				modifier = resolution_passed_diplomatic_weight
+				days = 2200
+			}
+		}
+	}
+
+	fail_effects = {
+		hidden_effect = {
+			set_timed_country_flag = { flag = galactic_community_resolution_failed_general days = @resolution_flag_timer }
+			add_modifier = {
+				modifier = resolution_failed_diplomatic_weight
+				days = 2200
+			}
+		}
+	}
+
+	potential = {
+		has_federations_dlc = yes
+		is_active_resolution = "resolution_sanctions_uniform_2"
+	}
+	
+	triggered_modifier = {
+		potential = {
+			OR = {
+				is_in_breach_of_any = yes
+				has_modifier = resolution_denounced
+			}
+		}
+		modifier = {
+			resolution_cg_plus_sanction_1 = 1
+		}
+	}
+
+	ai_weight = {
+		weight = @resolution_weight_unpopular
+
+		modifier = {
+			factor = 2
+			is_in_breach_of_any = yes
+		}
+
+		modifier = {
+			factor = 0.25
+			is_in_breach_of_any = no
+			is_materialist = yes
+		}
+
+		modifier = {
+			factor = 2
+			any_federation_ally = {
+				OR = {
+					is_in_breach_of_any = yes
+					has_modifier = resolution_denounced
+				}
+			}
+		}
+
+		modifier = {
+			factor = 0.75
+			any_rival_country = {
+				OR = {
+					is_in_breach_of_any = yes
+					has_modifier = resolution_denounced
+				}
+			}
+		}
+	}
+}
+
+resolution_sanctions_uniform_repeal_3 = {
+	icon = "GFX_repeal_blue"
+
+	resources = {
+		category = resolutions
+		cost = {
+			influence = @resolution_cost_denounce
+		}
+	}
+	target = no
+	sanction = yes
+	fire_and_forget = yes
+
+	effect = {
+		custom_tooltip = resolution_sanctions_uniform_repeal_3
+		hidden_effect = {
+			cancel_resolution = "resolution_sanctions_uniform_3"
+			set_timed_country_flag = { flag = galactic_community_resolution_passed_general days = @resolution_flag_timer }
+			add_modifier = {
+				modifier = resolution_passed_diplomatic_weight
+				days = 2200
+			}
+		}
+	}
+
+	fail_effects = {
+		hidden_effect = {
+			set_timed_country_flag = { flag = galactic_community_resolution_failed_general days = @resolution_flag_timer }
+			add_modifier = {
+				modifier = resolution_failed_diplomatic_weight
+				days = 2200
+			}
+		}
+	}
+
+	potential = {
+		has_federations_dlc = yes
+		is_active_resolution = "resolution_sanctions_tech_3"
+	}
+
+	triggered_modifier = {
+		potential = {
+			OR = {
+				is_in_breach_of_any = yes
+				has_modifier = resolution_denounced
+			}
+		}
+		modifier = {
+			resolution_cg_plus_sanction_1 = 2
+			resolution_cg_plus_sanction_2 = 1
+
+		}
+	}
+
+	ai_weight = {
+		weight = @resolution_weight_unpopular
+
+		modifier = {
+			factor = 2
+			is_in_breach_of_any = yes
+		}
+
+		modifier = {
+			factor = 0.25
+			is_in_breach_of_any = no
+			is_materialist = yes
+		}
+
+		modifier = {
+			factor = 2
+			any_federation_ally = {
+				OR = {
+					is_in_breach_of_any = yes
+					has_modifier = resolution_denounced
+				}
+			}
+		}
+
+		modifier = {
+			factor = 0.75
+			any_rival_country = {
+				OR = {
+					is_in_breach_of_any = yes
+					has_modifier = resolution_denounced
+				}
+			}
+		}
+	}
+}

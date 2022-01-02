@@ -1,0 +1,210 @@
+#######################################################################
+# 本mod附带的灰风立绘文件拥有者为 “上古复读机”（b站同名）并已授权本KDC mod组使用。
+# 若要使用此灰风立绘并公布mod，请先自行咨询其本人意见。
+# 本mod仅用于Stellais modder群内作交流学习之用，请勿擅自传播，后果自负。
+# 若发现有任何未经原作者同意或未取得授权的情况下随意使用本mod及本mod内容的情况
+# 本人将考虑停止维护并制作类似工具界面并公开于群内，请自重。
+# KDC mod组，vvlolicon，2021/6/9
+#######################################################################
+
+# 立绘差分通过调整变量改变（本mod中为cg_dialogue_leader变量）
+# 切换至其他人视角时变暗效果则通过加flag来切换立绘明暗效果
+# （本mod中为cg_dialogue_charactor_lost_focus的flag效果）
+# 立绘正常状态的potential条件必然为
+# check_variable = { which = 变量名 value = x }
+# NOT = { has_country_flag = xxx }
+# 变暗状态则将country flag条件的not去掉即可，参照下方的button effect
+
+#######################################################################
+
+# 立绘大小为636*780，可用dtx3压缩，请尽量将立绘置于中间
+# 具体增加方法为：
+# 1. 将立绘用ps修整至以上大小，并通过黑白效果制作一个变暗的立绘
+# 2. 在gfx里写好sprite
+# 3. 复制以下任一项button effect以及在变暗效果的button effect，并更改名字和变量判断的数值
+# 4. 于00_CG_dialogue.gui和00_CG_dialogue_no_option.gui文件的人物立绘处复制加上一项effect button type
+# 5. 将复制的effect button type的quadTextureSprite修改为在gfx文件里写好的sprite
+# 6. 将复制的effect button type的effect修改为在本文件新增的button effect
+# 7. 若你使用自定义立绘，请最好直接复制并修改上述两个gui文件，并将立绘的effect button type清空替换至你的button effect
+# 同时最好也复制修改背景和立绘的button effect和控制变量以防与本mod内容冲突
+
+# 人物立绘（灰风）
+cg_plus_uniform_evt_pic_1500 = {
+	potential = {
+		FROM = { 
+			check_variable = { which = cg_plus_evt_pic value = 1500 }
+		}
+	}
+	allow = { always = yes }
+	effect = {}
+}
+
+cg_plus_uniform_evt_pic_1501 = {
+	potential = {
+		FROM = { 
+			check_variable = { which = cg_plus_evt_pic value = 1501 }
+		}
+	}
+	allow = { always = yes }
+	effect = {}
+}
+cg_plus_uniform_evt_pic_1502 = {
+	potential = {FROM = { check_variable = { which = cg_plus_evt_pic value = 1502 }}}
+	allow = { always = yes }
+	effect = {}
+}
+cg_plus_uniform_evt_pic_1503 = {
+	potential = {FROM = { check_variable = { which = cg_plus_evt_pic value = 1503 }}}
+	allow = { always = yes }
+	effect = {}
+}
+
+
+
+cg_plus_uniform_evt_pic_2001 = {
+	potential = {FROM = { check_variable = { which = cg_plus_evt_pic value = 2001 }}}
+	allow = { always = yes }
+	effect = {}
+}
+cg_plus_uniform_evt_pic_2002 = {
+	potential = {FROM = { check_variable = { which = cg_plus_evt_pic value = 2002 }}}
+	allow = { always = yes }
+	effect = {}
+}
+
+cg_plus_uniform_evt_pic_2003 = {
+	potential = {FROM = { check_variable = { which = cg_plus_evt_pic value = 2003 }}}
+	allow = { always = yes }
+	effect = {}
+}
+cg_plus_uniform_evt_pic_2005 = {
+	potential = {FROM = { check_variable = { which = cg_plus_evt_pic value = 2005 }}}
+	allow = { always = yes }
+	effect = {}
+}
+cg_plus_uniform_evt_pic_2006 = {
+	potential = {FROM = { check_variable = { which = cg_plus_evt_pic value = 2006 }}}
+	allow = { always = yes }
+	effect = {}
+}
+cg_plus_uniform_evt_pic_2007 = {
+	potential = {FROM = { check_variable = { which = cg_plus_evt_pic value = 2007 }}}
+	allow = { always = yes }
+	effect = {}
+}
+cg_plus_uniform_evt_pic_1100 = {
+	potential = {FROM = { check_variable = { which = cg_plus_evt_pic value = 1100 }}}
+	allow = { always = yes }
+	effect = {}
+}
+cg_plus_uniform_evt_pic_1101 = {
+	potential = {FROM = { check_variable = { which = cg_plus_evt_pic value = 1101 }}}
+	allow = { always = yes }
+	effect = {}
+}
+cg_plus_uniform_evt_pic_1102 = {
+	potential = {FROM = { check_variable = { which = cg_plus_evt_pic value = 1102 }}}
+	allow = { always = yes }
+	effect = {}
+}
+cg_plus_uniform_evt_pic_1200 = {
+	potential = {FROM = { check_variable = { which = cg_plus_evt_pic value = 1200 }}}
+	allow = { always = yes }
+	effect = {}
+}
+cg_plus_uniform_evt_pic_1201 = {
+	potential = {FROM = { check_variable = { which = cg_plus_evt_pic value = 1201 }}}
+	allow = { always = yes }
+	effect = {}
+}
+cg_plus_uniform_evt_pic_1202 = {
+	potential = {FROM = { check_variable = { which = cg_plus_evt_pic value = 1202 }}}
+	allow = { always = yes }
+	effect = {}
+}
+cg_plus_uniform_evt_pic_1300 = {
+	potential = {FROM = { check_variable = { which = cg_plus_evt_pic value = 1300 }}}
+	allow = { always = yes }
+	effect = {}
+}
+cg_plus_uniform_evt_pic_1301 = {
+	potential = {FROM = { check_variable = { which = cg_plus_evt_pic value = 1301 }}}
+	allow = { always = yes }
+	effect = {}
+}
+cg_plus_uniform_evt_pic_1302 = {
+	potential = {FROM = { check_variable = { which = cg_plus_evt_pic value = 1302 }}}
+	allow = { always = yes }
+	effect = {}
+}
+
+cg_plus_uniform_evt_pic_1600 = {
+	potential = {FROM = { check_variable = { which = cg_plus_evt_pic value = 1600 }}}
+	allow = { always = yes }
+	effect = {}
+}
+cg_plus_uniform_evt_pic_1601 = {
+	potential = {FROM = { check_variable = { which = cg_plus_evt_pic value = 1601 }}}
+	allow = { always = yes }
+	effect = {}
+}
+cg_plus_uniform_evt_pic_1602 = {
+	potential = {FROM = { check_variable = { which = cg_plus_evt_pic value = 1602 }}}
+	allow = { always = yes }
+	effect = {}
+}
+cg_plus_uniform_evt_pic_1603 = {
+	potential = {FROM = { check_variable = { which = cg_plus_evt_pic value = 1603 }}}
+	allow = { always = yes }
+	effect = {}
+}
+cg_plus_uniform_evt_pic_1604 = {
+	potential = {FROM = { check_variable = { which = cg_plus_evt_pic value = 1604 }}}
+	allow = { always = yes }
+	effect = {}
+}
+cg_plus_uniform_evt_pic_16031 = {
+	potential = {FROM = { check_variable = { which = cg_plus_evt_pic value = 16031 }}}
+	allow = { always = yes }
+	effect = {}
+}
+cg_plus_uniform_evt_pic_16032 = {
+	potential = {FROM = { check_variable = { which = cg_plus_evt_pic value = 16032 }}}
+	allow = { always = yes }
+	effect = {}
+}
+cg_plus_uniform_evt_pic_1605 = {
+	potential = {FROM = { check_variable = { which = cg_plus_evt_pic value = 1605 }}}
+	allow = { always = yes }
+	effect = {}
+}
+
+cg_plus_uniform_evt_pic_1700 = {
+	potential = {FROM = { check_variable = { which = cg_plus_evt_pic value = 1700 }}}
+	allow = { always = yes }
+	effect = {}
+}
+cg_plus_uniform_evt_pic_1701 = {
+	potential = {FROM = { check_variable = { which = cg_plus_evt_pic value = 1701 }}}
+	allow = { always = yes }
+	effect = {}
+}
+cg_plus_uniform_evt_pic_1702 = {
+	potential = {FROM = { check_variable = { which = cg_plus_evt_pic value = 1702 }}}
+	allow = { always = yes }
+	effect = {}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

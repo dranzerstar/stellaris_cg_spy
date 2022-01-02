@@ -1,0 +1,44 @@
+leader_trait_masochist_governor = {
+	cost = 0	# 特质点数花费
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_masochist.dds"
+
+	initial = no	# 开局可用
+	modification = no	# 可否修改
+	randomized = no	# 可否随机
+	modifier = {
+		pop_growth_speed = 0.2
+		planet_jobs_produces_mult = 0.1
+		planet_decision_enact_speed_mult = 0.2
+		leaders_upkeep_mult = 2
+	}
+	leader_trait = {
+		governor
+	}
+	leader_class = {
+		governor
+	}
+	ai_weight = {
+		weight = 200
+	}
+}
+
+
+leader_trait_sailor_event = {
+	cost = 1
+	modification = no
+	initial = no
+	randomized = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_bureaucrat.dds"
+	custom_tooltip = "leader_trait_sailor_event_t"
+	modifier = {
+		pop_growth_speed = 0.2
+		planet_jobs_produces_mult = 0.2
+		planet_jobs_sr_beauty_add = 1
+		planet_jobs_sr_beauty_upkeep_mult = -0.2
+		leaders_upkeep_mult = 2
+	}
+
+	
+	leader_trait = { governor }
+	leader_class = { governor }
+}

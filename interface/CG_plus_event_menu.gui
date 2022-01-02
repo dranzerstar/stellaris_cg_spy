@@ -1,0 +1,627 @@
+guiTypes = {
+
+	containerWindowType = {
+		name = "cg_plus_evt_menu_button"
+		position = { x=0 y=0 }
+		size = { width = 600 height = 60 }
+		moveable = no
+		
+		buttonType = {
+			name = "option_button"
+			quadTextureSprite = "GFX_cg_plus_evt_menu_L_button" #make new size button 
+			position = { x=50 y=4}
+			font = "cg_16b"
+			orientation = "center"
+			text = "OPTION_TEXT"
+			clicksound = "confirm_click"
+		}
+
+		OverlappingElementsBoxType = {
+			name = "trigger_icons"
+			position = { x = 0  y = 10 }
+			size = { x=65 y= 28 }
+		}
+	}
+
+	# containerWindowType = {
+	# 	name = "cg_dialogue_button_last_new"
+	# 	position = { x=0 y=100 }
+	# 	size = { width = 460 height = 61 }
+	# 	moveable = no
+		
+	# 	buttonType = {
+	# 		name = "option_button"
+	# 		quadTextureSprite = "GFX_cg_dialogue_button_460_56"
+	# 		position = { x=0 y=0 }
+	# 		font = "cg_16b"
+	# 		text = "OPTION_TEXT"
+	# 		clicksound = "confirm_click"
+	# 	}
+
+	# 	OverlappingElementsBoxType = {
+	# 		name = "trigger_icons"
+	# 		position = { x = 0  y = 10 }
+	# 		size = { x=65 y= 28 }
+	# 	}
+	# }
+
+	##################################################################
+	# gal 对话界面（无选项）
+	##################################################################
+	# 
+	# 本界面不设对话按钮，按钮将伪装成透明的界面，以表现点击即继续的效果
+	# 添加或更改背景及人物请参阅common/button_effect里的文件注释
+	# 若你使用自定义立绘，请最好直接复制并修改上述此gui文件的gui名，并将立绘的effect button type清空替换至你的button effect
+	# 同时最好也复制修改背景和立绘的button effect和控制变量以防与本mod内容冲突
+	# 
+	#######################################################################
+	# 本mod附带的灰风立绘文件拥有者为 “上古复读机”（b站同名）并已授权本KDC mod组使用。
+	# 若要使用此灰风立绘并公布mod，请先自行咨询其本人意见。
+	# 本mod仅用于Stellais modder群内作交流学习之用，请勿擅自传播，后果自负。
+	# 若发现有任何未经原作者同意或未取得授权的情况下随意使用本mod及本mod内容的情况
+	# 本人将考虑停止维护并制作类似工具界面并公开于群内，请自重。
+	# KDC mod组，vvlolicon，2021/6/9
+	#######################################################################
+    #1620 x 850 overall
+	#1000 x 750 image
+	# x=1010 size 600 x 500 text
+	containerWindowType = {
+		name = "cg_plus_evt_menu"
+		size = { width = 1620 height = 850 }
+		moveable = yes
+		orientation = center
+		origo = center
+		
+		background = {
+			name = "background"
+			quadTextureSprite ="GFX_evt_menu_bg_L" ##TODO  set this to  1620x850 
+			position = { x = 0 y = 0 }
+		}
+
+		# effectButtonType = {
+		# 	name = "CG_dialogue_bg_1"
+		# 	quadTextureSprite = "GFX_cg_dialogue_title_kdc_distant_star"
+		# 	orientation = "UPPER_LEFT"
+		# 	position = { x = 13 y = 14 }
+		# 	effect = "cg_dialogue_title"
+		# }
+
+		###########################
+		# gal 背景
+		###########################
+		@cg_dialogue_bg_y = 50
+		effectButtonType = {
+			name = "CG_dialogue_bg_1"
+			quadTextureSprite = "GFX_cg_dialogue_bg_alien_city"
+			orientation = "UPPER_LEFT"
+			position = { x = 0 y = @cg_dialogue_bg_y }
+			effect = "cg_dialogue_bg1_effect"
+		}
+		###########################
+		#picture area start  
+		###########################
+
+		@portrait_x = 0
+		@portrait_y = 50
+
+		effectButtonType = {
+			name = "cg_plus_uniform_evt_pic_1200_gfx"
+			quadTextureSprite = "GFX_evt_uniform_princess_L_01"
+			Orientation = "UPPER_LEFT"
+			position = { x = @portrait_x y = @portrait_y }
+			effect = "cg_plus_uniform_evt_pic_1200"
+		}
+		effectButtonType = {
+			name = "cg_plus_uniform_evt_pic_1201_gfx"
+			quadTextureSprite = "GFX_evt_uniform_princess_L_02"
+			Orientation = "UPPER_LEFT"
+			position = { x = @portrait_x y = @portrait_y }
+			effect = "cg_plus_uniform_evt_pic_1201"
+		}
+		effectButtonType = {
+			name = "cg_plus_uniform_evt_pic_1300_gfx"
+			quadTextureSprite = "GFX_evt_uniform_army_L_01"
+			Orientation = "UPPER_LEFT"
+			position = { x = @portrait_x y = @portrait_y }
+			effect = "cg_plus_uniform_evt_pic_1300"
+		}
+		effectButtonType = {
+			name = "cg_plus_uniform_evt_pic_1301_gfx"
+			quadTextureSprite = "GFX_evt_uniform_army_L_02"
+			Orientation = "UPPER_LEFT"
+			position = { x = @portrait_x y = @portrait_y }
+			effect = "cg_plus_uniform_evt_pic_1301"
+		}
+		effectButtonType = {
+			name = "cg_plus_uniform_evt_pic_1500_gfx"
+			quadTextureSprite = "GFX_evt_uniform_sailorfuku_L_01"
+			Orientation = "UPPER_LEFT"
+			position = { x = @portrait_x y = @portrait_y }
+			effect = "cg_plus_uniform_evt_pic_1500"
+		}
+		effectButtonType = {
+			name = "cg_plus_uniform_evt_pic_2001_gfx"
+			quadTextureSprite = "GFX_evt_uniform_active_nun_L_01"
+			Orientation = "UPPER_LEFT"
+			position = { x = @portrait_x y = @portrait_y }
+			effect = "cg_plus_uniform_evt_pic_2001"
+		}
+		effectButtonType = {
+			name = "cg_plus_uniform_evt_pic_2002_gfx"
+			quadTextureSprite = "GFX_evt_uniform_active_princess_L_01"
+			Orientation = "UPPER_LEFT"
+			position = { x = @portrait_x y = @portrait_y }
+			effect = "cg_plus_uniform_evt_pic_2002"
+		}
+		effectButtonType = {
+			name = "cg_plus_uniform_evt_pic_2003_gfx"
+			quadTextureSprite = "GFX_evt_uniform_active_army_L_01"
+			Orientation = "UPPER_LEFT"
+			position = { x = @portrait_x y = @portrait_y }
+			effect = "cg_plus_uniform_evt_pic_2003"
+		}
+		effectButtonType = {
+			name = "cg_plus_uniform_evt_pic_2005_gfx"
+			quadTextureSprite = "GFX_evt_uniform_active_sailorfuku_L_01"
+			Orientation = "UPPER_LEFT"
+			position = { x = @portrait_x y = @portrait_y }
+			effect = "cg_plus_uniform_evt_pic_2005"
+		}
+		effectButtonType = {
+			name = "cg_plus_uniform_evt_pic_2006_gfx"
+			quadTextureSprite = "GFX_evt_uniform_active_bunny_L_01"
+			Orientation = "UPPER_LEFT"
+			position = { x = @portrait_x y = @portrait_y }
+			effect = "cg_plus_uniform_evt_pic_2006"
+		}
+		effectButtonType = {
+			name = "cg_plus_uniform_evt_pic_2007_gfx"
+			quadTextureSprite = "GFX_evt_uniform_active_microbikini_L_01"
+			Orientation = "UPPER_LEFT"
+			position = { x = @portrait_x y = @portrait_y }
+			effect = "cg_plus_uniform_evt_pic_2007"
+		}
+		###########################
+		#picture area end
+		###########################
+		iconType = {
+			name = "CG_dialogue_main_element_new"
+			Orientation = "UPPER_LEFT"
+			position = { x = -55555 y = 0 }
+			quadTextureSprite = "GFX_cg_dialogue_above_elements_new"
+			alwaysTransparent = yes
+		}
+		#text area
+		instantTextBoxType = {
+			name = "alien_message"
+			font = "malgun_goth_24"
+			format = "LEFT"
+			orientation = "UPPER_LEFT"
+			position = { x = 1010 y = 120 }
+			maxWidth = 600
+			maxHeight = 450
+			alwaysTransparent = yes
+			scrollbartype = "standardtext_slider"
+		}
+
+		### EVENT DIPLO ###
+		#title area
+		containerWindowType = {
+			name = "EVENT_DIPLO"
+			position = { x = 5 y = 0 }
+			size = { width=600 height=250 }
+			moveable = no
+			
+			instantTextBoxType={
+				name = "action_title"
+				font = "malgun_goth_24"
+				position = { x = 1010 y = 60 }
+				maxWidth = 600
+				maxHeight = 50
+				format = CENTER
+				fixedSize = yes
+				alwaysTransparent = yes
+			}
+			instantTextBoxType={ name = "action_desc" font = "malgun_goth_24" position = { x = -1453 y = -12450 } } # hidden
+			
+			listboxType = {
+				name = "option_list"
+				position = { x = 1160 y = 610 }
+				backGround=""
+				size = { x = 300 y = 600 }
+				scrollbartype = "standardlistbox_slider"
+				spacing = 20
+				borderSize = { x = 0 y = 0 }
+				Orientation = "CENTERED_UP"
+			}
+		}
+
+
+		############################################
+		### ALL OF THIS IS HIDDEN OR DISPLACED ! ###
+		############################################
+		instantTextBoxType = { name = "heading" font = "malgun_goth_24" position = { x = -1453 y = -12450 }} # hidden
+		iconType = { name = "empire_header_line" quadTextureSprite = "GFX_line_long_caravaneer" position = { x = -1453 y = -12450 } }
+		buttonType = { name = "focus_button" position = { x = -1453 y = -12450 } spriteType = "GFX_fleetview_focus" }
+		buttonType = { name = "alien_message_background" size = { x = 0 y = 0 } position = { x = -1453 y = -12450 } spriteType = "GFX_tiles_dark_area_cut_8" } # hidden
+		buttonType = { name = "confirm_button" quadTextureSprite = "GFX_standard_button_142_34_button" } # hidden
+		containerWindowType = {
+			name = "portrait"
+			position = { x = -1453 y = -12450 }
+			size = { width = 0 height = 0 } # hide portrait window
+			iconType = { name = "portrait" spriteType = "GFX_portrait_gamesetup_mask"  } # hidden
+			iconType = { name = "black_frame" spriteType = "GFX_diplomacy_portrait_shadow_frame" } # hidden
+			iconType = { name = "stripes_1" spriteType = "GFX_diplomacy_stripes_2" } # hidden
+			iconType = { name = "city_frame" spriteType = "GFX_diplomacy_portrait_frame" } # hidden
+		}
+		iconType = { name = "empire_info_bg" spriteType = "GFX_diplomacy_dark_fade_bg" } # hidden
+		instantTextBoxType={ name = "empire_name" font = "malgun_goth_24" } # hidden 
+		instantTextBoxType={ name = "empire_government_type" font = "cg_16b" } # hidden
+		instantTextBoxType={ name = "empire_personality_type" font = "cg_16b" } # hidden
+		OverlappingElementsBoxType = { name = "empire_ethics_icons" position = { x = -1453 y = -12450 } } # hidden
+		buttonType = { name = "empire_flag" spriteType = "GFX_empire_flag_128" position = { x = -1453 y = -12450 } } # hidden
+		containerWindowType = {
+			name = "leader_details"
+			position = { x = -1453 y = -12450 }
+			containerWindowType = { name = "empire_traits_box" } # hidden
+			instantTextBoxType = { name = "empire_traits_label" font = "cg_16b" } # hidden
+			overlappingElementsBoxType = { name = "leader_traits" } # hidden
+			instantTextBoxType = { name = "leader_name" font = "cg_16b" } # hidden
+			instantTextBoxType = { name = "leader_species" font = "cg_16b" } # hidden
+		}
+		containerWindowType = {
+			name = "opinion_window"
+			position = { x = -1453 y = -12450 }
+			size = { width = 94 height = 30 }
+			iconType = { name = "their_opinion_icon" spriteType = "GFX_diplomacy_opinion" } # hidden
+			instantTextBoxType = { name = "their_opinion" font = "cg_16b" }
+		}	
+	}
+}
+
+
+guiTypes = {
+
+	containerWindowType = {
+		name = "cg_plus_evt_menu_button"
+		position = { x=0 y=0 }
+		size = { width = 600 height = 60 }
+		moveable = no
+		
+		buttonType = {
+			name = "option_button"
+			quadTextureSprite = "GFX_cg_plus_evt_menu_L_button" #make new size button 
+			position = { x=0 y=4}
+			font = "cg_16b"
+			orientation = "left"
+			text = "OPTION_TEXT"
+			clicksound = "confirm_click"
+
+		}
+
+		OverlappingElementsBoxType = {
+			name = "trigger_icons"
+			position = { x = 0  y = 10 }
+			size = { x=65 y= 28 }
+		}
+	}
+
+	# containerWindowType = {
+	# 	name = "cg_dialogue_button_last_new"
+	# 	position = { x=0 y=100 }
+	# 	size = { width = 460 height = 61 }
+	# 	moveable = no
+		
+	# 	buttonType = {
+	# 		name = "option_button"
+	# 		quadTextureSprite = "GFX_cg_dialogue_button_460_56"
+	# 		position = { x=0 y=0 }
+	# 		font = "cg_16b"
+	# 		text = "OPTION_TEXT"
+	# 		clicksound = "confirm_click"
+	# 	}
+
+	# 	OverlappingElementsBoxType = {
+	# 		name = "trigger_icons"
+	# 		position = { x = 0  y = 10 }
+	# 		size = { x=65 y= 28 }
+	# 	}
+	# }
+
+	##################################################################
+	# gal 对话界面（无选项）
+	##################################################################
+	# 
+	# 本界面不设对话按钮，按钮将伪装成透明的界面，以表现点击即继续的效果
+	# 添加或更改背景及人物请参阅common/button_effect里的文件注释
+	# 若你使用自定义立绘，请最好直接复制并修改上述此gui文件的gui名，并将立绘的effect button type清空替换至你的button effect
+	# 同时最好也复制修改背景和立绘的button effect和控制变量以防与本mod内容冲突
+	# 
+	#######################################################################
+	# 本mod附带的灰风立绘文件拥有者为 “上古复读机”（b站同名）并已授权本KDC mod组使用。
+	# 若要使用此灰风立绘并公布mod，请先自行咨询其本人意见。
+	# 本mod仅用于Stellais modder群内作交流学习之用，请勿擅自传播，后果自负。
+	# 若发现有任何未经原作者同意或未取得授权的情况下随意使用本mod及本mod内容的情况
+	# 本人将考虑停止维护并制作类似工具界面并公开于群内，请自重。
+	# KDC mod组，vvlolicon，2021/6/9
+	#######################################################################
+    #900 x 900 overall
+	#550 x 800 image
+	# x=560 size 330 x 500 text
+	containerWindowType = {
+		name = "cg_plus_evt_menu_p"
+		size = { width = 900 height = 900 }
+		moveable = yes
+		orientation = center
+		origo = center
+		
+		background = {
+			name = "background"
+			quadTextureSprite ="GFX_evt_menu_bg_P" ##TODO  set this to  1620x850 
+			position = { x = 0 y = 0 }
+		}
+
+		# effectButtonType = {
+		# 	name = "CG_dialogue_bg_1"
+		# 	quadTextureSprite = "GFX_cg_dialogue_title_kdc_distant_star"
+		# 	orientation = "UPPER_LEFT"
+		# 	position = { x = 13 y = 14 }
+		# 	effect = "cg_dialogue_title"
+		# }
+
+		###########################
+		# gal 背景 unused
+		###########################
+		@cg_dialogue_bg_y = 50
+		effectButtonType = {
+			name = "CG_dialogue_bg_1"
+			quadTextureSprite = "GFX_cg_dialogue_bg_alien_city"
+			orientation = "UPPER_LEFT"
+			position = { x = 0 y = @cg_dialogue_bg_y }
+			effect = "cg_dialogue_bg1_effect"
+		}
+		
+		###########################
+		#picture area start  P
+		###########################
+
+		@portrait_x = 0
+		@portrait_y = 50
+
+		effectButtonType = {
+			name = "cg_plus_uniform_evt_pic_1100_gfx"
+			quadTextureSprite = "GFX_evt_uniform_nun_P_01"
+			Orientation = "UPPER_LEFT"
+			position = { x = @portrait_x y = @portrait_y }
+			effect = "cg_plus_uniform_evt_pic_1100"
+		}
+		effectButtonType = {
+			name = "cg_plus_uniform_evt_pic_1101_gfx"
+			quadTextureSprite = "GFX_evt_uniform_nun_P_02"
+			Orientation = "UPPER_LEFT"
+			position = { x = @portrait_x y = @portrait_y }
+			effect = "cg_plus_uniform_evt_pic_1101"
+		}
+		effectButtonType = {
+			name = "cg_plus_uniform_evt_pic_1102_gfx"
+			quadTextureSprite = "GFX_evt_uniform_nun_P_03"
+			Orientation = "UPPER_LEFT"
+			position = { x = @portrait_x y = @portrait_y }
+			effect = "cg_plus_uniform_evt_pic_1102"
+		}
+		effectButtonType = {
+			name = "cg_plus_uniform_evt_pic_1202_gfx"
+			quadTextureSprite = "GFX_evt_uniform_princess_P_03"
+			Orientation = "UPPER_LEFT"
+			position = { x = @portrait_x y = @portrait_y }
+			effect = "cg_plus_uniform_evt_pic_1202"
+		}
+		effectButtonType = {
+			name = "cg_plus_uniform_evt_pic_1302_gfx"
+			quadTextureSprite = "GFX_evt_uniform_army_P_01"
+			Orientation = "UPPER_LEFT"
+			position = { x = @portrait_x y = @portrait_y }
+			effect = "cg_plus_uniform_evt_pic_1302"
+		}
+		effectButtonType = {
+			name = "cg_plus_uniform_evt_pic_1501_gfx"
+			quadTextureSprite = "GFX_evt_uniform_sailorfuku_P_01"
+			Orientation = "UPPER_LEFT"
+			position = { x = @portrait_x y = @portrait_y }
+			effect = "cg_plus_uniform_evt_pic_1501"
+		}
+		effectButtonType = {
+			name = "cg_plus_uniform_evt_pic_1502_gfx"
+			quadTextureSprite = "GFX_evt_uniform_sailorfuku_P_02"
+			Orientation = "UPPER_LEFT"
+			position = { x = @portrait_x y = @portrait_y }
+			effect = "cg_plus_uniform_evt_pic_1502"
+		}
+		effectButtonType = {
+			name = "cg_plus_uniform_evt_pic_1600_gfx"
+			quadTextureSprite = "GFX_evt_uniform_bunny_P_01"
+			Orientation = "UPPER_LEFT"
+			position = { x = @portrait_x y = @portrait_y }
+			effect = "cg_plus_uniform_evt_pic_1600"
+		}
+		effectButtonType = {
+			name = "cg_plus_uniform_evt_pic_1601_gfx"
+			quadTextureSprite = "GFX_evt_uniform_bunny_P_02"
+			Orientation = "UPPER_LEFT"
+			position = { x = @portrait_x y = @portrait_y }
+			effect = "cg_plus_uniform_evt_pic_1601"
+		}
+		effectButtonType = {
+			name = "cg_plus_uniform_evt_pic_1602_gfx"
+			quadTextureSprite = "GFX_evt_uniform_bunny_P_03"
+			Orientation = "UPPER_LEFT"
+			position = { x = @portrait_x y = @portrait_y }
+			effect = "cg_plus_uniform_evt_pic_1602"
+		}
+		effectButtonType = {
+			name = "cg_plus_uniform_evt_pic_1603_gfx"
+			quadTextureSprite = "GFX_evt_uniform_bunny_P_04"
+			Orientation = "UPPER_LEFT"
+			position = { x = @portrait_x y = @portrait_y }
+			effect = "cg_plus_uniform_evt_pic_1603"
+		}
+		effectButtonType = {
+			name = "cg_plus_uniform_evt_pic_16031_gfx"
+			quadTextureSprite = "GFX_evt_uniform_bunny_P_041"
+			Orientation = "UPPER_LEFT"
+			position = { x = @portrait_x y = @portrait_y }
+			effect = "cg_plus_uniform_evt_pic_16031"
+		}
+		effectButtonType = {
+			name = "cg_plus_uniform_evt_pic_16031_gfx"
+			quadTextureSprite = "GFX_evt_uniform_bunny_P_042"
+			Orientation = "UPPER_LEFT"
+			position = { x = @portrait_x y = @portrait_y }
+			effect = "cg_plus_uniform_evt_pic_16032"
+		}
+		effectButtonType = {
+			name = "cg_plus_uniform_evt_pic_1604_gfx"
+			quadTextureSprite = "GFX_evt_uniform_bunny_P_05"
+			Orientation = "UPPER_LEFT"
+			position = { x = @portrait_x y = @portrait_y }
+			effect = "cg_plus_uniform_evt_pic_1604"
+		}
+		effectButtonType = {
+			name = "cg_plus_uniform_evt_pic_1604_gfx"
+			quadTextureSprite = "GFX_evt_uniform_bunny_P_05"
+			Orientation = "UPPER_LEFT"
+			position = { x = @portrait_x y = @portrait_y }
+			effect = "cg_plus_uniform_evt_pic_1604"
+		}
+		effectButtonType = {
+			name = "cg_plus_uniform_evt_pic_1604_gfx"
+			quadTextureSprite = "GFX_evt_uniform_bunny_P_05"
+			Orientation = "UPPER_LEFT"
+			position = { x = @portrait_x y = @portrait_y }
+			effect = "cg_plus_uniform_evt_pic_1604"
+		}
+		effectButtonType = {
+			name = "cg_plus_uniform_evt_pic_1605_gfx"
+			quadTextureSprite = "GFX_evt_uniform_bunny_P_06"
+			Orientation = "UPPER_LEFT"
+			position = { x = @portrait_x y = @portrait_y }
+			effect = "cg_plus_uniform_evt_pic_1605"
+		}
+		effectButtonType = {
+			name = "cg_plus_uniform_evt_pic_1700_gfx"
+			quadTextureSprite = "GFX_evt_uniform_microbikini_P_01"
+			Orientation = "UPPER_LEFT"
+			position = { x = @portrait_x y = @portrait_y }
+			effect = "cg_plus_uniform_evt_pic_1700"
+		}
+		effectButtonType = {
+			name = "cg_plus_uniform_evt_pic_1701_gfx"
+			quadTextureSprite = "GFX_evt_uniform_microbikini_P_02"
+			Orientation = "UPPER_LEFT"
+			position = { x = @portrait_x y = @portrait_y }
+			effect = "cg_plus_uniform_evt_pic_1701"
+		}
+		effectButtonType = {
+			name = "cg_plus_uniform_evt_pic_1702_gfx"
+			quadTextureSprite = "GFX_evt_uniform_microbikini_P_03"
+			Orientation = "UPPER_LEFT"
+			position = { x = @portrait_x y = @portrait_y }
+			effect = "cg_plus_uniform_evt_pic_1702"
+		}
+		###########################
+		#picture area end
+		###########################
+		iconType = {
+			name = "CG_dialogue_main_element_new"
+			Orientation = "UPPER_LEFT"
+			position = { x = -55555 y = 0 }
+			quadTextureSprite = "GFX_cg_dialogue_above_elements_new"
+			alwaysTransparent = yes
+		}
+		#text area
+		instantTextBoxType = {
+			name = "alien_message"
+			font = "malgun_goth_24"
+			format = "LEFT"
+			orientation = "UPPER_LEFT"
+			position = { x = 560 y = 110 }
+			maxWidth = 330
+			maxHeight = 470
+			alwaysTransparent = yes
+			scrollbartype = "standardtext_slider"
+		}
+
+		### EVENT DIPLO ###
+		#title area
+		containerWindowType = {
+			name = "EVENT_DIPLO"
+			position = { x = 5 y = 0 }
+			size = { width=330 height=250 }
+			moveable = no
+			
+			instantTextBoxType={
+				name = "action_title"
+				font = "malgun_goth_24"
+				position = { x = 560 y = 60 }
+				maxWidth = 330
+				maxHeight = 50
+				format = CENTER
+				fixedSize = yes
+				alwaysTransparent = yes
+			}
+			instantTextBoxType={ name = "action_desc" font = "malgun_goth_24" position = { x = -1453 y = -12450 } } # hidden
+			
+			listboxType = {
+				name = "option_list"
+				position = { x = 570 y = 620 }
+				backGround=""
+				size = { x = 330 y = 250 }
+				scrollbartype = "standardlistbox_slider"
+				spacing = 20
+				borderSize = { x = 0 y = 0 }
+				Orientation = "UPPER_LEFT"
+			}
+		}
+
+
+		############################################
+		### ALL OF THIS IS HIDDEN OR DISPLACED ! ###
+		############################################
+		instantTextBoxType = { name = "heading" font = "malgun_goth_24" position = { x = -1453 y = -12450 }} # hidden
+		iconType = { name = "empire_header_line" quadTextureSprite = "GFX_line_long_caravaneer" position = { x = -1453 y = -12450 } }
+		buttonType = { name = "focus_button" position = { x = -1453 y = -12450 } spriteType = "GFX_fleetview_focus" }
+		buttonType = { name = "alien_message_background" size = { x = 0 y = 0 } position = { x = -1453 y = -12450 } spriteType = "GFX_tiles_dark_area_cut_8" } # hidden
+		buttonType = { name = "confirm_button" quadTextureSprite = "GFX_standard_button_142_34_button" } # hidden
+		containerWindowType = {
+			name = "portrait"
+			position = { x = -1453 y = -12450 }
+			size = { width = 0 height = 0 } # hide portrait window
+			iconType = { name = "portrait" spriteType = "GFX_portrait_gamesetup_mask"  } # hidden
+			iconType = { name = "black_frame" spriteType = "GFX_diplomacy_portrait_shadow_frame" } # hidden
+			iconType = { name = "stripes_1" spriteType = "GFX_diplomacy_stripes_2" } # hidden
+			iconType = { name = "city_frame" spriteType = "GFX_diplomacy_portrait_frame" } # hidden
+		}
+		iconType = { name = "empire_info_bg" spriteType = "GFX_diplomacy_dark_fade_bg" } # hidden
+		instantTextBoxType={ name = "empire_name" font = "malgun_goth_24" } # hidden 
+		instantTextBoxType={ name = "empire_government_type" font = "cg_16b" } # hidden
+		instantTextBoxType={ name = "empire_personality_type" font = "cg_16b" } # hidden
+		OverlappingElementsBoxType = { name = "empire_ethics_icons" position = { x = -1453 y = -12450 } } # hidden
+		buttonType = { name = "empire_flag" spriteType = "GFX_empire_flag_128" position = { x = -1453 y = -12450 } } # hidden
+		containerWindowType = {
+			name = "leader_details"
+			position = { x = -1453 y = -12450 }
+			containerWindowType = { name = "empire_traits_box" } # hidden
+			instantTextBoxType = { name = "empire_traits_label" font = "cg_16b" } # hidden
+			overlappingElementsBoxType = { name = "leader_traits" } # hidden
+			instantTextBoxType = { name = "leader_name" font = "cg_16b" } # hidden
+			instantTextBoxType = { name = "leader_species" font = "cg_16b" } # hidden
+		}
+		containerWindowType = {
+			name = "opinion_window"
+			position = { x = -1453 y = -12450 }
+			size = { width = 94 height = 30 }
+			iconType = { name = "their_opinion_icon" spriteType = "GFX_diplomacy_opinion" } # hidden
+			instantTextBoxType = { name = "their_opinion" font = "cg_16b" }
+		}	
+	}
+}

@@ -1,0 +1,48 @@
+# 地下教会
+building_underground_church = {
+	base_buildtime = 360	# 基础建造时间
+	can_build = no
+	category = unity
+	potential = {
+		
+		NOR = {
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+		}
+
+	}
+	resources = {
+		category = planet_buildings
+		cost = {
+			# 花费
+			minerals = 0
+		}
+		upkeep = {
+			energy = 0
+		}
+		produces = {
+			trigger = {
+				planet = {
+					any_owned_pop = {
+						OR = {
+							has_job = holy_prayer
+							has_job = holy_sister
+						}
+					}
+				}
+			}
+			holylight_crystal = 8
+			
+		}
+	}
+	planet_modifier = {
+		# 星球调节器
+		job_holy_prayer_add = 10
+		job_holy_sister_add = 10
+		pop_happiness = 0.3
+	}
+	destroy_trigger = {
+
+	}
+
+}

@@ -1,0 +1,92 @@
+colorful_origin = {
+	strategy_weight = {
+		modifier = {
+            has_country_flag = asceticism_flag
+            has_country_flag = carnalism_flag
+			weight = 100
+		}
+	}
+
+	network_weight = {
+		modifier = {
+			target = {
+                OR={
+				has_country_flag = asceticism_flag
+                has_country_flag = carnalism_flag
+                }
+			}
+			weight = 50
+		}
+
+		modifier = {
+			owner = {
+				has_rival = root.target
+			}
+			weight = 10
+		}
+
+		modifier = {
+			owner = {
+				OR = {
+					is_neighbor_of = root.target 
+
+				}
+			}
+		}
+	}
+
+	operation_selector = weighted_random_available
+
+	operations = {
+		operation_acquire_lust_asset = {
+			operation_policy = until_max_network_cap_policy
+
+			target_value = {
+				min = 1
+			}
+		}
+		operation_send_warrior_asset = {
+			operation_policy = until_max_network_cap_policy
+
+			target_value = {
+				min = 1
+			}
+		}
+		operation_abduct_pops = {
+			operation_policy = fix_chance_10
+
+			target_value = {
+				min = 1
+			}
+		}
+
+		operation_holy_proj_battlenun = {
+			operation_policy = fix_chance_10
+
+			target_value = {
+				min = 1
+			}
+		}
+        operation_holy_proj_knight = {
+			operation_policy = fix_chance_10
+
+			target_value = {
+				min = 1
+			}
+		}
+        operation_holy_proj_tmn = {
+			operation_policy = fix_chance_10
+
+			target_value = {
+				min = 1
+			}
+		}
+        operation_holy_proj_mhsj = {
+			operation_policy = fix_chance_10
+
+			target_value = {
+				min = 1
+			}
+		}
+	}
+}

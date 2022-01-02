@@ -1,0 +1,81 @@
+#######################################################################
+# 
+# 此mod附带的背景均为公共素材，可随意使用
+# 
+#######################################################################
+cg_dialogue_button_log_effect = {
+	potential = { always = no }
+	allow = { always = no }
+	effect = {
+
+	}
+}
+cg_dialogue_title = {
+	potential = { check_variable = { which = cg_dialogue_title value = 0 }}
+	allow = { always = yes }
+	effect = {}
+}
+#######################
+# 背景
+#######################
+# 背景大小为1468*780，可用dtx3压缩
+# 在gfx编写sprite时需加上 masking_texture = "gfx/interface/cg_dialogue/gal_bg_mask.dds"
+# 背景使用变量cg_dialogue_bg更改，新增背景后请在gui加上新增的背景，最好不要修改变量名
+# 具体增加方法为：
+# 0. 在ps里导出上述大小的背景图
+# 1. 在gfx里按照上述格式写好sprite
+# 2. 复制以下任一项button effect并更改名字和变量判断的数值
+# 3. 于00_CG_dialogue.gui和00_CG_dialogue_no_option.gui文件的背景处复制加上一项effect button type
+# 4. 将复制的effect button type的quadTextureSprite修改为在gfx文件里写好的sprite
+# 5. 将复制的effect button type的effect修改为在本文件新增的button effect
+# 6. 若你使用自定义立绘，请最好直接复制并修改上述两个gui文件，并将立绘的effect button type清空替换至你的button effect
+# 同时最好也复制修改背景和立绘的button effect和控制变量以防与本mod内容冲突
+
+# alien_city 其他星球城市
+cg_dialogue_bg1_effect = {
+	potential = {
+		FROM = { check_variable = { which = cg_dialogue_bg value = 1 }}
+	}
+	allow = { always = yes }
+	effect = {}
+}
+# capital_city 自家城市
+cg_dialogue_bg2_effect = {
+	potential = {
+		FROM = { check_variable = { which = cg_dialogue_bg value = 2 }}
+	}
+	allow = { always = yes }
+	effect = {}
+}
+# 粉色 bg
+cg_dialogue_bg3_effect = {
+	potential = {
+		FROM = { check_variable = { which = cg_dialogue_bg value = 3 }}
+	}
+	allow = { always = yes }
+	effect = {}
+}
+# rural_area 郊区
+cg_dialogue_bg4_effect = {
+	potential = {
+		FROM = { check_variable = { which = cg_dialogue_bg value = 4 }}
+	}
+	allow = { always = yes }
+	effect = {}
+}
+# command_center 指挥中心
+cg_dialogue_bg5_effect = {
+	potential = {
+		FROM = { check_variable = { which = cg_dialogue_bg value = 5 }}
+	}
+	allow = { always = yes }
+	effect = {}
+}
+# ruler_office 总督办公室
+cg_dialogue_bg6_effect = {
+	potential = {
+		FROM = { check_variable = { which = cg_dialogue_bg value = 6 }}
+	}
+	allow = { always = yes }
+	effect = {}
+}
