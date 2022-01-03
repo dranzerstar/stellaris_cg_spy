@@ -122,6 +122,21 @@ cg_plus_uniform_evt_pic_1202 = {
 	allow = { always = yes }
 	effect = {}
 }
+cg_plus_uniform_evt_pic_1203 = {
+	potential = {FROM = { check_variable = { which = cg_plus_evt_pic value = 1203 }}}
+	allow = { always = yes }
+	effect = {}
+}
+cg_plus_uniform_evt_pic_1204 = {
+	potential = {FROM = { check_variable = { which = cg_plus_evt_pic value = 1204 }}}
+	allow = { always = yes }
+	effect = {}
+}
+cg_plus_uniform_evt_pic_1205 = {
+	potential = {FROM = { check_variable = { which = cg_plus_evt_pic value = 1205 }}}
+	allow = { always = yes }
+	effect = {}
+}
 cg_plus_uniform_evt_pic_1300 = {
 	potential = {FROM = { check_variable = { which = cg_plus_evt_pic value = 1300 }}}
 	allow = { always = yes }

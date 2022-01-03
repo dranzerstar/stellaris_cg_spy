@@ -329,6 +329,9 @@ country_event={
 				1={country_event = {id = CG_plus_policy_uniform.1200 }}
 				1={ modifier = {factor = 0 has_country_flag = asceticism_flag } country_event = {id = CG_plus_policy_uniform.1201 }}
 				1={country_event = {id = CG_plus_policy_uniform.1202 }}
+				1={country_event = {id = CG_plus_policy_uniform.1203 }}
+				1={ modifier = {factor = 0 has_country_flag = asceticism_flag } country_event = {id = CG_plus_policy_uniform.1201 }}
+				1={modifier = {factor = 0 has_country_flag = carnalism_flag } country_event = {id = CG_plus_policy_uniform.1204 }}
 		}}
 		if = { # 派送 群星军服 学园事件
 			limit = {has_policy_flag =  army_uniform }
@@ -738,11 +741,11 @@ country_event={
 }
 
 country_event={
-	id=CG_plus_policy_uniform.1203
-	title=CG_plus_policy_uniform.1203.name
+	id=CG_plus_policy_uniform.1204
+	title=CG_plus_policy_uniform.1204.name
 	custom_gui = cg_plus_evt_menu_p
 	custom_gui_option = cg_plus_evt_menu_button
-	desc=CG_plus_policy_uniform.1203.desc
+	desc=CG_plus_policy_uniform.1204.desc
 	diplomatic = yes
 	hide_window = no
 
@@ -750,25 +753,47 @@ country_event={
 	is_triggered_only = yes
 	immediate = {
 		set_variable = { which = cg_dialogue_bg value = -1 }
-		set_variable = { which = cg_plus_evt_pic value = 1203 }
+		set_variable = { which = cg_plus_evt_pic value = 1204 }
 	}
 
 	option={
-		name=CG_plus_policy_uniform.1203.a
+		name=CG_plus_policy_uniform.1204.a
 		add_modifier = {
-			modifier = CG_plus_mod_uniform_event_princess_1
-			years = 10 
+			modifier = CG_plus_mod_uniform_event_princess_3
+			years = 1
 		}
 	}
-	option={
-		name= CG_plus_policy_uniform.1203.b
-		add_modifier = {
-			modifier = CG_plus_mod_uniform_event_princess_2
-			years = 10 
-		}
-	}
+
 }
+country_event={
+	id=CG_plus_policy_uniform.1205
+	title=CG_plus_policy_uniform.1205.name
+	custom_gui = cg_plus_evt_menu_p
+	custom_gui_option = cg_plus_evt_menu_button
+	desc=CG_plus_policy_uniform.1205.desc
+	diplomatic = yes
+	hide_window = no
 
+
+	is_triggered_only = yes
+	immediate = {
+		set_variable = { which = cg_dialogue_bg value = -1 }
+		set_variable = { which = cg_plus_evt_pic value = 1205 }
+	}
+
+	option={
+		name=CG_plus_policy_uniform.1205.a
+		custom_tooltip = CG_plus_policy_uniform.1205.a1
+		root.capital_scope = {
+			add_modifier = {
+				modifier = CG_plus_mod_uniform_event_princess_4
+				
+			}
+		}
+
+	}
+
+}
 
 country_event={
 	id=CG_plus_policy_uniform.1500
@@ -1200,7 +1225,7 @@ country_event={
 		create_leader = {
 			name = "艳兔特工"
 			class = envoy
-			
+		}
 
 	}
 

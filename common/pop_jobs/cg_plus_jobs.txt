@@ -36,3 +36,53 @@ bunny_post = {
 		weight = 100
 	}
 }
+
+princess_ruler = {
+	category = ruler
+	condition_string = RULER_JOB_TRIGGER
+	clothes_texture_index = 1
+	icon = holylight_virgin
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+	possible_precalc = can_fill_ruler_job
+	resources = {
+		category = planet_bureaucrats
+		produces = {
+			unity = 5
+		}
+
+		upkeep = {
+			sr_beauty = 1
+		}
+	}
+	country_modifier = {
+		
+		planet_jobs_unity_produces_mult = 0.1
+		country_admin_cap_add = 40
+		planet_stability_add = 10
+	}
+	weight = {
+		weight = 5000
+		modifier = {
+			factor = 0
+			AND = {
+				owner = {
+					has_resource = {
+						type = sr_beauty
+						amount < 12
+					}
+				}
+				owner = {
+					has_monthly_income = {
+						resource = sr_beauty
+						value < 1
+					}
+				}
+			}
+		}
+	}
+}

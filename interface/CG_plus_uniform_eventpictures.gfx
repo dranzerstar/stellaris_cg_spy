@@ -247,9 +247,21 @@ spriteTypes = {
 		texturefile = "gfx/event_pictures/uniform_daily/princess_P_03.dds" 
 		alwaystransparent = yes
 	}
-
-
-
+	spriteType = {
+		name = "GFX_evt_uniform_princess_P_04"
+		texturefile = "gfx/event_pictures/uniform_daily/princess_P_04.dds" 
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_uniform_princess_P_05"
+		texturefile = "gfx/event_pictures/uniform_daily/princess_P_05.dds" 
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_uniform_princess_L_06"
+		texturefile = "gfx/event_pictures/uniform_daily/princess_L_06.dds" 
+		alwaystransparent = yes
+	}
 
 
 
