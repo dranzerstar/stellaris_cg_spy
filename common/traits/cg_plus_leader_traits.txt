@@ -1,25 +1,21 @@
-leader_trait_masochist_governor = {
+leader_trait_bunny_purist = {
 	cost = 0	# 特质点数花费
-	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_masochist.dds"
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_bureaucrat.dds"
 
 	initial = no	# 开局可用
 	modification = no	# 可否修改
 	randomized = no	# 可否随机
 	modifier = {
-		pop_growth_speed = 0.2
-		planet_jobs_produces_mult = 0.1
-		planet_decision_enact_speed_mult = 0.2
-		leaders_upkeep_mult = 2
+		all_technology_research_speed = 0.1
+		leaders_upkeep_mult = 0.5
 	}
 	leader_trait = {
-		governor
+		scientist
 	}
 	leader_class = {
-		governor
+		scientist
 	}
-	ai_weight = {
-		weight = 200
-	}
+
 }
 
 

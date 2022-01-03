@@ -355,6 +355,9 @@ country_event={
 				1={modifier = {factor = 0 has_country_flag = carnalism_flag }country_event = {id = CG_plus_policy_uniform.1600 }}
 				1={country_event = {id = CG_plus_policy_uniform.1601 }}
 				1={country_event = {id = CG_plus_policy_uniform.1602 }}
+				1={modifier = {factor = 0 has_country_flag = asceticism_flag }country_event = {id = CG_plus_policy_uniform.1603 }}
+				1={country_event = {id = CG_plus_policy_uniform.1604 }}
+				1={modifier = {factor = 0 has_country_flag = asceticism_flag }country_event = {id = CG_plus_policy_uniform.1605 }}
 		}}
 		if = { # 派送 微比坚尼 学园事件
 			limit = {has_policy_flag =  microbikini_uniform }
@@ -697,6 +700,71 @@ country_event={
 		add_resource = {
 			energy = 5000
 			consumer_goods = 5000
+		}
+	}
+}
+
+
+country_event={
+	id=CG_plus_policy_uniform.1203
+	title=CG_plus_policy_uniform.1203.name
+	custom_gui = cg_plus_evt_menu_p
+	custom_gui_option = cg_plus_evt_menu_button
+	desc=CG_plus_policy_uniform.1203.desc
+	diplomatic = yes
+	hide_window = no
+
+
+	is_triggered_only = yes
+	immediate = {
+		set_variable = { which = cg_dialogue_bg value = -1 }
+		set_variable = { which = cg_plus_evt_pic value = 1203 }
+	}
+
+	option={
+		name=CG_plus_policy_uniform.1203.a
+		add_modifier = {
+			modifier = CG_plus_mod_uniform_event_princess_1
+			years = 10 
+		}
+	}
+	option={
+		name= CG_plus_policy_uniform.1203.b
+		add_modifier = {
+			modifier = CG_plus_mod_uniform_event_princess_2
+			years = 10 
+		}
+	}
+}
+
+country_event={
+	id=CG_plus_policy_uniform.1203
+	title=CG_plus_policy_uniform.1203.name
+	custom_gui = cg_plus_evt_menu_p
+	custom_gui_option = cg_plus_evt_menu_button
+	desc=CG_plus_policy_uniform.1203.desc
+	diplomatic = yes
+	hide_window = no
+
+
+	is_triggered_only = yes
+	immediate = {
+		set_variable = { which = cg_dialogue_bg value = -1 }
+		set_variable = { which = cg_plus_evt_pic value = 1203 }
+	}
+
+	option={
+		name=CG_plus_policy_uniform.1203.a
+		add_modifier = {
+			modifier = CG_plus_mod_uniform_event_princess_1
+			years = 10 
+		}
+	}
+	option={
+		name= CG_plus_policy_uniform.1203.b
+		add_modifier = {
+			modifier = CG_plus_mod_uniform_event_princess_2
+			years = 10 
 		}
 	}
 }
@@ -1145,9 +1213,7 @@ country_event={
 
 		}
 	}
-	after = {
-		
-	}
+
 
 }
 
@@ -1167,8 +1233,25 @@ country_event={
 		set_variable = { which = cg_plus_evt_pic value = 1605 }
 	}
 
+	option={
+		name= CG_plus_policy_uniform.1605.a
+		add_modifier = {
+			modifier = CG_plus_mod_add_bunny_re_bunny_mod 
+			days = 365
+		}
+	}
+	option={
+		name= CG_plus_policy_uniform.1605.b
+		random_owned_leader={
+			limit = {
+				leader_class  = scientist
+					
+				
+			}
+			add_trait= leader_trait_bunny_purist
 
-
+		}
+	}
 }
 
 country_event={
