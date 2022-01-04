@@ -189,11 +189,27 @@ CG_plus_mod_uniform_event_princess_2={
 
 CG_plus_mod_uniform_event_princess_3={
 	pop_cat_slave_happiness = 0.5
-	planet_jobs_love_juice_produces_mult = 1
-	planet_jobs_alloys_produces_mult = 1
-	planet_jobs_energy_produces_mult = 1
-	planet_jobs_consumer_goods_produces_mult = 1
+	planet_jobs_love_juice_produces_mult = 2
+	planet_jobs_alloys_produces_mult = 2
+	planet_jobs_energy_produces_mult = 2
+	planet_jobs_consumer_goods_produces_mult = 2
 }
 CG_plus_mod_uniform_event_princess_4={
-	mod_job_princess_ruler_add =1
+	job_princess_ruler_add =1
+}
+
+CG_plus_mod_uniform_event_military_1={
+	category_voidcraft_research_speed_mult = 1.5
+}
+
+CG_plus_mod_uniform_event_military_2={
+	ship_starting_experience_add = 2000
+}
+
+CG_plus_mod_uniform_event_military_3={
+	intel_encryption_add = 4
+}
+
+CG_plus_mod_uniform_event_sailr_1={
+	pop_growth_speed= 1
 }

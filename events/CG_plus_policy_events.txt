@@ -408,9 +408,9 @@ country_event={
 		name= CG_plus_policy_uniform.1100.a
 		while={
 			count=5
-			limit={not={has_ethic=ethic_fanatic_spiritualist}}
+			limit={not={has_ethic=ethic_spiritualist}}
 			random_owned_pop = {
-				pop_change_ethic = ethic_fanatic_spiritualist
+				pop_change_ethic = ethic_spiritualist
 			}
 		}
 	}
@@ -575,8 +575,8 @@ country_event={
 	}
 	option={
 
-		name= CG_plus_policy_uniform.1301.b
-		custom_tooltip = CG_plus_policy_uniform.1301.bc
+		name= CG_plus_policy_uniform.1302.b
+		custom_tooltip = CG_plus_policy_uniform.1302.bc
 		create_leader = {
 			class = admiral
 			species = owner_species
@@ -596,6 +596,122 @@ country_event={
 	}
 
 }
+
+country_event={
+	id=CG_plus_policy_uniform.1303
+	title=CG_plus_policy_uniform.1303.name
+	custom_gui = cg_plus_evt_menu_p
+	custom_gui_option = cg_plus_evt_menu_button
+
+
+	desc = {
+		trigger ={ has_country_flag =asceticism_flag }
+		text= CG_plus_policy_uniform.1303.desc.b
+	}
+	desc = {
+		trigger ={ has_country_flag =carnalism_flag }
+		text= CG_plus_policy_uniform.1303.desc.a
+	}
+	
+
+
+	diplomatic = yes
+	hide_window = no
+
+
+	is_triggered_only = yes
+	immediate = {
+		set_variable = { which = cg_dialogue_bg value = -1 }
+		set_variable = { which = cg_plus_evt_pic value = 1303 }
+	}
+
+
+	option={
+		name=CG_plus_policy_uniform.1303.a
+		
+			add_modifier = {
+				modifier = CG_plus_mod_uniform_event_military_2
+	
+			}
+		
+	}
+	option={
+		name= CG_plus_policy_uniform.1303.b
+		add_modifier = {
+			modifier = CG_plus_mod_uniform_event_military_1
+		}
+	}
+
+}
+
+country_event={
+	id=CG_plus_policy_uniform.1304
+	title=CG_plus_policy_uniform.1304.name
+	custom_gui = cg_plus_evt_menu
+	custom_gui_option = cg_plus_evt_menu_button
+
+
+	desc =  CG_plus_policy_uniform.1304.desc
+
+
+	diplomatic = yes
+	hide_window = no
+
+
+	is_triggered_only = yes
+	immediate = {
+		set_variable = { which = cg_dialogue_bg value = -1 }
+		set_variable = { which = cg_plus_evt_pic value = 1304 }
+	}
+
+
+	option={
+		name=CG_plus_policy_uniform.1304.a
+		add_modifier = {
+			modifier = CG_plus_mod_uniform_event_military_3
+		}
+		
+	}
+
+}
+
+country_event={
+	id=CG_plus_policy_uniform.1305
+	title=CG_plus_policy_uniform.1305.name
+	custom_gui = cg_plus_evt_menu
+	custom_gui_option = cg_plus_evt_menu_button
+
+
+	desc =  CG_plus_policy_uniform.1305.desc
+
+
+	diplomatic = yes
+	hide_window = no
+
+
+	is_triggered_only = yes
+	immediate = {
+		set_variable = { which = cg_dialogue_bg value = -1 }
+		set_variable = { which = cg_plus_evt_pic value = 1305 }
+	}
+
+
+	option={
+		name=CG_plus_policy_uniform.1305.a
+		while={
+		count=10
+		random_owned_pop = {
+			
+			limit = {
+				has_ethic = ethic_militarism
+			pop_change_ethic = ethic_militarism
+			}
+		}
+		
+	}
+
+}
+
 
 
 country_event={
@@ -895,9 +1011,9 @@ country_event={
 			count=5
 			random_owned_pop = {
 				limit = {
-					NOT= { has_ethic = ethic_fanatic_authoritarian }
+					NOT= { has_ethic = ethic_authoritarian }
 				}
-				pop_change_ethic = ethic_fanatic_authoritarian
+				pop_change_ethic = ethic_authoritarian
 			}
 		}
 
@@ -914,6 +1030,30 @@ country_event={
 			}
 		}
 	}
+}
+country_event={
+	id=CG_plus_policy_uniform.1503
+	title=CG_plus_policy_uniform.1503.name
+	custom_gui = cg_plus_evt_menu
+	custom_gui_option = cg_plus_evt_menu_button
+	desc=CG_plus_policy_uniform.1503.desc
+	diplomatic = yes
+	hide_window = no
+
+
+	is_triggered_only = yes
+	immediate = {
+		set_variable = { which = cg_dialogue_bg value = -1 }
+		set_variable = { which = cg_plus_evt_pic value = 1503 }
+	}
+
+	option={
+		name=  CG_plus_policy_uniform.1502.a
+		every_owned_species={
+			species= { NOT= { is_ } }
+		}
+	}
+
 }
 
 
@@ -1362,9 +1502,9 @@ country_event={
 			count=3
 			random_owned_pop = {
 				limit = {
-					NOT= { has_ethic = ethic_fanatic_authoritarian }
+					NOT= { has_ethic = ethic_authoritarian }
 				}
-				pop_change_ethic = ethic_fanatic_authoritarian
+				pop_change_ethic = ethic_authoritarian
 			}
 		}
 	}
