@@ -140,12 +140,48 @@ guiTypes = {
 			effect = "cg_plus_uniform_evt_pic_1301"
 		}
 		effectButtonType = {
+			name = "cg_plus_uniform_evt_pic_1304_gfx"
+			quadTextureSprite = "GFX_evt_uniform_army_L_05"
+			Orientation = "UPPER_LEFT"
+			position = { x = @portrait_x y = @portrait_y }
+			effect = "cg_plus_uniform_evt_pic_1304"
+		}
+		effectButtonType = {
 			name = "cg_plus_uniform_evt_pic_1500_gfx"
 			quadTextureSprite = "GFX_evt_uniform_sailorfuku_L_01"
 			Orientation = "UPPER_LEFT"
 			position = { x = @portrait_x y = @portrait_y }
 			effect = "cg_plus_uniform_evt_pic_1500"
 		}
+		effectButtonType = {
+			name = "cg_plus_uniform_evt_pic_1503_gfx"
+			quadTextureSprite = "GFX_evt_uniform_sailorfuku_L_04"
+			Orientation = "UPPER_LEFT"
+			position = { x = @portrait_x y = @portrait_y }
+			effect = "cg_plus_uniform_evt_pic_1503"
+		}
+		effectButtonType = {
+			name = "cg_plus_uniform_evt_pic_15051_gfx"
+			quadTextureSprite = "GFX_evt_uniform_sailorfuku_L_06a"
+			Orientation = "UPPER_LEFT"
+			position = { x = @portrait_x y = @portrait_y }
+			effect = "cg_plus_uniform_evt_pic_15051"
+		}
+		effectButtonType = {
+			name = "cg_plus_uniform_evt_pic_15052_gfx"
+			quadTextureSprite = "GFX_evt_uniform_sailorfuku_L_06b"
+			Orientation = "UPPER_LEFT"
+			position = { x = @portrait_x y = @portrait_y }
+			effect = "cg_plus_uniform_evt_pic_15052"
+		}
+		effectButtonType = {
+			name = "cg_plus_uniform_evt_pic_15054_gfx"
+			quadTextureSprite = "GFX_evt_uniform_sailorfuku_L_06d"
+			Orientation = "UPPER_LEFT"
+			position = { x = @portrait_x y = @portrait_y }
+			effect = "cg_plus_uniform_evt_pic_15054"
+		}
+
 		effectButtonType = {
 			name = "cg_plus_uniform_evt_pic_2001_gfx"
 			quadTextureSprite = "GFX_evt_uniform_active_nun_L_01"
@@ -445,6 +481,20 @@ guiTypes = {
 			effect = "cg_plus_uniform_evt_pic_1302"
 		}
 		effectButtonType = {
+			name = "cg_plus_uniform_evt_pic_1303_gfx"
+			quadTextureSprite = "GFX_evt_uniform_army_P_04"
+			Orientation = "UPPER_LEFT"
+			position = { x = @portrait_x y = @portrait_y }
+			effect = "cg_plus_uniform_evt_pic_1303"
+		}
+		effectButtonType = {
+			name = "cg_plus_uniform_evt_pic_1305_gfx"
+			quadTextureSprite = "GFX_evt_uniform_army_P_05"
+			Orientation = "UPPER_LEFT"
+			position = { x = @portrait_x y = @portrait_y }
+			effect = "cg_plus_uniform_evt_pic_1305"
+		}
+		effectButtonType = {
 			name = "cg_plus_uniform_evt_pic_1501_gfx"
 			quadTextureSprite = "GFX_evt_uniform_sailorfuku_P_01"
 			Orientation = "UPPER_LEFT"
@@ -458,6 +508,27 @@ guiTypes = {
 			position = { x = @portrait_x y = @portrait_y }
 			effect = "cg_plus_uniform_evt_pic_1502"
 		}
+		effectButtonType = {
+			name = "cg_plus_uniform_evt_pic_1504_gfx"
+			quadTextureSprite = "GFX_evt_uniform_sailorfuku_P_05"
+			Orientation = "UPPER_LEFT"
+			position = { x = @portrait_x y = @portrait_y }
+			effect = "cg_plus_uniform_evt_pic_1504"
+		}
+		effectButtonType = {
+			name = "cg_plus_uniform_evt_pic_1505_gfx"
+			quadTextureSprite = "GFX_evt_uniform_sailorfuku_P_06"
+			Orientation = "UPPER_LEFT"
+			position = { x = @portrait_x y = @portrait_y }
+			effect = "cg_plus_uniform_evt_pic_1505"
+		}		
+		effectButtonType = {
+			name = "cg_plus_uniform_evt_pic_15053_gfx"
+			quadTextureSprite = "GFX_evt_uniform_sailorfuku_P_06c"
+			Orientation = "UPPER_LEFT"
+			position = { x = @portrait_x y = @portrait_y }
+			effect = "cg_plus_uniform_evt_pic_15053"
+		}			
 		effectButtonType = {
 			name = "cg_plus_uniform_evt_pic_1600_gfx"
 			quadTextureSprite = "GFX_evt_uniform_bunny_P_01"

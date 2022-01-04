@@ -53,6 +53,44 @@ spriteTypes = {
 		alwaystransparent = yes
 	}
 	spriteType = {
+		name = "GFX_evt_uniform_sailorfuku_L_04"
+		texturefile = "gfx/event_pictures/uniform_daily/sailr_L_04.dds" 
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_uniform_sailorfuku_P_05"
+		texturefile = "gfx/event_pictures/uniform_daily/sailr_P_05.dds" 
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_uniform_sailorfuku_P_06"
+		texturefile = "gfx/event_pictures/uniform_daily/sailr_P_06.dds" 
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_uniform_sailorfuku_L_06a"
+		texturefile = "gfx/event_pictures/uniform_daily/sailr_06a.dds" 
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_uniform_sailorfuku_L_06b"
+		texturefile = "gfx/event_pictures/uniform_daily/sailr_06b.dds" 
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_uniform_sailorfuku_P_06c"
+		texturefile = "gfx/event_pictures/uniform_daily/sailr_06c.dds" 
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_uniform_sailorfuku_L_06d"
+		texturefile = "gfx/event_pictures/uniform_daily/sailr_06d.dds" 
+		alwaystransparent = yes
+	}
+
+
+
+	spriteType = {
 		name = "GFX_evt_uniform_bunny_01"
 		texturefile = "gfx/event_pictures/castle_dark_01.dds" 
 		alwaystransparent = yes
@@ -201,6 +239,23 @@ spriteTypes = {
 		texturefile = "gfx/event_pictures/uniform_daily/army_L_02.dds" 
 		alwaystransparent = yes
 	}
+	spriteType = {
+		name = "GFX_evt_uniform_army_P_04"
+		texturefile = "gfx/event_pictures/uniform_daily/army_P_04.dds" 
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_evt_uniform_army_L_05"
+		texturefile = "gfx/event_pictures/uniform_daily/army_L_05.dds" 
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_uniform_army_P_06"
+		texturefile = "gfx/event_pictures/uniform_daily/army_P_06.dds" 
+		alwaystransparent = yes
+	}
+
 
 	spriteType = {
 		name = "GFX_evt_uniform_army_P_01"

@@ -174,13 +174,26 @@
  CG_plus_policy_uniform.1503.desc:0 "魅魔有着超兼容性的卵子，与宇宙之下各种外星人交配，凡是能以射精方式传递基因物质的，魅魔族人的卵子也有可能受孕。\n\n而为了保护一些少数族裔的外星人血脉，学院会鼓励学员们在课余时间去和这些外星人去进行文化交流。\n\n学员初次进行拜访活动的时候时常会有害羞，但在对外星人充满好奇心的学员参与下，计划得到稳定推进，参加的人数有增加无减。"
 
  CG_plus_policy_uniform.1503.a:0 "以后也考虑让交流生参加"
+ CG_plus_mod_uniform_event_sailr_1:0 "少数族裔文化交流"
 
+ CG_plus_policy_uniform.1504.name:0 "失踪事件" 
+ CG_plus_policy_uniform.1504.desc:0 "失踪人士：\n [Root.Leader.GetSpeciesName] XXX\n失蹤人士失蹤時之形貌：\n16歲，1.57米，46公斤，90/59/89, 皮肤黄偏白，棕发\n失踪日期：[Root.GetYear]-[Root.GetDate]\n最后露面衣装：绝艳学院校服，短袜，风纪臂牌\n:其他：\n日前曾与同校学生因风纪问题发生争执，其同学现在也是失踪人士。\n若任何人有失踪者的消息, 請立即通知 [Root.Capital.getname] 失蹤人口調查組\n"
 
- CG_plus_policy_uniform.1503.name:0 "绝艳学院：课外活动" 
- CG_plus_policy_uniform.1503.desc:0 "魅魔有着超兼容性的卵子，与宇宙之下各种外星人交配，凡是能以射精方式传递基因物质的，魅魔族人的卵子也有可能受孕。\n\n而为了保护一些少数族裔的外星人血脉，学院会鼓励学员们在课余时间去和这些外星人去进行文化交流。\n\n学员初次进行拜访活动的时候时常会有害羞，但在对外星人充满好奇心的学员参与下，计划得到稳定推进，参加的人数有增加无减。"
+ CG_plus_policy_uniform.1504.a:0 "寄。"
 
- CG_plus_policy_uniform.1503.a:0 "以后也考虑让交流生参加"
+ CG_plus_policy_uniform.1505.name:0 "绝艳学院：妹妹丧命提" 
+ CG_plus_policy_uniform.1505.desc:0 "伦理实验在魅魔社会上每天也在进行，今天的实验就是一个已经有一个可爱的亲生妹妹的人和一个是真实的妹妹而又当上共享妹妹的可爱女孩之间要进行二选一的时候，究竟实验种族A会做出什么样的选择？\n\n究竟实验种族A会夸过伦理红线去对亲生妹妹传递爱并成为真正的爱人，还是使用替代品以保留对妹妹关系的一份执着，究竟实验体是爱这份关系?还是爱这个人。或者实验体只毫无伦理的一介禽兽？魅魔们很想知道。"
 
+ CG_plus_policy_uniform.1505.a:0 "左边的妹妹"
+ CG_plus_policy_uniform.1505.b:0 "右边的妹妹"
+ CG_plus_policy_uniform.1505.c:0 "我是禽兽"
+ CG_plus_policy_uniform.1505.d:0 "妹妹是我自己"
+
+ CG_plus_policy_uniform.15051.desc:0 "或许这个这个人真的真心爱着亲人，但妹妹的欲望怎么办？"
+ CG_plus_policy_uniform.15052.desc:0 "这个人就只是个白毛控而已吧w。"
+ CG_plus_policy_uniform.15053.desc:0 "禽兽就是不会思考呢。。看到是像个女的就会暴肏了吧。"
+ CG_plus_policy_uniform.15054.desc:0 "完了完了，把实验体逼成精神错乱了。"
+ CG_plus_policy_uniform.15051.a:0 "实验种族A真是有趣。"
 
 
 

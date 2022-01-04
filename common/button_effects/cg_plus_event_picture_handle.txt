@@ -58,8 +58,36 @@ cg_plus_uniform_evt_pic_1503 = {
 	allow = { always = yes }
 	effect = {}
 }
-
-
+cg_plus_uniform_evt_pic_1504 = {
+	potential = {FROM = { check_variable = { which = cg_plus_evt_pic value = 1504 }}}
+	allow = { always = yes }
+	effect = {}
+}
+cg_plus_uniform_evt_pic_1505 = {
+	potential = {FROM = { check_variable = { which = cg_plus_evt_pic value = 1505 }}}
+	allow = { always = yes }
+	effect = {}
+}
+cg_plus_uniform_evt_pic_15051 = {
+	potential = {FROM = { check_variable = { which = cg_plus_evt_pic value = 15051 }}}
+	allow = { always = yes }
+	effect = {}
+}
+cg_plus_uniform_evt_pic_15052 = {
+	potential = {FROM = { check_variable = { which = cg_plus_evt_pic value = 15052 }}}
+	allow = { always = yes }
+	effect = {}
+}
+cg_plus_uniform_evt_pic_15053 = {
+	potential = {FROM = { check_variable = { which = cg_plus_evt_pic value = 15053 }}}
+	allow = { always = yes }
+	effect = {}
+}
+cg_plus_uniform_evt_pic_15054 = {
+	potential = {FROM = { check_variable = { which = cg_plus_evt_pic value = 15054 }}}
+	allow = { always = yes }
+	effect = {}
+}
 
 cg_plus_uniform_evt_pic_2001 = {
 	potential = {FROM = { check_variable = { which = cg_plus_evt_pic value = 2001 }}}
@@ -152,6 +180,23 @@ cg_plus_uniform_evt_pic_1302 = {
 	allow = { always = yes }
 	effect = {}
 }
+cg_plus_uniform_evt_pic_1303 = {
+	potential = {FROM = { check_variable = { which = cg_plus_evt_pic value = 1303 }}}
+	allow = { always = yes }
+	effect = {}
+}
+cg_plus_uniform_evt_pic_1304 = {
+	potential = {FROM = { check_variable = { which = cg_plus_evt_pic value = 1304 }}}
+	allow = { always = yes }
+	effect = {}
+}
+cg_plus_uniform_evt_pic_1305 = {
+	potential = {FROM = { check_variable = { which = cg_plus_evt_pic value = 1305 }}}
+	allow = { always = yes }
+	effect = {}
+}
+
+
 
 cg_plus_uniform_evt_pic_1600 = {
 	potential = {FROM = { check_variable = { which = cg_plus_evt_pic value = 1600 }}}

@@ -703,12 +703,14 @@ country_event={
 		random_owned_pop = {
 			
 			limit = {
-				has_ethic = ethic_militarism
-			pop_change_ethic = ethic_militarism
+				has_ethic = ethic_militarist
+				
 			}
+			pop_change_ethic = ethic_militarist
 		}
 		
-	}
+		}
+	}	
 
 }
 
@@ -757,6 +759,7 @@ country_event={
 	}
 }
 country_event={
+
 	id=CG_plus_policy_uniform.12011
 	title=CG_plus_policy_uniform.1201.name
 	custom_gui = cg_plus_evt_menu
@@ -1049,12 +1052,177 @@ country_event={
 
 	option={
 		name=  CG_plus_policy_uniform.1502.a
-		every_owned_species={
-			species= { NOT= { is_ } }
+		
+		add_modifier = {
+			modifier = CG_plus_mod_uniform_event_sailr_1
+			years = 3
 		}
+		
 	}
 
 }
+country_event={
+	id=CG_plus_policy_uniform.1504
+	title=CG_plus_policy_uniform.1504.name
+	custom_gui = cg_plus_evt_menu_p
+	custom_gui_option = cg_plus_evt_menu_button
+	desc=CG_plus_policy_uniform.1504.desc
+	diplomatic = yes
+	hide_window = no
+
+
+	is_triggered_only = yes
+	immediate = {
+		set_variable = { which = cg_dialogue_bg value = -1 }
+		set_variable = { which = cg_plus_evt_pic value = 1504 }
+	}
+
+	option={
+		name=  CG_plus_policy_uniform.1504.a
+		random_owned_pop={
+			kill_pop = yes
+		}
+	 
+		
+	}
+
+}
+country_event={
+	id=CG_plus_policy_uniform.1505
+	title=CG_plus_policy_uniform.1505.name
+	custom_gui = cg_plus_evt_menu_p
+	custom_gui_option = cg_plus_evt_menu_button
+	desc=CG_plus_policy_uniform.1505.desc
+	diplomatic = yes
+	hide_window = no
+
+
+	is_triggered_only = yes
+	immediate = {
+		set_variable = { which = cg_dialogue_bg value = -1 }
+		set_variable = { which = cg_plus_evt_pic value = 1505 }
+	}
+
+	option={
+		name=  CG_plus_policy_uniform.1505.a	
+		hidden_effect = {
+			country_event = {
+				id = CG_plus_policy_uniform.15051
+			}
+		}	
+	}
+	option={
+		name=  CG_plus_policy_uniform.1505.b	
+		hidden_effect = {
+			country_event = {
+				id = CG_plus_policy_uniform.15052
+			}
+		}		
+	}
+	option={
+		name=  CG_plus_policy_uniform.1505.c		
+		hidden_effect = {
+			country_event = {
+				id = CG_plus_policy_uniform.15053
+			}
+		}	
+	}
+	option={
+		name=  CG_plus_policy_uniform.1505.d	
+		hidden_effect = {
+			country_event = {
+				id = CG_plus_policy_uniform.15054
+			}
+		}		
+	}
+
+}
+
+country_event={
+	id=CG_plus_policy_uniform.15051
+	title= CG_plus_policy_uniform.1505.name
+	custom_gui = cg_plus_evt_menu
+	custom_gui_option = cg_plus_evt_menu_button
+	desc=CG_plus_policy_uniform.15051.desc
+	diplomatic = yes
+	hide_window = no
+
+
+	is_triggered_only = yes
+	immediate = {
+		set_variable = { which = cg_dialogue_bg value = -1 }
+		set_variable = { which = cg_plus_evt_pic value = 15051 }
+	}
+
+	option={
+		name=  CG_plus_policy_uniform.15051.a		
+	}
+
+}
+country_event={
+	id=CG_plus_policy_uniform.15052
+	title= CG_plus_policy_uniform.1505.name
+	custom_gui = cg_plus_evt_menu
+	custom_gui_option = cg_plus_evt_menu_button
+	desc=CG_plus_policy_uniform.15051.desc
+	diplomatic = yes
+	hide_window = no
+
+
+	is_triggered_only = yes
+	immediate = {
+		set_variable = { which = cg_dialogue_bg value = -1 }
+		set_variable = { which = cg_plus_evt_pic value = 15052 }
+	}
+
+	option={
+		name=  CG_plus_policy_uniform.15051.a		
+	}
+
+}
+country_event={
+	id=CG_plus_policy_uniform.15053
+	title= CG_plus_policy_uniform.1505.name
+	custom_gui = cg_plus_evt_menu_p
+	custom_gui_option = cg_plus_evt_menu_button
+	desc=CG_plus_policy_uniform.15051.desc
+	diplomatic = yes
+	hide_window = no
+
+
+	is_triggered_only = yes
+	immediate = {
+		set_variable = { which = cg_dialogue_bg value = -1 }
+		set_variable = { which = cg_plus_evt_pic value = 15053 }
+	}
+
+	option={
+		name=  CG_plus_policy_uniform.15051.a		
+	}
+
+}
+country_event={
+	id=CG_plus_policy_uniform.15054
+	title= CG_plus_policy_uniform.1505.name
+	custom_gui = cg_plus_evt_menu
+	custom_gui_option = cg_plus_evt_menu_button
+	desc=CG_plus_policy_uniform.15051.desc
+	diplomatic = yes
+	hide_window = no
+
+
+	is_triggered_only = yes
+	immediate = {
+		set_variable = { which = cg_dialogue_bg value = -1 }
+		set_variable = { which = cg_plus_evt_pic value = 15054 }
+	}
+
+	option={
+		name=  CG_plus_policy_uniform.15051.a		
+	}
+
+}
+
 
 
 country_event={
