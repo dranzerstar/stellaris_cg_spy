@@ -322,6 +322,11 @@ country_event={
 				1={modifier = {factor = 0 has_country_flag = asceticism_flag } country_event = {id = CG_plus_policy_uniform.1100 }}
 				1={country_event = {id = CG_plus_policy_uniform.1101 }}
 				1={country_event = {id = CG_plus_policy_uniform.1102 }}
+				1={country_event = {id = CG_plus_policy_uniform.1103 }}
+				1={country_event = {id = CG_plus_policy_uniform.1104 }}
+				1={modifier = {factor = 0 has_country_flag = asceticism_flag } country_event = {id = CG_plus_policy_uniform.1105 }}
+			
+
 		}}
 		if = { # 派送 公主礼装 学园事件
 			limit = {has_policy_flag =  princess_uniform }
@@ -339,6 +344,11 @@ country_event={
 				1={country_event = {id = CG_plus_policy_uniform.1300 }}
 				1={ modifier = {factor = 0 has_country_flag = asceticism_flag } country_event = {id = CG_plus_policy_uniform.1301 }}
 				1={country_event = {id = CG_plus_policy_uniform.1302 }}
+				1={country_event = {id = CG_plus_policy_uniform.1303 }}
+				1={country_event = {id = CG_plus_policy_uniform.1304 }}
+				1={ modifier = {factor = 0 has_country_flag = asceticism_flag } country_event = {id = CG_plus_policy_uniform.1305 }}
+				
+
 		}}
 		if = { # 派送 衬衣中裙 学园事件
 			limit = {has_policy_flag =  school_uniform has_technology = tech_beauty_theory }
@@ -351,6 +361,9 @@ country_event={
 				1={modifier = {factor = 0 has_country_flag = asceticism_flag } country_event = {id = CG_plus_policy_uniform.1500 }}
 				1={country_event = {id = CG_plus_policy_uniform.1501 }}
 				1={modifier = {factor = 0 has_country_flag = carnalism_flag } country_event = {id = CG_plus_policy_uniform.1502 }}
+				1={modifier = {factor = 0 has_country_flag = asceticism_flag }country_event = {id = CG_plus_policy_uniform.1503 }}
+				1={country_event = {id = CG_plus_policy_uniform.1504 }}
+				1={modifier = {factor = 0 has_country_flag = asceticism_flag }country_event = {id = CG_plus_policy_uniform.1505 }}
 		}}
 		if = { # 派送 艳兔女郎 学园事件
 			limit = {has_policy_flag =  bunny_uniform }
@@ -473,34 +486,7 @@ country_event={
 	}
 }
 
-country_event={
-	id=CG_plus_policy_uniform.1102
-	title=CG_plus_policy_uniform.1102.name
-	custom_gui = cg_plus_evt_menu_p
-	custom_gui_option = cg_plus_evt_menu_button
-	desc=CG_plus_policy_uniform.1102.desc
-	diplomatic = yes
-	hide_window = no
 
-
-	is_triggered_only = yes
-	immediate = {
-		set_variable = { which = cg_dialogue_bg value = -1 }
-		set_variable = { which = cg_plus_evt_pic value = 1102 }
-	}
-
-	option={
-		allow={ has_ascension_perk = ap_transcendence }
-		name=CG_plus_policy_uniform.1102.a
-		country_event= { id= utopia.3000 days = 10}
-	}
-	option={
-		name=CG_plus_policy_uniform.1102.b
-		add_resource = {
-			unity = 5000
-		}
-	}
-}
 country_event={
 	id=CG_plus_policy_uniform.1103
 	title=CG_plus_policy_uniform.1103.name
@@ -520,12 +506,24 @@ country_event={
 	option={
 		
 		name=CG_plus_policy_uniform.1103.a
-		add_modifier = {
-			modifier =  //TODO
+		this.capital_scope = {
+			while = {
+				count < 5
+				create_army = {
+					owner = THIS
+					type = INN_battle_sister 
+					species = this.owner_species
+				}
+			}
+			
+			
+			
 		}
+
 	}
 
 }
+
 country_event={
 	id=CG_plus_policy_uniform.1104
 	title=CG_plus_policy_uniform.1104.name
@@ -546,7 +544,7 @@ country_event={
 		
 		name=CG_plus_policy_uniform.1104.a
 		add_modifier = {
-			modifier =  //TODO
+			modifier =  CG_plus_mod_uniform_event_nun_1
 		}
 	}
 
@@ -571,9 +569,8 @@ country_event={
 	option={
 		
 		name=CG_plus_policy_uniform.1105.a
-		add_modifier = {
-			modifier =  //TODO
-		}
+		set_timed_country_flag = {flag= nun_evt_opinion_01 days=2000}
+		custom_tooltip = CG_plus_policy_uniform.1105.a1
 	}
 
 }

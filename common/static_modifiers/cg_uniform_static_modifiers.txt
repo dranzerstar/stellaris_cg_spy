@@ -213,3 +213,8 @@ CG_plus_mod_uniform_event_military_3={
 CG_plus_mod_uniform_event_sailr_1={
 	pop_growth_speed= 1
 }
+
+CG_plus_mod_uniform_event_nun_1={
+	#category_psyonics_research_speed_mult = 1.5
+	category_psionics_research_speed_mult = 1.5
+}
