@@ -472,6 +472,112 @@ country_event={
 		}
 	}
 }
+
+country_event={
+	id=CG_plus_policy_uniform.1102
+	title=CG_plus_policy_uniform.1102.name
+	custom_gui = cg_plus_evt_menu_p
+	custom_gui_option = cg_plus_evt_menu_button
+	desc=CG_plus_policy_uniform.1102.desc
+	diplomatic = yes
+	hide_window = no
+
+
+	is_triggered_only = yes
+	immediate = {
+		set_variable = { which = cg_dialogue_bg value = -1 }
+		set_variable = { which = cg_plus_evt_pic value = 1102 }
+	}
+
+	option={
+		allow={ has_ascension_perk = ap_transcendence }
+		name=CG_plus_policy_uniform.1102.a
+		country_event= { id= utopia.3000 days = 10}
+	}
+	option={
+		name=CG_plus_policy_uniform.1102.b
+		add_resource = {
+			unity = 5000
+		}
+	}
+}
+country_event={
+	id=CG_plus_policy_uniform.1103
+	title=CG_plus_policy_uniform.1103.name
+	custom_gui = cg_plus_evt_menu_p
+	custom_gui_option = cg_plus_evt_menu_button
+	desc=CG_plus_policy_uniform.1103.desc
+	diplomatic = yes
+	hide_window = no
+
+
+	is_triggered_only = yes
+	immediate = {
+		set_variable = { which = cg_dialogue_bg value = -1 }
+		set_variable = { which = cg_plus_evt_pic value = 1103 }
+	}
+
+	option={
+		
+		name=CG_plus_policy_uniform.1103.a
+		add_modifier = {
+			modifier =  //TODO
+		}
+	}
+
+}
+country_event={
+	id=CG_plus_policy_uniform.1104
+	title=CG_plus_policy_uniform.1104.name
+	custom_gui = cg_plus_evt_menu_p
+	custom_gui_option = cg_plus_evt_menu_button
+	desc=CG_plus_policy_uniform.1104.desc
+	diplomatic = yes
+	hide_window = no
+
+
+	is_triggered_only = yes
+	immediate = {
+		set_variable = { which = cg_dialogue_bg value = -1 }
+		set_variable = { which = cg_plus_evt_pic value = 1104 }
+	}
+
+	option={
+		
+		name=CG_plus_policy_uniform.1104.a
+		add_modifier = {
+			modifier =  //TODO
+		}
+	}
+
+}
+
+country_event={
+	id=CG_plus_policy_uniform.1105
+	title=CG_plus_policy_uniform.1105.name
+	custom_gui = cg_plus_evt_menu_p
+	custom_gui_option = cg_plus_evt_menu_button
+	desc=CG_plus_policy_uniform.1105.desc
+	diplomatic = yes
+	hide_window = no
+
+
+	is_triggered_only = yes
+	immediate = {
+		set_variable = { which = cg_dialogue_bg value = -1 }
+		set_variable = { which = cg_plus_evt_pic value = 1105 }
+	}
+
+	option={
+		
+		name=CG_plus_policy_uniform.1105.a
+		add_modifier = {
+			modifier =  //TODO
+		}
+	}
+
+}
+
 country_event={
 	id=CG_plus_policy_uniform.1300
 	title=CG_plus_policy_uniform.1300.name
