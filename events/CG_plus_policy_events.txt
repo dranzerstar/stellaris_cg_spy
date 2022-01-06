@@ -381,6 +381,11 @@ country_event={
 				1={country_event = {id = CG_plus_policy_uniform.1700} } 
 				1={modifier = {factor = 0 has_country_flag = asceticism_flag }country_event = {id = CG_plus_policy_uniform.1701}}
 				1={modifier = {factor = 0 has_country_flag = asceticism_flag }country_event = {id = CG_plus_policy_uniform.1702}}
+				1={country_event = {id = CG_plus_policy_uniform.1703} } 
+				1={modifier = {factor = 0 has_country_flag = carnalism_flag }country_event = {id = CG_plus_policy_uniform.1704}}
+				1={modifier = {factor = 0 has_country_flag = asceticism_flag }country_event = {id = CG_plus_policy_uniform.1705}}
+			
+			
 			}
 		}
 	}

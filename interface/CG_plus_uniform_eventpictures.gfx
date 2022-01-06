@@ -161,6 +161,36 @@ spriteTypes = {
 		texturefile = "gfx/event_pictures/uniform_daily/micro_P_03.dds" 
 		alwaystransparent = yes
 	}
+	spriteType = {
+		name = "GFX_evt_uniform_microbikini_P_04"
+		texturefile = "gfx/event_pictures/uniform_daily/micro_P_04.dds" 
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_uniform_microbikini_P_05"
+		texturefile = "gfx/event_pictures/uniform_daily/micro_P_05.dds" 
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_uniform_microbikini_L_06"
+		texturefile = "gfx/event_pictures/uniform_daily/micro_L_06.dds" 
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_uniform_microbikini_L_061"
+		texturefile = "gfx/event_pictures/uniform_daily/micro_L_061.dds" 
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_uniform_microbikini_L_062"
+		texturefile = "gfx/event_pictures/uniform_daily/micro_L_062.dds" 
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_uniform_microbikini_L_063"
+		texturefile = "gfx/event_pictures/uniform_daily/micro_L_063.dds" 
+		alwaystransparent = yes
+	}
 
 	spriteType = {
 		name = "GFX_evt_uniform_bunny_P_01"

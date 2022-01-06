@@ -181,7 +181,34 @@ guiTypes = {
 			position = { x = @portrait_x y = @portrait_y }
 			effect = "cg_plus_uniform_evt_pic_15054"
 		}
-
+		effectButtonType = {
+			name = "cg_plus_uniform_evt_pic_1705_gfx"
+			quadTextureSprite = "GFX_evt_uniform_microbikini_L_06"
+			Orientation = "UPPER_LEFT"
+			position = { x = @portrait_x y = @portrait_y }
+			effect = "cg_plus_uniform_evt_pic_1705"
+		}
+		effectButtonType = {
+			name = "cg_plus_uniform_evt_pic_17051_gfx"
+			quadTextureSprite = "GFX_evt_uniform_microbikini_L_061"
+			Orientation = "UPPER_LEFT"
+			position = { x = @portrait_x y = @portrait_y }
+			effect = "cg_plus_uniform_evt_pic_17051"
+		}
+		effectButtonType = {
+			name = "cg_plus_uniform_evt_pic_17052_gfx"
+			quadTextureSprite = "GFX_evt_uniform_microbikini_L_062"
+			Orientation = "UPPER_LEFT"
+			position = { x = @portrait_x y = @portrait_y }
+			effect = "cg_plus_uniform_evt_pic_17052"
+		}
+		effectButtonType = {
+			name = "cg_plus_uniform_evt_pic_17053_gfx"
+			quadTextureSprite = "GFX_evt_uniform_microbikini_L_063"
+			Orientation = "UPPER_LEFT"
+			position = { x = @portrait_x y = @portrait_y }
+			effect = "cg_plus_uniform_evt_pic_17053"
+		}
 		effectButtonType = {
 			name = "cg_plus_uniform_evt_pic_2001_gfx"
 			quadTextureSprite = "GFX_evt_uniform_active_nun_L_01"
@@ -224,6 +251,7 @@ guiTypes = {
 			position = { x = @portrait_x y = @portrait_y }
 			effect = "cg_plus_uniform_evt_pic_2007"
 		}
+		
 		###########################
 		#picture area end
 		###########################
@@ -641,6 +669,21 @@ guiTypes = {
 			position = { x = @portrait_x y = @portrait_y }
 			effect = "cg_plus_uniform_evt_pic_1702"
 		}
+		effectButtonType = {
+			name = "cg_plus_uniform_evt_pic_1703_gfx"
+			quadTextureSprite = "GFX_evt_uniform_microbikini_P_04"
+			Orientation = "UPPER_LEFT"
+			position = { x = @portrait_x y = @portrait_y }
+			effect = "cg_plus_uniform_evt_pic_1703"
+		}
+		effectButtonType = {
+			name = "cg_plus_uniform_evt_pic_1704_gfx"
+			quadTextureSprite = "GFX_evt_uniform_microbikini_P_05"
+			Orientation = "UPPER_LEFT"
+			position = { x = @portrait_x y = @portrait_y }
+			effect = "cg_plus_uniform_evt_pic_1704"
+		}
+
 		###########################
 		#picture area end
 		###########################
