@@ -1794,3 +1794,87 @@ country_event={
 		}
 	}
 }
+
+country_event={
+	id=CG_plus_policy_uniform.1703
+	title=CG_plus_policy_uniform.1703.name
+	custom_gui = cg_plus_evt_menu_p
+	custom_gui_option = cg_plus_evt_menu_button
+	desc=CG_plus_policy_uniform.1703.desc
+	diplomatic = yes
+	hide_window = no
+
+
+	is_triggered_only = yes
+	immediate = {
+		set_variable = { which = cg_dialogue_bg value = -1 }
+		set_variable = { which = cg_plus_evt_pic value = 1704 }
+	}
+
+	option={
+		name= CG_plus_policy_uniform.1703.a
+		custom_tooltip = CG_plus_policy_uniform.1703.b1
+		random_owned_planet = {
+			limit = {
+				free_building_slots > 1
+				#has_technology = tech_public_sex_service
+			}
+			add_building = building_tentacle_paradis  
+		}
+
+	}
+
+}
+country_event={
+	id=CG_plus_policy_uniform.1704
+	title=CG_plus_policy_uniform.1704.name
+	custom_gui = cg_plus_evt_menu_p
+	custom_gui_option = cg_plus_evt_menu_button
+	desc=CG_plus_policy_uniform.1704.desc
+	diplomatic = yes
+	hide_window = no
+
+
+	is_triggered_only = yes
+	immediate = {
+		set_variable = { which = cg_dialogue_bg value = -1 }
+		set_variable = { which = cg_plus_evt_pic value = 1704 }
+	}
+
+	option={
+		name= CG_plus_policy_uniform.1704.a
+
+
+	}
+
+}
+country_event={
+	id=CG_plus_policy_uniform.1705
+	title=CG_plus_policy_uniform.1705.name
+	custom_gui = cg_plus_evt_menu_p
+	custom_gui_option = cg_plus_evt_menu_button
+	desc=CG_plus_policy_uniform.1705.desc
+	diplomatic = yes
+	hide_window = no
+
+
+	is_triggered_only = yes
+	immediate = {
+		set_variable = { which = cg_dialogue_bg value = -1 }
+		set_variable = { which = cg_plus_evt_pic value = 1705 }
+	}
+
+	option={
+		name= CG_plus_policy_uniform.1705.a
+		custom_tooltip = CG_plus_policy_uniform.1703.b1
+		random_owned_planet = {
+			limit = {
+				free_building_slots > 1
+				#has_technology = tech_public_sex_service
+			}
+			add_building = building_tentacle_paradis  
+		}
+
+	}
+
+}
