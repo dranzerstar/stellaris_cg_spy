@@ -55,13 +55,15 @@
  CG_plus_policy_uniform.1104.name:0 "灵界研究"
  CG_plus_policy_uniform.1104.desc:0 "虚境内的住人不是全部都对我们怀着善意，所以在寻找她们的协助的时候，也得保持警惕，否则在获得巨大的力量，同时也会付出巨大的代价。\n\n末日预言的文本甚至没有否定末日是否起源于虚境之中。但是可以肯定的那个境界是无比的巨大，那里藏着的力量是如何的惊人，那里的知识是在这个繁星下怎么也找不到的。"
 
- CG_plus_policy_uniform.1105.a:0 "加速研究"
+ CG_plus_policy_uniform.1104.a:0 "加速研究"
+ CG_plus_mod_uniform_event_nun_1:0 "灵能研究速度提升"
 
  CG_plus_policy_uniform.1105.name:0 "本性难移"
- CG_plus_policy_uniform.1105.desc:0 "江山易改本性難移，在星海共同体通过了对全星海的绝艳学院通过了统一的学服规格，本国[Root.getcountryname]也一同推行，希望绝艳学院能在统一课程后提高教学水平。\n\n原本代表清心寡欲在[Root.getspeicies]对色色的渴求把修女服进行大修改，已经有演变了成为一种新潮的性欲代表。"
+ CG_plus_policy_uniform.1105.desc:0 "江山易改本性難移，在星海共同体通过了对全星海的绝艳学院通过了统一的学服规格，本国[Root.getname]也一同推行，希望绝艳学院能在统一课程后提高教学水平。\n\[Root.Leader.GetSpeciesName]对色色的渴求把修女服进行大修改，已经有演变了成为一种新潮的性欲代表。"
 
  CG_plus_policy_uniform.1105.a:0 "都可以色色"
-
+ triggered_opinion_uniform_nun_evt_01:0 "褻瀆修女服"
+ CG_plus_policy_uniform.1105.a1:0 "又被圣女讨厌了£opinion£"
 
 
  CG_plus_policy_uniform.1500.name:0 "热情的学员"

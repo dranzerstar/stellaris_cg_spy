@@ -453,6 +453,27 @@ guiTypes = {
 			effect = "cg_plus_uniform_evt_pic_1102"
 		}
 		effectButtonType = {
+			name = "cg_plus_uniform_evt_pic_1103_gfx"
+			quadTextureSprite = "GFX_evt_uniform_nun_P_04"
+			Orientation = "UPPER_LEFT"
+			position = { x = @portrait_x y = @portrait_y }
+			effect = "cg_plus_uniform_evt_pic_1103"
+		}
+		effectButtonType = {
+			name = "cg_plus_uniform_evt_pic_1104_gfx"
+			quadTextureSprite = "GFX_evt_uniform_nun_P_05"
+			Orientation = "UPPER_LEFT"
+			position = { x = @portrait_x y = @portrait_y }
+			effect = "cg_plus_uniform_evt_pic_1104"
+		}
+		effectButtonType = {
+			name = "cg_plus_uniform_evt_pic_1105_gfx"
+			quadTextureSprite = "GFX_evt_uniform_nun_P_06"
+			Orientation = "UPPER_LEFT"
+			position = { x = @portrait_x y = @portrait_y }
+			effect = "cg_plus_uniform_evt_pic_1105"
+		}
+		effectButtonType = {
 			name = "cg_plus_uniform_evt_pic_1202_gfx"
 			quadTextureSprite = "GFX_evt_uniform_princess_P_03"
 			Orientation = "UPPER_LEFT"
