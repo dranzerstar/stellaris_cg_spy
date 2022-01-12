@@ -16,7 +16,7 @@
  CG_plus_policy_uniform.2003.desc:0 "联合星际学院把学院校服色定位 §R群星军服§!\n\n群星下争端不断，特别是对付一堆不讲道理的外星人，只能用船舰的炮火来说服他们，那么美学院得培训我们的学员该如何华丽地与这些外星人交涉，然后华丽地把问题解决。需然新兵蛋子大多只是司令官的花瓶而已。"
  CG_plus_policy_uniform.2005.desc:0 "联合星际学院把学院校服色定位 §R短水手服§!\n\n星际学院是个学园，学生的年龄的也是十六左右吧？能校服怎能不是水手服呢？你选别的才是有问题吧？作死工色，J！K！，女高中生，懂不懂？爷的青春所在的地方。标标准准的校服但是内外配搭到超高的服装耶，就这让吧，别再装糊涂了，明天都让学生们换成水手服回来吧。"
  CG_plus_policy_uniform.2006.desc:0 "联合星际学院把学院校服色定位 §R艳兔女郎§!高级身色情服务的人手面临短缺，我们不得不提出以下建议，把学院校服设置为兔女郎服，并把各种场所的经营，设计和管理立入绝色学院的课纲，希望增加未来能投身这个行业的劳动力。"
- CG_plus_policy_uniform.2007.desc:0 "联合星际学院把学院校服色定位 §R微比坚尼§!\n\n繁星之下最美的是什么？就是[from.getname]的完美身躯，而要表现这完美的身躯的最完美的方法就是这微比坚尼，不用害羞，当你来到学院后就能理解到我们如何得到这完美的身躯。\n\n通过极致的乱交性爱，让身体每一刻都在美颜淫液中修改，进化，体验着永远的年轻，幼嫩。这样才能寻找到繁星的极致之美。"
+ CG_plus_policy_uniform.2007.desc:0 "联合星际学院把学院校服色定位 §R微比坚尼§!\n\n繁星之下最美的是什么？就是[This.GetName]的完美身躯，而要表现这完美的身躯的最完美的方法就是这微比坚尼，不用害羞，当你来到学院后就能理解到我们如何得到这完美的身躯。\n\n通过极致的乱交性爱，让身体每一刻都在美颜淫液中修改，进化，体验着永远的年轻，幼嫩。这样才能寻找到繁星的极致之美。"
 
  CG_plus_policy_uniform.2001.name:0 "学院校服规定 §R修道女服§!"
  CG_plus_policy_uniform.2002.name:0 "学院校服规定 §R公主礼装§!"
@@ -51,6 +51,7 @@
  CG_plus_policy_uniform.1103.desc:0 "美丽学说里预言了宇宙的末日会到来，而末日有已许多种形式出现，我们该兴幸现有的装备火炮可以驱逐这些末日的爪牙，所以部分的修女会进行战斗训练，这可以在末日伸延时不至于毫无还击之力。\n\n战斗修女的训练模式与大部分战斗人员不同，毕竟其假想敌是一些还不存在的东西，祝圣，洗礼， 祈祷，看似玄学，但都是重虚界获得力量的方法。"
 
  CG_plus_policy_uniform.1103.a:0 "不就是宇宙大淫虫吧"
+ CG_plus_policy_uniform.1103.a1:0 "在首都[Root.GetHomeWorldName]增加圣斗士守军"
 
  CG_plus_policy_uniform.1104.name:0 "灵界研究"
  CG_plus_policy_uniform.1104.desc:0 "虚境内的住人不是全部都对我们怀着善意，所以在寻找她们的协助的时候，也得保持警惕，否则在获得巨大的力量，同时也会付出巨大的代价。\n\n末日预言的文本甚至没有否定末日是否起源于虚境之中。但是可以肯定的那个境界是无比的巨大，那里藏着的力量是如何的惊人，那里的知识是在这个繁星下怎么也找不到的。"
@@ -59,7 +60,7 @@
  CG_plus_mod_uniform_event_nun_1:0 "灵能研究速度提升"
 
  CG_plus_policy_uniform.1105.name:0 "本性难移"
- CG_plus_policy_uniform.1105.desc:0 "江山易改本性難移，在星海共同体通过了对全星海的绝艳学院通过了统一的学服规格，本国[Root.getname]也一同推行，希望绝艳学院能在统一课程后提高教学水平。\n\[Root.Leader.GetSpeciesName]对色色的渴求把修女服进行大修改，已经有演变了成为一种新潮的性欲代表。"
+ CG_plus_policy_uniform.1105.desc:0 "江山易改本性難移，在星海共同体通过了对全星海的绝艳学院通过了统一的学服规格，本国[Root.GetName]也一同推行，希望绝艳学院能在统一课程后提高教学水平。\n\n[Root.Leader.GetSpeciesName]对色色的渴求把修女服进行大修改，已经有演变了成为一种新潮的性欲代表。"
 
  CG_plus_policy_uniform.1105.a:0 "都可以色色"
  triggered_opinion_uniform_nun_evt_01:0 "褻瀆修女服"
@@ -112,7 +113,7 @@
  CG_plus_policy_uniform.1204.name:0 "绝艳公主：性虐女王"
  CG_plus_policy_uniform.1204.desc:0 "星海之中有无数的批，渴求着被女王奴役的外星人多不胜数，特别是女王是有着完美外貌的魅魔种族。为了引领着些天性抖M的外星人，我们有必要把公主们培训成为终极的SM女王，然我们榨去这些犯贱的外星人的时候把效率提升到最高。"
 
- CG_plus_policy_uniform.1204.a:0 "都交给[Root.getadj]女王大人！"
+ CG_plus_policy_uniform.1204.a:0 "都交给[Root.GetAdj]女王大人！"
  CG_plus_mod_uniform_event_princess_3:0 "一切都是为例女王大人的爱！"
 
  CG_plus_policy_uniform.1205.name:0 "绝艳公主：公主领导"
@@ -174,7 +175,7 @@
  CG_plus_policy_uniform.1305.desc:0 "星际达尔文主义，指將达尔文演化論中自然選擇及適者生存的思想應用於星际社會中的竞争理论。\n\n为了让学员尽早体验这个宇宙中的残酷，班长在这次模拟作战后安排了战败组到国家对敌国战俘进行的调教机械去体验一周。"
 
  CG_plus_policy_uniform.1305.a:0 "败者食精！"
-
+ CG_plus_policy_uniform.1305.a1:0 "把 20 个人口的思潮转化成军国主义"
 
 
 
@@ -195,9 +196,11 @@
  CG_plus_mod_uniform_event_sailr_1:0 "少数族裔文化交流"
 
  CG_plus_policy_uniform.1504.name:0 "失踪事件" 
- CG_plus_policy_uniform.1504.desc:0 "失踪人士：\n [Root.Leader.GetSpeciesName] XXX\n失蹤人士失蹤時之形貌：\n16歲，1.57米，46公斤，90/59/89, 皮肤黄偏白，棕发\n失踪日期：[Root.GetYear]-[Root.GetDate]\n最后露面衣装：绝艳学院校服，短袜，风纪臂牌\n:其他：\n日前曾与同校学生因风纪问题发生争执，其同学现在也是失踪人士。\n若任何人有失踪者的消息, 請立即通知 [Root.Capital.getname] 失蹤人口調查組\n"
+ CG_plus_policy_uniform.1504.desc:0 "失踪人士：\n [Root.GetSpeciesName] XXX\n失蹤人士失蹤時之形貌：\n16歲，1.57米，46公斤，90/59/89, 皮肤黄偏白，棕发\n失踪日期：一日前\n最后露面衣装：绝艳学院校服，短袜，风纪臂牌\n其他：\n日前曾与同校学生因风纪问题发生争执，其同学现在也是失踪人士。\n若任何人有失踪者的消息, 請立即通知 [Root.Capital.GetName] 失蹤人口調查組\n"
+
 
  CG_plus_policy_uniform.1504.a:0 "寄。"
+ CG_plus_policy_uniform.1504.a1:0 "增加一个失踪人口"
 
  CG_plus_policy_uniform.1505.name:0 "绝艳学院：妹妹丧命提" 
  CG_plus_policy_uniform.1505.desc:0 "伦理实验在魅魔社会上每天也在进行，今天的实验就是一个已经有一个可爱的亲生妹妹的人和一个是真实的妹妹而又当上共享妹妹的可爱女孩之间要进行二选一的时候，究竟实验种族A会做出什么样的选择？\n\n究竟实验种族A会夸过伦理红线去对亲生妹妹传递爱并成为真正的爱人，还是使用替代品以保留对妹妹关系的一份执着，究竟实验体是爱这份关系?还是爱这个人。或者实验体只毫无伦理的一介禽兽？魅魔们很想知道。"
@@ -286,7 +289,7 @@
  
  CG_plus_policy_uniform.1604.a:0 "获得一名艳兔间谍"
  CG_plus_policy_uniform.1604.b:0 "提升渗透速度"
- CG_plus_policy_uniform.1604.a1:0 "艳兔特工"
+ CG_plus_policy_uniform.1604.a1:0 "获得一名特使"
  CG_plus_mod_add_bunny_spy_mod:0 "艳兔特工提高渗透速度"
 
  CG_plus_policy_uniform.1605.name:0 "逆兔女郎"
@@ -295,6 +298,7 @@
  CG_plus_policy_uniform.1605.a:0 "太卷了，太卷了"
  CG_plus_policy_uniform.1605.b:0 "把兔子内脏反出来还算兔子吗？"
  leader_trait_bunny_purist:0 "兔女郎服基本教义派"
+ leader_trait_bunny_purist_desc:0 "把兔子内脏反出来还算兔子吗？"
  CG_plus_mod_add_bunny_re_bunny_mod:0 "逆兔潮流"
 
  CG_plus_policy_uniform.1700.name:0 "绝艳天堂：触手养殖课"
@@ -322,26 +326,38 @@
 
 
  CG_plus_policy_uniform.1703.name:0 "联合运动会"
- CG_plus_policy_uniform.1703.desc:0 "四年一度的运动的星际运动会又来了，这次[Root.getcountryname]的绝艳学员被安排了啦啦队任务。为了展现[Root.leader.getspeciesname]的团结，学员们都加紧排练啦啦队的动作，尽管制定的服装为暴露度超高的微比坚尼。\n在排练的期间，学员充分体验到这学院微比坚尼啦啦动作的奥妙，在大幅度伸展身体的高难度动作的同时，又能让比坚尼始终能够掩盖着身体的私密除是多么神奇的事情，最妙的是如果手脚如果没有精准地按照动作，比坚尼就会移位，露出舞者地乳头或是阴部。\n所以如果一个啦啦队员的比坚尼在完成整个演出后还在身上的时候就证明了她经过了多么困难的训练。"
+ CG_plus_policy_uniform.1703.desc:0 "四年一度的运动的星际运动会又来了，这次[Root.GetName]的绝艳学员被安排了啦啦队任务。为了展现[Root.GetSpeciesClass]的团结，学员们都加紧排练啦啦队的动作，尽管制定的服装为暴露度超高的微比坚尼。\n在排练的期间，学员充分体验到这学院微比坚尼啦啦动作的奥妙，在大幅度伸展身体的高难度动作的同时，又能让比坚尼始终能够掩盖着身体的私密除是多么神奇的事情，最妙的是如果手脚如果没有精准地按照动作，比坚尼就会移位，露出舞者地乳头或是阴部。\n所以如果一个啦啦队员的比坚尼在完成整个演出后还在身上的时候就证明了她经过了多么严谨的训练。"
+
  
  CG_plus_policy_uniform.1703.a:0 "期待学员们的演出完美"
+ trait_perfect_body_control:0 "完美身体平衡"
+ trait_perfect_body_control_desc:0 "可见一个啦啦队员的比坚尼在完成整个演出后还在身上的时候就证明了她经过了多么严谨的训练。"
+
 
  CG_plus_policy_uniform.1704.name:0 "之高无上的完美精灵"
- CG_plus_policy_uniform.1704.desc:0 "愚蠢的魅魔们。别为你们通过的比坚尼法案沾沾自喜，[Root.leader.getadj][Root.leader.getspeciesname]知道你们在星海议会的小把戏是在试图羞辱高贵的[Root.leader.getspeciesname]\n   但是！你们有所不知，完美的[Root.leader.getspeciesname]又怎么可能被这简单的要求而感到困扰？[Root.leader.getspeciesname]的美体是在这繁星下至高无上之最美之躯，又怎会为展示她而感到羞耻。\n\n    幼稚的魅魔们，[Root.leader.getname]今次就饶恕你们这次无聊的行为，如果下次妄图做出伤害我国的事情们，就把投降书写好吧。\n\n                       [Root.leader.getname]书"
+ CG_plus_policy_uniform.1704.desc:0 "愚蠢的魅魔们。别为你们通过的比坚尼法案沾沾自喜，[Root.leader.getadj][Root.GetSpeciesClass]知道你们在星海议会的小把戏是在试图羞辱高贵的[Root.GetSpeciesClass]\n   但是！你们有所不知，完美的[Root.GetSpeciesClass]又怎么可能被这简单的要求而感到困扰？[Root.GetSpeciesClass]的美体是在这繁星下至高无上之最美之躯，又怎会为展示她而感到羞耻。\n\n    幼稚的魅魔们，[Root.GetRulerName]今次就饶恕你们这次无聊的行为，如果下次妄图做出伤害我国的事情们，就把投降书写好吧。\n\n                       [Root.GetRulerName]书"
  
  CG_plus_policy_uniform.1704.a:0 "文书就这么写吧。一定把魅魔们吓死"
+ CG_plus_policy_uniform.1704.a1:0 "是的，吓死人了£opinion£"
+ triggered_opinion_uniform_bikini_evt_opinion_01:0 "超害羞的，超可爱的的"
 
 
  CG_plus_policy_uniform.1705.name:0 "展示生物模拟多样性"
  CG_plus_policy_uniform.1705.desc:0 "「生物模拟多樣性」一詞是在[Root.GetHomeWorldName]被提出，為生物形态摸拟的多樣性的簡稱，最早是指對星球上所有動物物種種類的外观透过衣服进行模拟。此後，生物多樣性在美學上的定義被擴充至对生物的行为，性特性和性习惯进行模仿。而保持生物多模拟樣性本身具有生態與經濟、科學與教育、文化、倫理與美學等價值。 \n\n   为了展示生物模拟多样性，今天在[Root.GetHomeWorldName]的绝艳学院进行了特别展览活动，有学员会进行生物模仿展示，生物性特征介绍以及共生模仿示范。"
  
  CG_plus_policy_uniform.1705.a:0 "去看看吧"
+ CG_plus_policy_uniform.1705.b:0 "去下一个"
+ CG_plus_policy_uniform.1705.c:0 "非常好,多多举办这类活动"
 
  CG_plus_policy_uniform.17051.name:0 "生物模仿展示"
  CG_plus_policy_uniform.17052.name:0 "生物性特征介绍"
  CG_plus_policy_uniform.17053.name:0 "共生模仿示范"
+ 
+ CG_plus_policy_uniform.17051.desc:0 "这位学员是在模仿家猫的习性，就是当你在电脑桌前忙着的时候，就会友尽办法挤到桌上，妨碍你的工作。"
 
+ CG_plus_policy_uniform.17052.desc:0 "这位学员是在演示犬类动物在发情时，将对共养的其他物种宠物尝试满足交配欲望的情况。"
 
+ CG_plus_policy_uniform.17053.desc:0 "这位学员是在演示作为犬类宠物和主人每天的散步活动。"
 
 
 

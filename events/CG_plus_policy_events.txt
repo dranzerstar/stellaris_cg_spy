@@ -511,12 +511,13 @@ country_event={
 	option={
 		
 		name=CG_plus_policy_uniform.1103.a
+		custom_tooltip = CG_plus_policy_uniform.1103.a1
 		this.capital_scope = {
 			while = {
-				count < 5
+				count < 10
 				create_army = {
 					owner = THIS
-					type = INN_battle_sister 
+					type = Holy_fighter  
 					species = this.owner_species
 				}
 			}
@@ -786,7 +787,7 @@ country_event={
 country_event={
 	id=CG_plus_policy_uniform.1305
 	title=CG_plus_policy_uniform.1305.name
-	custom_gui = cg_plus_evt_menu
+	custom_gui = cg_plus_evt_menu_p
 	custom_gui_option = cg_plus_evt_menu_button
 
 
@@ -806,8 +807,9 @@ country_event={
 
 	option={
 		name=CG_plus_policy_uniform.1305.a
+		custom_tooltip = CG_plus_policy_uniform.1305.a1
 		while={
-		count=10
+		count=20
 		random_owned_pop = {
 			
 			limit = {
@@ -1159,7 +1161,7 @@ country_event={
 	}
 
 	option={
-		name=  CG_plus_policy_uniform.1502.a
+		name=  CG_plus_policy_uniform.1503.a
 		
 		add_modifier = {
 			modifier = CG_plus_mod_uniform_event_sailr_1
@@ -1187,10 +1189,12 @@ country_event={
 
 	option={
 		name=  CG_plus_policy_uniform.1504.a
+		custom_tooltip = CG_plus_policy_uniform.1504.a1
+		hidden_effect={
 		random_owned_pop={
 			kill_pop = yes
 		}
-	 
+		}
 		
 	}
 
@@ -1272,7 +1276,7 @@ country_event={
 	title= CG_plus_policy_uniform.1505.name
 	custom_gui = cg_plus_evt_menu
 	custom_gui_option = cg_plus_evt_menu_button
-	desc=CG_plus_policy_uniform.15051.desc
+	desc=CG_plus_policy_uniform.15052.desc
 	diplomatic = yes
 	hide_window = no
 
@@ -1293,7 +1297,7 @@ country_event={
 	title= CG_plus_policy_uniform.1505.name
 	custom_gui = cg_plus_evt_menu_p
 	custom_gui_option = cg_plus_evt_menu_button
-	desc=CG_plus_policy_uniform.15051.desc
+	desc=CG_plus_policy_uniform.15053.desc
 	diplomatic = yes
 	hide_window = no
 
@@ -1314,7 +1318,7 @@ country_event={
 	title= CG_plus_policy_uniform.1505.name
 	custom_gui = cg_plus_evt_menu
 	custom_gui_option = cg_plus_evt_menu_button
-	desc=CG_plus_policy_uniform.15051.desc
+	desc=CG_plus_policy_uniform.15054.desc
 	diplomatic = yes
 	hide_window = no
 
@@ -1638,6 +1642,7 @@ country_event={
 
 	option={
 		name= CG_plus_policy_uniform.1604.a
+		custom_tooltip =  CG_plus_policy_uniform.1604.a1
 		create_leader = {
 			name = "艳兔特工"
 			class = envoy
@@ -1810,19 +1815,18 @@ country_event={
 	is_triggered_only = yes
 	immediate = {
 		set_variable = { which = cg_dialogue_bg value = -1 }
-		set_variable = { which = cg_plus_evt_pic value = 1704 }
+		set_variable = { which = cg_plus_evt_pic value = 1703 }
 	}
 
 	option={
 		name= CG_plus_policy_uniform.1703.a
-		custom_tooltip = CG_plus_policy_uniform.1703.b1
-		random_owned_planet = {
-			limit = {
-				free_building_slots > 1
-				#has_technology = tech_public_sex_service
+		while = {
+			count = 5
+			random_owned_leader = {
+				add_trait = trait_perfect_body_control
 			}
-			add_building = building_tentacle_paradis  
 		}
+
 
 	}
 
@@ -1845,7 +1849,11 @@ country_event={
 
 	option={
 		name= CG_plus_policy_uniform.1704.a
-
+		
+			set_timed_country_flag = {flag= bikini_evt_opinion_01 days=1000}
+			custom_tooltip = CG_plus_policy_uniform.1704.a1
+	
+		
 
 	}
 
@@ -1853,7 +1861,7 @@ country_event={
 country_event={
 	id=CG_plus_policy_uniform.1705
 	title=CG_plus_policy_uniform.1705.name
-	custom_gui = cg_plus_evt_menu_p
+	custom_gui = cg_plus_evt_menu
 	custom_gui_option = cg_plus_evt_menu_button
 	desc=CG_plus_policy_uniform.1705.desc
 	diplomatic = yes
@@ -1868,15 +1876,84 @@ country_event={
 
 	option={
 		name= CG_plus_policy_uniform.1705.a
-		custom_tooltip = CG_plus_policy_uniform.1703.b1
-		random_owned_planet = {
-			limit = {
-				free_building_slots > 1
-				#has_technology = tech_public_sex_service
-			}
-			add_building = building_tentacle_paradis  
+		country_event = {
+			id = CG_plus_policy_uniform.17051
 		}
+	}
 
+}
+
+country_event={
+	id=CG_plus_policy_uniform.17051
+	title=CG_plus_policy_uniform.17051.name
+	custom_gui = cg_plus_evt_menu
+	custom_gui_option = cg_plus_evt_menu_button
+	desc=CG_plus_policy_uniform.17051.desc
+	diplomatic = yes
+	hide_window = no
+
+
+	is_triggered_only = yes
+	immediate = {
+		set_variable = { which = cg_dialogue_bg value = -1 }
+		set_variable = { which = cg_plus_evt_pic value = 17051 }
+	}
+
+	option={
+		name= CG_plus_policy_uniform.1705.b
+		country_event = {
+			id = CG_plus_policy_uniform.17052
+		}
+	}
+
+}
+
+country_event={
+	id=CG_plus_policy_uniform.17052
+	title=CG_plus_policy_uniform.17052.name
+	custom_gui = cg_plus_evt_menu
+	custom_gui_option = cg_plus_evt_menu_button
+	desc=CG_plus_policy_uniform.17052.desc
+	diplomatic = yes
+	hide_window = no
+
+
+	is_triggered_only = yes
+	immediate = {
+		set_variable = { which = cg_dialogue_bg value = -1 }
+		set_variable = { which = cg_plus_evt_pic value = 17052 }
+	}
+
+	option={
+		name= CG_plus_policy_uniform.1705.b
+		country_event = {
+			id = CG_plus_policy_uniform.17053
+		}
+	}
+
+}
+country_event={
+	id=CG_plus_policy_uniform.17053
+	title=CG_plus_policy_uniform.17053.name
+	custom_gui = cg_plus_evt_menu
+	custom_gui_option = cg_plus_evt_menu_button
+	desc=CG_plus_policy_uniform.17053.desc
+	diplomatic = yes
+	hide_window = no
+
+
+	is_triggered_only = yes
+	immediate = {
+		set_variable = { which = cg_dialogue_bg value = -1 }
+		set_variable = { which = cg_plus_evt_pic value = 17053 }
+	}
+
+	option={
+		name= CG_plus_policy_uniform.1705.c
+
+		add_resource = {
+			unity =10000
+		}
 	}
 
 }

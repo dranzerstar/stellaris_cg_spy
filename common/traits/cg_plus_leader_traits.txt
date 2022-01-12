@@ -18,6 +18,36 @@ leader_trait_bunny_purist = {
 
 }
 
+trait_perfect_body_control = {
+	cost = 0
+	icon = "gfx/interface/icons/traits/trait_break.dds"
+
+	# 可使用该特质的原型
+	initial = no	# 开局可用
+	modification = no	# 可否修改
+	randomized = no	# 随机生成
+	sorting_priority = 50	# 分类优先权
+
+	modifier = {
+		# 调节器
+		leader_skill_levels = 5		# 领袖技能等级上限
+		species_leader_exp_gain = 1.0		# 领袖经验增长
+		planet_researchers_physics_research_produces_mult = 0.3		#来自￡job_researcher 研究人员的￡physics￡ 物理研究 [trait]
+		planet_researchers_society_research_produces_mult = 0.3		#来自￡job_researcher 研究人员的￡society￡ 社会研究 [trait]
+		planet_researchers_engineering_research_produces_mult = 0.3		#来自￡job_researcher 研究人员的￡engineering￡ 工程研究 [trait]
+		leader_age = 40		# 领袖寿命增加
+		planet_pops_consumer_goods_upkeep_mult = 0.3		#维持人口消费品的花费 [trait]
+		planet_jobs_energy_produces_mult = 0.1	
+		planet_jobs_unity_produces_mult = 0.3
+	}
+	leader_trait = {
+		scientist
+	}
+	leader_class = {
+		scientist
+	}
+}
+
 
 leader_trait_sailor_event = {
 	cost = 1

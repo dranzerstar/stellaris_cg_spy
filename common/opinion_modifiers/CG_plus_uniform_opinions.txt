@@ -57,3 +57,24 @@ triggered_opinion_uniform_nun_evt_01 = {
 
 }
 
+
+triggered_opinion_uniform_bikini_evt_opinion_01={
+
+	trigger = {
+		FROM = {
+			has_country_flag = bikini_evt_opinion_01
+		}
+		NOT={
+			has_country_flag = asceticism_flag
+		}
+	}
+
+	
+	opinion = {
+		base =100 # remember to update the ascension perk's tooltip
+	}
+
+
+
+
+}

@@ -538,7 +538,7 @@ guiTypes = {
 		}
 		effectButtonType = {
 			name = "cg_plus_uniform_evt_pic_1305_gfx"
-			quadTextureSprite = "GFX_evt_uniform_army_P_05"
+			quadTextureSprite = "GFX_evt_uniform_army_P_06"
 			Orientation = "UPPER_LEFT"
 			position = { x = @portrait_x y = @portrait_y }
 			effect = "cg_plus_uniform_evt_pic_1305"
@@ -614,7 +614,7 @@ guiTypes = {
 			effect = "cg_plus_uniform_evt_pic_16031"
 		}
 		effectButtonType = {
-			name = "cg_plus_uniform_evt_pic_16031_gfx"
+			name = "cg_plus_uniform_evt_pic_16032_gfx"
 			quadTextureSprite = "GFX_evt_uniform_bunny_P_042"
 			Orientation = "UPPER_LEFT"
 			position = { x = @portrait_x y = @portrait_y }

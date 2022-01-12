@@ -261,7 +261,7 @@ op_cat_mahosj:0 "魔法少女"
  CG_operation.5003.c:0 "通通以最高焦尔强度的圣光净化！"
  CG_operation.5003.d:0 "我全都要！"
  CG_operation.5004.name:0 "分部被摧毁"
- CG_operation.5004.desc:0 "我们在[location]的分部被当地执法人员摧毁了!"
+ CG_operation.5004.desc:0 "我们在[from.target.Getname]的分部被当地执法人员摧毁了!"
 
 
 #########################
@@ -308,7 +308,7 @@ op_cat_mahosj:0 "魔法少女"
 
 
  CG_operation.8004.name:0 "圣歌计划：对魔忍"
- CG_operation.8004.desc:0 "对魔忍完美地完成任务，把恒星基地炸了个巴烂。[target.owner]肯定已经被气到拉粑粑了。"
+ CG_operation.8004.desc:0 "对魔忍完美地完成任务，把恒星基地炸了个巴烂。[target.owner.getName]肯定已经被气到拉粑粑了。"
  CG_operation.8004.a:0 "任务完美完成。撤退。"
  CG_operation.8004.b:0 "撤退!"
  CG_operation.8004.c:0 "恒星基地有防御平台，一起炸掉吧！"
@@ -318,7 +318,7 @@ op_cat_mahosj:0 "魔法少女"
  CG_operation.8005.desc:0 "我们的恒星基地遭到袭击！现场留下多处施展忍法的道具。施袭这可能还在现场！"
 
  CG_operation.8006.name:0 "对魔忍被抓到了"
- CG_operation.8006.desc:0 "被抓的对魔忍被调教成肉便器（没写完）"
+ CG_operation.8006.desc:0 "贪刀的对魔忍延迟了撤退行道，被敌方的守备队伍围攻并活抓！"
 
 
 
@@ -345,7 +345,7 @@ op_cat_mahosj:0 "魔法少女"
 
  
  CG_operation.8406.name:0 "魔法少女被抓到了"
- CG_operation.8406.desc:0 "被抓的魔法少女被调教成肉便器（没写完）"
+ CG_operation.8406.desc:0 "杀红了眼的魔法少女最终失去理智地暴走，最终因为魔力透支失去意识和联络。后勤部队也再没有取得她的联络。"
 
 
 
@@ -361,19 +361,19 @@ op_cat_mahosj:0 "魔法少女"
 
 
  CG_operation.8104.name:0 "圣歌计划：圣歌骑士"
- CG_operation.8104.desc:0 "反正骑士用推土机把她妈的[event_target:destroy_district_target_planet]地块给铲平了（没写完）"
+ CG_operation.8104.desc:0 "历战的圣歌骑士很快就把目标的守备据点拿下，剩下来的时间就是把目标星球的设施进行破坏行动。（行动可以把目标星球的各种地块进行不同程度的破坏。）"
  CG_operation.8104.a:0 "任务完美完成。撤退。"
  CG_operation.8104.b:0 "撤退!"
  CG_operation.8104.c:0 "扩大战果！"
  CG_operation.8104.d:0 "把整个星球拿下！！"
 
  CG_operation.8105.name:0 "我们的星球被突袭！"
- CG_operation.8105.desc:0 "[event_target:destroy_district_target_planet]被人占领了！恒星首都还亮出了她们的战旗！真嚣张！"
+ CG_operation.8105.desc:0 "[event_target:destroy_district_target_planet.getName]被人占领了！恒星首都还亮出了她们的战旗！真嚣张！"
  CG_operation.8105.a:0 "把她们拿下！"
 
  
  CG_operation.8106.name:0 "圣歌骑士被抓到了"
- CG_operation.8106.desc:0 "‘咕，杀了我！’（没写完）"
+ CG_operation.8106.desc:0 "为了扩大战果的圣歌骑士最终因为过度伸入而被切断后退路线。退伍在被围攻十二日后被敌军突破，并把队伍缴械全员被俘虏。"
 
 
  #agent
@@ -400,7 +400,7 @@ op_cat_mahosj:0 "魔法少女"
 
  
  CG_operation.8306.name:0 "机装特工被抓到了"
- CG_operation.8306.desc:0 "‘咕，杀了我！’（没写完）"
+ CG_operation.8306.desc:0 "因为敌方工厂只有物理端口，特工不得不亲身进入工厂就行修改程式植入病毒，虽然任务成功但是在完成的时候，地方守备队伍已经在门外等待着我们的特工，在没有任何逃走的机会后，特工只能选择自我进入关机模式，剩下的赌一下敌国有没有破解特工内存系统的能耐。"
 
  #nun
  CG_operation.8200.name:0 "圣歌计划：战斗修女"
@@ -427,4 +427,4 @@ op_cat_mahosj:0 "魔法少女"
  CG_operation.8205.b:0 "很有可疑，把她们拿下！"
  
  CG_operation.8206.name:0 "修女们被抓起来了。"
- CG_operation.8206.desc:0 "‘咕，杀了我！’（没写完）"
+ CG_operation.8206.desc:0 "地下教会在敌国的一次下城区整顿行动中以国安理由而被盯上。在察觉到大批军警集结的时候，战斗修女放下了圣经，拿出封装多时的武器准备和敌人奋力一搏，为的让贯彻自己的信仰和吧自己的印象深刻的留在已经被转化的信徒的心里面，因为圣歌会再次降临在信徒们，然他们深刻的知道谁那个时候是那些杀害神的使者会被一一清算。"
