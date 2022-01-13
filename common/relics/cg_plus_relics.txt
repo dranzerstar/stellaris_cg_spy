@@ -18,7 +18,7 @@ pocket_auction_museaum = {
 	}
 	score = 1
 	active_effect = {
-		custom_tooltip =  # open 
+		custom_tooltip =  pocket_auction_museaum_adtive_desc # open 
 		
 		hidden_effect = {                                          
 			country_event = {

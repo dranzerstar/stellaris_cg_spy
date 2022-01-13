@@ -37,3 +37,38 @@ opinion_hypno = {
 		base = 2
 	}
 }
+
+
+
+opinion_pragmatism_suc = {
+	opinion = {
+		base = -500
+	}
+	trigger = {
+		FROM = {
+			has_tradition = bunny_evt_opinion_01
+		}
+		
+		has_country_flag = carnalism_flag
+		
+	}
+
+}
+
+
+
+opinion_pragmatism_inn = {
+	opinion = {
+		base = 500
+	}
+	trigger = {
+		FROM = {
+			has_tradition = bunny_evt_opinion_01
+		}
+		
+		has_country_flag = asceticism_flag
+		
+	}
+
+	
+}

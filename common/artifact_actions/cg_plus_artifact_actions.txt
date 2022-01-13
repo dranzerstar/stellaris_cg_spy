@@ -13,7 +13,7 @@ find_pantyshot_targets = {
 	}
 
 	potential = {
-		has_tradition = #TODO
+		has_tradition =cg_plus_thief_tradition_adopt
 	}
 	
 	allow = {

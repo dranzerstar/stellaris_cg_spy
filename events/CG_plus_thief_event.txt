@@ -7,15 +7,65 @@ namespace = CG_plus_thief_event
 #
 # 01x tradition events
 # 010 add special envoy  tradition employ
-# 011 
-country_event={
-	id=CG_plus_thief_event.100
-	title=CG_plus_thief_event.2000.name
+# 011 cg_plus_thief_tradition_21   add 3 envoys
+
+
+#flag possible targets
+event={
+	id=CG_plus_thief_event.001
+	title=CG_plus_thief_event.100.name
 	is_triggered_only = yes
-	fire_only_once = yes
-	hide_window=no
-	option={
-		name=EXCELLENT
-		add_research_option= tech_beauty_theory
+
+	hide_window=yes
+
+	immediate= {
+		every_country={
+		      trigger={  	OR = {
+				  				is_species_class =  Magical_Bitch 
+								is_species_class =  Magical_Girl 
+								is_species_class =  WARSHIPGIRL 
+																
+								} 
+						  	NOT = { has_country_flag = cg_plus_thief_target_empty }
+						}
+			set_country_flag = cg_plus_thief_target
+
+		}
+
 	}
+
+
+}
+            
+
+
+
+country_event={
+	id=CG_plus_thief_event.002
+	title=CG_plus_thief_event.002.name
+	picture=  GFX_ 
+	desc=  CG_plus_thief_event.002.desc
+
+	is_triggered_only = yes
+
+	hide_window=no
+
+	immediate= {
+		random_country={
+		      trigger={  	
+							has_country_flag = cg_plus_thief_target
+						  	NOT = { has_country_flag = cg_plus_thief_target_empty }
+						}
+				save_event_target_as = last_thief_target
+			
+		}
+
+	}
+
+
+	option = {    
+		name= OK
+		# event_target:last_thief_target 
+	}
+
 }

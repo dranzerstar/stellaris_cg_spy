@@ -19,12 +19,14 @@ cg_plus_thief_tradition_adopt = {
 	modifier = {
 	}
 		on_enabled = {
-			country_event = {
-				id = CG_leader.1
+			country_event = { 
+				id = CG_plus_thief_event.010 
+				days=10 
 			}
 
-#get spy leader
+#get spy leader get relic
 # enable special operation
+		}
 }
 
 cg_plus_thief_tradition_finish = {
@@ -33,10 +35,12 @@ cg_plus_thief_tradition_finish = {
 	}
 		on_enabled = {
 			country_event = {
-				id = CG_leader.1
+				id = CG_plus_thief_event.011
+				days = 10 
 			}
 
-#get relic
+# alllow auctions
+		}
 }
 
 cg_plus_thief_tradition_11 = {
@@ -78,6 +82,11 @@ cg_plus_thief_tradition_21 = {
 	}
 	modifier = {
 	}
+	on_enabled = {
+		country_event = {
+			id = CG_plus_thief_event.012
+		}
+	}
 	ai_weight = {
 		weight = 1
 	}
@@ -115,5 +124,6 @@ cg_plus_thief_tradition_23 = {
 	}
 # moderativity + 500 opinion for inn  -500 for succ
 }
+
 
 
