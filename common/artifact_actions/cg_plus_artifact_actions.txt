@@ -18,8 +18,8 @@ find_pantyshot_targets = {
 	
 	allow = {
 		custom_tooltip = {
-			fail_text = "requires_arcane_deciphering_no_cooldown"
-			NOT = { has_modifier = target_cooldown }
+			fail_text = pantsteal_target
+			NOT = { has_modifier = mod_cooldown }
 		}
 	}
 
@@ -28,11 +28,11 @@ find_pantyshot_targets = {
 		hidden_effect = {
 
 			add_modifier = {
-				modifier = "target_cooldown" 
+				modifier = mod_cooldown
 				days = 720
 			}
 			owner = {
-				country_event = { id = CG_plus_thief_event.100 }
+				country_event = { id = CG_plus_thief_event.002 }
 			}
 		}
 	}

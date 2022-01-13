@@ -8,19 +8,19 @@ namespace = CG_plus_thief_event
 # 01x tradition events
 # 010 add special envoy  tradition employ
 # 011 cg_plus_thief_tradition_21   add 3 envoys
-
+# 012 finish enable functions
 
 #flag possible targets
 event={
 	id=CG_plus_thief_event.001
-	title=CG_plus_thief_event.100.name
 	is_triggered_only = yes
 
 	hide_window=yes
 
 	immediate= {
 		every_country={
-		      trigger={  	OR = {
+		      		limit={  	
+				  			OR = {
 				  				is_species_class =  Magical_Bitch 
 								is_species_class =  Magical_Girl 
 								is_species_class =  WARSHIPGIRL 
@@ -43,7 +43,7 @@ event={
 country_event={
 	id=CG_plus_thief_event.002
 	title=CG_plus_thief_event.002.name
-	picture=  GFX_ 
+	#picture=  GFX_ 
 	desc=  CG_plus_thief_event.002.desc
 
 	is_triggered_only = yes
@@ -52,11 +52,11 @@ country_event={
 
 	immediate= {
 		random_country={
-		      trigger={  	
+		      limit={  	
 							has_country_flag = cg_plus_thief_target
 						  	NOT = { has_country_flag = cg_plus_thief_target_empty }
 						}
-				save_event_target_as = last_thief_target
+					save_global_event_target_as  = last_thief_target
 			
 		}
 

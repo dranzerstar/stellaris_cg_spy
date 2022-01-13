@@ -1,12 +1,14 @@
 # 
 pocket_auction_museaum = {
 	activation_duration = 100	#ê≥éÆî≈1080
-	portrait = "GFX_relic_omnicodex"  #TODO
+	portrait = "GFX_relic_portal"  #TODO
 	sound = "relic_activation_the_omnicodex"
 	resources = {
-		category = relics
-		energy = 100
+		category = relics	
+		cost= {
+		energy = 1000}
 	}
+
 	ai_weight = {
 		weight = 0
 	}

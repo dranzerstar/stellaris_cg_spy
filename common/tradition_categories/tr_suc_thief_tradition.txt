@@ -1,4 +1,4 @@
-tradition_suc_tradition = {
+tradition_sucthief = {
 	tree_template = "tree_12_12"
 	adoption_bonus = "cg_plus_thief_tradition_adopt"
 	finish_bonus = "cg_plus_thief_tradition_finish"

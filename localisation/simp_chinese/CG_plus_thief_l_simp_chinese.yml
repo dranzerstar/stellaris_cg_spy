@@ -1,0 +1,37 @@
+﻿l_simp_chinese:
+ tradition_sucthief:0 "REPLACE_ME"
+ tradition_sucthief_desc:0 "REPLACE_ME"
+ cg_plus_thief_tradition_adopt:0 "REPLACE_ME"
+ cg_plus_thief_tradition_adopt_effect:0 "REPLACE_ME"
+ cg_plus_thief_tradition_adopt_desc:0 "REPLACE_ME"
+ cg_plus_thief_tradition_finish:0 "REPLACE_ME"
+ cg_plus_thief_tradition_finish_effect:0 "REPLACE_ME"
+ cg_plus_thief_tradition_11:0 "REPLACE_ME"
+ cg_plus_thief_tradition_11_desc:0 "REPLACE_ME"
+ cg_plus_thief_tradition_11_delayed:0 "REPLACE_ME"
+ cg_plus_thief_tradition_12:0 "REPLACE_ME"
+ cg_plus_thief_tradition_12_desc:0 "REPLACE_ME"
+ cg_plus_thief_tradition_12_delayed:0 "REPLACE_ME"
+ cg_plus_thief_tradition_21:0 "REPLACE_ME"
+ cg_plus_thief_tradition_21_desc:0 "REPLACE_ME"
+ cg_plus_thief_tradition_21_delayed:0 "REPLACE_ME"
+ cg_plus_thief_tradition_22:0 "REPLACE_ME"
+ cg_plus_thief_tradition_22_desc:0 "REPLACE_ME"
+ cg_plus_thief_tradition_22_delayed:0 "REPLACE_ME"
+ cg_plus_thief_tradition_23:0 "REPLACE_ME"
+ cg_plus_thief_tradition_23_desc:0 "REPLACE_ME"
+ cg_plus_thief_tradition_23_delayed:0 "REPLACE_ME"
+
+
+
+
+
+#minor artifact active
+ find_pantyshot_targets:0 "REPLACE_ME"
+ find_pantyshot_targets_desc:0 "REPLACE_ME"
+ pantsteal_target:0 "REPLACE_ME"
+ mod_cooldown:0 "REPLACE_ME"
+
+ pocket_auction_museaum:0 "REPLACE_ME"
+ pocket_auction_museaum_desc:0 "REPLACE_ME"
+ pocket_auction_museaum_adtive_desc:0 "REPLACE_ME"
