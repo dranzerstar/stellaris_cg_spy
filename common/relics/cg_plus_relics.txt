@@ -1,0 +1,38 @@
+# 
+pocket_auction_museaum = {
+	activation_duration = 100	#ê≥éÆî≈1080
+	portrait = "GFX_relic_omnicodex"  #TODO
+	sound = "relic_activation_the_omnicodex"
+	resources = {
+		category = relics
+		energy = 100
+	}
+	ai_weight = {
+		weight = 0
+	}
+	triggered_country_modifier = {
+		potential = {
+			always = yes
+		}
+		#passive effects
+	}
+	score = 1
+	active_effect = {
+		custom_tooltip =  # open 
+		
+		hidden_effect = {                                          
+			country_event = {
+				id = CG_plus_thief_auction_screen_events.1000    #open museaum
+			}
+		}
+	}
+	# Possible check for activation
+	possible = {
+		custom_tooltip = {
+			fail_text = "requires_relic_no_cooldown"
+			NOT = {
+				has_modifier = relic_activation_cooldown
+			}
+		}
+	}
+}

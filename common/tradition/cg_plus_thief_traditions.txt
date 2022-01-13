@@ -1,0 +1,119 @@
+#tradition_suc_tradition = {
+#	tree_template = "tree_12_12"
+#	adoption_bonus = "cg_plus_thief_tradition_adopt"
+#	finish_bonus = "cg_plus_thief_tradition_finish"
+#	traditions = {
+#		"cg_plus_thief_tradition_11"
+#		"cg_plus_thief_tradition_12"
+#		"cg_plus_thief_tradition_21"
+#		"cg_plus_thief_tradition_22"
+#		"cg_plus_thief_tradition_23"
+#	}
+#	potential = {
+#		has_country_flag = carnalism_flag
+#	}
+#}
+
+
+cg_plus_thief_tradition_adopt = {
+	modifier = {
+	}
+		on_enabled = {
+			country_event = {
+				id = CG_leader.1
+			}
+
+#get spy leader
+# enable special operation
+}
+
+cg_plus_thief_tradition_finish = {
+	modifier = {
+		ascension_perks_add = 1
+	}
+		on_enabled = {
+			country_event = {
+				id = CG_leader.1
+			}
+
+#get relic
+}
+
+cg_plus_thief_tradition_11 = {
+		tradition_swap = {
+		name = cg_plus_thief_tradition_11
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = no
+	}
+	modifier = {
+	}
+	ai_weight = {
+		weight = 1
+	}
+# infiltration speed
+}
+
+cg_plus_thief_tradition_12= {
+		tradition_swap = {
+		name = cg_plus_thief_tradition_12
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = no
+	}
+	modifier = {
+	}
+	ai_weight = {
+		weight = 1
+	}
+#   +3 unity +3 love juice +3 energy per embassy   change
+}
+
+cg_plus_thief_tradition_21 = {
+		tradition_swap = {
+		name = cg_plus_thief_tradition_21
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = no
+	}
+	modifier = {
+	}
+	ai_weight = {
+		weight = 1
+	}
+# spy envoy  +3
+}
+
+
+cg_plus_thief_tradition_22 = {
+		tradition_swap = {
+		name = cg_plus_thief_tradition_22
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = no
+	}
+	modifier = {
+	}
+	ai_weight = {
+		weight = 1
+	}
+# +1 code breaking  +1 thief Operation Skill
+}
+
+
+cg_plus_thief_tradition_23 = {
+		tradition_swap = {
+		name = cg_plus_thief_tradition_23
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = no
+	}
+	modifier = {
+	}
+	ai_weight = {
+		weight = 1
+	}
+# moderativity + 500 opinion for inn  -500 for succ
+}
+
+

@@ -1,0 +1,21 @@
+namespace = CG_plus_thief_event
+
+
+# 001 start of game : flag all possible target countries
+# 002 look for possible targets
+#
+#
+# 01x tradition events
+# 010 add special envoy  tradition employ
+# 011 
+country_event={
+	id=CG_plus_thief_event.100
+	title=CG_plus_thief_event.2000.name
+	is_triggered_only = yes
+	fire_only_once = yes
+	hide_window=no
+	option={
+		name=EXCELLENT
+		add_research_option= tech_beauty_theory
+	}
+}

@@ -1,0 +1,16 @@
+namespace = CG_plus_thief_auction_screen_events
+
+country_event={
+	id=CG_plus_thief_auction_screen_events.0001
+
+	title= CG_plus_policy_uniform.0001.name
+	hide_window=yes
+
+
+
+	is_triggered_only = yes
+	fire_only_once = no
+
+#stub
+
+}

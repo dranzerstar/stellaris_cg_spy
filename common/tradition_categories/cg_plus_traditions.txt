@@ -1,0 +1,18 @@
+tradition_suc_tradition = {
+	tree_template = "tree_12_12"
+	adoption_bonus = "cg_plus_thief_tradition_adopt"
+	finish_bonus = "cg_plus_thief_tradition_finish"
+	traditions = {
+		"cg_plus_thief_tradition_11"
+		"cg_plus_thief_tradition_12"
+		"cg_plus_thief_tradition_21"
+		"cg_plus_thief_tradition_22"
+		"cg_plus_thief_tradition_23"
+	}
+	potential = {
+		has_country_flag = carnalism_flag
+	}
+	ai_weight = {
+		weight = 1
+	}
+}

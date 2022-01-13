@@ -1,0 +1,39 @@
+#
+#   look for targets with panties
+find_pantyshot_targets = {   
+	resources = {
+		category = artifact_actions
+		cost = {
+			minor_artifacts = 5
+		}
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+
+	potential = {
+		has_tradition = #TODO
+	}
+	
+	allow = {
+		custom_tooltip = {
+			fail_text = "requires_arcane_deciphering_no_cooldown"
+			NOT = { has_modifier = target_cooldown }
+		}
+	}
+
+	effect = {
+		custom_tooltip = artifact_arcane_deciphering_effect
+		hidden_effect = {
+
+			add_modifier = {
+				modifier = "target_cooldown" 
+				days = 720
+			}
+			owner = {
+				country_event = { id = CG_plus_thief_event.100 }
+			}
+		}
+	}
+}
