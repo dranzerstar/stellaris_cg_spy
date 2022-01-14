@@ -15,11 +15,11 @@ namespace = CG_plus_thief_event
 # 51x post op event
 #
 
+# 012 finish enable functions
 
 #flag possible targets
 event={
 	id=CG_plus_thief_event.001
-	title=CG_plus_thief_event.100.name
 	is_triggered_only = yes
 
 	hide_window=yes
@@ -49,7 +49,7 @@ event={
 country_event={
 	id=CG_plus_thief_event.002
 	title=CG_plus_thief_event.002.name
-	picture=  GFX_ 
+	#picture=  GFX_ 
 	desc=  CG_plus_thief_event.002.desc
 
 	is_triggered_only = yes
@@ -62,7 +62,7 @@ country_event={
 							has_country_flag = cg_plus_thief_target
 						  	NOT = { has_country_flag = cg_plus_thief_target_empty }
 						}
-				save_event_target_as = last_thief_target
+					save_global_event_target_as  = last_thief_target
 			
 		}
 

@@ -1,0 +1,34 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_tradition_hex_bg_tradition_sucthief"
+		textureFile = "gfx/interface/traditions/tradition_hex_bg_DC.dds"
+	}
+	spriteType = {
+		name = "GFX_tradition_category_bg_tradition_sucthief"
+		textureFile = "gfx/interface/icons/traditions/tradition_category_tile_thief.dds"
+	}
+	spriteType = {
+		name = "GFX_tradition_category_icon_tradition_sucthief"
+		textureFile = "gfx/interface/icons/traditions/tradition_icon_thief.dds"
+	}
+	spriteType = {
+		name = "GFX_cg_plus_thief_tradition_11"
+		textureFile = "gfx/interface/icons/traditions/tradition_subterfuge_shadow_recruits.dds"
+	}
+	spriteType = {
+		name = "GFX_cg_plus_thief_tradition_12"
+		textureFile = "gfx/interface/icons/traditions/tradition_diplomacy_direct_diplomacy.dds"
+	}
+	spriteType = {
+		name = "GFX_cg_plus_thief_tradition_21"
+		textureFile = "gfx/interface/icons/traditions/tradition_domination_judgment_corps.dds"
+	}
+	spriteType = {
+		name = "GFX_cg_plus_thief_tradition_22"
+		textureFile = "gfx/interface/icons/traditions/tradition_subterfuge_operational_security.dds"
+	}
+	spriteType = {
+		name = "GFX_cg_plus_thief_tradition_23"
+		textureFile = "gfx/interface/icons/traditions/tradition_diplomacy_direct_diplomacy.dds"
+	}
+}

@@ -35,7 +35,7 @@ cg_plus_thief_tradition_finish = {
 	}
 		on_enabled = {
 			country_event = {
-				id = CG_plus_thief_event.011
+				id = CG_plus_thief_event.012
 				days = 10 
 			}
 
@@ -84,7 +84,7 @@ cg_plus_thief_tradition_21 = {
 	}
 	on_enabled = {
 		country_event = {
-			id = CG_plus_thief_event.012
+			id = CG_plus_thief_event.011
 		}
 	}
 	ai_weight = {

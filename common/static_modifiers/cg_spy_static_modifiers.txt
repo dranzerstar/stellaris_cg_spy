@@ -18,4 +18,8 @@ mod_holy_proj_robot_hacked_agent={
 mod_DGZ={
 	pop_happiness = -50
 	planet_stability_add = -10
+
+}
+mod_cooldown ={
+	
 }
