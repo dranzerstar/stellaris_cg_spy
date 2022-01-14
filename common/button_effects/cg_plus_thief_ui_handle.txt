@@ -1,0 +1,25 @@
+
+
+cg_plus_thief_small_0001 = {
+	potential = {FROM = { has_country_flag = collected_pantyshoot_01 }}
+	allow = { always = yes }
+	effect = {
+		country_event = { id = CG_plus_thief_auction_screen_events.1001	}
+		set_variable={ which= show_panty_photo value =  1 }
+	}
+}
+
+
+cg_plus_thief_large_0001 = {
+	potential = {FROM = { check_variable = { which = show_panty_photo value = 1 }}}
+	allow = { always = yes }
+	effect = {}
+}
+
+
+
+cg_plus_thief_small_0002 = {
+	potential = {FROM = { check_variable = { which = cg_plus_evt_pic value = 1502 }}}
+	allow = { always = yes }
+	effect = {}
+}

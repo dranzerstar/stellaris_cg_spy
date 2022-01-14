@@ -8,6 +8,12 @@ namespace = CG_plus_thief_event
 # 01x tradition events
 # 010 add special envoy  tradition employ
 # 011 cg_plus_thief_tradition_21   add 3 envoys
+#
+#
+# 5xx opertaion events
+# 51x espinoage events
+# 51x post op event
+#
 
 
 #flag possible targets
@@ -20,7 +26,7 @@ event={
 
 	immediate= {
 		every_country={
-		      trigger={  	OR = {
+		      limit={  	OR = {
 				  				is_species_class =  Magical_Bitch 
 								is_species_class =  Magical_Girl 
 								is_species_class =  WARSHIPGIRL 
@@ -52,7 +58,7 @@ country_event={
 
 	immediate= {
 		random_country={
-		      trigger={  	
+		      limit={  	
 							has_country_flag = cg_plus_thief_target
 						  	NOT = { has_country_flag = cg_plus_thief_target_empty }
 						}
@@ -69,3 +75,422 @@ country_event={
 	}
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# this = operation; from = target (country)
+
+# go pantyshoot 
+espionage_operation_event = {
+	id = CG_plus_thief_event.500
+	title = CG_plus_thief_event.500.name
+	espionage_operation = yes
+	desc = {
+		trigger = {
+			target = {
+				OR = {
+					has_hostile_espionage_operation_ethics = yes
+					has_closed_borders = root.owner
+					is_at_war_with = root.owner
+				}
+			}
+		}
+		text = CG_plus_thief_event.500.desc.hostile
+	}
+	desc = {
+		trigger = {
+			target = {
+				NOR = {
+					has_hostile_espionage_operation_ethics = yes
+					has_closed_borders = root.owner
+					is_at_war_with = root.owner
+				}
+			}
+		}
+		text = CG_plus_thief_event.500.desc.friendly
+	}
+
+	picture = GFX_evt_bunnychange
+	show_sound = event_default
+	is_triggered_only = yes
+
+	immediate = { }
+
+	option = { name = ACKNOWLEDGED }
+}
+# Target identified
+espionage_operation_event = {
+	id = CG_plus_thief_event.501
+	title = CG_operation.1001.name
+	desc = CG_operation.1001.desc
+	espionage_operation = yes
+
+		picture = GFX_evt_recruit_bunny
+	
+
+	
+	
+	show_sound = event_default
+	is_triggered_only = yes
+
+	immediate = { }
+
+	option = { name = GOOD }
+}
+# Result
+espionage_operation_event = {
+	id = CG_plus_thief_event.502
+	title = CG_operation.1002.name
+	desc = CG_operation.1002.desc
+	espionage_operation = yes
+	picture = GFX_evt_recruit_bunny
+	show_sound = event_default
+	is_triggered_only = yes
+
+	immediate = {
+
+			#espionage_acquire_asset_regular = yes
+			#CG_espionage_acquire_asset_ero = yes
+			
+		 
+	}
+
+	option = {
+		name = LAUNCH_OPERATION
+		hidden_effect = {
+			owner = {
+				country_event = { id = CG_plus_thief_event.510 days = 5 }
+			}
+		}
+	}
+
+	after = {
+		set_espionage_operation_progress_locked = no
+ 		# scripted ffect to select which shoot
+		cg_plus_thief_get_pantyshot_photo=yes 
+		#promised collected,
+	}
+}
+
+#from = op
+# description of opreation 
+country_event={
+	id=CG_plus_thief_event.510
+	title=CG_plus_thief_event.510.name
+	picture=  GFX_ 
+
+	desc=  CG_plus_thief_event.510.desc
+
+	is_triggered_only = yes
+
+	hide_window=no
+
+	option = {    
+		name= CG_plus_thief_event.510.a
+		custom_tooltip = CG_plus_thief_event.510.a.tp
+		hidden_effect={
+			random_list = {
+				9={country_event = { id = CG_plus_thief_event.511 days = 5 } }
+				1={country_event = { id = CG_plus_thief_event.519 days = 5 } 
+				modifier = {
+					factor = 0.7
+					has_ascension_perk = ap_lust_ascension 
+				}
+				 
+				modifier = {
+					factor = 0.5
+					has_ascension_perk = ap_lustgod_super_dimensional_contact 
+				}
+			
+				}
+			}
+		}
+		allow={ 
+			from.target={
+				 NOT= {has_country_flag = panty_stolen_1 }
+			}
+			custom_tooltip_fail = {
+				text = CG_plus_thief_event.510.a.failed
+			}   
+		}
+	}
+
+	option = {    
+		name= CG_plus_thief_event.510.b
+		custom_tooltip = CG_plus_thief_event.510.b.tp
+		hidden_effect={
+			random_list = {
+				8={country_event = { id = CG_plus_thief_event.512 days = 5 } }
+				2={country_event = { id = CG_plus_thief_event.519 days = 5 } 
+				modifier = {
+					factor = 0.7
+					has_ascension_perk = ap_lust_ascension 
+				}
+				 
+				modifier = {
+					factor = 0.5
+					has_ascension_perk = ap_lustgod_super_dimensional_contact 
+				}
+			
+				}
+			}
+		}
+		allow={ 
+			from.target={
+				 NOT= {has_country_flag = panty_stolen_2 }
+			}
+			custom_tooltip_fail = {
+				text = CG_plus_thief_event.510.b.failed
+			}   
+		}
+	}
+	option = {    
+		name= CG_plus_thief_event.510.c
+		custom_tooltip = CG_plus_thief_event.510.c.tp
+		hidden_effect={
+			random_list = {
+				7={country_event = { id = CG_plus_thief_event.513 days = 5 } }
+				3={country_event = { id = CG_plus_thief_event.519 days = 5 } 
+					modifier = {
+						factor = 0.7
+						has_ascension_perk = ap_lust_ascension 
+					}
+					 
+					modifier = {
+						factor = 0.5
+						has_ascension_perk = ap_lustgod_super_dimensional_contact 
+					}
+				}
+			}
+		}
+		allow={ 
+			from.target={
+				 NOT= {has_country_flag = panty_stolen_3 }
+			}
+			custom_tooltip_fail = {
+				text = CG_plus_thief_event.510.c.failed
+			}   
+		}
+	}
+
+
+
+
+}
+
+#fromfrom=op
+#fromfrom.target
+#简单目标 
+country_event={
+	id=CG_plus_thief_event.511
+	title=CG_plus_thief_event.511.name
+	picture=  GFX_ 
+
+	desc=  CG_plus_thief_event.511.desc
+
+	is_triggered_only = yes
+
+	hide_window=no
+	immediate = {
+		fromfrom.target = {
+			random_owned_leader = {
+				save_event_target_as = stolen_leader_name
+			}
+			set_country_flag = panty_stolen_1
+		}
+
+	}
+
+	option = {    
+		name= OK
+
+		
+	}
+	after = {
+		fromfrom.target = {
+		if = {
+				limit = {
+					has_country_flag = panty_stolen_1
+					has_country_flag = panty_stolen_2
+					has_country_flag = panty_stolen_3
+				}
+				set_country_flag = cg_plus_thief_target_empty
+			}
+		}
+	}
+
+}
+
+#fromfrom=op
+#fromfrom.target
+#中等目标 
+country_event={
+	id=CG_plus_thief_event.512
+	title=CG_plus_thief_event.512.name
+	picture=  GFX_ 
+	desc=  CG_plus_thief_event.512.desc
+
+	is_triggered_only = yes
+
+	hide_window=no
+	immediate = {
+		fromfrom.target = {
+			random_owned_leader = {
+				save_event_target_as = stolen_leader_name
+			}
+			set_country_flag = panty_stolen_2
+		}
+	}
+
+	option = {    
+		name= OK
+	}
+	after = {
+		fromfrom.target = {
+		if = {
+				limit = {
+					has_country_flag = panty_stolen_1
+					has_country_flag = panty_stolen_2
+					has_country_flag = panty_stolen_3
+				}
+				set_country_flag = cg_plus_thief_target_empty
+			}
+		}
+	}
+
+}
+
+#fromfrom=op
+#fromfrom.target
+#高难度目标
+country_event={
+	id=CG_plus_thief_event.513
+	title=CG_plus_thief_event.513.name
+	picture=  GFX_ 
+	desc=  CG_plus_thief_event.513.desc
+
+	is_triggered_only = yes
+
+	hide_window=no
+	immediate = {
+		fromfrom.target = {
+			random_owned_leader = {
+				save_event_target_as = stolen_leader_name
+			}
+			set_country_flag = panty_stolen_3
+		}
+	}
+
+	option = {    
+		name= OK
+	}
+	after = {
+		fromfrom.target = {
+		if = {
+				limit = {
+					has_country_flag = panty_stolen_1
+					has_country_flag = panty_stolen_2
+					has_country_flag = panty_stolen_3
+				}
+				set_country_flag = cg_plus_thief_target_empty
+			}
+		}
+	}
+
+}
+
+
+
+#failed catcher
+# collects pantyshot but got caught
+#败露
+country_event={
+	id=CG_plus_thief_event.519
+	title=CG_plus_thief_event.519.name
+	picture=  GFX_ 
+
+	desc=  CG_plus_thief_event.519.desc
+
+	is_triggered_only = yes
+
+	hide_window=no
+	immediate = {
+		fromfrom.target={
+		add_opinion_modifier={
+				who = owner 
+				modifier = opinion_caught_thief
+			}
+		}
+
+	}
+	#什么都不做
+	option = {    
+		name= CG_plus_thief_event.519.a
+	}
+	#赔款
+	option = {    
+		name= CG_plus_thief_event.519.b
+		fromfrom.target={
+			add_opinion_modifier={
+					who = owner 
+					modifier = opinion_payment
+				}
+			}
+	}
+	#赔款 谢罪 土下坐 红豆泥三连
+	option = {    
+		name= CG_plus_thief_event.519.c
+		fromfrom.target={
+			add_opinion_modifier={
+					who = owner 
+					modifier = opinion_DGZ
+				}
+		}
+		country_event = {
+			id = CG_plus_thief_event.520
+		}
+	}
+
+}
+
+#3连后续
+country_event={
+	id=CG_plus_thief_event.520
+	title=CG_plus_thief_event.520.name
+	picture=  GFX_ 
+
+	desc=  CG_plus_thief_event.520.desc
+
+	is_triggered_only = yes
+
+	hide_window=no
+	immediate = {
+		add_modifier = {
+			modifier = mod_DGZ
+			years = 10
+		}
+	}
+
+	option = {    
+		name= OK
+	}
+
+}
+

@@ -1,16 +1,123 @@
 namespace = CG_plus_thief_auction_screen_events
 
+
+# 0000 invisible setup to main ui
+
+
+
+# 0001 main auction ui event
+
+
+# 1xxx enlarged pic
+
+
+country_event={
+	id=CG_plus_thief_auction_screen_events.0000
+	is_triggered_only = yes
+	hide_window=yes
+	immediate = {
+		set_country_flag = auction_screen_open
+		set_country_flag = auction_screen_page_1
+	}
+	after={
+		country_event = {
+			id = CG_plus_thief_auction_screen_events.0001
+		}
+	}
+}
+
+
 country_event={
 	id=CG_plus_thief_auction_screen_events.0001
 
-	title= CG_plus_policy_uniform.0001.name
-	hide_window=yes
+	custom_gui = cg_plus_evt_menu
 
+	title= CG_plus_thief_auction_screen_events.0001.name
+	desc= CG_plus_thief_auction_screen_events.0001.desc
+	hide_window=no
+	diplomatic = yes
+
+	immediate = {
+			
+
+	}
 
 
 	is_triggered_only = yes
 	fire_only_once = no
+ 
+	option={
+		name=pg1
+		set_country_flag = auction_screen_page_1
+		allow = {
+			NOT= {has_country_flag = auction_screen_page_1 }
+		}
 
-#stub
+	}
+	option={
+		name=pg2
+		set_country_flag = auction_screen_page_2
+		allow = {
+			NOT= {has_country_flag = auction_screen_page_2 }
+		}
+	}
+	option={
+		name=pg3
+		set_country_flag = auction_screen_page_3
+		allow = {
+			NOT= {has_country_flag = auction_screen_page_3 }
+		}
+	}
+
+	option={
+		name=close
+
+		remove_country_flag = auction_screen_open
+
+		remove_country_flag = auction_screen_page_1
+		remove_country_flag = auction_screen_page_2
+		remove_country_flag = auction_screen_page_3
+
+	}
+
+}
+
+
+
+
+
+
+# enlarge photo screen 
+country_event={
+	id=CG_plus_thief_auction_screen_events.1001
+	title=CG_plus_thief_auction_screen_events.1001.name
+	custom_gui = cg_plus_evt_menu
+	#custom_gui_option = cg_plus_evt_menu_button
+	desc=CG_plus_thief_auction_screen_events.1001.desc
+	diplomatic = yes
+	hide_window = no
+
+
+	is_triggered_only = yes
+	immediate = {
+		#set_variable = { which = show_panty_photo value = 1 }
+	}
+
+#	option={
+#		#triggered from ui
+#		name= "BACK"
+#		trigger = {has_country_flag = auction_screen_open }
+#		country_event = {
+#			id = CG_plus_thief_auction_screen_events.0001
+#		}
+#	}
+
+	option={
+		#triggered from spyevent
+		name= "CLOSE"
+		trigger = {NOT= {has_country_flag = auction_screen_open }}
+
+	}
+
 
 }

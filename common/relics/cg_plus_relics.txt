@@ -22,7 +22,7 @@ pocket_auction_museaum = {
 		
 		hidden_effect = {                                          
 			country_event = {
-				id = CG_plus_thief_auction_screen_events.1000    #open museaum
+				id = CG_plus_thief_auction_screen_events.0000    #open museaum
 			}
 		}
 	}

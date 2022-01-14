@@ -90,6 +90,11 @@ CG_espionage_acquire_ero_asset_create_asset = {
 }
 
 
+
+
+
+
+
 # Operation scope (for Acquire Asset and operation random events)
 
 #
@@ -231,3 +236,74 @@ CG_operation_MM_failed_random_events = {
 	}
 }
 
+
+
+cg_plus_thief_get_pantyshot_photo = {
+	random_list = {
+		1 = {
+			modifier = {
+				factor = 0
+				root.owner = {
+				has_country_flag = collected_pantyshoot_01
+				}
+			}
+			root.owner = {
+				set_country_flag = collected_pantyshoot_01
+			}
+			set_variable = { which = show_panty_photo value=1 }
+
+		}
+		1 = {
+
+			
+		}
+		1 = {
+
+		}
+		1 = {
+
+		}
+		1 = {
+
+		}
+
+	}
+}
+
+
+
+CG_operation_thief_failed_random_events = {
+	random_list = {
+		1 = { #
+			modifier = {
+				factor = 0
+				target={  NOT ={has_country_flag = carnalism_flag }}
+				
+			}
+			owner={
+			country_event = { id = CG_operation_failed.1100 }
+			}
+		}
+		1 = { #
+			modifier = {
+				factor = 0
+				target={  NOT ={has_country_flag = asceticism_flag }}
+				
+			}
+			owner={
+			country_event = { id = CG_operation_failed.1200 }
+			}
+		}
+		1 = { 
+
+
+		}
+		1 = { 
+
+
+		}
+		1 = { 
+
+		}
+	}
+}

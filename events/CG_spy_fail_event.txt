@@ -1,6 +1,19 @@
 namespace = CG_operation_failed
 @RandomOperationEventTimer = 10
 
+# 50xx  succ fail events
+# 10xx  thief fail events
+# 1100  INN target exclusive
+# 1200  SUCC target exclusive
+# 1300  AL target exclusive
+# 1400  nyto target exclusive
+
+
+#fromfrom = operation
+#fromfrom.target = target country
+#fromfrom.owner = owner country
+#fromfrom = operation
+#fromfrom = operation
 
 # 失去联络
 country_event = {

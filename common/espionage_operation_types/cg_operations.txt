@@ -1014,3 +1014,66 @@ operation_holy_proj_mhsj = {
 		}
 	}
 }
+
+
+
+
+
+#################################################
+#  大盗偷拍
+#
+#################################################
+operation_pantyshoot = {
+	target = none
+	categories = { op_cat_ero op_cat_diplomacy }
+	picture = GFX_evt_hypno_1
+	desc = operation_pantyshoot_desc
+	stages = 3
+	potential = { owner = { has_tradition = cg_plus_thief_tradition_adopt  }}
+	spy_power_cost = 35
+	resources = {
+		category = operations
+		cost = {
+			energy = 3000
+			
+		}
+		upkeep ={ energy = 50 } 
+	}
+
+
+	allow = {
+
+		custom_tooltip = {
+			target={
+				has_country_flag = cg_plus_thief_target
+				NOT = { has_country_flag = cg_plus_thief_target_empty }
+			}
+			fail_text = not_valiid_steal_target
+		}
+		custom_tooltip = {
+			is_running_espionage_operation = no
+			fail_text = operation_one_at_a_time
+		}
+	}
+
+	stage = {
+		difficulty = @diff_t2
+		icon = GFX_espionage_chapter_progress_icon_op_cat_ero
+		event = CG_plus_thief_event.500
+	}
+	stage = {
+		difficulty = @diff_t2
+		icon = GFX_espionage_chapter_progress_icon_op_cat_ero
+		event = CG_plus_thief_event.501
+	}
+	stage = {
+		difficulty = @diff_t2
+		icon = GFX_espionage_chapter_progress_icon_op_cat_ero
+		event = CG_plus_thief_event.502
+	}
+	on_roll_failed = {
+		standard_espionage_operation_on_roll_failed = { RANDOM_EVENTS = CG_operation_thief_failed_random_events }
+
+	}
+	on_create = {}
+}

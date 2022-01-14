@@ -38,7 +38,35 @@ opinion_hypno = {
 	}
 }
 
+opinion_caught_thief = {
+	opinion = {
+		base = -300
+	}
+	accumulative = yes
+	decay = {
+		base = 10
+	}
+}
 
+opinion_payment= {
+	opinion = {
+		base = 150
+	}
+	accumulative = yes
+	decay = {
+		base = 10
+	}
+}
+
+opinion_DGZ = {
+	opinion = {
+		base = 300
+	}
+	accumulative = yes
+	decay = {
+		base = 10
+	}
+}
 
 opinion_pragmatism_suc = {
 	opinion = {
@@ -46,9 +74,8 @@ opinion_pragmatism_suc = {
 	}
 	trigger = {
 		FROM = {
-			has_tradition = bunny_evt_opinion_01
+			has_country_flag  = cg_plus_thief_pragma
 		}
-		
 		has_country_flag = carnalism_flag
 		
 	}
@@ -63,12 +90,11 @@ opinion_pragmatism_inn = {
 	}
 	trigger = {
 		FROM = {
-			has_tradition = bunny_evt_opinion_01
+			has_country_flag  = cg_plus_thief_pragma
 		}
 		
 		has_country_flag = asceticism_flag
 		
 	}
-
 	
 }
