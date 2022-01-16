@@ -314,3 +314,32 @@ country_event = {
 
 
 }
+
+
+
+#stud thief fail event
+country_event = {
+	id = CG_operation_failed.1100
+	title = CG_operation_failed.1100.name
+	desc = CG_operation_failed.1100.desc
+	picture = GFX_evt_fail_fail_4
+	show_sound = event_radio_chatter
+	is_triggered_only = yes
+
+	trigger = {
+		exists = fromfrom
+	}
+
+	option = {
+		name = CG_operation_failed.1100.a
+		fromfrom = { set_espionage_operation_progress_locked = no}
+		fromfrom.spynetwork = {
+			add_spy_network_level = -15
+			destroy_espionage_operation = fromfrom
+		}
+	}
+
+
+
+}
+

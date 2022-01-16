@@ -10,11 +10,11 @@ cg_dialogue_button_log_effect = {
 
 	}
 }
-cg_dialogue_title = {
-	potential = { check_variable = { which = cg_dialogue_title value = 0 }}
-	allow = { always = yes }
-	effect = {}
-}
+#cg_dialogue_title = {
+#	potential = { check_variable = { which = cg_dialogue_title value = 0 }}
+#	allow = { always = yes }
+#	effect = {}
+#}
 #######################
 # 背景
 #######################

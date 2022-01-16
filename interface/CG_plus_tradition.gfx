@@ -16,7 +16,7 @@ spriteTypes = {
 		textureFile = "gfx/interface/icons/traditions/tradition_subterfuge_shadow_recruits.dds"
 	}
 	spriteType = {
-		name = "GFX_cg_plus_thief_tradition_12"
+		name = "GFX_cg_plus_thief_tradition_12" #changethis
 		textureFile = "gfx/interface/icons/traditions/tradition_diplomacy_direct_diplomacy.dds"
 	}
 	spriteType = {

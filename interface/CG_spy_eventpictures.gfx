@@ -294,4 +294,45 @@ spriteTypes = {
 		masking_texture = "gfx/interface/situation_log/event_mask.dds"
 		alwaystransparent = yes
 	}
+
+
+	spriteType = {
+		name = "GFX_evt_thief_success"
+		texturefile = "gfx/event_pictures/thief_evt_success.dds" 
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_thief_universe"
+		texturefile = "gfx/event_pictures/thief_evt_universe.dds" 
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_thief_greet"
+		texturefile = "gfx/event_pictures/thief_evt_greet.dds" 
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_evt_thief_take_photo"
+		texturefile = "gfx/event_pictures/thief_evt_takephoto.dds" 
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_evt_thief_caught"
+		texturefile = "gfx/event_pictures/thief_evt_caught.dds" 
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "GFX_evt_DGZ"
+		texturefile = "gfx/event_pictures/thief_evt_DGZ.dds" 
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
 }

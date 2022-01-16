@@ -13,7 +13,11 @@ on_five_year_pulse = {
 	}
 }
 
-
+on_game_start ={
+	events = {
+	CG_plus_thief_event.001
+	}
+}
 
 on_decade_pulse_country  = {
 

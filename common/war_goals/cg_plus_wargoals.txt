@@ -1,0 +1,77 @@
+
+wg_deletephoto  = {
+	casus_belli = cb_deletephoto
+	hide_if_no_cb = yes
+	release_occupied_systems_on_status_quo = no
+
+	galactic_empire_joins_defender = {
+		from = { is_galactic_emperor = yes }
+		imperial_authority >= 100
+	}
+
+	allowed_peace_offers = {
+		status_quo
+		surrender
+		demand_surrender
+	}
+
+	set_defender_wargoal = wg_humiliation 
+
+	surrender_acceptance = -50
+
+	potential = {
+		has_total_war_cb = no
+	}
+	possible = {
+		custom_tooltip = {
+			fail_text = has_claimed_all_systems
+			from = {
+				is_country_type = default
+				any_owned_planet = {
+					is_colony = yes
+					root = {
+						NOT = { has_claim = prev.solar_system }
+					}
+				}
+			}
+		}
+		custom_tooltip = {
+			fail_text = cannot_use_against_emperor
+			OR = {
+				from = { is_galactic_emperor = no }
+				is_galactic_community_member = no
+			}
+		}
+		custom_tooltip = {
+			fail_text = pax_galactica_active
+			NAND = {
+				is_active_resolution = resolution_emperor_pax_galactica
+				is_galactic_community_member = yes
+				from = { is_galactic_community_member = yes }
+			}
+		}
+	}
+	on_status_quo = {
+		hidden_effect = {
+
+		}
+		custom_tooltip = wg_deletephoto_silly
+	}
+	on_accept = {
+		hidden_effect = {
+			from={
+				cg_plus_thief_remove_random_pantyshot_photo = yes
+				
+			}
+		}
+		custom_tooltip = wg_deletephoto
+	}
+
+	
+	ai_weight = {
+		weight = 10
+	}
+}
+
+
+

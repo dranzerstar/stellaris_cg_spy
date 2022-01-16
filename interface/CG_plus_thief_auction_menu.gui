@@ -1,0 +1,698 @@
+guiTypes = {
+	containerWindowType = {
+		name = "cg_plus_evt_menu_button"
+		position = { x=0 y=0 }
+		size = { width = 600 height = 60 }
+		moveable = no
+		
+		buttonType = {
+			name = "option_button"
+			quadTextureSprite = "GFX_cg_plus_evt_menu_L_button" #make new size button 
+			position = { x=0 y=0}
+			font = "cg_16b"
+			orientation = "center"
+			text = "OPTION_TEXT"
+			clicksound = "confirm_click"
+		}
+
+		OverlappingElementsBoxType = {
+			name = "trigger_icons"
+			position = { x = 0  y = 10 }
+			size = { x=65 y= 28 }
+		}
+	}
+	
+
+	containerWindowType = {
+		name = "cg_plus_thief_acution_menu_enlarged"
+		orientation = center
+		origo = center
+		moveable = yes
+		size = { width = 1920 height = 1080 }
+
+		background = { name = "background" quadTextureSprite ="GFX_thief_window_large_bg" }
+
+		iconType = { name = "hex_bg" spriteType = "GFX_hex_bg" position = { x = -1000 y = -1400 } alwaysTransparent = yes }
+		iconType = { name = "empire_header_line" quadTextureSprite = "GFX_line_long" position = { x = -1000 y = 22 } alwaysTransparent = yes }
+
+		buttonType = {
+			name = "close"
+			quadTextureSprite = "GFX_close"
+			position = { x= -400 y = 100 }
+			Orientation = "UPPER_RIGHT"
+			shortcut = "ESCAPE"
+			clicksound = "back_click"
+		}
+
+		# Custom header
+
+
+
+#--------------------------------------------------------------------------
+#panty section
+@p_x = 162
+@p_y = 52
+
+		effectButtonType = {
+			name = "GFX_panty_01_l_be"
+			quadTextureSprite = "GFX_panty_01_l"
+			Orientation = "UPPER_LEFT"
+			position = { x = @p_x y = @p_y }
+			effect = "cg_plus_thief_large_0001"
+		}
+		effectButtonType = {
+			name = "GFX_panty_02_l_be"
+			quadTextureSprite = "GFX_panty_02_l"
+			Orientation = "UPPER_LEFT"
+			position = { x = @p_x y = @p_y }
+			effect = "cg_plus_thief_large_0002"
+		}
+		effectButtonType = {
+			name = "GFX_panty_03_l_be"
+			quadTextureSprite = "GFX_panty_03_l"
+			Orientation = "UPPER_LEFT"
+			position = { x = @p_x y = @p_y }
+			effect = "cg_plus_thief_large_0003"
+		}
+	
+		effectButtonType = {
+			name = "GFX_panty_04_l_be"
+			quadTextureSprite = "GFX_panty_04_l"
+			Orientation = "UPPER_LEFT"
+			position = { x = @p_x y = @p_y }
+			effect = "cg_plus_thief_large_0004"
+		}
+	
+		effectButtonType = {
+			name = "GFX_panty_05_l_be"
+			quadTextureSprite = "GFX_panty_05_l"
+			Orientation = "UPPER_LEFT"
+			position = { x = @p_x y = @p_y }
+			effect = "cg_plus_thief_large_0005"
+		}
+	
+		effectButtonType = {
+			name = "GFX_panty_06_l_be"
+			quadTextureSprite = "GFX_panty_06_l"
+			Orientation = "UPPER_LEFT"
+			position = { x = @p_x y = @p_y }
+			effect = "cg_plus_thief_large_0006"
+		}
+	
+		effectButtonType = {
+			name = "GFX_panty_07_l_be"
+			quadTextureSprite = "GFX_panty_07_l"
+			Orientation = "UPPER_LEFT"
+			position = { x = @p_x y = @p_y }
+			effect = "cg_plus_thief_large_0007"
+		}
+	
+		effectButtonType = {
+			name = "GFX_panty_08_l_be"
+			quadTextureSprite = "GFX_panty_08_l"
+			Orientation = "UPPER_LEFT"
+			position = { x = @p_x y = @p_y }
+			effect = "cg_plus_thief_large_0008"
+		}
+	
+		effectButtonType = {
+			name = "GFX_panty_09_l_be"
+			quadTextureSprite = "GFX_panty_09_l"
+			Orientation = "UPPER_LEFT"
+			position = { x = @p_x y = @p_y }
+			effect = "cg_plus_thief_large_0009"
+		}
+	
+		effectButtonType = {
+			name = "GFX_panty_10_l_be"
+			quadTextureSprite = "GFX_panty_10_l"
+			Orientation = "UPPER_LEFT"
+			position = { x = @p_x y = @p_y }
+			effect = "cg_plus_thief_large_0010"
+		}
+	
+		effectButtonType = {
+			name = "GFX_panty_11_l_be"
+			quadTextureSprite = "GFX_panty_11_l"
+			Orientation = "UPPER_LEFT"
+			position = { x = @p_x y = @p_y }
+			effect = "cg_plus_thief_large_0011"
+		}
+	
+		effectButtonType = {
+			name = "GFX_panty_12_l_be"
+			quadTextureSprite = "GFX_panty_12_l"
+			Orientation = "UPPER_LEFT"
+			position = { x = @p_x y = @p_y }
+			effect = "cg_plus_thief_large_0012"
+		}
+	
+		effectButtonType = {
+			name = "GFX_panty_13_l_be"
+			quadTextureSprite = "GFX_panty_13_l"
+			Orientation = "UPPER_LEFT"
+			position = { x = @p_x y = @p_y }
+			effect = "cg_plus_thief_large_0013"
+		}
+	
+		effectButtonType = {
+			name = "GFX_panty_14_l_be"
+			quadTextureSprite = "GFX_panty_14_l"
+			Orientation = "UPPER_LEFT"
+			position = { x = @p_x y = @p_y }
+			effect = "cg_plus_thief_large_0014"
+		}
+	
+		effectButtonType = {
+			name = "GFX_panty_15_l_be"
+			quadTextureSprite = "GFX_panty_15_l"
+			Orientation = "UPPER_LEFT"
+			position = { x = @p_x y = @p_y }
+			effect = "cg_plus_thief_large_0015"
+		}
+	
+		effectButtonType = {
+			name = "GFX_panty_16_l_be"
+			quadTextureSprite = "GFX_panty_16_l"
+			Orientation = "UPPER_LEFT"
+			position = { x = @p_x y = @p_y }
+			effect = "cg_plus_thief_large_0016"
+		}
+	
+		effectButtonType = {
+			name = "GFX_panty_17_l_be"
+			quadTextureSprite = "GFX_panty_17_l"
+			Orientation = "UPPER_LEFT"
+			position = { x = @p_x y = @p_y }
+			effect = "cg_plus_thief_large_0017"
+		}
+	
+		effectButtonType = {
+			name = "GFX_panty_18_l_be"
+			quadTextureSprite = "GFX_panty_18_l"
+			Orientation = "UPPER_LEFT"
+			position = { x = @p_x y = @p_y }
+			effect = "cg_plus_thief_large_0018"
+		}
+	
+		effectButtonType = {
+			name = "GFX_panty_19_l_be"
+			quadTextureSprite = "GFX_panty_19_l"
+			Orientation = "UPPER_LEFT"
+			position = { x = @p_x y = @p_y }
+			effect = "cg_plus_thief_large_0019"
+		}
+	
+		effectButtonType = {
+			name = "GFX_panty_20_l_be"
+			quadTextureSprite = "GFX_panty_20_l"
+			Orientation = "UPPER_LEFT"
+			position = { x = @p_x y = @p_y }
+			effect = "cg_plus_thief_large_0020"
+		}
+	
+		effectButtonType = {
+			name = "GFX_panty_21_l_be"
+			quadTextureSprite = "GFX_panty_21_l"
+			Orientation = "UPPER_LEFT"
+			position = { x = @p_x y = @p_y }
+			effect = "cg_plus_thief_large_0021"
+		}
+	
+	
+#pantysection end
+		
+		# Description Section
+		iconType={
+			name = "alien_message_bg"
+			position = { x = 1032 y = 705 }
+			maxWidth = 400
+			maxHeight = 500
+			format = left
+			quadTextureSprite= "GFX_alien_buttons_bg"
+
+		}
+		instantTextBoxType = {
+			name = "alien_message"
+			font = "cg_16b"
+			text_color_code = "S"
+			position = { x = 1067 y = 155 }
+			maxWidth = 400
+			maxHeight = 500
+			format = left
+			scrollbartype = "standardtext_slider"
+		}
+
+
+
+
+				### ALL OF THIS IS HIDDEN OR DISPLACED ! ###
+				### EVENT DIPLO ###
+	
+		containerWindowType = {
+			name = "EVENT_DIPLO"
+			position = { x = 0 y = 0 }
+			#size = { width=563 height=220 }
+			moveable = no
+
+			instantTextBoxType={
+			 name = "action_title"
+			 font = "malgun_goth_24"
+			 position = { x = 0 y = 0 }
+			 maxWidth = 200
+			 alwaysTransparent = yes
+			}
+			instantTextBoxType={
+			 name = "action_desc"
+			 font = "malgun_goth_24"
+			 position = { x =0 y = 0 }
+			 maxWidth = 500
+			 maxHeight = 180
+			 Orientation = "UPPER_LEFT"
+			 format = center
+			 alwaysTransparent = yes
+			 text_color_code = "H"
+			}
+			#listboxType = { name = "option_list" position = { x = 958 y = 732 } } # hidden option list
+			listboxType = {
+				name = "option_list"
+				position = { x = 800 y = 690 }
+				
+				size = { x = 300 y = 400 }
+				scrollbartype = "standardlistbox_slider"
+				spacing = 20
+				borderSize = { x = 0 y = 0 }
+				Orientation = "CENTERED_UP"
+			}
+			#listboxType = { name = "option_list" position = { x = 958 y = 732 } } # hidden option list
+		}
+				instantTextBoxType = {
+					name = "irm_some_header"
+					font = "malgun_goth_24"
+					text = "ui_faction_header" 	# header text
+					position = { x = -20000 y = 5 }
+					maxWidth = 543
+					maxHeight = 22
+					fixedSize = yes
+					alwaysTransparent = yes
+				}
+		
+				buttonType = { name = "focus_button" position = { x = -1180 y = -1112 } spriteType = "GFX_fleetview_focus" } # hidden
+				instantTextBoxType = { name = "heading" font = "malgun_goth_24" position = { x = -1120 y = -115 } } # hidden
+				buttonType = { name = "alien_message_background" size = { x = 0 y = 0 } position = { x = -1110 y = -11430 } spriteType = "GFX_tiles_dark_area_cut_8" } # hidden
+				buttonType = { name = "confirm_button" quadTextureSprite = "GFX_standard_button_142_34_button" } # hidden
+				containerWindowType = {
+					name = "portrait_background"
+					position = { x = -1117 y = -1145 }
+					size = { width = 0 height = 0 } 	# hide portrait window
+					iconType = { name = "event_picture" spriteType = "GFX_diplomacy_portrait_frame" } # hidden
+					iconType = { name = "portrait" spriteType = "GFX_portrait_character" } # hidden
+				}
+				containerWindowType = {
+					name = "portrait"
+					position = { x = -1117 y = -1145 }
+					size = { width = 0 height = 0 } # hide portrait window
+					iconType = { name = "portrait" spriteType = "GFX_portrait_gamesetup_mask" } # hidden
+					iconType = { name = "black_frame" spriteType = "GFX_diplomacy_portrait_shadow_frame" } # hidden
+					iconType = { name = "stripes_1" spriteType = "GFX_diplomacy_stripes_2" } # hidden
+					iconType = { name = "city_frame" spriteType = "GFX_diplomacy_portrait_frame" } # hidden
+				}
+				iconType = { name = "empire_info_bg" spriteType = "GFX_diplomacy_dark_fade_bg" } # hidden
+				instantTextBoxType={ name = "empire_name" font = "malgun_goth_24" } # hidden
+				instantTextBoxType={ name = "empire_government_type" font = "cg_16b" } # hidden
+				instantTextBoxType={ name = "empire_personality_type" font = "cg_16b" } # hidden
+				OverlappingElementsBoxType = { name = "empire_ethics_icons" position = { x = -1145 y = -11138 } } # hidden
+				iconType = { name = "empire_flag" spriteType = "GFX_empire_flag_128" position = { x = -1125 y = -11235 } } # hidden
+				containerWindowType = {
+					name = "leader_details"
+					position = { x = -1125 y = -1175 }
+					containerWindowType = { name = "empire_traits_box" } # hidden
+					instantTextBoxType = { name = "empire_traits_label" font = "cg_16b" } # hidden
+					overlappingElementsBoxType = { name = "leader_traits" } # hidden
+					instantTextBoxType = { name = "leader_name" font = "cg_16b" } # hidden
+					instantTextBoxType = { name = "leader_species" font = "cg_16b" } # hidden
+				}
+				containerWindowType = {
+					name = "opinion_window"
+					position = { x = -1127 y = -11110 }
+					size = { width = 94 height = 30 }
+					iconType = { name = "their_opinion_icon" spriteType = "GFX_diplomacy_opinion" } # hidden
+					instantTextBoxType = { name = "their_opinion" font = "cg_16b" }
+				}
+
+
+	}
+}
+
+
+
+
+
+guiTypes = {
+
+	
+
+	containerWindowType = {
+		name = "cg_plus_thief_acution_menu"
+		orientation = center
+		origo = center
+		moveable = yes
+		size = { width = 1920 height = 1080 }
+
+		background = { name = "background" quadTextureSprite ="GFX_thief_window_bg" }
+
+		iconType = { name = "hex_bg" spriteType = "GFX_hex_bg" position = { x = -1000 y = -1400 } alwaysTransparent = yes }
+		iconType = { name = "empire_header_line" quadTextureSprite = "GFX_line_long" position = { x = -1000 y = 22 } alwaysTransparent = yes }
+
+		buttonType = {
+			name = "close"
+			quadTextureSprite = "GFX_close"
+			position = { x= -400 y = 100 }
+			Orientation = "UPPER_RIGHT"
+			shortcut = "ESCAPE"
+			clicksound = "back_click"
+		}
+
+		# Custom header
+
+
+
+#--------------------------------------------------------------------------
+#panty section
+@r1_x = 176
+@r2_x = 440
+
+@c1_y = 290
+@c2_y = 560
+@c3_y = 830
+@c4_y = 1100
+
+		effectButtonType = {
+			name = "GFX_panty_01_s_be"
+			quadTextureSprite = "GFX_panty_01_s"
+			Orientation = "UPPER_LEFT"
+			position = { x = @c1_y y = @r1_x }
+			effect = "cg_plus_thief_small_0001"
+		}
+		effectButtonType = {
+			name = "GFX_panty_02_s_be"
+			quadTextureSprite = "GFX_panty_02_s"
+			Orientation = "UPPER_LEFT"
+			position = { x = @c2_y y = @r1_x }
+			effect = "cg_plus_thief_small_0002"
+		}
+		effectButtonType = {
+			name = "GFX_panty_03_s_be"
+			quadTextureSprite = "GFX_panty_03_s"
+			Orientation = "UPPER_LEFT"
+			position = { x = @c3_y y = @r1_x }
+			effect = "cg_plus_thief_small_0003"
+		}
+		effectButtonType = {
+			name = "GFX_panty_04_s_be"
+			quadTextureSprite = "GFX_panty_04_s"
+			Orientation = "UPPER_LEFT"
+			position = { x = @c4_y y = @r1_x }
+			effect = "cg_plus_thief_small_0004"
+		}
+
+		effectButtonType = {
+			name = "GFX_panty_05_s_be"
+			quadTextureSprite = "GFX_panty_05_s"
+			Orientation = "UPPER_LEFT"
+			position = { x = @c1_y y = @r2_x }
+			effect = "cg_plus_thief_small_0005"
+		}
+		effectButtonType = {
+			name = "GFX_panty_06_s_be"
+			quadTextureSprite = "GFX_panty_06_s"
+			Orientation = "UPPER_LEFT"
+			position = { x = @c2_y y = @r2_x }
+			effect = "cg_plus_thief_small_0006"
+		}
+		effectButtonType = {
+			name = "GFX_panty_07_s_be"
+			quadTextureSprite = "GFX_panty_07_s"
+			Orientation = "UPPER_LEFT"
+			position = { x = @c3_y y = @r2_x }
+			effect = "cg_plus_thief_small_0007"
+		}
+		effectButtonType = {
+			name = "GFX_panty_08_s_be"
+			quadTextureSprite = "GFX_panty_08_s"
+			Orientation = "UPPER_LEFT"
+			position = { x = @c4_y y = @r2_x }
+			effect = "cg_plus_thief_small_0008"
+		}
+
+
+		effectButtonType = {
+			name = "GFX_panty_09_s_be"
+			quadTextureSprite = "GFX_panty_09_s"
+			Orientation = "UPPER_LEFT"
+			position = { x = @c1_y y = @r1_x }
+			effect = "cg_plus_thief_small_0009"
+		}
+	
+		effectButtonType = {
+			name = "GFX_panty_10_s_be"
+			quadTextureSprite = "GFX_panty_10_s"
+			Orientation = "UPPER_LEFT"
+			position = { x = @c2_y y = @r1_x }
+			effect = "cg_plus_thief_small_0010"
+		}
+	
+		effectButtonType = {
+			name = "GFX_panty_11_s_be"
+			quadTextureSprite = "GFX_panty_11_s"
+			Orientation = "UPPER_LEFT"
+			position = { x = @c3_y y = @r1_x }
+			effect = "cg_plus_thief_small_0011"
+		}
+	
+		effectButtonType = {
+			name = "GFX_panty_12_s_be"
+			quadTextureSprite = "GFX_panty_12_s"
+			Orientation = "UPPER_LEFT"
+			position = { x = @c4_y y = @r1_x }
+			effect = "cg_plus_thief_small_0012"
+		}
+	
+		effectButtonType = {
+			name = "GFX_panty_13_s_be"
+			quadTextureSprite = "GFX_panty_13_s"
+			Orientation = "UPPER_LEFT"
+			position = { x = @c1_y y = @r2_x }
+			effect = "cg_plus_thief_small_0013"
+		}
+	
+		effectButtonType = {
+			name = "GFX_panty_14_s_be"
+			quadTextureSprite = "GFX_panty_14_s"
+			Orientation = "UPPER_LEFT"
+			position = { x = @c2_y y = @r2_x }
+			effect = "cg_plus_thief_small_0014"
+		}
+	
+		effectButtonType = {
+			name = "GFX_panty_15_s_be"
+			quadTextureSprite = "GFX_panty_15_s"
+			Orientation = "UPPER_LEFT"
+			position = { x = @c3_y y = @r2_x }
+			effect = "cg_plus_thief_small_0015"
+		}
+	
+		effectButtonType = {
+			name = "GFX_panty_16_s_be"
+			quadTextureSprite = "GFX_panty_16_s"
+			Orientation = "UPPER_LEFT"
+			position = { x = @c4_y y = @r2_x }
+			effect = "cg_plus_thief_small_0016"
+		}
+	
+		effectButtonType = {
+			name = "GFX_panty_17_s_be"
+			quadTextureSprite = "GFX_panty_17_s"
+			Orientation = "UPPER_LEFT"
+			position = { x = @c1_y y = @r1_x }
+			effect = "cg_plus_thief_small_0017"
+		}
+	
+		effectButtonType = {
+			name = "GFX_panty_18_s_be"
+			quadTextureSprite = "GFX_panty_18_s"
+			Orientation = "UPPER_LEFT"
+			position = { x = @c2_y y = @r1_x }
+			effect = "cg_plus_thief_small_0018"
+		}
+	
+		effectButtonType = {
+			name = "GFX_panty_19_s_be"
+			quadTextureSprite = "GFX_panty_19_s"
+			Orientation = "UPPER_LEFT"
+			position = { x = @c3_y y = @r1_x }
+			effect = "cg_plus_thief_small_0019"
+		}
+	
+		effectButtonType = {
+			name = "GFX_panty_20_s_be"
+			quadTextureSprite = "GFX_panty_20_s"
+			Orientation = "UPPER_LEFT"
+			position = { x = @c4_y y = @r1_x }
+			effect = "cg_plus_thief_small_0020"
+		}
+	
+		effectButtonType = {
+			name = "GFX_panty_21_s_be"
+			quadTextureSprite = "GFX_panty_21_s"
+			Orientation = "UPPER_LEFT"
+			position = { x = @c1_y y = @r2_x }
+			effect = "cg_plus_thief_small_0021"
+		}
+	
+	
+
+
+
+
+
+
+
+		# effectButtonType = {
+		# 	name = "debug1"
+		# 	quadTextureSprite = "GFX_panty_01_s"
+		# 	Orientation = "UPPER_LEFT"
+		# 	position = { x = @c3_y y = @r1_x }
+		# 	effect = "cg_plus_thief_test"
+		# }
+
+
+		#effectButtonType = {
+		#	name = "debug2"
+		#	quadTextureSprite = "GFX_panty_02_s"
+		#	Orientation = "UPPER_LEFT"
+		#	position = { x = 0 y = 0 }
+		#	effect = "cg_plus_thief_test2"
+		#}
+
+		
+		# Description Section
+		iconType={
+			name = "alien_message_bg"
+			position = { x = 358 y = 732 }
+			maxWidth = 1010
+			maxHeight = 210
+			format = left
+			quadTextureSprite= "GFX_alien_message_bg"
+
+		}
+		instantTextBoxType = {
+			name = "alien_message"
+			font = "cg_16b"
+			position = { x = 358 y = 732 }
+			maxWidth = 600
+			maxHeight = 210
+			format = left
+			scrollbartype = "standardtext_slider"
+		}
+
+
+
+
+				### ALL OF THIS IS HIDDEN OR DISPLACED ! ###
+				### EVENT DIPLO ###
+	
+		containerWindowType = {
+			name = "EVENT_DIPLO"
+			position = { x = 0 y = 0 }
+			#size = { width=563 height=220 }
+			moveable = no
+
+			instantTextBoxType={
+			 name = "action_title"
+			 font = "malgun_goth_24"
+			 position = { x = 0 y = 0 }
+			 maxWidth = 200
+			 alwaysTransparent = yes
+			}
+			instantTextBoxType={
+			 name = "action_desc"
+			 font = "malgun_goth_24"
+			 position = { x =0 y = 0 }
+			 maxWidth = 500
+			 maxHeight = 180
+			 Orientation = "UPPER_LEFT"
+			 format = center
+			 alwaysTransparent = yes
+			 text_color_code = "H"
+			}
+			#listboxType = { name = "option_list" position = { x = 958 y = 732 } } # hidden option list
+			listboxType = {
+				name = "option_list"
+				position = { x = 888 y = 732 }
+				
+				size = { x = 300 y = 600 }
+				scrollbartype = "standardlistbox_slider"
+				spacing = 20
+				borderSize = { x = 0 y = 0 }
+				Orientation = "CENTERED_UP"
+			}
+			#listboxType = { name = "option_list" position = { x = 958 y = 732 } } # hidden option list
+		}
+				instantTextBoxType = {
+					name = "irm_some_header"
+					font = "malgun_goth_24"
+					text = "ui_faction_header" 	# header text
+					position = { x = -20000 y = 5 }
+					maxWidth = 543
+					maxHeight = 22
+					fixedSize = yes
+					alwaysTransparent = yes
+				}
+		
+				buttonType = { name = "focus_button" position = { x = -1180 y = -1112 } spriteType = "GFX_fleetview_focus" } # hidden
+				instantTextBoxType = { name = "heading" font = "malgun_goth_24" position = { x = -1120 y = -115 } } # hidden
+				buttonType = { name = "alien_message_background" size = { x = 0 y = 0 } position = { x = -1110 y = -11430 } spriteType = "GFX_tiles_dark_area_cut_8" } # hidden
+				buttonType = { name = "confirm_button" quadTextureSprite = "GFX_standard_button_142_34_button" } # hidden
+				containerWindowType = {
+					name = "portrait_background"
+					position = { x = -1117 y = -1145 }
+					size = { width = 0 height = 0 } 	# hide portrait window
+					iconType = { name = "event_picture" spriteType = "GFX_diplomacy_portrait_frame" } # hidden
+					iconType = { name = "portrait" spriteType = "GFX_portrait_character" } # hidden
+				}
+				containerWindowType = {
+					name = "portrait"
+					position = { x = -1117 y = -1145 }
+					size = { width = 0 height = 0 } # hide portrait window
+					iconType = { name = "portrait" spriteType = "GFX_portrait_gamesetup_mask" } # hidden
+					iconType = { name = "black_frame" spriteType = "GFX_diplomacy_portrait_shadow_frame" } # hidden
+					iconType = { name = "stripes_1" spriteType = "GFX_diplomacy_stripes_2" } # hidden
+					iconType = { name = "city_frame" spriteType = "GFX_diplomacy_portrait_frame" } # hidden
+				}
+				iconType = { name = "empire_info_bg" spriteType = "GFX_diplomacy_dark_fade_bg" } # hidden
+				instantTextBoxType={ name = "empire_name" font = "malgun_goth_24" } # hidden
+				instantTextBoxType={ name = "empire_government_type" font = "cg_16b" } # hidden
+				instantTextBoxType={ name = "empire_personality_type" font = "cg_16b" } # hidden
+				OverlappingElementsBoxType = { name = "empire_ethics_icons" position = { x = -1145 y = -11138 } } # hidden
+				iconType = { name = "empire_flag" spriteType = "GFX_empire_flag_128" position = { x = -1125 y = -11235 } } # hidden
+				containerWindowType = {
+					name = "leader_details"
+					position = { x = -1125 y = -1175 }
+					containerWindowType = { name = "empire_traits_box" } # hidden
+					instantTextBoxType = { name = "empire_traits_label" font = "cg_16b" } # hidden
+					overlappingElementsBoxType = { name = "leader_traits" } # hidden
+					instantTextBoxType = { name = "leader_name" font = "cg_16b" } # hidden
+					instantTextBoxType = { name = "leader_species" font = "cg_16b" } # hidden
+				}
+				containerWindowType = {
+					name = "opinion_window"
+					position = { x = -1127 y = -11110 }
+					size = { width = 94 height = 30 }
+					iconType = { name = "their_opinion_icon" spriteType = "GFX_diplomacy_opinion" } # hidden
+					instantTextBoxType = { name = "their_opinion" font = "cg_16b" }
+				}
+
+
+	}
+}

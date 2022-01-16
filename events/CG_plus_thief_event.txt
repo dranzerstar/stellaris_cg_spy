@@ -25,12 +25,22 @@ event={
 	hide_window=yes
 
 	immediate= {
+		set_variable={ which= total_panties value =  1 }
+		set_country_flag = collected_pantyshoot_01
 		every_country={
 		      limit={  	OR = {
 				  				is_species_class =  Magical_Bitch 
 								is_species_class =  Magical_Girl 
 								is_species_class =  WARSHIPGIRL 
-																
+								is_species_class = KANSEN 
+								is_species_class = android 
+								is_species_class = NYTO
+								is_species_class = SHENHAI 
+								is_species_class = sf_a_doll 
+								is_species_class = TERRASE 	
+								is_species_class = VAL 
+								is_species_class = HKR 
+								is_species_class = JourneyofElaina 
 								} 
 						  	NOT = { has_country_flag = cg_plus_thief_target_empty }
 						}
@@ -48,13 +58,13 @@ event={
 
 country_event={
 	id=CG_plus_thief_event.002
-	title=CG_plus_thief_event.002.name
+
 	#picture=  GFX_ 
-	desc=  CG_plus_thief_event.002.desc
+
 
 	is_triggered_only = yes
 
-	hide_window=no
+	hide_window=yes
 
 	immediate= {
 		random_country={
@@ -62,16 +72,33 @@ country_event={
 							has_country_flag = cg_plus_thief_target
 						  	NOT = { has_country_flag = cg_plus_thief_target_empty }
 						}
-					save_global_event_target_as  = last_thief_target
+					save_global_event_target_as  = pantsteal_target
 			
 		}
 
 	}
 
+	after = {
+		country_event = {
+			id = CG_plus_thief_event.003 days = 30
+		}
+	}
 
-	option = {    
-		name= OK
-		# event_target:last_thief_target 
+
+}
+
+country_event={
+	id=CG_plus_thief_event.003
+	title=CG_plus_thief_event.003.name
+	#picture=  GFX_ 
+	desc=  CG_plus_thief_event.003.desc
+
+	is_triggered_only = yes
+
+	hide_window=no
+
+	option = {
+		name =  CG_plus_thief_event.003.o
 	}
 
 }
@@ -81,6 +108,67 @@ country_event={
 
 
 
+country_event={
+	id=CG_plus_thief_event.010
+	is_triggered_only = yes
+	title  =  CG_plus_thief_event.010.name
+	desc = CG_plus_thief_event.010.desc
+	picture = GFX_evt_thief_greet
+	hide_window=no
+
+	immediate= {
+		random_envoy = {
+			set_name = "隐居子"
+			change_leader_portrait  = CGP000
+		}
+
+		add_relic = pocket_auction_museaum
+
+	}
+	option={
+		name=CG_plus_thief_event.010.1
+		custom_tooltip  = CG_plus_thief_event.010.1t 
+	}
+
+}
+            
+#stud
+country_event={
+	id=CG_plus_thief_event.021
+	is_triggered_only = yes
+	title  =  CG_plus_thief_event.012.name
+	desc = CG_plus_thief_event.012.desc
+	hide_window=no
+
+	immediate= {
+
+	}
+	option={
+		name=OK
+
+	}
+
+}
+            
+
+
+country_event={
+	id=CG_plus_thief_event.012
+	is_triggered_only = yes
+	title  =  CG_plus_thief_event.012.name
+	desc = CG_plus_thief_event.012.desc
+	hide_window=no
+
+	immediate= {
+
+	}
+	option={
+		name= CG_plus_thief_event.012.1
+
+	}
+
+}
+            
 
 
 
@@ -94,8 +182,7 @@ country_event={
 
 
 
-
-# this = operation; from = target (country)
+# this = operation event; from.target (country) ;from =spynetwork
 
 # go pantyshoot 
 espionage_operation_event = {
@@ -127,7 +214,7 @@ espionage_operation_event = {
 		text = CG_plus_thief_event.500.desc.friendly
 	}
 
-	picture = GFX_evt_bunnychange
+	picture = GFX_evt_thief_universe
 	show_sound = event_default
 	is_triggered_only = yes
 
@@ -135,15 +222,50 @@ espionage_operation_event = {
 
 	option = { name = ACKNOWLEDGED }
 }
+
+# #								is_species_class = KANSEN 
+# is_species_class = android 
+# is_species_class = NYTO
+# is_species_class = SHENHAI 
+# is_species_class = sf_a_doll 
+# is_species_class = TERRASE 	
+# is_species_class = VAL 
+# is_species_class = HKR 
+# is_species_class = JourneyofElaina 
+# #
+# #
+#
 # Target identified
 espionage_operation_event = {
 	id = CG_plus_thief_event.501
-	title = CG_operation.1001.name
-	desc = CG_operation.1001.desc
+	title = CG_plus_thief_event.501.name
+	#desc = CG_operation.1001.desc
 	espionage_operation = yes
 
-		picture = GFX_evt_recruit_bunny
-	
+	picture = GFX_evt_thief_universe
+	desc = {
+		trigger = {
+			target = {
+				
+			
+			switch = {
+				trigger = is_species_class
+				Magical_Girl = { text = CG_plus_thief_event.501.desc.inn }
+				Magical_Bitch = { text = CG_plus_thief_event.501.desc.suc }
+				KANSEN = { text = CG_plus_thief_event.501.desc.kan }
+				WARSHIPGIRL  = { text = CG_plus_thief_event.501.desc.kan }
+				SHENHAI  = { text = CG_plus_thief_event.501.desc.kan }
+				android = { text = CG_plus_thief_event.501.desc.gfl }
+				sf_a_doll  = { text = CG_plus_thief_event.501.desc.gfl }
+				NYTO  = { text = CG_plus_thief_event.501.desc.nyto }
+				TERRASE = { text = CG_plus_thief_event.501.desc.ak }
+				VAL = { text = CG_plus_thief_event.501.desc.val }
+				HKR = { text = CG_plus_thief_event.501.desc.val }
+				default = { text = CG_plus_thief_event.501.desc.questionmark }
+			}
+			}
+		}
+	}
 
 	
 	
@@ -157,10 +279,10 @@ espionage_operation_event = {
 # Result
 espionage_operation_event = {
 	id = CG_plus_thief_event.502
-	title = CG_operation.1002.name
-	desc = CG_operation.1002.desc
+	title = CG_plus_thief_event.502.name
+	desc = CG_plus_thief_event.502.desc
 	espionage_operation = yes
-	picture = GFX_evt_recruit_bunny
+	picture = GFX_evt_thief_universe
 	show_sound = event_default
 	is_triggered_only = yes
 
@@ -173,7 +295,7 @@ espionage_operation_event = {
 	}
 
 	option = {
-		name = LAUNCH_OPERATION
+		name = CG_plus_thief_event.500.go
 		hidden_effect = {
 			owner = {
 				country_event = { id = CG_plus_thief_event.510 days = 5 }
@@ -184,7 +306,7 @@ espionage_operation_event = {
 	after = {
 		set_espionage_operation_progress_locked = no
  		# scripted ffect to select which shoot
-		cg_plus_thief_get_pantyshot_photo=yes 
+		
 		#promised collected,
 	}
 }
@@ -194,12 +316,36 @@ espionage_operation_event = {
 country_event={
 	id=CG_plus_thief_event.510
 	title=CG_plus_thief_event.510.name
-	picture=  GFX_ 
+	picture=  GFX_evt_thief_take_photo 
 
-	desc=  CG_plus_thief_event.510.desc
+	desc = {
+		trigger = {
+			from.target = {
+				
+			
+			switch = {
+				trigger = is_species_class
+				Magical_Girl = { text = CG_plus_thief_event.510.desc.inn }
+				Magical_Bitch = { text = CG_plus_thief_event.510.desc.suc }
+				KANSEN = { text = CG_plus_thief_event.510.desc.kan }
+				WARSHIPGIRL  = { text = CG_plus_thief_event.510.desc.kan }
+				SHENHAI  = { text = CG_plus_thief_event.510.desc.kan }
+				android = { text = CG_plus_thief_event.510.desc.gfl }
+				sf_a_doll  = { text = CG_plus_thief_event.510.desc.gfl }
+				NYTO  = { text = CG_plus_thief_event.510.desc.nyto }
+				TERRASE = { text = CG_plus_thief_event.510.desc.ak }
+				VAL = { text = CG_plus_thief_event.510.desc.val }
+				HKR = { text = CG_plus_thief_event.510.desc.val }
+				default = { text = CG_plus_thief_event.501.desc.inn }
+			}
+			}
+		}
+	}
 
 	is_triggered_only = yes
-
+	trigger = {
+		exists =from 
+	}
 	hide_window=no
 
 	option = {    
@@ -207,8 +353,8 @@ country_event={
 		custom_tooltip = CG_plus_thief_event.510.a.tp
 		hidden_effect={
 			random_list = {
-				9={country_event = { id = CG_plus_thief_event.511 days = 5 } }
-				1={country_event = { id = CG_plus_thief_event.519 days = 5 } 
+				9={country_event = { id = CG_plus_thief_event.511 days = 30 } }
+				1={country_event = { id = CG_plus_thief_event.519 days = 30 } 
 				modifier = {
 					factor = 0.7
 					has_ascension_perk = ap_lust_ascension 
@@ -237,8 +383,8 @@ country_event={
 		custom_tooltip = CG_plus_thief_event.510.b.tp
 		hidden_effect={
 			random_list = {
-				8={country_event = { id = CG_plus_thief_event.512 days = 5 } }
-				2={country_event = { id = CG_plus_thief_event.519 days = 5 } 
+				8={country_event = { id = CG_plus_thief_event.512 days = 30 } }
+				2={country_event = { id = CG_plus_thief_event.519 days = 30 } 
 				modifier = {
 					factor = 0.7
 					has_ascension_perk = ap_lust_ascension 
@@ -247,6 +393,12 @@ country_event={
 				modifier = {
 					factor = 0.5
 					has_ascension_perk = ap_lustgod_super_dimensional_contact 
+				}
+				modifier = {
+					factor = 0
+					from.target = {
+						is_species_class = Magical_Bitch
+					}
 				}
 			
 				}
@@ -266,8 +418,8 @@ country_event={
 		custom_tooltip = CG_plus_thief_event.510.c.tp
 		hidden_effect={
 			random_list = {
-				7={country_event = { id = CG_plus_thief_event.513 days = 5 } }
-				3={country_event = { id = CG_plus_thief_event.519 days = 5 } 
+				7={country_event = { id = CG_plus_thief_event.513 days = 30 } }
+				3={country_event = { id = CG_plus_thief_event.519 days = 30 } 
 					modifier = {
 						factor = 0.7
 						has_ascension_perk = ap_lust_ascension 
@@ -277,9 +429,16 @@ country_event={
 						factor = 0.5
 						has_ascension_perk = ap_lustgod_super_dimensional_contact 
 					}
+					modifier = {
+						factor = 0
+						from.target = {
+							is_species_class = Magical_Bitch
+						}
+					}
 				}
 			}
 		}
+
 		allow={ 
 			from.target={
 				 NOT= {has_country_flag = panty_stolen_3 }
@@ -288,6 +447,9 @@ country_event={
 				text = CG_plus_thief_event.510.c.failed
 			}   
 		}
+	}
+	option = {
+		name = CG_plus_thief_event.510.d
 	}
 
 
@@ -301,7 +463,7 @@ country_event={
 country_event={
 	id=CG_plus_thief_event.511
 	title=CG_plus_thief_event.511.name
-	picture=  GFX_ 
+	picture=  GFX_evt_thief_success 
 
 	desc=  CG_plus_thief_event.511.desc
 
@@ -315,12 +477,21 @@ country_event={
 			}
 			set_country_flag = panty_stolen_1
 		}
+		
+		cg_plus_thief_get_pantyshot_photo = yes 
+
+		
+
+		
 
 	}
 
 	option = {    
-		name= OK
+		name= CG_plus_thief_event.51x.ok
+		country_event = {
+			id = CG_plus_thief_auction_screen_events.1001
 
+		}
 		
 	}
 	after = {
@@ -344,7 +515,7 @@ country_event={
 country_event={
 	id=CG_plus_thief_event.512
 	title=CG_plus_thief_event.512.name
-	picture=  GFX_ 
+	picture=  GFX_evt_thief_success 
 	desc=  CG_plus_thief_event.512.desc
 
 	is_triggered_only = yes
@@ -357,10 +528,15 @@ country_event={
 			}
 			set_country_flag = panty_stolen_2
 		}
+		cg_plus_thief_get_pantyshot_photo = yes 
 	}
 
 	option = {    
-		name= OK
+		name= CG_plus_thief_event.51x.ok
+		country_event = {
+			id = CG_plus_thief_auction_screen_events.1001
+			
+		}
 	}
 	after = {
 		fromfrom.target = {
@@ -383,7 +559,7 @@ country_event={
 country_event={
 	id=CG_plus_thief_event.513
 	title=CG_plus_thief_event.513.name
-	picture=  GFX_ 
+	picture=  GFX_evt_thief_success 
 	desc=  CG_plus_thief_event.513.desc
 
 	is_triggered_only = yes
@@ -396,10 +572,15 @@ country_event={
 			}
 			set_country_flag = panty_stolen_3
 		}
+		cg_plus_thief_get_pantyshot_photo = yes 
 	}
 
 	option = {    
-		name= OK
+		name= CG_plus_thief_event.51x.ok
+		country_event = {
+			id = CG_plus_thief_auction_screen_events.1001
+			
+		}
 	}
 	after = {
 		fromfrom.target = {
@@ -424,7 +605,7 @@ country_event={
 country_event={
 	id=CG_plus_thief_event.519
 	title=CG_plus_thief_event.519.name
-	picture=  GFX_ 
+	picture=  GFX_evt_thief_caught 
 
 	desc=  CG_plus_thief_event.519.desc
 
@@ -443,6 +624,11 @@ country_event={
 	#什么都不做
 	option = {    
 		name= CG_plus_thief_event.519.a
+		fromfrom.target={
+			set_timed_country_flag = { flag=cg_plus_command_delete_photo 	years = 5}
+		
+		}
+		custom_tooltip = CG_plus_thief_event.519.ag
 	}
 	#赔款
 	option = {    
@@ -453,7 +639,49 @@ country_event={
 					modifier = opinion_payment
 				}
 			}
+		trigger ={  has_monthly_income = {
+					resource = energy
+					value >= 100 } 
+					has_monthly_income = {
+							resource = energy
+							value < 1000 
+						} 
+				} 
+			add_resource = {
+				energy = -60000
+				
+			}	
 	}
+	option = {   
+		name= CG_plus_thief_event.519.b
+		fromfrom.target={
+			add_opinion_modifier={
+					who = owner 
+					modifier = opinion_payment
+				}
+			}
+		if={ limit={ has_monthly_income = {
+			resource = energy
+			value >= 1000
+							} } 
+			add_resource = {
+				energy = -600000
+				
+			}	
+		}
+	}
+	option = {  
+		name= CG_plus_thief_event.519.b
+		trigger = {
+			has_resource = { type= energy amount < 60000 }
+		}
+		add_resource = {
+			energy = -60000
+			
+		}	
+		custom_tooltip = CG_plus_thief_event.519.bd
+	}
+
 	#赔款 谢罪 土下坐 红豆泥三连
 	option = {    
 		name= CG_plus_thief_event.519.c
@@ -466,6 +694,7 @@ country_event={
 		country_event = {
 			id = CG_plus_thief_event.520
 		}
+		custom_tooltip = CG_plus_thief_event.519.cg
 	}
 
 }
@@ -474,7 +703,7 @@ country_event={
 country_event={
 	id=CG_plus_thief_event.520
 	title=CG_plus_thief_event.520.name
-	picture=  GFX_ 
+	picture=  GFX_evt_DGZ 
 
 	desc=  CG_plus_thief_event.520.desc
 
@@ -486,10 +715,12 @@ country_event={
 			modifier = mod_DGZ
 			years = 10
 		}
+		cg_plus_thief_remove_random_pantyshot_photo =yes
 	}
 
 	option = {    
-		name= OK
+		name= CG_plus_thief_event.520.a
+
 	}
 
 }

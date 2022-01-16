@@ -1,0 +1,19 @@
+cb_deletephoto = {
+	show_in_diplomacy = yes
+	show_notification = yes
+	potential = {
+		OR = {
+			is_country_type = default
+			has_country_flag = cg_plus_command_delete_photo
+		}
+		NOT = { is_in_federation_with = from }
+		is_subject = no
+	}
+	is_valid = {
+		NOT = { is_overlord_to = FROM }
+		from={
+			is_ai = no
+		}
+		has_country_flag = cg_plus_command_delete_photo
+	}
+}

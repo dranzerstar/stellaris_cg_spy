@@ -1,0 +1,6 @@
+portraits = {
+	CGP000 = {
+		texturefile = "gfx/models/portraits/CGP/CGP000.png"
+	}
+
+}

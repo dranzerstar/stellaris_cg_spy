@@ -17,6 +17,7 @@
 
 cg_plus_thief_tradition_adopt = {
 	modifier = {
+		envoys_add = 1
 	}
 		on_enabled = {
 			country_event = { 
@@ -51,6 +52,7 @@ cg_plus_thief_tradition_11 = {
 		inherit_name = no
 	}
 	modifier = {
+		spy_network_daily_value_mult = 0.50
 	}
 	ai_weight = {
 		weight = 1
@@ -70,22 +72,27 @@ cg_plus_thief_tradition_12= {
 	ai_weight = {
 		weight = 1
 	}
-#   +3 unity +3 love juice +3 energy per embassy   change
+#   
 }
 
 cg_plus_thief_tradition_21 = {
+	possible = {
+		has_tradition =cg_plus_thief_tradition_11
+		}
 		tradition_swap = {
 		name = cg_plus_thief_tradition_21
 		inherit_effects = no
 		inherit_icon = yes
 		inherit_name = no
+		
 	}
 	modifier = {
+		envoys_add = 3
 	}
 	on_enabled = {
-		country_event = {
-			id = CG_plus_thief_event.011
-		}
+		#country_event = {
+	#		id = CG_plus_thief_event.021
+	#	}
 	}
 	ai_weight = {
 		weight = 1
@@ -95,6 +102,12 @@ cg_plus_thief_tradition_21 = {
 
 
 cg_plus_thief_tradition_22 = {
+	possible = {
+		OR={
+		has_tradition =cg_plus_thief_tradition_11
+		has_tradition =cg_plus_thief_tradition_12
+		}
+	}
 		tradition_swap = {
 		name = cg_plus_thief_tradition_22
 		inherit_effects = no
@@ -102,6 +115,8 @@ cg_plus_thief_tradition_22 = {
 		inherit_name = no
 	}
 	modifier = {
+		intel_decryption_add = 2
+		espionage_operation_skill_add = 2
 	}
 	ai_weight = {
 		weight = 1
@@ -111,6 +126,12 @@ cg_plus_thief_tradition_22 = {
 
 
 cg_plus_thief_tradition_23 = {
+	possible = {
+		OR={
+
+		has_tradition =cg_plus_thief_tradition_12
+		}
+	}
 		tradition_swap = {
 		name = cg_plus_thief_tradition_23
 		inherit_effects = no

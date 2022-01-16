@@ -1,37 +1,164 @@
 ﻿l_simp_chinese:
- tradition_sucthief:0 "REPLACE_ME"
- tradition_sucthief_desc:0 "REPLACE_ME"
- cg_plus_thief_tradition_adopt:0 "REPLACE_ME"
- cg_plus_thief_tradition_adopt_effect:0 "REPLACE_ME"
- cg_plus_thief_tradition_adopt_desc:0 "REPLACE_ME"
- cg_plus_thief_tradition_finish:0 "REPLACE_ME"
- cg_plus_thief_tradition_finish_effect:0 "REPLACE_ME"
- cg_plus_thief_tradition_11:0 "REPLACE_ME"
- cg_plus_thief_tradition_11_desc:0 "REPLACE_ME"
- cg_plus_thief_tradition_11_delayed:0 "REPLACE_ME"
- cg_plus_thief_tradition_12:0 "REPLACE_ME"
- cg_plus_thief_tradition_12_desc:0 "REPLACE_ME"
- cg_plus_thief_tradition_12_delayed:0 "REPLACE_ME"
- cg_plus_thief_tradition_21:0 "REPLACE_ME"
- cg_plus_thief_tradition_21_desc:0 "REPLACE_ME"
- cg_plus_thief_tradition_21_delayed:0 "REPLACE_ME"
- cg_plus_thief_tradition_22:0 "REPLACE_ME"
- cg_plus_thief_tradition_22_desc:0 "REPLACE_ME"
- cg_plus_thief_tradition_22_delayed:0 "REPLACE_ME"
- cg_plus_thief_tradition_23:0 "REPLACE_ME"
- cg_plus_thief_tradition_23_desc:0 "REPLACE_ME"
- cg_plus_thief_tradition_23_delayed:0 "REPLACE_ME"
+ tradition_sucthief:0 "紳士大盜"
+ tradition_sucthief_desc:0 "星海中流傳著有关神秘的紳士大盜的传闻。"
+ cg_plus_thief_tradition_adopt:0 "采用紳士大盜"
+ cg_plus_thief_tradition_adopt_effect:0 "采用紳士大盜传统后会获得一个特殊通信"
+ cg_plus_thief_tradition_adopt_desc:0 "采用紳士大盜传统后会获得一个特殊通信"
+ cg_plus_thief_tradition_finish:0 "完成采用紳士大盜传统会升级隐居子的展览馆，并拓展其功能。"
+ cg_plus_thief_tradition_finish_effect:0 "完成采用紳士大盜传统会升级隐居子的展览馆，并拓展其功能。"
+ cg_plus_thief_tradition_11:0 "伪装潜入"
+ cg_plus_thief_tradition_11_desc:0 "要无声无色地靠近名媛身边当然需要隐居子的伪装技术"
+ cg_plus_thief_tradition_11_delayed:0 "要无声无色地靠近名媛身边当然需要隐居子的伪装技术"
+ cg_plus_thief_tradition_12:0 "展馆升级"
+ cg_plus_thief_tradition_12_desc:0 "把隐居子的风光展馆营运升级，邀请外星绅士来参观，当然也会收取入场费。"
+ cg_plus_thief_tradition_12_delayed:0 "把隐居子的风光展馆营运升级，邀请外星绅士来参观，当然也会收取入场费。"
+ cg_plus_thief_tradition_21:0 "更多助手"
+ cg_plus_thief_tradition_21_desc:0 "星海这么大，不能全都靠隐居子一个人吧。【外交官+3】"
+ cg_plus_thief_tradition_21_delayed:0 "星海这么大，不能全都靠隐居子一个人吧。【外交官+3】"
+ cg_plus_thief_tradition_22:0 "破门而入"
+ cg_plus_thief_tradition_22_desc:0 "小姐姐们是躲不掉的！"
+ cg_plus_thief_tradition_22_delayed:0 "小姐姐们是躲不掉的！"
+ cg_plus_thief_tradition_23:0 "现实主义"
+ cg_plus_thief_tradition_23_desc:0 "一天到晚和圣女打来打去那我怎么参加她们的宴会呢？ 以和魅魔的关系为代价，平衡和圣女的外交关系。"
+ cg_plus_thief_tradition_23_delayed:0 "一天到晚和圣女打来打去那我怎么参加她们的宴会呢？ 以和魅魔的关系为代价，平衡和圣女的外交关系。"
+
+
+
+#operation event
+ operation_pantyshoot:0 "偷拍行动"
+ operation_pantyshoot_desc:0 "紳士大盜 隐居子 的偷拍行动，潜入对象国家的社交场合挑选丽人然后偷拍她们的伴次。而作为一个标准的紳士大盜，自然要在行动之间不能伤害任何一个有机体以及无机体。\n因为§Y紳士大盜 隐居子§!很有原则，所以在能每个国家可以对三个对象就行偷拍，所以请好好考虑对象目标。\n完成后可以获得一张照片，可以在展馆中查看"
+ operation_pantyshoot_on_success:0 "成功后获得一张照片"
+ not_valiid_steal_target:0 "对象国家不是偷拍对象"
+ empty_steal_target:0 "对象国家的名媛已经被偷拍三次"
 
 
 
 
 
+
+#opreation after events
+ CG_plus_thief_event.500.name:0 "入国行动"
+ CG_plus_thief_event.500.desc.hostile:0 "目的地[from.target.GetName]对我国有进行边境封锁，但是我们已经联系了当地的偷渡集团，花点钱钱，就能轻松入国。"
+ CG_plus_thief_event.500.desc.friendly:0 "目的地[from.target.GetName]对我国没有进行边境封锁，也没有签证限制，哪就像个正常人入国就可以了。"
+ CG_plus_thief_event.501.name:0 "对象调查"
+ CG_plus_thief_event.501.desc.inn:0 "这里是圣歌少女的国家，所以没每个人也长得很可爱漂亮，但是也很厚实，同时也对偷拍行为很反感。那作为一个标准的绅士，当然不能让当事人感到困扰，偷偷拍照，不被发现即可。"
+ CG_plus_thief_event.501.desc.suc:0 "这里是魅魔的国家，所以没每个人也长得很可爱漂亮，而且大部分人身上的布料也很少，找她们拍照也不会拒绝。但是唯一的缺点就是大部分人都是伴次外露，都直接路给人看反而趣味减少了。"
+ CG_plus_thief_event.501.desc.kan:0 "这里是舰娘的国家，明明长的像个人，但是说自己是船的怪人，导游小姐姐说这里的人都是重方块里爆出来的，而因为原生造物者喜欢少女，所以最终形态就变成了人型少女，但是还是没有解释她们和船有什么关系。\n\n别管了，看伴次重要。"
+ CG_plus_thief_event.501.desc.gfl:0 "这里是仿生人型国家，明明外表都是人，但其实是机器人，所以听说有些人的屁股是没有洞的，但是都长的很可爱，也很会搭配衣服。不过很奇怪的是这个过度的生物袜子就是不会配成一对的穿。"
+ CG_plus_thief_event.501.desc.nyto:0 "这里是半人半机器型国家，基层生物都是长成同一个样子的，而且没有肉屁股，屁股全是金属机械。只有一些社会阶比较高级的生物才会有屁股和穿伴次。看来隐居子会在这里有一个不同的经历。"
+ CG_plus_thief_event.501.desc.ak:0 "这里是人型生物的国家，但是每一个人也有独特的野兽特精，有的是有野兽耳朵，有的是有着尾巴，而有的是全身长毛的福瑞。所以为了配合这些特证，很多衣服也会在不同的地方开洞。看来隐居子会在这里有一个不同的经历。"
+ CG_plus_thief_event.501.desc.val:0 "这里是人型生物的国家，听说每个人都很能打，而且全歌寄。但是这里的生物是异性生殖物种。不管那么多了，有胖次就行。"
+ CG_plus_thief_event.501.desc.questionmark:0 "局外种族，请艾特作者"
+
+ CG_plus_thief_event.502.name:0 "场地调查"
+ CG_plus_thief_event.502.desc:0 "因为各个国家都对绅士有着不同的理解程度，做好安全措施，计划好逃走路径那可是必须的。"
+
+
+ CG_plus_thief_event.500.go:0 "出发"
+ CG_plus_thief_event.510.name:0 "行动开始"
+
+ CG_plus_thief_event.510.desc.inn:0 "这里是圣歌少女的国家，所以这里对偷拍行为的就受都非常低，警觉性也较高，建议出手和脱离越快越好。"
+ CG_plus_thief_event.510.desc.suc:0 "这里是魅魔的国家，非常开放，基本上是随便拍照的，你需要担心的反而是不要被抓住，被要求当她们的专属摄影师。"
+ CG_plus_thief_event.510.desc.kan:0 "这里是舰娘的国家,接受度因人而异，但是因为每个人也是以兵器的身份纯在，行动还是比较小心为妙。"
+ CG_plus_thief_event.510.desc.gfl:0 "这里是仿生人形国家，其实除了一些高级主管型AI，普遍的人形都没什么危险，给点糖果就可以分散她们的注意力。"
+ CG_plus_thief_event.510.desc.nyto:0 "逾期说是偷拍这个行为不被接受，我还是认为涅托本身就对外星人有非常高的警惕性，行动的时候小心为上。"
+ CG_plus_thief_event.510.desc.ak:0 "这里是人型生物的国家，但是每一个人也有独特的野兽特精，所以本来就文化很多元，所以做了什么得罪本地人的时候，编个说自己是外乡人的习俗就行了。"
+ CG_plus_thief_event.510.desc.val:0 "这里是女武神的国家，顾名思义，做错了什么很有可能被抽。所以随身准备一些当国人喜欢的水晶傍身即可。"
+
+
+
+
+ CG_plus_thief_event.510.a:0 "向平民小姐姐下手"
+ CG_plus_thief_event.510.a.tp:0 "低风险行动"
+ CG_plus_thief_event.510.a.failed:0 "已经拍过了"
+ CG_plus_thief_event.510.b:0 "向名媛小姐姐下手"
+ CG_plus_thief_event.510.b.tp:0 "中等风险行动"
+ CG_plus_thief_event.510.b.failed:0 "已经拍过了"
+ CG_plus_thief_event.510.c:0 "向元首[from.target.GetLeaderName]下手"
+ CG_plus_thief_event.510.d:0 "太危险了，现在还是放弃行动。"
+
+ CG_plus_thief_event.510.c.tp:0 "高风险行动，被抓可能引发外交事故"
+ CG_plus_thief_event.510.c.failed:0 "已经拍过了"
+
+ CG_plus_thief_event.511.name:0 "行动成功"
+ CG_plus_thief_event.511.desc:0 "在[from.target.GetName]的行动成功，需然不是什么大人物，但是小姐姐是可是个大美人"
+ CG_plus_thief_event.512.name:0 "行动成功"
+ CG_plus_thief_event.512.desc:0 "在[from.target.GetName]的行动成功，这可是当地的一个有名的大小姐，内衣的品味不会失礼。"
+ CG_plus_thief_event.513.name:0 "行动成功"
+ CG_plus_thief_event.513.desc:0 "成功地把[from.target.GetLeaderName]的胖次照片拍下来了哟！"
+ CG_plus_thief_event.51x.ok:0 "快去展馆品味品味。"
+
+ CG_plus_thief_event.519.name:0 "被当场逮住"
+ CG_plus_thief_event.519.desc:0 "需然照片已经传回去了，但是[from.target.GetName]的执法人员已经把肇事人隐居子锁定，现在逃走的话，可能会更加激怒她们，甚至会引发严重外交后果！\n\n我们得考虑好好谢罪才能小事化无。"
+ CG_plus_thief_event.519.a:0 "肇事途逸！"
+ CG_plus_thief_event.519.b:0 "赔款，谢罪"
+ CG_plus_thief_event.519.c:0 "使出绝招，土下坐"
+ CG_plus_thief_event.519.cg:0 "谢罪 土下坐 红豆泥三连 并删除照片"
+ CG_plus_thief_event.519.bd:0 "你没有足够表达惬意的款项"
+
+ CG_plus_thief_event.519.ag:0 "当事国会暂时获得 要求删除照片 的战争理由"
+
+ CG_plus_thief_event.520.name:0 "土下坐"
+ CG_plus_thief_event.520.desc:0 "在为了顾全大局，不得不删除照片，然后以最诚恳的全裸土下坐。"
+ CG_plus_thief_event.520.a:0 "寄。"
+
+ war_goal_wg_deletephoto:0 "把裙底照删掉！"
+ war_goal_wg_deletephoto_desc:0 "偷拍淑女的裙底不能接受！，立即把照片删掉！"
+ casus_belli_cb_deletephoto:0 "把裙底照删掉！"
+ wg_deletephoto_silly:0 "为了几张照片打仗不是很无聊吗？"
+ wg_deletephoto:0 "把照片删掉把"
+
+
+
+
+
+#tradition related events
+
+ CG_plus_thief_event.010.name:0 "特殊通信"
+ CG_plus_thief_event.010.desc:0 "哟，志同道合的绅士好友。你有没有想过今天邻国的那个女王胖次是什么颜色？很想知道吧，想知道当然就要直接去看噢。\n\n 我是大盗隐居子，这偷看美人胖次多么的一件美事，但是在这各个国家都各怀鬼胎的现实世界，对我这一个绅士也太危险了，所以，作为绅士大国元首的您，能帮我一把，搜集天下美人的胖裙下美景吗？"
+ CG_plus_thief_event.010.1:0 "刑喔。把我也算上。"
+ CG_plus_thief_event.010.1t:0 "获得间谍 隐居子 和 隐居子的展览馆传送门 维珍" 
+ CG_plus_thief_event.012.name:0 "隐居子的展览馆升级完成"
+ CG_plus_thief_event.012.desc:0 "隐居子的展览馆升级成为多功能绅士社交，其中重点的就是定期的胖次照拍卖会。"
+ CG_plus_thief_event.012.1:0 "刑喔，去看看"
+
+
+
+
+# opinion strings
+ opinion_caught_thief:0 "被你非礼了"
+ opinion_payment:0 "近期交了赔款"
+ opinion_DGZ:0 "标准土下座选手"
+ opinion_pragmatism_suc:0 "和圣女走的很近"
+ opinion_pragmatism_inn:0 "另类的魅魔"
+ mod_DGZ:0 "土下座"
 #minor artifact active
- find_pantyshot_targets:0 "REPLACE_ME"
- find_pantyshot_targets_desc:0 "REPLACE_ME"
- pantsteal_target:0 "REPLACE_ME"
- mod_cooldown:0 "REPLACE_ME"
+ find_pantyshot_targets:0 "寻找下个名媛国家作为盗摄目标"
+ find_pantyshot_targets_desc:0 "让隐居子"
+ pantsteal_target:0 "[pantsteal_target.GetName] "
+ mod_cooldown:0 "行动冷却中"
 
- pocket_auction_museaum:0 "REPLACE_ME"
- pocket_auction_museaum_desc:0 "REPLACE_ME"
- pocket_auction_museaum_adtive_desc:0 "REPLACE_ME"
+ pocket_auction_museaum:0 "隐居子的口袋展覽館"
+ pocket_auction_museaum_desc:0 "這是隐居子的口袋展覽館專用傳送門，使用後能把你傳送到她的展覽館，展覽著繁星下各個名媛的伴次照片。\n 完成紳士大盜傳統後還可以讓展品進行拍賣，和恆星下的外星人分享少女的风光。\n擁有紳士大盜傳統的 §B隱居博物館§! 傳統後可以根據已經搜集的照片已獲得收入提升。 "
+ pocket_auction_museaum_adtive_desc:0 "傳送門 安全，高效，快速，點擊後即達，只是要花些許能源幣。"
+ CG_plus_thief_event.003.name:0 "下个盗摄目标就是。。"
+ CG_plus_thief_event.003.desc:0 "隐居子已經找到下一個獵物了，目標就是 [pantsteal_target.GetName] ！！ "
+ CG_plus_thief_event.003.o:0 "事不宜遲，去當地架設間諜網！"
+
+#auction screen ui elements
+ enlarge:0 "点击放大"
+ test:0 "测试"
+ pg1:0 "第一页"
+ pg2:0 "第二页"
+ pg3:0 "第三页"
+ close:0 "离开"
+ back:0 "返回"
+
+
+
+#auction screen desc
+ CG_plus_thief_auction_screen_events.0001.name:0 "不显示"
+ CG_plus_thief_auction_screen_events.0001.desc.1:0 "欢迎来到隐居子的恒星展馆，这里展出的当然是恒星下各个位媛最美的风光！"
+
+ CG_plus_thief_auction_screen_events.1001.name:0 "不显示"
+ CG_plus_thief_auction_screen_events.1001.desc.1:0 "这个标准粉红，带些许稚气的胖次就是您，[Root.GetRulerName]大人的咯。\n\n 什么时候拍的？那当然是在。。喂喂喂ww 暴力禁止。"

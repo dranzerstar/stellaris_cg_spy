@@ -1,0 +1,287 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_thief_window_bg"
+		texturefile = "gfx/interface/thief_bg.dds"
+		alwaysTransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_alien_message_bg"
+		texturefile = "gfx/interface/textarea.dds"
+		
+	}
+
+
+	spriteType = {
+		name = "GFX_thief_window_large_bg"
+		texturefile = "gfx/interface/thief_enlarge_bg.dds"
+		alwaysTransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_alien_buttons_bg"
+		texturefile = "gfx/interface/buttonarea_enlarge_ui.dds"
+		
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	######################################################################
+	#panties start
+
+
+	spriteType = {
+		name = "GFX_panty_01_s"
+		texturefile = "gfx/event_pictures/thief_evt/pant01_s.dds"
+		masking_texture = "gfx/interface/frame_mask.dds"
+		
+	}
+
+
+	spriteType = {
+		name = "GFX_panty_01_l"
+		texturefile = "gfx/event_pictures/thief_evt/pant01_l.dds"
+		masking_texture = "gfx/interface/frame_mask_850.dds"
+		
+	}
+	spriteType = {
+		name = "GFX_panty_02_s"
+		texturefile = "gfx/event_pictures/thief_evt/pant02_s.dds"
+		masking_texture = "gfx/interface/frame_mask.dds"
+		
+	}
+	spriteType = {
+		name = "GFX_panty_02_l"
+		texturefile = "gfx/event_pictures/thief_evt/pant02_l.dds"
+		masking_texture = "gfx/interface/frame_mask_850.dds"
+		
+	}
+	spriteType = {
+		name = "GFX_panty_03_s"
+		texturefile = "gfx/event_pictures/thief_evt/pant03_s.dds"
+		masking_texture = "gfx/interface/frame_mask.dds"		
+	}
+	spriteType = {
+		name = "GFX_panty_03_l"
+		texturefile = "gfx/event_pictures/thief_evt/pant03_l.dds"
+		masking_texture = "gfx/interface/frame_mask_850.dds"		
+	}
+	
+	spriteType = {
+		name = "GFX_panty_04_s"
+		texturefile = "gfx/event_pictures/thief_evt/pant04_s.dds"
+		masking_texture = "gfx/interface/frame_mask.dds"		
+	}
+	spriteType = {
+		name = "GFX_panty_04_l"
+		texturefile = "gfx/event_pictures/thief_evt/pant04_l.dds"
+		masking_texture = "gfx/interface/frame_mask_850.dds"		
+	}
+	
+	spriteType = {
+		name = "GFX_panty_05_s"
+		texturefile = "gfx/event_pictures/thief_evt/pant05_s.dds"
+		masking_texture = "gfx/interface/frame_mask.dds"		
+	}
+	spriteType = {
+		name = "GFX_panty_05_l"
+		texturefile = "gfx/event_pictures/thief_evt/pant05_l.dds"
+		masking_texture = "gfx/interface/frame_mask_850.dds"		
+	}
+	
+	spriteType = {
+		name = "GFX_panty_06_s"
+		texturefile = "gfx/event_pictures/thief_evt/pant06_s.dds"
+		masking_texture = "gfx/interface/frame_mask.dds"		
+	}
+	spriteType = {
+		name = "GFX_panty_06_l"
+		texturefile = "gfx/event_pictures/thief_evt/pant06_l.dds"
+		masking_texture = "gfx/interface/frame_mask_850.dds"		
+	}
+	
+	spriteType = {
+		name = "GFX_panty_07_s"
+		texturefile = "gfx/event_pictures/thief_evt/pant07_s.dds"
+		masking_texture = "gfx/interface/frame_mask.dds"		
+	}
+	spriteType = {
+		name = "GFX_panty_07_l"
+		texturefile = "gfx/event_pictures/thief_evt/pant07_l.dds"
+		masking_texture = "gfx/interface/frame_mask_850.dds"		
+	}
+	
+	spriteType = {
+		name = "GFX_panty_08_s"
+		texturefile = "gfx/event_pictures/thief_evt/pant08_s.dds"
+		masking_texture = "gfx/interface/frame_mask.dds"		
+	}
+	spriteType = {
+		name = "GFX_panty_08_l"
+		texturefile = "gfx/event_pictures/thief_evt/pant08_l.dds"
+		masking_texture = "gfx/interface/frame_mask_850.dds"		
+	}
+	
+	spriteType = {
+		name = "GFX_panty_09_s"
+		texturefile = "gfx/event_pictures/thief_evt/pant09_s.dds"
+		masking_texture = "gfx/interface/frame_mask.dds"		
+	}
+	spriteType = {
+		name = "GFX_panty_09_l"
+		texturefile = "gfx/event_pictures/thief_evt/pant09_l.dds"
+		masking_texture = "gfx/interface/frame_mask_850.dds"		
+	}
+	
+	spriteType = {
+		name = "GFX_panty_10_s"
+		texturefile = "gfx/event_pictures/thief_evt/pant10_s.dds"
+		masking_texture = "gfx/interface/frame_mask.dds"		
+	}
+	spriteType = {
+		name = "GFX_panty_10_l"
+		texturefile = "gfx/event_pictures/thief_evt/pant10_l.dds"
+		masking_texture = "gfx/interface/frame_mask_850.dds"		
+	}
+	
+	spriteType = {
+		name = "GFX_panty_11_s"
+		texturefile = "gfx/event_pictures/thief_evt/pant11_s.dds"
+		masking_texture = "gfx/interface/frame_mask.dds"		
+	}
+	spriteType = {
+		name = "GFX_panty_11_l"
+		texturefile = "gfx/event_pictures/thief_evt/pant11_l.dds"
+		masking_texture = "gfx/interface/frame_mask_850.dds"		
+	}
+	
+	spriteType = {
+		name = "GFX_panty_12_s"
+		texturefile = "gfx/event_pictures/thief_evt/pant12_s.dds"
+		masking_texture = "gfx/interface/frame_mask.dds"		
+	}
+	spriteType = {
+		name = "GFX_panty_12_l"
+		texturefile = "gfx/event_pictures/thief_evt/pant12_l.dds"
+		masking_texture = "gfx/interface/frame_mask_850.dds"		
+	}
+	
+	spriteType = {
+		name = "GFX_panty_13_s"
+		texturefile = "gfx/event_pictures/thief_evt/pant13_s.dds"
+		masking_texture = "gfx/interface/frame_mask.dds"		
+	}
+	spriteType = {
+		name = "GFX_panty_13_l"
+		texturefile = "gfx/event_pictures/thief_evt/pant13_l.dds"
+		masking_texture = "gfx/interface/frame_mask_850.dds"		
+	}
+	
+	spriteType = {
+		name = "GFX_panty_14_s"
+		texturefile = "gfx/event_pictures/thief_evt/pant14_s.dds"
+		masking_texture = "gfx/interface/frame_mask.dds"		
+	}
+	spriteType = {
+		name = "GFX_panty_14_l"
+		texturefile = "gfx/event_pictures/thief_evt/pant14_l.dds"
+		masking_texture = "gfx/interface/frame_mask_850.dds"		
+	}
+	
+	spriteType = {
+		name = "GFX_panty_15_s"
+		texturefile = "gfx/event_pictures/thief_evt/pant15_s.dds"
+		masking_texture = "gfx/interface/frame_mask.dds"		
+	}
+	spriteType = {
+		name = "GFX_panty_15_l"
+		texturefile = "gfx/event_pictures/thief_evt/pant15_l.dds"
+		masking_texture = "gfx/interface/frame_mask_850.dds"		
+	}
+	
+	spriteType = {
+		name = "GFX_panty_16_s"
+		texturefile = "gfx/event_pictures/thief_evt/pant16_s.dds"
+		masking_texture = "gfx/interface/frame_mask.dds"		
+	}
+	spriteType = {
+		name = "GFX_panty_16_l"
+		texturefile = "gfx/event_pictures/thief_evt/pant16_l.dds"
+		masking_texture = "gfx/interface/frame_mask_850.dds"		
+	}
+	
+	spriteType = {
+		name = "GFX_panty_17_s"
+		texturefile = "gfx/event_pictures/thief_evt/pant17_s.dds"
+		masking_texture = "gfx/interface/frame_mask.dds"		
+	}
+	spriteType = {
+		name = "GFX_panty_17_l"
+		texturefile = "gfx/event_pictures/thief_evt/pant17_l.dds"
+		masking_texture = "gfx/interface/frame_mask_850.dds"		
+	}
+	
+	spriteType = {
+		name = "GFX_panty_18_s"
+		texturefile = "gfx/event_pictures/thief_evt/pant18_s.dds"
+		masking_texture = "gfx/interface/frame_mask.dds"		
+	}
+	spriteType = {
+		name = "GFX_panty_18_l"
+		texturefile = "gfx/event_pictures/thief_evt/pant18_l.dds"
+		masking_texture = "gfx/interface/frame_mask_850.dds"		
+	}
+	spriteType = {
+		name = "GFX_panty_19_s"
+		texturefile = "gfx/event_pictures/thief_evt/pant19_s.dds"
+		masking_texture = "gfx/interface/frame_mask.dds"		
+	}
+	spriteType = {
+		name = "GFX_panty_19_l"
+		texturefile = "gfx/event_pictures/thief_evt/pant19_l.dds"
+		masking_texture = "gfx/interface/frame_mask_850.dds"		
+	}
+	
+	spriteType = {
+		name = "GFX_panty_20_s"
+		texturefile = "gfx/event_pictures/thief_evt/pant20_s.dds"
+		masking_texture = "gfx/interface/frame_mask.dds"		
+	}
+	spriteType = {
+		name = "GFX_panty_20_l"
+		texturefile = "gfx/event_pictures/thief_evt/pant20_l.dds"
+		masking_texture = "gfx/interface/frame_mask_850.dds"		
+	}
+	
+	spriteType = {
+		name = "GFX_panty_21_s"
+		texturefile = "gfx/event_pictures/thief_evt/pant21_s.dds"
+		masking_texture = "gfx/interface/frame_mask.dds"		
+	}
+	spriteType = {
+		name = "GFX_panty_21_l"
+		texturefile = "gfx/event_pictures/thief_evt/pant21_l.dds"
+		masking_texture = "gfx/interface/frame_mask_850.dds"		
+	}
+	
+	
+	
+
+
+
+
+
+}

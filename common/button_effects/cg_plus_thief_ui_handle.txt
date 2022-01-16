@@ -1,11 +1,38 @@
 
+cg_plus_thief_test = {
+	potential = { always = yes }
+	allow = { always = yes }
+	effect = {
+		#country_event = { id = CG_plus_thief_auction_screen_events.1001	}
+		#set_variable={ which= show_panty_photo value =  1 }
+		custom_tooltip = "test"
+	}
+}
 
-cg_plus_thief_small_0001 = {
-	potential = {FROM = { has_country_flag = collected_pantyshoot_01 }}
+cg_plus_thief_test2 = {
+	potential = { always = yes }
 	allow = { always = yes }
 	effect = {
 		country_event = { id = CG_plus_thief_auction_screen_events.1001	}
 		set_variable={ which= show_panty_photo value =  1 }
+		custom_tooltip = "test"
+	}
+}
+
+##### CG_plus_thief_auction_screen_events.0000   main menu caller
+###CG_plus_thief_auction_screen_events.0001 main menu
+###CG_plus_thief_auction_screen_events.1001 enlarged single
+# 1 page 8 photo
+cg_plus_thief_small_0001 = {
+	potential = {FROM = { has_country_flag = collected_pantyshoot_01 has_country_flag=auction_screen_page_1 }} 
+	allow = { always = yes }
+	effect = {
+		hidden_effect = {
+			country_event = { id = CG_plus_thief_auction_screen_events.1001	}
+			set_variable={ which= show_panty_photo value =  1 }
+		}
+
+		custom_tooltip = "enlarge"
 	}
 }
 
@@ -19,7 +46,309 @@ cg_plus_thief_large_0001 = {
 
 
 cg_plus_thief_small_0002 = {
-	potential = {FROM = { check_variable = { which = cg_plus_evt_pic value = 1502 }}}
+	potential = {FROM = { has_country_flag = collected_pantyshoot_02 has_country_flag=auction_screen_page_1 }}
+	allow = { always = yes }
+	effect = {
+		hidden_effect = {
+		country_event = { id = CG_plus_thief_auction_screen_events.1001	}
+		set_variable={ which= show_panty_photo value =  2 }
+		custom_tooltip = "enlarge"
+		}
+	}
+}
+
+
+cg_plus_thief_large_0002 = {
+	potential = {FROM = { check_variable = { which = show_panty_photo value = 2 }}}
 	allow = { always = yes }
 	effect = {}
 }
+
+cg_plus_thief_small_0003 = {
+	potential = {FROM = { has_country_flag = collected_pantyshoot_03 has_country_flag=auction_screen_page_1 }}
+	allow = { always = yes }
+	effect = {
+		hidden_effect = {
+		country_event = { id = CG_plus_thief_auction_screen_events.1001	}
+		set_variable={ which= show_panty_photo value =  3 }
+		custom_tooltip = "enlarge"
+		}
+	}
+}
+
+
+cg_plus_thief_large_0003 = {
+	potential = {FROM = { check_variable = { which = show_panty_photo value = 3 }}}
+	allow = { always = yes }
+	effect = {}
+}
+
+cg_plus_thief_small_0004 = {
+	potential = {FROM = { has_country_flag = collected_pantyshoot_04 has_country_flag=auction_screen_page_1 }}
+	allow = { always = yes }
+	effect = {
+		hidden_effect = {
+		country_event = { id = CG_plus_thief_auction_screen_events.1001	}
+		set_variable={ which= show_panty_photo value =  4 }
+		custom_tooltip = "enlarge"
+		}
+	}
+}
+
+
+cg_plus_thief_large_0004 = {
+	potential = {FROM = { check_variable = { which = show_panty_photo value = 4 }}}
+	allow = { always = yes }
+	effect = {}
+}
+
+cg_plus_thief_small_0005 = {
+	potential = {FROM = { has_country_flag = collected_pantyshoot_05 has_country_flag=auction_screen_page_1 }}
+	allow = { always = yes }
+	effect = {
+		hidden_effect = {
+		country_event = { id = CG_plus_thief_auction_screen_events.1001	}
+		set_variable={ which= show_panty_photo value =  5 }
+		custom_tooltip = "enlarge"
+		}
+	}
+}
+
+
+cg_plus_thief_large_0005 = {
+	potential = {FROM = { check_variable = { which = show_panty_photo value = 5 }}}
+	allow = { always = yes }
+	effect = {}
+}
+
+cg_plus_thief_small_0006 = {
+	potential = {FROM = { has_country_flag = collected_pantyshoot_06 has_country_flag=auction_screen_page_1 }}
+	allow = { always = yes }
+	effect = {
+		hidden_effect = {
+		country_event = { id = CG_plus_thief_auction_screen_events.1001	}
+		set_variable={ which= show_panty_photo value =  6 }
+		custom_tooltip = "enlarge"
+		}
+	}
+}
+
+
+cg_plus_thief_large_0006 = {
+	potential = {FROM = { check_variable = { which = show_panty_photo value = 6}}}
+	allow = { always = yes }
+	effect = {}
+}
+
+cg_plus_thief_small_0007 = {
+	potential = {FROM = { has_country_flag = collected_pantyshoot_07 has_country_flag=auction_screen_page_1 }}
+	allow = { always = yes }
+	effect = {
+		hidden_effect = {
+		country_event = { id = CG_plus_thief_auction_screen_events.1001	}
+		set_variable={ which= show_panty_photo value =  7 }
+		custom_tooltip = "enlarge"
+		}
+	}
+}
+
+
+cg_plus_thief_large_0007 = {
+	potential = {FROM = { check_variable = { which = show_panty_photo value = 7 }}}
+	allow = { always = yes }
+	effect = {}
+}
+
+cg_plus_thief_small_0008 = {
+	potential = {FROM = { has_country_flag = collected_pantyshoot_08 has_country_flag=auction_screen_page_1 }}
+	allow = { always = yes }
+	effect = {
+		hidden_effect = {
+		country_event = { id = CG_plus_thief_auction_screen_events.1001	}
+		set_variable={ which= show_panty_photo value =  8 }
+		custom_tooltip = "enlarge"
+		}
+	}
+}
+
+
+cg_plus_thief_large_0008 = {
+	potential = {FROM = { check_variable = { which = show_panty_photo value = 8 }}}
+	allow = { always = yes }
+	effect = {}
+}
+
+cg_plus_thief_small_0009 = {
+	potential = {FROM = { has_country_flag = collected_pantyshoot_09 has_country_flag=auction_screen_page_2 }}
+	allow = { always = yes }
+	effect = {
+		hidden_effect = {
+			country_event = { id = CG_plus_thief_auction_screen_events.1001	}
+			set_variable={ which= show_panty_photo value =  09 }
+			custom_tooltip = "enlarge" }}}
+	cg_plus_thief_large_0009 = {
+	potential = {FROM = { check_variable = { which = show_panty_photo value = 09 }}}
+	allow = { always = yes }
+	effect = {} }
+
+	cg_plus_thief_small_0010 = {
+	potential = {FROM = { has_country_flag = collected_pantyshoot_10 has_country_flag=auction_screen_page_2 }}
+	allow = { always = yes }
+	effect = {
+		hidden_effect = {
+			country_event = { id = CG_plus_thief_auction_screen_events.1001	}
+			set_variable={ which= show_panty_photo value =  10 }
+			custom_tooltip = "enlarge" }}}
+	cg_plus_thief_large_0010 = {
+	potential = {FROM = { check_variable = { which = show_panty_photo value = 10 }}}
+	allow = { always = yes }
+	effect = {} }
+
+	cg_plus_thief_small_0011 = {
+	potential = {FROM = { has_country_flag = collected_pantyshoot_11 has_country_flag=auction_screen_page_2 }}
+	allow = { always = yes }
+	effect = {
+		hidden_effect = {
+			country_event = { id = CG_plus_thief_auction_screen_events.1001	}
+			set_variable={ which= show_panty_photo value =  11 }
+			custom_tooltip = "enlarge" }}}
+	cg_plus_thief_large_0011 = {
+	potential = {FROM = { check_variable = { which = show_panty_photo value = 11 }}}
+	allow = { always = yes }
+	effect = {} }
+
+	cg_plus_thief_small_0012 = {
+	potential = {FROM = { has_country_flag = collected_pantyshoot_12 has_country_flag=auction_screen_page_2 }}
+	allow = { always = yes }
+	effect = {
+		hidden_effect = {
+			country_event = { id = CG_plus_thief_auction_screen_events.1001	}
+			set_variable={ which= show_panty_photo value =  12 }
+			custom_tooltip = "enlarge" }}}
+	cg_plus_thief_large_0012 = {
+	potential = {FROM = { check_variable = { which = show_panty_photo value = 12 }}}
+	allow = { always = yes }
+	effect = {} }
+
+	cg_plus_thief_small_0013 = {
+	potential = {FROM = { has_country_flag = collected_pantyshoot_13 has_country_flag=auction_screen_page_2 }}
+	allow = { always = yes }
+	effect = {
+		hidden_effect = {
+			country_event = { id = CG_plus_thief_auction_screen_events.1001	}
+			set_variable={ which= show_panty_photo value =  13 }
+			custom_tooltip = "enlarge" }}}
+	cg_plus_thief_large_0013 = {
+	potential = {FROM = { check_variable = { which = show_panty_photo value = 13 }}}
+	allow = { always = yes }
+	effect = {} }
+
+	cg_plus_thief_small_0014 = {
+	potential = {FROM = { has_country_flag = collected_pantyshoot_14 has_country_flag=auction_screen_page_2 }}
+	allow = { always = yes }
+	effect = {
+		hidden_effect = {
+			country_event = { id = CG_plus_thief_auction_screen_events.1001	}
+			set_variable={ which= show_panty_photo value =  14 }
+			custom_tooltip = "enlarge" }}}
+	cg_plus_thief_large_0014 = {
+	potential = {FROM = { check_variable = { which = show_panty_photo value = 14 }}}
+	allow = { always = yes }
+	effect = {} }
+
+	cg_plus_thief_small_0015 = {
+	potential = {FROM = { has_country_flag = collected_pantyshoot_15 has_country_flag=auction_screen_page_2 }}
+	allow = { always = yes }
+	effect = {
+		hidden_effect = {
+			country_event = { id = CG_plus_thief_auction_screen_events.1001	}
+			set_variable={ which= show_panty_photo value =  15 }
+			custom_tooltip = "enlarge" }}}
+	cg_plus_thief_large_0015 = {
+	potential = {FROM = { check_variable = { which = show_panty_photo value = 15 }}}
+	allow = { always = yes }
+	effect = {} }
+
+	cg_plus_thief_small_0016 = {
+		potential = {FROM = { has_country_flag = collected_pantyshoot_16 has_country_flag=auction_screen_page_2 }}
+		allow = { always = yes }
+		effect = {
+			hidden_effect = {
+				country_event = { id = CG_plus_thief_auction_screen_events.1001	}
+				set_variable={ which= show_panty_photo value =  16 }
+				custom_tooltip = "enlarge" }}}
+		cg_plus_thief_large_0016 = {
+		potential = {FROM = { check_variable = { which = show_panty_photo value = 16 }}}
+		allow = { always = yes }
+		effect = {} }
+
+		cg_plus_thief_small_0017 = {
+			potential = {FROM = { has_country_flag = collected_pantyshoot_17 has_country_flag=auction_screen_page_3 }}
+			allow = { always = yes }
+			effect = {
+				hidden_effect = {
+					country_event = { id = CG_plus_thief_auction_screen_events.1001	}
+					set_variable={ which= show_panty_photo value =  17 }
+					custom_tooltip = "enlarge" }}}
+			cg_plus_thief_large_0017 = {
+			potential = {FROM = { check_variable = { which = show_panty_photo value = 17 }}}
+			allow = { always = yes }
+			effect = {} }
+		
+			cg_plus_thief_small_0018 = {
+			potential = {FROM = { has_country_flag = collected_pantyshoot_18 has_country_flag=auction_screen_page_3 }}
+			allow = { always = yes }
+			effect = {
+				hidden_effect = {
+					country_event = { id = CG_plus_thief_auction_screen_events.1001	}
+					set_variable={ which= show_panty_photo value =  18 }
+					custom_tooltip = "enlarge" }}}
+			cg_plus_thief_large_0018 = {
+			potential = {FROM = { check_variable = { which = show_panty_photo value = 18 }}}
+			allow = { always = yes }
+			effect = {} }
+		
+			cg_plus_thief_small_0019 = {
+			potential = {FROM = { has_country_flag = collected_pantyshoot_19 has_country_flag=auction_screen_page_3 }}
+			allow = { always = yes }
+			effect = {
+				hidden_effect = {
+					country_event = { id = CG_plus_thief_auction_screen_events.1001	}
+					set_variable={ which= show_panty_photo value =  19 }
+					custom_tooltip = "enlarge" }}}
+			cg_plus_thief_large_0019 = {
+			potential = {FROM = { check_variable = { which = show_panty_photo value = 19 }}}
+			allow = { always = yes }
+			effect = {} }
+		
+			cg_plus_thief_small_0020 = {
+			potential = {FROM = { has_country_flag = collected_pantyshoot_20 has_country_flag=auction_screen_page_3 }}
+			allow = { always = yes }
+			effect = {
+				hidden_effect = {
+					country_event = { id = CG_plus_thief_auction_screen_events.1001	}
+					set_variable={ which= show_panty_photo value =  20 }
+					custom_tooltip = "enlarge" }}}
+			cg_plus_thief_large_0020 = {
+			potential = {FROM = { check_variable = { which = show_panty_photo value = 20 }}}
+			allow = { always = yes }
+			effect = {} }
+		
+			cg_plus_thief_small_0021 = {
+			potential = {FROM = { has_country_flag = collected_pantyshoot_21 has_country_flag=auction_screen_page_3 }}
+			allow = { always = yes }
+			effect = {
+				hidden_effect = {
+					country_event = { id = CG_plus_thief_auction_screen_events.1001	}
+					set_variable={ which= show_panty_photo value =  21 }
+					custom_tooltip = "enlarge" }}}
+			cg_plus_thief_large_0021 = {
+			potential = {FROM = { check_variable = { which = show_panty_photo value = 21 }}}
+			allow = { always = yes }
+			effect = {} }
+		
+		
+	
+		
+	
+

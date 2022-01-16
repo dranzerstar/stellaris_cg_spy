@@ -1026,7 +1026,7 @@ operation_holy_proj_mhsj = {
 operation_pantyshoot = {
 	target = none
 	categories = { op_cat_ero op_cat_diplomacy }
-	picture = GFX_evt_hypno_1
+	picture = GFX_evt_thief_universe
 	desc = operation_pantyshoot_desc
 	stages = 3
 	potential = { owner = { has_tradition = cg_plus_thief_tradition_adopt  }}
@@ -1046,9 +1046,15 @@ operation_pantyshoot = {
 		custom_tooltip = {
 			target={
 				has_country_flag = cg_plus_thief_target
-				NOT = { has_country_flag = cg_plus_thief_target_empty }
+				
 			}
 			fail_text = not_valiid_steal_target
+		}
+		custom_tooltip = {
+			target={
+			NOT = { has_country_flag = cg_plus_thief_target_empty }
+			}
+			fail_text = empty_steal_target
 		}
 		custom_tooltip = {
 			is_running_espionage_operation = no
@@ -1076,4 +1082,5 @@ operation_pantyshoot = {
 
 	}
 	on_create = {}
+	
 }

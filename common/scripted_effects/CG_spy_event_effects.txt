@@ -243,33 +243,294 @@ cg_plus_thief_get_pantyshot_photo = {
 		1 = {
 			modifier = {
 				factor = 0
-				root.owner = {
-				has_country_flag = collected_pantyshoot_01
-				}
+				owner = {  has_country_flag = collected_pantyshoot_01 }
 			}
-			root.owner = {
+			owner = {
 				set_country_flag = collected_pantyshoot_01
 			}
 			set_variable = { which = show_panty_photo value=1 }
+			change_variable = {
+				which = total_panties
+				value = 1
+			}
 
+		}
+
+		1 = {
+			modifier = { factor = 0 owner = {  has_country_flag = collected_pantyshoot_02 } }
+			owner = { set_country_flag = collected_pantyshoot_02 }
+			set_variable = { which = show_panty_photo value = 2 }
+			change_variable = { which = total_panties value = 1 }
 		}
 		1 = {
-
-			
+			modifier = { factor = 0 owner = {  has_country_flag = collected_pantyshoot_03 } }
+			owner = { set_country_flag = collected_pantyshoot_03 }
+			set_variable = { which = show_panty_photo value = 03 }
+			change_variable = { which = total_panties value = 1 }
 		}
+	
 		1 = {
-
+			modifier = { factor = 0 owner = {  has_country_flag = collected_pantyshoot_04 } }
+			owner = { set_country_flag = collected_pantyshoot_04 }
+			set_variable = { which = show_panty_photo value = 04 }
+			change_variable = { which = total_panties value = 1 }
 		}
+	
 		1 = {
-
+			modifier = { factor = 0 owner = {  has_country_flag = collected_pantyshoot_05 } }
+			owner = { set_country_flag = collected_pantyshoot_05 }
+			set_variable = { which = show_panty_photo value = 05 }
+			change_variable = { which = total_panties value = 1 }
 		}
+	
 		1 = {
-
+			modifier = { factor = 0 owner = {  has_country_flag = collected_pantyshoot_06 } }
+			owner = { set_country_flag = collected_pantyshoot_06 }
+			set_variable = { which = show_panty_photo value = 06 }
+			change_variable = { which = total_panties value = 1 }
 		}
+	
+		1 = {
+			modifier = { factor = 0 owner = {  has_country_flag = collected_pantyshoot_07 } }
+			owner = { set_country_flag = collected_pantyshoot_07 }
+			set_variable = { which = show_panty_photo value = 07 }
+			change_variable = { which = total_panties value = 1 }
+		}
+	
+		1 = {
+			modifier = { factor = 0 owner = {  has_country_flag = collected_pantyshoot_08 } }
+			owner = { set_country_flag = collected_pantyshoot_08 }
+			set_variable = { which = show_panty_photo value = 08 }
+			change_variable = { which = total_panties value = 1 }
+		}
+	
+		1 = {
+			modifier = { factor = 0 owner = {  has_country_flag = collected_pantyshoot_09 } }
+			owner = { set_country_flag = collected_pantyshoot_09 }
+			set_variable = { which = show_panty_photo value = 09 }
+			change_variable = { which = total_panties value = 1 }
+		}
+	
+		1 = {
+			modifier = { factor = 0 owner = {  has_country_flag = collected_pantyshoot_10 } }
+			owner = { set_country_flag = collected_pantyshoot_10 }
+			set_variable = { which = show_panty_photo value = 10 }
+			change_variable = { which = total_panties value = 1 }
+		}
+	
+		1 = {
+			modifier = { factor = 0 owner = {  has_country_flag = collected_pantyshoot_11 } }
+			owner = { set_country_flag = collected_pantyshoot_11 }
+			set_variable = { which = show_panty_photo value = 11 }
+			change_variable = { which = total_panties value = 1 }
+		}
+	
+		1 = {
+			modifier = { factor = 0 owner = {  has_country_flag = collected_pantyshoot_12 } }
+			owner = { set_country_flag = collected_pantyshoot_12 }
+			set_variable = { which = show_panty_photo value = 12 }
+			change_variable = { which = total_panties value = 1 }
+		}
+	
+		1 = {
+			modifier = { factor = 0 owner = {  has_country_flag = collected_pantyshoot_13 } }
+			owner = { set_country_flag = collected_pantyshoot_13 }
+			set_variable = { which = show_panty_photo value = 13 }
+			change_variable = { which = total_panties value = 1 }
+		}
+	
+		1 = {
+			modifier = { factor = 0 owner = {  has_country_flag = collected_pantyshoot_14 } }
+			owner = { set_country_flag = collected_pantyshoot_14 }
+			set_variable = { which = show_panty_photo value = 14 }
+			change_variable = { which = total_panties value = 1 }
+		}
+	
+		1 = {
+			modifier = { factor = 0 owner = {  has_country_flag = collected_pantyshoot_15 } }
+			owner = { set_country_flag = collected_pantyshoot_15 }
+			set_variable = { which = show_panty_photo value = 15 }
+			change_variable = { which = total_panties value = 1 }
+		}
+	
+		1 = {
+			modifier = { factor = 0 owner = {  has_country_flag = collected_pantyshoot_16 } }
+			owner = { set_country_flag = collected_pantyshoot_16 }
+			set_variable = { which = show_panty_photo value = 16 }
+			change_variable = { which = total_panties value = 1 }
+		}
+	
+		1 = {
+			modifier = { factor = 0 owner = {  has_country_flag = collected_pantyshoot_17 } }
+			owner = { set_country_flag = collected_pantyshoot_17 }
+			set_variable = { which = show_panty_photo value = 17 }
+			change_variable = { which = total_panties value = 1 }
+		}
+	
+		1 = {
+			modifier = { factor = 0 owner = {  has_country_flag = collected_pantyshoot_18 } }
+			owner = { set_country_flag = collected_pantyshoot_18 }
+			set_variable = { which = show_panty_photo value = 18 }
+			change_variable = { which = total_panties value = 1 }
+		}
+	
+		1 = {
+			modifier = { factor = 0 owner = {  has_country_flag = collected_pantyshoot_19 } }
+			owner = { set_country_flag = collected_pantyshoot_19 }
+			set_variable = { which = show_panty_photo value = 19 }
+			change_variable = { which = total_panties value = 1 }
+		}
+	
+		1 = {
+			modifier = { factor = 0 owner = {  has_country_flag = collected_pantyshoot_20 } }
+			owner = { set_country_flag = collected_pantyshoot_20 }
+			set_variable = { which = show_panty_photo value = 20 }
+			change_variable = { which = total_panties value = 1 }
+		}
+	
+		1 = {
+			modifier = { factor = 0 owner = {  has_country_flag = collected_pantyshoot_21 } }
+			owner = { set_country_flag = collected_pantyshoot_21 }
+			set_variable = { which = show_panty_photo value = 21 }
+			change_variable = { which = total_panties value = 1 }
+		}
+	
+	
 
 	}
 }
+cg_plus_thief_remove_random_pantyshot_photo={
+	random_list = {
+	1 = {
+		modifier = { factor = 0 owner = {  NOT={has_country_flag = collected_pantyshoot_01 }} }
+		owner = { remove_country_flag = collected_pantyshoot_01 }
+		change_variable = { which = total_panties value = -1 }
+	}
+	1 = {
+		modifier = { factor = 0 owner = {  NOT={has_country_flag = collected_pantyshoot_02 }} }
+		owner = { remove_country_flag = collected_pantyshoot_02 }
+		change_variable = { which = total_panties value = -1 }
+	}
+	
+	1 = {
+		modifier = { factor = 0 owner = {  NOT={has_country_flag = collected_pantyshoot_03 }} }
+		owner = { remove_country_flag = collected_pantyshoot_03 }
+		change_variable = { which = total_panties value = -1 }
+	}
+	
+	1 = {
+		modifier = { factor = 0 owner = {  NOT={has_country_flag = collected_pantyshoot_04 }} }
+		owner = { remove_country_flag = collected_pantyshoot_04 }
+		change_variable = { which = total_panties value = -1 }
+	}
+	
+	1 = {
+		modifier = { factor = 0 owner = {  NOT={has_country_flag = collected_pantyshoot_05 }} }
+		owner = { remove_country_flag = collected_pantyshoot_05 }
+		change_variable = { which = total_panties value = -1 }
+	}
+	
+	1 = {
+		modifier = { factor = 0 owner = {  NOT={has_country_flag = collected_pantyshoot_06 }} }
+		owner = { remove_country_flag = collected_pantyshoot_06 }
+		change_variable = { which = total_panties value = -1 }
+	}
+	
+	1 = {
+		modifier = { factor = 0 owner = {  NOT={has_country_flag = collected_pantyshoot_07 }} }
+		owner = { remove_country_flag = collected_pantyshoot_07 }
+		change_variable = { which = total_panties value = -1 }
+	}
+	
+	1 = {
+		modifier = { factor = 0 owner = {  NOT={has_country_flag = collected_pantyshoot_08 }} }
+		owner = { remove_country_flag = collected_pantyshoot_08 }
+		change_variable = { which = total_panties value = -1 }
+	}
+	
+	1 = {
+		modifier = { factor = 0 owner = {  NOT={has_country_flag = collected_pantyshoot_09 }} }
+		owner = { remove_country_flag = collected_pantyshoot_09 }
+		change_variable = { which = total_panties value = -1 }
+	}
+	
+	1 = {
+		modifier = { factor = 0 owner = {  NOT={has_country_flag = collected_pantyshoot_10 }} }
+		owner = { remove_country_flag = collected_pantyshoot_10 }
+		change_variable = { which = total_panties value = -1 }
+	}
+	
+	1 = {
+		modifier = { factor = 0 owner = {  NOT={has_country_flag = collected_pantyshoot_11 }} }
+		owner = { remove_country_flag = collected_pantyshoot_11 }
+		change_variable = { which = total_panties value = -1 }
+	}
+	
+	1 = {
+		modifier = { factor = 0 owner = {  NOT={has_country_flag = collected_pantyshoot_12 }} }
+		owner = { remove_country_flag = collected_pantyshoot_12 }
+		change_variable = { which = total_panties value = -1 }
+	}
+	
+	1 = {
+		modifier = { factor = 0 owner = {  NOT={has_country_flag = collected_pantyshoot_13 }} }
+		owner = { remove_country_flag = collected_pantyshoot_13 }
+		change_variable = { which = total_panties value = -1 }
+	}
+	
+	1 = {
+		modifier = { factor = 0 owner = {  NOT={has_country_flag = collected_pantyshoot_14 }} }
+		owner = { remove_country_flag = collected_pantyshoot_14 }
+		change_variable = { which = total_panties value = -1 }
+	}
+	
+	1 = {
+		modifier = { factor = 0 owner = {  NOT={has_country_flag = collected_pantyshoot_15 }} }
+		owner = { remove_country_flag = collected_pantyshoot_15 }
+		change_variable = { which = total_panties value = -1 }
+	}
+	
+	1 = {
+		modifier = { factor = 0 owner = {  NOT={has_country_flag = collected_pantyshoot_16 }} }
+		owner = { remove_country_flag = collected_pantyshoot_16 }
+		change_variable = { which = total_panties value = -1 }
+	}
+	
+	1 = {
+		modifier = { factor = 0 owner = {  NOT={has_country_flag = collected_pantyshoot_17 }} }
+		owner = { remove_country_flag = collected_pantyshoot_17 }
+		change_variable = { which = total_panties value = -1 }
+	}
+	
+	1 = {
+		modifier = { factor = 0 owner = {  NOT={has_country_flag = collected_pantyshoot_18 }} }
+		owner = { remove_country_flag = collected_pantyshoot_18 }
+		change_variable = { which = total_panties value = -1 }
+	}
+	
+	1 = {
+		modifier = { factor = 0 owner = {  NOT={has_country_flag = collected_pantyshoot_19 }} }
+		owner = { remove_country_flag = collected_pantyshoot_19 }
+		change_variable = { which = total_panties value = -1 }
+	}
+	
+	1 = {
+		modifier = { factor = 0 owner = {  NOT={has_country_flag = collected_pantyshoot_20 }} }
+		owner = { remove_country_flag = collected_pantyshoot_20 }
+		change_variable = { which = total_panties value = -1 }
+	}
+	
+	1 = {
+		modifier = { factor = 0 owner = {  NOT={has_country_flag = collected_pantyshoot_21 }} }
+		owner = { remove_country_flag = collected_pantyshoot_21 }
+		change_variable = { which = total_panties value = -1 }
+	}
+	
+	
 
+
+	}
+}
 
 
 CG_operation_thief_failed_random_events = {
@@ -291,7 +552,7 @@ CG_operation_thief_failed_random_events = {
 				
 			}
 			owner={
-			country_event = { id = CG_operation_failed.1200 }
+			country_event = { id = CG_operation_failed.1100 }
 			}
 		}
 		1 = { 

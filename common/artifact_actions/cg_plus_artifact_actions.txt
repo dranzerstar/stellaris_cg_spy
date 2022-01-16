@@ -18,7 +18,7 @@ find_pantyshot_targets = {
 	
 	allow = {
 		custom_tooltip = {
-			fail_text = pantsteal_target
+			fail_text = mod_cooldown
 			NOT = { has_modifier = mod_cooldown }
 		}
 	}

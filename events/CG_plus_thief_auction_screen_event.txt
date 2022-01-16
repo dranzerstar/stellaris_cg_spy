@@ -9,7 +9,7 @@ namespace = CG_plus_thief_auction_screen_events
 
 
 # 1xxx enlarged pic
-
+# 9xxx debug 
 
 country_event={
 	id=CG_plus_thief_auction_screen_events.0000
@@ -27,13 +27,16 @@ country_event={
 }
 
 
+
 country_event={
 	id=CG_plus_thief_auction_screen_events.0001
 
-	custom_gui = cg_plus_evt_menu
+	custom_gui = cg_plus_thief_acution_menu
 
 	title= CG_plus_thief_auction_screen_events.0001.name
-	desc= CG_plus_thief_auction_screen_events.0001.desc
+
+	desc= CG_plus_thief_auction_screen_events.0001.desc.1
+
 	hide_window=no
 	diplomatic = yes
 
@@ -48,24 +51,52 @@ country_event={
  
 	option={
 		name=pg1
-		set_country_flag = auction_screen_page_1
+		custom_tooltip = ""
 		allow = {
 			NOT= {has_country_flag = auction_screen_page_1 }
+		}
+		hidden_effect = {
+			
+		
+		set_country_flag = auction_screen_page_1
+		remove_country_flag = auction_screen_page_2
+		remove_country_flag = auction_screen_page_3
+		country_event = {
+			id = CG_plus_thief_auction_screen_events.0001
+			}
 		}
 
 	}
 	option={
 		name=pg2
-		set_country_flag = auction_screen_page_2
+		custom_tooltip = ""
 		allow = {
 			NOT= {has_country_flag = auction_screen_page_2 }
+		}
+		hidden_effect = {
+			
+			remove_country_flag = auction_screen_page_1
+			remove_country_flag = auction_screen_page_3
+		set_country_flag = auction_screen_page_2
+
+		country_event = {
+			id = CG_plus_thief_auction_screen_events.0001
+			}
 		}
 	}
 	option={
 		name=pg3
-		set_country_flag = auction_screen_page_3
+		custom_tooltip = ""
 		allow = {
 			NOT= {has_country_flag = auction_screen_page_3 }
+		}
+		hidden_effect = {
+			
+			remove_country_flag = auction_screen_page_2
+			remove_country_flag = auction_screen_page_1
+		set_country_flag = auction_screen_page_3
+
+		country_event = { id = CG_plus_thief_auction_screen_events.0001 }
 		}
 	}
 
@@ -77,6 +108,7 @@ country_event={
 		remove_country_flag = auction_screen_page_1
 		remove_country_flag = auction_screen_page_2
 		remove_country_flag = auction_screen_page_3
+
 
 	}
 
@@ -91,33 +123,179 @@ country_event={
 country_event={
 	id=CG_plus_thief_auction_screen_events.1001
 	title=CG_plus_thief_auction_screen_events.1001.name
-	custom_gui = cg_plus_evt_menu
-	#custom_gui_option = cg_plus_evt_menu_button
-	desc=CG_plus_thief_auction_screen_events.1001.desc
+	custom_gui = cg_plus_thief_acution_menu_enlarged
+	custom_gui_option = cg_plus_evt_menu_button
+
 	diplomatic = yes
 	hide_window = no
+	desc = {
+		exclusive_trigger = {
+			check_variable = { which =show_panty_photo value =1 }
+			text = CG_plus_thief_auction_screen_events.1001.desc.1
+		}
 
+	}
 
 	is_triggered_only = yes
 	immediate = {
 		#set_variable = { which = show_panty_photo value = 1 }
 	}
 
-#	option={
-#		#triggered from ui
-#		name= "BACK"
-#		trigger = {has_country_flag = auction_screen_open }
-#		country_event = {
-#			id = CG_plus_thief_auction_screen_events.0001
-#		}
-#	}
+	option={
+		#triggered from ui
+		name=  back
+		trigger = {has_country_flag = auction_screen_open }
+		#country_event = {
+		#	id = CG_plus_thief_auction_screen_events.0001
+		#}
+	}
 
 	option={
 		#triggered from spyevent
-		name= "CLOSE"
+		name= close
 		trigger = {NOT= {has_country_flag = auction_screen_open }}
 
 	}
 
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+################################
+#debugs
+
+country_event={
+	id=CG_plus_thief_auction_screen_events.9000
+	is_triggered_only = yes
+	hide_window=yes
+	immediate = {
+		
+		set_country_flag = collected_pantyshoot_01
+		set_country_flag = collected_pantyshoot_02
+		set_country_flag = collected_pantyshoot_03
+		set_country_flag = collected_pantyshoot_04
+		set_country_flag = collected_pantyshoot_05
+		set_country_flag = collected_pantyshoot_06
+		set_country_flag = collected_pantyshoot_07
+		set_country_flag = collected_pantyshoot_08
+		set_country_flag = collected_pantyshoot_09
+		set_country_flag = collected_pantyshoot_10
+		set_country_flag = collected_pantyshoot_11
+		set_country_flag = collected_pantyshoot_12
+		set_country_flag = collected_pantyshoot_13
+		set_country_flag = collected_pantyshoot_14
+		set_country_flag = collected_pantyshoot_15
+		set_country_flag = collected_pantyshoot_16
+		set_country_flag = collected_pantyshoot_17
+		set_country_flag = collected_pantyshoot_18
+		set_country_flag = collected_pantyshoot_19
+		set_country_flag = collected_pantyshoot_20
+		set_country_flag = collected_pantyshoot_21
+		set_country_flag = collected_pantyshoot_22
+		set_country_flag = collected_pantyshoot_23
+		set_country_flag = collected_pantyshoot_24
+	}
+
+}
+
+country_event={
+	id=CG_plus_thief_auction_screen_events.9001
+	is_triggered_only = yes
+	hide_window=yes
+	immediate = {
+		
+		remove_country_flag = collected_pantyshoot_01
+		remove_country_flag = collected_pantyshoot_02
+		remove_country_flag = collected_pantyshoot_03
+		remove_country_flag = collected_pantyshoot_04
+		remove_country_flag = collected_pantyshoot_05
+		remove_country_flag = collected_pantyshoot_06
+		remove_country_flag = collected_pantyshoot_07
+		remove_country_flag = collected_pantyshoot_08
+
+		remove_country_flag = collected_pantyshoot_09
+		remove_country_flag = collected_pantyshoot_10
+		remove_country_flag = collected_pantyshoot_11
+		remove_country_flag = collected_pantyshoot_12
+		remove_country_flag = collected_pantyshoot_13
+		remove_country_flag = collected_pantyshoot_14
+		remove_country_flag = collected_pantyshoot_15
+		remove_country_flag = collected_pantyshoot_16
+
+		remove_country_flag = collected_pantyshoot_17
+		remove_country_flag = collected_pantyshoot_18
+		remove_country_flag = collected_pantyshoot_19
+		remove_country_flag = collected_pantyshoot_20
+		remove_country_flag = collected_pantyshoot_21
+		remove_country_flag = collected_pantyshoot_22
+		remove_country_flag = collected_pantyshoot_23
+		remove_country_flag = collected_pantyshoot_24
+	}
+
+}
+
+country_event={
+	id=CG_plus_thief_auction_screen_events.9002
+	is_triggered_only = yes
+	hide_window=yes
+	immediate = {
+		
+		set_country_flag =asceticism_flag
+		set_country_flag =carnalism_flag
+	}
+
+}
+
+
+country_event={
+	id=CG_plus_thief_auction_screen_events.9003
+	is_triggered_only = yes
+	hide_window=yes
+	immediate = {
+		
+		cg_plus_thief_get_pantyshot_photo=yes
+	}
+
+}
+
+country_event={
+	id=CG_plus_thief_auction_screen_events.9004
+	is_triggered_only = yes
+	hide_window=yes
+	immediate = {
+		
+		cg_plus_thief_get_pantyshot_photo=yes
+	}
+	after = {
+		country_event = {
+			id = CG_plus_thief_auction_screen_events.1001
+
+		}
+	}
+}
+
+
+
+country_event={
+	id=CG_plus_thief_auction_screen_events.9005
+	is_triggered_only = yes
+	hide_window=yes
+	immediate = {
+		
+		cg_plus_thief_remove_random_pantyshot_photo=yes
+	}
 
 }
