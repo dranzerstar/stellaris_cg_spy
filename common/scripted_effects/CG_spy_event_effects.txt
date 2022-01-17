@@ -253,152 +253,164 @@ cg_plus_thief_get_pantyshot_photo = {
 				which = total_panties
 				value = 1
 			}
+			fromfrom.target ={ save_global_event_target_as = ptowner01 }
 
 		}
 
 		1 = {
 			modifier = { factor = 0 owner = {  has_country_flag = collected_pantyshoot_02 } }
 			owner = { set_country_flag = collected_pantyshoot_02 }
-			set_variable = { which = show_panty_photo value = 2 }
+			set_variable = { which = show_panty_photo value = 02 }
 			change_variable = { which = total_panties value = 1 }
+			fromfrom.target ={ save_global_event_target_as = ptowner02 }
 		}
 		1 = {
 			modifier = { factor = 0 owner = {  has_country_flag = collected_pantyshoot_03 } }
 			owner = { set_country_flag = collected_pantyshoot_03 }
 			set_variable = { which = show_panty_photo value = 03 }
 			change_variable = { which = total_panties value = 1 }
+			fromfrom.target ={ save_global_event_target_as = ptowner03 }
 		}
-	
 		1 = {
 			modifier = { factor = 0 owner = {  has_country_flag = collected_pantyshoot_04 } }
 			owner = { set_country_flag = collected_pantyshoot_04 }
 			set_variable = { which = show_panty_photo value = 04 }
 			change_variable = { which = total_panties value = 1 }
+			fromfrom.target ={ save_global_event_target_as = ptowner04 }
 		}
-	
 		1 = {
 			modifier = { factor = 0 owner = {  has_country_flag = collected_pantyshoot_05 } }
 			owner = { set_country_flag = collected_pantyshoot_05 }
 			set_variable = { which = show_panty_photo value = 05 }
 			change_variable = { which = total_panties value = 1 }
+			fromfrom.target ={ save_global_event_target_as = ptowner05 }
 		}
-	
 		1 = {
 			modifier = { factor = 0 owner = {  has_country_flag = collected_pantyshoot_06 } }
 			owner = { set_country_flag = collected_pantyshoot_06 }
 			set_variable = { which = show_panty_photo value = 06 }
 			change_variable = { which = total_panties value = 1 }
+			fromfrom.target ={ save_global_event_target_as = ptowner06 }
 		}
-	
 		1 = {
 			modifier = { factor = 0 owner = {  has_country_flag = collected_pantyshoot_07 } }
+			modifier = { factor = 0 fromfrom.target = {  NOT={ is_species_class = Magical_Girl } } }
 			owner = { set_country_flag = collected_pantyshoot_07 }
 			set_variable = { which = show_panty_photo value = 07 }
 			change_variable = { which = total_panties value = 1 }
+			fromfrom.target ={ save_global_event_target_as = ptowner07 }
 		}
-	
 		1 = {
 			modifier = { factor = 0 owner = {  has_country_flag = collected_pantyshoot_08 } }
 			owner = { set_country_flag = collected_pantyshoot_08 }
 			set_variable = { which = show_panty_photo value = 08 }
 			change_variable = { which = total_panties value = 1 }
+			fromfrom.target ={ save_global_event_target_as = ptowner08 }
 		}
-	
 		1 = {
 			modifier = { factor = 0 owner = {  has_country_flag = collected_pantyshoot_09 } }
 			owner = { set_country_flag = collected_pantyshoot_09 }
 			set_variable = { which = show_panty_photo value = 09 }
 			change_variable = { which = total_panties value = 1 }
+			fromfrom.target ={ save_global_event_target_as = ptowner09 }
 		}
-	
 		1 = {
 			modifier = { factor = 0 owner = {  has_country_flag = collected_pantyshoot_10 } }
 			owner = { set_country_flag = collected_pantyshoot_10 }
 			set_variable = { which = show_panty_photo value = 10 }
 			change_variable = { which = total_panties value = 1 }
+			fromfrom.target ={ save_global_event_target_as = ptowner10 }
 		}
-	
 		1 = {
 			modifier = { factor = 0 owner = {  has_country_flag = collected_pantyshoot_11 } }
 			owner = { set_country_flag = collected_pantyshoot_11 }
 			set_variable = { which = show_panty_photo value = 11 }
 			change_variable = { which = total_panties value = 1 }
+			fromfrom.target ={ save_global_event_target_as = ptowner11 }
 		}
-	
 		1 = {
 			modifier = { factor = 0 owner = {  has_country_flag = collected_pantyshoot_12 } }
 			owner = { set_country_flag = collected_pantyshoot_12 }
 			set_variable = { which = show_panty_photo value = 12 }
 			change_variable = { which = total_panties value = 1 }
+			fromfrom.target ={ save_global_event_target_as = ptowner12 }
 		}
-	
 		1 = {
 			modifier = { factor = 0 owner = {  has_country_flag = collected_pantyshoot_13 } }
+			modifier = { factor = 0 fromfrom.target = {  NOR={ is_species_class = WARSHIPGIRL is_species_class = KANSEN } } }
 			owner = { set_country_flag = collected_pantyshoot_13 }
 			set_variable = { which = show_panty_photo value = 13 }
 			change_variable = { which = total_panties value = 1 }
+			fromfrom.target ={ save_global_event_target_as = ptowner13 }
 		}
-	
 		1 = {
 			modifier = { factor = 0 owner = {  has_country_flag = collected_pantyshoot_14 } }
+			modifier = { factor = 0 fromfrom.target = {  NOR={ is_species_class = WARSHIPGIRL is_species_class = KANSEN } } }
 			owner = { set_country_flag = collected_pantyshoot_14 }
 			set_variable = { which = show_panty_photo value = 14 }
 			change_variable = { which = total_panties value = 1 }
+			fromfrom.target ={ save_global_event_target_as = ptowner14 }
 		}
-	
 		1 = {
 			modifier = { factor = 0 owner = {  has_country_flag = collected_pantyshoot_15 } }
 			owner = { set_country_flag = collected_pantyshoot_15 }
 			set_variable = { which = show_panty_photo value = 15 }
 			change_variable = { which = total_panties value = 1 }
+			fromfrom.target ={ save_global_event_target_as = ptowner15 }
 		}
-	
 		1 = {
 			modifier = { factor = 0 owner = {  has_country_flag = collected_pantyshoot_16 } }
+			modifier = { factor = 0 fromfrom.target = {  NOR={ is_species_class = WARSHIPGIRL is_species_class = KANSEN } } }
 			owner = { set_country_flag = collected_pantyshoot_16 }
 			set_variable = { which = show_panty_photo value = 16 }
 			change_variable = { which = total_panties value = 1 }
+			fromfrom.target ={ save_global_event_target_as = ptowner16 }
 		}
-	
 		1 = {
+			modifier = { factor = 0 fromfrom.target = {  NOR={ is_species_class = Magical_Bitch  } } }
 			modifier = { factor = 0 owner = {  has_country_flag = collected_pantyshoot_17 } }
 			owner = { set_country_flag = collected_pantyshoot_17 }
 			set_variable = { which = show_panty_photo value = 17 }
 			change_variable = { which = total_panties value = 1 }
+			fromfrom.target ={ save_global_event_target_as = ptowner17 }
 		}
-	
 		1 = {
 			modifier = { factor = 0 owner = {  has_country_flag = collected_pantyshoot_18 } }
 			owner = { set_country_flag = collected_pantyshoot_18 }
 			set_variable = { which = show_panty_photo value = 18 }
 			change_variable = { which = total_panties value = 1 }
+			fromfrom.target ={ save_global_event_target_as = ptowner18 }
 		}
-	
 		1 = {
 			modifier = { factor = 0 owner = {  has_country_flag = collected_pantyshoot_19 } }
 			owner = { set_country_flag = collected_pantyshoot_19 }
 			set_variable = { which = show_panty_photo value = 19 }
 			change_variable = { which = total_panties value = 1 }
+			fromfrom.target ={ save_global_event_target_as = ptowner19 }
 		}
-	
 		1 = {
 			modifier = { factor = 0 owner = {  has_country_flag = collected_pantyshoot_20 } }
 			owner = { set_country_flag = collected_pantyshoot_20 }
 			set_variable = { which = show_panty_photo value = 20 }
 			change_variable = { which = total_panties value = 1 }
+			fromfrom.target ={ save_global_event_target_as = ptowner20 }
 		}
-	
 		1 = {
+			modifier = { factor = 0 fromfrom.target = {  NOR={ is_species_class = android is_species_class= sf_a_doll is_species_class=nyto  } } }
 			modifier = { factor = 0 owner = {  has_country_flag = collected_pantyshoot_21 } }
 			owner = { set_country_flag = collected_pantyshoot_21 }
 			set_variable = { which = show_panty_photo value = 21 }
 			change_variable = { which = total_panties value = 1 }
+			fromfrom.target ={ save_global_event_target_as = ptowner21 }
 		}
-	
+		
 	
 
 	}
 }
+
+
+
 cg_plus_thief_remove_random_pantyshot_photo={
 	random_list = {
 	1 = {
@@ -538,7 +550,7 @@ CG_operation_thief_failed_random_events = {
 		1 = { #
 			modifier = {
 				factor = 0
-				target={  NOT ={has_country_flag = carnalism_flag }}
+				from.target={  NOT ={has_country_flag = carnalism_flag }}
 				
 			}
 			owner={
@@ -548,7 +560,7 @@ CG_operation_thief_failed_random_events = {
 		1 = { #
 			modifier = {
 				factor = 0
-				target={  NOT ={has_country_flag = asceticism_flag }}
+				from.target={  NOT ={has_country_flag = asceticism_flag }}
 				
 			}
 			owner={

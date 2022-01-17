@@ -160,5 +160,34 @@
  CG_plus_thief_auction_screen_events.0001.name:0 "不显示"
  CG_plus_thief_auction_screen_events.0001.desc.1:0 "欢迎来到隐居子的恒星展馆，这里展出的当然是恒星下各个位媛最美的风光！"
 
- CG_plus_thief_auction_screen_events.1001.name:0 "不显示"
- CG_plus_thief_auction_screen_events.1001.desc.1:0 "这个标准粉红，带些许稚气的胖次就是您，[Root.GetRulerName]大人的咯。\n\n 什么时候拍的？那当然是在。。喂喂喂ww 暴力禁止。"
+
+
+# [Root.GetRulerName]
+# [from.target.GetRulerName]
+# [from.target.GetRulerName]
+# [from.target.GetRulerName]
+#panty description 1 to 21
+ CG_plus_thief_auction_screen_events.1001.name:0 "查看详细"
+
+ CG_plus_thief_auction_screen_events.1001.desc.01:0 "这个标准粉红，带些许稚气的胖次就是您，[Root.GetRulerName]大人的咯。\n\n 什么时候拍的？那当然是在。。喂喂喂ww 暴力禁止。"
+
+ CG_plus_thief_auction_screen_events.1001.desc.02:0 "拍照地点:[ptowner02.GetName]\n颜色:黑\n备注:[ptowner02.GetSpeciesName]的标准海军服装，裙子很短，动作大一点就能看到伴次。"
+ CG_plus_thief_auction_screen_events.1001.desc.03:0 "拍照地点:[ptowner03.GetName]\n颜色:没\n备注:[ptowner03.GetSpeciesName]民族的传统服装，听说下面不穿是规矩"
+ CG_plus_thief_auction_screen_events.1001.desc.04:0 "拍照地点:[ptowner04.GetName]\n颜色:粉\n备注:无论如何，穿粉红的一定是个淫乱的孩子"
+ CG_plus_thief_auction_screen_events.1001.desc.05:0 "拍照地点:[ptowner05.GetName]\n颜色:红\n备注:[ptowner05.GetName]贵族少女的伴次，说不好是手工定制款式，最后还是超色的"
+ CG_plus_thief_auction_screen_events.1001.desc.06:0 "拍照地点:[ptowner06.GetName]\n颜色:白\n备注:听说是来自[ptowner06.GetName]的一名标兵，短裙配护甲高靴，永恒的绝配"
+ CG_plus_thief_auction_screen_events.1001.desc.07:0 "拍照地点:[ptowner07.GetName]\n颜色:白\n备注:[ptowner07.GetSpeciesName]的圣骑士就是喜欢穿的轻飘飘,和被击败后节操都变得轻飘飘的一样。"
+ CG_plus_thief_auction_screen_events.1001.desc.08:0 "拍照地点:[ptowner08.GetName]\n颜色:黑\n备注:听说是一名[ptowner08.GetSpeciesName]的现役魔法学院的公主，但是重点不在这，而是我发现他很喜欢坐着的时候把一脚也放椅子上面，肯定是个姬，还要是个一"
+ CG_plus_thief_auction_screen_events.1001.desc.09:0 "拍照地点:[ptowner09.GetName]\n颜色:\n备注:"
+ CG_plus_thief_auction_screen_events.1001.desc.10:0 "拍照地点:[ptowner10.GetName]\n颜色:黑\n备注:黑衣皮黑皮黑伴次"
+ CG_plus_thief_auction_screen_events.1001.desc.11:0 "拍照地点:[ptowner11.GetName]\n颜色:白\n备注:全罩泳裤也可以很可爱的"
+ CG_plus_thief_auction_screen_events.1001.desc.12:0 "拍照地点:[ptowner12.GetName]\n颜色:黑\n备注:半透明的丝绸舞衣下透出来的黑色丁字裤令隐居子欲火焚身！"
+ CG_plus_thief_auction_screen_events.1001.desc.13:0 "拍照地点:[ptowner13.GetName]\n颜色:白\n备注:穿着传统服饰的[ptowner13.GetSpeciesName]。高差旗袍就是要露出小裤裤的绳子才算合格，手结式的小裤再加分，绳结松了再加一分。"
+ CG_plus_thief_auction_screen_events.1001.desc.14:0 "拍照地点:[ptowner14.GetName]\n颜色:黑\n备注:不用在说了，绳结式伴次是宇宙中最色气的伴次，就算你说要把我扔进超级黑洞我也不会改变主意的。"
+ CG_plus_thief_auction_screen_events.1001.desc.15:0 "拍照地点:[ptowner15.GetName]\n颜色:白\n备注:某某[ptowner15.GetName]的某某大将军，很喜欢拿着大剑打架，同时很喜欢穿迷你裙，最喜欢的POSE就是，一脚平地，一脚踏着大石头，就这么劈这大腿，然后露出只能在特定角度才能看到的小裤。"
+ CG_plus_thief_auction_screen_events.1001.desc.16:0 "拍照地点:[ptowner16.GetName]\n颜色:白\n备注:[ptowner16.GetSpeciesName]就不怕海水都浅到内裤上吗？这不是和尿裤一样吗？"
+ CG_plus_thief_auction_screen_events.1001.desc.17:0 "拍照地点:[ptowner17.GetName]\n颜色:白\n备注:在[ptowner17.GetName]拍照就是不对味，都完全露出给我看，哪我怎会有偷窥的乐趣？"
+ CG_plus_thief_auction_screen_events.1001.desc.18:0 "拍照地点:[ptowner18.GetName]\n颜色:黑\n备注:在[ptowner18.GetName]遇到一个超害羞的妹妹，明明发现了陌生绅士超害怕的，一直把腿缩的紧紧的，但另一方面，手一直在把大腿往外拉，像是在邀请我的镜头一样，太刑了。"
+ CG_plus_thief_auction_screen_events.1001.desc.19:0 "拍照地点:[ptowner19.GetName]\n颜色:白\n备注:全身黑丝里衣下面的伴次是个好文明，完美展现如何穿得越多越色的技巧。"
+ CG_plus_thief_auction_screen_events.1001.desc.20:0 "拍照地点:[ptowner20.GetName]\n颜色:蓝白\n备注:文艺复兴式间条内裤，个人意见是应该让老土的东西埋掉，但是总有一些色批很怪的外星人。"
+ CG_plus_thief_auction_screen_events.1001.desc.21:0 "拍照地点:[ptowner21.GetName]\n颜色:白\n备注:[ptowner21.GetSpeciesName]仿生人形的特点就是没有成对的袜子，要不发明一些左右不对称的内裤？"

@@ -129,12 +129,90 @@ country_event={
 	diplomatic = yes
 	hide_window = no
 	desc = {
-		exclusive_trigger = {
-			check_variable = { which =show_panty_photo value =1 }
-			text = CG_plus_thief_auction_screen_events.1001.desc.1
-		}
-
-	}
+				exclusive_trigger = {check_variable = { which =show_panty_photo value =01 } 
+			   			text = CG_plus_thief_auction_screen_events.1001.desc.01 }  }
+	desc = {
+				exclusive_trigger = {check_variable = { which =show_panty_photo value =02 } 
+					   text = CG_plus_thief_auction_screen_events.1001.desc.02 }  }
+			
+	desc = {
+				exclusive_trigger = {check_variable = { which =show_panty_photo value =03 } 
+					   text = CG_plus_thief_auction_screen_events.1001.desc.03 }  }
+			
+	desc = {
+				exclusive_trigger = {check_variable = { which =show_panty_photo value =04 } 
+					   text = CG_plus_thief_auction_screen_events.1001.desc.04 }  }
+			
+	desc = {
+				exclusive_trigger = {check_variable = { which =show_panty_photo value =05 } 
+					   text = CG_plus_thief_auction_screen_events.1001.desc.05 }  }
+			
+	desc = {
+				exclusive_trigger = {check_variable = { which =show_panty_photo value =06 } 
+					   text = CG_plus_thief_auction_screen_events.1001.desc.06 }  }
+			
+	desc = {
+				exclusive_trigger = {check_variable = { which =show_panty_photo value =07 } 
+					   text = CG_plus_thief_auction_screen_events.1001.desc.07 }  }
+			
+	desc = {
+				exclusive_trigger = {check_variable = { which =show_panty_photo value =08 } 
+					   text = CG_plus_thief_auction_screen_events.1001.desc.08 }  }
+			
+	desc = {
+				exclusive_trigger = {check_variable = { which =show_panty_photo value =09 } 
+					   text = CG_plus_thief_auction_screen_events.1001.desc.09 }  }
+			
+	desc = {
+				exclusive_trigger = {check_variable = { which =show_panty_photo value =10 } 
+					   text = CG_plus_thief_auction_screen_events.1001.desc.10 }  }
+			
+	desc = {
+				exclusive_trigger = {check_variable = { which =show_panty_photo value =11 } 
+					   text = CG_plus_thief_auction_screen_events.1001.desc.11 }  }
+			
+	desc = {
+				exclusive_trigger = {check_variable = { which =show_panty_photo value =12 } 
+					   text = CG_plus_thief_auction_screen_events.1001.desc.12 }  }
+			
+	desc = {
+				exclusive_trigger = {check_variable = { which =show_panty_photo value =13 } 
+					   text = CG_plus_thief_auction_screen_events.1001.desc.13 }  }
+			
+	desc = {
+				exclusive_trigger = {check_variable = { which =show_panty_photo value =14 } 
+					   text = CG_plus_thief_auction_screen_events.1001.desc.14 }  }
+			
+	desc = {
+				exclusive_trigger = {check_variable = { which =show_panty_photo value =15 } 
+					   text = CG_plus_thief_auction_screen_events.1001.desc.15 }  }
+			
+	desc = {
+				exclusive_trigger = {check_variable = { which =show_panty_photo value =16 } 
+					   text = CG_plus_thief_auction_screen_events.1001.desc.16 }  }
+			
+	desc = {
+				exclusive_trigger = {check_variable = { which =show_panty_photo value =17 } 
+					   text = CG_plus_thief_auction_screen_events.1001.desc.17 }  }
+			
+	desc = {
+				exclusive_trigger = {check_variable = { which =show_panty_photo value =18 } 
+					   text = CG_plus_thief_auction_screen_events.1001.desc.18 }  }
+			
+	desc = {
+				exclusive_trigger = {check_variable = { which =show_panty_photo value =19 } 
+					   text = CG_plus_thief_auction_screen_events.1001.desc.19 }  }
+			
+	desc = {
+				exclusive_trigger = {check_variable = { which =show_panty_photo value =20 } 
+					   text = CG_plus_thief_auction_screen_events.1001.desc.20 }  }
+			
+	desc = {
+				exclusive_trigger = {check_variable = { which =show_panty_photo value =21 } 
+					   text = CG_plus_thief_auction_screen_events.1001.desc.21 }  }
+			
+			
+			   
 
 	is_triggered_only = yes
 	immediate = {
@@ -149,6 +227,7 @@ country_event={
 		#	id = CG_plus_thief_auction_screen_events.0001
 		#}
 	}
+
 
 	option={
 		#triggered from spyevent
