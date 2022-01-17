@@ -335,4 +335,39 @@ spriteTypes = {
 		masking_texture = "gfx/interface/situation_log/event_mask.dds"
 		alwaystransparent = yes
 	}
+
+	spriteType = {
+		name = "GFX_thief_evt_fail_00"
+		texturefile = "gfx/event_pictures/thief_evt_fail_00.dds" 
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_thief_evt_fail_01"
+		texturefile = "gfx/event_pictures/thief_evt_fail_01.dds" 
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_thief_evt_fail_03"
+		texturefile = "gfx/event_pictures/thief_evt_fail_03.dds" 
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_thief_evt_fail_04"
+		texturefile = "gfx/event_pictures/thief_evt_fail_04.dds" 
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_thief_evt_fail_05"
+		texturefile = "gfx/event_pictures/thief_evt_fail_04.dds" 
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+
 }

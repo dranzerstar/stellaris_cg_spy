@@ -7,19 +7,19 @@
  cg_plus_thief_tradition_finish:0 "完成采用紳士大盜传统会升级隐居子的展览馆，并拓展其功能。"
  cg_plus_thief_tradition_finish_effect:0 "完成采用紳士大盜传统会升级隐居子的展览馆，并拓展其功能。"
  cg_plus_thief_tradition_11:0 "伪装潜入"
- cg_plus_thief_tradition_11_desc:0 "要无声无色地靠近名媛身边当然需要隐居子的伪装技术"
+ cg_plus_thief_tradition_11_desc:0 "潜入速度+50%"
  cg_plus_thief_tradition_11_delayed:0 "要无声无色地靠近名媛身边当然需要隐居子的伪装技术"
  cg_plus_thief_tradition_12:0 "展馆升级"
- cg_plus_thief_tradition_12_desc:0 "把隐居子的风光展馆营运升级，邀请外星绅士来参观，当然也会收取入场费。"
+ cg_plus_thief_tradition_12_desc:0 "展馆维珍会对应展品数目而增强"
  cg_plus_thief_tradition_12_delayed:0 "把隐居子的风光展馆营运升级，邀请外星绅士来参观，当然也会收取入场费。"
  cg_plus_thief_tradition_21:0 "更多助手"
- cg_plus_thief_tradition_21_desc:0 "星海这么大，不能全都靠隐居子一个人吧。【外交官+3】"
+ cg_plus_thief_tradition_21_desc:0 "【外交官+3】"
  cg_plus_thief_tradition_21_delayed:0 "星海这么大，不能全都靠隐居子一个人吧。【外交官+3】"
  cg_plus_thief_tradition_22:0 "破门而入"
- cg_plus_thief_tradition_22_desc:0 "小姐姐们是躲不掉的！"
+ cg_plus_thief_tradition_22_desc:0 "破译+2"
  cg_plus_thief_tradition_22_delayed:0 "小姐姐们是躲不掉的！"
  cg_plus_thief_tradition_23:0 "现实主义"
- cg_plus_thief_tradition_23_desc:0 "一天到晚和圣女打来打去那我怎么参加她们的宴会呢？ 以和魅魔的关系为代价，平衡和圣女的外交关系。"
+ cg_plus_thief_tradition_23_desc:0 "圣女评价+500，魅魔评价-500"
  cg_plus_thief_tradition_23_delayed:0 "一天到晚和圣女打来打去那我怎么参加她们的宴会呢？ 以和魅魔的关系为代价，平衡和圣女的外交关系。"
 
 
@@ -155,12 +155,18 @@
  back:0 "返回"
 
 
-
+ 
 #auction screen desc
  CG_plus_thief_auction_screen_events.0001.name:0 "不显示"
  CG_plus_thief_auction_screen_events.0001.desc.1:0 "欢迎来到隐居子的恒星展馆，这里展出的当然是恒星下各个位媛最美的风光！"
 
+ CG_plus_thief_auction_screen_events.0001.desc.2:0 "看来已经驾轻就熟呢，已经收集了至少5枚展品了呢。"
 
+ CG_plus_thief_auction_screen_events.0001.desc.3:0 "WAO，[Owner.GetLeaderName]真是一个不节不扣的绅士呢。"
+ 
+ CG_plus_thief_auction_screen_events.0001.desc.4:0 "越来越多外星人慕名而来到隐居子的展馆了呢？入场费都快要收到手软了。" 
+
+ CG_plus_thief_auction_screen_events.0001.desc.5:0 "能够在这个展馆看尽恒星下极致美人的胖次，呀，感动到隐居子的眼泪都快要掉下来。" 
 
 # [Root.GetRulerName]
 # [from.target.GetRulerName]
@@ -191,3 +197,47 @@
  CG_plus_thief_auction_screen_events.1001.desc.19:0 "拍照地点:[ptowner19.GetName]\n颜色:白\n备注:全身黑丝里衣下面的伴次是个好文明，完美展现如何穿得越多越色的技巧。"
  CG_plus_thief_auction_screen_events.1001.desc.20:0 "拍照地点:[ptowner20.GetName]\n颜色:蓝白\n备注:文艺复兴式间条内裤，个人意见是应该让老土的东西埋掉，但是总有一些色批很怪的外星人。"
  CG_plus_thief_auction_screen_events.1001.desc.21:0 "拍照地点:[ptowner21.GetName]\n颜色:白\n备注:[ptowner21.GetSpeciesName]仿生人形的特点就是没有成对的袜子，要不发明一些左右不对称的内裤？"
+
+
+
+
+##############################
+#failed events
+ CG_operation_failed.end:0 "结束间谍行动"
+
+ spynetwork_thief_difficulty:0 "难度提升"
+ spynetwork_thief_drain:0 "行动速度减慢"
+
+ CG_operation_failed.1100.name:0 "被魅魔缠上了"
+ CG_operation_failed.1100.desc:0 "隐居子被在[from.target.GetName]的人看出了外地人，热情的魅魔很快就开始推广当地的名胜和习俗。其中包括着一款旅行装按摩器，带着便可以一边观光一边爽。但这样可会大大影响隐居子的专注力。"
+ CG_operation_failed.1100.a:0 "交出一点欲望宝石打发她们"
+ CG_operation_failed.1100.b:0 "听花地把震蛋戴上（间谍任务难度提升）"
+ CG_operation_failed.1100.c:0 "感觉不对，还是快逃"
+ 
+ CG_operation_failed.1101.name:0 "被圣女执法人员逮着"
+ CG_operation_failed.1101.desc:0 "因为行为诡异，隐居子被在[from.target.GetName]被圣女执法人员逮着了，在检查随身物品的时候，警官发现手机内存含有大量不雅照片，为了进一步调查。警察机构会先对隐居子进行政拘留。"
+ CG_operation_failed.1101.a:0 "坐！牢！（锁定行动一段时间）"
+ CG_operation_failed.1101.c:0 "感觉不对，还是快逃"
+
+
+ CG_operation_failed.1102.name:0 "期满释放"
+ CG_operation_failed.1102.desc:0 "在大牢里，隐居子受到圣女们的道德教育，毕竟隐居子是个绅士，严重伤天害理的事情是绝对不会做的。圣女感化官以隐居子行为良好，把她提早释放"
+ CG_operation_failed.1102.a:0 "好吧，继续寻找伴次。"
+
+ CG_operation_failed.1103.name:0 "掉到水坑里"
+ CG_operation_failed.1103.desc:0 "隐居子不小心在当地探险的时候掉到水坑里，而非常不幸的是这个坑竟然是个触手巢穴！看来隐居子得挣扎一会儿。"
+
+ CG_operation_failed.1103.a:0 "下次小心一点。"
+ 
+ CG_operation_failed.1104.name:0 "被小混混缠上"
+ CG_operation_failed.1104.desc:0 "人生路不熟，在[fromfrom.GetName]行动的时候不小心走到治安比较差的区域，被小混混缠上。别看隐居子是个古怪的绅士，身材和美色还是有的。"
+
+ CG_operation_failed.1104.a:0 "劫财好了，别劫色。"
+ CG_operation_failed.1104.b:0 "这点小钱也交不出吗？只能啪啪啪了"
+
+
+ CG_operation_failed.1105.name:0 "是陷阱"
+ CG_operation_failed.1105.desc:0 "隐居子在潜入高保安地点的时候又不小心掉进[fromfrom.GetName]的反间人员的陷阱里，看来又要被蹂躏一番了。"
+
+ CG_operation_failed.1105.a:0 "下次小心一点。"
+ CG_operation_failed.1105.b:0 "下次小心一点。"

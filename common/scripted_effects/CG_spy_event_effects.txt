@@ -553,30 +553,31 @@ CG_operation_thief_failed_random_events = {
 				from.target={  NOT ={has_country_flag = carnalism_flag }}
 				
 			}
-			owner={
+			
 			country_event = { id = CG_operation_failed.1100 }
-			}
+			
 		}
 		1 = { #
 			modifier = {
 				factor = 0
-				from.target={  NOT ={has_country_flag = asceticism_flag }}
+				root.target={  NOT ={has_country_flag = asceticism_flag }}
 				
 			}
-			owner={
-			country_event = { id = CG_operation_failed.1100 }
-			}
+			
+			country_event = { id = CG_operation_failed.1101 }
+			
 		}
 		1 = { 
-
-
-		}
-		1 = { 
-
+			country_event = { id = CG_operation_failed.1103 }
 
 		}
 		1 = { 
+			country_event = { id = CG_operation_failed.1104 }
 
+		}
+		1 = { 
+
+			country_event = { id = CG_operation_failed.1105 }
 		}
 	}
 }

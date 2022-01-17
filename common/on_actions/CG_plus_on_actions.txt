@@ -22,7 +22,7 @@ on_game_start ={
 on_decade_pulse_country  = {
 
 	events = {
-		
+		CG_plus_thief_event.001
 		
 		}
 	

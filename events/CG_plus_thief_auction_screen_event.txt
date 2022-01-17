@@ -35,7 +35,30 @@ country_event={
 
 	title= CG_plus_thief_auction_screen_events.0001.name
 
-	desc= CG_plus_thief_auction_screen_events.0001.desc.1
+	
+	desc ={ exclusive_trigger={ check_variable={ which=total_panties value < 5 } } 
+			text= CG_plus_thief_auction_screen_events.0001.desc.1
+		}
+
+	desc ={ exclusive_trigger={ check_variable={ which=total_panties value >= 5 }
+								check_variable={ which=total_panties value < 10  } } 
+		text= CG_plus_thief_auction_screen_events.0001.desc.2
+	}
+	desc ={ exclusive_trigger={ check_variable={ which=total_panties value >= 10 }
+								check_variable={ which=total_panties value < 15  } } 
+		text= CG_plus_thief_auction_screen_events.0001.desc.3
+	}
+	desc ={ exclusive_trigger={ check_variable={ which=total_panties value >= 15 }
+								check_variable={ which=total_panties value < 20  } } 
+		text= CG_plus_thief_auction_screen_events.0001.desc.4
+	}
+	desc ={ exclusive_trigger={ check_variable={ which=total_panties value >= 20 }
+								check_variable={ which=total_panties value < 30  } } 
+		text= CG_plus_thief_auction_screen_events.0001.desc.5
+	}
+
+
+
 
 	hide_window=no
 	diplomatic = yes
@@ -370,6 +393,7 @@ country_event={
 
 country_event={
 	id=CG_plus_thief_auction_screen_events.9005
+	
 	is_triggered_only = yes
 	hide_window=yes
 	immediate = {
