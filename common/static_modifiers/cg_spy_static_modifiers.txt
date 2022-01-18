@@ -28,5 +28,9 @@ spynetwork_thief_difficulty = {
 	espionage_operation_difficulty_add = 2
 }
 spynetwork_thief_drain = {
-	spy_network_daily_value_mult = -0.1
+	spy_network_daily_value_mult = -0.2
+}
+
+spynetwork_thief_difficulty_minus= {
+	espionage_operation_difficulty_add = -2
 }

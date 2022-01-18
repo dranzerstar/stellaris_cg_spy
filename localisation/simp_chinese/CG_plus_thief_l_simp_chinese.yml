@@ -206,6 +206,7 @@
  CG_operation_failed.end:0 "结束间谍行动"
 
  spynetwork_thief_difficulty:0 "难度提升"
+ spynetwork_thief_difficulty_minus:0 "难度降低"
  spynetwork_thief_drain:0 "行动速度减慢"
 
  CG_operation_failed.1100.name:0 "被魅魔缠上了"
@@ -241,3 +242,17 @@
 
  CG_operation_failed.1105.a:0 "下次小心一点。"
  CG_operation_failed.1105.b:0 "下次小心一点。"
+
+ CG_operation_failed.1106.name:0 "被涅托发现了"
+ CG_operation_failed.1106.desc:0 "【可疑人物，你现在被我们的主人囚禁，你获得自由唯一的方式，就是把你出现在我们母星的企图，全部诚实地陈述出来。 】"
+
+ CG_operation_failed.1106.a:0 "编个故事混过去吧"
+ CG_operation_failed.1106.b:0 "不得了，快打开传送门"
+
+ CG_operation_failed.1107.name:0 "绅士章鱼"
+ CG_operation_failed.1107.desc:0 "隐居子在[from.target.GetName]认识到一只绅士，一聚到一起就开始讨论起[from.target.GetSpeciesClass]的衣着品味。"
+
+
+ CG_operation_failed.1108.name:0 "迷路了"
+ CG_operation_failed.1108.desc:0 "为了躲避[from.target.GetName]的执法人员逃上了不知名的飞行器，而她重飞行器出来的时候竟然到了一个完全收不到信号的地方，无奈的隐居子只能打开传送器飞回本国。"
+ CG_operation_failed.1108.a:0 "算了，改日再来"
