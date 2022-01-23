@@ -51,9 +51,21 @@
  microbikini_uniform_desc:0 "把学院校服设定为微比坚尼，绝色学院里面本来就是训练用的触手巢穴，到处都是白汁淫液，所穿泳装本来就很合理。\n\n"
  CG_plus_mod_uniform_microbikini_uniform:0 "微比坚尼附带效果"
  mod_pop_ethic_fanatic_authoritarian_attraction_mult:0 "极端权威主义引领"
- mod_pop_ethic_authoritarian_attraction_mult:0 "权威主义引领"
+ mod_pop_ethic_pacifist_attraction_mult:0 "和平主义引领"
 
 
+ maid_uniform_name:0 "内务女仆"
+ maid_uniform:0 "内务女仆"
+ maid_uniform_desc:0 "REPLACE_ME"
+ CG_plus_mod_uniform_maid_uniform:0 "内务女仆附带效果""
+ pop_ethic_xenophobe_attraction_mult:0 "排外主义引领"
+
+ bonadage_uniform_name:0 "连身拘束"
+ bonadage_uniform:0 "连身拘束"
+ bonadage_uniform_desc:0 "REPLACE_ME"
+ CG_plus_mod_uniform_bondage_uniform:0 "连身拘束附带效果"
+ pop_ethic_authoritarian_attraction_mult:0 "权威主义引领"
+ 
 
 ##############################################################################
 

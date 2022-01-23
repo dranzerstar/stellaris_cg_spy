@@ -365,9 +365,24 @@ spriteTypes = {
 
 	spriteType = {
 		name = "GFX_thief_evt_fail_05"
-		texturefile = "gfx/event_pictures/thief_evt_fail_04.dds" 
+		texturefile = "gfx/event_pictures/thief_evt_fail_05.dds" 
 		masking_texture = "gfx/interface/situation_log/event_mask.dds"
 		alwaystransparent = yes
 	}
+
+	spriteType = {
+		name = "GFX_thief_evt_fail_06"
+		texturefile = "gfx/event_pictures/thief_evt_fail_06.dds" 
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_thief_evt_fail_07"
+		texturefile = "gfx/event_pictures/thief_evt_fail_07.dds" 
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+
 
 }

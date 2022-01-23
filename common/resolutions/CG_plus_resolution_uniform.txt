@@ -27,7 +27,17 @@ resolution_uniform_nun = {
 	modifier = {
 		
 	}
-
+	breach = {
+		OR={
+			
+			has_policy_flag = princess_uniform
+			has_policy_flag = army_uniform
+			has_policy_flag = school_uniform
+			has_policy_flag = sailorfuku_uniform
+			has_policy_flag = bunny_uniform
+			has_policy_flag = microbikini_uniform 
+			}
+	}
 	effect = {
 		hidden_effect = {
 			set_global_flag = galactic_community_resolution_passed
@@ -140,7 +150,17 @@ resolution_uniform_princess = {
 		
 	}
 
-
+	breach = {
+		OR={
+			has_policy_flag = nun_uniform
+		
+			has_policy_flag = army_uniform
+			has_policy_flag = school_uniform
+			has_policy_flag = sailorfuku_uniform
+			has_policy_flag = bunny_uniform
+			has_policy_flag = microbikini_uniform 
+			}
+	}
 	effect = {
 		hidden_effect = {
 			set_global_flag = galactic_community_resolution_passed
@@ -253,7 +273,17 @@ resolution_uniform_army = {
 	modifier = {
 		
 	}
-
+	breach = {
+		OR={
+			has_policy_flag = nun_uniform
+			has_policy_flag = princess_uniform
+	
+			has_policy_flag = school_uniform
+			has_policy_flag = sailorfuku_uniform
+			has_policy_flag = bunny_uniform
+			has_policy_flag = microbikini_uniform 
+			}
+	}
 	effect = {
 		hidden_effect = {
 			set_global_flag = galactic_community_resolution_passed
@@ -364,7 +394,17 @@ resolution_uniform_sailorfuku = {
 	modifier = {
 		
 	}
-
+	breach = {
+		OR={
+			has_policy_flag = nun_uniform
+			has_policy_flag = princess_uniform
+			has_policy_flag = army_uniform
+			has_policy_flag = school_uniform
+			
+			has_policy_flag = bunny_uniform
+			has_policy_flag = microbikini_uniform 
+			}
+	}
 	effect = {
 		hidden_effect = {
 			set_global_flag = galactic_community_resolution_passed
@@ -475,7 +515,17 @@ resolution_uniform_bunny = {
 	modifier = {
 		
 	}
-
+	breach = {
+		OR={
+			has_policy_flag = nun_uniform
+			has_policy_flag = princess_uniform
+			has_policy_flag = army_uniform
+			has_policy_flag = school_uniform
+			has_policy_flag = sailorfuku_uniform
+			
+			has_policy_flag = microbikini_uniform 
+			}
+	}
 	effect = {
 		hidden_effect = {
 			set_global_flag = galactic_community_resolution_passed
@@ -595,7 +645,17 @@ resolution_uniform_microbikini = {
 		
 	}
 
-
+	breach = {
+		OR={
+		has_policy_flag = nun_uniform
+		has_policy_flag = princess_uniform
+		has_policy_flag = school_uniform
+		has_policy_flag = army_uniform
+		has_policy_flag = sailorfuku_uniform
+		has_policy_flag = bunny_uniform
+	
+		}
+	}
 	effect = {
 		hidden_effect = {
 			set_global_flag = galactic_community_resolution_passed

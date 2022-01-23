@@ -565,7 +565,7 @@ country_event = {
 	id = CG_operation_failed.1106
 	title = CG_operation_failed.1106.name
 	desc = CG_operation_failed.1106.desc
-	picture = 
+	picture = GFX_thief_evt_fail_06
 	show_sound = event_radio_chatter
 	is_triggered_only = yes
 
@@ -610,7 +610,7 @@ country_event = {
 	id = CG_operation_failed.1107
 	title = CG_operation_failed.1107.name
 	desc = CG_operation_failed.1107.desc
-	picture = 
+	picture = GFX_thief_evt_fail_07
 	show_sound = event_radio_chatter
 	is_triggered_only = yes
 
@@ -635,13 +635,14 @@ country_event = {
 			}	
 		}
 	}
+}
 
 
 	country_event = {
 		id = CG_operation_failed.1108
 		title = CG_operation_failed.1108.name
 		desc = CG_operation_failed.1108.desc
-		picture = GFX_thief_evt_universe
+		picture = GFX_evt_thief_universe
 		show_sound = event_radio_chatter
 		is_triggered_only = yes
 	
@@ -673,19 +674,12 @@ country_event = {
 			}
 		}
 
-
-
-
-
-
-		
-	
-	}
-	
-
-	
-
-
-	
 }
+	
+
+	
+
+
+	
+
 

@@ -1,6 +1,6 @@
 guiTypes = {
 	containerWindowType = {
-		name = "cg_plus_evt_menu_button"
+		name = "cg_plus_evt_menu_button_thief"
 		position = { x=0 y=0 }
 		size = { width = 600 height = 60 }
 		moveable = no
@@ -237,7 +237,7 @@ guiTypes = {
 			font = "cg_16b"
 			text_color_code = "S"
 			position = { x = 1067 y = 155 }
-			maxWidth = 400
+			maxWidth = 360
 			maxHeight = 500
 			format = left
 			scrollbartype = "standardtext_slider"
@@ -590,7 +590,7 @@ guiTypes = {
 			name = "alien_message"
 			font = "cg_16b"
 			position = { x = 358 y = 732 }
-			maxWidth = 600
+			maxWidth = 500
 			maxHeight = 210
 			format = left
 			scrollbartype = "standardtext_slider"

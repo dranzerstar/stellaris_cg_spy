@@ -25,6 +25,13 @@
 # 短水手服 sailorfuku_uniform
 # 绝兔女郎 bunny_uniform
 # 微比坚尼 microbikini_uniform
+# 重拘束具 harness_uniform
+# 内务女仆 maid_uniform
+
+#修女服  唯心---唯物  兔女郎
+#军服    军国---和平  比坚尼
+#公主装  亲外---排外  女仆
+#拘束服  权威---平等   水手
 
 # has_global_flag <-恒星会议规范
 # is_active_resolution <- 恒星会议规范
@@ -73,6 +80,10 @@ CG_school_uniform = {
 				add=100
 				has_technology = tech_beauty_theory 
 			}
+			modifier = {
+				factor = 20
+				is_spiritualist  = yes
+			}
 		}
 	}
 	#公主礼装
@@ -112,7 +123,7 @@ CG_school_uniform = {
 			}
 			modifier = {
 				factor = 20
-				is_spiritualist  = yes
+				is_xenophile   = yes
 			}	
 		}
 
@@ -160,6 +171,47 @@ CG_school_uniform = {
 		}
 
 	}
+		# 女仆
+	option = {
+		name = "maid_uniform"		
+		policy_flags = {
+			maid_uniform
+		}
+		potential = {
+			always = yes
+		}
+		valid = {
+			OR={
+			and={
+				has_trait = trait_DC_ethic_asceticism	
+				has_technology = tech_beauty_theory 
+				}
+			is_active_resolution = "resolution_uniform_maid"
+			}
+		}
+		modifier = {
+			CG_plus_mod_uniform_maid_uniform = 1
+		}
+		AI_weight = {
+			modifier = {
+				factor = 10
+				has_country_flag = carnalism_flag
+			}
+			modifier = {
+				add = 20
+				is_active_resolution = "resolution_uniform_maid"
+			}	
+			modifier = {
+				add = 20
+				is_xenophobe  = yes
+			}						
+			modifier = {
+				factor=100
+				has_technology = tech_beauty_theory 
+			}
+		}
+
+	}	
 	#m默认制服选项
 	option = {   #m默认选项
 		name = "school_uniform"		
@@ -221,6 +273,10 @@ CG_school_uniform = {
 				is_active_resolution = "resolution_uniform_sailorfuku"
 			}
 			modifier = {
+				add = 10
+				is_egalitarian  = yes
+			}
+			modifier = {
 				add=100
 				has_technology = tech_beauty_theory 
 			}
@@ -254,8 +310,12 @@ CG_school_uniform = {
 				has_country_flag = carnalism_flag
 			}
 			modifier = {
-				add = 20
+				add = 10
 				is_active_resolution = "resolution_uniform_bunny"
+			}	
+			modifier = {
+				add = 10
+				is_materialist  = yes
 			}			
 			modifier = {
 				add=100
@@ -291,12 +351,12 @@ CG_school_uniform = {
 				has_country_flag = carnalism_flag
 			}
 			modifier = {
-				factor = 20
+				add = 20
 				is_active_resolution = "resolution_uniform_microbikini"
 			}	
 			modifier = {
-				factor = 20
-				is_authoritarian = yes
+				add = 20
+				is_pacifist  = yes
 			}						
 			modifier = {
 				factor=100
@@ -307,6 +367,48 @@ CG_school_uniform = {
 	}
 
 
+
+	# 拘束
+	option = {
+		name = "bonadage_uniform"		
+		policy_flags = {
+			bonadage_uniform
+		}
+		potential = {
+			always = yes
+		}
+		valid = {
+			OR={
+			and={
+				has_trait = trait_DC_ethic_carnalism	
+				has_technology = tech_beauty_theory 
+				}
+			is_active_resolution = "resolution_uniform_bonadage"
+			}
+		}
+		modifier = {
+			CG_plus_mod_uniform_bondage_uniform = 1
+		}
+		AI_weight = {
+			modifier = {
+				factor = 10
+				has_country_flag = carnalism_flag
+			}
+			modifier = {
+				add = 20
+				is_active_resolution = "resolution_uniform_bonadage"
+			}	
+			modifier = {
+				add = 20
+				is_authoritarian  = yes
+			}						
+			modifier = {
+				factor=100
+				has_technology = tech_beauty_theory 
+			}
+		}
+
+	}
 
 
 

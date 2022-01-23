@@ -640,8 +640,8 @@ country_event={
 				}
 			}
 		trigger ={  has_monthly_income = {
-					resource = energy
-					value >= 100 } 
+						resource = energy
+						value >= 100 } 
 					has_monthly_income = {
 							resource = energy
 							value < 1000 
@@ -660,23 +660,26 @@ country_event={
 					modifier = opinion_payment
 				}
 			}
-		if={ limit={ has_monthly_income = {
-			resource = energy
-			value >= 1000
-							} } 
-			add_resource = {
-				energy = -600000
-				
-			}	
+		trigger={ has_monthly_income = {
+				resource = energy
+				value >= 1000
+							} 
+
 		}
+		add_resource = {
+			energy = -600000
+			
+		}	
 	}
 	option = {  
 		name= CG_plus_thief_event.519.b
 		trigger = {
-			has_resource = { type= energy amount < 60000 }
+			has_monthly_income = {
+				resource = energy
+				value < 100 } 
 		}
 		add_resource = {
-			energy = -60000
+			energy = -6000
 			
 		}	
 		custom_tooltip = CG_plus_thief_event.519.bd

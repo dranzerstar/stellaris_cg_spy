@@ -38,8 +38,8 @@
 
 #opreation after events
  CG_plus_thief_event.500.name:0 "入国行动"
- CG_plus_thief_event.500.desc.hostile:0 "目的地[from.target.GetName]对我国有进行边境封锁，但是我们已经联系了当地的偷渡集团，花点钱钱，就能轻松入国。"
- CG_plus_thief_event.500.desc.friendly:0 "目的地[from.target.GetName]对我国没有进行边境封锁，也没有签证限制，哪就像个正常人入国就可以了。"
+ CG_plus_thief_event.500.desc.hostile:0 "目的地[target.GetName]对我国有进行边境封锁，但是我们已经联系了当地的偷渡集团，花点钱钱，就能轻松入国。"
+ CG_plus_thief_event.500.desc.friendly:0 "目的地[target.GetName]对我国没有进行边境封锁，也没有签证限制，哪就像个正常人入国就可以了。"
  CG_plus_thief_event.501.name:0 "对象调查"
  CG_plus_thief_event.501.desc.inn:0 "这里是圣歌少女的国家，所以没每个人也长得很可爱漂亮，但是也很厚实，同时也对偷拍行为很反感。那作为一个标准的绅士，当然不能让当事人感到困扰，偷偷拍照，不被发现即可。"
  CG_plus_thief_event.501.desc.suc:0 "这里是魅魔的国家，所以没每个人也长得很可爱漂亮，而且大部分人身上的布料也很少，找她们拍照也不会拒绝。但是唯一的缺点就是大部分人都是伴次外露，都直接路给人看反而趣味减少了。"
@@ -184,7 +184,7 @@
  CG_plus_thief_auction_screen_events.1001.desc.06:0 "拍照地点:[ptowner06.GetName]\n颜色:白\n备注:听说是来自[ptowner06.GetName]的一名标兵，短裙配护甲高靴，永恒的绝配"
  CG_plus_thief_auction_screen_events.1001.desc.07:0 "拍照地点:[ptowner07.GetName]\n颜色:白\n备注:[ptowner07.GetSpeciesName]的圣骑士就是喜欢穿的轻飘飘,和被击败后节操都变得轻飘飘的一样。"
  CG_plus_thief_auction_screen_events.1001.desc.08:0 "拍照地点:[ptowner08.GetName]\n颜色:黑\n备注:听说是一名[ptowner08.GetSpeciesName]的现役魔法学院的公主，但是重点不在这，而是我发现他很喜欢坐着的时候把一脚也放椅子上面，肯定是个姬，还要是个一"
- CG_plus_thief_auction_screen_events.1001.desc.09:0 "拍照地点:[ptowner09.GetName]\n颜色:\n备注:"
+ CG_plus_thief_auction_screen_events.1001.desc.09:0 "拍照地点:[ptowner09.GetName]\n颜色:黑\n备注:黑丝连身袜配白胖次，但是对不起，人家是白丝派。"
  CG_plus_thief_auction_screen_events.1001.desc.10:0 "拍照地点:[ptowner10.GetName]\n颜色:黑\n备注:黑衣皮黑皮黑伴次"
  CG_plus_thief_auction_screen_events.1001.desc.11:0 "拍照地点:[ptowner11.GetName]\n颜色:白\n备注:全罩泳裤也可以很可爱的"
  CG_plus_thief_auction_screen_events.1001.desc.12:0 "拍照地点:[ptowner12.GetName]\n颜色:黑\n备注:半透明的丝绸舞衣下透出来的黑色丁字裤令隐居子欲火焚身！"
@@ -251,6 +251,7 @@
 
  CG_operation_failed.1107.name:0 "绅士章鱼"
  CG_operation_failed.1107.desc:0 "隐居子在[from.target.GetName]认识到一只绅士，一聚到一起就开始讨论起[from.target.GetSpeciesClass]的衣着品味。"
+ CG_operation_failed.1107.a:0 "物以类聚呐"
 
 
  CG_operation_failed.1108.name:0 "迷路了"

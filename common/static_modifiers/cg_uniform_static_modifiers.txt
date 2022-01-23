@@ -63,7 +63,7 @@ CG_plus_mod_uniform_nun_uniform={
 
 
 	#pop_ethic_fanatic_spiritualist_attraction_mult  = 0.3
-	pop_ethic_spiritualist_attraction_mult  = 0.5
+	pop_ethic_spiritualist_attraction_mult  = 0.7
 }
 
 
@@ -75,16 +75,18 @@ CG_plus_mod_uniform_princess_uniform={
 	diplomacy_upkeep_mult = -0.4
 	empire_size_pops_mult= -0.4
 	#pop_ethic_fanatic_xenophile_attraction_mult  = 0.2 
-	pop_ethic_xenophile_attraction_mult   = 0.5 
+	pop_ethic_xenophile_attraction_mult   = 0.7
 
 }
 
 CG_plus_mod_uniform_army_uniform={
 	starbase_building_build_speed_mult = 0.2
-	pop_ethic_fanatic_militarist_attraction_mult  = 0.2 
-	pop_ethic_militarist_attraction_mult  = 0.2 
+	
+	
 	country_command_limit_mult = 0.2
 	planet_jobs_sr_beauty_produces_mult = 0.15
+
+	pop_ethic_militarist_attraction_mult  = 0.7
 
 }
 
@@ -99,7 +101,7 @@ CG_plus_mod_uniform_sailorfuku_uniform={
 	planet_crime_add = 30
 	planet_jobs_sr_beauty_produces_mult = 0.1
 	#pop_ethic_fanatic_egalitarian_attraction_mult  = 0.2 
-	pop_ethic_egalitarian_attraction_mult  = 0.5
+	pop_ethic_egalitarian_attraction_mult  = 0.7
 
 }
 
@@ -109,7 +111,7 @@ CG_plus_mod_uniform_bunny_uniform={
 	planet_jobs_energy_produces_mult = 0.2
 	planet_jobs_sr_beauty_produces_mult = 0.1
 	#pop_ethic_fanatic_materialist_attraction_mult  = 0.2 
-	pop_ethic_materialist_attraction_mult  = 0.5
+	pop_ethic_materialist_attraction_mult  = 0.7
 
 }
 
@@ -120,10 +122,21 @@ CG_plus_mod_uniform_microbikini_uniform={
 	planet_erotic_upkeep_mult = 0.3
 	pop_happiness = 0.2
 	#pop_ethic_fanatic_authoritarian_attraction_mult =  0.3 
-	pop_ethic_authoritarian_attraction_mult  = 0.5 	
-
-
+	pop_ethic_pacifist_attraction_mult  = 0.7 	
 }
+
+CG_plus_mod_uniform_maid_uniform={
+
+	#pop_ethic_fanatic_authoritarian_attraction_mult =  0.3 
+	pop_ethic_xenophobe_attraction_mult  = 0.7 	
+}
+
+CG_plus_mod_uniform_bondage_uniform={
+
+	#pop_ethic_fanatic_authoritarian_attraction_mult =  0.3 
+	pop_ethic_authoritarian_attraction_mult  = 0.7 	
+}
+
 
 
 resolution_category_college_joint={
