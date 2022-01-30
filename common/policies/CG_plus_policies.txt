@@ -61,6 +61,7 @@ CG_school_uniform = {
 					has_technology = tech_beauty_theory 
 					}
 				is_active_resolution = "resolution_uniform_nun"
+				is_spiritualist  = yes
 				}
 		}
 		modifier = {
@@ -103,6 +104,7 @@ CG_school_uniform = {
 					has_technology = tech_beauty_theory 
 					}
 				is_active_resolution = "resolution_uniform_princess"
+				is_xenophile   = yes
 				}
 		}
 		modifier = {
@@ -145,6 +147,7 @@ CG_school_uniform = {
 					has_technology = tech_beauty_theory 
 					}
 				is_active_resolution = "resolution_uniform_army"
+				is_militarist = yes
 				}
 		}
 		modifier = {
@@ -187,6 +190,8 @@ CG_school_uniform = {
 				has_technology = tech_beauty_theory 
 				}
 			is_active_resolution = "resolution_uniform_maid"
+			has_ethic = ethic_fanatic_xenophobe
+			has_ethic = ethic_xenophobe
 			}
 		}
 		modifier = {
@@ -258,6 +263,7 @@ CG_school_uniform = {
 					has_technology = tech_beauty_theory 
 					}
 				is_active_resolution = "resolution_uniform_sailorfuku"
+				is_egalitarian  = yes
 				}
 		}
 		modifier = {
@@ -298,6 +304,8 @@ CG_school_uniform = {
 				has_technology = tech_beauty_theory 
 				}
 			is_active_resolution = "resolution_uniform_bunny"
+			is_materialist  = yes
+			
 			}
 		}
 	
@@ -340,6 +348,7 @@ CG_school_uniform = {
 				has_technology = tech_beauty_theory 
 				}
 			is_active_resolution = "resolution_uniform_microbikini"
+			is_pacifist  = yes
 			}
 		}
 		modifier = {
@@ -368,11 +377,12 @@ CG_school_uniform = {
 
 
 
+
 	# 拘束
 	option = {
-		name = "bonadage_uniform"		
+		name = "bondage_uniform"		
 		policy_flags = {
-			bonadage_uniform
+			bondage_uniform
 		}
 		potential = {
 			always = yes
@@ -383,7 +393,8 @@ CG_school_uniform = {
 				has_trait = trait_DC_ethic_carnalism	
 				has_technology = tech_beauty_theory 
 				}
-			is_active_resolution = "resolution_uniform_bonadage"
+			is_active_resolution = "resolution_uniform_bondage"
+			is_authoritarian  = yes
 			}
 		}
 		modifier = {
@@ -396,7 +407,7 @@ CG_school_uniform = {
 			}
 			modifier = {
 				add = 20
-				is_active_resolution = "resolution_uniform_bonadage"
+				is_active_resolution = "resolution_uniform_bondage"
 			}	
 			modifier = {
 				add = 20
@@ -405,6 +416,7 @@ CG_school_uniform = {
 			modifier = {
 				factor=100
 				has_technology = tech_beauty_theory 
+				
 			}
 		}
 

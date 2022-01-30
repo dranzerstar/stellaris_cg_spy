@@ -88,6 +88,36 @@ spriteTypes = {
 		alwaystransparent = yes
 	}
 
+	spriteType = {
+		name = "GFX_evt_uniform_maid_L_00"
+		texturefile = "gfx/event_pictures/uniform_daily/maid_L_00.dds" 
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_uniform_maid_P_01"
+		texturefile = "gfx/event_pictures/uniform_daily/maid_P_01.dds" 
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_uniform_maid_P_02"
+		texturefile = "gfx/event_pictures/uniform_daily/maid_P_02.dds" 
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_uniform_maid_L_03"
+		texturefile = "gfx/event_pictures/uniform_daily/maid_L_03.dds" 
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_uniform_maid_P_04"
+		texturefile = "gfx/event_pictures/uniform_daily/maid_P_04.dds" 
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_uniform_maid_L_05"
+		texturefile = "gfx/event_pictures/uniform_daily/maid_L_05.dds" 
+		alwaystransparent = yes
+	}
 
 
 	spriteType = {
@@ -135,7 +165,16 @@ spriteTypes = {
 		texturefile = "gfx/event_pictures/uniform_daily/bunny_L_active.dds" 
 		alwaystransparent = yes
 	}
-
+	spriteType = {
+		name = "GFX_evt_uniform_active_maid_L_01"
+		texturefile = "gfx/event_pictures/uniform_daily/maid_L_active.dds" 
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_uniform_active_bondage_L_01"
+		texturefile = "gfx/event_pictures/uniform_daily/bondage_L_active.dds" 
+		alwaystransparent = yes
+	}
 
 	#############################################################
 	spriteType = {

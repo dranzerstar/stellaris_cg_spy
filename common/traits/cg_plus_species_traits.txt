@@ -1,0 +1,27 @@
+trait_milk_maid = {
+	cost = 0	# 特质点数花费
+	icon = "gfx/interface/icons/traits/trait_transformation_breasts.dds"	# 图标路径
+	allowed_archetypes = {
+		PARASITE
+		Magical_Bitch
+		Magical_Girl
+		MONSTER
+		WARSHIPGIRL
+		SHENHAI
+	}
+	# 可使用该特质的原型
+
+
+	initial = no	# 开局可用
+	modification = no	# 可否修改
+	randomized = no	# 随机生成
+
+
+	modifier = {
+		# 调节器
+		#pop_growth_speed = 0.05		# 人口生长速度
+		planet_jobs_unity_produces_mult = 0.1		#来自￡job￡职业的￡unity￡ 凝聚力 [trait]
+		planet_jobs_food_produces_mult= 0.1
+		planet_jobs_consumer_goods_produces_mult= 0.1
+	}
+}

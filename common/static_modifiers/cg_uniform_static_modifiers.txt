@@ -128,12 +128,19 @@ CG_plus_mod_uniform_microbikini_uniform={
 CG_plus_mod_uniform_maid_uniform={
 
 	#pop_ethic_fanatic_authoritarian_attraction_mult =  0.3 
+	pop_growth_speed = 0.2
+	pop_purge_mult = 1.0
+	starbase_building_build_speed_mult = 0.5
 	pop_ethic_xenophobe_attraction_mult  = 0.7 	
+	
 }
 
 CG_plus_mod_uniform_bondage_uniform={
 
 	#pop_ethic_fanatic_authoritarian_attraction_mult =  0.3 
+	pop_category_slave_produces_mult = 0.2
+	pop_category_specialists_produces_mult = 0.2
+	pop_category_rulers_produces_mult = 0.2
 	pop_ethic_authoritarian_attraction_mult  = 0.7 	
 }
 
@@ -209,6 +216,23 @@ CG_plus_mod_uniform_event_princess_3={
 }
 CG_plus_mod_uniform_event_princess_4={
 	job_princess_ruler_add =1
+}
+
+CG_plus_mod_maid_0={
+	MACHINE_species_trait_points_add=3
+}
+
+CG_plus_mod_uniform_event_maid_1={
+	intel_encryption_add = 3
+}
+
+CG_plus_mod_uniform_event_maid_2={
+	terraform_speed_mult = 2.0
+	terraforming_cost_mult = 0.5
+}
+
+CG_plus_mod_uniform_event_maid_3={
+	job_house_maid_add = 2
 }
 
 CG_plus_mod_uniform_event_military_1={

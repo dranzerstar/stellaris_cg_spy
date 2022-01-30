@@ -86,3 +86,37 @@ princess_ruler = {
 		}
 	}
 }
+
+
+house_maid= {
+
+	category = specialist
+	condition_string = SPECIALIST_JOB_TRIGGER
+	clothes_texture_index = 3
+	icon = sexfertilization
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+	possible_precalc = can_fill_specialist_job
+	triggered_planet_modifier = {
+		modifier = {
+			pop_growth_speed = 0.05
+			pop_cat_ruler_happiness = 10
+		}
+	}
+	weight = {
+		weight = 50
+		modifier = {
+			factor = 1
+			is_has_lust_trait = yes
+		}
+		modifier = {
+			factor = 0.5
+			is_has_lust_trait = no
+		}
+	}
+
+}

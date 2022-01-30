@@ -59,7 +59,20 @@ resolution_category_uniform_microbikini = {
 		"resolution_uniform_microbikini"
 	}
 }
-
+resolution_category_uniform_maid = {
+	group = beauty_college
+	icon = "GFX_resolution_category_maid"
+	resolution_types = {
+		"resolution_uniform_maid"
+	}
+}
+resolution_category_uniform_bondage = {
+	group = beauty_college
+	icon = "GFX_resolution_category_bondage"
+	resolution_types = {
+		"resolution_uniform_bondage"
+	}
+}
 
 resolution_category_beauty_sanctions = {
 	group = beauty_college

@@ -35,7 +35,15 @@ spriteTypes = {
 		name = "GFX_resolution_category_ero_sanctions"
 		texturefile = "gfx/interface/resolution/resolution_galactic_uniform_scantion.dds"
 	}
+	spriteType = {
+		name = "GFX_resolution_category_maid"
+		texturefile = "gfx/interface/resolution/resolution_galactic_uniform_maid.dds"
+	}
 
+	spriteType = {
+		name = "GFX_resolution_category_bondage"
+		texturefile = "gfx/interface/resolution/resolution_galactic_uniform_bondage.dds"
+	}
 
 
 

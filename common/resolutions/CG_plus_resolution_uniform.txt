@@ -14,6 +14,25 @@
 @resoltuion_uniform_timer = 3650
 
 
+# cancel_resolution = resolution_uniform_nun
+# cancel_resolution = resolution_uniform_princess
+# cancel_resolution = resolution_uniform_army
+# cancel_resolution = resolution_uniform_sailorfuku
+# cancel_resolution = resolution_uniform_bunny
+# cancel_resolution = resolution_uniform_microbikini
+# cancel_resolution = resolution_uniform_bondage
+# cancel_resolution = resolution_uniform_maid
+# has_policy_flag = princess_uniform
+# has_policy_flag = army_uniform
+# has_policy_flag = school_uniform
+# has_policy_flag = sailorfuku_uniform
+# has_policy_flag = bunny_uniform
+# has_policy_flag = microbikini_uniform 
+# has_policy_flag = maid_uniform 
+# has_policy_flag = bondage_uniform
+
+
+
 resolution_uniform_nun = {
 	icon = "GFX_resolution_category_nun"
 	resources = {
@@ -36,6 +55,9 @@ resolution_uniform_nun = {
 			has_policy_flag = sailorfuku_uniform
 			has_policy_flag = bunny_uniform
 			has_policy_flag = microbikini_uniform 
+			has_policy_flag = maid_uniform 
+			has_policy_flag = bondage_uniform
+
 			}
 	}
 	effect = {
@@ -64,13 +86,14 @@ resolution_uniform_nun = {
 				#	id = 
 				}
 			}
-
+		
 			cancel_resolution = resolution_uniform_princess
 			cancel_resolution = resolution_uniform_army
 			cancel_resolution = resolution_uniform_sailorfuku
 			cancel_resolution = resolution_uniform_bunny
 			cancel_resolution = resolution_uniform_microbikini
-			
+			cancel_resolution = resolution_uniform_bondage
+			cancel_resolution = resolution_uniform_maid
 			
 		}
 	}
@@ -126,7 +149,7 @@ resolution_uniform_nun = {
 			NOT = { has_policy_flag = nun_uniform }
 		}	
 		modifier = {
-			factor = 1.2
+			factor = 1.4
 			is_spiritualist  = yes
 		}
 		modifier = {
@@ -153,12 +176,14 @@ resolution_uniform_princess = {
 	breach = {
 		OR={
 			has_policy_flag = nun_uniform
-		
+			
 			has_policy_flag = army_uniform
 			has_policy_flag = school_uniform
 			has_policy_flag = sailorfuku_uniform
 			has_policy_flag = bunny_uniform
 			has_policy_flag = microbikini_uniform 
+			has_policy_flag = maid_uniform 
+			has_policy_flag = bondage_uniform
 			}
 	}
 	effect = {
@@ -188,11 +213,13 @@ resolution_uniform_princess = {
 				}
 			}
 			cancel_resolution = resolution_uniform_nun
-
+		
 			cancel_resolution = resolution_uniform_army
 			cancel_resolution = resolution_uniform_sailorfuku
 			cancel_resolution = resolution_uniform_bunny
 			cancel_resolution = resolution_uniform_microbikini
+			cancel_resolution = resolution_uniform_bondage
+			cancel_resolution = resolution_uniform_maid
 			
 		}
 	}
@@ -277,11 +304,13 @@ resolution_uniform_army = {
 		OR={
 			has_policy_flag = nun_uniform
 			has_policy_flag = princess_uniform
-	
+			
 			has_policy_flag = school_uniform
 			has_policy_flag = sailorfuku_uniform
 			has_policy_flag = bunny_uniform
 			has_policy_flag = microbikini_uniform 
+			has_policy_flag = maid_uniform 
+			has_policy_flag = bondage_uniform
 			}
 	}
 	effect = {
@@ -312,10 +341,12 @@ resolution_uniform_army = {
 			}
 			cancel_resolution = resolution_uniform_nun
 			cancel_resolution = resolution_uniform_princess
-
+			
 			cancel_resolution = resolution_uniform_sailorfuku
 			cancel_resolution = resolution_uniform_bunny
 			cancel_resolution = resolution_uniform_microbikini
+			cancel_resolution = resolution_uniform_bondage
+			cancel_resolution = resolution_uniform_maid
 			
 		}
 	}
@@ -366,7 +397,7 @@ resolution_uniform_army = {
 			has_country_flag = asceticism_flag
 		}
 		modifier = {
-			factor = 1.2
+			factor = 1.3
 			is_militarist = yes
 		}
 		modifier = {
@@ -403,6 +434,8 @@ resolution_uniform_sailorfuku = {
 			
 			has_policy_flag = bunny_uniform
 			has_policy_flag = microbikini_uniform 
+			has_policy_flag = maid_uniform 
+			has_policy_flag = bondage_uniform
 			}
 	}
 	effect = {
@@ -434,9 +467,11 @@ resolution_uniform_sailorfuku = {
 			cancel_resolution = resolution_uniform_nun
 			cancel_resolution = resolution_uniform_princess
 			cancel_resolution = resolution_uniform_army
-
+			
 			cancel_resolution = resolution_uniform_bunny
 			cancel_resolution = resolution_uniform_microbikini
+			cancel_resolution = resolution_uniform_bondage
+			cancel_resolution = resolution_uniform_maid
 			
 		}
 	}
@@ -487,6 +522,7 @@ resolution_uniform_sailorfuku = {
 			factor = 1.1
 			has_country_flag = carnalism_flag
 		}
+
 		modifier = {
 			factor = 0.7
 			NOT = { has_policy_flag = sailorfuku_uniform}
@@ -498,6 +534,143 @@ resolution_uniform_sailorfuku = {
 		modifier = {
 			factor = 1.5
 			has_policy_flag = sailorfuku_uniform
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { is_cg_empire = yes }
+
+		}
+	}
+}
+
+resolution_uniform_maid = {
+	icon = "GFX_resolution_category_maid"
+	resources = {
+		category = resolutions
+		cost = {
+			influence = @resolution_cost_t1
+		}
+	}
+	target = no
+	level = 1
+	modifier = {
+		
+	}
+	breach = {
+		OR={
+			has_policy_flag = nun_uniform
+			has_policy_flag = princess_uniform
+			has_policy_flag = army_uniform
+			has_policy_flag = school_uniform
+			has_policy_flag = sailorfuku_uniform
+			has_policy_flag = bunny_uniform
+			has_policy_flag = microbikini_uniform 
+			has_policy_flag = bondage_uniform 
+			}
+	}
+	effect = {
+		hidden_effect = {
+			set_global_flag = galactic_community_resolution_passed
+			set_timed_global_flag = { flag=galactic_community_resolution_uniform_changed days=@resoltuion_uniform_timer }
+			set_timed_country_flag = {
+				flag = galactic_community_resolution_passed_common
+				days = @resolution_flag_timer
+			}
+			set_timed_country_flag = {
+				flag = galactic_community_uniform_resolution_common
+				days = @resolution_flag_timer
+			}
+			add_modifier = {
+				modifier = resolution_passed_diplomatic_weight
+				days = 2200
+			}
+			set_timed_country_flag = {
+				flag = galactic_community_uniform_resolution_submited
+				days = @resolution_flag_timer
+			}
+			every_playable_country = {
+				limit = {
+					is_cg_empire = yes
+				}
+				country_event = { 
+					  id = CG_plus_policy_uniform.2008
+					  days = 5
+				#	id = 
+				}
+			}
+			cancel_resolution = resolution_uniform_nun
+			cancel_resolution = resolution_uniform_princess
+			cancel_resolution = resolution_uniform_army
+			cancel_resolution = resolution_uniform_sailorfuku
+			cancel_resolution = resolution_uniform_bunny
+			cancel_resolution = resolution_uniform_microbikini
+			cancel_resolution = resolution_uniform_bondage
+	
+
+			
+		}
+	}
+	fail_effects = {
+		hidden_effect = {
+			set_timed_country_flag = {
+				flag = galactic_community_uniform_resolution_common
+				days = @resolution_flag_timer
+			}
+			add_modifier = {
+				modifier = resolution_failed_diplomatic_weight
+				days = 2200
+			}
+			set_timed_country_flag = {
+				flag = galactic_community_uniform_resolution_submited
+				days = @resolution_flag_timer
+			}
+		}
+	}
+	allow = {
+		custom_tooltip = {
+			fail_text = "resolution_already_active"	
+			NOR={
+			is_active_resolution = "resolution_uniform_maid" }
+		}
+
+		custom_tooltip = {
+			fail_text = "need_resolution_category_college_joint"	
+			 is_active_resolution = "resolution_category_college_joint" 
+		}
+		custom_tooltip = {
+			fail_text = "galactic_community_uniform_resolution_submited"	
+			NOT = {has_country_flag  = "galactic_community_uniform_resolution_submited" }
+		}
+		##NOT = { has_global_flag = "galactic_community_resolution_uniform_changed" }
+		NOT = { has_global_flag = "galactic_community_resolution_uniform_changed" }
+		
+	}
+	ai_weight = {
+		weight = @resolution_weight_popular
+
+		modifier = {
+			factor = 1.1
+			is_cg_empire = yes
+		}
+		modifier = {
+			factor = 1.1
+			has_country_flag = carnalism_flag
+		}
+		modifier = {
+			factor = 0.7
+			NOT = { has_policy_flag = maid_uniform}
+		}	
+		modifier = {
+			factor = 1.5
+			has_policy_flag = maid_uniform
+		}
+		modifier = {
+			factor = 1.4
+			is_xenophobe    = yes
+		}
+		modifier = {
+			factor = 1.2
+			is_megacorp = yes
 		}
 	}
 }
@@ -524,6 +697,8 @@ resolution_uniform_bunny = {
 			has_policy_flag = sailorfuku_uniform
 			
 			has_policy_flag = microbikini_uniform 
+			has_policy_flag = maid_uniform 
+			has_policy_flag = bondage_uniform
 			}
 	}
 	effect = {
@@ -560,8 +735,10 @@ resolution_uniform_bunny = {
 			cancel_resolution = resolution_uniform_princess
 			cancel_resolution = resolution_uniform_army
 			cancel_resolution = resolution_uniform_sailorfuku
-
+		
 			cancel_resolution = resolution_uniform_microbikini
+			cancel_resolution = resolution_uniform_bondage
+			cancel_resolution = resolution_uniform_maid
 			
 		}
 	}
@@ -627,6 +804,15 @@ resolution_uniform_bunny = {
 			factor = 1.2
 			is_megacorp = yes
 		}
+		modifier = {
+			factor = 1.5
+			NOT = { is_cg_empire = yes }
+
+		}
+		modifier = {
+			factor = 0.7
+			has_country_flag = asceticism_flag
+		}
 	}
 }
 
@@ -647,12 +833,15 @@ resolution_uniform_microbikini = {
 
 	breach = {
 		OR={
-		has_policy_flag = nun_uniform
-		has_policy_flag = princess_uniform
-		has_policy_flag = school_uniform
-		has_policy_flag = army_uniform
-		has_policy_flag = sailorfuku_uniform
-		has_policy_flag = bunny_uniform
+			has_policy_flag = nun_uniform
+			has_policy_flag = princess_uniform
+			has_policy_flag = army_uniform
+			has_policy_flag = school_uniform
+			has_policy_flag = sailorfuku_uniform
+			has_policy_flag = bunny_uniform
+			
+			has_policy_flag = maid_uniform 
+			has_policy_flag = bondage_uniform
 	
 		}
 	}
@@ -687,7 +876,9 @@ resolution_uniform_microbikini = {
 			cancel_resolution = resolution_uniform_army
 			cancel_resolution = resolution_uniform_sailorfuku
 			cancel_resolution = resolution_uniform_bunny
-
+			
+			cancel_resolution = resolution_uniform_bondage
+			cancel_resolution = resolution_uniform_maid
 			
 		}
 	}
@@ -734,6 +925,7 @@ resolution_uniform_microbikini = {
 			factor = 1.1
 			is_cg_empire = yes
 		}
+		
 		modifier = {
 			factor = 1.1
 			has_country_flag = carnalism_flag
@@ -759,5 +951,148 @@ resolution_uniform_microbikini = {
 
 
 		
+	}
+}
+
+
+
+resolution_uniform_bondage = {
+	icon = "GFX_resolution_category_bondage"
+	resources = {
+		category = resolutions
+		cost = {
+			influence = @resolution_cost_t1
+		}
+	}
+	target = no
+	level = 1
+	modifier = {
+		
+	}
+	breach = {
+		OR={
+			has_policy_flag = nun_uniform
+			has_policy_flag = princess_uniform
+			has_policy_flag = army_uniform
+			has_policy_flag = school_uniform
+			has_policy_flag = sailorfuku_uniform
+			has_policy_flag = bunny_uniform
+			has_policy_flag = microbikini_uniform 
+			has_policy_flag = maid_uniform 
+			
+			}
+	}
+	effect = {
+		hidden_effect = {
+			set_global_flag = galactic_community_resolution_passed
+			set_timed_global_flag = { flag=galactic_community_resolution_uniform_changed days=@resoltuion_uniform_timer }
+			set_timed_country_flag = {
+				flag = galactic_community_resolution_passed_common
+				days = @resolution_flag_timer
+			}
+			set_timed_country_flag = {
+				flag = galactic_community_uniform_resolution_common
+				days = @resolution_flag_timer
+			}
+			add_modifier = {
+				modifier = resolution_passed_diplomatic_weight
+				days = 2200
+			}
+			set_timed_country_flag = {
+				flag = galactic_community_uniform_resolution_submited
+				days = @resolution_flag_timer
+			}
+			every_playable_country = {
+				limit = {
+					is_cg_empire = yes
+				}
+				country_event = { 
+					  id = CG_plus_policy_uniform.2009
+					  days = 5
+				#	id = 
+				}
+			}
+			cancel_resolution = resolution_uniform_nun
+			cancel_resolution = resolution_uniform_princess
+			cancel_resolution = resolution_uniform_army
+			cancel_resolution = resolution_uniform_sailorfuku
+			cancel_resolution = resolution_uniform_bunny
+			cancel_resolution = resolution_uniform_microbikini
+			
+			cancel_resolution = resolution_uniform_maid
+			
+		}
+	}
+	fail_effects = {
+		hidden_effect = {
+			set_timed_country_flag = {
+				flag = galactic_community_uniform_resolution_common
+				days = @resolution_flag_timer
+			}
+			add_modifier = {
+				modifier = resolution_failed_diplomatic_weight
+				days = 2200
+			}
+			set_timed_country_flag = {
+				flag = galactic_community_uniform_resolution_submited
+				days = @resolution_flag_timer
+			}
+		}
+	}
+	allow = {
+		custom_tooltip = {
+			fail_text = "resolution_already_active"	
+			NOR={
+			is_active_resolution = "resolution_uniform_bondage" }
+		}
+
+		custom_tooltip = {
+			fail_text = "need_resolution_category_college_joint"	
+			 is_active_resolution = "resolution_category_college_joint" 
+		}
+		custom_tooltip = {
+			fail_text = "galactic_community_uniform_resolution_submited"	
+			NOT = {has_country_flag  = "galactic_community_uniform_resolution_submited" }
+		}
+		##NOT = { has_global_flag = "galactic_community_resolution_uniform_changed" }
+		NOT = { has_global_flag = "galactic_community_resolution_uniform_changed" }
+		
+	}
+	ai_weight = {
+		weight = @resolution_weight_popular
+
+		modifier = {
+			factor = 1.1
+			is_cg_empire = yes
+		}
+		modifier = {
+			factor = 1.1
+			has_country_flag = carnalism_flag
+		}
+		modifier = {
+			factor = 0.7
+			NOT = { has_policy_flag = bunny_uniform}
+		}	
+		modifier = {
+			factor = 1.5
+			has_policy_flag = bunny_uniform
+		}
+		modifier = {
+			factor = 1.2
+			is_authoritarian    = yes
+		}
+		modifier = {
+			factor = 1.2
+			is_megacorp = yes
+		}
+		modifier = {
+			factor = 1.5
+			NOT = { is_cg_empire = yes }
+
+		}
+		modifier = {
+			factor = 0.7
+			has_country_flag = asceticism_flag
+		}
 	}
 }

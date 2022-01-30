@@ -56,15 +56,16 @@
 
  maid_uniform_name:0 "内务女仆"
  maid_uniform:0 "内务女仆"
- maid_uniform_desc:0 "REPLACE_ME"
+ maid_uniform_desc:0 "把学院校服设定为内务女仆，国之疆土星域无边及界，要处理的事多如天上繁星，混进多余的外星虫子只会增加需要处理的事项。让学员换上女仆装，为投身国家扫除外星虫子的工作做好准备。"
  CG_plus_mod_uniform_maid_uniform:0 "内务女仆附带效果""
  pop_ethic_xenophobe_attraction_mult:0 "排外主义引领"
 
- bonadage_uniform_name:0 "连身拘束"
- bonadage_uniform:0 "连身拘束"
- bonadage_uniform_desc:0 "REPLACE_ME"
+ bondage_uniform_name:0 "连身拘束"
+ bondage_uniform:0 "连身拘束"
+ bondage_uniform_desc:0 "把学院校服设定为连身拘束,帝国阶级上下分明，服从上级，驯服，下级，而连身拘束就是为了这一层层的阶级而准备，提醒学员随时作成为上阶物种的玩物。"
  CG_plus_mod_uniform_bondage_uniform:0 "连身拘束附带效果"
  pop_ethic_authoritarian_attraction_mult:0 "权威主义引领"
+
  
 
 ##############################################################################
@@ -115,8 +116,29 @@
 
  resolution_category_uniform_microbikini:0 "设定星际学院校服：微比坚尼"
  resolution_category_uniform_microbikini_desc:0 "设定星际学院校服：微比坚尼,繁星之下最美的是什么？就是完美身躯，而要表现这完美的身躯的最完美的方法就是这微比坚尼，不用害羞，当你来到学院后就能理解到我们如何得到这完美的身躯。\n\n通过极致的乱交性爱，让身体每一刻都在美颜淫液中修改，进化，体验着永远的年轻，幼嫩。这样才能寻找到繁星的极致之美。"
+
+
  resolution_uniform_microbikini:0 "设定星际学院校服：微比坚尼"
- resolution_uniform_microbikini_desc:0 "议案会使联合星际学院把学院校服色定位：§R微比坚尼§!\n\n繁星之下最美的是什么？就是[from.getname]的完美身躯，而要表现这完美的身躯的最完美的方法就是这微比坚尼，不用害羞，当你来到学院后就能理解到我们如何得到这完美的身躯。\n\n通过极致的乱交性爱，让身体每一刻都在美颜淫液中修改，进化，体验着永远的年轻，幼嫩。这样才能寻找到繁星的极致之美。"
+ resolution_uniform_microbikini_desc:0 "议案会使联合星际学院把学院校服色定位：§R微比坚尼§!\n\n繁星之下最美的是什么？就是[from.GetName]的完美身躯，而要表现这完美的身躯的最完美的方法就是这微比坚尼，不用害羞，当你来到学院后就能理解到我们如何得到这完美的身躯。\n\n通过极致的乱交性爱，让身体每一刻都在美颜淫液中修改，进化，体验着永远的年轻，幼嫩。这样才能寻找到繁星的极致之美。"
+
+
+
+ resolution_category_uniform_bondage:0 "设定星际学院校服：连身拘束"
+ resolution_category_uniform_bondage_desc:0 "设定星际学院校服：连身拘束\n\n向国家表示效忠的方法有很多种，而[from.GetName]提出的方法就是穿上这拘束衣装。自愿穿上拘束衣装的人就如自愿臣服于国家的意志，自愿锁上拘束衣装的锁扣就如读出效忠国家的誓言。"
+ resolution_uniform_bondage:0 "设定星际学院校服：连身拘束"
+ resolution_uniform_bondage_desc:0 "议案会使联合星际学院把学院校服色定位：§R连身拘束§!\n\n向国家表示效忠的方法有很多种，而[from.GetName]提出的方法就是穿上这拘束衣装。自愿穿上拘束衣装的人就如自愿臣服于国家的意志，自愿锁上拘束衣装的锁扣就如读出效忠国家的誓言。"
+
+
+
+ resolution_category_uniform_maid:0 "设定星际学院校服：内务女仆"
+ resolution_category_uniform_maid_desc:0 "设定星际学院校服：内务女仆\n\n"
+ resolution_uniform_maid:0 "设定星际学院校服：内务女仆"
+ resolution_uniform_maid_desc:0 "议案会使联合星际学院把学院校服色定位：§R内务女仆§!\n\n国家下看不到的污垢到处都是，而为了有效清理这些污秽之物，绝艳学院必须开设相关的科目，培养学员洁净的自觉，训练学员清理的能力，装备学员净化的武器。"
+
+
+
+
+
 
 
  resolution_category_beauty_sanctions:0 "美学制裁"

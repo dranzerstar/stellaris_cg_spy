@@ -289,7 +289,81 @@ country_event={
 		}
 	}
 }
+country_event={
+	id=CG_plus_policy_uniform.2008
+	title= CG_plus_policy_uniform.2008.name
+	desc= CG_plus_policy_uniform.2008.desc
+	#fire_only_once = yes
 
+	custom_gui = cg_plus_evt_menu
+	custom_gui_option = cg_plus_evt_menu_button
+	diplomatic = yes
+	hide_window = no
+	is_triggered_only = yes
+	immediate = {
+		set_variable = { which = cg_dialogue_bg value = -1 }
+		set_variable = { which = cg_plus_evt_pic value = 2008 }
+	}
+
+	option={
+		trigger={
+			NOT= { has_policy_flag = maid_uniform }
+		}
+		name=CG_plus_policy_resolution_active_bad
+	}
+	option={
+		name=EXCELLENT
+	}
+	option = {
+		trigger={
+			NOT= { has_policy_flag = maid_uniform }
+		}
+		name = CG_plus_policy_resolution_active_adjust
+		set_policy = {
+			policy = CG_school_uniform
+			option = maid_uniform
+			cooldown = no
+		}
+	}
+}
+
+country_event={
+	id=CG_plus_policy_uniform.2009
+	title= CG_plus_policy_uniform.2009.name
+	desc= CG_plus_policy_uniform.2009.desc
+	#fire_only_once = yes
+
+	custom_gui = cg_plus_evt_menu
+	custom_gui_option = cg_plus_evt_menu_button
+	diplomatic = yes
+	hide_window = no
+	is_triggered_only = yes
+	immediate = {
+		set_variable = { which = cg_dialogue_bg value = -1 }
+		set_variable = { which = cg_plus_evt_pic value = 2009 }
+	}
+
+	option={
+		trigger={
+			NOT= { has_policy_flag = bondage_uniform }
+		}
+		name=CG_plus_policy_resolution_active_bad
+	}
+	option={
+		name=EXCELLENT
+	}
+	option = {
+		trigger={
+			NOT= { has_policy_flag = bondage_uniform }
+		}
+		name = CG_plus_policy_resolution_active_adjust
+		set_policy = {
+			policy = CG_school_uniform
+			option = bondage_uniform
+			cooldown = no
+		}
+	}
+}
 
 #日常制服相关事件 
 # 1000 各事件的派送 函数
@@ -301,6 +375,8 @@ country_event={
 # 短水手服 sailorfuku_uniform 1500
 # 艳兔女郎 bunny_uniform 1600
 # 微比坚尼 microbikini_uniform 1700
+# §R内务女仆§ maid_uniform 1800
+# §R连身拘束§ bondage_uniform 1900
 # 1000 各事件的派送 函数
 # 
 country_event={
@@ -351,10 +427,10 @@ country_event={
 
 		}}
 		if = { # 派送 衬衣中裙 学园事件
-			limit = {has_policy_flag =  school_uniform has_technology = tech_beauty_theory }
-			random_list = {
-				1={country_event = {id = CG_plus_policy_uniform.1100 }}
-		}}
+			limit = {has_policy_flag =  school_uniform  }
+			random_list = {1={}}
+			#	1={country_event = {id = CG_plus_policy_uniform.1100 }}
+		}
 		if = { # 派送 短水手服 学园事件
 			limit = {has_policy_flag =  sailorfuku_uniform }
 			random_list = {
@@ -388,6 +464,19 @@ country_event={
 			
 			}
 		}
+		if = { # 派送 §R内务女仆§ 学园事件
+		limit = {has_policy_flag =  microbikini_uniform }
+		random_list = {
+			1={country_event = {id = CG_plus_policy_uniform.1800} } 
+			1={modifier = {factor = 0 has_country_flag = asceticism_flag }country_event = {id = CG_plus_policy_uniform.1801} } 
+			1={country_event = {id = CG_plus_policy_uniform.1802} }
+			1={modifier = {factor = 0 has_country_flag = asceticism_flag }country_event = {id = CG_plus_policy_uniform.1803}} 
+			1={modifier = {factor = 0 has_country_flag = carnalism_flag } country_event = {id = CG_plus_policy_uniform.1804} }
+			1={modifier = {factor = 0 has_country_flag = asceticism_flag }country_event = {id = CG_plus_policy_uniform.1805}}
+		
+		
+		}
+	}
 	}
 
 
@@ -1957,3 +2046,193 @@ country_event={
 	}
 
 }
+
+
+country_event={
+	id=CG_plus_policy_uniform.1800
+	title=CG_plus_policy_uniform.1800.name
+	custom_gui = cg_plus_evt_menu
+	custom_gui_option = cg_plus_evt_menu_button
+	desc=CG_plus_policy_uniform.1800.desc
+	diplomatic = yes
+	hide_window = no
+
+
+	is_triggered_only = yes
+	immediate = {
+		set_variable = { which = cg_dialogue_bg value = -1 }
+		set_variable = { which = cg_plus_evt_pic value = 1800 }
+	}
+
+	option={
+		name= CG_plus_policy_uniform.1800.a
+		add_modifier = {
+			modifier = CG_plus_mod_maid_0
+		}
+	}
+	option={
+		name= CG_plus_policy_uniform.1800.b
+		add_resource = {
+			energy = 10000
+		}
+	}
+
+}
+
+
+country_event={
+	id=CG_plus_policy_uniform.1801
+	title=CG_plus_policy_uniform.1801.name
+	custom_gui = cg_plus_evt_menu_p
+	custom_gui_option = cg_plus_evt_menu_button
+	desc=CG_plus_policy_uniform.1801.desc
+	diplomatic = yes
+	hide_window = no
+
+
+	is_triggered_only = yes
+	immediate = {
+		set_variable = { which = cg_dialogue_bg value = -1 }
+		set_variable = { which = cg_plus_evt_pic value = 1801 }
+	}
+
+	option={
+		name= CG_plus_policy_uniform.1801.a
+		add_modifier = {
+			modifier = CG_plus_mod_uniform_event_maid_1
+		}
+	}
+
+
+}
+
+
+country_event={
+	id=CG_plus_policy_uniform.1802
+	title=CG_plus_policy_uniform.1802.name
+	custom_gui = cg_plus_evt_menu_p
+	custom_gui_option = cg_plus_evt_menu_button
+	desc=CG_plus_policy_uniform.1802.desc
+	diplomatic = yes
+	hide_window = no
+
+
+	is_triggered_only = yes
+	immediate = {
+		set_variable = { which = cg_dialogue_bg value = -1 }
+		set_variable = { which = cg_plus_evt_pic value = 1802 }
+	}
+
+	option={
+		name= CG_plus_policy_uniform.1802.a
+		add_modifier = {
+			modifier = CG_plus_mod_uniform_event_maid_2
+		}
+	}
+}
+
+
+
+country_event={
+	id=CG_plus_policy_uniform.1803
+	title=CG_plus_policy_uniform.1803.name
+	custom_gui = cg_plus_evt_menu
+	custom_gui_option = cg_plus_evt_menu_button
+	desc=CG_plus_policy_uniform.1803.desc
+	diplomatic = yes
+	hide_window = no
+
+
+	is_triggered_only = yes
+	immediate = {
+		set_variable = { which = cg_dialogue_bg value = -1 }
+		set_variable = { which = cg_plus_evt_pic value = 1803 }
+	}
+
+	option={
+		name= CG_plus_policy_uniform.1803.a
+		root.home_planet = {
+			add_modifier = {
+				modifier = CG_plus_mod_uniform_event_maid_3
+			}
+		}
+	}
+
+
+
+}
+
+
+country_event={
+	id=CG_plus_policy_uniform.1804
+	title=CG_plus_policy_uniform.1804.name
+	custom_gui = cg_plus_evt_menu_p
+	custom_gui_option = cg_plus_evt_menu_button
+	desc=CG_plus_policy_uniform.1804.desc
+	diplomatic = yes
+	hide_window = no
+
+
+	is_triggered_only = yes
+	immediate = {
+		set_variable = { which = cg_dialogue_bg value = -1 }
+		set_variable = { which = cg_plus_evt_pic value = 1804 }
+	}
+
+	option={
+		name= CG_plus_policy_uniform.1804.a
+		custom_tooltip = CG_plus_policy_uniform.1804.a1
+		hidden_effect = {
+			while = {
+				count = 20
+					random_owned_pop = {
+						limit = {
+							
+							is_same_species = root.owner_species
+						}
+						modify_species = {
+							species = this
+							add_trait = trait_milk_maid
+						}	
+
+
+					}
+				
+			}
+		}
+	}
+	option={
+		name= CG_plus_policy_uniform.1804.b
+	}
+
+
+
+
+}
+
+
+country_event={
+	id=CG_plus_policy_uniform.1805
+	title=CG_plus_policy_uniform.1805.name
+	custom_gui = cg_plus_evt_menu
+	custom_gui_option = cg_plus_evt_menu_button
+	desc=CG_plus_policy_uniform.1805.desc
+	diplomatic = yes
+	hide_window = no
+
+
+	is_triggered_only = yes
+	immediate = {
+		set_variable = { which = cg_dialogue_bg value = -1 }
+		set_variable = { which = cg_plus_evt_pic value = 1805 }
+	}
+
+	option={
+		name= CG_plus_policy_uniform.1805.a
+		add_modifier = {
+			modifier = CG_plus_mod_uniform_event_maid_2
+		}
+	}
+}
+
+
