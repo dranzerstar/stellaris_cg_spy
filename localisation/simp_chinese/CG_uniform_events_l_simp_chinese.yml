@@ -413,7 +413,10 @@
 
 
 
- CG_plus_policy_uniform.1901.name:0 "REPLACE_ME"
- CG_plus_policy_uniform.1901.desc:0 "REPLACE_ME"
- CG_plus_policy_uniform.1901.a:0 "REPLACE_ME"
+ CG_plus_policy_uniform.1901.name:0 "违纪学员"
+ CG_plus_policy_uniform.1901.desc:0 "违纪学员\n [Root.GetSpeciesName] XXX\n班级：二年甲班\n违规事项：私藏魅魔国家刊物\n惩处：违禁物品没收烧毁，于学员礼堂全裸示眾。"
+ CG_plus_policy_uniform.1901.a:0 "刑"
+
+
+
 
