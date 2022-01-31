@@ -235,6 +235,11 @@ CG_plus_mod_uniform_event_maid_3={
 	job_house_maid_add = 2
 }
 
+CG_plus_mod_uniform_event_bondage_0={
+	country_admin_cap_add = 50
+}
+
+
 CG_plus_mod_uniform_event_military_1={
 	category_voidcraft_research_speed_mult = 1.5
 }

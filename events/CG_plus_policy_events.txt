@@ -2236,3 +2236,101 @@ country_event={
 }
 
 
+country_event={
+	id=CG_plus_policy_uniform.1900
+	title=CG_plus_policy_uniform.1900.name
+	custom_gui = cg_plus_evt_menu
+	custom_gui_option = cg_plus_evt_menu_button_p
+	desc=CG_plus_policy_uniform.1900.desc
+	diplomatic = yes
+	hide_window = no
+
+
+	is_triggered_only = yes
+	immediate = {
+		set_variable = { which = cg_dialogue_bg value = -1 }
+		set_variable = { which = cg_plus_evt_pic value = 1900 }
+	}
+
+	option={
+		name= CG_plus_policy_uniform.1900.a
+		add_modifier = {
+			modifier = CG_plus_mod_uniform_event_bondage_0 
+		}
+	}
+
+
+}
+
+
+country_event={
+	id=CG_plus_policy_uniform.1901
+	title=CG_plus_policy_uniform.1901.name
+	custom_gui = cg_plus_evt_menu
+	custom_gui_option = cg_plus_evt_menu_button_p
+	desc=CG_plus_policy_uniform.1901.desc
+	diplomatic = yes
+	hide_window = no
+
+
+	is_triggered_only = yes
+	immediate = {
+		set_variable = { which = cg_dialogue_bg value = -1 }
+		set_variable = { which = cg_plus_evt_pic value = 1901 }
+	}
+
+	option={
+		name= CG_plus_policy_uniform.1901.a
+
+	}
+
+}
+
+
+country_event={
+	id=CG_plus_policy_uniform.1901
+	title=CG_plus_policy_uniform.1901.name
+	custom_gui = cg_plus_evt_menu
+	custom_gui_option = cg_plus_evt_menu_button_p
+	desc=CG_plus_policy_uniform.1901.desc
+	diplomatic = yes
+	hide_window = no
+
+
+	is_triggered_only = yes
+	immediate = {
+		set_variable = { which = cg_dialogue_bg value = -1 }
+		set_variable = { which = cg_plus_evt_pic value = 1901 }
+	}
+
+	option={
+		name= CG_plus_policy_uniform.1901.a
+
+	}
+
+}
+
+country_event={
+	id=CG_plus_policy_uniform.1902
+	title=CG_plus_policy_uniform.1902.name
+	custom_gui = cg_plus_evt_menu
+	custom_gui_option = cg_plus_evt_menu_button_p
+	desc=CG_plus_policy_uniform.1902.desc
+	diplomatic = yes
+	hide_window = no
+
+
+	is_triggered_only = yes
+	immediate = {
+		set_variable = { which = cg_dialogue_bg value = -1 }
+		set_variable = { which = cg_plus_evt_pic value = 1902 }
+	}
+
+	option={
+		name= CG_plus_policy_uniform.1902.a
+
+	}
+
+}
+
+
