@@ -726,7 +726,7 @@ resolution_uniform_bunny = {
 					is_cg_empire = yes
 				}
 				country_event = { 
-					  id = CG_plus_policy_uniform.2005
+					  id = CG_plus_policy_uniform.2006
 					  days = 5
 				#	id = 
 				}
