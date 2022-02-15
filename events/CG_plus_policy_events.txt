@@ -465,7 +465,7 @@ country_event={
 			}
 		}
 		if = { # 派送 §R内务女仆§ 学园事件
-		limit = {has_policy_flag =  microbikini_uniform }
+		limit = {has_policy_flag =  maid_uniform }
 		random_list = {
 			1={country_event = {id = CG_plus_policy_uniform.1800} } 
 			1={modifier = {factor = 0 has_country_flag = asceticism_flag }country_event = {id = CG_plus_policy_uniform.1801} } 
@@ -476,7 +476,20 @@ country_event={
 		
 		
 		}
-	}
+		}
+		if = { # 派送 §R连身拘束§ 学园事件
+		limit = {has_policy_flag =  bondage_uniform }
+		random_list = {
+			1={modifier = {factor = 0 has_country_flag = asceticism_flag }country_event = {id = CG_plus_policy_uniform.1900} } 
+			1={modifier = {factor = 0 has_country_flag = carnalism_flag }country_event = {id = CG_plus_policy_uniform.1901} } 
+			1={country_event = {id = CG_plus_policy_uniform.1902 } }
+			1={modifier = {factor = 0 has_country_flag = asceticism_flag }country_event = {id = CG_plus_policy_uniform.1903}} 
+			1={modifier = {factor = 0 has_country_flag = asceticism_flag } country_event = {id = CG_plus_policy_uniform.1904} }
+			1={country_event = {id = CG_plus_policy_uniform.1905 } }
+		
+		
+		}
+		}		
 	}
 
 
@@ -2239,8 +2252,8 @@ country_event={
 country_event={
 	id=CG_plus_policy_uniform.1900
 	title=CG_plus_policy_uniform.1900.name
-	custom_gui = cg_plus_evt_menu
-	custom_gui_option = cg_plus_evt_menu_button_p
+	custom_gui = cg_plus_evt_menu_p
+	custom_gui_option = cg_plus_evt_menu_button
 	desc=CG_plus_policy_uniform.1900.desc
 	diplomatic = yes
 	hide_window = no
@@ -2266,8 +2279,8 @@ country_event={
 country_event={
 	id=CG_plus_policy_uniform.1901
 	title=CG_plus_policy_uniform.1901.name
-	custom_gui = cg_plus_evt_menu
-	custom_gui_option = cg_plus_evt_menu_button_p
+	custom_gui = cg_plus_evt_menu_p
+	custom_gui_option = cg_plus_evt_menu_button
 	desc=CG_plus_policy_uniform.1901.desc
 	diplomatic = yes
 	hide_window = no
@@ -2286,35 +2299,12 @@ country_event={
 
 }
 
-
-country_event={
-	id=CG_plus_policy_uniform.1901
-	title=CG_plus_policy_uniform.1901.name
-	custom_gui = cg_plus_evt_menu
-	custom_gui_option = cg_plus_evt_menu_button_p
-	desc=CG_plus_policy_uniform.1901.desc
-	diplomatic = yes
-	hide_window = no
-
-
-	is_triggered_only = yes
-	immediate = {
-		set_variable = { which = cg_dialogue_bg value = -1 }
-		set_variable = { which = cg_plus_evt_pic value = 1901 }
-	}
-
-	option={
-		name= CG_plus_policy_uniform.1901.a
-
-	}
-
-}
 
 country_event={
 	id=CG_plus_policy_uniform.1902
 	title=CG_plus_policy_uniform.1902.name
 	custom_gui = cg_plus_evt_menu
-	custom_gui_option = cg_plus_evt_menu_button_p
+	custom_gui_option = cg_plus_evt_menu_button
 	desc=CG_plus_policy_uniform.1902.desc
 	diplomatic = yes
 	hide_window = no
@@ -2328,9 +2318,83 @@ country_event={
 
 	option={
 		name= CG_plus_policy_uniform.1902.a
-
+		add_modifier = {
+			modifier = CG_plus_mod_uniform_event_bondage_1
+			years = 5
+		}
 	}
 
 }
 
+country_event={
+	id=CG_plus_policy_uniform.1903
+	title=CG_plus_policy_uniform.1903.name
+	custom_gui = cg_plus_evt_menu_p
+	custom_gui_option = cg_plus_evt_menu_button
+	desc=CG_plus_policy_uniform.1903.desc
+	diplomatic = yes
+	hide_window = no
 
+
+	is_triggered_only = yes
+	immediate = {
+		set_variable = { which = cg_dialogue_bg value = -1 }
+		set_variable = { which = cg_plus_evt_pic value = 1903 }
+	}
+
+	option={
+		name= CG_plus_policy_uniform.1903.a
+		add_resource = {
+			engineering_research = 5000
+		}
+	}
+
+}
+
+country_event={
+	id=CG_plus_policy_uniform.1904
+	title=CG_plus_policy_uniform.1904.name
+	custom_gui = cg_plus_evt_menu
+	custom_gui_option = cg_plus_evt_menu_button
+	desc=CG_plus_policy_uniform.1904.desc
+	diplomatic = yes
+	hide_window = no
+
+
+	is_triggered_only = yes
+	immediate = {
+		set_variable = { which = cg_dialogue_bg value = -1 }
+		set_variable = { which = cg_plus_evt_pic value = 1904 }
+	}
+
+	option={
+		name= CG_plus_policy_uniform.1904.a
+		
+	}
+
+}
+
+country_event={
+	id=CG_plus_policy_uniform.1905
+	title=CG_plus_policy_uniform.1905.name
+	custom_gui = cg_plus_evt_menu
+	custom_gui_option = cg_plus_evt_menu_button
+	desc=CG_plus_policy_uniform.1905.desc
+	diplomatic = yes
+	hide_window = no
+
+
+	is_triggered_only = yes
+	immediate = {
+		set_variable = { which = cg_dialogue_bg value = -1 }
+		set_variable = { which = cg_plus_evt_pic value = 1905 }
+	}
+
+	option={
+		name= CG_plus_policy_uniform.1905.a
+		add_resource = {
+			unity = 10000
+		}
+	}
+
+}

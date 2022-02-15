@@ -65,9 +65,11 @@
  bondage_uniform_desc:0 "把学院校服设定为连身拘束,帝国阶级上下分明，服从上级，驯服，下级，而连身拘束就是为了这一层层的阶级而准备，提醒学员随时作成为上阶物种的玩物。"
  CG_plus_mod_uniform_bondage_uniform:0 "连身拘束附带效果"
  pop_ethic_authoritarian_attraction_mult:0 "权威主义引领"
-
- 
-
+ mod_pop_category_slave_produces_mult:0 "奴隶阶级产出："
+ mod_pop_category_specialists_produces_mult:0 "奴隶阶级产出："
+ mod_pop_category_specialists_upkeep_mult:0 "专家阶级花费："
+ mod_pop_category_rulers_produces_mult:0 "统治者阶级产出："
+ mod_pop_category_rulers_upkeep_mult:0 "统治者阶级花费："
 ##############################################################################
 
  resolution_category_college_joint:0 "星际学院联合招生系统：提升绝色绝娇生产效率"

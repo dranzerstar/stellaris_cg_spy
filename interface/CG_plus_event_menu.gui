@@ -230,6 +230,27 @@ guiTypes = {
 			position = { x = @portrait_x y = @portrait_y }
 			effect = "cg_plus_uniform_evt_pic_1805"
 		}
+		effectButtonType = {
+			name = "cg_plus_uniform_evt_pic_1902_gfx"
+			quadTextureSprite = "GFX_evt_uniform_bondage_L_02"
+			Orientation = "UPPER_LEFT"
+			position = { x = @portrait_x y = @portrait_y }
+			effect = "cg_plus_uniform_evt_pic_1902"
+		}
+		effectButtonType = {
+			name = "cg_plus_uniform_evt_pic_1904_gfx"
+			quadTextureSprite = "GFX_evt_uniform_bondage_L_04"
+			Orientation = "UPPER_LEFT"
+			position = { x = @portrait_x y = @portrait_y }
+			effect = "cg_plus_uniform_evt_pic_1904"
+		}
+		effectButtonType = {
+			name = "cg_plus_uniform_evt_pic_1905_gfx"
+			quadTextureSprite = "GFX_evt_uniform_bondage_L_05"
+			Orientation = "UPPER_LEFT"
+			position = { x = @portrait_x y = @portrait_y }
+			effect = "cg_plus_uniform_evt_pic_1905"
+		}
 
 		effectButtonType = {
 			name = "cg_plus_uniform_evt_pic_2001_gfx"
@@ -742,6 +763,27 @@ guiTypes = {
 			effect = "cg_plus_uniform_evt_pic_1804"
 		}
 
+		effectButtonType = {
+			name = "cg_plus_uniform_evt_pic_1900_gfx"
+			quadTextureSprite = "GFX_evt_uniform_bondage_P_00"
+			Orientation = "UPPER_LEFT"
+			position = { x = @portrait_x y = @portrait_y }
+			effect = "cg_plus_uniform_evt_pic_1900"
+		}
+		effectButtonType = {
+			name = "cg_plus_uniform_evt_pic_1901_gfx"
+			quadTextureSprite = "GFX_evt_uniform_bondage_P_01"
+			Orientation = "UPPER_LEFT"
+			position = { x = @portrait_x y = @portrait_y }
+			effect = "cg_plus_uniform_evt_pic_1901"
+		}
+		effectButtonType = {
+			name = "cg_plus_uniform_evt_pic_1903_gfx"
+			quadTextureSprite = "GFX_evt_uniform_bondage_P_03"
+			Orientation = "UPPER_LEFT"
+			position = { x = @portrait_x y = @portrait_y }
+			effect = "cg_plus_uniform_evt_pic_1903"
+		}
 
 		###########################
 		#picture area end

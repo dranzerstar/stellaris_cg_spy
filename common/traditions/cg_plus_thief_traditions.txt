@@ -139,10 +139,10 @@ cg_plus_thief_tradition_23 = {
 		inherit_name = no
 	}
 	modifier = {
-		
+		country_subject_acceptance_add = 20
 	}
 	on_enabled = {
-		set_country_flag = cg_plus_thief_pragma
+	#	set_country_flag = cg_plus_thief_pragma
 	}
 	ai_weight = {
 		weight = 1

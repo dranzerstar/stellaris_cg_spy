@@ -41,6 +41,7 @@ event={
 								is_species_class = VAL 
 								is_species_class = HKR 
 								is_species_class = JourneyofElaina 
+								is_species_class = Houkai3rd
 								} 
 						  	NOT = { has_country_flag = cg_plus_thief_target_empty }
 						}
@@ -261,6 +262,7 @@ espionage_operation_event = {
 				TERRASE = { text = CG_plus_thief_event.501.desc.ak }
 				VAL = { text = CG_plus_thief_event.501.desc.val }
 				HKR = { text = CG_plus_thief_event.501.desc.val }
+				Houkai3rd = { text = CG_plus_thief_event.501.desc.val }
 				default = { text = CG_plus_thief_event.501.desc.questionmark }
 			}
 			}
@@ -336,6 +338,7 @@ country_event={
 				TERRASE = { text = CG_plus_thief_event.510.desc.ak }
 				VAL = { text = CG_plus_thief_event.510.desc.val }
 				HKR = { text = CG_plus_thief_event.510.desc.val }
+				Houkai3rd = { text = CG_plus_thief_event.501.desc.val }
 				default = { text = CG_plus_thief_event.501.desc.inn }
 			}
 			}

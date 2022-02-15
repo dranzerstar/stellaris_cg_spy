@@ -338,6 +338,30 @@ cg_plus_uniform_evt_pic_1805 = {
 	effect = {} }
 
 
+cg_plus_uniform_evt_pic_1900 = {
+	potential = {FROM = { check_variable = { which = cg_plus_evt_pic value =1900 }}}
+	allow = { always = yes }
+	effect = {} }
+cg_plus_uniform_evt_pic_1901 = {
+	potential = {FROM = { check_variable = { which = cg_plus_evt_pic value =1901 }}}
+	allow = { always = yes }
+	effect = {} }
+cg_plus_uniform_evt_pic_1902 = {
+	potential = {FROM = { check_variable = { which = cg_plus_evt_pic value =1902 }}}
+	allow = { always = yes }
+	effect = {} }
+cg_plus_uniform_evt_pic_1903 = {
+	potential = {FROM = { check_variable = { which = cg_plus_evt_pic value =1903 }}}
+	allow = { always = yes }
+	effect = {} }
+cg_plus_uniform_evt_pic_1904 = {
+	potential = {FROM = { check_variable = { which = cg_plus_evt_pic value =1904 }}}
+	allow = { always = yes }
+	effect = {} }
+cg_plus_uniform_evt_pic_1905 = {
+	potential = {FROM = { check_variable = { which = cg_plus_evt_pic value =1905 }}}
+	allow = { always = yes }
+	effect = {} }
 
 
 

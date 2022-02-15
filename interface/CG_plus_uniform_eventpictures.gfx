@@ -118,6 +118,36 @@ spriteTypes = {
 		texturefile = "gfx/event_pictures/uniform_daily/maid_L_05.dds" 
 		alwaystransparent = yes
 	}
+	spriteType = {
+		name = "GFX_evt_uniform_bondage_P_00"
+		texturefile = "gfx/event_pictures/uniform_daily/bondage_P_00.dds" 
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_uniform_bondage_P_01"
+		texturefile = "gfx/event_pictures/uniform_daily/bondage_P_01.dds" 
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_uniform_bondage_L_02"
+		texturefile = "gfx/event_pictures/uniform_daily/bondage_L_02.dds" 
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_uniform_bondage_P_03"
+		texturefile = "gfx/event_pictures/uniform_daily/bondage_P_03.dds" 
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_uniform_bondage_L_04"
+		texturefile = "gfx/event_pictures/uniform_daily/bondage_L_04.dds" 
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_uniform_bondage_L_05"
+		texturefile = "gfx/event_pictures/uniform_daily/bondage_L_05.dds" 
+		alwaystransparent = yes
+	}
 
 
 	spriteType = {

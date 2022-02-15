@@ -56,13 +56,11 @@ CG_school_uniform = {
 		valid = {
 				#has_country_flag = asceticism_flag	
 				OR={
-				and={
-					has_trait = trait_DC_ethic_asceticism	
-					has_technology = tech_beauty_theory 
-					}
+			
 				is_active_resolution = "resolution_uniform_nun"
 				is_spiritualist  = yes
 				}
+				has_technology = tech_beauty_theory 
 		}
 		modifier = {
 			CG_plus_mod_uniform_nun_uniform = 1
@@ -99,13 +97,10 @@ CG_school_uniform = {
 		valid = {
 			#has_country_flag = asceticism_flag	
 			OR={
-				and={
-					has_trait = trait_DC_ethic_asceticism	
-					has_technology = tech_beauty_theory 
-					}
 				is_active_resolution = "resolution_uniform_princess"
 				is_xenophile   = yes
 				}
+			has_technology = tech_beauty_theory 	
 		}
 		modifier = {
 			CG_plus_mod_uniform_princess_uniform = 1
@@ -142,13 +137,11 @@ CG_school_uniform = {
 		valid = {
 			#has_country_flag = asceticism_flag	
 			OR={
-				and={
-					has_trait = trait_DC_ethic_asceticism	
-					has_technology = tech_beauty_theory 
-					}
+				
 				is_active_resolution = "resolution_uniform_army"
 				is_militarist = yes
 				}
+			has_technology = tech_beauty_theory 
 		}
 		modifier = {
 			CG_plus_mod_uniform_army_uniform = 1
@@ -185,14 +178,10 @@ CG_school_uniform = {
 		}
 		valid = {
 			OR={
-			and={
-				has_trait = trait_DC_ethic_asceticism	
-				has_technology = tech_beauty_theory 
-				}
-			is_active_resolution = "resolution_uniform_maid"
-			has_ethic = ethic_fanatic_xenophobe
-			has_ethic = ethic_xenophobe
+				is_active_resolution = "resolution_uniform_maid"
+				is_xenophobe = yes 
 			}
+			has_technology = tech_beauty_theory 
 		}
 		modifier = {
 			CG_plus_mod_uniform_maid_uniform = 1
@@ -258,13 +247,11 @@ CG_school_uniform = {
 		valid = {
 				#has_country_flag = carnalism_flag	
 				OR={
-				and={
-					has_trait = trait_DC_ethic_carnalism	
-					has_technology = tech_beauty_theory 
-					}
+				
 				is_active_resolution = "resolution_uniform_sailorfuku"
 				is_egalitarian  = yes
 				}
+				has_technology = tech_beauty_theory 
 		}
 		modifier = {
 			CG_plus_mod_uniform_sailorfuku_uniform = 1
@@ -299,14 +286,12 @@ CG_school_uniform = {
 		}
 		valid = {
 			OR={
-			and={
-				has_trait = trait_DC_ethic_carnalism	
-				has_technology = tech_beauty_theory 
-				}
+			
 			is_active_resolution = "resolution_uniform_bunny"
 			is_materialist  = yes
 			
 			}
+			has_technology = tech_beauty_theory 
 		}
 	
 		modifier = {
@@ -343,13 +328,11 @@ CG_school_uniform = {
 		}
 		valid = {
 			OR={
-			and={
-				has_trait = trait_DC_ethic_carnalism	
-				has_technology = tech_beauty_theory 
-				}
+			
 			is_active_resolution = "resolution_uniform_microbikini"
 			is_pacifist  = yes
 			}
+			has_technology = tech_beauty_theory 
 		}
 		modifier = {
 			CG_plus_mod_uniform_microbikini_uniform = 1
@@ -389,13 +372,11 @@ CG_school_uniform = {
 		}
 		valid = {
 			OR={
-			and={
-				has_trait = trait_DC_ethic_carnalism	
-				has_technology = tech_beauty_theory 
-				}
+			
 			is_active_resolution = "resolution_uniform_bondage"
 			is_authoritarian  = yes
 			}
+			has_technology = tech_beauty_theory 
 		}
 		modifier = {
 			CG_plus_mod_uniform_bondage_uniform = 1

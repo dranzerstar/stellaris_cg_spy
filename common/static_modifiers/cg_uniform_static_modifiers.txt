@@ -138,9 +138,10 @@ CG_plus_mod_uniform_maid_uniform={
 CG_plus_mod_uniform_bondage_uniform={
 
 	#pop_ethic_fanatic_authoritarian_attraction_mult =  0.3 
-	pop_category_slave_produces_mult = 0.2
-	pop_category_specialists_produces_mult = 0.2
-	pop_category_rulers_produces_mult = 0.2
+	pop_category_slave_produces_mult = 0.7
+	pop_category_specialists_upkeep_mult =  -0.3
+	pop_category_rulers_produces_mult = 0.4
+	pop_category_rulers_upkeep_mult = 0.4
 	pop_ethic_authoritarian_attraction_mult  = 0.7 	
 }
 
@@ -239,6 +240,9 @@ CG_plus_mod_uniform_event_bondage_0={
 	country_admin_cap_add = 50
 }
 
+CG_plus_mod_uniform_event_bondage_1={
+	pop_category_slave_produces_mult  =  2.0
+}
 
 CG_plus_mod_uniform_event_military_1={
 	category_voidcraft_research_speed_mult = 1.5
