@@ -38,6 +38,13 @@ resolution_category_uniform_army = {
 		"resolution_uniform_army"
 	}
 }
+resolution_category_uniform_maid = {
+	group = beauty_college
+	icon = "GFX_resolution_category_maid"
+	resolution_types = {
+		"resolution_uniform_maid"
+	}
+}
 resolution_category_uniform_sailorfuku = {
 	group = beauty_college
 	icon = "GFX_resolution_category_college"
@@ -59,13 +66,7 @@ resolution_category_uniform_microbikini = {
 		"resolution_uniform_microbikini"
 	}
 }
-resolution_category_uniform_maid = {
-	group = beauty_college
-	icon = "GFX_resolution_category_maid"
-	resolution_types = {
-		"resolution_uniform_maid"
-	}
-}
+
 resolution_category_uniform_bondage = {
 	group = beauty_college
 	icon = "GFX_resolution_category_bondage"
