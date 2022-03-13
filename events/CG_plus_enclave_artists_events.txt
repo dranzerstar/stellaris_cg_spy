@@ -1,0 +1,819 @@
+namespace = cg_plus_enclaves_art
+
+
+# 0000  gate event
+# 1xxx  communications event
+# 1999   first conctact event 
+# 2000 ignored
+# 3xxx
+# 9xxx destroy events
+
+
+
+
+
+
+country_event = {
+	id = cg_plus_enclaves_art.1999
+	hide_window = no
+	title = cg_plus_enclaves_art.1000.name
+
+	desc = cg_plus_enclaves_art.1999.desc
+
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = "enclave_artist_window"
+	custom_gui_option = "enclave_artist_option"
+	picture_event_data = {
+		portrait = event_target:cg_plus_colorful_artisan_country
+		room = enclave_artist_room
+	}
+	trigger = {
+		from = {
+			has_country_flag = cg_plus_colorful_artisan_country
+		}
+	}
+
+	immediate = {
+		event_target:cg_plus_colorful_artisan_country = {
+			set_variable = {
+				which = reqest_free
+				value = 0
+			}
+		}
+	}
+	option={
+		#TODO
+		name=GOODBYE
+	}
+
+}
+
+country_event = {
+	id = cg_plus_enclaves_art.2000
+	hide_window = no
+	title = cg_plus_enclaves_art.1000.name
+	
+	desc = cg_plus_enclaves_art.2000.desc
+
+	is_triggered_only = yes
+	diplomatic = yes
+	picture_event_data = {
+		#portrait = event_target:artist_enclave_country
+		room = enclave_artist_room
+	}
+	custom_gui = "enclave_artist_window"
+	custom_gui_option = "enclave_artist_option"
+	trigger = {
+		from = {
+			has_country_flag = cg_plus_colorful_artisan_country
+		}
+	}
+
+	immediate = {
+		set_country_flag = cg_plus_colorful_artisan_ignored
+	}
+
+	option = {
+		name = cg_plus_enclaves_art.2000.a
+	}
+	option = {
+		name = cg_plus_enclaves_art.2000.b
+		add_resource = {
+			energy = -50000
+			
+		}
+		hidden_effect = {
+			event_target:cg_plus_colorful_artisan_country = {
+				set_variable = {
+					which = reqest_free
+					value = 0
+				}
+			}
+		}
+	}
+	option = {
+		name = cg_plus_enclaves_art.2000.c
+
+	}
+}
+
+
+country_event = {
+	id = cg_plus_enclaves_art.0000
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		from = {
+			has_country_flag = cg_plus_colorful_artisan_country
+		}
+	}
+
+	immediate = {
+		if = {
+			limit = {	event_target:cg_plus_colorful_artisan_country = {
+						check_variable = { which =reqest_free value >= 20 }
+			} }
+			country_event = { id = cg_plus_enclaves_art.2000 }
+			
+		}
+		else={
+		country_event = { id = cg_plus_enclaves_art.1000 }}
+	}
+}
+
+
+# a chatter
+# b sponsor
+# c art college
+#
+#
+#
+
+country_event = {
+	id = cg_plus_enclaves_art.1000 
+	title = cg_plus_enclaves_art.1000.name
+	desc = {
+		trigger = {#change these
+			switch = {
+				trigger = has_country_flag
+				recently_purchased_sentart = { text = cg_plus_enclaves_art.1000.a.sentart }
+				recently_purchased_protection = { text = cg_plus_enclaves_art.1000.a.protect }
+				recently_purchased_patron = { text = cg_plus_enclaves_art.1000.a.patron }
+				recently_purchased_college = { text = cg_plus_enclaves_art.1000.a.college }
+				default = { text = cg_plus_enclaves_art.1000.desc }
+			}
+		}
+	}
+	desc = {
+		trigger = {
+			if = {
+				limit = { 
+					event_target:cg_plus_colorful_artisan_country = {
+					trust = {
+						who = root
+						value >= 50
+					}
+				}}
+			}
+			text=  cg_plus_enclaves_art.1000.desc.trust50
+		}
+	}
+	desc = {
+		trigger = {
+			if = {
+				limit = { 
+					event_target:cg_plus_colorful_artisan_country = {
+					trust = {
+						who = root
+						value >= 100
+					}
+				}}
+			}
+			text=  cg_plus_enclaves_art.1000.desc.trust100
+		}
+	}
+
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = "enclave_artist_window"
+	custom_gui_option = "enclave_artist_option"
+
+	picture_event_data = {
+		portrait = event_target:cg_plus_colorful_artisan_country
+		room = enclave_artist_room
+	}
+
+	trigger = {
+
+	}
+
+	immediate = {
+		
+		
+	}
+
+	option = {
+		name = cg_plus_enclaves_art.1000.a
+		
+		response_text = cg_plus_enclaves_art.1000.a.reply1
+		response_text = cg_plus_enclaves_art.1000.a.reply2 
+		
+
+		is_dialog_only = yes
+		trigger = {
+			event_target:cg_plus_colorful_artisan_country = {
+				check_variable = { which =reqest_free value < 10}
+			}
+			NOT={ has_modifier = cg_plus_artist_sponsor  }
+		}
+		hidden_effect = {
+			event_target:cg_plus_colorful_artisan_country = {
+				change_variable = {
+					which = reqest_free
+					value = 1
+				}
+			}
+		}
+	}
+	option = {
+		name = cg_plus_enclaves_art.1000.a
+		
+		response_text = cg_plus_enclaves_art.1000.a.reply.c1
+		response_text = cg_plus_enclaves_art.1000.a.reply.c2
+		
+
+		is_dialog_only = yes
+		trigger = {
+			event_target:cg_plus_colorful_artisan_country = {
+				check_variable = { which =reqest_free value < 10}
+			}
+			has_modifier = cg_plus_artist_sponsor  
+		}
+		hidden_effect = {
+			event_target:cg_plus_colorful_artisan_country = {
+				change_variable = {
+					which = reqest_free
+					value = 1
+				}
+			}
+		}
+	}
+
+	option = {
+		name = cg_plus_enclaves_art.1000.a
+
+			response_text = cg_plus_enclaves_art.1000.a.reply.b1
+			response_text = cg_plus_enclaves_art.1000.a.reply.b2
+			response_text = cg_plus_enclaves_art.1000.a.reply.d1
+			response_text = cg_plus_enclaves_art.1000.a.reply.d2
+
+		is_dialog_only = yes
+		trigger = {
+			event_target:cg_plus_colorful_artisan_country = {
+				check_variable = { which =reqest_free value >= 10 }
+			}
+		}
+		hidden_effect = {
+			event_target:cg_plus_colorful_artisan_country = {
+				change_variable = { which = reqest_free value = 1 }
+			}
+		}
+	}
+
+
+
+	option = {
+		name = cg_plus_enclaves_art.1000.b
+		trigger = {
+			NOT = { has_modifier = cg_plus_artist_sponsor }
+			NOR = { has_valid_civic = civic_fanatic_purifiers has_valid_civic = civic_hive_devouring_swarm has_valid_civic = civic_machine_terminator }
+		}
+		hidden_effect = {
+			country_event = { id = cg_plus_enclaves_art.1100 }
+		}
+	}
+	option = {
+		name = cg_plus_enclaves_art.1000.c
+		trigger = {
+			NOT = {
+				has_country_flag = cg_plus_enclaves_art_college
+			}
+			NOR = { has_valid_civic = civic_fanatic_purifiers has_valid_civic = civic_hive_devouring_swarm has_valid_civic = civic_machine_terminator }
+		}
+		allow = {
+			custom_tooltip = {
+				fail_text = cg_plus_enclaves_art.1000.c.opinion
+				event_target:cg_plus_colorful_artisan_country = {
+	 				trust = {
+	 					who = root
+	 					value >= 50
+	 				}
+	 			}
+			}
+		}
+		hidden_effect = {
+			country_event = { id = cg_plus_enclaves_art.1110 }
+		}
+	}
+
+	option = {
+		name = cg_plus_enclaves_art.1000.d
+		trigger = {
+			any_system_within_border = {
+				has_star_flag = enclave
+				any_fleet_in_system = {
+					exists = owner
+					owner = {
+						is_same_value = event_target:cg_plus_colorful_artisan_country
+					}
+				}
+			}
+			NOR = { has_valid_civic = civic_fanatic_purifiers has_valid_civic = civic_hive_devouring_swarm has_valid_civic = civic_machine_terminator }
+		}
+		allow = {
+			custom_tooltip = {
+				fail_text = cg_plus_enclaves_art.1000.d.opinion
+				event_target:cg_plus_colorful_artisan_country = {
+	 				trust = {
+	 					who = root
+	 					value >= 120
+	 				}
+	 			}
+			}
+		}
+		hidden_effect = {
+			country_event = { id = cg_plus_enclaves_art.1120 }
+		}
+	}
+
+
+
+
+	
+
+	option = {
+		name = GOODBYE
+		trigger = { NOR = { has_valid_civic = civic_fanatic_purifiers has_valid_civic = civic_hive_devouring_swarm has_valid_civic = civic_machine_terminator } }
+
+	}
+
+	option = {
+		name = SCUM
+		trigger = { has_valid_civic = civic_fanatic_purifiers }
+
+	}
+	option = {
+		name = cg_extra_civis_DIE
+		trigger = { has_valid_civic = civic_lust_guro has_valid_civic = civic_sacrifice_lustgod }
+		hidden_effect = {
+
+		}
+	}
+	option = {
+		name = cg_extra_civis_FUCK
+		trigger = { has_valid_civic = civic_all_slave  }
+		hidden_effect = {
+
+		}
+	}
+
+	after = {
+		remove_country_flag = recently_purchased_sentart
+		remove_country_flag = recently_purchased_protection
+		remove_country_flag = recently_purchased_patron
+		remove_country_flag = recently_purchased_college
+	}
+
+
+}
+
+
+
+#Trying to become a patron
+country_event = {
+	id = cg_plus_enclaves_art.1100
+	title =  cg_plus_enclaves_art.1000.name
+	is_triggered_only = yes
+	
+	desc = cg_plus_enclaves_art.1100.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = "enclave_artist_window"
+	custom_gui_option = "enclave_artist_option"
+
+	picture_event_data = {
+		portrait = event_target:cg_plus_colorful_artisan_country
+		room = enclave_artist_room
+	}
+	trigger = {
+	
+	}
+
+	
+	#option = {
+	#	name = DEAL
+	#	custom_tooltip = cg_plus_enclaves_art.304.a.tooltip
+	#	add_modifier = {
+	#		modifier = enclave_artist_patron
+	#		days = 3600
+	#	}
+	#	allow = {
+	#		custom_tooltip = {
+	#			text = guardian.deal.tooltip
+	#			OR = {
+	#				has_monthly_income = { resource = energy value >= 25 }
+	#				resource_stockpile_compare = { resource = energy value >= 25 }
+	#			}
+	#			OR = {
+	#				has_monthly_income = { resource = minerals value >= 25 }
+	#				resource_stockpile_compare = { resource = minerals value >= 25 }
+	#			}
+	#			OR = {
+	#				has_monthly_income = { resource = influence value >= 1 }
+	#				resource_stockpile_compare = { resource = influence value >= 1 }
+	#			}
+	#		}
+	#	}
+	#	hidden_effect = {
+	#		if = {
+	#			limit = {
+	#				has_country_flag = enclave_stopped_patronage
+	#			}
+	#			remove_country_flag = enclave_stopped_patronage
+	#		}
+	#		set_country_flag = artist_patron
+	#		set_country_flag = recently_purchased_patron
+	#		country_event = { id = cg_plus_enclaves_art.306 days = 30 } #check if still patron in a month
+	#		country_event = { id = cg_plus_enclaves_art.320 } #trigger patron followup events
+	#		country_event = { id = cg_plus_enclaves_art.308 days = 359 }
+	#	}
+	#}
+
+	option = {
+		name = DEAL
+		#custom_tooltip = cg_plus_enclaves_art.304.a.tooltip
+		trigger = {
+			num_pops < 61
+		}
+		allow = {
+			resource_stockpile_compare = { resource = energy value >= 1000 }
+			NOT = { has_modifier = cg_plus_artist_sponsor }
+		}
+		add_resource = { energy = -1000 }
+		add_modifier = {
+			modifier = cg_plus_artist_sponsor
+			days = 3600
+		}
+		custom_tooltip = opinion20
+		hidden_effect = {
+			event_target:artist_enclave_country = {
+				add_trust = {
+					who = root
+					amount = 20
+				}
+			}
+
+			set_country_flag = artist_patron
+			set_country_flag = recently_purchased_patron
+			#country_event = { id = cg_plus_enclaves_art.306 days = 30 } #check if still patron in a month
+			
+			country_event = { id = cg_plus_enclaves_art.5000 days = 360 }
+			country_event = { id = cg_plus_enclaves_art.5000 days = 1300 }
+			country_event = { id = cg_plus_enclaves_art.5000 days = 2100 }
+			country_event = { id = cg_plus_enclaves_art.1100 days = 3600 } #patronage renewal
+		}
+	}
+
+	option = {
+		name = DEAL
+		#custom_tooltip = cg_plus_enclaves_art.304.a.tooltip
+		trigger = {
+			num_pops > 60
+			num_pops < 121
+		}
+		allow = {
+			resource_stockpile_compare = { resource = energy value >= 2000 }
+			NOT = { has_modifier = cg_plus_artist_sponsor }
+		}
+		add_resource = { energy = -2000 }
+		add_modifier = {
+			modifier = cg_plus_artist_sponsor
+			days = 3600
+		}
+		custom_tooltip = opinion20
+		hidden_effect = {
+			event_target:artist_enclave_country = {
+				add_trust = {
+					who = root
+					amount = 20
+				}
+			}
+
+			set_country_flag = artist_patron
+			set_country_flag = recently_purchased_patron
+			#country_event = { id = cg_plus_enclaves_art.306 days = 30 } #check if still patron in a month
+			
+			country_event = { id = cg_plus_enclaves_art.5000 days = 360 }
+			country_event = { id = cg_plus_enclaves_art.5000 days = 1300 }
+			country_event = { id = cg_plus_enclaves_art.5000 days = 2100 }
+			country_event = { id = cg_plus_enclaves_art.1100 days = 3600 } #patronage renewal
+		}
+	}
+
+	option = {
+		name = DEAL
+		#custom_tooltip = cg_plus_enclaves_art.304.a.tooltip
+		trigger = {
+			num_pops > 120
+			num_pops < 181
+		}
+		allow = {
+			resource_stockpile_compare = { resource = energy value >= 5000 }
+			NOT = { has_modifier = enclave_artist_patron }
+		}
+		add_resource = { energy = -5000 }
+		add_modifier = {
+			modifier = enclave_artist_patron
+			days = 3600
+		}
+		custom_tooltip = opinion20
+		hidden_effect = {
+			event_target:artist_enclave_country = {
+				add_trust = {
+					who = root
+					amount = 20
+				}
+			}
+
+			set_country_flag = artist_patron
+			set_country_flag = recently_purchased_patron
+			#country_event = { id = cg_plus_enclaves_art.306 days = 30 } #check if still patron in a month
+			
+			country_event = { id = cg_plus_enclaves_art.5000 days = 360 }
+			country_event = { id = cg_plus_enclaves_art.5000 days = 1300 }
+			country_event = { id = cg_plus_enclaves_art.5000 days = 2100 }
+			country_event = { id = cg_plus_enclaves_art.1100 days = 3600 } #patronage renewal
+		}
+	}
+
+	option = {
+		name = DEAL
+		#custom_tooltip = cg_plus_enclaves_art.304.a.tooltip
+		trigger = {
+			num_pops > 180
+			num_pops < 241
+		}
+		allow = {
+			resource_stockpile_compare = { resource = energy value >= 10000 }
+			NOT = { has_modifier = enclave_artist_patron }
+		}
+		add_resource = { energy = -10000 }
+		add_modifier = {
+			modifier = enclave_artist_patron
+			days = 3600
+		}
+		custom_tooltip = opinion20
+		hidden_effect = {
+			event_target:artist_enclave_country = {
+				add_trust = {
+					who = root
+					amount = 20
+				}
+			}
+			set_country_flag = artist_patron
+			set_country_flag = recently_purchased_patron
+
+			country_event = { id = cg_plus_enclaves_art.5000 days = 360 }
+			country_event = { id = cg_plus_enclaves_art.5000 days = 1300 }
+			country_event = { id = cg_plus_enclaves_art.5000 days = 2100 }
+			country_event = { id = cg_plus_enclaves_art.1100 days = 3600 } #patronage renewal
+		}
+	}
+
+	option = {
+		name = DEAL
+		#custom_tooltip = cg_plus_enclaves_art.304.a.tooltip
+		trigger = { num_pops > 240 }
+		allow = {
+			resource_stockpile_compare = { resource = energy value >= 5000 }
+			NOT = { has_modifier = enclave_artist_patron }
+		}
+		add_resource = { energy = -5000 }
+		add_modifier = {
+			modifier = enclave_artist_patron
+			days = 3600
+		}
+		custom_tooltip = opinion20
+		hidden_effect = {
+			event_target:artist_enclave_country = {
+				add_trust = {
+					who = root
+					amount = 20
+				}
+			}
+
+			set_country_flag = artist_patron
+			set_country_flag = recently_purchased_patron
+			#country_event = { id = cg_plus_enclaves_art.306 days = 30 } #check if still patron in a month
+
+			country_event = { id = cg_plus_enclaves_art.5000 days = 360 }
+			country_event = { id = cg_plus_enclaves_art.5000 days = 1300 }
+			country_event = { id = cg_plus_enclaves_art.5000 days = 2100 }
+			country_event = { id = cg_plus_enclaves_art.1100 days = 3600 } #patronage renewal
+		}
+	}
+
+	option = {
+		name = NODEAL
+	
+	}
+
+	after = {
+		hidden_effect = {
+			country_event = { id = cg_plus_enclaves_art.1000 }
+		}
+	}
+}
+#college
+country_event = {
+	id = cg_plus_enclaves_art.1110
+	title = cg_plus_enclaves_art.1000.name
+	desc = cg_plus_enclaves_art.1110.desc
+
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = "enclave_artist_window"
+	custom_gui_option = "enclave_artist_option"
+
+	picture_event_data = {
+		portrait = event_target:cg_plus_colorful_artisan_country
+		room = enclave_artist_room
+	}
+
+	immediate = {
+		set_country_flag = cg_plus_enclaves_art_college
+	}
+
+	after = {
+		set_country_flag = recently_purchased_college
+		hidden_effect = {
+			
+			country_event = { id = cg_plus_enclaves_art.1000 }
+		}
+	}
+
+	option = { # Back
+		name = cg_plus_enclaves_art.1000.a
+
+	}
+}
+
+country_event = {
+	id = cg_plus_enclaves_art.1120
+	title = cg_plus_enclaves_art.1000.name
+	desc = cg_plus_enclaves_art.1120.desc
+
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = "enclave_artist_window"
+	custom_gui_option = "enclave_artist_option"
+
+	picture_event_data = {
+		portrait = event_target:cg_plus_colorful_artisan_country
+		room = enclave_artist_room
+	}
+
+
+
+
+
+	after = {
+		hidden_effect = {	
+			country_event = { id = cg_plus_enclaves_art.1000 }
+		}
+	}
+	option = { 
+		name = cg_plus_enclaves_art.1120.a
+		custom_tooltip = cg_plus_enclaves_art.1120.a.ct
+		hidden_effect = {
+			set_country_flag= cg_plus_enclaves_protect_artist
+			set_country_flag= recently_purchased_protection
+		}
+
+	}
+	option = { # Back
+		name = back
+
+	}
+}
+
+
+
+country_event = {
+	id=cg_plus_enclaves_art.5000
+	title = CG_plus_enclaves_art.5000.name
+	is_triggered_only = yes
+	hide_window = no
+	desc = CG_plus_enclaves_art.5000.desc
+	picture= GFX_sagiri_done
+	immediate = {
+		set_country_flag = recently_purchased_sentart
+	}
+
+	option = {
+		name = OK
+	}
+}
+
+
+country_event = {
+	id=cg_plus_enclaves_art.9000
+	
+	is_triggered_only = yes
+	hide_window = yes
+	
+	picture= GFX_sagiri_done
+	trigger = {
+		This = {
+			has_country_flag = cg_plus_colorful_artisan_country
+		}
+	}
+	after = {
+		every_playable_country = {
+			limit = {
+				is_ai = no
+				has_country_flag = carnalism_flag
+			}
+			country_event = {
+				id = cg_plus_enclaves_art.9001
+				days =5
+				
+			}
+		}
+
+		every_playable_country = {
+			limit = {
+				is_ai = no
+				has_country_flag = asceticism_flag
+			}
+			country_event = {
+				id = cg_plus_enclaves_art.9002
+				days =5
+			}
+		}
+		
+	}
+
+
+}
+
+country_event = {
+	id = cg_plus_enclaves_art.9001
+	title = cg_plus_enclaves_art.1000.name
+	desc = cg_plus_enclaves_art.9001.desc
+
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = "enclave_artist_window"
+	custom_gui_option = "enclave_artist_option"
+
+	trigger = {
+		This = {
+			has_country_flag = cg_plus_colorful_artisan_country
+		}
+	}
+	picture_event_data = {
+		portrait = event_target:cg_plus_colorful_artisan_country  #change this
+		room = enclave_artist_room
+	}
+
+	immediate = {
+		
+	}
+
+	after = {
+
+	}
+
+	option = { # Back
+		name = cg_plus_enclaves_art.1000.a
+
+	}
+}
+
+
+country_event = {
+	id = cg_plus_enclaves_art.9002
+	title = cg_plus_enclaves_art.1000.name
+	desc = cg_plus_enclaves_art.9002.desc
+
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = "enclave_artist_window"
+	custom_gui_option = "enclave_artist_option"
+
+	trigger = {
+		This = {
+			has_country_flag = cg_plus_colorful_artisan_country
+		}
+	}
+	picture_event_data = {
+		portrait = event_target:cg_plus_colorful_artisan_country  #change this
+		room = enclave_artist_room
+	}
+
+	immediate = {
+		
+	}
+
+	after = {
+
+	}
+
+	option = { # Back
+		name = cg_plus_enclaves_art.1000.a
+
+	}
+}

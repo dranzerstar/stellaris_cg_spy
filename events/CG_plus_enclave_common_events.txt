@@ -1,0 +1,39 @@
+namespace = CG_plus_enclaves
+
+
+
+
+
+
+
+
+
+
+
+country_event = {
+	id=CG_plus_enclaves.9000
+	is_triggered_only = yes
+	hide_window = yes
+
+	immediate = {
+		establish_communications = event_target:cg_plus_librarian_country
+		establish_communications = event_target:283p_under_home_country
+		
+		establish_communications = event_target:cg_plus_colorful_artisan_country
+		establish_communications = event_target:cg_plus_slaver_country
+		establish_communications = event_target:cg_plus_succ_prison_country
+		establish_communications = event_target:cg_plus_holy_ward_country
+	}
+}
+
+country_event = {
+	id=CG_plus_enclaves.9010
+	is_triggered_only = yes
+	hide_window = yes
+
+	immediate = {
+		establish_communications = event_target:283p_home_country
+		set_country_flag = contacted_with_283p_home_country
+	
+	}
+}

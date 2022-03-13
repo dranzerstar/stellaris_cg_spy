@@ -1,0 +1,111 @@
+cg_art_college = {
+	icon = "GFX_starbase_cg_artist_college" 
+	construction_days = 180
+
+	potential = {
+		exists = owner
+		OR = {
+			owner = { has_country_flag = cg_plus_enclaves_art_college }
+			
+		}
+		owner = {
+			NOR = {
+				has_valid_civic = civic_fanatic_purifiers
+				has_valid_civic = civic_hive_devouring_swarm
+				has_valid_civic = civic_machine_terminator
+			}
+		}
+	}
+	
+
+	resources = {
+		category = starbase_buildings
+		cost = {
+			alloys = 100
+		}
+		produces = {
+			unity = 15
+		}
+		upkeep = {
+			energy = 2
+		}
+	}
+
+
+
+	ai_build_at_chokepoint = yes
+	ai_build_outside_chokepoint = yes
+	ai_weight = {
+		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
+	}
+}
+
+
+
+cg_artist_palace = {
+	icon = "GFX_starbase_cg_artist_palace"
+	construction_days = 720
+
+	potential = {
+		exists = owner
+		OR = {
+			owner = { has_country_flag = cg_plus_enclaves_protect_artist }
+			solar_system = { has_star_flag = cg_plus_colorful_artisan }
+		}
+		owner = {
+			NOR = {
+				has_valid_civic = civic_fanatic_purifiers
+				has_valid_civic = civic_hive_devouring_swarm
+				has_valid_civic = civic_machine_terminator
+			}
+		}
+	}
+
+	possible = {
+		custom_tooltip = {
+			fail_text = "requires_starfortress"
+			has_starbase_size >= starbase_starfortress 
+		}
+		custom_tooltip = {
+			fail_text = "requires_cg_artisans"
+			solar_system = {
+				has_star_flag = cg_plus_colorful_artisan
+				any_fleet_in_system = {
+					exists = owner
+					owner = {
+						is_same_value = event_target:cg_plus_colorful_artisan_country
+					}
+				}
+			}
+		}
+		custom_tooltip = {
+			fail_text = "requires_cg_artist_agreement"
+			owner = { has_country_flag = cg_plus_enclaves_protect_artist }
+		}
+	}
+
+	resources = {
+		category = starbase_buildings
+		cost = {
+			alloys = 2000
+		}
+
+		produces = {
+			unity = 200
+			society_research = 250
+			minor_artifacts = 1
+		}
+
+
+
+		upkeep = {
+			energy = 50
+		}
+	}
+
+	ai_build_at_chokepoint = yes
+	ai_build_outside_chokepoint = yes
+	ai_weight = {
+		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
+	}
+}

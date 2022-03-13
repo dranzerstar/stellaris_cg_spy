@@ -1,0 +1,15 @@
+cg_artist_sponsor_cost = {
+	base = 1000
+	modifier = {
+		multiply = 2
+		num_pops > 60
+	}
+	modifier = {
+		multiply = 2
+		num_pops > 120
+	}
+	modifier = {
+		multiply = 3
+		num_pops > 240
+	}	
+}

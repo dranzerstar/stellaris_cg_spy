@@ -1,0 +1,499 @@
+guiTypes = {
+	containerWindowType = {
+		name = "cg_plus_under_imas_gui_detail"
+		orientation = center
+		origo = center
+		moveable = yes
+		size = { width = 1920 height = 1080 }
+
+		background = { name = "background" quadTextureSprite ="GFX_under_imas_combined_bg" position = { x = 150 y = 200 } }
+		iconType = { name = "background" quadTextureSprite ="GFX_under_imas_combined_bg" position = { x = 150 y = 200 } alwaysTransparent = yes}
+
+		iconType = { name = "hex_bg" spriteType = "GFX_under_imas_combined_bg" position = { x = 150 y = 200 } alwaysTransparent = yes }
+		iconType = { name = "empire_header_line" quadTextureSprite = "GFX_line_long" position = { x = -1000 y = 22 } alwaysTransparent = yes } #TITLE
+
+		buttonType = {
+			name = "close"
+			quadTextureSprite = "GFX_close"
+			position = { x= 1470 y = 215 }
+			
+			shortcut = "ESCAPE"
+			clicksound = "back_click"
+		}
+
+		# Custom header
+
+
+
+#--------------------------------------------------------------------------
+
+
+
+		
+#--------------------------------------------------------------------------------
+#  
+#  main image
+ #516x292 card size
+		@main_image_x = 480
+		@main_image_y = 290
+
+	effectButtonType = { name = "idol_card_01" quadTextureSprite = "GFX_idol_card_01" Orientation = "UPPER_LEFT"
+		position = { x = @main_image_x y = @main_image_y } effect = "imas_idol_card_01" }
+	#
+	effectButtonType = { name = "idol_card_02" quadTextureSprite = "GFX_idol_card_02" Orientation = "UPPER_LEFT"
+		position = { x = @main_image_x y = @main_image_y } effect = "imas_idol_card_02" }
+	#
+	effectButtonType = { name = "idol_card_03" quadTextureSprite = "GFX_idol_card_03" Orientation = "UPPER_LEFT"
+		position = { x = @main_image_x y = @main_image_y } effect = "imas_idol_card_03" }
+	#
+	effectButtonType = { name = "idol_card_04" quadTextureSprite = "GFX_idol_card_04" Orientation = "UPPER_LEFT"
+		position = { x = @main_image_x y = @main_image_y } effect = "imas_idol_card_04" }
+	#
+	effectButtonType = { name = "idol_card_05" quadTextureSprite = "GFX_idol_card_05" Orientation = "UPPER_LEFT"
+		position = { x = @main_image_x y = @main_image_y } effect = "imas_idol_card_05" }
+	#
+	effectButtonType = { name = "idol_card_06" quadTextureSprite = "GFX_idol_card_06" Orientation = "UPPER_LEFT"
+		position = { x = @main_image_x y = @main_image_y } effect = "imas_idol_card_06" }
+	#
+	effectButtonType = { name = "idol_card_07" quadTextureSprite = "GFX_idol_card_07" Orientation = "UPPER_LEFT"
+		position = { x = @main_image_x y = @main_image_y } effect = "imas_idol_card_07" }
+	#
+	effectButtonType = { name = "idol_card_08" quadTextureSprite = "GFX_idol_card_08" Orientation = "UPPER_LEFT"
+		position = { x = @main_image_x y = @main_image_y } effect = "imas_idol_card_08" }
+	#
+	effectButtonType = { name = "idol_card_09" quadTextureSprite = "GFX_idol_card_09" Orientation = "UPPER_LEFT"
+		position = { x = @main_image_x y = @main_image_y } effect = "imas_idol_card_09" }
+	#
+	effectButtonType = { name = "idol_card_10" quadTextureSprite = "GFX_idol_card_10" Orientation = "UPPER_LEFT"
+		position = { x = @main_image_x y = @main_image_y } effect = "imas_idol_card_10" }
+	#
+	effectButtonType = { name = "idol_card_11" quadTextureSprite = "GFX_idol_card_11" Orientation = "UPPER_LEFT"
+		position = { x = @main_image_x y = @main_image_y } effect = "imas_idol_card_11" }
+	#
+	effectButtonType = { name = "idol_card_12" quadTextureSprite = "GFX_idol_card_12" Orientation = "UPPER_LEFT"
+		position = { x = @main_image_x y = @main_image_y } effect = "imas_idol_card_12" }
+	#
+	effectButtonType = { name = "idol_card_13" quadTextureSprite = "GFX_idol_card_13" Orientation = "UPPER_LEFT"
+		position = { x = @main_image_x y = @main_image_y } effect = "imas_idol_card_13" }
+	#
+	effectButtonType = { name = "idol_card_14" quadTextureSprite = "GFX_idol_card_14" Orientation = "UPPER_LEFT"
+		position = { x = @main_image_x y = @main_image_y } effect = "imas_idol_card_14" }
+	#
+	effectButtonType = { name = "idol_card_15" quadTextureSprite = "GFX_idol_card_15" Orientation = "UPPER_LEFT"
+		position = { x = @main_image_x y = @main_image_y } effect = "imas_idol_card_15" }
+	#
+	effectButtonType = { name = "idol_card_16" quadTextureSprite = "GFX_idol_card_16" Orientation = "UPPER_LEFT"
+		position = { x = @main_image_x y = @main_image_y } effect = "imas_idol_card_16" }
+	#
+	effectButtonType = { name = "idol_card_17" quadTextureSprite = "GFX_idol_card_17" Orientation = "UPPER_LEFT"
+		position = { x = @main_image_x y = @main_image_y } effect = "imas_idol_card_17" }
+	#
+	effectButtonType = { name = "idol_card_18" quadTextureSprite = "GFX_idol_card_18" Orientation = "UPPER_LEFT"
+		position = { x = @main_image_x y = @main_image_y } effect = "imas_idol_card_18" }
+	#
+	effectButtonType = { name = "idol_card_19" quadTextureSprite = "GFX_idol_card_19" Orientation = "UPPER_LEFT"
+		position = { x = @main_image_x y = @main_image_y } effect = "imas_idol_card_19" }
+	#
+	effectButtonType = { name = "idol_card_20" quadTextureSprite = "GFX_idol_card_20" Orientation = "UPPER_LEFT"
+		position = { x = @main_image_x y = @main_image_y } effect = "imas_idol_card_20" }
+	#
+	effectButtonType = { name = "idol_card_21" quadTextureSprite = "GFX_idol_card_21" Orientation = "UPPER_LEFT"
+		position = { x = @main_image_x y = @main_image_y } effect = "imas_idol_card_21" }
+	#
+	effectButtonType = { name = "idol_card_22" quadTextureSprite = "GFX_idol_card_22" Orientation = "UPPER_LEFT"
+		position = { x = @main_image_x y = @main_image_y } effect = "imas_idol_card_22" }
+	#
+	effectButtonType = { name = "idol_card_23" quadTextureSprite = "GFX_idol_card_23" Orientation = "UPPER_LEFT"
+		position = { x = @main_image_x y = @main_image_y } effect = "imas_idol_card_23" }
+	#
+	effectButtonType = { name = "idol_card_24" quadTextureSprite = "GFX_idol_card_24" Orientation = "UPPER_LEFT"
+		position = { x = @main_image_x y = @main_image_y } effect = "imas_idol_card_24" }
+	#
+	effectButtonType = { name = "idol_card_25" quadTextureSprite = "GFX_idol_card_25" Orientation = "UPPER_LEFT"
+		position = { x = @main_image_x y = @main_image_y } effect = "imas_idol_card_25" }
+	#
+#-------------------------------------------------------------------------------------
+#right info panel
+iconType={
+	name = "buff_indv_text_bg"
+	position = { x = 1072 y = 280 }
+	format = left
+	quadTextureSprite= "GFX_ui_text_box"
+}
+iconType={
+	name = "buff_grp_text_bg"
+	position = { x = 1072 y = 520 }
+	format = left
+	quadTextureSprite= "GFX_ui_text_box"
+}
+
+@grp_icon_x= 70 @grp_icon_y=400
+	containerWindowType = {
+			position = { x = 1220 y =220 }
+			name= "side_panel"
+			instantTextboxType = {
+				name = "Idol_text"
+				Orientation = "UPPER_LEFT"
+				maxWidth = 190
+				position = { x = -125 y = 80  }
+				font =  malgun_goth_24
+				text = Click_idol_icon
+			}	
+
+			instantTextboxType = {
+				name = "Group_text"
+				Orientation = "UPPER_LEFT"
+				position = { x = -125 y = 320  }
+				font =  malgun_goth_24
+				text = Click_group_icon
+			}	
+
+
+		effectButtonType = {
+			name = "grp_icon_01"
+			quadTextureSprite = "GFX_grp_icon_01"
+			Orientation = "UPPER_LEFT"
+			position = { x = @grp_icon_x y = @grp_icon_y  }
+			effect = "imas_gui_details_idols_grp_1"
+		}
+		effectButtonType = {
+			name = "grp_icon_02"
+			quadTextureSprite = "GFX_grp_icon_02"
+			Orientation = "UPPER_LEFT"
+			position = { x = @grp_icon_x y = @grp_icon_y  }
+			effect = "imas_gui_details_idols_grp_2"
+		}
+		effectButtonType = {
+			name = "grp_icon_03"
+			quadTextureSprite = "GFX_grp_icon_03"
+			Orientation = "UPPER_LEFT"
+			position = { x = @grp_icon_x y = @grp_icon_y  }
+			effect = "imas_gui_details_idols_grp_3"
+		}
+		effectButtonType = {
+			name = "grp_icon_04"
+			quadTextureSprite = "GFX_grp_icon_04"
+			Orientation = "UPPER_LEFT"
+			position = { x = @grp_icon_x y = @grp_icon_y  }
+			effect = "imas_gui_details_idols_grp_4"
+		}
+		effectButtonType = {
+			name = "grp_icon_05"
+			quadTextureSprite = "GFX_grp_icon_05"
+			Orientation = "UPPER_LEFT"
+			position = { x = @grp_icon_x y = @grp_icon_y  }
+			effect = "imas_gui_details_idols_grp_5"
+		}
+		effectButtonType = {
+			name = "grp_icon_06"
+			quadTextureSprite = "GFX_grp_icon_06"
+			Orientation = "UPPER_LEFT"
+			position = { x = @grp_icon_x y = @grp_icon_y  }
+			effect = "imas_gui_details_idols_grp_6"
+		}
+		effectButtonType = {
+			name = "grp_icon_07"
+			quadTextureSprite = "GFX_grp_icon_07"
+			Orientation = "UPPER_LEFT"
+			position = { x = @grp_icon_x y = @grp_icon_y  }
+			effect = "imas_gui_details_idols_grp_7"
+		}
+		@grp_icon_x2= 70 @grp_icon_y2=80
+		@grp_icon_x3= 80
+		iconType = { name = "box1" quadTextureSprite = "GFX_imas_box_bg" position = { x = @grp_icon_x2 y = @grp_icon_y2 } alwaysTransparent = yes }
+
+		effectButtonType = { name = "indv_idol_icon_01" quadTextureSprite = "GFX_idol_icon_01" Orientation = "UPPER_LEFT"
+		position = { x = @grp_icon_x3 y = @grp_icon_y2  } effect = "imas_gui_details_idols_01" }
+		effectButtonType = { name = "indv_idol_icon_02" quadTextureSprite = "GFX_idol_icon_02" Orientation = "UPPER_LEFT"
+		position = { x = @grp_icon_x3 y = @grp_icon_y2  } effect = "imas_gui_details_idols_02" }
+		effectButtonType = { name = "indv_idol_icon_03" quadTextureSprite = "GFX_idol_icon_03" Orientation = "UPPER_LEFT"
+		position = { x = @grp_icon_x3 y = @grp_icon_y2  } effect = "imas_gui_details_idols_03" }
+		effectButtonType = { name = "indv_idol_icon_04" quadTextureSprite = "GFX_idol_icon_04" Orientation = "UPPER_LEFT"
+		position = { x = @grp_icon_x3 y = @grp_icon_y2  } effect = "imas_gui_details_idols_04" }
+		effectButtonType = { name = "indv_idol_icon_05" quadTextureSprite = "GFX_idol_icon_05" Orientation = "UPPER_LEFT"
+		position = { x = @grp_icon_x3 y = @grp_icon_y2  } effect = "imas_gui_details_idols_05" }
+		effectButtonType = { name = "indv_idol_icon_06" quadTextureSprite = "GFX_idol_icon_06" Orientation = "UPPER_LEFT"
+		position = { x = @grp_icon_x3 y = @grp_icon_y2  } effect = "imas_gui_details_idols_06" }
+		effectButtonType = { name = "indv_idol_icon_07" quadTextureSprite = "GFX_idol_icon_07" Orientation = "UPPER_LEFT"
+		position = { x = @grp_icon_x3 y = @grp_icon_y2  } effect = "imas_gui_details_idols_07" }
+		effectButtonType = { name = "indv_idol_icon_08" quadTextureSprite = "GFX_idol_icon_08" Orientation = "UPPER_LEFT"
+		position = { x = @grp_icon_x3 y = @grp_icon_y2  } effect = "imas_gui_details_idols_08" }
+		effectButtonType = { name = "indv_idol_icon_09" quadTextureSprite = "GFX_idol_icon_09" Orientation = "UPPER_LEFT"
+		position = { x = @grp_icon_x3 y = @grp_icon_y2  } effect = "imas_gui_details_idols_09" }
+		effectButtonType = { name = "indv_idol_icon_10" quadTextureSprite = "GFX_idol_icon_10" Orientation = "UPPER_LEFT"
+		position = { x = @grp_icon_x3 y = @grp_icon_y2  } effect = "imas_gui_details_idols_10" }
+		effectButtonType = { name = "indv_idol_icon_11" quadTextureSprite = "GFX_idol_icon_11" Orientation = "UPPER_LEFT"
+		position = { x = @grp_icon_x3 y = @grp_icon_y2  } effect = "imas_gui_details_idols_11" }
+		effectButtonType = { name = "indv_idol_icon_12" quadTextureSprite = "GFX_idol_icon_12" Orientation = "UPPER_LEFT"
+		position = { x = @grp_icon_x3 y = @grp_icon_y2  } effect = "imas_gui_details_idols_12" }
+		effectButtonType = { name = "indv_idol_icon_13" quadTextureSprite = "GFX_idol_icon_13" Orientation = "UPPER_LEFT"
+		position = { x = @grp_icon_x3 y = @grp_icon_y2  } effect = "imas_gui_details_idols_13" }
+		effectButtonType = { name = "indv_idol_icon_14" quadTextureSprite = "GFX_idol_icon_14" Orientation = "UPPER_LEFT"
+		position = { x = @grp_icon_x3 y = @grp_icon_y2  } effect = "imas_gui_details_idols_14" }
+		effectButtonType = { name = "indv_idol_icon_15" quadTextureSprite = "GFX_idol_icon_15" Orientation = "UPPER_LEFT"
+		position = { x = @grp_icon_x3 y = @grp_icon_y2  } effect = "imas_gui_details_idols_15" }
+		effectButtonType = { name = "indv_idol_icon_16" quadTextureSprite = "GFX_idol_icon_16" Orientation = "UPPER_LEFT"
+		position = { x = @grp_icon_x3 y = @grp_icon_y2  } effect = "imas_gui_details_idols_16" }
+		effectButtonType = { name = "indv_idol_icon_17" quadTextureSprite = "GFX_idol_icon_17" Orientation = "UPPER_LEFT"
+		position = { x = @grp_icon_x3 y = @grp_icon_y2  } effect = "imas_gui_details_idols_17" }
+		effectButtonType = { name = "indv_idol_icon_18" quadTextureSprite = "GFX_idol_icon_18" Orientation = "UPPER_LEFT"
+		position = { x = @grp_icon_x3 y = @grp_icon_y2  } effect = "imas_gui_details_idols_18" }
+		effectButtonType = { name = "indv_idol_icon_19" quadTextureSprite = "GFX_idol_icon_19" Orientation = "UPPER_LEFT"
+		position = { x = @grp_icon_x3 y = @grp_icon_y2  } effect = "imas_gui_details_idols_19" }
+		effectButtonType = { name = "indv_idol_icon_20" quadTextureSprite = "GFX_idol_icon_20" Orientation = "UPPER_LEFT"
+		position = { x = @grp_icon_x3 y = @grp_icon_y2  } effect = "imas_gui_details_idols_20" }
+		effectButtonType = { name = "indv_idol_icon_21" quadTextureSprite = "GFX_idol_icon_21" Orientation = "UPPER_LEFT"
+		position = { x = @grp_icon_x3 y = @grp_icon_y2  } effect = "imas_gui_details_idols_21" }
+		effectButtonType = { name = "indv_idol_icon_22" quadTextureSprite = "GFX_idol_icon_22" Orientation = "UPPER_LEFT"
+		position = { x = @grp_icon_x3 y = @grp_icon_y2  } effect = "imas_gui_details_idols_22" }
+		effectButtonType = { name = "indv_idol_icon_23" quadTextureSprite = "GFX_idol_icon_23" Orientation = "UPPER_LEFT"
+		position = { x = @grp_icon_x3 y = @grp_icon_y2  } effect = "imas_gui_details_idols_23" }
+		effectButtonType = { name = "indv_idol_icon_24" quadTextureSprite = "GFX_idol_icon_24" Orientation = "UPPER_LEFT"
+		position = { x = @grp_icon_x3 y = @grp_icon_y2  } effect = "imas_gui_details_idols_24" }
+		effectButtonType = { name = "indv_idol_icon_25" quadTextureSprite = "GFX_idol_icon_25" Orientation = "UPPER_LEFT"
+		position = { x = @grp_icon_x3 y = @grp_icon_y2  } effect = "imas_gui_details_idols_25" }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	}
+
+#
+#--------------------------------------------------------------------------------
+# 	main card frame
+		iconType={
+			name = "card_frame"
+			quadTextureSprite = "GFX_idol_card_frame" Orientation = "UPPER_LEFT"
+			position = { x = 476 y = 290 }
+		}
+
+#--------------------------------------------------------------------------------------
+#info section
+		@tags_pos_x = 170
+		buttonType = { name = "info_name_tag" quadTextureSprite = "GFX_ui_button_box" Orientation = "UPPER_LEFT"
+		position = { x = @tags_pos_x y = 268 } font = "cg_16b"  alwaysTransparent=yes
+		buttonText = imas_ui_button_name }
+
+		instantTextBoxType = {
+			name = "alien_message"
+			font = "malgun_goth_24"
+			#font = "malgun_goth_24"
+			text_color_code = "S"
+			position = { x = 290 y = 272 }
+			maxWidth = 750
+			maxHeight = 800
+			format = left
+			scrollbartype = "standardtext_slider"
+		}
+
+		buttonType = { name = "info_name_birthday_tag" quadTextureSprite = "GFX_ui_button_box" Orientation = "UPPER_LEFT"
+		position = { x = @tags_pos_x y = 326 } font = "cg_16b"  alwaysTransparent=yes
+		buttonText = imas_ui_button_birthday }
+
+		buttonType = { name = "info_name_height_tag" quadTextureSprite = "GFX_ui_button_box" Orientation = "UPPER_LEFT"
+		position = { x = @tags_pos_x y = 384 } font = "cg_16b"  alwaysTransparent=yes
+		buttonText = imas_ui_button_height }
+
+		buttonType = { name = "info_name_weight_tag" quadTextureSprite = "GFX_ui_button_box" Orientation = "UPPER_LEFT"
+		position = { x = @tags_pos_x y = 442 } font = "cg_16b"  alwaysTransparent=yes
+		buttonText = imas_ui_button_weight }
+
+		buttonType = { name = "info_name_para_tag" quadTextureSprite = "GFX_ui_button_box" Orientation = "UPPER_LEFT"
+		position = { x = @tags_pos_x y = 500 } font = "cg_16b"  alwaysTransparent=yes
+		buttonText = imas_ui_button_paran }
+
+		buttonType = { name = "info_name_place_tag" quadTextureSprite = "GFX_ui_button_box" Orientation = "UPPER_LEFT"
+		position = { x = @tags_pos_x y = 558 } font = "cg_16b"  alwaysTransparent=yes
+		buttonText = imas_ui_button_place }	
+
+		buttonType = { name = "info_name_hobby_tag" quadTextureSprite = "GFX_ui_button_box" Orientation = "UPPER_LEFT"
+		position = { x = @tags_pos_x y = 616 } font = "cg_16b"  alwaysTransparent=yes
+		buttonText = imas_ui_button_hobby }	
+
+		buttonType = { name = "info_name_speciality_tag" quadTextureSprite = "GFX_ui_button_box" Orientation = "UPPER_LEFT"
+		position = { x = @tags_pos_x y = 674 } font = "cg_16b"  alwaysTransparent=yes
+		buttonText = imas_ui_button_speciality }	
+
+		buttonType = { name = "info_name_introduce_tag" quadTextureSprite = "GFX_ui_button_box" Orientation = "UPPER_LEFT"
+		position = { x = @tags_pos_x y = 732 } font = "cg_16b"  alwaysTransparent=yes
+		buttonText = imas_ui_button_introduce }	
+
+#--------------------------------------------------------------------------------
+		#TITLE
+		instantTextBoxType={
+				name = "action_title"
+				font = "large_title_font"
+				position = { x = 220 y = 222 }
+				maxWidth = 330
+				maxHeight = 50
+				format = CENTER
+				fixedSize = yes
+				alwaysTransparent = yes
+			}
+			instantTextBoxType={
+				name = "effects_details"
+				font = "large_title_font"
+				position = { x = 1120 y = 218 }
+				maxWidth = 200
+				alwaysTransparent = yes
+				text= "Idols_effect"
+				text_color_code = "H"
+			}
+		# Description Section
+		iconType={
+			name = "alien_message_bg"
+			position = { x = -1032 y = 705 }
+			maxWidth = 400
+			maxHeight = 500
+			format = left
+			#quadTextureSprite= "GFX_alien_buttons_bg"
+		}
+
+
+
+
+
+
+
+#-----------------------------------------------------------------
+
+
+
+				### ALL OF THIS IS HIDDEN OR DISPLACED ! ###
+				### EVENT DIPLO ###
+	
+		containerWindowType = {
+			name = "EVENT_DIPLO"
+			position = { x = 0 y = 0 }
+			#size = { width=563 height=220 }
+			moveable = no
+
+			instantTextBoxType={
+			 name = "action_title"
+			 font = "large_title_font"
+			 position = { x = 215 y = 218 }
+			 maxWidth = 200
+			 text_color_code = "H"
+			 alwaysTransparent = yes
+			}
+			instantTextBoxType={
+			 name = "action_desc"
+			 font = "malgun_goth_24"
+			 position = { x =0 y = 0 }
+			 maxWidth = 500
+			 maxHeight = 180
+			 Orientation = "UPPER_LEFT"
+			 format = center
+			 alwaysTransparent = yes
+			 text_color_code = "H"
+			}
+			#listboxType = { name = "option_list" position = { x = 958 y = 732 } } # hidden option list
+			listboxType = {
+				name = "option_list"
+				position = { x = -800 y = 690 }
+				
+				size = { x = 300 y = 500 }
+				scrollbartype = "standardlistbox_slider"
+				spacing = 20
+				borderSize = { x = 0 y = 0 }
+				Orientation = "CENTERED_UP"
+			}
+			#listboxType = { name = "option_list" position = { x = 958 y = 732 } } # hidden option list
+		}
+				instantTextBoxType = {
+					name = "irm_some_header"
+					font = "malgun_goth_24"
+					text = "ui_faction_header" 	# header text
+					position = { x = -20000 y = 5 }
+					maxWidth = 543
+					maxHeight = 22
+					fixedSize = yes
+					alwaysTransparent = yes
+				}
+		
+				buttonType = { name = "focus_button" position = { x = -1180 y = -1112 } spriteType = "GFX_fleetview_focus" } # hidden
+				instantTextBoxType = { name = "heading" font = "malgun_goth_24" position = { x = -1120 y = -115 } } # hidden
+				buttonType = { name = "alien_message_background" size = { x = 0 y = 0 } position = { x = -1110 y = -11430 } spriteType = "GFX_tiles_dark_area_cut_8" } # hidden
+				buttonType = { name = "confirm_button" quadTextureSprite = "GFX_standard_button_142_34_button" } # hidden
+				containerWindowType = {
+					name = "portrait_background"
+					position = { x = -1117 y = -1145 }
+					size = { width = 0 height = 0 } 	# hide portrait window
+					iconType = { name = "event_picture" spriteType = "GFX_diplomacy_portrait_frame" } # hidden
+					iconType = { name = "portrait" spriteType = "GFX_portrait_character" } # hidden
+				}
+				containerWindowType = {
+					name = "portrait"
+					position = { x = -1117 y = -1145 }
+					size = { width = 0 height = 0 } # hide portrait window
+					iconType = { name = "portrait" spriteType = "GFX_portrait_gamesetup_mask" } # hidden
+					iconType = { name = "black_frame" spriteType = "GFX_diplomacy_portrait_shadow_frame" } # hidden
+					iconType = { name = "stripes_1" spriteType = "GFX_diplomacy_stripes_2" } # hidden
+					iconType = { name = "city_frame" spriteType = "GFX_diplomacy_portrait_frame" } # hidden
+				}
+				iconType = { name = "empire_info_bg" spriteType = "GFX_diplomacy_dark_fade_bg" } # hidden
+				instantTextBoxType={ name = "empire_name" font = "malgun_goth_24" } # hidden
+				instantTextBoxType={ name = "empire_government_type" font = "cg_16b" } # hidden
+				instantTextBoxType={ name = "empire_personality_type" font = "cg_16b" } # hidden
+				OverlappingElementsBoxType = { name = "empire_ethics_icons" position = { x = -1145 y = -11138 } } # hidden
+				iconType = { name = "empire_flag" spriteType = "GFX_empire_flag_128" position = { x = -1125 y = -11235 } } # hidden
+				containerWindowType = {
+					name = "leader_details"
+					position = { x = -1125 y = -1175 }
+					containerWindowType = { name = "empire_traits_box" } # hidden
+					instantTextBoxType = { name = "empire_traits_label" font = "cg_16b" } # hidden
+					overlappingElementsBoxType = { name = "leader_traits" } # hidden
+					instantTextBoxType = { name = "leader_name" font = "cg_16b" } # hidden
+					instantTextBoxType = { name = "leader_species" font = "cg_16b" } # hidden
+				}
+				containerWindowType = {
+					name = "opinion_window"
+					position = { x = -1127 y = -11110 }
+					size = { width = 94 height = 30 }
+					iconType = { name = "their_opinion_icon" spriteType = "GFX_diplomacy_opinion" } # hidden
+					instantTextBoxType = { name = "their_opinion" font = "cg_16b" }
+				}
+
+
+	}
+}

@@ -1,0 +1,78 @@
+
+civic_cg_underground_idols = {
+	modification = no
+	icon = "gfx/interface/icons/governments/civics/civic_inwards_perfection.dds"
+	potential = {
+		country_type = { value = cg_plus_enclave_passive }
+		ethics = { NOT = { value = ethic_gestalt_consciousness } }
+	}
+	random_weight = { base = 5 }
+	modifier = { }
+}
+
+civic_cg_colorful_artists = {
+	modification = no
+	icon = "gfx/interface/icons/governments/civics/civic_inwards_perfection.dds"
+	potential = {
+		country_type = { value = cg_plus_enclave_passive }
+		ethics = { NOT = { value = ethic_gestalt_consciousness } }
+	}
+	random_weight = { base = 5 }
+	modifier = { }
+}
+
+civic_cg_av_directors = {
+	modification = no
+	icon = "gfx/interface/icons/governments/civics/civic_inwards_perfection.dds"
+	potential = {
+		country_type = { value = enclave }
+		ethics = { NOT = { value = ethic_gestalt_consciousness } }
+	}
+	random_weight = { base = 5 }
+	modifier = { }
+}
+
+civic_cg_slave_traders = {
+	modification = no
+	icon = "gfx/interface/icons/governments/civics/civic_inwards_perfection.dds"
+	potential = {
+		country_type = { value = cg_plus_enclave_armed }
+		ethics = { NOT = { value = ethic_gestalt_consciousness } }
+	}
+	random_weight = { base = 5 }
+	modifier = { }
+}
+
+civic_cg_holy_artifects = {
+	modification = no
+	icon = "gfx/interface/icons/governments/civics/civic_inwards_perfection.dds"
+	potential = {
+		country_type = { value = cg_plus_enclave_armed }
+		ethics = { NOT = { value = ethic_gestalt_consciousness } }
+	}
+	random_weight = { base = 5 }
+	modifier = { }
+}
+
+
+civic_cg_gulag = {
+	modification = no
+	icon = "gfx/interface/icons/governments/civics/civic_inwards_perfection.dds"
+	potential = {
+		country_type = { value = cg_plus_enclave_gulags }
+		ethics = { NOT = { value = ethic_gestalt_consciousness } }
+	}
+	random_weight = { base = 5 }
+	modifier = { }
+}
+
+civic_cg_prisons = {
+	modification = no
+	icon = "gfx/interface/icons/governments/civics/civic_inwards_perfection.dds"
+	potential = {
+		country_type = { value = cg_plus_enclave_gulags }
+		ethics = { NOT = { value = ethic_gestalt_consciousness } }
+	}
+	random_weight = { base = 5 }
+	modifier = { }
+}

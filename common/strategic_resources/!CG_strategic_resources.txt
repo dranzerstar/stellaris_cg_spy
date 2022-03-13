@@ -1,0 +1,101 @@
+### System Resources
+########################
+#    Planet Local      #
+########################
+###########################
+### Advanced Resources  ###
+###########################
+# Slave
+excellent_slave = {
+	tradable = no
+	deficit_modifier = excellent_slave_deficit
+	max = 50000
+	ai_weight = {
+		weight = 3
+	}
+}
+
+# 爱液
+love_juice = {
+	tradable = no
+	deficit_modifier = love_juice_deficit
+	ai_weight = {
+		weight = 3
+	}
+}
+
+# 圣光结晶
+holylight_crystal = {
+	tradable = no
+	deficit_modifier = holylight_crystal_deficit
+	ai_weight = {
+		weight = 3
+	}
+}
+
+#圣教徒
+sr_christian = {
+	tradable = no
+	max = 50000
+	prerequisites = {
+		"tech_christian_train"
+	}
+	deficit_modifier = sr_christian_deficit
+	ai_weight = {
+		weight = 3
+	}
+}
+
+#死虫子
+sr_ten = {
+	tradable = no
+	ai_weight = {
+		weight = 3
+	}
+}
+
+#活体触手
+living_tentacles = {
+	tradable = no
+	deficit_modifier = living_tentacles_deficit
+	ai_weight = {
+		weight = 3
+	}
+}
+
+#淫虫分身
+Obscene_separation = {
+	tradable = yes
+	deficit_modifier = Obscene_separation_deficit
+	ai_weight = {
+		weight = 3
+	}
+}
+
+###########################
+###    Rare Resources   ###
+###########################
+# Beauty
+sr_beauty = {
+	tradable = no
+	deficit_modifier = sr_beauty_deficit
+	max = 50000
+	ai_weight = {
+		weight = 50
+	}
+}
+
+# 淫堕值
+suc_sex_point = {
+	tradable = no
+	ai_weight = {
+		weight = 1
+	}
+}
+
+# sr_machinetoys = {
+# 	deficit_modifier = sr_st_deficit
+# 	ai_weight = {
+# 		weight = 100
+# 	}
+# }

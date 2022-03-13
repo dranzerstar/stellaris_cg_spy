@@ -1,0 +1,173 @@
+﻿l_simp_chinese:
+ gov_cg_plus_enclave_underground_idols:0 "地下偶像团"
+ gov_cg_plus_enclave_underground_idols_desc:0 "不在主流媒界上出现的偶像团，主要出现在私人派对进行外派演出项目，因此演出也会能根据主办方要求而更大胆。"
+ RT_producer:0 "制作人"
+
+ gov_cg_plus_enclave_colorful_artists:0 "多彩艺术家工会"
+ gov_cg_plus_enclave_colorful_artists_desc:0 "宇宙中的无底色图黑洞，传说中这个宇宙中的色图都来自这里。"
+ RT_big_tentacle:0 "大触老师"
+
+ gov_cg_plus_enclave_av_directors:0 "彩色直播传销公司"
+ gov_cg_plus_enclave_av_directors_desc:0 "【想要你的产品大卖？让大奶奶美女主播帮你带货品就行了吧】可惜这破宇宙就是那么肤浅。"
+ RT_director:0 "总经理"
+
+ gov_cg_plus_slave_traders:0 "星海性奴拍卖场"
+ gov_cg_plus_slave_traders_desc:0 "非常奇妙的是，你会在这里找到所有被毁灭的国家的领袖，而她们通通在这里获得一种新的本领。"
+ RT_queen:0 "奴隶主"
+
+ gov_cg_plus_holy_artifects:0 "圣光遗物管理所"
+ gov_cg_plus_holy_artifects_desc:0 "守备森验的圣遗物管理所，有人说古老圣歌国度的强大神器都藏在这里，但也有一种说法是这个管理所只是通往宝库的一道扇门，非常神秘呢。"
+ RT_priest:0 "管理员"
+
+ gov_cg_plus_gulag:0 "圣歌救赎团"
+ gov_cg_plus_gulag_desc:0 "为了解救那些被淫堕天神污染而堕落的灵魂而存在的团队，需然主要的工作是进行戒色精神辅导，但是为了抗拒淫堕天神的爪牙的威胁，团员的恒星基地也有一定程度的武装。"
+ RT_warden:0 "团长"
+
+ gov_cg_plus_prisons:0 "高级性奴调教营"
+ gov_cg_plus_prisons_desc:0 "独立魅魔成立的性奴调教营，有专门的调教的程序，可以令全宇宙中最崛强，高傲的女人也能调教成贴服的性奴，除此之外也会生产淫欲宝石和别国进行贸易。 "
+ RT_master:0 "主人"
+
+
+
+
+ civic_cg_prisons:0 "NPC用反VSC黄标用"
+ civic_cg_prisons_desc:0 "NPC用反VSC黄标用"
+ civic_cg_gulag:0 "NPC用反VSC黄标用"
+ civic_cg_gulag_desc:0 "NPC用反VSC黄标用"
+ civic_cg_holy_artifects:0 "NPC用反VSC黄标用"
+ civic_cg_holy_artifects_desc:0 "NPC用反VSC黄标用"
+ civic_cg_underground_idols:0 "NPC用反VSC黄标用"
+ civic_cg_underground_idols_desc:0 "NPC用反VSC黄标用"
+ civic_cg_slave_traders:0 "NPC用反VSC黄标用"
+ civic_cg_slave_traders_desc:0 "NPC用反VSC黄标用"
+ civic_cg_av_directors:0 "NPC用反VSC黄标用"
+ civic_cg_av_directors_desc:0 "NPC用反VSC黄标用"
+ civic_cg_colorful_artists:0 "NPC用反VSC黄标用"
+ civic_cg_colorful_artists_desc:0 "NPC用反VSC黄标用"
+ civic_cg_av_directors:0 "NPC用反VSC黄标用"
+ civic_cg_av_directors_desc:0 "NPC用反VSC黄标用"
+
+
+
+
+##################### cg artist
+ cg_plus_enclaves_art.1000.name:0 "来自多彩艺术家的通信"
+
+
+ CG_plus_enclaves_art.5000.name:0 "本期资助色图"
+ CG_plus_enclaves_art.5000.basetext:0 "收到来自大触的通信，通信抬头写着感谢阁下 【[Root.GetName]】的资助，这是对本期资助的回馈\n\n位置：异次元深蓝P星尘\n坐标号码："
+ CG_plus_enclaves_art.5000.number:0 "9[Root.GetRnumberText][Root.GetRnumberText][Root.GetRnumberText][Root.GetRnumberText][Root.GetRnumberText][Root.GetRnumberText]"
+ CG_plus_enclaves_art.5000.desc:0 "$CG_plus_enclaves_art.5000.basetext$$CG_plus_enclaves_art.5000.number$"
+
+ randnum.0:0 "0"
+ randnum.1:0 "1"
+ randnum.2:0 "2"
+ randnum.3:0 "3"
+ randnum.4:0 "4"
+ randnum.5:0 "5"
+ randnum.6:0 "6"
+ randnum.7:0 "7"
+ randnum.8:0 "8"
+ randnum.9:0 "9"
+
+ cg_plus_artist_sponsor:0 "正在资助多彩艺术家"
+
+ cg_plus_enclaves_art.1999.desc:0 "啊，这里多彩艺术家工会，其实也不是什么工会，就只有我一个人。\n简单就是接异次元定制绘画的地方而已，当然是付费单咯。"
+ cg_plus_enclaves_art.2000.desc:0 "以下为自动回复通信：\n\n变态！无赖！画图不用时间吗？你上班可以不收工资吗？白嫖穷鬼，滚！\n\n然后通信后面有个名为【再联系补偿金额】的附件"
+ cg_plus_enclaves_art.2000.a:0 "nnd!"
+ cg_plus_enclaves_art.2000.b:0 "按通信支付【再联系补偿金额】"
+ cg_plus_enclaves_art.2000.c:0 "小屁孩，我待会把你家拆了。"
+
+ cg_plus_enclaves_art.1000.desc:0 "别问我色图在哪，画好就会寄给各位赞助者。"
+ cg_plus_enclaves_art.1000.desc.trust50:0 "为什么叫大触？笔名而已，但是最主要还是防止一些太空痴汉骚扰。"
+ cg_plus_enclaves_art.1000.desc.trust100:0 "噶哈哈。自己的超强星垒，现在我画什么，宇宙大眼也夹不了我。"
+ cg_plus_enclaves_art.1000.a.sentart:0 "收到刚刚发的色图了吗？"
+ cg_plus_enclaves_art.1000.a.protect:0 "大触老师老师也能拥有自己的星垒呢，噶哈哈。"
+ cg_plus_enclaves_art.1000.a.patron:0 "记得下期也要续费喔"
+ cg_plus_enclaves_art.1000.a.college:0 "大触老师可不是随便开网课的呢，便宜你们咯。"
+
+ cg_plus_enclaves_art.1000.a:0 "来点色图！"
+ cg_plus_enclaves_art.1000.a.reply1:0 "这里不是做慈善，先资助！"
+ cg_plus_enclaves_art.1000.a.reply2:0 "不要白嫖，先付费!"
+
+ cg_plus_enclaves_art.1000.a.reply.c1:0 "在画了，别吵"
+ cg_plus_enclaves_art.1000.a.reply.c2:0 "别烦我，别以为"
+
+ cg_plus_enclaves_art.1000.a.reply.b1:0 "在吵我就举报你！"
+ cg_plus_enclaves_art.1000.a.reply.b2:0 "烦死了！烦死了！"
+
+ cg_plus_enclaves_art.1000.a.reply.d1:0 "你其实是单细胞生物吧？你是个寄吧？"
+ cg_plus_enclaves_art.1000.a.reply.d2:0 "再吵我要把你拉黑了噢！"
+
+ cg_plus_enclaves_art.1000.b:0 "参与资助计划"
+ cg_plus_artist_sponsor:0 "正在资助大触老师"
+ cg_plus_enclaves_art.1000.c:0 "关于异次元画风绘画班"
+ cg_plus_enclaves_art.1000.c.opinion:0 "大触老师对你的好感度需要大于50£opinion£"
+ cg_plus_enclaves_art.1000.d:0 "关于提供保护"
+ cg_plus_enclaves_art.1000.d.opinion:0 "大触老师对你的好感度需要大于120£opinion£"
+ cg_extra_civis_DIE:0 "成为天神阿玛滋祭品吧，异次元！"
+ cg_extra_civis_FUCK:0 "我们不需要异次元，成为肉便器吧。"
+ cg_plus_enclaves_art.1100.desc:0 "没有力气就不能画画，所以想看色图就得付款。/n我保证这是合乎产量的价格！"
+ cg_plus_enclaves_art.1110.desc:0 "开班教画画是没问题的啦，但是只能是网课！离开我的作业空间可是什么都画不出！\n这样吧，你在恒星基地上开$sm_cg_art_college$我可以重这里连接学院进行远程授课。"
+ cg_plus_enclaves_art.1120.desc:0 "最近很多外星怪兽在星系附近穿梭，被这些几百吨重的宇宙大怪物盯上可会令人非常不安的。所以大触老师我呢，有一个小小的请求，我看你国家里面的星垒级恒星基地在前阵子那些靠近的虚空鲸鱼一炮赶走了。"
+ cg_plus_enclaves_art.1120.a:0 "提供安全保证"
+ cg_plus_enclaves_art.1120.a.ct:0 "在大触老师所在的星系建筑星垒级恒星基地以确保大触老师的安全\n同时可以在基地地上建造$sm_cg_artist_palace$"
+ cg_plus_enclaves_art.9001.desc:0 "破坏掉"
+ cg_plus_enclaves_art.9002.desc:0 "破坏掉"
+
+
+
+ sm_cg_art_college:0 "§T异次元画风绘画学院§!"
+ sm_cg_art_college_desc:0 "大触老师亲自开班的绘画学院"
+ sm_cg_artist_palace:0 "多彩艺术家升级基地"
+ sm_cg_artist_palace_desc:0 "为了保安原因帮多彩艺术家建的特殊恒星基地，不但提升了火力，也提供其他的异次元社会研究。"
+ requires_cg_artisans:0 "需要在多彩艺术家所在星系的恒星基地"
+ requires_cg_artist_agreement:0 "需要承诺保护多彩艺术家"
+
+
+############### cg idol 
+ cg_plus_underidol.1000.name:0 "来自283P地下分社的通信"
+
+ cg_plus_underidol.0999.desc:0 "你来到这个名为283P地下分社的太空站，进到开空间后看到一张字条在桌面上。\m\m 看到这个信息代表您来到一个不存在偶像的世界线，而偶像不存在，那地下偶像也不会存在。想看到活泼可爱的偶像那你得先修正你所在的世界线，或许到某蒸汽工坊上，搜寻283就能找到修复世界线的方法。\n\r-----七草叶月"
+
+ cg_plus_underidol.0999.o:0 "什么谜语人？"
+
+ cg_plus_underidol.1999.desc.contacted:0 "您好，[Root.GetRulerName]。有什么好惊讶的，我们不是已经在本社见过面了吗？"
+ cg_plus_underidol.1999.desc.notcontacted:0 "初次见面，我是283P分社的事务员，七草叶月。[Root.GetRulerName]竟然会先来到分社这边我也觉得好惊讶呢。"
+
+ cg_plus_underidol.1999.a:0 "分社？那本社在哪里？"
+ cg_plus_underidol.1999.a.reply:0 "本社已经派联络船队到各个星系寻找赞助商，还请[Root.GetRulerName]耐心等候本社的正式联系。"
+ cg_plus_underidol.1999.b:0 "哪分社是做什么的呢？"
+ cg_plus_underidol.1999.b.reply:0 "分社是主安排私人派对进行外派演出项目，相对，这些特殊项目也会有相对的价格。"
+ cg_plus_underidol.1999.c:0 "就是高级卖春是吧"
+ cg_plus_underidol.1999.c.reply:0 "偶像可是被万千粉丝深爱着的，怎么那么说呢？"
+
+
+
+ cg_plus_underidol.0001.desc.contacted:0 "您好，[Root.GetRulerName]。欢迎来到283P分社，请问今天需要什么服务呢？"
+ cg_plus_underidol.0001.a:0 "哪分社是怎么运作的呢？"
+ cg_plus_underidol.0001.b:0 "申请加入283金黑级会员"
+ cg_plus_underidol.0001.c:0 "有关在国内建设地下偶像表演场地"
+ cg_plus_underidol.0001.d:0 "查询现役地下偶像e"
+ cg_plus_underidol.0001.e:0 "有关爱液研究"
+ cg_plus_underidol.1010.desc:0 "请问需要了解哪项服务？"
+ cg_plus_underidol.1010.a:0 "有关邀请偶像到私人派对演出。"
+ cg_plus_underidol.1010.b:0 "有关演出档期安排。"
+ cg_plus_underidol.1010.c:0 "有关偶像身份保密。"
+
+ cg_plus_underidol.1010.ar:0 "阁下要先登记加入283金黑级会员才可参与地下派对。我们的巡回演出舰队在每一站演出后就会举行地下派对。"
+ cg_plus_underidol.1010.br:0 "为了提高顾客体验，偶像会在登台演出后开展我们的派对活动。出演时间请参考本社的FES LIVE星海巡回演出的演出时间。"
+ cg_plus_underidol.1010.cr:0 "所有活动也是对相方身份进行保密处理，这是为了保证偶像以及客户在派对后依然能够如常生活，我们的派对场所有足够的的安保以及保密安排。"
+ mod_283p_under_member:0 "283p超级粉丝团"
+
+ cg_plus_underidol.1020.desc:0 "阁下要先登记加入283金黑级会员才可参与地下派对。我们的巡回演出舰队在每一站演出后就会举行地下派对。"
+ cg_plus_underidol.1020.desc.o:0 "确认加入会员"
+ not_enough_energy:0 "£energy£不足够"
+ not_enough_influence:0 "£influence£不足够"
+ reconsider:0 "再考虑"
+
+
+ cg_plus_underidol.5000.name:0 "闪耀偶像感谢祭"
+ cg_plus_underidol.5000.desc:0 "地下派对"
+ PARTY:0 "参加"
+ NOT_NOW:0 "拒绝邀请"

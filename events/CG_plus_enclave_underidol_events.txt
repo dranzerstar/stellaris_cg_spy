@@ -1,0 +1,485 @@
+namespace = cg_plus_underidol
+
+
+
+#check if normal idols is installed
+# 0001 diplo gate
+# 0999 no main mod notif
+# 1999 1st establish
+# 5xxx party events
+country_event = {
+	id=cg_plus_underidol.0000
+	hide_window=yes
+	is_triggered_only = yes
+
+	trigger = {
+		from = {
+		has_country_flag = 283p_under_home_country
+		}
+	}
+	
+
+
+	immediate = {
+		if = {
+			limit = { exists = event_target:283p_home_country  }
+			country_event = {
+				id = cg_plus_underidol.0001
+			}
+		}
+		else = {
+			country_event = {
+				id = cg_plus_underidol.0999
+			}
+		}
+	}
+
+}
+
+
+
+
+
+
+
+
+country_event = {
+	id=cg_plus_underidol.0999
+	title = cg_plus_underidol.1000.name
+	desc = cg_plus_underidol.0999.desc
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = "enclave_artist_window"
+	custom_gui_option = "enclave_artist_option"
+	picture_event_data = {
+		#portrait = event_target:283p_under_home_country
+		room = "283_room"
+	}
+
+	trigger = {
+		from = {
+			has_country_flag = 283p_under_home_country
+		}
+
+	}
+
+	immediate = {
+
+		
+	}
+	option={
+		name=cg_plus_underidol.0999.o
+
+
+	}
+
+
+}
+
+country_event = {
+	id = cg_plus_underidol.1999
+	hide_window = no
+	title = cg_plus_underidol.1000.name
+
+	
+
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = "enclave_artist_window"
+	custom_gui_option = "enclave_artist_option"
+	picture_event_data = {
+		portrait = event_target:283p_under_home_country
+		room = "283_room"
+	}
+	trigger = {
+		from = {
+			has_country_flag = 283p_under_home_country
+		}
+		exists = event_target:283p_home_country  
+	}
+
+	desc = {
+		trigger = {
+			has_country_flag = contacted_with_283p_home_country
+		}
+		text = cg_plus_underidol.1999.desc.contacted
+	}
+	desc = {
+		trigger = {
+			NOT = { has_country_flag = contacted_with_283p_home_country }
+		}
+		text = cg_plus_underidol.1999.desc.notcontacted
+	}
+
+	immediate = {
+
+	}
+
+	
+	option = {
+		name = cg_plus_underidol.1999.a
+		response_text = cg_plus_underidol.1999.a.reply
+		is_dialog_only = yes
+		trigger = {
+			NOT = { has_country_flag = contacted_with_283p_home_country }
+		}
+
+	}
+	option = {
+		name = cg_plus_underidol.1999.b
+		is_dialog_only = yes
+		response_text = cg_plus_underidol.1999.b.reply
+	}
+	option = {
+		trigger = { has_country_flag= carnalism_flag }
+		is_dialog_only = yes
+		name = cg_plus_underidol.1999.c
+		response_text = cg_plus_underidol.1999.c.reply
+	}
+
+	option = {
+		name = GOODBYE
+	}
+}
+
+
+
+
+#0001 main diplo screen
+# descriptions 1010
+# 
+# 1020 register service
+# 1030 build 
+# 2000 Idol Catalogue
+# GOODBYE
+#
+#
+
+
+
+country_event = {
+	id = cg_plus_underidol.0001
+	hide_window = no
+	title = cg_plus_underidol.1000.name
+
+	
+
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = "enclave_artist_window"
+	custom_gui_option = "enclave_artist_option"
+	picture_event_data = {
+		portrait = event_target:283p_under_home_country
+		room = "283_room"
+	}
+	trigger = {
+		exists = event_target:283p_home_country  
+	}
+
+	desc = {
+		trigger = { has_country_flag = contacted_with_283p_home_country }
+		text = cg_plus_underidol.0001.desc.contacted
+	}
+
+
+	immediate = {
+
+	}
+
+	
+	option = {
+		name = cg_plus_underidol.0001.a
+		hidden_effect = {
+			country_event = {
+				id = cg_plus_underidol.1010
+			}
+		}
+	}
+	option = {
+		name = cg_plus_underidol.0001.b
+		hidden_effect = {
+			country_event = {
+				id = cg_plus_underidol.1020
+			}
+		}
+	}
+	option = {
+		name = cg_plus_underidol.0001.d
+		hidden_effect = {
+			country_event = {
+				id = cg_plus_underidol.2000
+			}
+		}
+	}
+
+
+
+	option = {
+		name = GOODBYE
+	}
+}
+
+
+
+country_event = {
+	id = cg_plus_underidol.1010
+	hide_window = no
+	title = cg_plus_underidol.1000.name
+
+	
+
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = "enclave_artist_window"
+	custom_gui_option = "enclave_artist_option"
+	picture_event_data = {
+		portrait = event_target:283p_under_home_country
+		room = "283_room"
+	}
+	trigger = {
+		exists = event_target:283p_home_country  
+	}
+
+	desc = cg_plus_underidol.1010.desc
+
+
+	immediate = {
+
+	}
+
+	
+	option = {
+		name = cg_plus_underidol.1010.a
+		response_text = cg_plus_underidol.1010.ar
+		is_dialog_only = yes
+	}
+	option = {
+		name = cg_plus_underidol.1010.b
+		response_text = cg_plus_underidol.1010.br
+		is_dialog_only = yes
+	}
+	option = {
+		name = cg_plus_underidol.1010.c
+		response_text = cg_plus_underidol.1010.cr
+		is_dialog_only = yes
+	}
+
+	option = {
+		name = BACK
+	}
+	after = {
+		country_event = {
+			id = cg_plus_underidol.0001
+		}
+	}
+}
+
+
+
+country_event = {
+	id = cg_plus_underidol.1020
+	title = cg_plus_underidol.1000.name
+	desc = cg_plus_underidol.1020.desc
+
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = "enclave_artist_window"
+	custom_gui_option = "enclave_artist_option"
+
+	picture_event_data = {
+		portrait = event_target:283p_under_home_country
+		room = "283_room"
+	}
+
+
+	immediate = {
+
+	}
+
+	option = {
+		name =  cg_plus_underidol.1020.desc.o 
+		
+		allow = {
+			resource_stockpile_compare = { resource = energy value >= 10000 }
+			custom_tooltip = {
+				fail_text = not_enough_energy
+			}
+			resource_stockpile_compare = { resource = influence value >= 300 }
+			custom_tooltip = {
+				fail_text = not_enough_influence
+			}
+		}
+	
+		hidden_effect={
+			set_country_flag = 283p_under_member
+			add_modifier = {
+				modifier = mod_283p_under_member
+			}
+			event_target:283p_under_home_country = {
+				add_trust = {
+					who = root
+					amount = 20
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = reconsider
+
+	}
+	after = {
+		country_event = {
+			id = cg_plus_underidol.0001
+		}
+	}
+
+}
+
+
+
+
+country_event = {
+	id = cg_plus_underidol.5000
+	title = cg_plus_underidol.5000.name
+	desc = cg_plus_underidol.5000.desc
+	is_triggered_only = yes
+	picture = GFX_evt_debut
+	trigger = {
+		
+	}
+
+
+
+
+
+	option = {
+		name = PARTY
+		add_resource = {
+			minor_artifacts = -5
+		}
+		
+		hidden_effect = {
+			event_target:283p_under_home_country = {
+				add_trust = {
+					who = root
+					amount = 20
+				}
+			}
+			set_timed_country_flag = {
+				flag = recent_had_party 
+				years=5
+			}
+		}
+	}
+	option = {
+		name = NOT_NOW
+	}
+
+
+
+
+}
+
+
+
+
+country_event={
+	id=cg_plus_underidol.2000
+	hide_window=no
+	
+	is_triggered_only = yes
+	fire_only_once = no
+	show_sound = imas_song_BGM_n
+	custom_gui = cg_plus_under_imas_gui_idols
+	diplomatic = yes
+
+
+
+	title= Idols_catalogue
+
+	immediate = {
+		set_variable = { which = idols_page value = 1 }
+	}
+
+
+	option={
+		name=close
+	}
+
+
+
+
+}
+
+
+country_event={
+	id=cg_plus_underidol.2100
+	hide_window=no
+	diplomatic = yes
+	is_triggered_only = yes
+	fire_only_once = no
+
+	custom_gui = cg_plus_under_imas_gui_detail
+	desc = { trigger = { check_variable = {which= idols_select value = 01 }}
+	text = Idols_detail_01 }
+	desc = { trigger = { check_variable = {which= idols_select value = 02 }}
+	text = Idols_detail_02 }
+	desc = { trigger = { check_variable = {which= idols_select value = 03 }}
+	text = Idols_detail_03 }
+	desc = { trigger = { check_variable = {which= idols_select value = 04 }}
+	text = Idols_detail_04 }
+	desc = { trigger = { check_variable = {which= idols_select value = 05 }}
+	text = Idols_detail_05 }
+	desc = { trigger = { check_variable = {which= idols_select value = 06 }}
+	text = Idols_detail_06 }
+	desc = { trigger = { check_variable = {which= idols_select value = 07 }}
+	text = Idols_detail_07 }
+	desc = { trigger = { check_variable = {which= idols_select value = 08 }}
+	text = Idols_detail_08 }
+	desc = { trigger = { check_variable = {which= idols_select value = 09 }}
+	text = Idols_detail_09 }
+	desc = { trigger = { check_variable = {which= idols_select value = 10 }}
+	text = Idols_detail_10 }
+	desc = { trigger = { check_variable = {which= idols_select value = 11 }}
+	text = Idols_detail_11 }
+	desc = { trigger = { check_variable = {which= idols_select value = 12 }}
+	text = Idols_detail_12 }
+	desc = { trigger = { check_variable = {which= idols_select value = 13 }}
+	text = Idols_detail_13 }
+	desc = { trigger = { check_variable = {which= idols_select value = 14 }}
+	text = Idols_detail_14 }
+	desc = { trigger = { check_variable = {which= idols_select value = 15 }}
+	text = Idols_detail_15 }
+	desc = { trigger = { check_variable = {which= idols_select value = 16 }}
+	text = Idols_detail_16 }
+	desc = { trigger = { check_variable = {which= idols_select value = 17 }}
+	text = Idols_detail_17 }
+	desc = { trigger = { check_variable = {which= idols_select value = 18 }}
+	text = Idols_detail_18 }
+	desc = { trigger = { check_variable = {which= idols_select value = 19 }}
+	text = Idols_detail_19 }
+	desc = { trigger = { check_variable = {which= idols_select value = 20 }}
+	text = Idols_detail_20 }
+	desc = { trigger = { check_variable = {which= idols_select value = 21 }}
+	text = Idols_detail_21 }
+	desc = { trigger = { check_variable = {which= idols_select value = 22 }}
+	text = Idols_detail_22 }
+	desc = { trigger = { check_variable = {which= idols_select value = 23 }}
+	text = Idols_detail_23 }
+	desc = { trigger = { check_variable = {which= idols_select value = 24 }}
+	text = Idols_detail_24 }
+	desc = { trigger = { check_variable = {which= idols_select value = 25 }}
+	text = Idols_detail_25 }
+
+	
+
+
+	
+
+	title= Idols_detail
+	option={
+		name=close
+		#country_event={ id= imas_idols_menu.0000 }
+	}
+}

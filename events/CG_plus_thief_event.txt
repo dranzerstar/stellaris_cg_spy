@@ -44,6 +44,7 @@ event={
 								is_species_class = Houkai3rd
 								} 
 						  	NOT = { has_country_flag = cg_plus_thief_target_empty }
+							is_country_type=default
 						}
 			set_country_flag = cg_plus_thief_target
 

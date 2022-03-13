@@ -1,0 +1,278 @@
+spriteTypes = {
+
+	#ui elements
+	spriteType = {
+		name = "GFX_under_imas_combined_bg"
+		texturefile = "gfx/interface/imas_ui/dark_pop_combined_bg.dds"
+	#	alwaysTransparent = yes
+	}
+	spriteType = {
+		name = "GFX_imas_left_bg"
+		texturefile = "gfx/interface/imas_ui/pop_large_bg.dds"
+		#alwaysTransparent = yes
+	}
+	spriteType = {
+		name = "GFX_imas_right_bg"
+		texturefile = "gfx/interface/imas_ui/pop_side_bg.dds"
+		#alwaysTransparent = yes
+	}
+	spriteType = {
+		name = "GFX_under_imas_box_bg"
+		texturefile = "gfx/interface/imas_ui/dark_box_bg.dds"
+		alwaysTransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_idol_card_frame"
+		texturefile = "gfx/interface/imas_ui/card_frame.dds"  
+		alwaysTransparent = yes
+	}
+
+
+
+	spriteType = {
+		name = "GFX_ui_button_box"
+		texturefile = "gfx/interface/imas_ui/ele_bg.dds"  
+		alwaysTransparent = yes
+	}
+	spriteType = {
+		name = "GFX_ui_button_box_l"
+		texturefile = "gfx/interface/imas_ui/ele_l_bg.dds"  
+		alwaysTransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_ui_text_box"
+		texturefile = "gfx/interface/imas_ui/ele_text_bg.dds"  
+		alwaysTransparent = yes
+	}
+
+
+	spriteType = {
+		name = "GFX_idol_icon_locked"
+		texturefile = "gfx/interface/imas_ui/idol_locked.dds"
+		alwaysTransparent = yes
+	}
+
+# live asset
+	spriteType = {
+		name = "GFX_idol_change_button"
+		texturefile = "gfx/interface/imas_ui/change_button.dds"
+		
+	}
+
+	spriteType = {
+		name = "GFX_idol_live_frame"
+		texturefile = "gfx/interface/imas_ui/live_frame.dds"
+		alwaysTransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_idol_live_frame_bg"
+		texturefile = "gfx/interface/imas_ui/live_frame_bg.dds"
+		#alwaysTransparent = yes
+	}
+
+
+	spriteType = {
+		name = "GFX_idol_live_bg"
+		texturefile = "gfx/interface/imas_ui/live_bg.dds"
+		alwaysTransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_idol_title_bg"
+		texturefile = "gfx/interface/imas_ui/title_bg.dds"
+		alwaysTransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_idol_effect_bg"
+		texturefile = "gfx/interface/imas_ui/effect_bg.dds"
+		
+	}
+
+	spriteType = {
+		name = "GFX_idol_ele_text_long_bg"
+		texturefile = "gfx/interface/imas_ui/ele_text_long_bg.dds"
+		alwaysTransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_idol_button_pink_animated"
+		texturefile = "gfx/interface/imas_ui/button_pink_animated.dds"
+		
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua" 
+		noOfFrames = 3
+	}
+	spriteType = {
+		name = "GFX_idol_button_long_animated"
+		texturefile = "gfx/interface/imas_ui/button_long_animated.dds"
+		
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua" 
+		noOfFrames = 3
+	}
+
+
+
+	#------------------------idol pictures
+	spriteType = {
+		name = "GFX_grp_icon_01"
+		texturefile = "gfx/interface/imas_ui/gp1.dds"
+		
+	}
+
+	spriteType = {
+		name = "GFX_grp_icon_01"
+		texturefile = "gfx/interface/imas_ui/gp1.dds"
+	}
+	spriteType = {
+		name = "GFX_grp_icon_02"
+		texturefile = "gfx/interface/imas_ui/gp2.dds"
+	}
+	spriteType = {
+		name = "GFX_grp_icon_03"
+		texturefile = "gfx/interface/imas_ui/gp3.dds"
+	}
+	spriteType = {
+		name = "GFX_grp_icon_04"
+		texturefile = "gfx/interface/imas_ui/gp4.dds"
+	}
+	spriteType = {
+		name = "GFX_grp_icon_05"
+		texturefile = "gfx/interface/imas_ui/gp5.dds"
+	}
+	spriteType = {
+		name = "GFX_grp_icon_06"
+		texturefile = "gfx/interface/imas_ui/gp6.dds"
+	}
+	spriteType = {
+		name = "GFX_grp_icon_07"
+		texturefile = "gfx/interface/imas_ui/gp7.dds"
+	}
+
+
+	spriteType = { name = "GFX_u_idol_icon_01" texturefile = "gfx/interface/imas_ui/u_idol01.dds" }
+	spriteType = { name = "GFX_u_idol_icon_02" texturefile = "gfx/interface/imas_ui/u_idol02.dds" }
+	spriteType = { name = "GFX_u_idol_icon_03" texturefile = "gfx/interface/imas_ui/u_idol03.dds" }
+	spriteType = { name = "GFX_u_idol_icon_04" texturefile = "gfx/interface/imas_ui/u_idol04.dds" }
+	spriteType = { name = "GFX_u_idol_icon_05" texturefile = "gfx/interface/imas_ui/u_idol05.dds" }
+	spriteType = { name = "GFX_u_idol_icon_06" texturefile = "gfx/interface/imas_ui/u_idol06.dds" }
+	spriteType = { name = "GFX_u_idol_icon_07" texturefile = "gfx/interface/imas_ui/u_idol07.dds" }
+	spriteType = { name = "GFX_u_idol_icon_08" texturefile = "gfx/interface/imas_ui/u_idol08.dds" }
+	spriteType = { name = "GFX_u_idol_icon_09" texturefile = "gfx/interface/imas_ui/u_idol09.dds" }
+	spriteType = { name = "GFX_u_idol_icon_10" texturefile = "gfx/interface/imas_ui/u_idol10.dds" }
+	spriteType = { name = "GFX_u_idol_icon_11" texturefile = "gfx/interface/imas_ui/u_idol11.dds" }
+	spriteType = { name = "GFX_u_idol_icon_12" texturefile = "gfx/interface/imas_ui/u_idol12.dds" }
+	spriteType = { name = "GFX_u_idol_icon_13" texturefile = "gfx/interface/imas_ui/u_idol13.dds" }
+	spriteType = { name = "GFX_u_idol_icon_14" texturefile = "gfx/interface/imas_ui/u_idol14.dds" }
+	spriteType = { name = "GFX_u_idol_icon_15" texturefile = "gfx/interface/imas_ui/u_idol15.dds" }
+	spriteType = { name = "GFX_u_idol_icon_16" texturefile = "gfx/interface/imas_ui/u_idol16.dds" }
+	spriteType = { name = "GFX_u_idol_icon_17" texturefile = "gfx/interface/imas_ui/u_idol17.dds" }
+	spriteType = { name = "GFX_u_idol_icon_18" texturefile = "gfx/interface/imas_ui/u_idol18.dds" }
+	spriteType = { name = "GFX_u_idol_icon_19" texturefile = "gfx/interface/imas_ui/u_idol19.dds" }
+	spriteType = { name = "GFX_u_idol_icon_20" texturefile = "gfx/interface/imas_ui/u_idol20.dds" }
+	spriteType = { name = "GFX_u_idol_icon_21" texturefile = "gfx/interface/imas_ui/u_idol21.dds" }
+	spriteType = { name = "GFX_u_idol_icon_22" texturefile = "gfx/interface/imas_ui/u_idol22.dds" }
+	spriteType = { name = "GFX_u_idol_icon_23" texturefile = "gfx/interface/imas_ui/u_idol23.dds" }
+	spriteType = { name = "GFX_u_idol_icon_24" texturefile = "gfx/interface/imas_ui/u_idol24.dds" }
+	spriteType = { name = "GFX_u_idol_icon_25" texturefile = "gfx/interface/imas_ui/u_idol25.dds" }
+
+
+
+
+	spriteType = { name = "GFX_idol_card_01" texturefile = "gfx/interface/imas_ui/idol_card_01.dds" }
+	spriteType = { name = "GFX_idol_card_02" texturefile = "gfx/interface/imas_ui/idol_card_02.dds" }
+	spriteType = { name = "GFX_idol_card_03" texturefile = "gfx/interface/imas_ui/idol_card_03.dds" }
+	spriteType = { name = "GFX_idol_card_04" texturefile = "gfx/interface/imas_ui/idol_card_04.dds" }
+	spriteType = { name = "GFX_idol_card_05" texturefile = "gfx/interface/imas_ui/idol_card_05.dds" }
+	spriteType = { name = "GFX_idol_card_06" texturefile = "gfx/interface/imas_ui/idol_card_06.dds" }
+	spriteType = { name = "GFX_idol_card_07" texturefile = "gfx/interface/imas_ui/idol_card_07.dds" }
+	spriteType = { name = "GFX_idol_card_08" texturefile = "gfx/interface/imas_ui/idol_card_08.dds" }
+	spriteType = { name = "GFX_idol_card_09" texturefile = "gfx/interface/imas_ui/idol_card_09.dds" }
+	spriteType = { name = "GFX_idol_card_10" texturefile = "gfx/interface/imas_ui/idol_card_10.dds" }
+	spriteType = { name = "GFX_idol_card_11" texturefile = "gfx/interface/imas_ui/idol_card_11.dds" }
+	spriteType = { name = "GFX_idol_card_12" texturefile = "gfx/interface/imas_ui/idol_card_12.dds" }
+	spriteType = { name = "GFX_idol_card_13" texturefile = "gfx/interface/imas_ui/idol_card_13.dds" }
+	spriteType = { name = "GFX_idol_card_14" texturefile = "gfx/interface/imas_ui/idol_card_14.dds" }
+	spriteType = { name = "GFX_idol_card_15" texturefile = "gfx/interface/imas_ui/idol_card_15.dds" }
+	spriteType = { name = "GFX_idol_card_16" texturefile = "gfx/interface/imas_ui/idol_card_16.dds" }
+	spriteType = { name = "GFX_idol_card_17" texturefile = "gfx/interface/imas_ui/idol_card_17.dds" }
+	spriteType = { name = "GFX_idol_card_18" texturefile = "gfx/interface/imas_ui/idol_card_18.dds" }
+	spriteType = { name = "GFX_idol_card_19" texturefile = "gfx/interface/imas_ui/idol_card_19.dds" }
+	spriteType = { name = "GFX_idol_card_20" texturefile = "gfx/interface/imas_ui/idol_card_20.dds" }
+	spriteType = { name = "GFX_idol_card_21" texturefile = "gfx/interface/imas_ui/idol_card_21.dds" }
+	spriteType = { name = "GFX_idol_card_22" texturefile = "gfx/interface/imas_ui/idol_card_22.dds" }
+	spriteType = { name = "GFX_idol_card_23" texturefile = "gfx/interface/imas_ui/idol_card_23.dds" }
+	spriteType = { name = "GFX_idol_card_24" texturefile = "gfx/interface/imas_ui/idol_card_24.dds" }
+	spriteType = { name = "GFX_idol_card_25" texturefile = "gfx/interface/imas_ui/idol_card_25.dds" }
+
+
+
+	#live ui asset
+	
+
+	spriteType = { name = "GFX_live_idol_card_01" texturefile = "gfx/interface/imas_ui/live_cropped/frame_01.dds" masking_texture="gfx/interface/imas_ui/live_frame_mask.dds" }
+	spriteType = { name = "GFX_live_idol_card_02" texturefile = "gfx/interface/imas_ui/live_cropped/frame_02.dds" masking_texture="gfx/interface/imas_ui/live_frame_mask.dds" }
+	spriteType = { name = "GFX_live_idol_card_03" texturefile = "gfx/interface/imas_ui/live_cropped/frame_03.dds" masking_texture="gfx/interface/imas_ui/live_frame_mask.dds" }
+	spriteType = { name = "GFX_live_idol_card_04" texturefile = "gfx/interface/imas_ui/live_cropped/frame_04.dds" masking_texture="gfx/interface/imas_ui/live_frame_mask.dds" }
+	spriteType = { name = "GFX_live_idol_card_05" texturefile = "gfx/interface/imas_ui/live_cropped/frame_05.dds" masking_texture="gfx/interface/imas_ui/live_frame_mask.dds" }
+	spriteType = { name = "GFX_live_idol_card_06" texturefile = "gfx/interface/imas_ui/live_cropped/frame_06.dds" masking_texture="gfx/interface/imas_ui/live_frame_mask.dds" }
+	spriteType = { name = "GFX_live_idol_card_07" texturefile = "gfx/interface/imas_ui/live_cropped/frame_07.dds" masking_texture="gfx/interface/imas_ui/live_frame_mask.dds" }
+	spriteType = { name = "GFX_live_idol_card_08" texturefile = "gfx/interface/imas_ui/live_cropped/frame_08.dds" masking_texture="gfx/interface/imas_ui/live_frame_mask.dds" }
+	spriteType = { name = "GFX_live_idol_card_09" texturefile = "gfx/interface/imas_ui/live_cropped/frame_09.dds" masking_texture="gfx/interface/imas_ui/live_frame_mask.dds" }
+	spriteType = { name = "GFX_live_idol_card_10" texturefile = "gfx/interface/imas_ui/live_cropped/frame_10.dds" masking_texture="gfx/interface/imas_ui/live_frame_mask.dds" }
+	spriteType = { name = "GFX_live_idol_card_11" texturefile = "gfx/interface/imas_ui/live_cropped/frame_11.dds" masking_texture="gfx/interface/imas_ui/live_frame_mask.dds" }
+	spriteType = { name = "GFX_live_idol_card_12" texturefile = "gfx/interface/imas_ui/live_cropped/frame_12.dds" masking_texture="gfx/interface/imas_ui/live_frame_mask.dds" }
+	spriteType = { name = "GFX_live_idol_card_13" texturefile = "gfx/interface/imas_ui/live_cropped/frame_13.dds" masking_texture="gfx/interface/imas_ui/live_frame_mask.dds" }
+	spriteType = { name = "GFX_live_idol_card_14" texturefile = "gfx/interface/imas_ui/live_cropped/frame_14.dds" masking_texture="gfx/interface/imas_ui/live_frame_mask.dds" }
+	spriteType = { name = "GFX_live_idol_card_15" texturefile = "gfx/interface/imas_ui/live_cropped/frame_15.dds" masking_texture="gfx/interface/imas_ui/live_frame_mask.dds" }
+	spriteType = { name = "GFX_live_idol_card_16" texturefile = "gfx/interface/imas_ui/live_cropped/frame_16.dds" masking_texture="gfx/interface/imas_ui/live_frame_mask.dds" }
+	spriteType = { name = "GFX_live_idol_card_17" texturefile = "gfx/interface/imas_ui/live_cropped/frame_17.dds" masking_texture="gfx/interface/imas_ui/live_frame_mask.dds" }
+	spriteType = { name = "GFX_live_idol_card_18" texturefile = "gfx/interface/imas_ui/live_cropped/frame_18.dds" masking_texture="gfx/interface/imas_ui/live_frame_mask.dds" }
+	spriteType = { name = "GFX_live_idol_card_19" texturefile = "gfx/interface/imas_ui/live_cropped/frame_19.dds" masking_texture="gfx/interface/imas_ui/live_frame_mask.dds" }
+	spriteType = { name = "GFX_live_idol_card_20" texturefile = "gfx/interface/imas_ui/live_cropped/frame_20.dds" masking_texture="gfx/interface/imas_ui/live_frame_mask.dds" }
+	spriteType = { name = "GFX_live_idol_card_21" texturefile = "gfx/interface/imas_ui/live_cropped/frame_21.dds" masking_texture="gfx/interface/imas_ui/live_frame_mask.dds" }
+	spriteType = { name = "GFX_live_idol_card_22" texturefile = "gfx/interface/imas_ui/live_cropped/frame_22.dds" masking_texture="gfx/interface/imas_ui/live_frame_mask.dds" }
+	spriteType = { name = "GFX_live_idol_card_23" texturefile = "gfx/interface/imas_ui/live_cropped/frame_23.dds" masking_texture="gfx/interface/imas_ui/live_frame_mask.dds" }
+	spriteType = { name = "GFX_live_idol_card_24" texturefile = "gfx/interface/imas_ui/live_cropped/frame_24.dds" masking_texture="gfx/interface/imas_ui/live_frame_mask.dds" }
+	spriteType = { name = "GFX_live_idol_card_25" texturefile = "gfx/interface/imas_ui/live_cropped/frame_25.dds" masking_texture="gfx/interface/imas_ui/live_frame_mask.dds" }
+	
+	#text icons
+
+	spriteType = { name = "GFX_text_idol_icon_01" texturefile = "gfx/interface/icons/text_icons/idol01.dds" }                                                                                                                                                                 
+	spriteType = { name = "GFX_text_idol_icon_02" texturefile = "gfx/interface/icons/text_icons/idol02.dds" }                                                                                                                                                                 
+	spriteType = { name = "GFX_text_idol_icon_03" texturefile = "gfx/interface/icons/text_icons/idol03.dds" }                                                                                                                                                                 
+	spriteType = { name = "GFX_text_idol_icon_04" texturefile = "gfx/interface/icons/text_icons/idol04.dds" }                                                                                                                                                                 
+	spriteType = { name = "GFX_text_idol_icon_05" texturefile = "gfx/interface/icons/text_icons/idol05.dds" }                                                                                                                                                                 
+	spriteType = { name = "GFX_text_idol_icon_06" texturefile = "gfx/interface/icons/text_icons/idol06.dds" }                                                                                                                                                                 
+	spriteType = { name = "GFX_text_idol_icon_07" texturefile = "gfx/interface/icons/text_icons/idol07.dds" }                                                                                                                                                                 
+	spriteType = { name = "GFX_text_idol_icon_08" texturefile = "gfx/interface/icons/text_icons/idol08.dds" }                                                                                                                                                                 
+	spriteType = { name = "GFX_text_idol_icon_09" texturefile = "gfx/interface/icons/text_icons/idol09.dds" }                                                                                                                                                                 
+	spriteType = { name = "GFX_text_idol_icon_10" texturefile = "gfx/interface/icons/text_icons/idol10.dds" }                                                                                                                                                                 
+	spriteType = { name = "GFX_text_idol_icon_11" texturefile = "gfx/interface/icons/text_icons/idol11.dds" }                                                                                                                                                                 
+	spriteType = { name = "GFX_text_idol_icon_12" texturefile = "gfx/interface/icons/text_icons/idol12.dds" }                                                                                                                                                                 
+	spriteType = { name = "GFX_text_idol_icon_13" texturefile = "gfx/interface/icons/text_icons/idol13.dds" }                                                                                                                                                                 
+	spriteType = { name = "GFX_text_idol_icon_14" texturefile = "gfx/interface/icons/text_icons/idol14.dds" }                                                                                                                                                                 
+	spriteType = { name = "GFX_text_idol_icon_15" texturefile = "gfx/interface/icons/text_icons/idol15.dds" }                                                                                                                                                                 
+	spriteType = { name = "GFX_text_idol_icon_16" texturefile = "gfx/interface/icons/text_icons/idol16.dds" }                                                                                                                                                                 
+	spriteType = { name = "GFX_text_idol_icon_17" texturefile = "gfx/interface/icons/text_icons/idol17.dds" }                                                                                                                                                                 
+	spriteType = { name = "GFX_text_idol_icon_18" texturefile = "gfx/interface/icons/text_icons/idol18.dds" }                                                                                                                                                                 
+	spriteType = { name = "GFX_text_idol_icon_19" texturefile = "gfx/interface/icons/text_icons/idol19.dds" }                                                                                                                                                                 
+	spriteType = { name = "GFX_text_idol_icon_20" texturefile = "gfx/interface/icons/text_icons/idol20.dds" }                                                                                                                                                                 
+	spriteType = { name = "GFX_text_idol_icon_21" texturefile = "gfx/interface/icons/text_icons/idol21.dds" }                                                                                                                                                                 
+	spriteType = { name = "GFX_text_idol_icon_22" texturefile = "gfx/interface/icons/text_icons/idol22.dds" }                                                                                                                                                                 
+	spriteType = { name = "GFX_text_idol_icon_23" texturefile = "gfx/interface/icons/text_icons/idol23.dds" }                                                                                                                                                                 
+	spriteType = { name = "GFX_text_idol_icon_24" texturefile = "gfx/interface/icons/text_icons/idol24.dds" }                                                                                                                                                                 
+	spriteType = { name = "GFX_text_idol_icon_25" texturefile = "gfx/interface/icons/text_icons/idol25.dds" }                                                                                                                                                                 
+	
+	spriteType = { name = "GFX_text_idol_grp_icon_01" texturefile = "gfx/interface/icons/text_icons/idolg01.dds" }                                                                                                                                                                 
+	spriteType = { name = "GFX_text_idol_grp_icon_02" texturefile = "gfx/interface/icons/text_icons/idolg02.dds" }                                                                                                                                                                 
+	spriteType = { name = "GFX_text_idol_grp_icon_03" texturefile = "gfx/interface/icons/text_icons/idolg03.dds" }                                                                                                                                                                 
+	spriteType = { name = "GFX_text_idol_grp_icon_04" texturefile = "gfx/interface/icons/text_icons/idolg04.dds" }                                                                                                                                                                 
+	spriteType = { name = "GFX_text_idol_grp_icon_05" texturefile = "gfx/interface/icons/text_icons/idolg05.dds" }                                                                                                                                                                 
+	spriteType = { name = "GFX_text_idol_grp_icon_06" texturefile = "gfx/interface/icons/text_icons/idolg06.dds" }                                                                                                                                                                 
+	spriteType = { name = "GFX_text_idol_grp_icon_07" texturefile = "gfx/interface/icons/text_icons/idolg07.dds" }
+
+
+}

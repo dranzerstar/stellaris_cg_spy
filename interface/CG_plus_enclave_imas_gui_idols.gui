@@ -1,0 +1,549 @@
+guiTypes = {
+	containerWindowType = {
+		name = "cg_plus_under_imas_gui_idols"
+		orientation = center
+		origo = center
+		moveable = yes
+		size = { width = 1920 height = 1080 }
+
+		background = { name = "background" quadTextureSprite ="GFX_imas_combined_bg" position = { x = 150 y = 200 } }
+		iconType = { name = "background" quadTextureSprite ="GFX_imas_combined_bg" position = { x = 150 y = 200 } alwaysTransparent = yes}
+		iconType = { name = "hex_bg" spriteType = "GFX_hex_bg" position = { x = -1000 y = -1400 } alwaysTransparent = yes }
+		iconType = { name = "empire_header_line" quadTextureSprite = "GFX_line_long" position = { x = -1000 y = 22 } alwaysTransparent = yes }
+
+
+
+		buttonType = {
+			name = "close"
+			quadTextureSprite = "GFX_close"
+			position = { x=1470 y = 215 }
+			
+			shortcut = "ESCAPE"
+			clicksound = "back_click"
+		}
+
+		# Custom header
+
+#--------------------------------------------------------------------------
+# layout elements###### box with offset
+		@idolb_icon_x_c1 = 250
+		@idolb_icon_x_c2 = 520
+		@idolb_icon_x_c3 = 780
+		@idolb_icon_y_r1 = 303
+		@idolb_icon_y_r2 = 543
+####################  icons
+		@idol_icon_x_c1 = 270
+		@idol_icon_x_c2 = 540
+		@idol_icon_x_c3 = 800
+		@idol_icon_y_r1 = 300
+		@idol_icon_y_r2 = 540
+####################  textlabel under icons
+		@idol_label_x_c1 = 272
+		@idol_label_x_c2 = 540
+		@idol_label_x_c3 = 800
+		@idol_label_y_r1 = 470
+		@idol_label_y_r2 = 710
+
+iconType = { name = "box1" quadTextureSprite = "GFX_under_imas_box_bg" position = { x = @idolb_icon_x_c1 y = @idolb_icon_y_r1 } alwaysTransparent = yes }
+iconType = { name = "box2" quadTextureSprite = "GFX_under_imas_box_bg" position = { x = @idolb_icon_x_c2 y = @idolb_icon_y_r1 } alwaysTransparent = yes }
+iconType = { name = "box3" quadTextureSprite = "GFX_under_imas_box_bg" position = { x = @idolb_icon_x_c3 y = @idolb_icon_y_r1 } alwaysTransparent = yes }
+iconType = { name = "box4" quadTextureSprite = "GFX_under_imas_box_bg" position = { x = @idolb_icon_x_c1 y = @idolb_icon_y_r2 } alwaysTransparent = yes }
+iconType = { name = "box5" quadTextureSprite = "GFX_under_imas_box_bg" position = { x = @idolb_icon_x_c2 y = @idolb_icon_y_r2 } alwaysTransparent = yes }
+#--------------------------------------------------------------------------
+#grp icons
+		@grp_icon_x_c1 = 1071
+		@grp_icon_x_c2 = 1300
+		@grp_icon_y_r1 = 280
+		@grp_icon_y_r2 = 410
+		@grp_icon_y_r3 = 540
+		@grp_icon_y_r4 = 670
+
+
+		effectButtonType = {
+			name = "grp_icon_01"
+			quadTextureSprite = "GFX_grp_icon_01"
+			Orientation = "UPPER_LEFT"
+			position = { x = @grp_icon_x_c1 y = @grp_icon_y_r1  }
+			effect = "imas_gui_idols_grp_1"
+		}
+		effectButtonType = {
+			name = "grp_icon_02"
+			quadTextureSprite = "GFX_grp_icon_02"
+			Orientation = "UPPER_LEFT"
+			position = { x = @grp_icon_x_c1 y = @grp_icon_y_r2  }
+			effect = "imas_gui_idols_grp_2"
+		}
+		effectButtonType = {
+			name = "grp_icon_03"
+			quadTextureSprite = "GFX_grp_icon_03"
+			Orientation = "UPPER_LEFT"
+			position = { x = @grp_icon_x_c1 y = @grp_icon_y_r3  }
+			effect = "imas_gui_idols_grp_3"
+		}
+		effectButtonType = {
+			name = "grp_icon_04"
+			quadTextureSprite = "GFX_grp_icon_04"
+			Orientation = "UPPER_LEFT"
+			position = { x = @grp_icon_x_c1 y = @grp_icon_y_r4  }
+			effect = "imas_gui_idols_grp_4"
+		}
+		effectButtonType = {
+			name = "grp_icon_05"
+			quadTextureSprite = "GFX_grp_icon_05"
+			Orientation = "UPPER_LEFT"
+			position = { x = @grp_icon_x_c2 y = @grp_icon_y_r1  }
+			effect = "imas_gui_idols_grp_5"
+		}
+		effectButtonType = {
+			name = "grp_icon_06"
+			quadTextureSprite = "GFX_grp_icon_06"
+			Orientation = "UPPER_LEFT"
+			position = { x = @grp_icon_x_c2 y = @grp_icon_y_r2  }
+			effect = "imas_gui_idols_grp_6"
+		}
+		effectButtonType = {
+			name = "grp_icon_07"
+			quadTextureSprite = "GFX_grp_icon_07"
+			Orientation = "UPPER_LEFT"
+			position = { x = @grp_icon_x_c2 y = @grp_icon_y_r3  }
+			effect = "imas_gui_idols_grp_7"
+		}
+
+#--------------------------------------------------------------------------
+# shiloette TODO
+# grp1
+effectButtonType = { name = "idol_icon_locked_01" quadTextureSprite = "GFX_idol_icon_locked" Orientation = "UPPER_LEFT"
+	position = { x = @idol_icon_x_c1 y = @idol_icon_y_r1  }
+		effect = "imas_gui_idols_icon_locked_01" }
+effectButtonType = { name = "idol_icon_locked_02" quadTextureSprite = "GFX_idol_icon_locked" Orientation = "UPPER_LEFT"
+	position = { x = @idol_icon_x_c2 y = @idol_icon_y_r1   }
+		effect = "imas_gui_idols_icon_locked_02" }
+effectButtonType = { name = "idol_icon_locked_03" quadTextureSprite = "GFX_idol_icon_locked" Orientation = "UPPER_LEFT"
+	position = { x = @idol_icon_x_c3 y = @idol_icon_y_r1   }
+		effect = "imas_gui_idols_icon_locked_03" }
+
+#grp2
+effectButtonType = { name = "idol_icon_locked_04" quadTextureSprite = "GFX_idol_icon_locked" Orientation = "UPPER_LEFT"
+	position = { x = @idol_icon_x_c1 y = @idol_icon_y_r1   }
+		effect = "imas_gui_idols_icon_locked_04" }
+effectButtonType = { name = "idol_icon_locked_05" quadTextureSprite = "GFX_idol_icon_locked" Orientation = "UPPER_LEFT"
+	position = { x = @idol_icon_x_c2 y = @idol_icon_y_r1   }
+		effect = "imas_gui_idols_icon_locked_05" }
+effectButtonType = { name = "idol_icon_locked_06" quadTextureSprite = "GFX_idol_icon_locked" Orientation = "UPPER_LEFT"
+	position = { x = @idol_icon_x_c3 y = @idol_icon_y_r1   }
+		effect = "imas_gui_idols_icon_locked_06" }
+effectButtonType = { name = "idol_icon_locked_07" quadTextureSprite = "GFX_idol_icon_locked" Orientation = "UPPER_LEFT"
+	position = { x = @idol_icon_x_c1 y = @idol_icon_y_r2  }
+		effect = "imas_gui_idols_icon_locked_07" }
+effectButtonType = { name = "idol_icon_locked_08" quadTextureSprite = "GFX_idol_icon_locked" Orientation = "UPPER_LEFT"
+	position = { x = @idol_icon_x_c2 y = @idol_icon_y_r2  }
+		effect = "imas_gui_idols_icon_locked_08" }
+
+#grp3		
+effectButtonType = { name = "idol_icon_locked_09" quadTextureSprite = "GFX_idol_icon_locked" Orientation = "UPPER_LEFT"
+	position = { x = @idol_icon_x_c1 y = @idol_icon_y_r1   }
+		effect = "imas_gui_idols_icon_locked_09" }
+effectButtonType = { name = "idol_icon_locked_10" quadTextureSprite = "GFX_idol_icon_locked" Orientation = "UPPER_LEFT"
+	position = { x = @idol_icon_x_c2 y = @idol_icon_y_r1   }
+		effect = "imas_gui_idols_icon_locked_10" }
+effectButtonType = { name = "idol_icon_locked_11" quadTextureSprite = "GFX_idol_icon_locked" Orientation = "UPPER_LEFT"
+	position = { x = @idol_icon_x_c3 y = @idol_icon_y_r1   }
+		effect = "imas_gui_idols_icon_locked_11" }
+effectButtonType = { name = "idol_icon_locked_12" quadTextureSprite = "GFX_idol_icon_locked" Orientation = "UPPER_LEFT"
+	position = { x = @idol_icon_x_c1 y = @idol_icon_y_r2  }
+		effect = "imas_gui_idols_icon_locked_12" }
+effectButtonType = { name = "idol_icon_locked_13" quadTextureSprite = "GFX_idol_icon_locked" Orientation = "UPPER_LEFT"
+	position = { x = @idol_icon_x_c2 y = @idol_icon_y_r2  }
+		effect = "imas_gui_idols_icon_locked_13" }
+
+#grp4		
+effectButtonType = { name = "idol_icon_locked_14" quadTextureSprite = "GFX_idol_icon_locked" Orientation = "UPPER_LEFT"
+	position = { x = @idol_icon_x_c1 y = @idol_icon_y_r1   }
+		effect = "imas_gui_idols_icon_locked_14" }
+		
+effectButtonType = { name = "idol_icon_locked_15" quadTextureSprite = "GFX_idol_icon_locked" Orientation = "UPPER_LEFT"
+	position = { x = @idol_icon_x_c2 y = @idol_icon_y_r1   }
+		effect = "imas_gui_idols_icon_locked_15" }
+effectButtonType = { name = "idol_icon_locked_16" quadTextureSprite = "GFX_idol_icon_locked" Orientation = "UPPER_LEFT"
+	position = { x = @idol_icon_x_c3 y = @idol_icon_y_r1   }
+		effect = "imas_gui_idols_icon_locked_16" }
+
+#grp5
+effectButtonType = { name = "idol_icon_locked_17" quadTextureSprite = "GFX_idol_icon_locked" Orientation = "UPPER_LEFT"
+	position = { x = @idol_icon_x_c1 y = @idol_icon_y_r1   }
+		effect = "imas_gui_idols_icon_locked_17" }
+effectButtonType = { name = "idol_icon_locked_18" quadTextureSprite = "GFX_idol_icon_locked" Orientation = "UPPER_LEFT"
+	position = { x = @idol_icon_x_c2 y = @idol_icon_y_r1   }
+		effect = "imas_gui_idols_icon_locked_18" }
+effectButtonType = { name = "idol_icon_locked_19" quadTextureSprite = "GFX_idol_icon_locked" Orientation = "UPPER_LEFT"
+	position = { x = @idol_icon_x_c3 y = @idol_icon_y_r1   }
+		effect = "imas_gui_idols_icon_locked_19" }
+#grp6	
+effectButtonType = { name = "idol_icon_locked_20" quadTextureSprite = "GFX_idol_icon_locked" Orientation = "UPPER_LEFT"
+	position = { x = @idol_icon_x_c1 y = @idol_icon_y_r1   }
+		effect = "imas_gui_idols_icon_locked_20" }
+effectButtonType = { name = "idol_icon_locked_21" quadTextureSprite = "GFX_idol_icon_locked" Orientation = "UPPER_LEFT"
+	position = { x = @idol_icon_x_c2 y = @idol_icon_y_r1   }
+		effect = "imas_gui_idols_icon_locked_21" }
+effectButtonType = { name = "idol_icon_locked_22" quadTextureSprite = "GFX_idol_icon_locked" Orientation = "UPPER_LEFT"
+	position = { x = @idol_icon_x_c3 y = @idol_icon_y_r1   }
+		effect = "imas_gui_idols_icon_locked_22" }		
+effectButtonType = { name = "idol_icon_locked_23" quadTextureSprite = "GFX_idol_icon_locked" Orientation = "UPPER_LEFT"
+	position = { x = @idol_icon_x_c1 y = @idol_icon_y_r2  }
+		effect = "imas_gui_idols_icon_locked_23" }
+
+#grp7	
+effectButtonType = { name = "idol_icon_locked_24" quadTextureSprite = "GFX_idol_icon_locked" Orientation = "UPPER_LEFT"
+	position = { x = @idol_icon_x_c1 y = @idol_icon_y_r1   }
+		effect = "imas_gui_idols_icon_locked_24" }
+effectButtonType = { name = "idol_icon_locked_25" quadTextureSprite = "GFX_idol_icon_locked" Orientation = "UPPER_LEFT"
+	position = { x = @idol_icon_x_c2 y = @idol_icon_y_r1   }
+		effect = "imas_gui_idols_icon_locked_25" }
+
+
+#----------------------------------------------------------------------------
+#IDOL ICONS
+#example
+# flags
+#  idol_id_xx  idol id
+#  idol_grp_id_xx  higher spawn rate if have idol from grp
+# 01 illuminationstars   01 02 03
+# 02 LAntica   04 05 06 07 08
+# 03 hokagoclimaxgirls  09 10 11 12 13
+# 04 alstroemeria  14 15 16
+# 05 straylight  17 18 19
+# 06 noctchill  20 21 22 23
+# 07 shhis 24 25
+#
+
+#idol 01 to 25
+# grp1
+effectButtonType = { name = "idol_icon_01" quadTextureSprite = "GFX_u_idol_icon_01" Orientation = "UPPER_LEFT"
+	position = { x = @idol_icon_x_c1 y = @idol_icon_y_r1  }
+		effect = "imas_gui_idols_icon_01" }
+effectButtonType = { name = "idol_icon_02" quadTextureSprite = "GFX_u_idol_icon_02" Orientation = "UPPER_LEFT"
+	position = { x = @idol_icon_x_c2 y = @idol_icon_y_r1   }
+		effect = "imas_gui_idols_icon_02" }
+effectButtonType = { name = "idol_icon_03" quadTextureSprite = "GFX_u_idol_icon_03" Orientation = "UPPER_LEFT"
+	position = { x = @idol_icon_x_c3 y = @idol_icon_y_r1   }
+		effect = "imas_gui_idols_icon_03" }
+
+#grp2
+effectButtonType = { name = "idol_icon_04" quadTextureSprite = "GFX_u_idol_icon_04" Orientation = "UPPER_LEFT"
+	position = { x = @idol_icon_x_c1 y = @idol_icon_y_r1   }
+		effect = "imas_gui_idols_icon_04" }
+effectButtonType = { name = "idol_icon_05" quadTextureSprite = "GFX_u_idol_icon_05" Orientation = "UPPER_LEFT"
+	position = { x = @idol_icon_x_c2 y = @idol_icon_y_r1   }
+		effect = "imas_gui_idols_icon_05" }
+effectButtonType = { name = "idol_icon_06" quadTextureSprite = "GFX_u_idol_icon_06" Orientation = "UPPER_LEFT"
+	position = { x = @idol_icon_x_c3 y = @idol_icon_y_r1   }
+		effect = "imas_gui_idols_icon_06" }
+effectButtonType = { name = "idol_icon_07" quadTextureSprite = "GFX_u_idol_icon_07" Orientation = "UPPER_LEFT"
+	position = { x = @idol_icon_x_c1 y = @idol_icon_y_r2  }
+		effect = "imas_gui_idols_icon_07" }
+effectButtonType = { name = "idol_icon_08" quadTextureSprite = "GFX_u_idol_icon_08" Orientation = "UPPER_LEFT"
+	position = { x = @idol_icon_x_c2 y = @idol_icon_y_r2  }
+		effect = "imas_gui_idols_icon_08" }
+
+#grp3		
+effectButtonType = { name = "idol_icon_09" quadTextureSprite = "GFX_u_idol_icon_09" Orientation = "UPPER_LEFT"
+	position = { x = @idol_icon_x_c1 y = @idol_icon_y_r1   }
+		effect = "imas_gui_idols_icon_09" }
+effectButtonType = { name = "idol_icon_10" quadTextureSprite = "GFX_u_idol_icon_10" Orientation = "UPPER_LEFT"
+	position = { x = @idol_icon_x_c2 y = @idol_icon_y_r1   }
+		effect = "imas_gui_idols_icon_10" }
+effectButtonType = { name = "idol_icon_11" quadTextureSprite = "GFX_u_idol_icon_11" Orientation = "UPPER_LEFT"
+	position = { x = @idol_icon_x_c3 y = @idol_icon_y_r1   }
+		effect = "imas_gui_idols_icon_11" }
+effectButtonType = { name = "idol_icon_12" quadTextureSprite = "GFX_u_idol_icon_12" Orientation = "UPPER_LEFT"
+	position = { x = @idol_icon_x_c1 y = @idol_icon_y_r2  }
+		effect = "imas_gui_idols_icon_12" }
+effectButtonType = { name = "idol_icon_13" quadTextureSprite = "GFX_u_idol_icon_13" Orientation = "UPPER_LEFT"
+	position = { x = @idol_icon_x_c2 y = @idol_icon_y_r2  }
+		effect = "imas_gui_idols_icon_13" }
+
+#grp4		
+effectButtonType = { name = "idol_icon_14" quadTextureSprite = "GFX_u_idol_icon_14" Orientation = "UPPER_LEFT"
+	position = { x = @idol_icon_x_c1 y = @idol_icon_y_r1   }
+		effect = "imas_gui_idols_icon_14" }
+		
+effectButtonType = { name = "idol_icon_15" quadTextureSprite = "GFX_u_idol_icon_15" Orientation = "UPPER_LEFT"
+	position = { x = @idol_icon_x_c2 y = @idol_icon_y_r1   }
+		effect = "imas_gui_idols_icon_15" }
+effectButtonType = { name = "idol_icon_16" quadTextureSprite = "GFX_u_idol_icon_16" Orientation = "UPPER_LEFT"
+	position = { x = @idol_icon_x_c3 y = @idol_icon_y_r1   }
+		effect = "imas_gui_idols_icon_16" }
+
+#grp5
+effectButtonType = { name = "idol_icon_17" quadTextureSprite = "GFX_u_idol_icon_17" Orientation = "UPPER_LEFT"
+	position = { x = @idol_icon_x_c1 y = @idol_icon_y_r1   }
+		effect = "imas_gui_idols_icon_17" }
+effectButtonType = { name = "idol_icon_18" quadTextureSprite = "GFX_u_idol_icon_18" Orientation = "UPPER_LEFT"
+	position = { x = @idol_icon_x_c2 y = @idol_icon_y_r1   }
+		effect = "imas_gui_idols_icon_18" }
+effectButtonType = { name = "idol_icon_19" quadTextureSprite = "GFX_u_idol_icon_19" Orientation = "UPPER_LEFT"
+	position = { x = @idol_icon_x_c3 y = @idol_icon_y_r1   }
+		effect = "imas_gui_idols_icon_19" }
+#grp6	
+effectButtonType = { name = "idol_icon_20" quadTextureSprite = "GFX_u_idol_icon_20" Orientation = "UPPER_LEFT"
+	position = { x = @idol_icon_x_c1 y = @idol_icon_y_r1   }
+		effect = "imas_gui_idols_icon_20" }
+effectButtonType = { name = "idol_icon_21" quadTextureSprite = "GFX_u_idol_icon_21" Orientation = "UPPER_LEFT"
+	position = { x = @idol_icon_x_c2 y = @idol_icon_y_r1   }
+		effect = "imas_gui_idols_icon_21" }
+effectButtonType = { name = "idol_icon_22" quadTextureSprite = "GFX_u_idol_icon_22" Orientation = "UPPER_LEFT"
+	position = { x = @idol_icon_x_c3 y = @idol_icon_y_r1   }
+		effect = "imas_gui_idols_icon_22" }		
+effectButtonType = { name = "idol_icon_23" quadTextureSprite = "GFX_u_idol_icon_23" Orientation = "UPPER_LEFT"
+	position = { x = @idol_icon_x_c1 y = @idol_icon_y_r2  }
+		effect = "imas_gui_idols_icon_23" }
+
+#grp7	
+effectButtonType = { name = "idol_icon_24" quadTextureSprite = "GFX_u_idol_icon_24" Orientation = "UPPER_LEFT"
+	position = { x = @idol_icon_x_c1 y = @idol_icon_y_r1   }
+		effect = "imas_gui_idols_icon_24" }
+effectButtonType = { name = "idol_icon_25" quadTextureSprite = "GFX_u_idol_icon_25" Orientation = "UPPER_LEFT"
+	position = { x = @idol_icon_x_c2 y = @idol_icon_y_r1   }
+		effect = "imas_gui_idols_icon_25" }
+
+
+#---------------------------
+#IDOL NAME LABELS
+
+
+effectButtonType = { name = "idol_label_01"  Orientation = "UPPER_LEFT"  alwaysTransparent=yes
+position = { x = @idol_label_x_c1 y = @idol_label_y_r1  }  font = "cg_16b" #text_color_code = "S"
+effect = "imas_gui_idols_label_01" text = text_idol_label_01 quadTextureSprite = "GFX_ui_button_box_l"}
+
+	#                                                                                                      
+effectButtonType = { name = "idol_label_02"  Orientation = "UPPER_LEFT"  alwaysTransparent=yes
+position = { x = @idol_label_x_c2 y = @idol_label_y_r1  }  font = "cg_16b" #text_color_code = "S"
+effect = "imas_gui_idols_label_02" text = text_idol_label_02 quadTextureSprite = "GFX_ui_button_box_l"}
+	#                                                                                                      
+effectButtonType = { name = "idol_label_03"  Orientation = "UPPER_LEFT"  alwaysTransparent=yes
+position = { x = @idol_label_x_c3 y = @idol_label_y_r1  }  font = "cg_16b" #text_color_code = "S"
+effect = "imas_gui_idols_label_03" text = text_idol_label_03 quadTextureSprite = "GFX_ui_button_box_l"}
+	#                                                                                                      
+effectButtonType = { name = "idol_label_04"  Orientation = "UPPER_LEFT"  alwaysTransparent=yes
+position = { x = @idol_label_x_c1 y = @idol_label_y_r1  }  font = "cg_16b" # text_color_code = "S"
+effect = "imas_gui_idols_label_04" text = text_idol_label_04 quadTextureSprite = "GFX_ui_button_box_l"}
+	#                                                                                                      
+effectButtonType = { name = "idol_label_05"  Orientation = "UPPER_LEFT"  alwaysTransparent=yes
+position = { x = @idol_label_x_c2 y = @idol_label_y_r1  }  font = "cg_16b" #text_color_code = "S"
+effect = "imas_gui_idols_label_05" text = text_idol_label_05 quadTextureSprite = "GFX_ui_button_box_l"}
+	#                                                                                                      
+effectButtonType = { name = "idol_label_06"  Orientation = "UPPER_LEFT"  alwaysTransparent=yes
+position = { x = @idol_label_x_c3 y = @idol_label_y_r1  }  font = "cg_16b" #text_color_code = "S"
+effect = "imas_gui_idols_label_06" text = text_idol_label_06 quadTextureSprite = "GFX_ui_button_box_l"}
+	#                                                                                                      
+effectButtonType = { name = "idol_label_07"  Orientation = "UPPER_LEFT"  alwaysTransparent=yes
+position = { x = @idol_label_x_c1 y = @idol_label_y_r2  }  font = "cg_16b" #text_color_code = "S"
+effect = "imas_gui_idols_label_07" text = text_idol_label_07 quadTextureSprite = "GFX_ui_button_box_l" }
+	#                                                                                                      
+effectButtonType = { name = "idol_label_08"  Orientation = "UPPER_LEFT"  alwaysTransparent=yes
+position = { x = @idol_label_x_c2 y = @idol_label_y_r2  }  font = "cg_16b" #text_color_code = "S"
+effect = "imas_gui_idols_label_08" text = text_idol_label_08 quadTextureSprite = "GFX_ui_button_box_l"}
+	#                                                                                                      
+effectButtonType = { name = "idol_label_09"  Orientation = "UPPER_LEFT"  alwaysTransparent=yes
+position = { x = @idol_label_x_c1 y = @idol_label_y_r1  }  font = "cg_16b" #text_color_code = "S"
+effect = "imas_gui_idols_label_09" text = text_idol_label_09 quadTextureSprite = "GFX_ui_button_box_l"}
+	#                                                                                                      
+effectButtonType = { name = "idol_label_10"  Orientation = "UPPER_LEFT"  alwaysTransparent=yes
+position = { x = @idol_label_x_c2 y = @idol_label_y_r1  }  font = "cg_16b" #text_color_code = "S"
+effect = "imas_gui_idols_label_10" text = text_idol_label_10 quadTextureSprite = "GFX_ui_button_box_l"}
+	#                                                                                                      
+effectButtonType = { name = "idol_label_11"  Orientation = "UPPER_LEFT"  alwaysTransparent=yes
+position = { x = @idol_label_x_c3 y = @idol_label_y_r1  }  font = "cg_16b" #text_color_code = "S"
+effect = "imas_gui_idols_label_11" text = text_idol_label_11 quadTextureSprite = "GFX_ui_button_box_l"}
+	#                                                                                                      
+effectButtonType = { name = "idol_label_12"  Orientation = "UPPER_LEFT"  alwaysTransparent=yes
+position = { x = @idol_label_x_c1 y = @idol_label_y_r2  }  font = "cg_16b" #text_color_code = "S"
+effect = "imas_gui_idols_label_12" text = text_idol_label_12 quadTextureSprite = "GFX_ui_button_box_l"}
+	#                                                                                                      
+effectButtonType = { name = "idol_label_13"  Orientation = "UPPER_LEFT"  alwaysTransparent=yes
+position = { x = @idol_label_x_c2 y = @idol_label_y_r2  }  font = "cg_16b" #text_color_code = "S"
+effect = "imas_gui_idols_label_13" text = text_idol_label_13 quadTextureSprite = "GFX_ui_button_box_l"}
+	#                                                                                                      
+effectButtonType = { name = "idol_label_14"  Orientation = "UPPER_LEFT"  alwaysTransparent=yes
+position = { x = @idol_label_x_c1 y = @idol_label_y_r1  }  font = "cg_16b" #text_color_code = "S"
+effect = "imas_gui_idols_label_14" text = text_idol_label_14 quadTextureSprite = "GFX_ui_button_box_l"}
+	#                                                                                                      
+effectButtonType = { name = "idol_label_15"  Orientation = "UPPER_LEFT"  alwaysTransparent=yes
+position = { x = @idol_label_x_c2 y = @idol_label_y_r1  }  font = "cg_16b" #text_color_code = "S"
+effect = "imas_gui_idols_label_15" text = text_idol_label_15 quadTextureSprite = "GFX_ui_button_box_l"}
+	#                                                                                                      
+effectButtonType = { name = "idol_label_16"  Orientation = "UPPER_LEFT"  alwaysTransparent=yes
+position = { x = @idol_label_x_c3 y = @idol_label_y_r1  }  font = "cg_16b" #text_color_code = "S"
+effect = "imas_gui_idols_label_16" text = text_idol_label_16 quadTextureSprite = "GFX_ui_button_box_l"}
+	#                                                                                                      
+effectButtonType = { name = "idol_label_17"  Orientation = "UPPER_LEFT"  alwaysTransparent=yes
+position = { x = @idol_label_x_c1 y = @idol_label_y_r1  }  font = "cg_16b" #text_color_code = "S"
+effect = "imas_gui_idols_label_17" text = text_idol_label_17 quadTextureSprite = "GFX_ui_button_box_l"}
+	#                                                                                                      
+effectButtonType = { name = "idol_label_18"  Orientation = "UPPER_LEFT"  alwaysTransparent=yes
+position = { x = @idol_label_x_c2 y = @idol_label_y_r1  }  font = "cg_16b" #text_color_code = "S"
+effect = "imas_gui_idols_label_18" text = text_idol_label_18 quadTextureSprite = "GFX_ui_button_box_l"}
+	#                                                                                                      
+effectButtonType = { name = "idol_label_19"  Orientation = "UPPER_LEFT"  alwaysTransparent=yes
+position = { x = @idol_label_x_c3 y = @idol_label_y_r1  }  font = "cg_16b" #text_color_code = "S"
+effect = "imas_gui_idols_label_19" text = text_idol_label_19 quadTextureSprite = "GFX_ui_button_box_l"}
+	#                                                                                                      
+effectButtonType = { name = "idol_label_20"  Orientation = "UPPER_LEFT"  alwaysTransparent=yes
+position = { x = @idol_label_x_c1 y = @idol_label_y_r1  }  font = "cg_16b" #text_color_code = "S"
+effect = "imas_gui_idols_label_20" text = text_idol_label_20 quadTextureSprite = "GFX_ui_button_box_l"}
+	#                                                                                                      
+effectButtonType = { name = "idol_label_21"  Orientation = "UPPER_LEFT"  alwaysTransparent=yes
+position = { x = @idol_label_x_c2 y = @idol_label_y_r1  }  font = "cg_16b" #text_color_code = "S"
+effect = "imas_gui_idols_label_21" text = text_idol_label_21 quadTextureSprite = "GFX_ui_button_box_l"}
+	#                                                                                                      
+effectButtonType = { name = "idol_label_22"  Orientation = "UPPER_LEFT"  alwaysTransparent=yes
+position = { x = @idol_label_x_c3 y = @idol_label_y_r1  }  font = "cg_16b" #text_color_code = "S"
+effect = "imas_gui_idols_label_22" text = text_idol_label_22 quadTextureSprite = "GFX_ui_button_box_l"}
+	#                                                                                                      
+effectButtonType = { name = "idol_label_23"  Orientation = "UPPER_LEFT"  alwaysTransparent=yes
+position = { x = @idol_label_x_c1 y = @idol_label_y_r2 }  font = "cg_16b" #text_color_code = "S"
+effect = "imas_gui_idols_label_23" text = text_idol_label_23 quadTextureSprite = "GFX_ui_button_box_l"}
+	#                                                                                                      
+effectButtonType = { name = "idol_label_24"  Orientation = "UPPER_LEFT"  alwaysTransparent=yes
+position = { x = @idol_label_x_c1 y = @idol_label_y_r1  }  font = "cg_16b" #text_color_code = "S"
+effect = "imas_gui_idols_label_24" text = text_idol_label_24 quadTextureSprite = "GFX_ui_button_box_l"}
+	#                                                                                                      
+effectButtonType = { name = "idol_label_25"  Orientation = "UPPER_LEFT"  alwaysTransparent=yes
+position = { x = @idol_label_x_c2 y = @idol_label_y_r1  }  font = "cg_16b" #text_color_code = "S"
+effect = "imas_gui_idols_label_25" text = text_idol_label_25 quadTextureSprite = "GFX_ui_button_box_l"}
+	#                                                                                                      
+
+
+
+
+#--------------------------------------------------------------------------
+#idol section END
+
+
+
+	
+#image element end
+		
+		# Description Section
+
+		instantTextBoxType = {
+			name = "alien_message"
+			font = "cg_16b"
+			text_color_code = "S"
+			position = { x = 1067 y = 155 }
+			maxWidth = 360
+			maxHeight = 500
+			format = left
+			scrollbartype = "standardtext_slider"
+		}
+
+
+
+
+				### ALL OF THIS IS HIDDEN OR DISPLACED ! ###
+				### EVENT DIPLO ###
+	
+		containerWindowType = {
+			name = "EVENT_DIPLO"
+			position = { x = 0 y = 0 }
+			#size = { width=563 height=220 }
+			moveable = no
+
+			instantTextBoxType={
+			 name = "action_title"
+			 font = "large_title_font"
+			 position = { x = 220 y = 222 }
+			 maxWidth = 200
+			 alwaysTransparent = yes
+			 text_color_code = "H"
+			}
+			instantTextBoxType={
+				name = "grp_title"
+				font = "large_title_font"
+				position = { x = 1120 y = 218 }
+				maxWidth = 200
+				alwaysTransparent = yes
+				text= "Idols_group"
+				text_color_code = "H"
+			}
+			instantTextBoxType={
+			 name = "action_desc"
+			 font = "malgun_goth_24"
+			 position = { x =0 y = 0 }
+			 maxWidth = 500
+			 maxHeight = 180
+			 Orientation = "UPPER_LEFT"
+			 format = center
+			 alwaysTransparent = yes
+			 text_color_code = "H"
+			}
+			#listboxType = { name = "option_list" position = { x = 958 y = 732 } } # hidden option list
+			listboxType = {
+				name = "option_list"
+				position = { x = -800 y = 690 }
+				
+				size = { x = 300 y = 400 }
+				scrollbartype = "standardlistbox_slider"
+				spacing = 20
+				borderSize = { x = 0 y = 0 }
+				Orientation = "CENTERED_UP"
+			}
+			#listboxType = { name = "option_list" position = { x = 958 y = 732 } } # hidden option list
+		}
+				instantTextBoxType = {
+					name = "irm_some_header"
+					font = "malgun_goth_24"
+					text = "ui_faction_header" 	# header text
+					position = { x = -20000 y = 5 }
+					maxWidth = 543
+					maxHeight = 22
+					fixedSize = yes
+					alwaysTransparent = yes
+				}
+		
+				buttonType = { name = "focus_button" position = { x = -1180 y = -1112 } spriteType = "GFX_fleetview_focus" } # hidden
+				instantTextBoxType = { name = "heading" font = "malgun_goth_24" position = { x = -1120 y = -115 } } # hidden
+				buttonType = { name = "alien_message_background" size = { x = 0 y = 0 } position = { x = -1110 y = -11430 } spriteType = "GFX_tiles_dark_area_cut_8" } # hidden
+				buttonType = { name = "confirm_button" quadTextureSprite = "GFX_standard_button_142_34_button" } # hidden
+				containerWindowType = {
+					name = "portrait_background"
+					position = { x = -1117 y = -1145 }
+					size = { width = 0 height = 0 } 	# hide portrait window
+					iconType = { name = "event_picture" spriteType = "GFX_diplomacy_portrait_frame" } # hidden
+					iconType = { name = "portrait" spriteType = "GFX_portrait_character" } # hidden
+				}
+				containerWindowType = {
+					name = "portrait"
+					position = { x = -1117 y = -1145 }
+					size = { width = 0 height = 0 } # hide portrait window
+					iconType = { name = "portrait" spriteType = "GFX_portrait_gamesetup_mask" } # hidden
+					iconType = { name = "black_frame" spriteType = "GFX_diplomacy_portrait_shadow_frame" } # hidden
+					iconType = { name = "stripes_1" spriteType = "GFX_diplomacy_stripes_2" } # hidden
+					iconType = { name = "city_frame" spriteType = "GFX_diplomacy_portrait_frame" } # hidden
+				}
+				iconType = { name = "empire_info_bg" spriteType = "GFX_diplomacy_dark_fade_bg" } # hidden
+				instantTextBoxType={ name = "empire_name" font = "malgun_goth_24" } # hidden
+				instantTextBoxType={ name = "empire_government_type" font = "cg_16b" } # hidden
+				instantTextBoxType={ name = "empire_personality_type" font = "cg_16b" } # hidden
+				OverlappingElementsBoxType = { name = "empire_ethics_icons" position = { x = -1145 y = -11138 } } # hidden
+				iconType = { name = "empire_flag" spriteType = "GFX_empire_flag_128" position = { x = -1125 y = -11235 } } # hidden
+				containerWindowType = {
+					name = "leader_details"
+					position = { x = -1125 y = -1175 }
+					containerWindowType = { name = "empire_traits_box" } # hidden
+					instantTextBoxType = { name = "empire_traits_label" font = "cg_16b" } # hidden
+					overlappingElementsBoxType = { name = "leader_traits" } # hidden
+					instantTextBoxType = { name = "leader_name" font = "cg_16b" } # hidden
+					instantTextBoxType = { name = "leader_species" font = "cg_16b" } # hidden
+				}
+				containerWindowType = {
+					name = "opinion_window"
+					position = { x = -1127 y = -11110 }
+					size = { width = 94 height = 30 }
+					iconType = { name = "their_opinion_icon" spriteType = "GFX_diplomacy_opinion" } # hidden
+					instantTextBoxType = { name = "their_opinion" font = "cg_16b" }
+				}
+
+
+	}
+}

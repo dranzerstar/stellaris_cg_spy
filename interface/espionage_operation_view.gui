@@ -91,27 +91,7 @@ guiTypes = {
 				scale = 1.5
 				alwaysTransparent = yes
 			}
-			iconType = {
-				name = "event_shadow"
-				spriteType = "GFX_ui_event_shadow_frame"
-				orientation = center_up
-				centerPosition = yes
-				alwaysTransparent = yes
-			}
-			iconType = {
-				name = "event_stripes"
-				spriteType = "GFX_ui_event_stripes"
-				orientation = center_up
-				centerPosition = yes
-				alwaysTransparent = yes
-			}
-			iconType = {
-				name = "event_frame"
-				spriteType = "GFX_ui_event_frame"
-				orientation = center_up
-				centerPosition = yes
-				alwaysTransparent = yes
-			}
+
 			containerWindowType = {
 				name = "operations_target_frame"
 				position = { x = 0 y = -118 }

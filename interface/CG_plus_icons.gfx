@@ -3,10 +3,7 @@ spriteTypes = {
 		name = "GFX_resolution_category_college"
 		texturefile = "gfx/interface/resolution/resolution_galactic_sr_beauty.dds"
 	}
-	spriteType = {
-		name = "GFX_cg_dialogue_window_bg_new"
-		texturefile = "gfx/interface/cg_dialogue/bg_new.dds"
-	}
+
 	spriteType = {
 		name = "GFX_resolution_category_nun"
 		texturefile = "gfx/interface/resolution/resolution_galactic_uniform_nun.dds"
@@ -45,8 +42,14 @@ spriteTypes = {
 		texturefile = "gfx/interface/resolution/resolution_galactic_uniform_bondage.dds"
 	}
 
-
-
+	spriteType = {
+		name = "GFX_starbase_cg_artist_college"
+		texturefile = "gfx/interface/icons/modules/sb_c_art_college.dds"
+	}
+	spriteType = {
+		name = "GFX_starbase_cg_artist_palace"
+		texturefile = "gfx/interface/icons/modules/sb_c_art_palace.dds"
+	}
 	
 	# The portal
 	SpriteType = {

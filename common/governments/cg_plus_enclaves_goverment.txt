@@ -1,0 +1,98 @@
+
+
+gov_cg_plus_enclave_underground_idols = {
+	ruler_title = RT_producer
+
+	should_force_rename = yes
+
+	possible = {
+		has_valid_civic = civic_cg_underground_idols
+	}
+
+	weight = {
+		base = 100000
+	}
+}
+
+gov_cg_plus_enclave_colorful_artists = {
+	ruler_title = RT_big_tentacle
+
+	should_force_rename = yes
+
+	possible = {
+		has_valid_civic = civic_cg_colorful_artists
+	}
+
+	weight = {
+		base = 100000
+	}
+}
+
+gov_cg_plus_enclave_av_directors = {
+	ruler_title = RT_director
+
+	should_force_rename = yes
+
+	possible = {
+		has_valid_civic = civic_cg_av_directors
+	}
+
+	weight = {
+		base = 100000
+	}
+}
+
+gov_cg_plus_slave_traders = {
+	ruler_title = RT_queen
+
+	should_force_rename = yes
+
+	possible = {
+		has_valid_civic = civic_cg_slave_traders
+	}
+
+	weight = {
+		base = 100000
+	}
+}
+gov_cg_plus_holy_artifects = {
+	ruler_title = RT_priest
+
+	should_force_rename = yes
+
+	possible = {
+		has_valid_civic = civic_cg_holy_artifects
+	}
+
+	weight = {
+		base = 100000
+	}
+}
+
+
+gov_cg_plus_gulag = {
+	ruler_title = RT_warden
+
+	should_force_rename = yes
+
+	possible = {
+		has_valid_civic = civic_cg_gulag
+	}
+
+	weight = {
+		base = 100000
+	}
+}
+gov_cg_plus_prisons = {
+	ruler_title = RT_master
+
+	should_force_rename = yes
+
+	possible = {
+		has_valid_civic = civic_cg_prisons
+	}
+
+	weight = {
+		base = 100000
+	}
+}

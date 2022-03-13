@@ -1,0 +1,44 @@
+defined_text={
+	name = GetRnumberText
+	text={
+		localization_key = randnum.0
+		weight={weight = 1 }
+	}
+	text={
+		localization_key = randnum.1
+		weight={weight = 1 }
+	}
+	text={
+		localization_key = randnum.2
+		weight={weight = 1 }
+	}
+	text={
+		localization_key = randnum.3
+		weight={weight = 1 }
+	}
+	text={
+		localization_key = randnum.4
+		weight={weight = 1 }
+	}
+	text={
+		localization_key = randnum.5
+		weight={weight = 1 }
+	}
+	text={
+		localization_key = randnum.6
+		weight={weight = 1 }
+	}	
+	text={
+		localization_key = randnum.7
+		weight={weight = 1 }
+	}
+	text={
+		localization_key = randnum.8
+		weight={weight = 1 }
+	}
+	text={
+		localization_key = randnum.9
+		weight={weight = 1 }
+	}	
+
+}

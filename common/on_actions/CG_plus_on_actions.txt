@@ -27,3 +27,25 @@ on_decade_pulse_country  = {
 		}
 	
 }
+
+
+on_custom_diplomacy = {
+	events = {
+		cg_plus_enclaves_art.0000
+		cg_plus_underidol.0000
+	}
+}
+
+on_country_destroyed  = {
+	events = {
+		cg_plus_enclaves_art.9000
+	}
+}
+
+
+on_post_communications_established = {
+	events = {
+		cg_plus_enclaves_art.1999
+		cg_plus_underidol.1999
+	}
+}

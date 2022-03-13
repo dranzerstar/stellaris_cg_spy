@@ -1,0 +1,41 @@
+﻿l_default:
+###############################
+#####       ####
+###############################
+NAME_bunny_spymaster:0 "艳兔特工"
+RT_producer:0 "制作人"
+RT_big_tentacle:0 "大触"
+RT_director:0 "导演"
+RT_queen:0 "奴隶主"
+RT_priest:0 "管理员"
+RT_warden:0 "狱长"
+RT_master:0 "主人"
+
+ NAME_cgplus_artisans_spec: "大触"
+ NAME_cgplus_artisans_HOME: "深空色图库"
+ NAME_cgplus_artisans_leader: "大触老师"
+
+ NAME_283p_undergound_spec: "地下偶像"
+ NAME_283p_undergound_Home: "283P Under"
+ NAME_283p_undergound_Leader: "七草叶月"
+
+ NAME_slavetrader_spec: "调教女王"
+ NAME_cg_plus_slave_traders_HOME: "星海肉奴隶拍卖场"
+ NAME_slavetrader_leader: "星之主"
+ NAME_cg_plus_slaver_starbase: "星之烙印拍卖所"
+
+ NAME_cg_plus_librarian_system: "真理"
+ NAME_cg_plus_librarian_HOME: "圣光遗物管理所"
+ NAME_librarians_spec: "圣歌管理员"
+ NAME_librarians_leader: "圣歌管理员"
+ NAME_cg_plus_librarian_starbase: "圣歌特异点"
+
+ NAME_succ_prison_system: "本能"
+ NAME_succ_prison: "性奴调教营"
+ NAME_sexual_prison_spec: "调教魅魔"
+ NAME_cg_plus_sexual_prison_HOME: "欲望深空"
+
+ NAME_holy_ward_system: "救赎"
+ NAME_holy_ward: "圣歌救赎团"
+ NAME_spirit_ward_spec: "救赎天使"
+ NAME_cg_plus_spirit_ward_HOME: "圣歌竖琴"
