@@ -5,4 +5,32 @@ spriteTypes = {
 		masking_texture = "gfx/interface/situation_log/event_mask.dds"
 		alwaystransparent = yes
 	}
+
+	
+	spriteType = {
+			name = "GFX_sagiri_captured"
+			texturefile = "gfx/event_pictures/enclaves_evt/9011.dds" 
+			masking_texture = "gfx/interface/situation_log/event_mask.dds"
+			alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_g_image01"
+		texturefile = "gfx/event_pictures/enclaves_evt/guro01.dds" 
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+	name = "GFX_g_image02"
+	texturefile = "gfx/event_pictures/enclaves_evt/guro02.dds" 
+	masking_texture = "gfx/interface/situation_log/event_mask.dds"
+	alwaystransparent = yes
+	}
+	spriteType = {
+	name = "GFX_g_image03"
+	texturefile = "gfx/event_pictures/enclaves_evt/guro03.dds" 
+	masking_texture = "gfx/interface/situation_log/event_mask.dds"
+	alwaystransparent = yes
+}
+
 }

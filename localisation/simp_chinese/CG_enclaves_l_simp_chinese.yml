@@ -113,7 +113,7 @@
  cg_plus_enclaves_art.1120.a:0 "提供安全保证"
  cg_plus_enclaves_art.1120.a.ct:0 "在大触老师所在的星系建筑星垒级恒星基地以确保大触老师的安全\n同时可以在基地地上建造$sm_cg_artist_palace$"
  #cg_plus_enclaves_art.9001.desc:0 "破坏掉"
- #cg_plus_enclaves_art.9002.desc:0 "破坏掉"
+ cg_plus_enclaves_art.9002.desc:0 "破坏掉"
 
 
 
@@ -126,7 +126,8 @@
 
  cg_plus_enclaves_art.9001.name:0 "大触老师老师的太空站"
  
- g_plus_enclaves_art.9001.desc:0 "我日你妈的，你们脑子坏掉了是吧？为什么打老娘的船！你们这帮畜生！你们的大粪脑袋不知道什么叫星际法是吧？你们是不是没爹没妈啊？啊？你们是被路边的精液管子呲尿呲出来的野种吧？马上把老娘放了，不然有你们这帮贱畜好果子吃！"
+
+ cg_plus_enclaves_art.9001.desc:0 "我日你妈的，你们脑子坏掉了是吧？为什么打老娘的船！你们这帮畜生！你们的大粪脑袋不知道什么叫星际法是吧？你们是不是没爹没妈啊？啊？你们是被路边的精液管子呲尿呲出来的野种吧？马上把老娘放了，不然有你们这帮贱畜好果子吃！"
 
  cg_plus_enclaves_art.9001.a:0 "我们想要，我们便用武力拿到！"
  cg_plus_enclaves_art.9001.b:0 "呼呼，让我们看看之后她会不会还那么嚣张。"
@@ -153,12 +154,6 @@
  cg_plus_enclaves_art.9013.desc:0 "我们顺利抓捕了大触老师，这个无比适合献祭给神明的祭品。在这段时间里，我们对她的身体进行了充分的清理，我们不仅封闭了她的口，每日对她进行灌肠和导尿，用虔诚信徒的洁净爱液清洗她的身体，并将经过祭祀祈福后的淫欲之花的花蜜灌进她的肛门作为她的食物。如今，7日斋戒时间已过。我们可以正式开始仪式了。"
 
  cg_plus_enclaves_art.9013.a:0 "唯敬吾神"
-
- cg_plus_enclaves_art.9014.name:0 "性奴调教"
- cg_plus_enclaves_art.9014.desc:0 "我们顺利抓捕了大触老师，并将她献给了最高统治者。在帝国最精锐的调教师的努力下，她已经完全接受了她母猪画家奴隶的身份，每日匍匐在地上，撅起屁股作画，以取悦主人而获得奖励，但最高统治者仍旧为了避免她逃跑而砍下了她的双脚。一边把玩着用她的小脚丫制成的工艺品，一边欣赏着她的画作，一边享受她的口交侍奉，这是最高统治者最喜欢的事情。"
-
- cg_plus_enclaves_art.9014.a:0 "我们相信这是她最好的归宿"
-
 
  cg_plus_enclaves_art.9014.name:0 "性奴调教"
  cg_plus_enclaves_art.9014.desc:0 "我们顺利抓捕了大触老师，并将她献给了最高统治者。在帝国最精锐的调教师的努力下，她已经完全接受了她母猪画家奴隶的身份，每日匍匐在地上，撅起屁股作画，以取悦主人而获得奖励，但最高统治者仍旧为了避免她逃跑而砍下了她的双脚。一边把玩着用她的小脚丫制成的工艺品，一边欣赏着她的画作，一边享受她的口交侍奉，这是最高统治者最喜欢的事情。"
@@ -287,3 +282,37 @@
  cg_plus_underidol.5000.desc:0 "巡回闪耀偶像感谢祭终于到了，[Root.GetName],身为黑金会员的[Root.GetRulerName]当然受到邀请。 这是一个可以近距离接触宇宙超级偶像的机会，机会难逢！\n当然，入场费也是黑金级的。"
  PARTY:0 "参加"
  NOT_NOW:0 "拒绝邀请"
+
+
+ cg_plus_underidol.1030.desc:0 "REPLACE_ME"
+
+
+ cg_plus_underidol.5001.name:0 "REPLACE_ME"
+ cg_plus_underidol.5001.desc:0 "REPLACE_ME"
+ cg_plus_underidol.5001.01:0 "REPLACE_ME"
+ cg_plus_underidol.5001.02:0 "REPLACE_ME"
+ cg_plus_underidol.5001.03:0 "REPLACE_ME"
+ cg_plus_underidol.5001.04:0 "REPLACE_ME"
+ cg_plus_underidol.5001.05:0 "REPLACE_ME"
+ cg_plus_underidol.5001.06:0 "REPLACE_ME"
+ cg_plus_underidol.5001.07:0 "REPLACE_ME"
+ cg_plus_underidol.5001.08:0 "REPLACE_ME"
+ cg_plus_underidol.5001.09:0 "REPLACE_ME"
+ cg_plus_underidol.5001.10:0 "REPLACE_ME"
+ cg_plus_underidol.5001.11:0 "REPLACE_ME"
+ cg_plus_underidol.5001.12:0 "REPLACE_ME"
+ cg_plus_underidol.5001.13:0 "REPLACE_ME"
+ cg_plus_underidol.5001.14:0 "REPLACE_ME"
+ cg_plus_underidol.5001.15:0 "REPLACE_ME"
+ cg_plus_underidol.5001.16:0 "REPLACE_ME"
+ cg_plus_underidol.5001.17:0 "REPLACE_ME"
+ cg_plus_underidol.5001.18:0 "REPLACE_ME"
+ cg_plus_underidol.5001.19:0 "REPLACE_ME"
+ cg_plus_underidol.5001.20:0 "REPLACE_ME"
+ cg_plus_underidol.5001.21:0 "REPLACE_ME"
+ cg_plus_underidol.5001.22:0 "REPLACE_ME"
+ cg_plus_underidol.5001.23:0 "REPLACE_ME"
+ cg_plus_underidol.5001.24:0 "REPLACE_ME"
+ cg_plus_underidol.5001.25:0 "REPLACE_ME"
+ cg_plus_underidol.5002.name:0 "REPLACE_ME"
+ cg_plus_underidol.5002.01:0 "REPLACE_ME"

@@ -378,7 +378,7 @@ country_event = {
 	is_triggered_only = yes
 	
 	desc = cg_plus_enclaves_art.1100.desc
-	is_triggered_only = yes
+	
 	diplomatic = yes
 	custom_gui = "enclave_artist_window"
 	custom_gui_option = "enclave_artist_option"
@@ -787,7 +787,8 @@ country_event = {
 		exists=prev
 	}
 	picture_event_data = { #shocked
-		portrait = event_target:cg_plus_colorful_artisan_country  #change this
+
+		portrait = CGE002  #change this
 		room = enclave_artist_room
 	}
 
@@ -836,14 +837,11 @@ country_event = {
 	desc = cg_plus_enclaves_art.9011.desc
 
 	is_triggered_only = yes
-	picture=
+	picture=GFX_sagiri_captured
+
 
 	trigger = {
 		exists=prev
-	}
-	picture_event_data = {
-		portrait = event_target:cg_plus_colorful_artisan_country  #change this
-		room = enclave_artist_room
 	}
 
 	option = { 
@@ -874,15 +872,12 @@ country_event = {
 	desc = cg_plus_enclaves_art.9012.desc
 
 	is_triggered_only = yes
-	picture=
+	picture=GFX_g_image01
 
 	trigger = {
 		exists=prev
 	}
-	picture_event_data = {
-		portrait = event_target:cg_plus_colorful_artisan_country  #change this
-		room = enclave_artist_room
-	}
+
 
 	option = { 
 		name = cg_plus_enclaves_art.9012.a
@@ -899,45 +894,17 @@ country_event = {
 	desc = cg_plus_enclaves_art.9013.desc
 
 	is_triggered_only = yes
-	picture=
+	picture=GFX_g_image02
 
 	trigger = {
 		exists=prev
 	}
-	picture_event_data = {
-		portrait = event_target:cg_plus_colorful_artisan_country  #change this
-		room = enclave_artist_room
-	}
+
 
 	option = { 
 		name = cg_plus_enclaves_art.9013.a
 	
 		country_event={ id =cg_plus_enclaves_art.9025  days =180} }
-
-
-}
-
-
-country_event = {
-	id = cg_plus_enclaves_art.9014
-	title = cg_plus_enclaves_art.9014.name
-	desc = cg_plus_enclaves_art.9014.desc
-
-	is_triggered_only = yes
-	picture=
-
-	trigger = {
-		exists=prev
-	}
-	picture_event_data = {
-		portrait = event_target:cg_plus_colorful_artisan_country  #change this
-		room = enclave_artist_room
-	}
-
-	option = { 
-		name = cg_plus_enclaves_art.9011.a
-	
-		country_event={ id =cg_plus_enclaves_art.9026  days =180} }
 
 
 }
@@ -954,10 +921,7 @@ country_event = {
 	diplomatic = yes
 	custom_gui = "enclave_artist_window"              #make new ui
 	custom_gui_option = "enclave_artist_option"
-	picture_event_data={
-		room=
-
-	}	
+	
 
 	trigger = {
 		exists=prev
@@ -977,12 +941,8 @@ country_event = {
 	desc = cg_plus_enclaves_art.9022.desc
 
 	is_triggered_only = yes
-	diplomatic = yes
-	custom_gui = "enclave_artist_window"              #make new ui
-	custom_gui_option = "enclave_artist_option"
-	picture_event_data={
-		room=
-	}	
+	picture=GFX_g_image01
+
 	trigger = {
 		exists=prev
 	}
@@ -996,13 +956,8 @@ country_event = {
 	title = cg_plus_enclaves_art.90221.name
 	desc = cg_plus_enclaves_art.90221.desc
 
-	is_triggered_only = yes
-	diplomatic = yes
-	custom_gui = "enclave_artist_window"              #make new ui
-	custom_gui_option = "enclave_artist_option"
-	picture_event_data={
-		room=
-	}	
+	picture=GFX_g_image02
+
 	trigger = {
 		exists=prev
 	}
@@ -1016,13 +971,8 @@ country_event = {
 	title = cg_plus_enclaves_art.90222.name
 	desc = cg_plus_enclaves_art.90222.desc
 
-	is_triggered_only = yes
-	diplomatic = yes
-	custom_gui = "enclave_artist_window"              #make new ui
-	custom_gui_option = "enclave_artist_option"
-	picture_event_data={
-		room=
-	}	
+	picture=GFX_g_image03
+
 	trigger = {
 		exists=prev
 	}
@@ -1045,10 +995,7 @@ country_event = {
 	diplomatic = yes
 	custom_gui = "enclave_artist_window"              #make new ui
 	custom_gui_option = "enclave_artist_option"
-	picture_event_data={
-		room=
-
-	}	
+	
 
 	trigger = {
 		exists=prev
@@ -1072,10 +1019,7 @@ country_event = {
 	diplomatic = yes
 	custom_gui = "enclave_artist_window"              #make new ui
 	custom_gui_option = "enclave_artist_option"
-	picture_event_data={
-		room=
 
-	}	
 
 	trigger = {
 		exists=prev
@@ -1099,10 +1043,7 @@ country_event = {
 	diplomatic = yes
 	custom_gui = "enclave_artist_window"              #make new ui
 	custom_gui_option = "enclave_artist_option"
-	picture_event_data={
-		room=
-
-	}	
+	
 
 	trigger = {
 		exists=prev
@@ -1122,13 +1063,8 @@ country_event = {
 	desc = cg_plus_enclaves_art.9026.desc
 
 	is_triggered_only = yes
-	diplomatic = yes
-	custom_gui = "enclave_artist_window"              #make new ui
-	custom_gui_option = "enclave_artist_option"
-	picture_event_data={
-		room=
-
-	}	
+	picture=GFX_g_image03
+	
 
 	trigger = {
 		exists=prev
@@ -1152,10 +1088,7 @@ country_event = {
 	diplomatic = yes
 	custom_gui = "enclave_artist_window"              #make new ui
 	custom_gui_option = "enclave_artist_option"
-	picture_event_data={
-		room=
 
-	}	
 
 	trigger = {
 		exists=prev

@@ -12,6 +12,11 @@ portraits = {
 		hair_selector = "no_texture"
 		texturefile = "gfx/models/portraits/CGP/CGE001.dds"
 	}
+	CGE002= {
+		clothes_selector = "no_texture"
+		hair_selector = "no_texture"
+		texturefile = "gfx/models/portraits/CGP/CGE002.dds"
+	}
 	CGE100= {
 		clothes_selector = "no_texture"
 		hair_selector = "no_texture"

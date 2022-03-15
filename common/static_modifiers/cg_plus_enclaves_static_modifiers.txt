@@ -15,6 +15,7 @@ mod_283p_under_member={
 cg_plus_artist_destroy_mod_9021={
 	
 	planet_pop_happiness=0.05
+	
 	country_unity_produces_mult= 0.05
 
 }
@@ -43,7 +44,7 @@ cg_plus_artist_destroy_mod_9024={
 }
 
 
-cg_plus_artist_destroy_mod_9024={
+cg_plus_artist_destroy_mod_9026={
 
 	country_unity_produces_mult= 0.10
 

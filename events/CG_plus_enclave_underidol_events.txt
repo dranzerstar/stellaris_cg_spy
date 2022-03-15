@@ -349,6 +349,24 @@ country_event = {
 
 }
 
+country_event = {
+	id = cg_plus_underidol.1030
+	title = cg_plus_underidol.1000.name
+	desc = cg_plus_underidol.1030.desc
+
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = "enclave_artist_window"
+	custom_gui_option = "enclave_artist_option"
+
+	picture_event_data = {
+		portrait = event_target:283p_under_home_country
+		room = "283_room"
+	}
+	option={ name = OK}
+	after={ country_event ={id= cg_plus_underidol.0001 }}
+
+}
 
 # 5000 gateway
 # 5001 event
@@ -557,10 +575,7 @@ country_event = {
 		}
 	}
 
-	picture_event_data={
-		room=
 
-	}	
 
 	trigger = {
 		exists=prev
