@@ -147,7 +147,7 @@ country_event = {
 
 #0001 main diplo screen
 # descriptions 1010
-# 
+# 1010 info
 # 1020 register service
 # 1030 build 
 # 2000 Idol Catalogue
@@ -200,6 +200,14 @@ country_event = {
 		hidden_effect = {
 			country_event = {
 				id = cg_plus_underidol.1020
+			}
+		}
+	}
+	option = {
+		name = cg_plus_underidol.0001.c
+		hidden_effect = {
+			country_event = {
+				id = cg_plus_underidol.1030
 			}
 		}
 	}
@@ -261,6 +269,11 @@ country_event = {
 	option = {
 		name = cg_plus_underidol.1010.c
 		response_text = cg_plus_underidol.1010.cr
+		is_dialog_only = yes
+	}
+	option = {
+		name = cg_plus_underidol.1010.d
+		response_text = cg_plus_underidol.1010.dr
 		is_dialog_only = yes
 	}
 
@@ -337,22 +350,21 @@ country_event = {
 }
 
 
-
+# 5000 gateway
+# 5001 event
+# 51xx individual event
 
 country_event = {
 	id = cg_plus_underidol.5000
 	title = cg_plus_underidol.5000.name
 	desc = cg_plus_underidol.5000.desc
 	is_triggered_only = yes
-	picture = GFX_evt_debut
+	picture = GFX_evt_debut #TODO
 	trigger = {
-		
+		#TODO
+		#yearly, trigger if live is ongoing
+		has_country_flag= ongoing_live 
 	}
-
-
-
-
-
 	option = {
 		name = PARTY
 		add_resource = {
@@ -371,6 +383,8 @@ country_event = {
 				years=5
 			}
 		}
+		country_event={id=cg_plus_underidol.5001 days =20  }
+
 	}
 	option = {
 		name = NOT_NOW
@@ -379,6 +393,183 @@ country_event = {
 
 
 
+}
+
+
+country_event = {
+	id = cg_plus_underidol.5001
+	title = cg_plus_underidol.5001.name
+	desc = cg_plus_underidol.5001.desc
+	is_triggered_only = yes
+	picture = GFX_evt_debut  #TODO
+	trigger = {
+		exists=prev
+		exists=event_target:country_hosting_live 
+	}
+
+	option ={
+		name = cg_plus_underidol.5001.01
+		event_target:country_hosting_live ={ has_country_flag=live_member_flag_01 }
+		set_timed_country_flag={ flag= under_idol_event_01   days=180  }
+		country_event={ id=cg_plus_underidol.5002 days =60 } }
+	option ={
+		name = cg_plus_underidol.5001.02
+		event_target:country_hosting_live ={ has_country_flag=live_member_flag_02 }
+		set_timed_country_flag={ flag= under_idol_event_02   days=180  }
+		country_event={ id=cg_plus_underidol.5002 days =60 } }
+	option ={
+		name = cg_plus_underidol.5001.03
+		event_target:country_hosting_live ={ has_country_flag=live_member_flag_03 }
+		set_timed_country_flag={ flag= under_idol_event_03   days=180  }
+		country_event={ id=cg_plus_underidol.5002 days =60 } }
+	option ={
+		name = cg_plus_underidol.5001.04
+		event_target:country_hosting_live ={ has_country_flag=live_member_flag_04 }
+		set_timed_country_flag={ flag= under_idol_event_04   days=180  }
+		country_event={ id=cg_plus_underidol.5002 days =60 } }
+	option ={
+		name = cg_plus_underidol.5001.05
+		event_target:country_hosting_live ={ has_country_flag=live_member_flag_05 }
+		set_timed_country_flag={ flag= under_idol_event_05   days=180  }
+		country_event={ id=cg_plus_underidol.5002 days =60 } }
+	option ={
+		name = cg_plus_underidol.5001.06
+		event_target:country_hosting_live ={ has_country_flag=live_member_flag_06 }
+		set_timed_country_flag={ flag= under_idol_event_06   days=180  }
+		country_event={ id=cg_plus_underidol.5002 days =60 } }
+	option ={
+		name = cg_plus_underidol.5001.07
+		event_target:country_hosting_live ={ has_country_flag=live_member_flag_07 }
+		set_timed_country_flag={ flag= under_idol_event_07   days=180  }
+		country_event={ id=cg_plus_underidol.5002 days =60 } }
+	option ={
+		name = cg_plus_underidol.5001.08
+		event_target:country_hosting_live ={ has_country_flag=live_member_flag_08 }
+		set_timed_country_flag={ flag= under_idol_event_08   days=180  }
+		country_event={ id=cg_plus_underidol.5002 days =60 } }
+	option ={
+		name = cg_plus_underidol.5001.09
+		event_target:country_hosting_live ={ has_country_flag=live_member_flag_09 }
+		set_timed_country_flag={ flag= under_idol_event_09   days=180  }
+		country_event={ id=cg_plus_underidol.5002 days =60 } }
+	option ={
+		name = cg_plus_underidol.5001.10
+		event_target:country_hosting_live ={ has_country_flag=live_member_flag_10 }
+		set_timed_country_flag={ flag= under_idol_event_10   days=180  }
+		country_event={ id=cg_plus_underidol.5002 days =60 } }
+	option ={
+		name = cg_plus_underidol.5001.11
+		event_target:country_hosting_live ={ has_country_flag=live_member_flag_11 }
+		set_timed_country_flag={ flag= under_idol_event_11   days=180  }
+		country_event={ id=cg_plus_underidol.5002 days =60 } }
+	option ={
+		name = cg_plus_underidol.5001.12
+		event_target:country_hosting_live ={ has_country_flag=live_member_flag_12 }
+		set_timed_country_flag={ flag= under_idol_event_12   days=180  }
+		country_event={ id=cg_plus_underidol.5002 days =60 } }
+	option ={
+		name = cg_plus_underidol.5001.13
+		event_target:country_hosting_live ={ has_country_flag=live_member_flag_13 }
+		set_timed_country_flag={ flag= under_idol_event_13   days=180  }
+		country_event={ id=cg_plus_underidol.5002 days =60 } }
+	option ={
+		name = cg_plus_underidol.5001.14
+		event_target:country_hosting_live ={ has_country_flag=live_member_flag_14 }
+		set_timed_country_flag={ flag= under_idol_event_14   days=180  }
+		country_event={ id=cg_plus_underidol.5002 days =60 } }
+	option ={
+		name = cg_plus_underidol.5001.15
+		event_target:country_hosting_live ={ has_country_flag=live_member_flag_15 }
+		set_timed_country_flag={ flag= under_idol_event_15   days=180  }
+		country_event={ id=cg_plus_underidol.5002 days =60 } }
+	option ={
+		name = cg_plus_underidol.5001.16
+		event_target:country_hosting_live ={ has_country_flag=live_member_flag_16 }
+		set_timed_country_flag={ flag= under_idol_event_16   days=180  }
+		country_event={ id=cg_plus_underidol.5002 days =60 } }
+	option ={
+		name = cg_plus_underidol.5001.17
+		event_target:country_hosting_live ={ has_country_flag=live_member_flag_17 }
+		set_timed_country_flag={ flag= under_idol_event_17   days=180  }
+		country_event={ id=cg_plus_underidol.5002 days =60 } }
+	option ={
+		name = cg_plus_underidol.5001.18
+		event_target:country_hosting_live ={ has_country_flag=live_member_flag_18 }
+		set_timed_country_flag={ flag= under_idol_event_18   days=180  }
+		country_event={ id=cg_plus_underidol.5002 days =60 } }
+	option ={
+		name = cg_plus_underidol.5001.19
+		event_target:country_hosting_live ={ has_country_flag=live_member_flag_19 }
+		set_timed_country_flag={ flag= under_idol_event_19   days=180  }
+		country_event={ id=cg_plus_underidol.5002 days =60 } }
+	option ={
+		name = cg_plus_underidol.5001.20
+		event_target:country_hosting_live ={ has_country_flag=live_member_flag_20 }
+		set_timed_country_flag={ flag= under_idol_event_20   days=180  }
+		country_event={ id=cg_plus_underidol.5002 days =60 } }
+	option ={
+		name = cg_plus_underidol.5001.21
+		event_target:country_hosting_live ={ has_country_flag=live_member_flag_21 }
+		set_timed_country_flag={ flag= under_idol_event_21   days=180  }
+		country_event={ id=cg_plus_underidol.5002 days =60 } }
+	option ={
+		name = cg_plus_underidol.5001.22
+		event_target:country_hosting_live ={ has_country_flag=live_member_flag_22 }
+		set_timed_country_flag={ flag= under_idol_event_22   days=180  }
+		country_event={ id=cg_plus_underidol.5002 days =60 } }
+	option ={
+		name = cg_plus_underidol.5001.23
+		event_target:country_hosting_live ={ has_country_flag=live_member_flag_23 }
+		set_timed_country_flag={ flag= under_idol_event_23   days=180  }
+		country_event={ id=cg_plus_underidol.5002 days =60 } }
+	option ={
+		name = cg_plus_underidol.5001.24
+		event_target:country_hosting_live ={ has_country_flag=live_member_flag_24 }
+		set_timed_country_flag={ flag= under_idol_event_24   days=180  }
+		country_event={ id=cg_plus_underidol.5002 days =60 } }
+	option ={
+		name = cg_plus_underidol.5001.25
+		event_target:country_hosting_live ={ has_country_flag=live_member_flag_25 }
+		set_timed_country_flag={ flag= under_idol_event_25   days=180  }
+		country_event={ id=cg_plus_underidol.5002 days =60 } }
+	
+
+}
+
+country_event = {
+	id = cg_plus_underidol.5002
+	title = cg_plus_underidol.5002.name
+	
+
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = "enclave_artist_window"              #make new ui
+	custom_gui_option = "enclave_artist_option"
+
+	desc = {
+		trigger = {#change these
+			switch = {
+				trigger = has_country_flag
+				under_idol_event_25 = { text = cg_plus_enclaves_art.1000.a.sentart }
+
+				default = { text = cg_plus_enclaves_art.1000.desc }
+			}
+		}
+	}
+
+	picture_event_data={
+		room=
+
+	}	
+
+	trigger = {
+		exists=prev
+	}
+	option = { 
+		name = cg_plus_underidol.5002.01
+		
+	
+	}
 }
 
 

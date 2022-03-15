@@ -10,3 +10,41 @@ mod_283p_under_member={
 	country_influence_produces_add = -3
 
 }
+
+
+cg_plus_artist_destroy_mod_9021={
+	
+	planet_pop_happiness=0.05
+	country_unity_produces_mult= 0.05
+
+}
+
+
+cg_plus_artist_destroy_mod_90222={
+	
+
+	country_unity_produces_mult= 0.01
+
+}
+
+
+cg_plus_artist_destroy_mod_9023={
+	
+
+	planet_pop_happiness=0.10
+	country_unity_produces_mult= 0.10
+
+}
+
+cg_plus_artist_destroy_mod_9024={
+
+	country_unity_produces_mult= 0.10
+
+}
+
+
+cg_plus_artist_destroy_mod_9024={
+
+	country_unity_produces_mult= 0.10
+
+}

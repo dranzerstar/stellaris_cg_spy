@@ -713,8 +713,6 @@ country_event = {
 	
 	is_triggered_only = yes
 	hide_window = yes
-	
-	picture= GFX_sagiri_done
 	trigger = {
 		This = {
 			has_country_flag = cg_plus_colorful_artisan_country
@@ -750,41 +748,6 @@ country_event = {
 }
 
 country_event = {
-	id = cg_plus_enclaves_art.9001
-	title = cg_plus_enclaves_art.1000.name
-	desc = cg_plus_enclaves_art.9001.desc
-
-	is_triggered_only = yes
-	diplomatic = yes
-	custom_gui = "enclave_artist_window"
-	custom_gui_option = "enclave_artist_option"
-
-	trigger = {
-		This = {
-			has_country_flag = cg_plus_colorful_artisan_country
-		}
-	}
-	picture_event_data = {
-		portrait = event_target:cg_plus_colorful_artisan_country  #change this
-		room = enclave_artist_room
-	}
-
-	immediate = {
-		
-	}
-
-	after = {
-
-	}
-
-	option = { # Back
-		name = cg_plus_enclaves_art.1000.a
-
-	}
-}
-
-
-country_event = {
 	id = cg_plus_enclaves_art.9002
 	title = cg_plus_enclaves_art.1000.name
 	desc = cg_plus_enclaves_art.9002.desc
@@ -795,25 +758,412 @@ country_event = {
 	custom_gui_option = "enclave_artist_option"
 
 	trigger = {
-		This = {
-			has_country_flag = cg_plus_colorful_artisan_country
-		}
+		exists=prev
 	}
 	picture_event_data = {
 		portrait = event_target:cg_plus_colorful_artisan_country  #change this
 		room = enclave_artist_room
 	}
 
-	immediate = {
-		
-	}
-
-	after = {
-
-	}
 
 	option = { # Back
 		name = cg_plus_enclaves_art.1000.a
 
+	}
+}
+
+
+country_event = {
+	id = cg_plus_enclaves_art.9001
+	title = cg_plus_enclaves_art.9001.name
+	desc = cg_plus_enclaves_art.9001.desc
+
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = "enclave_artist_window"
+	custom_gui_option = "enclave_artist_option"
+
+	trigger = {
+		exists=prev
+	}
+	picture_event_data = { #shocked
+		portrait = event_target:cg_plus_colorful_artisan_country  #change this
+		room = enclave_artist_room
+	}
+
+
+	option = { 
+		name = cg_plus_enclaves_art.9001.a
+		trigger= { has_valid_civic = civic_abyssal_ascendancy  }
+		country_event={ id =cg_plus_enclaves_art.9011  days =60} }
+
+	option = { 
+		name = cg_plus_enclaves_art.9001.b
+		trigger= { has_valid_civic = civic_lust_guro }
+		country_event={ id =cg_plus_enclaves_art.9012  days =60} }
+
+	option = { 
+		name = cg_plus_enclaves_art.9001.c
+		trigger= { has_valid_civic = civic_all_slave }
+		country_event={ id =cg_plus_enclaves_art.9011  days =60} }
+
+	option = { 
+		name = cg_plus_enclaves_art.9001.d
+		trigger= { has_valid_civic = civic_mechanical_intercourse  }
+		country_event={ id =cg_plus_enclaves_art.9011  days =60} }
+
+	option = { 
+		name = cg_plus_enclaves_art.9001.e
+		trigger= { has_valid_civic = civic_slave_tradition}
+		country_event={ id =cg_plus_enclaves_art.9013  days =60} }
+
+	option = { 
+		name = cg_plus_enclaves_art.9001.f
+		trigger= { has_valid_civic = civic_sacrifice_lustgod }
+		country_event={ id =cg_plus_enclaves_art.9025  days =60} }
+
+	option = { 
+		name = cg_plus_enclaves_art.9001.g
+		trigger= {  }
+		country_event={ id =cg_plus_enclaves_art.9011  days =60} }
+
+}
+
+
+country_event = {
+	id = cg_plus_enclaves_art.9011
+	title = cg_plus_enclaves_art.9011.name
+	desc = cg_plus_enclaves_art.9011.desc
+
+	is_triggered_only = yes
+	picture=
+
+	trigger = {
+		exists=prev
+	}
+	picture_event_data = {
+		portrait = event_target:cg_plus_colorful_artisan_country  #change this
+		room = enclave_artist_room
+	}
+
+	option = { 
+		name = cg_plus_enclaves_art.9011.a
+		trigger= { has_valid_civic = civic_abyssal_ascendancy  }
+		country_event={ id =cg_plus_enclaves_art.9021  days =180} }
+
+	option = { 
+		name = cg_plus_enclaves_art.9011.b
+		trigger= { has_valid_civic = civic_all_slave  }
+		country_event={ id =cg_plus_enclaves_art.9023  days =180} }
+
+	option = { 
+		name = cg_plus_enclaves_art.9011.c
+		trigger= { has_valid_civic = civic_mechanical_intercourse  }
+		country_event={ id =cg_plus_enclaves_art.9024  days =180} }
+	option = { 
+		name = cg_plus_enclaves_art.9011.d
+		trigger= {   }
+		country_event={ id =cg_plus_enclaves_art.9027  days =180} }
+
+}
+
+
+country_event = {
+	id = cg_plus_enclaves_art.9012
+	title = cg_plus_enclaves_art.9012.name
+	desc = cg_plus_enclaves_art.9012.desc
+
+	is_triggered_only = yes
+	picture=
+
+	trigger = {
+		exists=prev
+	}
+	picture_event_data = {
+		portrait = event_target:cg_plus_colorful_artisan_country  #change this
+		room = enclave_artist_room
+	}
+
+	option = { 
+		name = cg_plus_enclaves_art.9012.a
+		
+		country_event={ id =cg_plus_enclaves_art.9022  days =180} }
+
+
+}
+
+
+country_event = {
+	id = cg_plus_enclaves_art.9013
+	title = cg_plus_enclaves_art.9013.name
+	desc = cg_plus_enclaves_art.9013.desc
+
+	is_triggered_only = yes
+	picture=
+
+	trigger = {
+		exists=prev
+	}
+	picture_event_data = {
+		portrait = event_target:cg_plus_colorful_artisan_country  #change this
+		room = enclave_artist_room
+	}
+
+	option = { 
+		name = cg_plus_enclaves_art.9013.a
+	
+		country_event={ id =cg_plus_enclaves_art.9025  days =180} }
+
+
+}
+
+
+country_event = {
+	id = cg_plus_enclaves_art.9014
+	title = cg_plus_enclaves_art.9014.name
+	desc = cg_plus_enclaves_art.9014.desc
+
+	is_triggered_only = yes
+	picture=
+
+	trigger = {
+		exists=prev
+	}
+	picture_event_data = {
+		portrait = event_target:cg_plus_colorful_artisan_country  #change this
+		room = enclave_artist_room
+	}
+
+	option = { 
+		name = cg_plus_enclaves_art.9011.a
+	
+		country_event={ id =cg_plus_enclaves_art.9026  days =180} }
+
+
+}
+
+
+
+
+country_event = {
+	id = cg_plus_enclaves_art.9021
+	title = cg_plus_enclaves_art.9021.name
+	desc = cg_plus_enclaves_art.9021.desc
+
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = "enclave_artist_window"              #make new ui
+	custom_gui_option = "enclave_artist_option"
+	picture_event_data={
+		room=
+
+	}	
+
+	trigger = {
+		exists=prev
+	}
+	option = { 
+		name = cg_plus_enclaves_art.9021.a
+		add_modifier={ modifier= cg_plus_artist_destroy_mod_9021 }
+		#		获得帝国修正：枪口下的色图创作
+		#描述：恐惧才是最好的创作动力
+	}
+}
+
+
+country_event = {
+	id = cg_plus_enclaves_art.9022
+	title = cg_plus_enclaves_art.9022.name
+	desc = cg_plus_enclaves_art.9022.desc
+
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = "enclave_artist_window"              #make new ui
+	custom_gui_option = "enclave_artist_option"
+	picture_event_data={
+		room=
+	}	
+	trigger = {
+		exists=prev
+	}
+	option = { 
+		name = cg_plus_enclaves_art.9022.a
+		country_event={id=cg_plus_enclaves_art.90221 days=180}
+	}
+}
+country_event = {
+	id = cg_plus_enclaves_art.90221
+	title = cg_plus_enclaves_art.90221.name
+	desc = cg_plus_enclaves_art.90221.desc
+
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = "enclave_artist_window"              #make new ui
+	custom_gui_option = "enclave_artist_option"
+	picture_event_data={
+		room=
+	}	
+	trigger = {
+		exists=prev
+	}
+	option = { 
+		name = cg_plus_enclaves_art.9022.a
+		country_event={id=cg_plus_enclaves_art.90222 days=180}
+	}
+}
+country_event = {
+	id = cg_plus_enclaves_art.90222
+	title = cg_plus_enclaves_art.90222.name
+	desc = cg_plus_enclaves_art.90222.desc
+
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = "enclave_artist_window"              #make new ui
+	custom_gui_option = "enclave_artist_option"
+	picture_event_data={
+		room=
+	}	
+	trigger = {
+		exists=prev
+	}
+	option = { 
+		name = cg_plus_enclaves_art.90222.a
+		add_modifier={ modifier= cg_plus_artist_destroy_mod_90222 }
+		# 获得帝国修正：大触老师的最后遗作
+		# 描述：“这副画的点睛之笔就是我捡到了她的眼睛”——一位肉泥绘画大赛获奖者
+		# 	凝聚力产出+1%
+		
+	}
+}
+
+country_event = {
+	id = cg_plus_enclaves_art.9023
+	title = cg_plus_enclaves_art.9023.name
+	desc = cg_plus_enclaves_art.9023.desc
+
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = "enclave_artist_window"              #make new ui
+	custom_gui_option = "enclave_artist_option"
+	picture_event_data={
+		room=
+
+	}	
+
+	trigger = {
+		exists=prev
+	}
+	option = { 
+		name = cg_plus_enclaves_art.9023.a
+		add_modifier={ modifier= cg_plus_artist_destroy_mod_9023 }
+		# 获得帝国修正：充满灵感的色图创作
+		# 描述：有谁能拒绝这样的生活呢?不管是读者还是作者。
+		# 10%幸福度，10%凝聚力产出
+	}
+}
+
+
+country_event = {
+	id = cg_plus_enclaves_art.9024
+	title = cg_plus_enclaves_art.9024.name
+	desc = cg_plus_enclaves_art.9024.desc
+
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = "enclave_artist_window"              #make new ui
+	custom_gui_option = "enclave_artist_option"
+	picture_event_data={
+		room=
+
+	}	
+
+	trigger = {
+		exists=prev
+	}
+	option = { 
+		name = cg_plus_enclaves_art.9024.a
+		add_modifier={ modifier= cg_plus_artist_destroy_mod_9024 years=10 }
+		# 获得帝国修正：毒瘾精神病人的色图创作，持续10年
+		# 	描述：艺术家疯一点才够格。不过，现在的色图我们看不懂了。
+		# 	10%凝聚力产出
+	}
+}
+
+
+country_event = {
+	id = cg_plus_enclaves_art.9025
+	title = cg_plus_enclaves_art.9025.name
+	desc = cg_plus_enclaves_art.9025.desc
+
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = "enclave_artist_window"              #make new ui
+	custom_gui_option = "enclave_artist_option"
+	picture_event_data={
+		room=
+
+	}	
+
+	trigger = {
+		exists=prev
+	}
+	option = { 
+		name = cg_plus_enclaves_art.9025.a
+		every_owned_leader={
+			add_experience =5000
+		}
+		#统治者领袖获得5000经验
+	}
+}
+
+country_event = {
+	id = cg_plus_enclaves_art.9026
+	title = cg_plus_enclaves_art.9026.name
+	desc = cg_plus_enclaves_art.9026.desc
+
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = "enclave_artist_window"              #make new ui
+	custom_gui_option = "enclave_artist_option"
+	picture_event_data={
+		room=
+
+	}	
+
+	trigger = {
+		exists=prev
+	}
+	option = { 
+		name = cg_plus_enclaves_art.9026.a
+		add_modifier={ modifier= cg_plus_artist_destroy_mod_9026 years=1 }
+	#	获得帝国修正：艺术家之活祭，持续1年
+	#		描述：虔诚之人都会赞叹我们的艺术
+	#		20%凝聚力产出
+	}
+}
+
+
+country_event = {
+	id = cg_plus_enclaves_art.9027
+	title = cg_plus_enclaves_art.9027.name
+	desc = cg_plus_enclaves_art.9027.desc
+
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = "enclave_artist_window"              #make new ui
+	custom_gui_option = "enclave_artist_option"
+	picture_event_data={
+		room=
+
+	}	
+
+	trigger = {
+		exists=prev
+	}
+	option = { 
+		name = cg_plus_enclaves_art.9026.a
+		add_resource={ unity =1000 }
+	#	获得1000凝聚力
+	#		
 	}
 }
