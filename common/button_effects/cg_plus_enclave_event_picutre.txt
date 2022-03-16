@@ -1,0 +1,18 @@
+cg_plus_enclave_evt_pic_9023 = {
+	potential = {FROM = { check_variable = { which = cg_plus_enclave_evt_pic value = 9023 }}}
+	allow = { always = yes }
+	effect = {}
+}
+
+cg_plus_enclave_evt_pic_9025 = {
+	potential = {FROM = { check_variable = { which = cg_plus_enclave_evt_pic value = 9023 }}}
+	allow = { always = yes }
+	effect = {}
+}
+
+cg_plus_enclave_evt_pic_9027 = {
+	potential = {FROM = { check_variable = { which = cg_plus_enclave_evt_pic value = 9023 }}}
+	allow = { always = yes }
+	effect = {}
+}
+

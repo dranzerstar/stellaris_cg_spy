@@ -1,0 +1,328 @@
+guiTypes = {
+
+	containerWindowType = {
+		name = "cg_plus_evt_menu_button_e"
+		position = { x=0 y=0 }
+		size = { width = 600 height = 60 }
+		moveable = no
+		
+		buttonType = {
+			name = "option_button"
+			quadTextureSprite = "GFX_cg_plus_evt_menu_L_button" #make new size button 
+			position = { x=50 y=4}
+			font = "cg_16b"
+			orientation = "center"
+			text = "OPTION_TEXT"
+			clicksound = "confirm_click"
+		}
+
+		OverlappingElementsBoxType = {
+			name = "trigger_icons"
+			position = { x = 0  y = 10 }
+			size = { x=65 y= 28 }
+		}
+	}
+
+  #1620 x 850 overall
+	#1000 x 750 image
+	# x=1010 size 600 x 500 text
+	containerWindowType = {
+		name = "cg_plus_evt_menu_enclave"
+		size = { width = 1620 height = 850 }
+		moveable = yes
+		orientation = center
+		origo = center
+		
+		background = {
+			name = "background"
+			quadTextureSprite ="GFX_evt_menu_bg_L" ##TODO  set this to  1620x850 
+			position = { x = 0 y = 0 }
+		}
+
+
+		###########################
+		#picture area start  
+		###########################
+
+		@portrait_x = 0
+		@portrait_y = 50
+
+		effectButtonType = {
+			name = "cg_plus_uniform_evt_pic_1200_gfx"
+			quadTextureSprite = "GFX_evt_uniform_princess_L_01"
+			Orientation = "UPPER_LEFT"
+			position = { x = @portrait_x y = @portrait_y }
+			effect = "cg_plus_uniform_evt_pic_1200"
+		}
+	
+		
+		###########################
+		#picture area end
+		###########################
+		iconType = {
+			name = "CG_dialogue_main_element_new"
+			Orientation = "UPPER_LEFT"
+			position = { x = -55555 y = 0 }
+			quadTextureSprite = "GFX_cg_dialogue_above_elements_new"
+			alwaysTransparent = yes
+		}
+		#text area
+		instantTextBoxType = {
+			name = "alien_message"
+			font = "malgun_goth_24"
+			format = "LEFT"
+			orientation = "UPPER_LEFT"
+			position = { x = 1010 y = 120 }
+			maxWidth = 600
+			maxHeight = 450
+			alwaysTransparent = yes
+			scrollbartype = "standardtext_slider"
+		}
+
+		### EVENT DIPLO ###
+		#title area
+		containerWindowType = {
+			name = "EVENT_DIPLO"
+			position = { x = 5 y = 0 }
+			size = { width=600 height=250 }
+			moveable = no
+			
+			instantTextBoxType={
+				name = "action_title"
+				font = "malgun_goth_24"
+				position = { x = 1010 y = 60 }
+				maxWidth = 600
+				maxHeight = 50
+				format = CENTER
+				fixedSize = yes
+				alwaysTransparent = yes
+			}
+			instantTextBoxType={ name = "action_desc" font = "malgun_goth_24" position = { x = -1453 y = -12450 } } # hidden
+			
+			listboxType = {
+				name = "option_list"
+				position = { x = 1160 y = 610 }
+				backGround=""
+				size = { x = 300 y = 600 }
+				scrollbartype = "standardlistbox_slider"
+				spacing = 20
+				borderSize = { x = 0 y = 0 }
+				Orientation = "CENTERED_UP"
+			}
+		}
+
+
+		############################################
+		### ALL OF THIS IS HIDDEN OR DISPLACED ! ###
+		############################################
+		instantTextBoxType = { name = "heading" font = "malgun_goth_24" position = { x = -1453 y = -12450 }} # hidden
+		iconType = { name = "empire_header_line" quadTextureSprite = "GFX_line_long_caravaneer" position = { x = -1453 y = -12450 } }
+		buttonType = { name = "focus_button" position = { x = -1453 y = -12450 } spriteType = "GFX_fleetview_focus" }
+		buttonType = { name = "alien_message_background" size = { x = 0 y = 0 } position = { x = -1453 y = -12450 } spriteType = "GFX_tiles_dark_area_cut_8" } # hidden
+		buttonType = { name = "confirm_button" quadTextureSprite = "GFX_standard_button_142_34_button" } # hidden
+		containerWindowType = {
+			name = "portrait"
+			position = { x = -1453 y = -12450 }
+			size = { width = 0 height = 0 } # hide portrait window
+			iconType = { name = "portrait" spriteType = "GFX_portrait_gamesetup_mask"  } # hidden
+			iconType = { name = "black_frame" spriteType = "GFX_diplomacy_portrait_shadow_frame" } # hidden
+			iconType = { name = "stripes_1" spriteType = "GFX_diplomacy_stripes_2" } # hidden
+			iconType = { name = "city_frame" spriteType = "GFX_diplomacy_portrait_frame" } # hidden
+		}
+		iconType = { name = "empire_info_bg" spriteType = "GFX_diplomacy_dark_fade_bg" } # hidden
+		instantTextBoxType={ name = "empire_name" font = "malgun_goth_24" } # hidden 
+		instantTextBoxType={ name = "empire_government_type" font = "cg_16b" } # hidden
+		instantTextBoxType={ name = "empire_personality_type" font = "cg_16b" } # hidden
+		OverlappingElementsBoxType = { name = "empire_ethics_icons" position = { x = -1453 y = -12450 } } # hidden
+		buttonType = { name = "empire_flag" spriteType = "GFX_empire_flag_128" position = { x = -1453 y = -12450 } } # hidden
+		containerWindowType = {
+			name = "leader_details"
+			position = { x = -1453 y = -12450 }
+			containerWindowType = { name = "empire_traits_box" } # hidden
+			instantTextBoxType = { name = "empire_traits_label" font = "cg_16b" } # hidden
+			overlappingElementsBoxType = { name = "leader_traits" } # hidden
+			instantTextBoxType = { name = "leader_name" font = "cg_16b" } # hidden
+			instantTextBoxType = { name = "leader_species" font = "cg_16b" } # hidden
+		}
+		containerWindowType = {
+			name = "opinion_window"
+			position = { x = -1453 y = -12450 }
+			size = { width = 94 height = 30 }
+			iconType = { name = "their_opinion_icon" spriteType = "GFX_diplomacy_opinion" } # hidden
+			instantTextBoxType = { name = "their_opinion" font = "cg_16b" }
+		}	
+	}
+}
+
+
+guiTypes = {
+
+	containerWindowType = {
+		name = "cg_plus_evt_menu_button_e"
+		position = { x=0 y=0 }
+		size = { width = 600 height = 60 }
+		moveable = no
+		
+		buttonType = {
+			name = "option_button"
+			quadTextureSprite = "GFX_cg_plus_evt_menu_L_button" #make new size button 
+			position = { x=0 y=4}
+			font = "cg_16b"
+			orientation = "left"
+			text = "OPTION_TEXT"
+			clicksound = "confirm_click"
+
+		}
+
+		OverlappingElementsBoxType = {
+			name = "trigger_icons"
+			position = { x = 0  y = 10 }
+			size = { x=65 y= 28 }
+		}
+	}
+
+
+    #900 x 900 overall
+	#550 x 800 image
+	# x=560 size 330 x 500 text
+	containerWindowType = {
+		name = "cg_plus_evt_menu_enclave_p" 
+		size = { width = 900 height = 900 }
+		moveable = yes
+		orientation = center
+		origo = center
+		
+		background = {
+			name = "background"
+			quadTextureSprite ="GFX_evt_menu_bg_P" ##TODO  set this to  1620x850 
+			position = { x = 0 y = 0 }
+		}
+
+	
+		
+		###########################
+		#picture area start  P
+		###########################
+
+		@portrait_x = 0
+		@portrait_y = 50
+
+		effectButtonType = {
+			name = "9023"
+			quadTextureSprite = "GFX_evt_p_9023"
+			Orientation = "UPPER_LEFT"
+			position = { x = @portrait_x y = @portrait_y }
+			effect = "cg_plus_enclave_evt_pic_9023"
+		}
+		effectButtonType = {
+			name = "9025"
+			quadTextureSprite = "GFX_evt_p_9025"
+			Orientation = "UPPER_LEFT"
+			position = { x = @portrait_x y = @portrait_y }
+			effect = "cg_plus_enclave_evt_pic_9025"
+		}
+		effectButtonType = {
+			name = "9027"
+			quadTextureSprite = "GFX_evt_p_9027"
+			Orientation = "UPPER_LEFT"
+			position = { x = @portrait_x y = @portrait_y }
+			effect = "cg_plus_enclave_evt_pic_9027"
+		}	
+
+		###########################
+		#picture area end
+		###########################
+		iconType = {
+			name = "CG_dialogue_main_element_new"
+			Orientation = "UPPER_LEFT"
+			position = { x = -55555 y = 0 }
+			quadTextureSprite = "GFX_cg_dialogue_above_elements_new"
+			alwaysTransparent = yes
+		}
+		#text area
+		instantTextBoxType = {
+			name = "alien_message"
+			font = "malgun_goth_24"
+			format = "LEFT"
+			orientation = "UPPER_LEFT"
+			position = { x = 560 y = 110 }
+			maxWidth = 330
+			maxHeight = 470
+			alwaysTransparent = yes
+			scrollbartype = "standardtext_slider"
+		}
+
+		### EVENT DIPLO ###
+		#title area
+		containerWindowType = {
+			name = "EVENT_DIPLO"
+			position = { x = 5 y = 0 }
+			size = { width=330 height=250 }
+			moveable = no
+			
+			instantTextBoxType={
+				name = "action_title"
+				font = "malgun_goth_24"
+				position = { x = 560 y = 60 }
+				maxWidth = 330
+				maxHeight = 50
+				format = CENTER
+				fixedSize = yes
+				alwaysTransparent = yes
+			}
+			instantTextBoxType={ name = "action_desc" font = "malgun_goth_24" position = { x = -1453 y = -12450 } } # hidden
+			
+			listboxType = {
+				name = "option_list"
+				position = { x = 570 y = 620 }
+				backGround=""
+				size = { x = 330 y = 250 }
+				scrollbartype = "standardlistbox_slider"
+				spacing = 20
+				borderSize = { x = 0 y = 0 }
+				Orientation = "UPPER_LEFT"
+			}
+		}
+
+
+		############################################
+		### ALL OF THIS IS HIDDEN OR DISPLACED ! ###
+		############################################
+		instantTextBoxType = { name = "heading" font = "malgun_goth_24" position = { x = -1453 y = -12450 }} # hidden
+		iconType = { name = "empire_header_line" quadTextureSprite = "GFX_line_long_caravaneer" position = { x = -1453 y = -12450 } }
+		buttonType = { name = "focus_button" position = { x = -1453 y = -12450 } spriteType = "GFX_fleetview_focus" }
+		buttonType = { name = "alien_message_background" size = { x = 0 y = 0 } position = { x = -1453 y = -12450 } spriteType = "GFX_tiles_dark_area_cut_8" } # hidden
+		buttonType = { name = "confirm_button" quadTextureSprite = "GFX_standard_button_142_34_button" } # hidden
+		containerWindowType = {
+			name = "portrait"
+			position = { x = -1453 y = -12450 }
+			size = { width = 0 height = 0 } # hide portrait window
+			iconType = { name = "portrait" spriteType = "GFX_portrait_gamesetup_mask"  } # hidden
+			iconType = { name = "black_frame" spriteType = "GFX_diplomacy_portrait_shadow_frame" } # hidden
+			iconType = { name = "stripes_1" spriteType = "GFX_diplomacy_stripes_2" } # hidden
+			iconType = { name = "city_frame" spriteType = "GFX_diplomacy_portrait_frame" } # hidden
+		}
+		iconType = { name = "empire_info_bg" spriteType = "GFX_diplomacy_dark_fade_bg" } # hidden
+		instantTextBoxType={ name = "empire_name" font = "malgun_goth_24" } # hidden 
+		instantTextBoxType={ name = "empire_government_type" font = "cg_16b" } # hidden
+		instantTextBoxType={ name = "empire_personality_type" font = "cg_16b" } # hidden
+		OverlappingElementsBoxType = { name = "empire_ethics_icons" position = { x = -1453 y = -12450 } } # hidden
+		buttonType = { name = "empire_flag" spriteType = "GFX_empire_flag_128" position = { x = -1453 y = -12450 } } # hidden
+		containerWindowType = {
+			name = "leader_details"
+			position = { x = -1453 y = -12450 }
+			containerWindowType = { name = "empire_traits_box" } # hidden
+			instantTextBoxType = { name = "empire_traits_label" font = "cg_16b" } # hidden
+			overlappingElementsBoxType = { name = "leader_traits" } # hidden
+			instantTextBoxType = { name = "leader_name" font = "cg_16b" } # hidden
+			instantTextBoxType = { name = "leader_species" font = "cg_16b" } # hidden
+		}
+		containerWindowType = {
+			name = "opinion_window"
+			position = { x = -1453 y = -12450 }
+			size = { width = 94 height = 30 }
+			iconType = { name = "their_opinion_icon" spriteType = "GFX_diplomacy_opinion" } # hidden
+			instantTextBoxType = { name = "their_opinion" font = "cg_16b" }
+		}	
+	}
+}

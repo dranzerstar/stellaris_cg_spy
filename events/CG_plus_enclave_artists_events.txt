@@ -795,37 +795,37 @@ country_event = {
 
 	option = { 
 		name = cg_plus_enclaves_art.9001.a
-		trigger= { has_valid_civic = civic_abyssal_ascendancy  }
+		allow= { has_valid_civic = civic_abyssal_ascendancy  }
 		country_event={ id =cg_plus_enclaves_art.9011  days =60} }
 
 	option = { 
 		name = cg_plus_enclaves_art.9001.b
-		trigger= { has_valid_civic = civic_lust_guro }
+		allow= { has_valid_civic = civic_lust_guro }
 		country_event={ id =cg_plus_enclaves_art.9012  days =60} }
 
 	option = { 
 		name = cg_plus_enclaves_art.9001.c
-		trigger= { has_valid_civic = civic_all_slave }
+		allow= { has_valid_civic = civic_all_slave }
 		country_event={ id =cg_plus_enclaves_art.9011  days =60} }
 
 	option = { 
 		name = cg_plus_enclaves_art.9001.d
-		trigger= { has_valid_civic = civic_mechanical_intercourse  }
+		allow= { has_valid_civic = civic_mechanical_intercourse  }
 		country_event={ id =cg_plus_enclaves_art.9011  days =60} }
 
 	option = { 
 		name = cg_plus_enclaves_art.9001.e
-		trigger= { has_valid_civic = civic_slave_tradition}
+		allow= { has_valid_civic = civic_slave_tradition}
 		country_event={ id =cg_plus_enclaves_art.9013  days =60} }
 
 	option = { 
 		name = cg_plus_enclaves_art.9001.f
-		trigger= { has_valid_civic = civic_sacrifice_lustgod }
+		allow= { has_valid_civic = civic_sacrifice_lustgod }
 		country_event={ id =cg_plus_enclaves_art.9025  days =60} }
 
 	option = { 
 		name = cg_plus_enclaves_art.9001.g
-		trigger= {  }
+		
 		country_event={ id =cg_plus_enclaves_art.9011  days =60} }
 
 }
@@ -918,11 +918,14 @@ country_event = {
 	desc = cg_plus_enclaves_art.9021.desc
 
 	is_triggered_only = yes
-	diplomatic = yes
-	custom_gui = "enclave_artist_window"              #make new ui
-	custom_gui_option = "enclave_artist_option"
-	
-
+	picture=GFX_sagiri_scared
+#	diplomatic = yes
+#	custom_gui = "cg_plus_evt_menu_enclave"        # cg_plus_evt_menu_enclave_p
+#	custom_gui_option = "cg_plus_evt_menu_button_e"
+	# immediate={
+	# 	set_variable =  { which=cg_plus_enclave_evt_pic  value=9021  }
+	# }
+#TODO
 	trigger = {
 		exists=prev
 	}
@@ -993,10 +996,12 @@ country_event = {
 
 	is_triggered_only = yes
 	diplomatic = yes
-	custom_gui = "enclave_artist_window"              #make new ui
-	custom_gui_option = "enclave_artist_option"
-	
-
+	custom_gui = "cg_plus_evt_menu_enclave_p"              #make new ui
+	custom_gui_option = "cg_plus_evt_menu_button_e"
+	immediate={
+		set_variable =  { which=cg_plus_enclave_evt_pic  value=9023  }
+	}
+#TODO
 	trigger = {
 		exists=prev
 	}
@@ -1016,9 +1021,7 @@ country_event = {
 	desc = cg_plus_enclaves_art.9024.desc
 
 	is_triggered_only = yes
-	diplomatic = yes
-	custom_gui = "enclave_artist_window"              #make new ui
-	custom_gui_option = "enclave_artist_option"
+	picture=GFX_chem_image01
 
 
 	trigger = {
@@ -1041,10 +1044,12 @@ country_event = {
 
 	is_triggered_only = yes
 	diplomatic = yes
-	custom_gui = "enclave_artist_window"              #make new ui
-	custom_gui_option = "enclave_artist_option"
-	
-
+	custom_gui = "cg_plus_evt_menu_enclave_p"              #make new ui
+	custom_gui_option = "cg_plus_evt_menu_button_e"
+	immediate={
+		set_variable =  { which=cg_plus_enclave_evt_pic  value=9025  }
+	}
+	#TODO
 	trigger = {
 		exists=prev
 	}
@@ -1065,7 +1070,7 @@ country_event = {
 	is_triggered_only = yes
 	picture=GFX_g_image03
 	
-
+	#TODO
 	trigger = {
 		exists=prev
 	}
@@ -1086,10 +1091,12 @@ country_event = {
 
 	is_triggered_only = yes
 	diplomatic = yes
-	custom_gui = "enclave_artist_window"              #make new ui
-	custom_gui_option = "enclave_artist_option"
-
-
+	custom_gui = "cg_plus_evt_menu_enclave_p"              #make new ui
+	custom_gui_option = "cg_plus_evt_menu_button_e"
+	#TODO
+	immediate={
+		set_variable =  { which=cg_plus_enclave_evt_pic  value=9027  }
+	}
 	trigger = {
 		exists=prev
 	}

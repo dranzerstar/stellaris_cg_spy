@@ -1,4 +1,5 @@
 spriteTypes = {
+	# small event size 450x150 
 	spriteType = {
 		name = "GFX_sagiri_done"
 		texturefile = "gfx/event_pictures/saigi_001.dds" 
@@ -21,6 +22,33 @@ spriteTypes = {
 		alwaystransparent = yes
 	}
 	spriteType = {
+		name = "GFX_sagiri_scared"#TODO https://danbooru.donmai.us/posts/2743612
+		texturefile = "gfx/event_pictures/enclaves_evt/  " 
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	
+	spriteType = {
+		name = "GFX_evt_p_9023"#TODO https://danbooru.donmai.us/posts/2729695?
+		texturefile = "gfx/event_pictures/enclaves_evt/  " 
+		
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_evt_p_9025"#TODO https://danbooru.donmai.us/posts/5181605
+		texturefile = "gfx/event_pictures/enclaves_evt/  " 
+	
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_p_9027"#TODO https://danbooru.donmai.us/posts/2721969
+		texturefile = "gfx/event_pictures/enclaves_evt/  " 
+	
+		alwaystransparent = yes
+	}
+
+	spriteType = {
 	name = "GFX_g_image02"
 	texturefile = "gfx/event_pictures/enclaves_evt/guro02.dds" 
 	masking_texture = "gfx/interface/situation_log/event_mask.dds"
@@ -31,6 +59,13 @@ spriteTypes = {
 	texturefile = "gfx/event_pictures/enclaves_evt/guro03.dds" 
 	masking_texture = "gfx/interface/situation_log/event_mask.dds"
 	alwaystransparent = yes
-}
+	}
 
+	
+	spriteType = {
+		name = "GFX_chem_image01"  #TODO
+		texturefile = "gfx/event_pictures/enclaves_evt/.dds" 
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+		}
 }

@@ -1,32 +1,4 @@
-#######################################################################
-# 本mod附带的灰风立绘文件拥有者为 “上古复读机”（b站同名）并已授权本KDC mod组使用。
-# 若要使用此灰风立绘并公布mod，请先自行咨询其本人意见。
-# 本mod仅用于Stellais modder群内作交流学习之用，请勿擅自传播，后果自负。
-# 若发现有任何未经原作者同意或未取得授权的情况下随意使用本mod及本mod内容的情况
-# 本人将考虑停止维护并制作类似工具界面并公开于群内，请自重。
-# KDC mod组，vvlolicon，2021/6/9
-#######################################################################
 
-# 立绘差分通过调整变量改变（本mod中为cg_dialogue_leader变量）
-# 切换至其他人视角时变暗效果则通过加flag来切换立绘明暗效果
-# （本mod中为cg_dialogue_charactor_lost_focus的flag效果）
-# 立绘正常状态的potential条件必然为
-# check_variable = { which = 变量名 value = x }
-# NOT = { has_country_flag = xxx }
-# 变暗状态则将country flag条件的not去掉即可，参照下方的button effect
-
-#######################################################################
-
-# 立绘大小为636*780，可用dtx3压缩，请尽量将立绘置于中间
-# 具体增加方法为：
-# 1. 将立绘用ps修整至以上大小，并通过黑白效果制作一个变暗的立绘
-# 2. 在gfx里写好sprite
-# 3. 复制以下任一项button effect以及在变暗效果的button effect，并更改名字和变量判断的数值
-# 4. 于00_CG_dialogue.gui和00_CG_dialogue_no_option.gui文件的人物立绘处复制加上一项effect button type
-# 5. 将复制的effect button type的quadTextureSprite修改为在gfx文件里写好的sprite
-# 6. 将复制的effect button type的effect修改为在本文件新增的button effect
-# 7. 若你使用自定义立绘，请最好直接复制并修改上述两个gui文件，并将立绘的effect button type清空替换至你的button effect
-# 同时最好也复制修改背景和立绘的button effect和控制变量以防与本mod内容冲突
 
 # 人物立绘（灰风）
 cg_plus_uniform_evt_pic_1500 = {
