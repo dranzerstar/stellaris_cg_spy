@@ -1,0 +1,912 @@
+namespace = cg_plus_enclave_slaver
+
+
+# event_target:
+
+
+# npc country   event_target:cg_plus_slaver_country
+# 0000 diplo gate
+# 0999 1st esta
+# 01xx diplo events
+# 5xxx capture leaders
+# 5xxx 
+
+
+country_event = {
+	id= cg_plus_enclave_slaver.0000
+	hide_window=yes
+	is_triggered_only = yes
+
+	trigger = {
+		from = {
+			has_country_flag = cg_plus_slaver_country
+		}
+	}
+	immediate = {
+		if = {
+			limit = { exists = event_target:cg_plus_slaver_country  }
+			country_event = {
+				id = cg_plus_enclave_slaver.1000
+			}
+		}
+	}
+}
+
+
+# 1999 first contact
+
+country_event = {
+	id = cg_plus_enclave_slaver.1999
+	hide_window = no
+	title = cg_plus_enclave_slaver.1000.name
+
+	
+
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = "enclave_artist_window"
+	custom_gui_option = "enclave_artist_option"
+	picture_event_data = {
+		portrait = event_target:cg_plus_slaver_country
+		room = "ship_room"
+	}
+	trigger = {
+		from = {
+			has_country_flag = cg_plus_slaver_country
+		}
+	}
+
+	desc = cg_plus_enclave_slaver.1999.desc.a
+
+
+	immediate = {
+
+	}
+
+	option = {
+		name = cg_plus_enclave_slaver.1999.a.o
+		trigger = {
+			has_country_flag = carnalism_flag
+		}
+		response_text = cg_plus_enclave_slaver.1999.a.r
+		is_dialog_only = yes
+	}
+
+	option = {
+		name = cg_plus_enclave_slaver.1999.b.o
+		trigger = {
+			has_country_flag = asceticism_flag
+		}
+		response_text = cg_plus_enclave_slaver.1999.b.r
+		is_dialog_only = yes
+	}
+
+	option = {
+		name = GOODBYE
+	}
+
+}
+
+
+# 0102 list captured
+# 0103 list ruler auction
+# 0104 tech up
+# 02xx show captured leader
+country_event = {
+	id = cg_plus_enclave_slaver.1000
+	hide_window = no
+	title = cg_plus_enclave_slaver.1000.name
+
+	
+
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = "enclave_artist_window"
+	custom_gui_option = "enclave_artist_option"
+	picture_event_data = {
+		portrait = event_target:cg_plus_slaver_country
+		room = "ship_room"
+	}
+	trigger = {
+		exists = event_target:cg_plus_slaver_country  
+	}
+
+	desc = cg_plus_enclave_slaver.1000.desc.a
+	desc = cg_plus_enclave_slaver.1000.desc.b
+	desc = cg_plus_enclave_slaver.1000.desc.c
+	desc = cg_plus_enclave_slaver.1000.desc.d
+
+	immediate = {
+
+	}
+#info
+	option = {
+		name = cg_plus_enclave_slaver.1000.a.o
+		hidden_effect = {
+			country_event = {
+				id = cg_plus_enclave_slaver.0101
+			}
+		}
+
+	}
+#share tech
+	option = {
+		name = cg_plus_enclave_slaver.1000.b.o
+		trigger={ has_country_flag=carnalism_flag }
+		hidden_effect = {
+			country_event = {
+				id = cg_plus_enclave_slaver.0104
+			}
+		}
+
+	}
+#check slave
+	option = {
+		name = cg_plus_enclave_slaver.1000.c.o
+		hidden_effect = {
+			country_event = {
+				id = cg_plus_enclave_slaver.0102
+			}
+		}
+	}
+#check ruler slave
+	option = {
+		name = cg_plus_enclave_slaver.1000.d.o
+		trigger = {
+			event_target:cg_plus_slaver_country = {
+				has_country_flag = cg_plus_slaver_captured_ruler
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = cg_plus_enclave_slaver.0105
+			}
+		}
+	}
+
+
+	option = {
+		name = GOODBYE
+	}
+
+}
+#0101 desc
+country_event = {
+	id = cg_plus_enclave_slaver.0101
+	hide_window = no
+	title = cg_plus_enclave_slaver.1000.name
+
+	
+
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = "enclave_artist_window"
+	custom_gui_option = "enclave_artist_option"
+	picture_event_data = {
+		portrait = event_target:cg_plus_slaver_country
+		room = "ship_room"
+	}
+	trigger = {
+		exists = event_target:cg_plus_slaver_country  
+	}
+
+	desc = cg_plus_enclave_slaver.0101.desc.a
+
+
+	immediate = {
+
+	}
+
+	option = {
+		name = cg_plus_enclave_slaver.0101.a.o
+		response_text = cg_plus_enclave_slaver.0101.a.r
+		is_dialog_only = yes
+	}
+
+	option = {
+		name = cg_plus_enclave_slaver.0101.b.o
+		response_text = cg_plus_enclave_slaver.0101.b.r
+		is_dialog_only = yes
+	}
+
+	option = {
+		name = cg_plus_enclave_slaver.0101.c.o
+		response_text = cg_plus_enclave_slaver.0101.c.r
+		is_dialog_only = yes
+	}
+
+
+	option = {
+		name = BACK
+	}
+	after = {
+		country_event = {
+			id = cg_plus_enclave_slaver.1000
+		}
+	}
+
+}
+
+
+country_event = {
+	id = cg_plus_enclave_slaver.0104
+	hide_window = no
+	title = cg_plus_enclave_slaver.1000.name
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = "enclave_artist_window"
+	custom_gui_option = "enclave_artist_option"
+	picture_event_data = {
+		portrait = event_target:cg_plus_slaver_country
+		room = "ship_room"
+	}
+	trigger = {
+		exists = event_target:cg_plus_slaver_country  
+	}
+
+	desc = cg_plus_enclave_slaver.0104.desc.a
+
+
+	immediate = {
+
+	}
+
+	option = {
+		name = cg_plus_enclave_slaver.0104.a.o  # 淫梦幻剂
+		trigger={ has_technology= tech_lust_dream_fantasy 
+			event_target:cg_plus_slaver_country={NOT={ has_country_flag=tech_shared_01 }}}
+		hidden_effect={ set_country_flag=tech_shared_01 }
+		response_text = cg_plus_enclave_slaver.0104.a.r
+		is_dialog_only = yes
+	}
+
+	option = {
+		name = cg_plus_enclave_slaver.0104.b.o  # 美丽学说
+		trigger={ has_technology = tech_beauty_theory  
+			event_target:cg_plus_slaver_country={NOT={ has_country_flag=tech_shared_02 }}}
+		hidden_effect={ set_country_flag=tech_shared_02 }
+		response_text = cg_plus_enclave_slaver.0104.b.r
+		is_dialog_only = yes
+	}
+
+	option = {
+		name = cg_plus_enclave_slaver.0104.c.o # 快感神经植入术
+		trigger={ has_technology = tech_nerve_implantation   
+			event_target:cg_plus_slaver_country={NOT={ has_country_flag=tech_shared_03 }}}
+		hidden_effect={ set_country_flag=tech_shared_03 }
+		response_text = cg_plus_enclave_slaver.0104.c.r
+		is_dialog_only = yes
+	}
+
+	option = {
+		name = cg_plus_enclave_slaver.0104.d.o # 定向基因重塑
+		trigger={ has_technology = tech_gene_remodeling    
+			event_target:cg_plus_slaver_country={NOT={ has_country_flag=tech_shared_04 }}}
+		hidden_effect={ set_country_flag=tech_shared_04 }
+		response_text = cg_plus_enclave_slaver.0104.d.r
+		is_dialog_only = yes
+	}
+
+	option = {
+		name = BACK
+	}
+	after = {
+		country_event = {
+			id = cg_plus_enclave_slaver.1000
+		}
+	}
+
+}
+
+
+#list 
+country_event = {
+	id = cg_plus_enclave_slaver.0102
+	hide_window = no
+	title = cg_plus_enclave_slaver.1000.name
+
+
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = "enclave_artist_window"
+	custom_gui_option = "enclave_artist_option"
+	picture_event_data = {
+		portrait = event_target:cg_plus_slaver_country
+		room = "ship_room"
+	}
+	trigger = {
+		exists = event_target:cg_plus_slaver_country  
+	}
+
+	desc =cg_plus_enclave_slaver.0102.desc
+
+	immediate = {
+
+	}
+
+	option = {
+		allow={ always=no }
+		name =  cg_plus_enclave_slaver.0102.list
+	}
+
+	option = {
+		trigger={  event_target:cg_plus_slaver_country ={has_country_flag = slave_01_filled  }}
+		name =  cg_plus_enclave_slaver.0102.list.01
+		country_event = { id = cg_plus_enclave_slaver.0201 }
+	}
+
+	option = {
+		trigger={  event_target:cg_plus_slaver_country ={has_country_flag = slave_02_filled  }}
+		name =  cg_plus_enclave_slaver.0102.list.02
+		country_event = { id = cg_plus_enclave_slaver.0202 }
+	}
+	option = {
+		trigger={ event_target:cg_plus_slaver_country ={ has_country_flag = slave_03_filled  }}
+		name =  cg_plus_enclave_slaver.0102.list.03
+		country_event = { id = cg_plus_enclave_slaver.0203 }
+	}
+	option = {
+		trigger={  event_target:cg_plus_slaver_country ={has_country_flag = slave_04_filled  }}
+		name =  cg_plus_enclave_slaver.0102.list.04
+		country_event = { id = cg_plus_enclave_slaver.0204 }
+
+	}
+	option = {
+		trigger={  event_target:cg_plus_slaver_country ={has_country_flag = slave_05_filled  }}
+		name =  cg_plus_enclave_slaver.0102.list.05
+		country_event = { id = cg_plus_enclave_slaver.0205 }
+	}
+
+
+
+	option = {
+		name = BACK
+		hidden_effect = {
+			country_event = {
+				id =  cg_plus_enclave_slaver.1000
+			}
+		}
+	}
+
+
+}
+
+
+country_event = {
+	id = cg_plus_enclave_slaver.0201
+	hide_window = no
+	title = cg_plus_enclave_slaver.0201.name
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = "enclave_artist_window"
+	custom_gui_option = "enclave_artist_option"
+	picture_event_data = {
+		portrait = event_target:cg_plus_slaver_captured_01
+		room = "prison_room_01"
+	}
+	trigger = { exists = event_target:cg_plus_slaver_country  }
+	desc = cg_plus_enclave_slaver.0201.desc
+
+
+	option = { name = conversion }
+	option = { name = cg_plus_enclave_slaver.buy_slave }
+	option={ name=GOODBYE }
+	after = { country_event = {  id = cg_plus_enclave_slaver.0102 } }
+}
+
+country_event = {
+	id = cg_plus_enclave_slaver.0202
+	hide_window = no
+	title = cg_plus_enclave_slaver.0202.name
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = "enclave_artist_window"
+	custom_gui_option = "enclave_artist_option"
+	picture_event_data = {
+		portrait = event_target:cg_plus_slaver_captured_02
+		room = "prison_room_01"
+	}
+	trigger = { exists = event_target:cg_plus_slaver_country  }
+	desc = cg_plus_enclave_slaver.0202.desc
+	option = { name = conversion is_dialog_only = yes  response_text = cg_plus_enclave_slaver.random.text  }
+	option = { name = cg_plus_enclave_slaver.buy_slave }
+	option={ name=GOODBYE }
+	after = { country_event = {  id = cg_plus_enclave_slaver.0102 } }
+}
+
+country_event = {
+	id = cg_plus_enclave_slaver.0203
+	hide_window = no
+	title = cg_plus_enclave_slaver.0203.name
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = "enclave_artist_window"
+	custom_gui_option = "enclave_artist_option"
+	picture_event_data = {
+		portrait = event_target:cg_plus_slaver_captured_03
+		room = "prison_room_02"
+	}
+	trigger = { exists = event_target:cg_plus_slaver_country  }
+	desc = cg_plus_enclave_slaver.0203.desc
+	option = { name = conversion is_dialog_only = yes  response_text = cg_plus_enclave_slaver.random.text  }
+	option = { name = cg_plus_enclave_slaver.buy_slave }
+	option={ name=GOODBYE }
+	after = { country_event = {  id = cg_plus_enclave_slaver.0102 } }
+}
+
+country_event = {
+	id = cg_plus_enclave_slaver.0204
+	hide_window = no
+	title = cg_plus_enclave_slaver.0204.name
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = "enclave_artist_window"
+	custom_gui_option = "enclave_artist_option"
+	picture_event_data = {
+		portrait = event_target:cg_plus_slaver_captured_04
+		room = "prison_room_02"
+	}
+	trigger = { exists = event_target:cg_plus_slaver_country  }
+	desc = cg_plus_enclave_slaver.0204.desc
+	option = { name = conversion is_dialog_only = yes  response_text = cg_plus_enclave_slaver.random.text  }
+	option = { name = cg_plus_enclave_slaver.buy_slave }
+	option={ name=GOODBYE }
+	after = { country_event = {  id = cg_plus_enclave_slaver.0102 } }
+}
+
+country_event = {
+	id = cg_plus_enclave_slaver.0205
+	hide_window = no
+	title = cg_plus_enclave_slaver.0205.name
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = "enclave_artist_window"
+	custom_gui_option = "enclave_artist_option"
+	picture_event_data = {
+		portrait = event_target:cg_plus_slaver_captured_05
+		room =  1  #"prison_room_02"
+	}
+	trigger = { exists = event_target:cg_plus_slaver_country  }
+	desc = cg_plus_enclave_slaver.0205.desc
+	option = { name = conversion is_dialog_only = yes  response_text = cg_plus_enclave_slaver.random.text  }
+	option = { name = cg_plus_enclave_slaver.buy_slave }
+	option={ name=GOODBYE }
+	after = { country_event = {  id = cg_plus_enclave_slaver.0102 } }
+}
+
+country_event = {
+	id = cg_plus_enclave_slaver.0105
+	hide_window = no
+	title = cg_plus_enclave_slaver.1000.name
+
+
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = "enclave_artist_window"
+	custom_gui_option = "enclave_artist_option"
+	picture_event_data = {
+		portrait = event_target:cg_plus_slaver_country
+		room = "ship_room"
+	}
+	trigger = {
+		exists = event_target:cg_plus_slaver_country  
+	}
+
+	desc =cg_plus_enclave_slaver.0105.desc
+
+
+#info
+	option = {
+		name = cg_plus_enclave_slaver.0105.1.o
+		is_dialog_only = yes
+		response_text = cg_plus_enclave_slaver.0105.1.r
+	}
+# check ruler
+	option = {
+		name = cg_plus_enclave_slaver.0105.2.o
+		hidden_effect = {
+			country_event = {
+				id = cg_plus_enclave_slaver.0300
+			}
+		}
+	}
+# auction screen
+	option = {
+		name = cg_plus_enclave_slaver.0105.3.o
+	}
+	option={ name=BACK  
+	hidden_effect = {
+		country_event = {
+			id = cg_plus_enclave_slaver.1000
+		}
+	}
+
+	}
+
+
+}
+
+
+country_event = {
+	id = cg_plus_enclave_slaver.0300
+	hide_window = no
+	title = cg_plus_enclave_slaver.0300.name
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = "enclave_artist_window"
+	custom_gui_option = "enclave_artist_option"
+	picture_event_data = {
+		portrait = event_target:cg_plus_slaver_captured_ruler
+		room = "prison_room_01"
+	}
+	trigger = { exists = event_target:cg_plus_slaver_country  }
+	desc = cg_plus_enclave_slaver.0300.desc
+	option = { name = conversion is_dialog_only = yes  response_text = cg_plus_enclave_slaver.random.text  }
+	
+	option={ name=GOODBYE }
+	after = { country_event = {  id = cg_plus_enclave_slaver.0105 } }
+}
+
+
+# 590x captured processing
+
+# 5x01  notification event (victim Country)
+# 5x01  notification event
+
+
+
+# 54xx country destroyed, capture some leaders
+
+# get planet general leader
+# 51xx
+# on_planet_defenders_lose 
+# Triggers country_event for the defender upon defeat
+# This = country, planet owner
+# From = country, attack leader
+# FromFrom = planet
+
+# 52xx
+# on_ship_disengaged_victim    get scientist or admiral
+# # This = owner of ship 1 (destroyed)
+# From = owner of ship 2 (combatant)
+# FromFrom = ship 1
+# FromFromFrom = ship 2
+
+# 53xx on_fleet_destroyed_victim     get scientist or admiral
+# This = owner of fleet 1 (destroyed)
+# From = owner of fleet 2 (combatant)
+# FromFrom = fleet 1
+# FromFromFrom = fleet 2
+# on_fleet_destroyed_victim
+
+# 54xx country destroyed, capture some leaders
+# on_country_destroyed 
+#This = destroyed country
+#From = optional, destroyer (country)
+#
+#
+
+country_event = {
+	id=cg_plus_enclave_slaver.5100
+	is_triggered_only = yes
+	hide_window = yes
+	trigger = {
+		exists = fromfrom
+		exists = fromfrom.leader
+		
+		event_target:cg_plus_slaver_country={ NOT={  has_country_flag   = slave_full }}
+	}
+	immediate = {
+		random_owned_planet = {
+			random_planet_army={ leader={} }
+		}
+		fromfrom={  leader={  if={ limit={  is_anime_species=yes  }  
+				random_list = {
+					1={
+						set_leader_flag = cg_slaver_captured
+						exile_leader_as = saved_leader_temp
+						assign_captured_normal_leader_to_slot = yes 
+					}
+					50={modifier={ factor=0 has_global_flag=cg_plus_debug   }  }
+				}
+				
+	
+		} } } 
+	}
+	after = {
+		event_target:cg_plus_slaver_country={
+			set_leader = saved_leader_temp 
+		}
+		country_event={
+				id=cg_plus_enclave_slaver.5101
+				days=10
+		}
+	}
+}
+
+country_event = {
+	id= cg_plus_enclave_slaver.5101
+	title= cg_plus_enclave_slaver.5101
+	is_triggered_only = yes
+	picture=GFX_evt_surrender
+	desc= cg_plus_enclave_slaver.5101.desc
+	option={ name=UNFORTUNATE }
+}
+
+
+country_event = {
+	id=cg_plus_enclave_slaver.5200
+	is_triggered_only = yes
+	hide_window = yes
+	trigger = {
+		exists = fromfrom
+		exists = fromfrom.fleet.leader
+		event_target:cg_plus_slaver_country={ NOT={  has_country_flag   = slave_full }}
+	}
+	immediate = {
+		fromfrom={ fleet={ leader={  if={ limit={  is_anime_species=yes  }  
+				random_list = {
+					1={
+						set_leader_flag = cg_slaver_captured
+						exile_leader_as = saved_leader_temp
+						assign_captured_normal_leader_to_slot = yes 
+					}
+					50={modifier={ factor=0 has_global_flag=cg_plus_debug   } }
+				}
+				
+	
+		} } } }
+	}
+	after = {
+		event_target:cg_plus_slaver_country={
+			set_leader = saved_leader_temp 
+		}
+		country_event={
+				id=cg_plus_enclave_slaver.5201
+				days=10
+		}
+	}
+}
+
+country_event = {
+	id= cg_plus_enclave_slaver.5201
+	title= cg_plus_enclave_slaver.5201
+	is_triggered_only = yes
+	picture=GFX_evt_debris
+	desc= cg_plus_enclave_slaver.5201.desc
+	option={ name=UNFORTUNATE }
+}
+
+
+
+country_event = {
+	id=cg_plus_enclave_slaver.5300
+	is_triggered_only = yes
+	hide_window = yes
+	trigger = {
+		exists = fromfrom
+		exists = fromfrom.leader
+		event_target:cg_plus_slaver_country={ NOT={  has_country_flag   = slave_full }}
+	}
+	immediate = {
+		
+		fromfrom={  leader={  if={ limit={ species = { is_anime_species=yes } }  
+				random_list = {
+					1={
+						set_leader_flag = cg_slaver_captured
+						exile_leader_as = saved_leader_temp
+						assign_captured_normal_leader_to_slot = yes 
+					}
+					30={modifier={ factor=0 has_global_flag=cg_plus_debug   } }
+				}
+				
+	
+		} } } 
+	}
+	after = {
+		event_target:cg_plus_slaver_country={
+			set_leader = saved_leader_temp 
+		}
+		country_event={
+				id=cg_plus_enclave_slaver.5301
+				days=10
+		}
+	}
+}
+
+country_event = {
+	id= cg_plus_enclave_slaver.5301
+	title= cg_plus_enclave_slaver.5301
+	is_triggered_only = yes
+	picture=GFX_evt_small_space_battle
+	desc= cg_plus_enclave_slaver.5301.desc
+	option={ name=UNFORTUNATE }
+}
+
+
+
+
+
+country_event = {
+	id=cg_plus_enclave_slaver.5400
+	is_triggered_only = yes
+	hide_window = yes
+	trigger = {
+		event_target:cg_plus_slaver_country={ NOT={  has_country_flag   = cg_plus_slaver_captured_ruler }}
+
+	}
+	immediate = {
+		
+		this={  ruler={  if={ limit={  is_anime_species=yes  }  
+
+						set_leader_flag = cg_slaver_captured
+						exile_leader_as = saved_leader_temp
+						#assign_captured_normal_leader_to_slot = yes                                     
+						save_global_event_target_as = cg_plus_slaver_captured_ruler
+						Root={ save_global_event_target_as = cg_plus_slaver_captured_ruler_origin }
+						save_global_event_target_as = cg_plus_slaver_last_captured
+						set_leader_flag = cg_plus_slaver_captured_ruler
+						event_target:cg_plus_slaver_country={ set_country_flag = cg_plus_slaver_captured_ruler }
+
+
+					}
+
+				
+	
+		} }  
+	}
+	after = {
+		event_target:cg_plus_slaver_country={
+			set_leader = saved_leader_temp 
+		}
+		every_playable_country = {
+			country_event={
+				id=cg_plus_enclave_slaver.5401
+				days=10
+			}
+			
+		}
+
+	}
+}
+
+country_event = {
+	id= cg_plus_enclave_slaver.5401
+	title= cg_plus_enclave_slaver.5401
+	is_triggered_only = yes
+	picture=GFX_evt_announcement
+	desc= cg_plus_enclave_slaver.5401.desc
+	option={ name=OK }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# 60xx debug capture leaders
+
+
+
+#capture random leader in this country
+#this = leader country,being captured
+country_event = {
+	id= cg_plus_enclave_slaver.6000
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		is_anime_species = yes
+	}
+	immediate = {
+		if = {
+			limit = { event_target:cg_plus_slaver_country={ NOT={  has_country_flag   = slave_full }}}
+				random_owned_leader={
+					limit = {
+						
+						#is_organic_species = yes
+						
+						is_anime_species = yes  
+						
+					}
+					set_leader_flag = cg_slaver_captured
+					exile_leader_as = saved_leader_temp
+					assign_captured_normal_leader_to_slot = yes #brand leader
+				}
+		}
+	}
+	after = {
+		if = {
+			limit = { event_target:cg_plus_slaver_country={ NOT={  has_country_flag   = slave_full }}}
+		
+			event_target:cg_plus_slaver_country={
+				set_leader = saved_leader_temp  # move leader to slaver
+				
+				#country_event = {
+				#	id = cg_plus_enclave_slaver.5901
+				#	days =10
+				#}
+			}
+
+		}
+	}
+}
+#clear all slaves
+country_event = {
+	id= cg_plus_enclave_slaver.6001
+	hide_window = yes
+	is_triggered_only = yes
+
+
+	immediate = {
+		event_target:cg_plus_slaver_country={
+			remove_country_flag = slave_full
+			set_variable = {
+				which = slave_total
+				value = 0
+			}
+			event_target:cg_plus_slaver_captured_01={ kill_leader = { }  }
+			event_target:cg_plus_slaver_captured_02={ kill_leader = { }  }
+			event_target:cg_plus_slaver_captured_03={ kill_leader = { }  }
+			event_target:cg_plus_slaver_captured_04={ kill_leader = { }  }
+			event_target:cg_plus_slaver_captured_05={ kill_leader = { }  }
+			remove_country_flag = slave_01_filled
+			remove_country_flag = slave_02_filled
+			remove_country_flag = slave_03_filled
+			remove_country_flag = slave_04_filled
+			remove_country_flag = slave_05_filled
+
+		}
+	}
+}
+country_event = {
+	id= cg_plus_enclave_slaver.6002
+	hide_window = yes
+	is_triggered_only = yes
+
+
+	immediate = {
+		set_global_flag = cg_plus_debug
+	}
+}
+
+
+
+
+
+
+country_event = {
+	id = cg_plus_enclave_slaver.5901
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		event_target:cg_plus_slaver_last_captured={
+			add_trait = leader_trait_captured
+			add_trait = leader_trait_naked
+			add_trait = leader_trait_collared
+
+
+		}
+	}
+
+
+
+}

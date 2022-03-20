@@ -205,6 +205,22 @@ country_event = {
 	}
 	option = {
 		name = cg_plus_underidol.0001.c
+		trigger={
+			has_country_flag=carnalism_flag
+		}
+		allow = {
+			
+		
+		custom_tooltip = {
+			fail_text = cg_plus_underidol.0001.c.opinion
+			event_target:283p_under_home_country = {
+				 trust = {
+					 who = root
+					 value >= 150
+				 }
+			 }
+		}
+		}
 		hidden_effect = {
 			country_event = {
 				id = cg_plus_underidol.1030
@@ -363,7 +379,13 @@ country_event = {
 		portrait = event_target:283p_under_home_country
 		room = "283_room"
 	}
-	option={ name = OK}
+
+	option={ name = OK 
+		custom_tooltip = cg_plus_underidol.1030.o
+		hidden_effect = {
+			set_country_flag = under_idol_building_1
+		}
+	}
 	after={ country_event ={id= cg_plus_underidol.0001 }}
 
 }
@@ -377,14 +399,21 @@ country_event = {
 	title = cg_plus_underidol.5000.name
 	desc = cg_plus_underidol.5000.desc
 	is_triggered_only = yes
-	picture = GFX_evt_debut #TODO
+	picture = GFX_idols_announce #TODO
 	trigger = {
 		#TODO
 		#yearly, trigger if live is ongoing
-		has_country_flag= ongoing_live 
+		event_target:283p_home_country = { has_country_flag= ongoing_live }
+		NOT={ has_country_flag=recent_had_party }
+		has_modifier = mod_283p_under_member
 	}
 	option = {
 		name = PARTY
+		allow={
+		resource_stockpile_compare = { resource = minor_artifacts value >= 5 }
+		custom_tooltip = {
+			fail_text = not_enough_artifect
+		}}
 		add_resource = {
 			minor_artifacts = -5
 		}
@@ -396,12 +425,13 @@ country_event = {
 					amount = 20
 				}
 			}
+
 			set_timed_country_flag = {
 				flag = recent_had_party 
 				years=5
 			}
 		}
-		country_event={id=cg_plus_underidol.5001 days =20  }
+		country_event={id=cg_plus_underidol.5001 days =90  }
 
 	}
 	option = {
@@ -419,137 +449,149 @@ country_event = {
 	title = cg_plus_underidol.5001.name
 	desc = cg_plus_underidol.5001.desc
 	is_triggered_only = yes
-	picture = GFX_evt_debut  #TODO
+	#picture = GFX_evt_debut  #TODO
+
+	picture ={ trigger={ is_illuminationstars_formed =yes } picture= GFX_evt_live01 } #GFX_evt_live01 }
+	picture ={ trigger={ is_lantica_formed  =yes } picture= GFX_evt_live02 } #GFX_evt_live01 }
+	picture ={ trigger={ is_hokago_formed   =yes } picture= GFX_evt_live03 } 
+	picture ={ trigger={ is_alstroemeria_formed   =yes } picture= GFX_evt_live04 } 
+	picture ={ trigger={ is_straylight_formed   =yes } picture= GFX_evt_live05 } 
+	picture ={ trigger={ is_noctchill_formed   =yes } picture= GFX_evt_live06 } 
+	picture ={ trigger={ is_shhis_formed   =yes } picture= GFX_evt_live07 } 
+	picture ={ trigger={ is_5_person_group   =yes } picture= GFX_evt_debut } 
+
+
 	trigger = {
-		exists=prev
+		#exists=prev
 		exists=event_target:country_hosting_live 
 	}
 
 	option ={
 		name = cg_plus_underidol.5001.01
-		event_target:country_hosting_live ={ has_country_flag=live_member_flag_01 }
-		set_timed_country_flag={ flag= under_idol_event_01   days=180  }
-		country_event={ id=cg_plus_underidol.5002 days =60 } }
+		trigger ={ event_target:country_hosting_live ={ has_country_flag=live_member_flag_01 } }
+		hidden_effect = { set_variable={which= idols_select value = 1 } set_global_flag = under_idol_event_01  } 
+		country_event={ id=cg_plus_underidol.2100 days =30 }  }
 	option ={
 		name = cg_plus_underidol.5001.02
-		event_target:country_hosting_live ={ has_country_flag=live_member_flag_02 }
-		set_timed_country_flag={ flag= under_idol_event_02   days=180  }
-		country_event={ id=cg_plus_underidol.5002 days =60 } }
+		trigger ={ event_target:country_hosting_live ={ has_country_flag=live_member_flag_02 } }
+		hidden_effect = { set_variable={which= idols_select value = 2 } set_global_flag = under_idol_event_02  } 
+		country_event={ id=cg_plus_underidol.2100 days =30 }  }
 	option ={
 		name = cg_plus_underidol.5001.03
-		event_target:country_hosting_live ={ has_country_flag=live_member_flag_03 }
-		set_timed_country_flag={ flag= under_idol_event_03   days=180  }
-		country_event={ id=cg_plus_underidol.5002 days =60 } }
+		trigger ={ event_target:country_hosting_live ={ has_country_flag=live_member_flag_03 } }
+		hidden_effect = { set_variable={which= idols_select value = 3 } set_global_flag = under_idol_event_03  } 
+		country_event={ id=cg_plus_underidol.2100 days =30 }  }
 	option ={
 		name = cg_plus_underidol.5001.04
-		event_target:country_hosting_live ={ has_country_flag=live_member_flag_04 }
-		set_timed_country_flag={ flag= under_idol_event_04   days=180  }
-		country_event={ id=cg_plus_underidol.5002 days =60 } }
+		trigger ={ event_target:country_hosting_live ={ has_country_flag=live_member_flag_04 } }
+		hidden_effect = { set_variable={which= idols_select value = 4 } set_global_flag = under_idol_event_04  } 
+		country_event={ id=cg_plus_underidol.2100 days =30 }  }
 	option ={
 		name = cg_plus_underidol.5001.05
-		event_target:country_hosting_live ={ has_country_flag=live_member_flag_05 }
-		set_timed_country_flag={ flag= under_idol_event_05   days=180  }
-		country_event={ id=cg_plus_underidol.5002 days =60 } }
+		trigger ={ event_target:country_hosting_live ={ has_country_flag=live_member_flag_05 } }
+		hidden_effect = { set_variable={which= idols_select value = 5 } set_global_flag = under_idol_event_05  } 
+		country_event={ id=cg_plus_underidol.2100 days =30 }  }
 	option ={
 		name = cg_plus_underidol.5001.06
-		event_target:country_hosting_live ={ has_country_flag=live_member_flag_06 }
-		set_timed_country_flag={ flag= under_idol_event_06   days=180  }
-		country_event={ id=cg_plus_underidol.5002 days =60 } }
+		trigger ={ event_target:country_hosting_live ={ has_country_flag=live_member_flag_06 } }
+		hidden_effect = { set_variable={which= idols_select value = 6 } set_global_flag = under_idol_event_06  } 
+		country_event={ id=cg_plus_underidol.2100 days =30 }  }
 	option ={
 		name = cg_plus_underidol.5001.07
-		event_target:country_hosting_live ={ has_country_flag=live_member_flag_07 }
-		set_timed_country_flag={ flag= under_idol_event_07   days=180  }
-		country_event={ id=cg_plus_underidol.5002 days =60 } }
+		trigger ={ event_target:country_hosting_live ={ has_country_flag=live_member_flag_07 } }
+		hidden_effect = { set_variable={which= idols_select value = 7 } set_global_flag = under_idol_event_07  } 
+		country_event={ id=cg_plus_underidol.2100 days =30 }  }
 	option ={
 		name = cg_plus_underidol.5001.08
-		event_target:country_hosting_live ={ has_country_flag=live_member_flag_08 }
-		set_timed_country_flag={ flag= under_idol_event_08   days=180  }
-		country_event={ id=cg_plus_underidol.5002 days =60 } }
+		trigger ={ event_target:country_hosting_live ={ has_country_flag=live_member_flag_08 } }
+		hidden_effect = { set_variable={which= idols_select value = 8 } set_global_flag = under_idol_event_08  } 
+		country_event={ id=cg_plus_underidol.2100 days =30 }  }
 	option ={
 		name = cg_plus_underidol.5001.09
-		event_target:country_hosting_live ={ has_country_flag=live_member_flag_09 }
-		set_timed_country_flag={ flag= under_idol_event_09   days=180  }
-		country_event={ id=cg_plus_underidol.5002 days =60 } }
+		trigger ={ event_target:country_hosting_live ={ has_country_flag=live_member_flag_09 } }
+		hidden_effect = { set_variable={which= idols_select value = 9 } set_global_flag = under_idol_event_09  } 
+		country_event={ id=cg_plus_underidol.2100 days =30 }  }
 	option ={
 		name = cg_plus_underidol.5001.10
-		event_target:country_hosting_live ={ has_country_flag=live_member_flag_10 }
-		set_timed_country_flag={ flag= under_idol_event_10   days=180  }
-		country_event={ id=cg_plus_underidol.5002 days =60 } }
+		trigger ={ event_target:country_hosting_live ={ has_country_flag=live_member_flag_10 } }
+		hidden_effect = { set_variable={which= idols_select value = 10 } set_global_flag = under_idol_event_10  } 
+		country_event={ id=cg_plus_underidol.2100 days =30 }  }
 	option ={
 		name = cg_plus_underidol.5001.11
-		event_target:country_hosting_live ={ has_country_flag=live_member_flag_11 }
-		set_timed_country_flag={ flag= under_idol_event_11   days=180  }
-		country_event={ id=cg_plus_underidol.5002 days =60 } }
+		trigger ={ event_target:country_hosting_live ={ has_country_flag=live_member_flag_11 } }
+		hidden_effect = { set_variable={which= idols_select value = 11 } set_global_flag = under_idol_event_11  } 
+		country_event={ id=cg_plus_underidol.2100 days =30 }  }
 	option ={
 		name = cg_plus_underidol.5001.12
-		event_target:country_hosting_live ={ has_country_flag=live_member_flag_12 }
-		set_timed_country_flag={ flag= under_idol_event_12   days=180  }
-		country_event={ id=cg_plus_underidol.5002 days =60 } }
+		trigger ={ event_target:country_hosting_live ={ has_country_flag=live_member_flag_12 } }
+		hidden_effect = { set_variable={which= idols_select value = 12 } set_global_flag = under_idol_event_12  } 
+		country_event={ id=cg_plus_underidol.2100 days =30 }  }
 	option ={
 		name = cg_plus_underidol.5001.13
-		event_target:country_hosting_live ={ has_country_flag=live_member_flag_13 }
-		set_timed_country_flag={ flag= under_idol_event_13   days=180  }
-		country_event={ id=cg_plus_underidol.5002 days =60 } }
+		trigger ={ event_target:country_hosting_live ={ has_country_flag=live_member_flag_13 } }
+		hidden_effect = { set_variable={which= idols_select value = 13 } set_global_flag = under_idol_event_13  } 
+		country_event={ id=cg_plus_underidol.2100 days =30 }  }
 	option ={
 		name = cg_plus_underidol.5001.14
-		event_target:country_hosting_live ={ has_country_flag=live_member_flag_14 }
-		set_timed_country_flag={ flag= under_idol_event_14   days=180  }
-		country_event={ id=cg_plus_underidol.5002 days =60 } }
+		trigger ={ event_target:country_hosting_live ={ has_country_flag=live_member_flag_14 } }
+		hidden_effect = { set_variable={which= idols_select value = 14 } set_global_flag = under_idol_event_14  } 
+		country_event={ id=cg_plus_underidol.2100 days =30 }  }
 	option ={
 		name = cg_plus_underidol.5001.15
-		event_target:country_hosting_live ={ has_country_flag=live_member_flag_15 }
-		set_timed_country_flag={ flag= under_idol_event_15   days=180  }
-		country_event={ id=cg_plus_underidol.5002 days =60 } }
+		trigger ={ event_target:country_hosting_live ={ has_country_flag=live_member_flag_15 } }
+		hidden_effect = { set_variable={which= idols_select value = 15 } set_global_flag = under_idol_event_15  } 
+		country_event={ id=cg_plus_underidol.2100 days =30 }  }
 	option ={
 		name = cg_plus_underidol.5001.16
-		event_target:country_hosting_live ={ has_country_flag=live_member_flag_16 }
-		set_timed_country_flag={ flag= under_idol_event_16   days=180  }
-		country_event={ id=cg_plus_underidol.5002 days =60 } }
+		trigger ={ event_target:country_hosting_live ={ has_country_flag=live_member_flag_16 } }
+		hidden_effect = { set_variable={which= idols_select value = 16 } set_global_flag = under_idol_event_16  } 
+		country_event={ id=cg_plus_underidol.2100 days =30 }  }
 	option ={
 		name = cg_plus_underidol.5001.17
-		event_target:country_hosting_live ={ has_country_flag=live_member_flag_17 }
-		set_timed_country_flag={ flag= under_idol_event_17   days=180  }
-		country_event={ id=cg_plus_underidol.5002 days =60 } }
+		trigger ={ event_target:country_hosting_live ={ has_country_flag=live_member_flag_17 } }
+		hidden_effect = { set_variable={which= idols_select value = 17 } set_global_flag = under_idol_event_17  } 
+		country_event={ id=cg_plus_underidol.2100 days =30 }  }
 	option ={
 		name = cg_plus_underidol.5001.18
-		event_target:country_hosting_live ={ has_country_flag=live_member_flag_18 }
-		set_timed_country_flag={ flag= under_idol_event_18   days=180  }
-		country_event={ id=cg_plus_underidol.5002 days =60 } }
+		trigger ={ event_target:country_hosting_live ={ has_country_flag=live_member_flag_18 } }
+		hidden_effect = { set_variable={which= idols_select value = 18 } set_global_flag = under_idol_event_18  } 
+		country_event={ id=cg_plus_underidol.2100 days =30 }  }
 	option ={
 		name = cg_plus_underidol.5001.19
-		event_target:country_hosting_live ={ has_country_flag=live_member_flag_19 }
-		set_timed_country_flag={ flag= under_idol_event_19   days=180  }
-		country_event={ id=cg_plus_underidol.5002 days =60 } }
+		trigger ={ event_target:country_hosting_live ={ has_country_flag=live_member_flag_19 } }
+		hidden_effect = { set_variable={which= idols_select value = 19 } set_global_flag = under_idol_event_19  } 
+		country_event={ id=cg_plus_underidol.2100 days =30 }  }
 	option ={
 		name = cg_plus_underidol.5001.20
-		event_target:country_hosting_live ={ has_country_flag=live_member_flag_20 }
-		set_timed_country_flag={ flag= under_idol_event_20   days=180  }
-		country_event={ id=cg_plus_underidol.5002 days =60 } }
+		trigger ={ event_target:country_hosting_live ={ has_country_flag=live_member_flag_20 } }
+		hidden_effect = { set_variable={which= idols_select value = 20 } set_global_flag = under_idol_event_20  } 
+		country_event={ id=cg_plus_underidol.2100 days =30 }  }
 	option ={
 		name = cg_plus_underidol.5001.21
-		event_target:country_hosting_live ={ has_country_flag=live_member_flag_21 }
-		set_timed_country_flag={ flag= under_idol_event_21   days=180  }
-		country_event={ id=cg_plus_underidol.5002 days =60 } }
+		trigger ={ event_target:country_hosting_live ={ has_country_flag=live_member_flag_21 } }
+		hidden_effect = { set_variable={which= idols_select value = 21 } set_global_flag = under_idol_event_21  } 
+		country_event={ id=cg_plus_underidol.2100 days =30 }  }
 	option ={
 		name = cg_plus_underidol.5001.22
-		event_target:country_hosting_live ={ has_country_flag=live_member_flag_22 }
-		set_timed_country_flag={ flag= under_idol_event_22   days=180  }
-		country_event={ id=cg_plus_underidol.5002 days =60 } }
+		trigger ={ event_target:country_hosting_live ={ has_country_flag=live_member_flag_22 } }
+		hidden_effect = { set_variable={which= idols_select value = 22 } set_global_flag = under_idol_event_22  } 
+		country_event={ id=cg_plus_underidol.2100 days =30 }  }
 	option ={
 		name = cg_plus_underidol.5001.23
-		event_target:country_hosting_live ={ has_country_flag=live_member_flag_23 }
-		set_timed_country_flag={ flag= under_idol_event_23   days=180  }
-		country_event={ id=cg_plus_underidol.5002 days =60 } }
+		trigger ={ event_target:country_hosting_live ={ has_country_flag=live_member_flag_23 } }
+		hidden_effect = { set_variable={which= idols_select value = 23 } set_global_flag = under_idol_event_23  } 
+		country_event={ id=cg_plus_underidol.2100 days =30 }  }
 	option ={
 		name = cg_plus_underidol.5001.24
-		event_target:country_hosting_live ={ has_country_flag=live_member_flag_24 }
-		set_timed_country_flag={ flag= under_idol_event_24   days=180  }
-		country_event={ id=cg_plus_underidol.5002 days =60 } }
+		trigger ={ event_target:country_hosting_live ={ has_country_flag=live_member_flag_24 } }
+		hidden_effect = { set_variable={which= idols_select value = 24 } set_global_flag = under_idol_event_24  } 
+		country_event={ id=cg_plus_underidol.2100 days =30 }  }
 	option ={
 		name = cg_plus_underidol.5001.25
-		event_target:country_hosting_live ={ has_country_flag=live_member_flag_25 }
-		set_timed_country_flag={ flag= under_idol_event_25   days=180  }
-		country_event={ id=cg_plus_underidol.5002 days =60 } }
+		trigger ={ event_target:country_hosting_live ={ has_country_flag=live_member_flag_25 } }
+		hidden_effect = { set_variable={which= idols_select value = 25 } set_global_flag = under_idol_event_25  } 
+		country_event={ id=cg_plus_underidol.2100 days =30 }  }
+	
 	
 
 }
@@ -589,7 +631,8 @@ country_event = {
 
 
 
-
+# 2000 catalogue menu
+# 2100 sign collection
 country_event={
 	id=cg_plus_underidol.2000
 	hide_window=no
@@ -602,7 +645,7 @@ country_event={
 
 
 
-	title= Idols_catalogue
+	title= uIdols_catalogue
 
 	immediate = {
 		set_variable = { which = idols_page value = 1 }
@@ -625,65 +668,66 @@ country_event={
 	diplomatic = yes
 	is_triggered_only = yes
 	fire_only_once = no
-
+	title= Idols_sign
 	custom_gui = cg_plus_under_imas_gui_detail
-	desc = { trigger = { check_variable = {which= idols_select value = 01 }}
-	text = Idols_detail_01 }
-	desc = { trigger = { check_variable = {which= idols_select value = 02 }}
-	text = Idols_detail_02 }
-	desc = { trigger = { check_variable = {which= idols_select value = 03 }}
-	text = Idols_detail_03 }
-	desc = { trigger = { check_variable = {which= idols_select value = 04 }}
-	text = Idols_detail_04 }
-	desc = { trigger = { check_variable = {which= idols_select value = 05 }}
-	text = Idols_detail_05 }
-	desc = { trigger = { check_variable = {which= idols_select value = 06 }}
-	text = Idols_detail_06 }
-	desc = { trigger = { check_variable = {which= idols_select value = 07 }}
-	text = Idols_detail_07 }
-	desc = { trigger = { check_variable = {which= idols_select value = 08 }}
-	text = Idols_detail_08 }
-	desc = { trigger = { check_variable = {which= idols_select value = 09 }}
-	text = Idols_detail_09 }
+	custom_gui_option = imas_gui_real_cofirm_button
+	desc = { trigger = { check_variable = {which= idols_select value = 1 }}
+	text = Idols_sign_01 }
+	desc = { trigger = { check_variable = {which= idols_select value = 2 }}
+	text = Idols_sign_02 }
+	desc = { trigger = { check_variable = {which= idols_select value = 3 }}
+	text = Idols_sign_03 }
+	desc = { trigger = { check_variable = {which= idols_select value = 4 }}
+	text = Idols_sign_04 }
+	desc = { trigger = { check_variable = {which= idols_select value = 5 }}
+	text = Idols_sign_05 }
+	desc = { trigger = { check_variable = {which= idols_select value = 6 }}
+	text = Idols_sign_06 }
+	desc = { trigger = { check_variable = {which= idols_select value = 7 }}
+	text = Idols_sign_07 }
+	desc = { trigger = { check_variable = {which= idols_select value = 8 }}
+	text = Idols_sign_08 }
+	desc = { trigger = { check_variable = {which= idols_select value = 9 }}
+	text = Idols_sign_09 }
 	desc = { trigger = { check_variable = {which= idols_select value = 10 }}
-	text = Idols_detail_10 }
+	text = Idols_sign_10 }
 	desc = { trigger = { check_variable = {which= idols_select value = 11 }}
-	text = Idols_detail_11 }
+	text = Idols_sign_11 }
 	desc = { trigger = { check_variable = {which= idols_select value = 12 }}
-	text = Idols_detail_12 }
+	text = Idols_sign_12 }
 	desc = { trigger = { check_variable = {which= idols_select value = 13 }}
-	text = Idols_detail_13 }
+	text = Idols_sign_13 }
 	desc = { trigger = { check_variable = {which= idols_select value = 14 }}
-	text = Idols_detail_14 }
+	text = Idols_sign_14 }
 	desc = { trigger = { check_variable = {which= idols_select value = 15 }}
-	text = Idols_detail_15 }
+	text = Idols_sign_15 }
 	desc = { trigger = { check_variable = {which= idols_select value = 16 }}
-	text = Idols_detail_16 }
+	text = Idols_sign_16 }
 	desc = { trigger = { check_variable = {which= idols_select value = 17 }}
-	text = Idols_detail_17 }
+	text = Idols_sign_17 }
 	desc = { trigger = { check_variable = {which= idols_select value = 18 }}
-	text = Idols_detail_18 }
+	text = Idols_sign_18 }
 	desc = { trigger = { check_variable = {which= idols_select value = 19 }}
-	text = Idols_detail_19 }
+	text = Idols_sign_19 }
 	desc = { trigger = { check_variable = {which= idols_select value = 20 }}
-	text = Idols_detail_20 }
+	text = Idols_sign_20 }
 	desc = { trigger = { check_variable = {which= idols_select value = 21 }}
-	text = Idols_detail_21 }
+	text = Idols_sign_21 }
 	desc = { trigger = { check_variable = {which= idols_select value = 22 }}
-	text = Idols_detail_22 }
+	text = Idols_sign_22 }
 	desc = { trigger = { check_variable = {which= idols_select value = 23 }}
-	text = Idols_detail_23 }
+	text = Idols_sign_23 }
 	desc = { trigger = { check_variable = {which= idols_select value = 24 }}
-	text = Idols_detail_24 }
+	text = Idols_sign_24 }
 	desc = { trigger = { check_variable = {which= idols_select value = 25 }}
-	text = Idols_detail_25 }
+	text = Idols_sign_25 }
 
 	
 
 
 	
 
-	title= Idols_detail
+
 	option={
 		name=close
 		#country_event={ id= imas_idols_menu.0000 }

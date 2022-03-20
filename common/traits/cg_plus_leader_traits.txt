@@ -68,3 +68,52 @@ leader_trait_sailor_event = {
 	leader_trait = { governor }
 	leader_class = { governor }
 }
+
+
+
+
+
+
+
+
+
+leader_trait_captured={
+
+	cost = 1
+	#trait_tentacle_train
+	self_modifier = {
+		leaders_upkeep_mult = -0.9
+	}
+	initial = no 
+	randomized = no
+	icon = "gfx/interface/icons/traits/leader_traits/trait_live_with_master.dds"
+	custom_tooltip = leader_trait_captured_ct
+	leader_trait =  all 
+
+}
+
+
+leader_trait_naked={
+
+	cost = 1
+	#trait_tentacle_train
+	initial = no 
+	randomized = no
+	icon = "gfx/interface/icons/traits/leader_traits/trait_live_with_master.dds"
+	custom_tooltip = leader_trait_naked_ct
+	leader_trait =  all 
+
+}
+
+
+leader_trait_collared={
+
+	cost = 1
+	#trait_tentacle_train
+	initial = no 
+	randomized = no
+	icon = "gfx/interface/icons/traits/leader_traits/trait_live_with_master.dds"
+	custom_tooltip = leader_trait_collared_ct
+	leader_trait =  all 
+
+}

@@ -42,3 +42,49 @@ defined_text={
 	}	
 
 }
+
+
+defined_text = {
+	name = GetLeaderType
+	
+	text = {
+		trigger = {
+			leader_class = scientist
+		}
+		localization_key = leader_class_scientist
+	}
+	text = {
+		trigger = {
+			leader_class = admiral
+		}
+		localization_key = leader_class_admiral
+	}
+	text = {
+		trigger = {
+			leader_class = general
+		}
+		localization_key = leader_class_general
+	}
+	text = {
+		trigger = {
+			leader_class = governor
+		}
+		localization_key = leader_class_governor
+	}
+	text = {
+		trigger = {
+			leader_class = envoy
+		}
+		localization_key = leader_class_envoy
+	}
+	text = {
+		trigger = {
+			leader_class = ruler
+		}
+		localization_key = leader_class_ruler
+	}
+	text = {
+		localization_key = leader_class_unkown
+	}
+
+}

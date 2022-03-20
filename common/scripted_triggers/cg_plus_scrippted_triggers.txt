@@ -1,0 +1,24 @@
+is_anime_species = {
+	species = {
+		OR = {
+			is_archetype =  Magical_Bitch 
+			is_archetype =  Magical_Girl 
+			is_archetype = WHORE 
+			is_archetype = LOVEMACHINE
+			is_archetype = YGWAWA
+			is_archetype = Lust_Girl
+			is_archetype = MONSTER
+			is_archetype =  WARSHIPGIRL 
+			is_archetype = KANSEN 
+			is_archetype = android 
+			is_archetype = NYTO
+			is_archetype = SHENHAI 
+			is_archetype = sf_a_doll 
+			is_archetype = TERRASE 	
+			is_archetype = VAL 
+			is_archetype = HKR 
+			is_archetype = JourneyofElaina 
+			is_archetype = Houkai3rd
+		}
+	}
+}

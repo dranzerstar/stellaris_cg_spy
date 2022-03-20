@@ -7,13 +7,13 @@ spriteTypes = {
 	#	alwaysTransparent = yes
 	}
 	spriteType = {
-		name = "GFX_imas_left_bg"
-		texturefile = "gfx/interface/imas_ui/pop_large_bg.dds"
+		name = "GFX_under_imas_left_bg"
+		texturefile = "gfx/interface/imas_ui/dark_pop_left_bg.dds"
 		#alwaysTransparent = yes
 	}
 	spriteType = {
-		name = "GFX_imas_right_bg"
-		texturefile = "gfx/interface/imas_ui/pop_side_bg.dds"
+		name = "GFX_under_imas_right_bg"
+		texturefile = "gfx/interface/imas_ui/dark_pop_right_bg.dds"
 		#alwaysTransparent = yes
 	}
 	spriteType = {
@@ -27,8 +27,16 @@ spriteTypes = {
 		texturefile = "gfx/interface/imas_ui/card_frame.dds"  
 		alwaysTransparent = yes
 	}
-
-
+	spriteType = {
+		name = "GFX_idol_card_frame_large"
+		texturefile = "gfx/interface/imas_ui/evt_frame_large.dds"  
+		alwaysTransparent = yes
+	}
+	spriteType = {
+		name = "GFX_idol_ele_text_long"
+		texturefile = "gfx/interface/imas_ui/textbox_long.dds"  
+		alwaysTransparent = yes
+	}
 
 	spriteType = {
 		name = "GFX_ui_button_box"
@@ -181,33 +189,32 @@ spriteTypes = {
 
 
 
-	spriteType = { name = "GFX_idol_card_01" texturefile = "gfx/interface/imas_ui/idol_card_01.dds" }
-	spriteType = { name = "GFX_idol_card_02" texturefile = "gfx/interface/imas_ui/idol_card_02.dds" }
-	spriteType = { name = "GFX_idol_card_03" texturefile = "gfx/interface/imas_ui/idol_card_03.dds" }
-	spriteType = { name = "GFX_idol_card_04" texturefile = "gfx/interface/imas_ui/idol_card_04.dds" }
-	spriteType = { name = "GFX_idol_card_05" texturefile = "gfx/interface/imas_ui/idol_card_05.dds" }
-	spriteType = { name = "GFX_idol_card_06" texturefile = "gfx/interface/imas_ui/idol_card_06.dds" }
-	spriteType = { name = "GFX_idol_card_07" texturefile = "gfx/interface/imas_ui/idol_card_07.dds" }
-	spriteType = { name = "GFX_idol_card_08" texturefile = "gfx/interface/imas_ui/idol_card_08.dds" }
-	spriteType = { name = "GFX_idol_card_09" texturefile = "gfx/interface/imas_ui/idol_card_09.dds" }
-	spriteType = { name = "GFX_idol_card_10" texturefile = "gfx/interface/imas_ui/idol_card_10.dds" }
-	spriteType = { name = "GFX_idol_card_11" texturefile = "gfx/interface/imas_ui/idol_card_11.dds" }
-	spriteType = { name = "GFX_idol_card_12" texturefile = "gfx/interface/imas_ui/idol_card_12.dds" }
-	spriteType = { name = "GFX_idol_card_13" texturefile = "gfx/interface/imas_ui/idol_card_13.dds" }
-	spriteType = { name = "GFX_idol_card_14" texturefile = "gfx/interface/imas_ui/idol_card_14.dds" }
-	spriteType = { name = "GFX_idol_card_15" texturefile = "gfx/interface/imas_ui/idol_card_15.dds" }
-	spriteType = { name = "GFX_idol_card_16" texturefile = "gfx/interface/imas_ui/idol_card_16.dds" }
-	spriteType = { name = "GFX_idol_card_17" texturefile = "gfx/interface/imas_ui/idol_card_17.dds" }
-	spriteType = { name = "GFX_idol_card_18" texturefile = "gfx/interface/imas_ui/idol_card_18.dds" }
-	spriteType = { name = "GFX_idol_card_19" texturefile = "gfx/interface/imas_ui/idol_card_19.dds" }
-	spriteType = { name = "GFX_idol_card_20" texturefile = "gfx/interface/imas_ui/idol_card_20.dds" }
-	spriteType = { name = "GFX_idol_card_21" texturefile = "gfx/interface/imas_ui/idol_card_21.dds" }
-	spriteType = { name = "GFX_idol_card_22" texturefile = "gfx/interface/imas_ui/idol_card_22.dds" }
-	spriteType = { name = "GFX_idol_card_23" texturefile = "gfx/interface/imas_ui/idol_card_23.dds" }
-	spriteType = { name = "GFX_idol_card_24" texturefile = "gfx/interface/imas_ui/idol_card_24.dds" }
-	spriteType = { name = "GFX_idol_card_25" texturefile = "gfx/interface/imas_ui/idol_card_25.dds" }
-
-
+	spriteType = { name = "GFX_u_idol_card_01" texturefile = "gfx/interface/imas_ui/idol_image/pros_01.dds" masking_texture="gfx/interface/imas_ui/evt_frame_large_mask.dds"}
+	spriteType = { name = "GFX_u_idol_card_02" texturefile = "gfx/interface/imas_ui/idol_image/pros_02.dds" masking_texture="gfx/interface/imas_ui/evt_frame_large_mask.dds"}
+	spriteType = { name = "GFX_u_idol_card_03" texturefile = "gfx/interface/imas_ui/idol_image/pros_03.dds" masking_texture="gfx/interface/imas_ui/evt_frame_large_mask.dds"}
+	spriteType = { name = "GFX_u_idol_card_04" texturefile = "gfx/interface/imas_ui/idol_image/pros_04.dds" masking_texture="gfx/interface/imas_ui/evt_frame_large_mask.dds"}
+	spriteType = { name = "GFX_u_idol_card_05" texturefile = "gfx/interface/imas_ui/idol_image/pros_05.dds" masking_texture="gfx/interface/imas_ui/evt_frame_large_mask.dds"}
+	spriteType = { name = "GFX_u_idol_card_06" texturefile = "gfx/interface/imas_ui/idol_image/pros_06.dds" masking_texture="gfx/interface/imas_ui/evt_frame_large_mask.dds"}
+	spriteType = { name = "GFX_u_idol_card_07" texturefile = "gfx/interface/imas_ui/idol_image/pros_07.dds" masking_texture="gfx/interface/imas_ui/evt_frame_large_mask.dds"}
+	spriteType = { name = "GFX_u_idol_card_08" texturefile = "gfx/interface/imas_ui/idol_image/pros_08.dds" masking_texture="gfx/interface/imas_ui/evt_frame_large_mask.dds"}
+	spriteType = { name = "GFX_u_idol_card_09" texturefile = "gfx/interface/imas_ui/idol_image/pros_09.dds" masking_texture="gfx/interface/imas_ui/evt_frame_large_mask.dds"}
+	spriteType = { name = "GFX_u_idol_card_10" texturefile = "gfx/interface/imas_ui/idol_image/pros_10.dds" masking_texture="gfx/interface/imas_ui/evt_frame_large_mask.dds"}
+	spriteType = { name = "GFX_u_idol_card_11" texturefile = "gfx/interface/imas_ui/idol_image/pros_11.dds" masking_texture="gfx/interface/imas_ui/evt_frame_large_mask.dds"}
+	spriteType = { name = "GFX_u_idol_card_12" texturefile = "gfx/interface/imas_ui/idol_image/pros_12.dds" masking_texture="gfx/interface/imas_ui/evt_frame_large_mask.dds"}
+	spriteType = { name = "GFX_u_idol_card_13" texturefile = "gfx/interface/imas_ui/idol_image/pros_13.dds" masking_texture="gfx/interface/imas_ui/evt_frame_large_mask.dds"}
+	spriteType = { name = "GFX_u_idol_card_14" texturefile = "gfx/interface/imas_ui/idol_image/pros_14.dds" masking_texture="gfx/interface/imas_ui/evt_frame_large_mask.dds"}
+	spriteType = { name = "GFX_u_idol_card_15" texturefile = "gfx/interface/imas_ui/idol_image/pros_15.dds" masking_texture="gfx/interface/imas_ui/evt_frame_large_mask.dds"}
+	spriteType = { name = "GFX_u_idol_card_16" texturefile = "gfx/interface/imas_ui/idol_image/pros_16.dds" masking_texture="gfx/interface/imas_ui/evt_frame_large_mask.dds"}
+	spriteType = { name = "GFX_u_idol_card_17" texturefile = "gfx/interface/imas_ui/idol_image/pros_17.dds" masking_texture="gfx/interface/imas_ui/evt_frame_large_mask.dds"}
+	spriteType = { name = "GFX_u_idol_card_18" texturefile = "gfx/interface/imas_ui/idol_image/pros_18.dds" masking_texture="gfx/interface/imas_ui/evt_frame_large_mask.dds"}
+	spriteType = { name = "GFX_u_idol_card_19" texturefile = "gfx/interface/imas_ui/idol_image/pros_19.dds" masking_texture="gfx/interface/imas_ui/evt_frame_large_mask.dds"}
+	spriteType = { name = "GFX_u_idol_card_20" texturefile = "gfx/interface/imas_ui/idol_image/pros_20.dds" masking_texture="gfx/interface/imas_ui/evt_frame_large_mask.dds"}
+	spriteType = { name = "GFX_u_idol_card_21" texturefile = "gfx/interface/imas_ui/idol_image/pros_21.dds" masking_texture="gfx/interface/imas_ui/evt_frame_large_mask.dds"}
+	spriteType = { name = "GFX_u_idol_card_22" texturefile = "gfx/interface/imas_ui/idol_image/pros_22.dds" masking_texture="gfx/interface/imas_ui/evt_frame_large_mask.dds"}
+	spriteType = { name = "GFX_u_idol_card_23" texturefile = "gfx/interface/imas_ui/idol_image/pros_23.dds" masking_texture="gfx/interface/imas_ui/evt_frame_large_mask.dds"}
+	spriteType = { name = "GFX_u_idol_card_24" texturefile = "gfx/interface/imas_ui/idol_image/pros_24.dds" masking_texture="gfx/interface/imas_ui/evt_frame_large_mask.dds"}
+	spriteType = { name = "GFX_u_idol_card_25" texturefile = "gfx/interface/imas_ui/idol_image/pros_25.dds" masking_texture="gfx/interface/imas_ui/evt_frame_large_mask.dds"}
+   
 
 	#live ui asset
 	

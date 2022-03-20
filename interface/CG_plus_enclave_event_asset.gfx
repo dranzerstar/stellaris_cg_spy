@@ -1,5 +1,7 @@
 spriteTypes = {
 	# small event size 450x150 
+	# long 1000x750
+	# portrait  550 x 800 
 	spriteType = {
 		name = "GFX_sagiri_done"
 		texturefile = "gfx/event_pictures/saigi_001.dds" 
@@ -22,28 +24,28 @@ spriteTypes = {
 		alwaystransparent = yes
 	}
 	spriteType = {
-		name = "GFX_sagiri_scared"#TODO https://danbooru.donmai.us/posts/2743612
-		texturefile = "gfx/event_pictures/enclaves_evt/  " 
+		name = "GFX_sagiri_scared"  #TODO https://danbooru.donmai.us/posts/2743612
+		texturefile = "gfx/event_pictures/enclaves_evt/sagiri_scared.dds" 
 		masking_texture = "gfx/interface/situation_log/event_mask.dds"
 		alwaystransparent = yes
 	}
 	
 	spriteType = {
-		name = "GFX_evt_p_9023"#TODO https://danbooru.donmai.us/posts/2729695?
-		texturefile = "gfx/event_pictures/enclaves_evt/  " 
+		name = "GFX_evt_p_9023"  #TODO https://danbooru.donmai.us/posts/2729695?
+		texturefile = "gfx/event_pictures/enclaves_evt/9023.dds" 
 		
 		alwaystransparent = yes
 	}
 
 	spriteType = {
-		name = "GFX_evt_p_9025"#TODO https://danbooru.donmai.us/posts/5181605
-		texturefile = "gfx/event_pictures/enclaves_evt/  " 
+		name = "GFX_evt_p_9025" #TODO https://danbooru.donmai.us/posts/5181605
+		texturefile = "gfx/event_pictures/enclaves_evt/9025.dds" 
 	
 		alwaystransparent = yes
 	}
 	spriteType = {
 		name = "GFX_evt_p_9027"#TODO https://danbooru.donmai.us/posts/2721969
-		texturefile = "gfx/event_pictures/enclaves_evt/  " 
+		texturefile = "gfx/event_pictures/enclaves_evt/9027.dds" 
 	
 		alwaystransparent = yes
 	}
@@ -64,8 +66,24 @@ spriteTypes = {
 	
 	spriteType = {
 		name = "GFX_chem_image01"  #TODO
-		texturefile = "gfx/event_pictures/enclaves_evt/.dds" 
+		texturefile = "gfx/event_pictures/enclaves_evt/drugs.dds" 
 		masking_texture = "gfx/interface/situation_log/event_mask.dds"
 		alwaystransparent = yes
 		}
+
+
+	spriteType = {
+			name = "GFX_idols_announce"
+			texturefile = "gfx/event_pictures/idol_announce.dds" 
+			masking_texture = "gfx/interface/situation_log/event_mask.dds"
+			alwaystransparent = yes
+	}
+
+
+
+
+
+
+
+
 }

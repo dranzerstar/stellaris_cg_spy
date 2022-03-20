@@ -5,14 +5,191 @@ cg_plus_enclave_evt_pic_9023 = {
 }
 
 cg_plus_enclave_evt_pic_9025 = {
-	potential = {FROM = { check_variable = { which = cg_plus_enclave_evt_pic value = 9023 }}}
+	potential = {FROM = { check_variable = { which = cg_plus_enclave_evt_pic value = 9025 }}}
 	allow = { always = yes }
 	effect = {}
 }
 
 cg_plus_enclave_evt_pic_9027 = {
-	potential = {FROM = { check_variable = { which = cg_plus_enclave_evt_pic value = 9023 }}}
+	potential = {FROM = { check_variable = { which = cg_plus_enclave_evt_pic value = 9027 }}}
 	allow = { always = yes }
 	effect = {}
 }
 
+
+
+
+
+under_imas_gui_idols_icon_01 = {
+	potential = { has_global_flag = idol_debut_01 check_variable={which= idols_page value = 1 } } 
+	allow = {  custom_tooltip_fail={ text="Not_obtained_yet"  hidden_trigger = { has_global_flag = under_idol_event_01  } }}
+	effect = {
+		hidden_effect = {  country_event = { id = cg_plus_underidol.2100 }  set_variable={ which= idols_select value = 1 } }
+		custom_tooltip = "more_details" }}
+	under_imas_gui_idols_icon_02 = {
+	potential = { has_global_flag = idol_debut_02 check_variable={which= idols_page value = 1 }} 
+	allow = {  custom_tooltip_fail={ text="Not_obtained_yet"  hidden_trigger = { has_global_flag = under_idol_event_02  } }}
+	effect = {
+		hidden_effect = {  country_event = { id = cg_plus_underidol.2100 }  set_variable={ which= idols_select value = 2 } }
+		custom_tooltip = "more_details" }}
+	under_imas_gui_idols_icon_03 = {
+	potential = { has_global_flag = idol_debut_03 check_variable={which= idols_page value = 1 }} 
+	allow = {  custom_tooltip_fail={ text="Not_obtained_yet"  hidden_trigger = { has_global_flag = under_idol_event_03  } }}
+
+	effect = {
+		hidden_effect = {  country_event = { id = cg_plus_underidol.2100 }  set_variable={ which= idols_select value = 3 } }
+		custom_tooltip = "more_details" }}
+	under_imas_gui_idols_icon_04 = {
+	potential = { has_global_flag = idol_debut_04 check_variable={which= idols_page value = 2 }} 
+	allow = {  custom_tooltip_fail={ text="Not_obtained_yet"  hidden_trigger = { has_global_flag = under_idol_event_04  } }}
+
+	effect = {
+		hidden_effect = {  country_event = { id = cg_plus_underidol.2100 }  set_variable={ which= idols_select value = 4 } }
+		custom_tooltip = "more_details" }}
+	under_imas_gui_idols_icon_05 = {
+	potential = { has_global_flag = idol_debut_05 check_variable={which= idols_page value = 2 } } 
+	allow = {  custom_tooltip_fail={ text="Not_obtained_yet"  hidden_trigger = { has_global_flag = under_idol_event_05 } }}
+
+	effect = {
+		hidden_effect = {  country_event = { id = cg_plus_underidol.2100 }  set_variable={ which= idols_select value = 5 } }
+		custom_tooltip = "more_details" }}
+	under_imas_gui_idols_icon_06 = {
+	potential = { has_global_flag = idol_debut_06 check_variable={which= idols_page value = 2 } } 
+	allow = {  custom_tooltip_fail={ text="Not_obtained_yet"  hidden_trigger = { has_global_flag = under_idol_event_06  } }}
+
+	effect = {
+		hidden_effect = {  country_event = { id = cg_plus_underidol.2100 }  set_variable={ which= idols_select value = 6 } }
+		custom_tooltip = "more_details" }}
+	under_imas_gui_idols_icon_07 = {
+	potential = { has_global_flag = idol_debut_07 check_variable={which= idols_page value = 2 } } 
+	allow = {  custom_tooltip_fail={ text="Not_obtained_yet"  hidden_trigger = { has_global_flag = under_idol_event_07  } }}
+
+	effect = {
+		hidden_effect = {  country_event = { id = cg_plus_underidol.2100 }  set_variable={ which= idols_select value = 7 } }
+		custom_tooltip = "more_details" }}
+	under_imas_gui_idols_icon_08 = {
+	potential = { has_global_flag = idol_debut_08 check_variable={which= idols_page value = 2 } } 
+	allow = {  custom_tooltip_fail={ text="Not_obtained_yet"  hidden_trigger = { has_global_flag = under_idol_event_08  } }}
+
+	effect = {
+		hidden_effect = {  country_event = { id = cg_plus_underidol.2100 }  set_variable={ which= idols_select value = 8 } }
+		custom_tooltip = "more_details" }}
+	under_imas_gui_idols_icon_09 = {
+	potential = { has_global_flag = idol_debut_09 check_variable={which= idols_page value = 3 } } 
+	allow = {  custom_tooltip_fail={ text="Not_obtained_yet"  hidden_trigger = { has_global_flag = under_idol_event_09  } }}
+
+	effect = {
+		hidden_effect = {  country_event = { id = cg_plus_underidol.2100 }  set_variable={ which= idols_select value = 9 } }
+		custom_tooltip = "more_details" }}
+	under_imas_gui_idols_icon_10 = {
+	potential = { has_global_flag = idol_debut_10 check_variable={which= idols_page value = 3 } } 
+	allow = {  custom_tooltip_fail={ text="Not_obtained_yet"  hidden_trigger = { has_global_flag = under_idol_event_10  } }}
+
+	effect = {
+		hidden_effect = {  country_event = { id = cg_plus_underidol.2100 }  set_variable={ which= idols_select value = 10 } }
+		custom_tooltip = "more_details" }}
+	under_imas_gui_idols_icon_11 = {
+	potential = { has_global_flag = idol_debut_11 check_variable={which= idols_page value = 3 } } 
+	allow = {  custom_tooltip_fail={ text="Not_obtained_yet"  hidden_trigger = { has_global_flag = under_idol_event_11  } }}
+
+	effect = {
+		hidden_effect = {  country_event = { id = cg_plus_underidol.2100 }  set_variable={ which= idols_select value = 11 } }
+		custom_tooltip = "more_details" }}
+	under_imas_gui_idols_icon_12 = {
+	potential = { has_global_flag = idol_debut_12 check_variable={which= idols_page value = 3 } } 
+	allow = {  custom_tooltip_fail={ text="Not_obtained_yet"  hidden_trigger = { has_global_flag = under_idol_event_12  } }}
+
+	effect = {
+		hidden_effect = {  country_event = { id = cg_plus_underidol.2100 }  set_variable={ which= idols_select value = 12 } }
+		custom_tooltip = "more_details" }}
+	under_imas_gui_idols_icon_13 = {
+	potential = { has_global_flag = idol_debut_13 check_variable={which= idols_page value = 3 } } 
+	allow = {  custom_tooltip_fail={ text="Not_obtained_yet"  hidden_trigger = { has_global_flag = under_idol_event_13  } }}
+
+	effect = {
+		hidden_effect = {  country_event = { id = cg_plus_underidol.2100 }  set_variable={ which= idols_select value = 13 } }
+		custom_tooltip = "more_details" }}
+	under_imas_gui_idols_icon_14 = {
+	potential = { has_global_flag = idol_debut_14 check_variable={which= idols_page value = 4 } } 
+	allow = {  custom_tooltip_fail={ text="Not_obtained_yet"  hidden_trigger = { has_global_flag = under_idol_event_14  } }}
+
+	effect = {
+		hidden_effect = {  country_event = { id = cg_plus_underidol.2100 }  set_variable={ which= idols_select value = 14 } }
+		custom_tooltip = "more_details" }}
+	under_imas_gui_idols_icon_15 = {
+	potential = { has_global_flag = idol_debut_15 check_variable={which= idols_page value = 4 }} 
+	allow = {  custom_tooltip_fail={ text="Not_obtained_yet"  hidden_trigger = { has_global_flag = under_idol_event_15  } }}
+
+	effect = {
+		hidden_effect = {  country_event = { id = cg_plus_underidol.2100 }  set_variable={ which= idols_select value = 15 } }
+		custom_tooltip = "more_details" }}
+	under_imas_gui_idols_icon_16 = {
+	potential = { has_global_flag = idol_debut_16 check_variable={which= idols_page value = 4 } } 
+	allow = {  custom_tooltip_fail={ text="Not_obtained_yet"  hidden_trigger = { has_global_flag = under_idol_event_16  } }}
+
+	effect = {
+		hidden_effect = {  country_event = { id = cg_plus_underidol.2100 }  set_variable={ which= idols_select value = 16 } }
+		custom_tooltip = "more_details" }}
+	under_imas_gui_idols_icon_17 = {
+	potential = { has_global_flag = idol_debut_17 check_variable={which= idols_page value = 5 } } 
+	allow = {  custom_tooltip_fail={ text="Not_obtained_yet"  hidden_trigger = { has_global_flag = under_idol_event_17  } }}
+
+	effect = {
+		hidden_effect = {  country_event = { id = cg_plus_underidol.2100 }  set_variable={ which= idols_select value = 17 } }
+		custom_tooltip = "more_details" }}
+	under_imas_gui_idols_icon_18 = {
+	potential = { has_global_flag = idol_debut_18 check_variable={which= idols_page value = 5 }} 
+	allow = {  custom_tooltip_fail={ text="Not_obtained_yet"  hidden_trigger = { has_global_flag = under_idol_event_18  } }}
+
+	effect = {
+		hidden_effect = {  country_event = { id = cg_plus_underidol.2100 }  set_variable={ which= idols_select value = 18 } }
+		custom_tooltip = "more_details" }}
+	under_imas_gui_idols_icon_19 = {
+	potential = { has_global_flag = idol_debut_19 check_variable={which= idols_page value = 5 }} 
+	allow = {  custom_tooltip_fail={ text="Not_obtained_yet"  hidden_trigger = { has_global_flag = under_idol_event_19  } }}
+
+	effect = {
+		hidden_effect = {  country_event = { id = cg_plus_underidol.2100 }  set_variable={ which= idols_select value = 19 } }
+		custom_tooltip = "more_details" }}
+	under_imas_gui_idols_icon_20 = {
+	potential = { has_global_flag = idol_debut_20 check_variable={which= idols_page value = 6 }} 
+	allow = {  custom_tooltip_fail={ text="Not_obtained_yet"  hidden_trigger = { has_global_flag = under_idol_event_20  } }}
+
+	effect = {
+		hidden_effect = {  country_event = { id = cg_plus_underidol.2100 }  set_variable={ which= idols_select value = 20 } }
+		custom_tooltip = "more_details" }}
+	under_imas_gui_idols_icon_21 = {
+	potential = { has_global_flag = idol_debut_21 check_variable={which= idols_page value = 6 }} 
+	allow = {  custom_tooltip_fail={ text="Not_obtained_yet"  hidden_trigger = { has_global_flag = under_idol_event_21  } }}
+
+	effect = {
+		hidden_effect = {  country_event = { id = cg_plus_underidol.2100 }  set_variable={ which= idols_select value = 21 } }
+		custom_tooltip = "more_details" }}
+	under_imas_gui_idols_icon_22 = {
+	potential = { has_global_flag = idol_debut_22 check_variable={which= idols_page value = 6 } } 
+	allow = {  custom_tooltip_fail={ text="Not_obtained_yet"  hidden_trigger = { has_global_flag = under_idol_event_22  } }}
+
+	effect = {
+		hidden_effect = {  country_event = { id = cg_plus_underidol.2100 }  set_variable={ which= idols_select value = 22 } }
+		custom_tooltip = "more_details" }}
+	under_imas_gui_idols_icon_23 = {
+	potential = { has_global_flag = idol_debut_23 check_variable={which= idols_page value = 6 } } 
+	allow = {  custom_tooltip_fail={ text="Not_obtained_yet"  hidden_trigger = { has_global_flag = under_idol_event_23  } }}
+
+	effect = {
+		hidden_effect = {  country_event = { id = cg_plus_underidol.2100 }  set_variable={ which= idols_select value = 23 } }
+		custom_tooltip = "more_details" }}
+	under_imas_gui_idols_icon_24 = {
+	potential = { has_global_flag = idol_debut_24 check_variable={which= idols_page value = 7 } } 
+	allow = {  custom_tooltip_fail={ text="Not_obtained_yet"  hidden_trigger = { has_global_flag = under_idol_event_24  } }}
+
+	effect = {
+		hidden_effect = {  country_event = { id = cg_plus_underidol.2100 }  set_variable={ which= idols_select value = 24 } }
+		custom_tooltip = "more_details" }}
+	under_imas_gui_idols_icon_25 = {
+	potential = { has_global_flag = idol_debut_25 check_variable={which= idols_page value = 7 } } 
+	allow = {  custom_tooltip_fail={ text="Not_obtained_yet"  hidden_trigger = { has_global_flag = under_idol_event_25  } }}
+
+	effect = {
+		hidden_effect = {  country_event = { id = cg_plus_underidol.2100 }  set_variable={ which= idols_select value = 25 } }
+		custom_tooltip = "more_details" }}

@@ -346,14 +346,20 @@ country_event = {
 	}
 	option = {
 		name = cg_extra_civis_DIE
-		trigger = { has_valid_civic = civic_lust_guro has_valid_civic = civic_sacrifice_lustgod }
+		trigger = { OR= { has_valid_civic = civic_lust_guro has_valid_civic = civic_sacrifice_lustgod } }
 		hidden_effect = {
 
 		}
 	}
 	option = {
 		name = cg_extra_civis_FUCK
-		trigger = { has_valid_civic = civic_all_slave  }
+
+		trigger = { OR= {
+					has_valid_civic = civic_all_slave  
+					has_valid_civic = civic_abyssal_ascendancy 
+					has_valid_civic = civic_slave_tradition
+					}
+				}
 		hidden_effect = {
 
 		}
@@ -707,7 +713,19 @@ country_event = {
 	}
 }
 
+country_event = {
+	id=cg_plus_enclaves_art.8889
+	title = artist_destoryed
+	is_triggered_only = yes
+	desc = artist_destoryed
 
+
+	option={name=OK}
+}
+
+
+#This = destroyed country
+#From = optional, destroyer (country) <- does not work
 country_event = {
 	id=cg_plus_enclaves_art.9000
 	
@@ -718,29 +736,49 @@ country_event = {
 			has_country_flag = cg_plus_colorful_artisan_country
 		}
 	}
-	after = {
-		every_playable_country = {
+	immediate = {
+		# every_country  = {
+		# 	country_event  = {
+		# 		id = cg_plus_enclaves_art.8889
+				
+				
+		# 	}
+		# }
+
+		random_playable_country = {
 			limit = {
 				is_ai = no
 				has_country_flag = carnalism_flag
 			}
 			country_event = {
 				id = cg_plus_enclaves_art.9001
-				days =5
+				days = 15
+			}
+		}
+	}
+	after = {
+		# every_playable_country = {
+		# 	limit = {
+		# 		is_ai = no
+		# 		has_country_flag = carnalism_flag
+		# 	}
+		# 	country_event = {
+		# 		id = cg_plus_enclaves_art.9001
+		# 		days =5
 				
-			}
-		}
+		# 	}
+		# }
 
-		every_playable_country = {
-			limit = {
-				is_ai = no
-				has_country_flag = asceticism_flag
-			}
-			country_event = {
-				id = cg_plus_enclaves_art.9002
-				days =5
-			}
-		}
+		# every_playable_country = {
+		# 	limit = {
+		# 		is_ai = no
+		# 		has_country_flag = asceticism_flag
+		# 	}
+		# 	country_event = {
+		# 		id = cg_plus_enclaves_art.9002
+		# 		days =5
+		# 	}
+		# }
 		
 	}
 
@@ -749,27 +787,28 @@ country_event = {
 
 country_event = {
 	id = cg_plus_enclaves_art.9002
-	title = cg_plus_enclaves_art.1000.name
-	desc = cg_plus_enclaves_art.9002.desc
-
+	#title = cg_plus_enclaves_art.1000.name
+	#desc = cg_plus_enclaves_art.9002.desc
+	hide_window = yes
 	is_triggered_only = yes
-	diplomatic = yes
-	custom_gui = "enclave_artist_window"
-	custom_gui_option = "enclave_artist_option"
+
+	#diplomatic = yes
+	#custom_gui = "enclave_artist_window"
+#	custom_gui_option = "enclave_artist_option"
 
 	trigger = {
-		exists=prev
+		#exists=prev
 	}
-	picture_event_data = {
-		portrait = event_target:cg_plus_colorful_artisan_country  #change this
-		room = enclave_artist_room
-	}
+	#picture_event_data = {
+	#	portrait = event_target:cg_plus_colorful_artisan_country  #change this
+	#	room = enclave_artist_room
+	#}
 
 
-	option = { # Back
-		name = cg_plus_enclaves_art.1000.a
+	#option = { # Back
+	#	name = cg_plus_enclaves_art.1000.a
 
-	}
+	#}
 }
 
 
@@ -784,7 +823,7 @@ country_event = {
 	custom_gui_option = "enclave_artist_option"
 
 	trigger = {
-		exists=prev
+		
 	}
 	picture_event_data = { #shocked
 
@@ -841,7 +880,7 @@ country_event = {
 
 
 	trigger = {
-		exists=prev
+		
 	}
 
 	option = { 
@@ -865,7 +904,6 @@ country_event = {
 
 }
 
-
 country_event = {
 	id = cg_plus_enclaves_art.9012
 	title = cg_plus_enclaves_art.9012.name
@@ -875,7 +913,7 @@ country_event = {
 	picture=GFX_g_image01
 
 	trigger = {
-		exists=prev
+		
 	}
 
 
@@ -897,7 +935,7 @@ country_event = {
 	picture=GFX_g_image02
 
 	trigger = {
-		exists=prev
+		
 	}
 
 
@@ -927,7 +965,7 @@ country_event = {
 	# }
 #TODO
 	trigger = {
-		exists=prev
+		
 	}
 	option = { 
 		name = cg_plus_enclaves_art.9021.a
@@ -947,7 +985,7 @@ country_event = {
 	picture=GFX_g_image01
 
 	trigger = {
-		exists=prev
+		
 	}
 	option = { 
 		name = cg_plus_enclaves_art.9022.a
@@ -960,9 +998,9 @@ country_event = {
 	desc = cg_plus_enclaves_art.90221.desc
 
 	picture=GFX_g_image02
-
+	is_triggered_only = yes
 	trigger = {
-		exists=prev
+		
 	}
 	option = { 
 		name = cg_plus_enclaves_art.9022.a
@@ -973,11 +1011,11 @@ country_event = {
 	id = cg_plus_enclaves_art.90222
 	title = cg_plus_enclaves_art.90222.name
 	desc = cg_plus_enclaves_art.90222.desc
-
+	is_triggered_only=yes
 	picture=GFX_g_image03
 
 	trigger = {
-		exists=prev
+		
 	}
 	option = { 
 		name = cg_plus_enclaves_art.90222.a
@@ -1003,7 +1041,7 @@ country_event = {
 	}
 #TODO
 	trigger = {
-		exists=prev
+		
 	}
 	option = { 
 		name = cg_plus_enclaves_art.9023.a
@@ -1025,10 +1063,10 @@ country_event = {
 
 
 	trigger = {
-		exists=prev
+		
 	}
 	option = { 
-		name = cg_plus_enclaves_art.9024.a
+		name =  cg_plus_enclaves_art.9024.a
 		add_modifier={ modifier= cg_plus_artist_destroy_mod_9024 years=10 }
 		# 获得帝国修正：毒瘾精神病人的色图创作，持续10年
 		# 	描述：艺术家疯一点才够格。不过，现在的色图我们看不懂了。
@@ -1051,7 +1089,7 @@ country_event = {
 	}
 	#TODO
 	trigger = {
-		exists=prev
+		
 	}
 	option = { 
 		name = cg_plus_enclaves_art.9025.a
@@ -1072,7 +1110,7 @@ country_event = {
 	
 	#TODO
 	trigger = {
-		exists=prev
+		
 	}
 	option = { 
 		name = cg_plus_enclaves_art.9026.a
@@ -1098,10 +1136,10 @@ country_event = {
 		set_variable =  { which=cg_plus_enclave_evt_pic  value=9027  }
 	}
 	trigger = {
-		exists=prev
+		
 	}
 	option = { 
-		name = cg_plus_enclaves_art.9026.a
+		name = cg_plus_enclaves_art.9027.a
 		add_resource={ unity =1000 }
 	#	获得1000凝聚力
 	#		

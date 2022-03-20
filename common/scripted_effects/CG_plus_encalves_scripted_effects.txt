@@ -1,0 +1,81 @@
+
+
+
+# assigned
+#
+#
+# using this in leader scope
+
+assign_captured_normal_leader_to_slot={
+	random_list = {
+		 50={  #slave01      
+		 	modifier = { factor=0
+				event_target:cg_plus_slaver_country={ has_country_flag = slave_01_filled } }                                     
+			save_global_event_target_as = cg_plus_slaver_captured_01
+			Root={ save_global_event_target_as = cg_plus_slaver_captured_01_origin }
+			save_global_event_target_as = cg_plus_slaver_last_captured
+			set_leader_flag = cg_plus_slaver_captured_01
+			event_target:cg_plus_slaver_country={ set_country_flag = slave_01_filled 
+			change_variable = {which = total_slaves value = 1 }
+			 }                                     
+		 }
+		 50={  #slave01      
+		 	modifier = { factor=0
+				event_target:cg_plus_slaver_country={ has_country_flag = slave_02_filled } }                                     
+			save_global_event_target_as = cg_plus_slaver_captured_02
+			Root={ save_global_event_target_as = cg_plus_slaver_captured_02_origin }
+			save_global_event_target_as = cg_plus_slaver_last_captured
+			set_leader_flag = cg_plus_slaver_captured_02
+			event_target:cg_plus_slaver_country={ set_country_flag = slave_02_filled change_variable = {which = total_slaves value = 1 } }                                     
+		 }
+		 50={  #slave01      
+		 	modifier = { factor=0
+				event_target:cg_plus_slaver_country={ has_country_flag = slave_03_filled } }                                     
+			save_global_event_target_as = cg_plus_slaver_captured_03
+			Root={ save_global_event_target_as = cg_plus_slaver_captured_03_origin }
+			save_global_event_target_as = cg_plus_slaver_last_captured
+			set_leader_flag = cg_plus_slaver_captured_03
+			event_target:cg_plus_slaver_country={ set_country_flag = slave_03_filled change_variable = {which = total_slaves value = 1 } }                                     
+		 }
+		 50={  #slave01      
+		 	modifier = { factor=0
+				event_target:cg_plus_slaver_country={ has_country_flag = slave_04_filled } }                                     
+			save_global_event_target_as = cg_plus_slaver_captured_04
+			Root={ save_global_event_target_as = cg_plus_slaver_captured_04_origin }
+			save_global_event_target_as = cg_plus_slaver_last_captured
+			set_leader_flag = cg_plus_slaver_captured_04
+			event_target:cg_plus_slaver_country={ set_country_flag = slave_04_filled change_variable = {which = total_slaves value = 1 } }                                     
+		 }
+		 50={  #slave01      
+		 	modifier = { factor=0
+				event_target:cg_plus_slaver_country={ has_country_flag = slave_05_filled } }                                     
+			save_global_event_target_as = cg_plus_slaver_captured_05
+			Root={ save_global_event_target_as = cg_plus_slaver_captured_05_origin }
+			save_global_event_target_as = cg_plus_slaver_last_captured
+			set_leader_flag = cg_plus_slaver_captured_05
+			event_target:cg_plus_slaver_country={ set_country_flag = slave_05_filled change_variable = {which = total_slaves value = 1 } }                                     
+		 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		0={  modifier = {  add=100
+			event_target:cg_plus_slaver_country={ has_country_flag = slave_01_filled }
+			event_target:cg_plus_slaver_country={ has_country_flag = slave_02_filled }
+			event_target:cg_plus_slaver_country={ has_country_flag = slave_03_filled }
+			event_target:cg_plus_slaver_country={ has_country_flag = slave_04_filled } 
+			event_target:cg_plus_slaver_country={ has_country_flag = slave_05_filled } }
+
+			event_target:cg_plus_slaver_country={ set_country_flag = slave_full }  } 
+	}
+}

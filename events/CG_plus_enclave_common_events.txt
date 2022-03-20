@@ -37,3 +37,39 @@ country_event = {
 	
 	}
 }
+
+country_event = {
+	id=CG_plus_enclaves.9011
+	is_triggered_only = yes
+	hide_window = yes
+
+	immediate = {
+		set_global_flag = under_idol_event_01
+		set_global_flag = under_idol_event_02
+		set_global_flag = under_idol_event_03
+		set_global_flag = under_idol_event_04
+		set_global_flag = under_idol_event_05
+		set_global_flag = under_idol_event_06
+		set_global_flag = under_idol_event_07
+		set_global_flag = under_idol_event_08
+		set_global_flag = under_idol_event_09
+		set_global_flag = under_idol_event_10
+		set_global_flag = under_idol_event_11
+		set_global_flag = under_idol_event_12
+		set_global_flag = under_idol_event_13
+		set_global_flag = under_idol_event_14
+		set_global_flag = under_idol_event_15
+		set_global_flag = under_idol_event_16
+		set_global_flag = under_idol_event_17
+		set_global_flag = under_idol_event_18
+		set_global_flag = under_idol_event_19
+		set_global_flag = under_idol_event_20
+		set_global_flag = under_idol_event_21
+		set_global_flag = under_idol_event_22
+		set_global_flag = under_idol_event_23
+		set_global_flag = under_idol_event_24
+		set_global_flag = under_idol_event_25
+	   
+	
+	}
+}

@@ -1059,6 +1059,10 @@ cg_plus_enclave_slave_traders_init = {
 				save_global_event_target_as = cg_plus_slaver_country
 				set_country_flag = cg_plus_slaver_country
 				set_country_flag = carnalism_flag
+				set_variable = {
+					which = total_slaves
+					value = 0
+				}
 				create_ship_design = { design = "NAME_Marauder_Starbase" }
 				add_ship_design = last_created_design
 				set_custom_capital_location = prev

@@ -6,7 +6,13 @@ on_tech_increased ={
 
 	
 }
+on_yearly_pulse_country={
 
+	events = {
+		cg_plus_underidol.5000
+	}
+
+}
 on_five_year_pulse_country  = {
 	events = {
 		CG_plus_policy_uniform.1000 #学园派送函数
@@ -33,12 +39,15 @@ on_custom_diplomacy = {
 	events = {
 		cg_plus_enclaves_art.0000
 		cg_plus_underidol.0000
+		cg_plus_enclave_slaver.0000
 	}
 }
-
+#This = destroyed country
+#From = optional, destroyer (country)
 on_country_destroyed  = {
 	events = {
 		cg_plus_enclaves_art.9000
+		cg_plus_enclave_slaver.5400
 	}
 }
 
@@ -47,5 +56,27 @@ on_post_communications_established = {
 	events = {
 		cg_plus_enclaves_art.1999
 		cg_plus_underidol.1999
+		cg_plus_enclave_slaver.1999
 	}
+}
+
+
+on_planet_defenders_lose= {
+	events = {
+		cg_plus_enclave_slaver.5100
+	}
+}
+
+on_ship_disengaged_victim={
+	events = {
+		cg_plus_enclave_slaver.5200
+	}
+
+}
+
+on_fleet_destroyed_victim={
+	events = {
+		cg_plus_enclave_slaver.5300
+	}
+
 }

@@ -1,0 +1,50 @@
+building_283p_nightclub = {
+	base_buildtime = 480
+	category = resource
+	can_build = yes
+	base_cap_amount = 1
+	#qs产业化
+	potential = {
+		owner = {
+			has_country_flag = under_idol_building_1
+		}
+	}
+	planet_modifier = {
+		trade_value_mult = 0.15
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			# 花费
+			energy = 1000
+			influence = 100
+		}
+		upkeep = {
+			energy = 5
+			consumer_goods = 1
+		}
+		produces = {
+			society_research = 15
+			influence = 5
+			minor_artifacts = 0.3
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			owner = {
+				has_technology = tech_erotic_expansion_agreement
+			}
+		}
+		job_escort_add = 3
+	}
+
+	destroy_trigger = {
+		owner = {
+			NOT = {
+				has_country_flag = carnalism_flag
+			}
+		}
+	}
+}

@@ -27,7 +27,7 @@ event={
 	immediate= {
 		set_variable={ which= total_panties value =  1 }
 		set_country_flag = collected_pantyshoot_01
-		every_country={
+		every_playable_country={
 		      limit={  	OR = {
 				  				is_species_class =  Magical_Bitch 
 								is_species_class =  Magical_Girl 
