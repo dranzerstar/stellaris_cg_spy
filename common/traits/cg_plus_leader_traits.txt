@@ -76,18 +76,19 @@ leader_trait_sailor_event = {
 
 
 
-
+# t1 trained trait
 leader_trait_captured={
 
 	cost = 1
 	#trait_tentacle_train
 	self_modifier = {
-		leaders_upkeep_mult = -0.9
+		
 	}
 	initial = no 
 	randomized = no
 	icon = "gfx/interface/icons/traits/leader_traits/trait_live_with_master.dds"
 	custom_tooltip = leader_trait_captured_ct
+	leader_class = { admiral scientist general governor }
 	leader_trait =  all 
 
 }
@@ -97,23 +98,222 @@ leader_trait_naked={
 
 	cost = 1
 	#trait_tentacle_train
+	self_modifier = {
+		leader_skill_levels = 2
+	}
 	initial = no 
 	randomized = no
 	icon = "gfx/interface/icons/traits/leader_traits/trait_live_with_master.dds"
 	custom_tooltip = leader_trait_naked_ct
+	leader_class = { admiral scientist general governor }
 	leader_trait =  all 
 
 }
 
 
-leader_trait_collared={
+leader_trait_bondage={
 
 	cost = 1
 	#trait_tentacle_train
+	self_modifier = {
+		species_leader_exp_gain = -0.25
+	}
 	initial = no 
 	randomized = no
 	icon = "gfx/interface/icons/traits/leader_traits/trait_live_with_master.dds"
 	custom_tooltip = leader_trait_collared_ct
+	leader_class = { admiral scientist general governor }
 	leader_trait =  all 
 
 }
+
+leader_trait_obidient={
+
+	cost = 1
+	#trait_tentacle_train
+	self_modifier = {
+		leaders_upkeep_mult = -0.9
+	}
+	initial = no 
+	randomized = no
+	icon = "gfx/interface/icons/traits/leader_traits/trait_live_with_master.dds"
+	custom_tooltip = leader_trait_obidient_ct
+	leader_class = { admiral scientist general governor }
+	leader_trait =  all 
+
+}
+
+leader_trait_drug_enhance={
+
+	cost = 1
+	#trait_tentacle_train
+	self_modifier = {
+		leader_age=-20
+		species_leader_exp_gain = 2.0
+		leader_skill_levels =5
+
+	}
+	initial = no 
+	randomized = no
+	icon = "gfx/interface/icons/traits/leader_traits/trait_live_with_master.dds"
+	custom_tooltip = leader_trait_obidient_ct
+	leader_class = { admiral scientist general governor }
+	leader_trait =  all 
+
+}
+
+
+
+# t2 trained trait
+#admiral
+leader_trait_brainwash_admiral={
+	cost = 1
+	modification = no #TODO
+	icon = "gfx/interface/icons/traits/leader_traits_admiral/SOP_swarm_assault_2.dds"
+	modifier = {
+		ship_fire_rate_mult = 0.20
+		ship_speed_mult = 0.50
+		ship_tracking_add = 10
+	}
+	leader_trait = { admiral }
+	leader_class = { admiral }
+
+	initial = no
+	randomized = no
+}
+
+leader_trait_slave_admiral = {
+	cost = 1
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits_admiral/SOP_poweroverwhelming_ssr.dds"
+	modifier = {
+		ships_upkeep_mult = -0.40
+		ship_hull_regen_add_perc = 0.6
+		ship_armor_regen_add_perc = 0.6
+	}
+	leader_trait = { admiral }
+	leader_class = { admiral }
+
+	initial = no
+	randomized = no
+}
+
+#general
+leader_trait_brainwash_general={
+	cost = 1
+	modification = no #TODO
+	icon = "gfx/interface/icons/traits/leader_traits_admiral/SOP_swarm_assault_2.dds"
+	modifier = {
+		army_morale = 0.40
+		army_damage_mult = 0.40
+	}
+	leader_trait = { general }
+	leader_class = { general }
+
+	initial = no
+	randomized = no
+}
+
+leader_trait_slave_general = {
+	cost = 1
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits_admiral/SOP_poweroverwhelming_ssr.dds"
+	modifier = {
+		armies_upkeep_mult = -0.40
+		army_experience_gain_mult = 2.00
+	}
+	leader_trait = { general }
+	leader_class = { general }
+
+	initial = no
+	randomized = no
+}
+
+#scientist
+
+leader_trait_brainwash_explorer={
+	cost = 1
+	modification = no #TODO
+	icon = "gfx/interface/icons/traits/leader_traits_admiral/SOP_swarm_assault_2.dds"
+	modifier = {
+		ship_sensor_range_add = 1
+		ship_hyperlane_range_add = 1
+		science_ship_survey_speed = 0.75
+	}
+	leader_trait = { scientist  }
+	leader_class = { scientist  }
+
+	initial = no
+	randomized = no
+}
+
+leader_trait_slave_researcher={
+	cost = 1
+	modification = no #TODO
+	icon = "gfx/interface/icons/traits/leader_traits_admiral/SOP_swarm_assault_2.dds"
+	modifier = {
+		all_technology_research_speed = 0.5
+	}
+	leader_trait = { scientist  }
+	leader_class = { scientist  }
+
+	initial = no
+	randomized = no
+}
+
+
+#govener
+
+leader_trait_public_governer={
+	cost = 1
+	modification = no #TODO
+	icon = "gfx/interface/icons/traits/leader_traits_admiral/SOP_swarm_assault_2.dds"
+	modifier = {
+		planet_crime_add = -50
+		planet_jobs_excellent_slave_produces_mult = 0.3
+		planet_jobs_sr_beauty_produces_mult = 0.3
+		planet_jobs_love_juice_produces_mult = 0.3
+
+	}
+	leader_trait = { governor   }
+	leader_class = { governor   }
+
+	initial = no
+	randomized = no
+}
+
+leader_trait_toy_governer={
+	cost = 1
+	modification = no #TODO
+	icon = "gfx/interface/icons/traits/leader_traits_admiral/SOP_swarm_assault_2.dds"
+	modifier = {
+		
+		planet_jobs_consumer_goods_produces_mult = 0.15
+		planet_pops_consumer_goods_upkeep_mult = -0.15
+		planet_amenities_mult = 0.15
+
+	}
+	leader_trait = { governor   }
+	leader_class = { governor   }
+
+	initial = no
+	randomized = no
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

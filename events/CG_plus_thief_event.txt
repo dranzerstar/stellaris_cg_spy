@@ -28,24 +28,10 @@ event={
 		set_variable={ which= total_panties value =  1 }
 		set_country_flag = collected_pantyshoot_01
 		every_playable_country={
-		      limit={  	OR = {
-				  				is_species_class =  Magical_Bitch 
-								is_species_class =  Magical_Girl 
-								is_species_class =  WARSHIPGIRL 
-								is_species_class = KANSEN 
-								is_species_class = android 
-								is_species_class = NYTO
-								is_species_class = SHENHAI 
-								is_species_class = sf_a_doll 
-								is_species_class = TERRASE 	
-								is_species_class = VAL 
-								is_species_class = HKR 
-								is_species_class = JourneyofElaina 
-								is_species_class = Houkai3rd
-								} 
-						  	NOT = { has_country_flag = cg_plus_thief_target_empty }
+		      limit={  	is_anime_species=yes
+						NOT = { has_country_flag = cg_plus_thief_target_empty }
 							is_country_type=default
-						}
+					}
 			set_country_flag = cg_plus_thief_target
 
 		}

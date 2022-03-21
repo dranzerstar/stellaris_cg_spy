@@ -409,13 +409,18 @@
  cg_plus_enclave_slaver.1000.b.o:0 "提供技术支持"
  cg_plus_enclave_slaver.0104.desc.a:0 "是有什么心得想和我们分享吗？或许在调教的时候可以增加新的特质选项。"
  cg_plus_enclave_slaver.0104.a.o:0 "分享技术：§Y淫梦幻剂"
- cg_plus_enclave_slaver.0104.a.r:0 "解锁以下特质选项："
+ cg_plus_enclave_slaver.0104.a.r:0 "解锁以下调教选项：常识催眠\n可以调整目标的领袖职业"
  cg_plus_enclave_slaver.0104.b.o:0 "分享技术：§Y美丽学说"
- cg_plus_enclave_slaver.0104.b.r:0 "解锁以下特质选项："
+ cg_plus_enclave_slaver.0104.b.r:0 "解锁以下调教选项：外貌改造\n可以调整目标的外貌"
  cg_plus_enclave_slaver.0104.c.o:0 "分享技术：§Y快感神经植入术"
- cg_plus_enclave_slaver.0104.c.r:0 "解锁以下特质选项："
+ cg_plus_enclave_slaver.0104.c.r:0 "解锁以下调教选项：解锁更多特质选项。"
+
  cg_plus_enclave_slaver.0104.d.o:0 "分享技术：§Y定向基因重塑"
- cg_plus_enclave_slaver.0104.d.r:0 "解锁以下特质选项："
+ cg_plus_enclave_slaver.0104.d.r:0 "解锁以下调教选项：种族改造\n可以把对象改造成为指定的种族。"
+
+ wait_for_other_first:0 "請先等待上一單完成出貨"
+ sold:0 "已出售"
+
 
 
 
@@ -425,7 +430,7 @@
  cg_plus_enclave_slaver.1000.d.o:0 "看看那个特殊的商品" 
  
 
- cg_plus_enclave_slaver.0102.desc:0 "[cg_plus_slaver_country.total_slaves]"
+ cg_plus_enclave_slaver.0102.desc:0 "這裏是我們的牢屋，[Root.GetRulerName]可以在這裏查看及選購我們的商品，你也可以嘗試與她們交流。但請注意她們都沒經過正式調教。" #[cg_plus_slaver_country.total_slaves]"
 
  cg_plus_enclave_slaver.0102.list:0 "§S商品列表§!"
  cg_plus_enclave_slaver.0102.list.01:0 "牢屋 一"

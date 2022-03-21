@@ -13,3 +13,28 @@ cg_artist_sponsor_cost = {
 		num_pops > 240
 	}	
 }
+
+
+
+cg_slave_price = {
+	base = 5000
+	modifier = {
+		multiply = 1.5
+		num_pops > 60
+	}
+	modifier = {
+		multiply = 1.5
+		num_pops > 120
+	}
+	modifier = {
+		multiply = 1.5
+		num_pops > 240
+	}	
+	modifier = {
+		multiply = 1.5
+		num_pops > 480
+	}	
+}
+
+
+

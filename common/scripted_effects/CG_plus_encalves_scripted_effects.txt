@@ -15,6 +15,7 @@ assign_captured_normal_leader_to_slot={
 			Root={ save_global_event_target_as = cg_plus_slaver_captured_01_origin }
 			save_global_event_target_as = cg_plus_slaver_last_captured
 			set_leader_flag = cg_plus_slaver_captured_01
+			set_timed_leader_flag ={ years =5 flag=player_exclusive }
 			event_target:cg_plus_slaver_country={ set_country_flag = slave_01_filled 
 			change_variable = {which = total_slaves value = 1 }
 			 }                                     
@@ -25,6 +26,7 @@ assign_captured_normal_leader_to_slot={
 			save_global_event_target_as = cg_plus_slaver_captured_02
 			Root={ save_global_event_target_as = cg_plus_slaver_captured_02_origin }
 			save_global_event_target_as = cg_plus_slaver_last_captured
+			set_timed_leader_flag ={ years =5 flag=player_exclusive }
 			set_leader_flag = cg_plus_slaver_captured_02
 			event_target:cg_plus_slaver_country={ set_country_flag = slave_02_filled change_variable = {which = total_slaves value = 1 } }                                     
 		 }
@@ -35,6 +37,7 @@ assign_captured_normal_leader_to_slot={
 			Root={ save_global_event_target_as = cg_plus_slaver_captured_03_origin }
 			save_global_event_target_as = cg_plus_slaver_last_captured
 			set_leader_flag = cg_plus_slaver_captured_03
+			set_timed_leader_flag ={ years =5 flag=player_exclusive }
 			event_target:cg_plus_slaver_country={ set_country_flag = slave_03_filled change_variable = {which = total_slaves value = 1 } }                                     
 		 }
 		 50={  #slave01      
@@ -44,6 +47,7 @@ assign_captured_normal_leader_to_slot={
 			Root={ save_global_event_target_as = cg_plus_slaver_captured_04_origin }
 			save_global_event_target_as = cg_plus_slaver_last_captured
 			set_leader_flag = cg_plus_slaver_captured_04
+			set_timed_leader_flag ={ years =5 flag=player_exclusive }
 			event_target:cg_plus_slaver_country={ set_country_flag = slave_04_filled change_variable = {which = total_slaves value = 1 } }                                     
 		 }
 		 50={  #slave01      
@@ -53,6 +57,7 @@ assign_captured_normal_leader_to_slot={
 			Root={ save_global_event_target_as = cg_plus_slaver_captured_05_origin }
 			save_global_event_target_as = cg_plus_slaver_last_captured
 			set_leader_flag = cg_plus_slaver_captured_05
+			set_timed_leader_flag ={ years =5 flag=player_exclusive }
 			event_target:cg_plus_slaver_country={ set_country_flag = slave_05_filled change_variable = {which = total_slaves value = 1 } }                                     
 		 }
 
@@ -78,4 +83,19 @@ assign_captured_normal_leader_to_slot={
 
 			event_target:cg_plus_slaver_country={ set_country_flag = slave_full }  } 
 	}
+}
+
+#leader scope
+clear_slave_leader_modification={
+		
+
+
+
+
+
+
+
+
+
+
 }
