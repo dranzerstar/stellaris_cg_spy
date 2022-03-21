@@ -484,7 +484,24 @@
 
 
 
+ slave_sold:0 "已卖出"
+ cg_plus_enclave_slaver.0105.1.r:0 "REPLACE_ME"
+ cg_plus_enclave_slaver.8000.name:0 "REPLACE_ME"
+ cg_plus_enclave_slaver.8000.desc:0 "REPLACE_ME"
+ basic_modifications:0 "REPLACE_ME"
+ advance_modifications:0 "REPLACE_ME"
+ knowledge_modification:0 "REPLACE_ME"
+ appearence_modifications:0 "REPLACE_ME"
+ trait_modifications:0 "REPLACE_ME"
+ species_modifications:0 "REPLACE_ME"
+ CONFRIM_PAYMENT:0 "确认付款"
+ RECONSIDER:0 "再考虑"
+ cg_plus_enclave_slaver.8100.name:0 "REPLACE_ME"
+ cg_plus_enclave_slaver.8100.desc:0 "REPLACE_ME"
+ PAY:0 "成交！"
 
+ cg_plus_enclave_slaver.8500.desc:0 "REPLACE_ME"
+ cg_plus_enclave_slaver.8501.desc:0 "REPLACE_ME"
 
 
 

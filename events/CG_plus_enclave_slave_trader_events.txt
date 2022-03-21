@@ -491,6 +491,7 @@ country_event = {
 	after = { country_event = {  id = cg_plus_enclave_slaver.0102 } }
 }
 
+#option check ruler
 country_event = {
 	id = cg_plus_enclave_slaver.0105
 	hide_window = no
@@ -970,20 +971,25 @@ country_event = {
 	
 	option =  { name = PAY  
 				allow={
-					resource_stockpile_compare = { resource = energy value >= Root.temprpice_energy }
-					resource_stockpile_compare = { resource = love_juice value >= Root.temprpice_love_juice }
-					resource_stockpile_compare = { resource = minor_artifact value >= Root.temprpice_minor_artifact }
-					resource_stockpile_compare = { resource = rare_crystals  value >= Root.temprpice_rare_crystals  }
-					resource_stockpile_compare = { resource = nanites value >= Root.temprpice_nanites }
-					resource_stockpile_compare = { resource = sr_dark_matter value >= Root.temprpice_dark_matter }
+
+					resource_stockpile_compare = { resource = energy value >= 1 mult = temprpice_energy }
+					resource_stockpile_compare = { resource = love_juice value >=1  mult = temprpice_love_juice }
+					resource_stockpile_compare = { resource = minor_artifacts value >= 1 mult = temprpice_minor_artifact }
+					resource_stockpile_compare = { resource = rare_crystals  value >= 1 mult = temprpice_rare_crystals  }
+					resource_stockpile_compare = { resource = nanites value >= 1 mult = temprpice_nanites  }
+					resource_stockpile_compare = { resource = sr_dark_matter value >= 1 mult = temprpice_dark_matter }
 				}
 	
-				add_resource={  resource= energy value = Root.temprpice_energy   }      
-				add_resource={  resource= energy value = Root.temprpice_love_juice   }     
-				add_resource={  resource= energy value = Root.temprpice_minor_artifact   }     
-				add_resource={  resource= energy value = Root.temprpice_rare_crystals   }     
-				add_resource={  resource= energy value = Root.temprpice_nanites   }     
-				add_resource={  resource= energy value = Root.temprpice_dark_matter   }     
+				add_resource={  energy = -1 mult= temprpice_energy }      
+				add_resource={  love_juice =-1 mult = temprpice_love_juice   }  
+				add_resource={   minor_artifacts =-1  mult = temprpice_minor_artifact   }     
+				add_resource={  rare_crystals= -1 mult =temprpice_rare_crystals   }     
+				add_resource={  nanites= -1 mult = temprpice_nanites   }     
+				add_resource={  sr_dark_matter= -1 mult = temprpice_dark_matter   }  
+
+
+				
+				
 				
 				hidden_effect={  country_event = {  id = cg_plus_enclave_slaver.8500 } }  }
 	#rollback clear all mod flags on leader
@@ -1026,7 +1032,7 @@ country_event = {
 		set_country_flag=has_bought_slave
 		country_event={    id=  cg_plus_enclave_slaver.8502 }
 
-		country_event={   id= cg_plus_enclave_slaver.8501  years=1 }
+		country_event={   id= cg_plus_enclave_slaver.8501  days =360 }
 	}
 	desc = cg_plus_enclave_slaver.8500.desc
 	#rollback clear all mod flags on leader
