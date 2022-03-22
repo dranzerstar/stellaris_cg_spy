@@ -992,7 +992,7 @@ country_event = {
 				change_variable={ which=temprpice_energy value=5000 }}	
 	
 	option =  { name= BACK   }
-	after= {  hidden_effect={  country_event={ id=8000 } }
+	after= {  hidden_effect={  country_event={ id=8000 } } }
 }
 
 country_event = {
@@ -1037,7 +1037,7 @@ country_event = {
 				change_variable={ which=temprpice_minor_artifact value=30 }
 			}	
 	option =  { name= BACK   }
-	after= {  hidden_effect={  country_event={ id=8000 } }
+	after= {  hidden_effect={  country_event={ id=8000 } } }
 }
 
 
@@ -1087,7 +1087,7 @@ country_event = {
 				change_variable={ which=temprpice_minor_artifact value=30 }
 			}	
 	option =  { name= BACK   }
-	after= {  hidden_effect={  country_event={ id=8000 } }
+	after= {  hidden_effect={  country_event={ id=8000 } } }
 }
 
 country_event = {
@@ -1109,7 +1109,7 @@ country_event = {
 				change_variable={ which=temprpice_consumer_goods value=5000 }		
 				}
 	option =  { name= BACK   }
-	after= {  hidden_effect={  country_event={ id=8000 } }
+	after= {  hidden_effect={  country_event={ id=8000 } } }
 }
 
 
@@ -1160,7 +1160,9 @@ country_event = {
 				change_variable={ which=temprpice_minor_artifact value=30 }
 			}	
 	option =  { name= BACK   }
-	after= {  hidden_effect={  country_event={ id=8000 } }
+	after= {  hidden_effect={  country_event={ id=8000 } } }
+
+
 }
 
 
@@ -1186,7 +1188,7 @@ country_event = {
 				change_variable={ which=temprpice_minor_artifact value=10 }	
 				}
 	option =  { name= BACK   }
-	after= {  hidden_effect={  country_event={ id=8000 } }
+	after= {  hidden_effect={  country_event={ id=8000 } } }
 }
 
 
