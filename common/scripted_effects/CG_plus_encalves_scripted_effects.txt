@@ -87,14 +87,29 @@ assign_captured_normal_leader_to_slot={
 
 #leader scope
 clear_slave_leader_modification={
+	#
+	#	basic
+		remove_leader_flag=training_obidence_training
+		remove_leader_flag=training_wife_training
+		remove_leader_flag=training_toilet_training
+		remove_leader_flag=training_pet_training
+	#advanced
+		remove_leader_flag=training_tentacle_equipment
+		remove_leader_flag=training_sensitivity_mod
+		remove_leader_flag=training_mecha_suit_training
+		remove_leader_flag=training_corruption_mod	
+	#job change
+		remove_leader_flag=change_to_governer
+		remove_leader_flag=change_to_scientist
+		remove_leader_flag=change_to_admiral
+		remove_leader_flag=change_to_general	
+	#appearence
+		remove_leader_flag=change_appearence	
+	#advanced traits	
 		
 
-
-
-
-
-
-
+	#change_species
+		remove_leader_flag=change_species
 
 
 

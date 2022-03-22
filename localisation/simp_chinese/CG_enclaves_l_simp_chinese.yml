@@ -485,24 +485,26 @@
 
 
  slave_sold:0 "已卖出"
- cg_plus_enclave_slaver.0105.1.r:0 "REPLACE_ME"
- cg_plus_enclave_slaver.8000.name:0 "REPLACE_ME"
- cg_plus_enclave_slaver.8000.desc:0 "REPLACE_ME"
- basic_modifications:0 "REPLACE_ME"
- advance_modifications:0 "REPLACE_ME"
- knowledge_modification:0 "REPLACE_ME"
- appearence_modifications:0 "REPLACE_ME"
- trait_modifications:0 "REPLACE_ME"
- species_modifications:0 "REPLACE_ME"
+ cg_plus_enclave_slaver.0105.1.r:0 "特殊商品會以拍賣形式出售，在拍賣期間和之前，您可以在通信中查看商品。\n拍賣開始時各方將會收到我們的信息，并可以通過通信進入拍賣場進行競標。\n拍賣會持續兩年，商品會由最後的最高競標這獲得。"
+ cg_plus_enclave_slaver.8000.name:0 "購買詳細"
+ cg_plus_enclave_slaver.8000.desc:0 "以下為商品價格詳細\n\n===============\n\n能源£energy£：[Root.temprpice_energy]\n能源£consumer_goods£：[Root.temprpice_consumer_goods]\n欲望珠£love_juice£：[Root.temprpice_love_juice]\n稀有文物£minor_artifacts£：[Root.temprpice_minor_artifact]\n稀有水晶£rare_crystals£：[Root.temprpice_rare_crystals]\n纳米机器人£nanites£：[Root.temprpice_nanites]\n暗物质£sr_dark_matter£：[Root.temprpice_dark_matter]"
+ basic_modifications:0 "基本调教项目"
+ advance_modifications:0 "特殊调教项目"
+ knowledge_modification:0 "常识置换"
+ appearence_modifications:0 "外貌体征改造"
+ trait_modifications:0 "特质改造"
+ species_modifications:0 "种族改造" 
  CONFRIM_PAYMENT:0 "确认付款"
  RECONSIDER:0 "再考虑"
- cg_plus_enclave_slaver.8100.name:0 "REPLACE_ME"
- cg_plus_enclave_slaver.8100.desc:0 "REPLACE_ME"
+ cg_plus_enclave_slaver.8100.name:0 "確認購買"
+ cg_plus_enclave_slaver.8100.desc:0 "以下為最終價目\n\n===============\n\n能源£energy£：[Root.temprpice_energy]\n能源£consumer_goods£：[Root.temprpice_consumer_goods]\n欲望珠£love_juice£：[Root.temprpice_love_juice]\n稀有文物£minor_artifacts£：[Root.temprpice_minor_artifact]\n稀有水晶£rare_crystals£：[Root.temprpice_rare_crystals]\n纳米机器人£nanites£：[Root.temprpice_nanites]\n暗物质£sr_dark_matter£：[Root.temprpice_dark_matter]"
  PAY:0 "成交！"
 
- cg_plus_enclave_slaver.8500.desc:0 "REPLACE_ME"
- cg_plus_enclave_slaver.8501.desc:0 "REPLACE_ME"
+ cg_plus_enclave_slaver.8500.desc:0 "交易成功！"
+ cg_plus_enclave_slaver.8500.desc:0 "感谢光顾 ，我们根据下单项目对商品进行调教，课程完成后会进行通信和货运。其中调教记录也会以记录并转交阁下 "
 
+ cg_plus_enclave_slaver.8500.desc:0 "交付成功！"
+ cg_plus_enclave_slaver.8500.desc:0 "感谢光顾 ，我们根据下单项目对商品进行调教，课程完成后会进行通信和货运。其中调教记录也会以记录并转交阁下 "
 
 
 
@@ -510,6 +512,7 @@
  cg_plus_enclave_slaver.0105.1.o:0 "哪怎么才能把她据为己有？"
  cg_plus_enclave_slaver.0105.2.o:0 "探访"
  cg_plus_enclave_slaver.0105.3.o:0 "进入竞标画面。"
+
 
 
 

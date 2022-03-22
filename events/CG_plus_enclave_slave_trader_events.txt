@@ -398,7 +398,7 @@ country_event = {
 	option = { name = conversion is_dialog_only = yes  response_text = cg_plus_enclave_slaver.random.text  }
 	option = { allow={ custom_tooltip={text=wait_for_other_first  NOT={ has_country_flag=has_bought_slave  }  } } 
 		name = cg_plus_enclave_slaver.buy_slave event_target:cg_plus_slaver_captured_01={ save_global_event_target_as=buy_target }
-	}
+		remove_country_flag=init_price}
 	option={ name=GOODBYE }
 	after = { country_event = {  id = cg_plus_enclave_slaver.0102 } }
 }
@@ -420,7 +420,7 @@ country_event = {
 	option = { name = conversion is_dialog_only = yes  response_text = cg_plus_enclave_slaver.random.text  }
 	option = { allow={ custom_tooltip={text=wait_for_other_first  NOT={ has_country_flag=has_bought_slave  }  } } 
 		name = cg_plus_enclave_slaver.buy_slave event_target:cg_plus_slaver_captured_02={ save_global_event_target_as=buy_target }
-	}
+		remove_country_flag=init_price}
 	option={ name=GOODBYE }
 	after = { country_event = {  id = cg_plus_enclave_slaver.0102 } }
 }
@@ -436,13 +436,13 @@ country_event = {
 	picture_event_data = {
 		portrait = event_target:cg_plus_slaver_captured_03
 		room = "prison_room_02"
-	}
+		remove_country_flag=init_price}
 	trigger = { exists = event_target:cg_plus_slaver_country  }
 	desc = cg_plus_enclave_slaver.0203.desc
 	option = { name = conversion is_dialog_only = yes  response_text = cg_plus_enclave_slaver.random.text  }
 	option = { allow={ custom_tooltip={text=wait_for_other_first  NOT={ has_country_flag=has_bought_slave  }  } } 
 		name = cg_plus_enclave_slaver.buy_slave event_target:cg_plus_slaver_captured_03={ save_global_event_target_as=buy_target } 
-	}
+		remove_country_flag=init_price}
 	option={ name=GOODBYE }
 	after = { country_event = {  id = cg_plus_enclave_slaver.0102 } }
 }
@@ -464,6 +464,7 @@ country_event = {
 	option = { name = conversion is_dialog_only = yes  response_text = cg_plus_enclave_slaver.random.text  }
 	option = { allow={ custom_tooltip={text=wait_for_other_first  NOT={ has_country_flag=has_bought_slave  }  } } 
 		name = cg_plus_enclave_slaver.buy_slave event_target:cg_plus_slaver_captured_04={ save_global_event_target_as=buy_target }
+		remove_country_flag=init_price
 	}
 	option={ name=GOODBYE }
 	after = { country_event = {  id = cg_plus_enclave_slaver.0102 } }
@@ -486,6 +487,7 @@ country_event = {
 	option = { name = conversion is_dialog_only = yes  response_text = cg_plus_enclave_slaver.random.text  }
 	option = { allow={ custom_tooltip={text=wait_for_other_first  NOT={ has_country_flag=has_bought_slave  }  } } 
 	name = cg_plus_enclave_slaver.buy_slave event_target:cg_plus_slaver_captured_05={ save_global_event_target_as=buy_target }
+	remove_country_flag=init_price
 	}
 	option={ name=GOODBYE }
 	after = { country_event = {  id = cg_plus_enclave_slaver.0102 } }
@@ -533,9 +535,9 @@ country_event = {
 		name = cg_plus_enclave_slaver.0105.3.o
 	}
 	option={ name=BACK  
-	hidden_effect = {
-		country_event = {
-			id = cg_plus_enclave_slaver.1000
+		hidden_effect = {
+			country_event = {
+				id = cg_plus_enclave_slaver.1000
 		}
 	}
 
@@ -871,7 +873,7 @@ country_event = {
 
 #8xxxx buy process
 
-
+#8000 buy process main
 country_event = {
 	id = cg_plus_enclave_slaver.8000
 	hide_window = no
@@ -891,6 +893,10 @@ country_event = {
 			set_variable={
 				which = temprpice_energy
 				value = value:cg_slave_price
+			}
+			set_variable={
+				which = temprpice_consumer_goods
+				value = 0
 			}
 			set_variable={
 				which = temprpice_love_juice
@@ -925,7 +931,15 @@ country_event = {
 	}
 
 	desc = cg_plus_enclave_slaver.8000.desc
-	option =  { name = basic_modifications  hidden_effect={  country_event = {  id = cg_plus_enclave_slaver.8001 } } }
+	option =  { name = basic_modifications  hidden_effect={  country_event = {  id = cg_plus_enclave_slaver.8001 } } 
+					allow={ custom_tooltip={text=basic_modification_selected event_target:buy_target={ 
+						NOR={   
+							has_leader_flag=training_obidence_training
+							has_leader_flag=training_wife_training
+							has_leader_flag=training_toilet_training
+							has_leader_flag=training_pet_training
+					} }} }
+				}
 	option =  { name = advance_modifications  hidden_effect={  country_event = {  id = cg_plus_enclave_slaver.8002 } } }
 	
 	option =  { name = knowledge_modification  trigger={ event_target:cg_plus_slaver_country ={ has_country_flag= tech_shared_01} } hidden_effect={  country_event = {  id = cg_plus_enclave_slaver.8003 } } }
@@ -943,6 +957,242 @@ country_event = {
 				country_event = {  id = cg_plus_enclave_slaver.1000 } }
 	
 }
+
+#flag moddifications
+#800x
+
+country_event = {
+	id = cg_plus_enclave_slaver.8001
+	hide_window = no
+	title = cg_plus_enclave_slaver.8000.name
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = "enclave_artist_window"
+	custom_gui_option = "enclave_artist_option"
+	picture_event_data = {  portrait = event_target:buy_target  room = "prison_room_01"  }
+	trigger = { exists = event_target:cg_plus_slaver_country    exists =event_target:buy_target  NOT={ has_country_flag=has_bought_slave  }}
+	desc = cg_plus_enclave_slaver.8001.desc
+	#option, name, effect ct,  set price, flag leader
+	option =  { name = training_obidence_training    
+				custom_tooltip= training_obidence_training.ct          
+				hidden_effect={event_target:buy_target={ set_leader_flag=training_obidence_training }}
+				change_variable={ which=temprpice_energy value=5000 }}
+	option =  { name = training_wife_training   
+				custom_tooltip= training_wife_training.ct         
+				hidden_effect={event_target:buy_target={ set_leader_flag=training_wife_training }}
+				change_variable={ which=temprpice_consumer_goods value=3000 }}		
+	option =  { name = training_toilet_training  
+				custom_tooltip= training_toilet_training.ct     
+				hidden_effect={event_target:buy_target={ set_leader_flag=training_toilet_training }   }
+				change_variable={ which=temprpice_love_juice value=4000 }}	
+	option =  { name = training_pet_training  
+				custom_tooltip= training_pet_training.ct     
+				hidden_effect={event_target:buy_target={ set_leader_flag=training_pet_training }  }
+				change_variable={ which=temprpice_love_juice value=2000 }
+				change_variable={ which=temprpice_energy value=5000 }}	
+	
+	option =  { name= BACK   }
+	after= {  hidden_effect={  country_event={ id=8000 } }
+}
+
+country_event = {
+	id = cg_plus_enclave_slaver.8002
+	hide_window = no
+	title = cg_plus_enclave_slaver.8000.name
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = "enclave_artist_window"
+	custom_gui_option = "enclave_artist_option"
+	picture_event_data = {  portrait = event_target:buy_target  room = "prison_room_01"  }
+	trigger = { exists = event_target:cg_plus_slaver_country    exists =event_target:buy_target  NOT={ has_country_flag=has_bought_slave  }}
+	desc = cg_plus_enclave_slaver.8002.desc
+	#option, name, effect ct,  set price, flag leader
+	option =  { name = training_tentacle_equipment   
+				custom_tooltip= training_tentacle_equipment.ct          
+				hidden_effect={event_target:buy_target={ set_leader_flag=training_tentacle_equipment }}
+				change_variable={ which=temprpice_love_juice value=5000 }
+				change_variable={ which=temprpice_rare_crystals value=1000 }
+				change_variable={ which=temprpice_minor_artifact value=15 }
+				}
+	option =  { name = training_sensitivity_mod   
+				custom_tooltip= training_sensitivity_mod.ct         
+				hidden_effect={event_target:buy_target={ set_leader_flag=training_sensitivity_mod }}
+				change_variable={ which=temprpice_energy value=10000 }
+				change_variable={ which=temprpice_love_juice value=5000 }
+				change_variable={ which=temprpice_minor_artifact value=15 }
+				}		
+	option =  { name = training_mecha_suit_training  
+				custom_tooltip= training_mecha_suit_training.ct     
+				hidden_effect={event_target:buy_target={ set_leader_flag=training_mecha_suit_training }   }
+				change_variable={ which=temprpice_nanites value=30 }
+				change_variable={ which=temprpice_energy value=20000 }
+				change_variable={ which=temprpice_rare_crystals value=1000 }
+				change_variable={ which=temprpice_minor_artifact value=30 }
+				}	
+	option =  { name = training_corruption_mod 
+				custom_tooltip= training_corruption_mod.ct     
+				hidden_effect={event_target:buy_target={ set_leader_flag=training_corruption_mod }  }
+				change_variable={ which=temprpice_energy value=20000 }
+				change_variable={ which=temprpice_dark_matter value=30 }
+				change_variable={ which=temprpice_minor_artifact value=30 }
+			}	
+	option =  { name= BACK   }
+	after= {  hidden_effect={  country_event={ id=8000 } }
+}
+
+
+country_event = {
+	id = cg_plus_enclave_slaver.8003
+	hide_window = no
+	title = cg_plus_enclave_slaver.8000.name
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = "enclave_artist_window"
+	custom_gui_option = "enclave_artist_option"
+	picture_event_data = {  portrait = event_target:buy_target  room = "prison_room_01"  }
+	trigger = { exists = event_target:cg_plus_slaver_country    exists =event_target:buy_target  NOT={ has_country_flag=has_bought_slave  }}
+	desc = cg_plus_enclave_slaver.8003.desc
+	#option, name, effect ct,  set price, flag leader  #governer
+	option =  { name = change_to_governer  
+				custom_tooltip= change_to_governer.ct          
+				hidden_effect={event_target:buy_target={ set_leader_flag=change_to_governer }}
+				allow={ event_target:buy_target={  can_govern_planet =no  } }
+				change_variable={ which=temprpice_love_juice value=5000 }
+				change_variable={ which=temprpice_rare_crystals value=1000 }
+				change_variable={ which=temprpice_minor_artifact value=15 }
+				}
+	option =  { name = change_to_scientist   
+				custom_tooltip= change_to_scientist.ct         
+				hidden_effect={event_target:buy_target={ set_leader_flag=change_to_scientist }}
+				allow={ event_target:buy_target={  can_research  =no  } }
+				change_variable={ which=temprpice_energy value=10000 }
+				change_variable={ which=temprpice_love_juice value=5000 }
+				change_variable={ which=temprpice_minor_artifact value=15 }
+				}		
+	option =  { name = change_to_admiral  
+				custom_tooltip= change_to_admiral.ct     
+				hidden_effect={event_target:buy_target={ set_leader_flag=change_to_admiral } }  
+				allow={ event_target:buy_target={  can_lead_navy  =no  } }
+				change_variable={ which=temprpice_nanites value=30 }
+				change_variable={ which=temprpice_energy value=20000 }
+				change_variable={ which=temprpice_rare_crystals value=1000 }
+				change_variable={ which=temprpice_minor_artifact value=30 }
+				}	
+	option =  { name = change_to_general
+				custom_tooltip= change_to_general.ct     
+				allow={ event_target:buy_target={  can_lead_army  =no  } }
+				hidden_effect={event_target:buy_target={ set_leader_flag=change_to_general }  }
+				change_variable={ which=temprpice_energy value=20000 }
+				change_variable={ which=temprpice_dark_matter value=30 }
+				change_variable={ which=temprpice_minor_artifact value=30 }
+			}	
+	option =  { name= BACK   }
+	after= {  hidden_effect={  country_event={ id=8000 } }
+}
+
+country_event = {
+	id = cg_plus_enclave_slaver.8004
+	hide_window = no
+	title = cg_plus_enclave_slaver.8000.name
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = "enclave_artist_window"
+	custom_gui_option = "enclave_artist_option"
+	picture_event_data = {  portrait = event_target:buy_target  room = "prison_room_01"  }
+	trigger = { exists = event_target:cg_plus_slaver_country    exists =event_target:buy_target  NOT={ has_country_flag=has_bought_slave  }}
+	desc = cg_plus_enclave_slaver.8004.desc
+	#option, name, effect ct,  set price, flag leader  #governer
+	option =  { name = change_appearence  
+				custom_tooltip= change_appearence.ct          
+				hidden_effect={event_target:buy_target={ set_leader_flag=change_appearence }}
+				change_variable={ which=temprpice_energy value=5000 }		
+				change_variable={ which=temprpice_consumer_goods value=5000 }		
+				}
+	option =  { name= BACK   }
+	after= {  hidden_effect={  country_event={ id=8000 } }
+}
+
+
+
+country_event = {
+	id = cg_plus_enclave_slaver.8005
+	hide_window = no
+	title = cg_plus_enclave_slaver.8000.name
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = "enclave_artist_window"
+	custom_gui_option = "enclave_artist_option"
+	picture_event_data = {  portrait = event_target:buy_target  room = "prison_room_01"  }
+	trigger = { exists = event_target:cg_plus_slaver_country    exists =event_target:buy_target  NOT={ has_country_flag=has_bought_slave  }}
+	desc = cg_plus_enclave_slaver.8005.desc
+	#option, name, effect ct,  set price, flag leader  #governer
+	option =  { name = change_to_governer  
+				custom_tooltip= change_to_governer.ct          
+				hidden_effect={event_target:buy_target={ set_leader_flag=change_to_governer }}
+				allow={ event_target:buy_target={  or={can_govern_planet =yes has_leader_flag=change_to_governer }} }  }
+				change_variable={ which=temprpice_love_juice value=5000 }
+				change_variable={ which=temprpice_rare_crystals value=1000 }
+				change_variable={ which=temprpice_minor_artifact value=15 }
+				}
+	option =  { name = change_to_scientist   
+				custom_tooltip= change_to_scientist.ct         
+				hidden_effect={event_target:buy_target={ set_leader_flag=change_to_scientist }}
+				allow={ event_target:buy_target={  or={can_research  =yes  has_leader_flag=change_to_scientist }} }
+				change_variable={ which=temprpice_energy value=10000 }
+				change_variable={ which=temprpice_love_juice value=5000 }
+				change_variable={ which=temprpice_minor_artifact value=15 }
+				}		
+	option =  { name = change_to_admiral  
+				custom_tooltip= change_to_admiral.ct     
+				hidden_effect={event_target:buy_target={ set_leader_flag=change_to_admiral } }  
+				allow={ event_target:buy_target={  or={can_lead_navy  =yes  has_leader_flag=change_to_admiral   } }
+				change_variable={ which=temprpice_nanites value=30 }
+				change_variable={ which=temprpice_energy value=20000 }
+				change_variable={ which=temprpice_rare_crystals value=1000 }
+				change_variable={ which=temprpice_minor_artifact value=30 }
+				}	
+	option =  { name = change_to_general
+				custom_tooltip= change_to_general.ct     
+				allow={ event_target:buy_target={ or={ can_lead_army  =yes  has_leader_flag=can_lead_army } } }
+				hidden_effect={event_target:buy_target={ set_leader_flag=change_to_general }  }
+				change_variable={ which=temprpice_energy value=20000 }
+				change_variable={ which=temprpice_dark_matter value=30 }
+				change_variable={ which=temprpice_minor_artifact value=30 }
+			}	
+	option =  { name= BACK   }
+	after= {  hidden_effect={  country_event={ id=8000 } }
+}
+
+
+
+
+country_event = {
+	id = cg_plus_enclave_slaver.8006
+	hide_window = no
+	title = cg_plus_enclave_slaver.8000.name
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = "enclave_artist_window"
+	custom_gui_option = "enclave_artist_option"
+	picture_event_data = {  portrait = event_target:buy_target  room = "prison_room_01"  }
+	trigger = { exists = event_target:cg_plus_slaver_country    exists =event_target:buy_target  NOT={ has_country_flag=has_bought_slave  }}
+	desc = cg_plus_enclave_slaver.8006.desc
+	#option, name, effect ct,  set price, flag leader  #governer
+	option =  { name = change_species 
+				custom_tooltip= change_species.ct          
+				hidden_effect={event_target:buy_target={ set_leader_flag=change_species }}
+				change_variable={ which=temprpice_energy value=5000 }		
+				change_variable={ which=temprpice_consumer_goods value=5000 }		
+				change_variable={ which=temprpice_minor_artifact value=10 }	
+				}
+	option =  { name= BACK   }
+	after= {  hidden_effect={  country_event={ id=8000 } }
+}
+
+
+
+
+
 
 
 
@@ -973,6 +1223,7 @@ country_event = {
 				allow={
 
 					resource_stockpile_compare = { resource = energy value >= 1 mult = temprpice_energy }
+					resource_stockpile_compare = { resource = consumer_goods value >= 1 mult = temprpice_consumer_goods }
 					resource_stockpile_compare = { resource = love_juice value >=1  mult = temprpice_love_juice }
 					resource_stockpile_compare = { resource = minor_artifacts value >= 1 mult = temprpice_minor_artifact }
 					resource_stockpile_compare = { resource = rare_crystals  value >= 1 mult = temprpice_rare_crystals  }
@@ -980,7 +1231,8 @@ country_event = {
 					resource_stockpile_compare = { resource = sr_dark_matter value >= 1 mult = temprpice_dark_matter }
 				}
 	
-				add_resource={  energy = -1 mult= temprpice_energy }      
+				add_resource={  energy = -1 mult= temprpice_energy }   
+				add_resource={  consumer_goods = -1 mult= temprpice_consumer_goods }   
 				add_resource={  love_juice =-1 mult = temprpice_love_juice   }  
 				add_resource={   minor_artifacts =-1  mult = temprpice_minor_artifact   }     
 				add_resource={  rare_crystals= -1 mult =temprpice_rare_crystals   }     
@@ -1032,7 +1284,7 @@ country_event = {
 		set_country_flag=has_bought_slave
 		country_event={    id=  cg_plus_enclave_slaver.8502 }
 
-		country_event={   id= cg_plus_enclave_slaver.8501  days =360 }
+		country_event={   id= cg_plus_enclave_slaver.8501  days =360  }
 	}
 	desc = cg_plus_enclave_slaver.8500.desc
 	#rollback clear all mod flags on leader
