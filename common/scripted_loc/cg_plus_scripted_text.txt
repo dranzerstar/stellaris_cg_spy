@@ -84,7 +84,181 @@ defined_text = {
 		localization_key = leader_class_ruler
 	}
 	text = {
+		trigger={
+			NOR={
+				leader_class = scientist
+				leader_class = admiral
+				leader_class = general
+				leader_class = ruler
+				leader_class = governor
+			}
+		}
 		localization_key = leader_class_unkown
 	}
 
 }
+
+defined_text = {
+	name = Random_caputre_slave_response
+	text={
+		localization_key = randnum_response.1
+		weight={weight = 1 }
+	}	
+	text={
+		localization_key = randnum_response.2
+		weight={weight = 1 }
+	}	
+	text={
+		localization_key = randnum_response.3
+		weight={weight = 1 }
+	}	
+	text={
+		localization_key = randnum_response.4
+		weight={weight = 1 }
+	}	
+	text={
+		localization_key = randnum_response.5
+		weight={weight = 1 }
+	}	
+	text={
+		localization_key = randnum_response.6
+		weight={weight = 1 }
+	}	
+	text={
+		localization_key = randnum_response.7
+		weight={weight = 1 }
+	}
+
+	text={
+		localization_key =  randnum_response.sp1
+		trigger={  Root={ is_same_value = event_target:conversation_with_origin   } }
+		weight={weight = 50 }
+	}
+	text={
+		localization_key =  randnum_response.sp2
+		trigger={  Root={ is_same_value = event_target:conversation_with_origin   } }
+		weight={weight = 50 }
+	}
+
+	text={
+		localization_key =  randnum_response.sp3
+		trigger={  Root={ is_same_value = event_target:conversation_with_origin   } }
+		weight={weight = 50 }
+	}	
+	text={
+		localization_key =  randnum_response.sp4
+		trigger={  Root={ is_same_value = event_target:conversation_with_origin   } }
+		weight={weight = 50 }
+	}	
+
+	text={
+		trigger = {event_target:conversation_with = {species = {OR={
+						is_archetype = Magical_Bitch
+						is_archetype = WHORE 
+						is_archetype = Lust_Girl}}}}
+		localization_key = randnum_response.l.1
+		weight={weight = 1 }
+	}	
+	text={
+		trigger = {event_target:conversation_with = {species = {OR={
+						is_archetype = Magical_Bitch
+						is_archetype = WHORE 
+						is_archetype = Lust_Girl}}}}
+		localization_key = randnum_response.l.2
+		weight={weight = 1 }
+	}
+	text={
+		trigger = {event_target:conversation_with = {species = {OR={
+						is_archetype = Magical_Bitch
+						is_archetype = WHORE 
+						is_archetype = Lust_Girl}}}}
+		localization_key = randnum_response.l.3
+		weight={weight = 1 }
+	}
+	text={
+		trigger = {event_target:conversation_with = {species = {OR={
+						is_archetype = Magical_Bitch
+						is_archetype = WHORE 
+						is_archetype = Lust_Girl}}}}
+		localization_key = randnum_response.l.4
+		weight={weight = 1 }
+	}
+
+
+	text={
+		trigger = { event_target:conversation_with = { species = { OR={
+						is_archetype = Magical_Girl
+						is_archetype = TERRASE 
+						is_archetype = JourneyofElaina }}}}
+		localization_key = randnum_response.i.5
+		weight={weight = 1 }
+	}
+
+}
+
+defined_text = {
+	name = Random_artist_response
+	text={
+		localization_key = cg_plus_enclaves_art.1000.a.reply1
+		weight={weight = 1 }
+		trigger = {
+			NOT={ has_modifier = cg_plus_artist_sponsor  }
+		}
+	}
+	text={
+		localization_key = cg_plus_enclaves_art.1000.a.reply2
+		weight={weight = 1 }
+		trigger = {
+			NOT={ has_modifier = cg_plus_artist_sponsor  }
+		}
+	}
+	text={
+		localization_key = cg_plus_enclaves_art.1000.a.reply.c1
+		weight={weight = 1 }
+	}
+	text={
+		localization_key = cg_plus_enclaves_art.1000.a.reply.c2
+		weight={weight = 1 }
+	}
+
+
+	text={
+		localization_key = cg_plus_enclaves_art.1000.a.reply.b1
+		trigger = {
+		 		event_target:cg_plus_colorful_artisan_country = {
+				check_variable = { which =reqest_free value > 10}
+	 		}
+		}
+		weight={weight = 1 }
+	}
+	text={
+		localization_key = cg_plus_enclaves_art.1000.a.reply.b2
+		trigger = {
+			event_target:cg_plus_colorful_artisan_country = {
+		   check_variable = { which =reqest_free value > 10}
+			}
+  		 }
+		weight={weight = 1 }
+	}
+	text={
+		localization_key = cg_plus_enclaves_art.1000.a.reply.d1
+		trigger = {
+			event_target:cg_plus_colorful_artisan_country = {
+		   check_variable = { which =reqest_free value > 10}
+			}
+  		 }
+		weight={weight = 1 }
+	}
+	text={
+		localization_key = cg_plus_enclaves_art.1000.a.reply.d2
+		trigger = {
+			event_target:cg_plus_colorful_artisan_country = {
+		   check_variable = { which =reqest_free value > 10}
+			}
+  		 }
+		weight={weight = 1 }
+	}
+
+
+}
+

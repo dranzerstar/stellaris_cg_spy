@@ -7,6 +7,119 @@ namespace = CG_plus_enclaves
 
 
 
+country_event = {
+	id=CG_plus_enclaves.1000
+	is_triggered_only = yes
+	hide_window = yes
+	immediate = {
+		
+		if={  
+			limit={ from={   has_country_flag =cg_plus_colorful_artisan_country  }    }
+			establish_communications=event_target:cg_plus_colorful_artisan_country
+
+
+		}
+	
+		if={  
+			limit={ from={   has_country_flag =283p_under_home_country  }    }
+			establish_communications=event_target:283p_under_home_country
+
+
+		}
+	
+		if={  
+			limit={ from={   has_country_flag =cg_plus_slaver_country  }    }
+			establish_communications=event_target:cg_plus_slaver_country
+
+
+		}
+		if={  
+			limit={ from={   has_country_flag =cg_plus_IMF_country  }    }
+			establish_communications=event_target:cg_plus_IMF_country
+
+
+		}
+	
+	}
+
+
+
+}
+
+
+
+
+
+country_event = {
+	id=CG_plus_enclaves.1010
+	is_triggered_only = yes
+	
+	hide_window = yes
+	trigger = {
+		is_country_type = default
+		NOT={ has_country_flag=cg_plus_communication_given }
+	}
+	immediate = {
+		set_country_flag = cg_plus_communication_given
+		country_event = {
+			id = CG_plus_enclaves.1011
+			days=3600
+			random = 180
+		}
+		country_event = {
+			id = CG_plus_enclaves.1012
+			days=7200
+			random = 360
+		}
+		country_event = {
+			id = CG_plus_enclaves.1013
+			days=7200
+			random = 720
+		}
+		country_event = {
+			id = CG_plus_enclaves.1014
+			days=7200
+			random = 720
+		}
+	}
+}
+
+
+country_event = {
+	id=CG_plus_enclaves.1011
+	is_triggered_only = yes
+	hide_window = yes
+	immediate = {
+		establish_communications = event_target:cg_plus_colorful_artisan_country
+	}
+}
+country_event = {
+	id=CG_plus_enclaves.1012
+	is_triggered_only = yes
+	hide_window = yes
+	immediate = {
+		establish_communications = event_target:cg_plus_slaver_country
+	}
+}
+country_event = {
+	id=CG_plus_enclaves.1013
+	is_triggered_only = yes
+	hide_window = yes
+	immediate = {
+		establish_communications = event_target:283p_under_home_country
+	}
+}
+country_event = {
+	id=CG_plus_enclaves.1014
+	is_triggered_only = yes
+	hide_window = yes
+	immediate = {
+		establish_communications = event_target:cg_plus_IMF_country
+	}
+}
+
+
+
 
 
 
@@ -18,7 +131,7 @@ country_event = {
 	immediate = {
 		establish_communications = event_target:cg_plus_librarian_country
 		establish_communications = event_target:283p_under_home_country
-		
+		establish_communications = event_target:cg_plus_IMF_country
 		establish_communications = event_target:cg_plus_colorful_artisan_country
 		establish_communications = event_target:cg_plus_slaver_country
 		establish_communications = event_target:cg_plus_succ_prison_country

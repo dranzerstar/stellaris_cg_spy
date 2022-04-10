@@ -8,7 +8,18 @@ spriteTypes = {
 		masking_texture = "gfx/interface/situation_log/event_mask.dds"
 		alwaystransparent = yes
 	}
-
+	spriteType = {
+		name = "GFX_evt_auction_0"
+		texturefile = "gfx/event_pictures/enclaves_evt/auction_event.dds" 
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_auction_sold"
+		texturefile = "gfx/event_pictures/enclaves_evt/auction_sold_event.dds" 
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
 	
 	spriteType = {
 			name = "GFX_sagiri_captured"
@@ -51,6 +62,14 @@ spriteTypes = {
 	}
 
 	spriteType = {
+		name = "GFX_brainwash"
+		texturefile = "gfx/event_pictures/brainwash.dds" 
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+
+
+	spriteType = {
 	name = "GFX_g_image02"
 	texturefile = "gfx/event_pictures/enclaves_evt/guro02.dds" 
 	masking_texture = "gfx/interface/situation_log/event_mask.dds"
@@ -62,6 +81,101 @@ spriteTypes = {
 	masking_texture = "gfx/interface/situation_log/event_mask.dds"
 	alwaystransparent = yes
 	}
+
+
+
+
+	spriteType = {
+		name = "GFX_evt_L_slaver_7120"#TODO 
+		texturefile = "gfx/event_pictures/enclaves_evt/slaver_7120.dds" 
+	
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_L_slaver_7130"#TODO 
+		texturefile = "gfx/event_pictures/enclaves_evt/slaver_7130.dds" 
+	
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_evt_P_slaver_7140"#TODO 
+		texturefile = "gfx/event_pictures/enclaves_evt/slaver_7140.dds" 
+	
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_evt_P_slaver_7210"#TODO 
+		texturefile = "gfx/event_pictures/enclaves_evt/slaver_7210.dds" 
+	
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_evt_L_slaver_7220"#TODO 
+		texturefile = "gfx/event_pictures/enclaves_evt/slaver_7220.dds" 
+	
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_evt_P_slaver_7230"#TODO 
+		texturefile = "gfx/event_pictures/enclaves_evt/slaver_7230.dds" 
+	
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_P_slaver_7240"#TODO 
+		texturefile = "gfx/event_pictures/enclaves_evt/slaver_7240.dds" 
+	
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_evt_P_slaver_9210"#TODO 
+		texturefile = "gfx/event_pictures/enclaves_evt/slaver_9210.dds" 
+	
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_P_slaver_9211"#TODO 
+		texturefile = "gfx/event_pictures/enclaves_evt/slaver_9211.dds" 
+	
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_evt_P_slaver_9220"#TODO 
+		texturefile = "gfx/event_pictures/enclaves_evt/slaver_9220.dds" 
+	
+		alwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_L_slaver_9230"#TODO 
+		texturefile = "gfx/event_pictures/enclaves_evt/slaver_9230.dds" 
+	
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_evt_P_slaver_9240"#TODO 
+		texturefile = "gfx/event_pictures/enclaves_evt/slaver_9240.dds" 
+	
+		alwaystransparent = yes
+	}
+
+
+
+
+
+
+
+
+
+
+
+
 
 	
 	spriteType = {
@@ -78,6 +192,41 @@ spriteTypes = {
 			masking_texture = "gfx/interface/situation_log/event_mask.dds"
 			alwaystransparent = yes
 	}
+
+
+
+#  IMF SMALL EVENTS
+
+
+
+	spriteType = {
+		name = "GFX_evt_imf_5001"
+		texturefile = "gfx/event_pictures/enclaves_evt/imf_5001.dds" 
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_evt_imf_5002"
+		texturefile = "gfx/event_pictures/enclaves_evt/imf_5002.dds" 
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_evt_imf_5003"
+		texturefile = "gfx/event_pictures/enclaves_evt/imf_5003.dds" 
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_evt_imf_5004"
+		texturefile = "gfx/event_pictures/enclaves_evt/imf_5004.dds" 
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
+
 
 
 

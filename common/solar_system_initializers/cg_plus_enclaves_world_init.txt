@@ -382,10 +382,11 @@ cg_plus_enclave_relic_librarian_init = {
 	max_instances = 1
 	usage_odds = {
 		base = 100
-
+		#temp disabled
 	}
-	spawn_chance = 100
-
+	#spawn_chance = 100
+	spawn_chance = 0
+    #temp disabled
 	flags = { cg_plus_enclaves enclave cg_plus_relic_librarians }
 	planet = {
 		class = star
@@ -977,6 +978,7 @@ cg_plus_enclave_relic_librarian_init = {
 
 
 
+
 cg_plus_enclave_slave_traders_init = {
 	class = "sc_pulsar"
 	usage = misc_system_init
@@ -1012,22 +1014,20 @@ cg_plus_enclave_slave_traders_init = {
 			create_species = {
 				name = "NAME_slavetrader_spec"
 				plural = "NAME_slavetrader_spec"
-				class = "Magical_Bitch"
-				name_list = "ICE_MOON"
+				class = random_non_machine
+				
 				portrait = COLDSUC 
-				traits = {
-					trait = "trait_beautiful"
-					trait = "trait_virtuous"
-					trait = "trait_forbidden_lust"
-				}
+
+				homeworld = this
 				effect = {
 					set_species_flag = cg_slave_trader_species_flag
+					save_global_event_target_as = cg_slave_trader_species
 				}
 			}
 
 			create_country = {
 				name = "NAME_cg_plus_slave_traders_HOME"
-				species = last_created_species
+				species = event_target:cg_slave_trader_species
 				type = cg_plus_enclave_armed
 				authority = auth_corporate
 				civics = { civic = civic_cg_slave_traders }
@@ -1084,9 +1084,9 @@ cg_plus_enclave_slave_traders_init = {
 							angle = random
 							distance = 40
 						}
-						save_global_event_target_as = CaravaneerCustomCapital
+						save_global_event_target_as = cg_plus_slaver_country_capital
 						prev = {
-							set_custom_capital_location = event_target:CaravaneerCustomCapital
+							set_custom_capital_location = event_target:slaver_countryCapital
 						}
 					}
 				}
@@ -1098,6 +1098,9 @@ cg_plus_enclave_slave_traders_init = {
 					immortal = yes
 				}
 				set_leader = last_created_leader
+				last_created_leader={
+					save_global_event_target_as = cg_enclave_slave_trader_leader
+				}
 			}
 			create_fleet = {
 				effect = {
@@ -1114,6 +1117,52 @@ cg_plus_enclave_slave_traders_init = {
 					}
 				}
 			}
+			create_fleet = {
+				effect = {
+					set_owner = event_target:cg_plus_slaver_country
+					create_ship={   
+							name = "capture_holder_scientist"
+							design =  "NAME_Prototype"
+					}
+					set_location = {
+						target = prev
+						distance = 230
+						angle = 40
+					}
+					save_global_event_target_as= cg_plus_slaver_scientist_holder	
+				}	
+			}
+
+			create_fleet = {
+				effect = {
+					set_owner = event_target:cg_plus_slaver_country
+					create_ship={   
+							name = "capture_holder_admiral"
+							design =  "NAME_Future_Titan_T"
+					}
+					set_location = {
+						target = prev
+						distance = 230
+						angle = 40
+					}
+					save_global_event_target_as= cg_plus_slaver_admiral_holder	
+				}	
+			}
+			create_army = {
+
+				name = "capture_holder_army"
+				owner =  event_target:cg_plus_slaver_country
+				species =  event_target:cg_plus_slaver_country
+				type = rebel_slave_defense_army
+				effect = {
+					save_global_event_target_as= cg_plus_slaver_general_holder		
+				}
+				
+			}
+			
+
+
+
 			create_fleet = {
 				effect = {
 					set_owner = event_target:cg_plus_slaver_country
@@ -1253,7 +1302,7 @@ cg_plus_enclave_slave_traders_init = {
 			set_owner = event_target:cg_plus_slaver_country
 			set_controller = event_target:cg_plus_slaver_country
 			set_capital = yes
-
+			save_global_event_target_as = cg_plus_slaver_governer_holder
 			add_building = building_ancient_palace
 			add_building = building_lust_captured_monument 
 			add_building = building_brothel 
@@ -1674,6 +1723,608 @@ cg_plus_enclave_slave_traders_init = {
 	}
 }
 
+cg_plus_enclave_IMF_init = {
+	class = "sc_pulsar"
+	name = NAME_cg_plus_librarian_system
+	usage = misc_system_init
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 230
+	}
+
+	max_instances = 1
+	usage_odds = {
+		base = 100
+		#temp disabled
+	}
+	spawn_chance = 100
+	
+    #temp disabled
+	flags = { cg_plus_enclaves enclave cg_plus_IMF }
+	planet = {
+		class = star
+		orbit_distance = 0
+		orbit_angle = 0
+	}
+	planet = {
+		class = pc_ringworld_habitable
+		orbit_distance = 40
+		orbit_angle = random
+		size = { min = 20 max = 30 }
+		has_ring = no
+
+		init_effect = {
+			create_species = {
+				name = "NAME_IMF_spec"
+				plural = "NAME_IMF_spec"
+				class = random
+				name_list = random
+				portrait = random
+				traits = {
+				}
+				effect = {
+					set_species_flag = cg_IMF_species_flag
+					save_global_event_target_as = cg_IMF_species
+				}
+			}
+
+			create_country = {
+				name = "NAME_cg_plus_IMF_HOME"
+				species = event_target:cg_IMF_species
+				type = cg_plus_enclave_armed
+				authority = auth_corporate
+				civics = { civic = civic_cg_IMF}
+				origin = "origin_default"
+				flag = {
+					icon = {
+						category = "enclaves"
+						file = "enclaves_flag_trader.dds"
+					}
+					background= {
+						category = "backgrounds"
+						file = "00_solid.dds"
+					}
+					colors={
+						"pink"
+						"pink"
+						"null"
+						"null"
+					}
+				}
+				ethos = {
+					ethic = ethic_fanatic_xenophile
+					
+				}
+				ignore_initial_colony_error = yes
+				
+			}
+			last_created_country = {
+				set_graphical_culture = "leching_beautys_01"
+				save_global_event_target_as = cg_plus_IMF_country
+				set_country_flag = cg_plus_IMF_country
+				
+				# create_ship_design = { design = "NAME_FE_Starbase" }
+				# add_ship_design = last_created_design
+				# set_custom_capital_location = prev
+				create_fleet = {
+					name = "NAME_cg_plus_IMF_starbase"
+					settings = { spawn_debris = no }
+					effect = {
+						set_owner = prev
+						create_ship = {
+							name = random
+							design = "NAME_FE_Starbase"
+							graphical_culture = prev
+							effect = {
+								set_ship_flag = cara_home_tradestation
+							}
+						}
+						set_location = {
+							target = prevprev
+							angle = random
+							distance = 40
+						}
+						save_global_event_target_as = CaravaneerCustomCapital0
+						prev = {
+							set_custom_capital_location = event_target:CaravaneerCustomCapital0
+						}
+					}
+				}
+				create_leader = {
+					class = ruler
+					species = this
+					name = "NAME_IMF_leader"
+					event_leader = yes
+					skill = 5
+					immortal = yes
+				}
+				set_leader = last_created_leader
+			}
+			create_fleet = {
+				effect = {
+					set_owner = event_target:cg_plus_IMF_country
+					create_ship = {
+						name = random
+						design = "NAME_Crystal_Nidus"
+					
+					}
+					set_location = {
+						target = prev
+						distance = 230
+						angle = 0
+					}
+				}
+			}
+			create_fleet = {
+				effect = {
+					set_owner = event_target:cg_plus_IMF_country
+					create_ship = {
+						name = random
+						design = "NAME_Crystal_Nidus"
+					
+					}
+					set_location = {
+						target = prev
+						distance = 230
+						angle = 90
+					}
+				}
+			}
+			create_fleet = {
+				effect = {
+					set_owner = event_target:cg_plus_IMF_country
+					create_ship = {
+						name = random
+						design = "NAME_Crystal_Nidus"
+					
+					}
+					set_location = {
+						target = prev
+						distance = 230
+						angle = 180
+					}
+				}
+			}
+			create_fleet = {
+				effect = {
+					set_owner = event_target:cg_plus_IMF_country
+					create_ship = {
+						name = random
+						design = "NAME_Crystal_Nidus"
+					
+					}
+					set_location = {
+						target = prev
+						distance = 230
+						angle = 270
+					}
+				}
+			}
+
+
+			create_fleet = {
+				effect = {
+					set_owner = event_target:cg_plus_IMF_country
+					create_ship = {
+						name = random
+						design = "NAME_holylight_world_tree_moon"
+						
+					}
+					set_formation_scale = 2
+					set_fleet_stance = aggressive
+					set_aggro_range_measure_from = self
+					set_aggro_range = 250
+					set_location = {
+						target = prev
+						distance = 20
+						angle = 120
+					}
+				}
+				settings = {
+					garrison = yes
+				}
+			}
+
+
+			set_planet_flag = cg_plus_IMF_world
+			prevent_anomaly = yes
+			set_owner = event_target:cg_plus_IMF_country
+			set_controller = event_target:cg_plus_IMF_country
+			set_capital = yes
+
+			add_building = building_ancient_palace
+			add_building = building_production_center
+			add_building = building_disinformation_center
+			add_building = building_hyper_entertainment_forum
+			add_building = building_paradise_dome
+			add_building = building_commercial_megaplex
+			save_global_event_target_as = cg_plus_IMF_home_planet
+			
+			while = {
+				count = 20
+				add_district = district_arcology_housing
+			}
+			while = {
+				count = 20
+				add_district = district_rw_commercial
+			}
+			while = {
+				count = 2
+				create_pop = {
+					species = owner_main_species
+				}
+			}
+
+
+		}
+	}
+
+	change_orbit = 50
+
+
+
+
+
+	planet = {
+		class = pc_relic
+		orbit_distance = 40
+		orbit_angle = -60
+		size = 40
+
+		init_effect = {
+			create_ambient_object = {
+				type = "abandoned_starbase_01_object"
+				location = this
+			}
+		}
+
+		change_orbit = @base_moon_distance
+
+		moon = {
+			class = pc_barren
+			size = 8
+			orbit_angle = 90
+			orbit_distance = 6
+
+			init_effect = {
+				create_fleet = {
+					effect = {
+						set_owner = event_target:cg_plus_IMF_country
+						create_ship = {
+							name = random
+							design = "NAME_Void_Dwelling"
+							graphical_culture = "pirate_01"
+						}
+						set_location = {
+							target = prev
+							distance = 10
+							angle = 0
+						}
+					}
+				}
+			}
+		}
+		moon = {
+			class = pc_barren_cold
+			size = 10
+			orbit_angle = 95
+			orbit_distance = 6
+
+			init_effect = {
+				create_fleet = {
+					effect = {
+						set_owner = event_target:cg_plus_IMF_country
+						while = {
+							count = 10
+							create_ship = {
+								name = random
+								design = "NAME_Future_Battleship"
+								graphical_culture = "plantoid_01" 
+							}
+						}
+						
+						set_formation_scale = 2
+						set_fleet_stance = aggressive
+						set_aggro_range_measure_from = self
+						set_aggro_range = 250
+						set_location = {
+							target = prev
+							distance = 20
+							angle = 120
+						}
+					}
+					settings = {
+						garrison = yes
+					}
+				}
+			}
+		}
+		moon = {
+			class = pc_frozen
+			size = 9
+			orbit_angle = 125
+			orbit_distance = 6
+
+
+		}
+		moon = {
+			class = pc_toxic
+			size = 11
+			orbit_angle = 160
+			orbit_distance = 6
+
+			init_effect = {
+				create_fleet = {
+					effect = {
+						set_owner = event_target:cg_plus_IMF_country
+						create_ship = {
+							name = random
+							design = "NAME_Void_Dwelling"
+							graphical_culture = "plantoid_01"
+						}
+						set_location = {
+							target = prev
+							distance = 10
+							angle = 0
+						}
+					}
+				}
+			}
+		}
+	}
+
+	planet = {
+		class = pc_barren_cold
+		orbit_distance = 40
+		size = 25
+		orbit_angle = 55
+
+		init_effect = {
+			create_fleet = {
+				effect = {
+					set_owner = event_target:cg_plus_IMF_country
+					create_ship = {
+						name = random
+						design = "NAME_Future_Titan_T"
+						graphical_culture = "plantoid_01"
+					}
+					set_formation_scale = 2
+					set_fleet_stance = aggressive
+					set_aggro_range_measure_from = self
+					set_aggro_range = 250
+					set_location = {
+						target = prev
+						distance = 20
+						angle = 120
+					}
+				}
+				settings = {
+					garrison = yes
+				}
+			}
+		}
+	}
+
+	planet = {
+		class = pc_barren
+		orbit_distance = 25
+		size = 15
+		orbit_angle = 120
+
+		init_effect = {
+			create_ambient_object = {
+				type = "abandoned_starbase_01_object"
+				location = this
+			}
+		}
+
+		change_orbit = @base_moon_distance
+
+		moon = {
+			class = pc_frozen
+			size = 8
+			orbit_angle = 90
+			orbit_distance = 6
+
+			init_effect = {
+				create_fleet = {
+					effect = {
+						set_owner = event_target:cg_plus_IMF_country
+						while = {
+							count = 12
+							create_ship = {
+								name = random
+								design = "NAME_Future_Battleship"
+								graphical_culture = "plantoid_01"
+							}
+						}
+						
+						set_formation_scale = 2
+						set_fleet_stance = aggressive
+						set_aggro_range_measure_from = self
+						set_aggro_range = 250
+						set_location = {
+							target = prev
+							distance = 20
+							angle = 120
+						}
+					}
+					settings = {
+						garrison = yes
+					}
+				}
+			}
+		}
+	}
+
+	planet = {
+		class = "pc_asteroid"
+		orbit_distance = 25
+		orbit_angle = -210
+		size = 5
+		has_ring = no
+
+		init_effect = {
+			set_deposit = d_minerals_8
+		}
+	}
+
+	planet = {
+		class = "pc_asteroid"
+		orbit_distance = 0
+		orbit_angle = -95
+		size = 5
+		has_ring = no
+	}
+
+	planet = {
+		class = "pc_asteroid"
+		orbit_distance = 0
+		orbit_angle = 285
+		size = 5
+		has_ring = no
+
+		init_effect = {
+			set_deposit = d_minerals_8
+		}
+	}
+
+	planet = {
+		class = "pc_asteroid"
+		orbit_distance = 0
+		orbit_angle = -80
+		size = 5
+		has_ring = no
+	}
+
+	planet = {
+		class = "pc_asteroid"
+		orbit_distance = 0
+		orbit_angle = -80
+		size = 5
+		has_ring = no
+
+		init_effect = {
+			set_deposit = d_minerals_8
+		}
+	}
+
+	planet = {
+		class = "pc_asteroid"
+		orbit_distance = 0
+		orbit_angle = -80
+		size = 5
+		has_ring = no
+	}
+
+	planet = {
+		class = "pc_asteroid"
+		orbit_distance = 0
+		orbit_angle = -80
+		size = 5
+		has_ring = no
+	}
+
+	planet = {
+		class = "pc_asteroid"
+		orbit_distance = 0
+		orbit_angle = -80
+		size = 5
+		has_ring = no
+	}
+
+	planet = {
+		class = pc_f_star
+		orbit_distance = 30
+		size = 10
+		orbit_angle = 125
+
+		init_effect = {
+			create_fleet = {
+				effect = {
+					set_owner = event_target:cg_plus_IMF_country
+					create_ship = {
+						name = random
+						design = "NAME_Void_Dwelling"
+						graphical_culture = "pirate_01"
+					}
+					set_location = {
+						target = prev
+						distance = 10
+						angle = 0
+					}
+				}
+			}
+		}
+	}
+
+	planet = {
+		class = pc_frozen
+		orbit_distance = 25
+		size = 8
+		orbit_angle = 125
+
+		init_effect = {
+			create_fleet = {
+				effect = {
+					set_owner = event_target:cg_plus_IMF_country
+					create_ship = {
+						name = random
+						design = "NAME_Void_Dwelling"
+						graphical_culture = "pirate_01"
+					}
+					set_location = {
+						target = prev
+						distance = 10
+						angle = 0
+					}
+				}
+			}
+		}
+	}
+
+	planet = {
+		class = pc_frozen
+		orbit_distance = 25
+		size = 12
+		orbit_angle = 125
+
+		init_effect = {
+			create_ambient_object = {
+				type = "abandoned_starbase_01_object"
+				location = this
+			}
+			create_ambient_object = {
+				type = "medium_debris_01_object"
+				location = this
+			}
+		}
+
+		change_orbit = @base_moon_distance
+
+		moon = {
+			class = pc_frozen
+			size = 8
+			orbit_angle = 90
+			orbit_distance = 6
+
+
+		}
+	}
+
+
+
+	init_effect = {
+		#create_fe_outpost =yes
+
+		create_starbase = {
+			size = "starbase_citadel"
+			owner = event_target:cg_plus_IMF_country
+		}
+		
+	}
+}
+
 
 
 cg_plus_enclave_prison_init = {
@@ -1686,10 +2337,11 @@ cg_plus_enclave_prison_init = {
 	}
 	max_instances = 1
 	usage_odds = {
-		base = 100
+		base = 0
 
 	}
-	spawn_chance = 100
+	spawn_chance = 0
+	#temp disabled
 
 	flags = { cg_plus_enclaves enclave cg_plus_succ_prison }
 
@@ -2180,10 +2832,11 @@ cg_plus_enclave_ward_init = {
 	}
 	max_instances = 1
 	usage_odds = {
-		base = 100
+		base = 0
 
 	}
-	spawn_chance = 100
+	spawn_chance = 0
+	#temp disabled
 
 	flags = { cg_plus_enclaves enclave cg_plus_holy_ward }
 

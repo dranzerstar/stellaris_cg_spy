@@ -341,7 +341,7 @@
 
 
  CG_plus_policy_uniform.1704.name:0 "之高无上的完美精灵"
- CG_plus_policy_uniform.1704.desc:0 "愚蠢的魅魔们。别为你们通过的比坚尼法案沾沾自喜，[Root.leader.getadj][Root.GetSpeciesClass]知道你们在星海议会的小把戏是在试图羞辱高贵的[Root.GetSpeciesClass]\n   但是！你们有所不知，完美的[Root.GetSpeciesClass]又怎么可能被这简单的要求而感到困扰？[Root.GetSpeciesClass]的美体是在这繁星下至高无上之最美之躯，又怎会为展示她而感到羞耻。\n\n    幼稚的魅魔们，[Root.GetRulerName]今次就饶恕你们这次无聊的行为，如果下次妄图做出伤害我国的事情们，就把投降书写好吧。\n\n                       [Root.GetRulerName]书"
+ CG_plus_policy_uniform.1704.desc:0 "愚蠢的魅魔们。别为你们通过的比坚尼法案沾沾自喜，[Root.leader.getadj][Root.GetSpeciesName]知道你们在星海议会的小把戏是在试图羞辱高贵的[Root.GetSpeciesName]\n   但是！你们有所不知，完美的[Root.GetSpeciesClass]又怎么可能被这简单的要求而感到困扰？[Root.GetSpeciesClass]的美体是在这繁星下至高无上之最美之躯，又怎会为展示她而感到羞耻。\n\n    幼稚的魅魔们，[Root.GetRulerName]今次就饶恕你们这次无聊的行为，如果下次妄图做出伤害我国的事情们，就把投降书写好吧。\n\n                       [Root.GetRulerName]书"
  
  CG_plus_policy_uniform.1704.a:0 "文书就这么写吧。一定把魅魔们吓死"
  CG_plus_policy_uniform.1704.a1:0 "是的，吓死人了£opinion£"

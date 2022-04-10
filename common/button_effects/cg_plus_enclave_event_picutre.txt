@@ -16,9 +16,70 @@ cg_plus_enclave_evt_pic_9027 = {
 	effect = {}
 }
 
+cg_plus_enclave_evt_pic_7120 = {
+	potential = {FROM = { check_variable = { which = cg_plus_enclave_evt_pic value = 7120 }}}
+	allow = { always = yes }
+	effect = {}
+}
+cg_plus_enclave_evt_pic_7130 = {
+	potential = {FROM = { check_variable = { which = cg_plus_enclave_evt_pic value = 7130 }}}
+	allow = { always = yes }
+	effect = {}
+}
 
+cg_plus_enclave_evt_pic_7140 = {
+	potential = {FROM = { check_variable = { which = cg_plus_enclave_evt_pic value = 7140 }}}
+	allow = { always = yes }
+	effect = {}
+}
+cg_plus_enclave_evt_pic_7210 = {
+	potential = {FROM = { check_variable = { which = cg_plus_enclave_evt_pic value = 7210 }}}
+	allow = { always = yes }
+	effect = {}
+}
+cg_plus_enclave_evt_pic_7220 = {
+	potential = {FROM = { check_variable = { which = cg_plus_enclave_evt_pic value = 7220 }}}
+	allow = { always = yes }
+	effect = {}
+}
+cg_plus_enclave_evt_pic_7230 = {
+	potential = {FROM = { check_variable = { which = cg_plus_enclave_evt_pic value = 7230 }}}
+	allow = { always = yes }
+	effect = {}
+}
+cg_plus_enclave_evt_pic_7240 = {
+	potential = {FROM = { check_variable = { which = cg_plus_enclave_evt_pic value = 7240 }}}
+	allow = { always = yes }
+	effect = {}
+}
 
+cg_plus_enclave_evt_pic_9210 = {
+	potential = {FROM = { check_variable = { which = cg_plus_enclave_evt_pic value = 9210 }}}
+	allow = { always = yes }
+	effect = {}
+}
+cg_plus_enclave_evt_pic_9211 = {
+	potential = {FROM = { check_variable = { which = cg_plus_enclave_evt_pic value = 9211 }}}
+	allow = { always = yes }
+	effect = {}
+}
 
+cg_plus_enclave_evt_pic_9220 = {
+	potential = {FROM = { check_variable = { which = cg_plus_enclave_evt_pic value = 9220 }}}
+	allow = { always = yes }
+	effect = {}
+}
+
+cg_plus_enclave_evt_pic_9230 = {
+	potential = {FROM = { check_variable = { which = cg_plus_enclave_evt_pic value = 9230 }}}
+	allow = { always = yes }
+	effect = {}
+}
+cg_plus_enclave_evt_pic_9240 = {
+	potential = {FROM = { check_variable = { which = cg_plus_enclave_evt_pic value = 9240 }}}
+	allow = { always = yes }
+	effect = {}
+}
 
 under_imas_gui_idols_icon_01 = {
 	potential = { has_global_flag = idol_debut_01 check_variable={which= idols_page value = 1 } } 
@@ -193,3 +254,120 @@ under_imas_gui_idols_icon_01 = {
 	effect = {
 		hidden_effect = {  country_event = { id = cg_plus_underidol.2100 }  set_variable={ which= idols_select value = 25 } }
 		custom_tooltip = "more_details" }}
+
+
+
+
+
+# auction_price
+# auction menu buttons
+
+cg_plus_no_effect = {
+	potential = { always = yes 	}
+	allow = { }
+	effect = { }
+}
+
+
+add_bid_10K = {
+	potential = { always = yes 	}
+	allow = { }
+	effect = { hidden_effect = {
+		change_variable = {
+			which = temp_bid_price
+			value = 1000
+		}
+	}  }
+}
+
+
+
+add_bid_1M = {
+	potential = { always = yes 	}
+	allow = {      }
+	effect = {  hidden_effect = {
+		change_variable = {
+			which = temp_bid_price
+			value = 10000
+		}
+	}       }
+}
+
+
+
+
+add_bid_100M = {
+	potential = {always = yes 	}
+	allow = { }
+	effect = {
+		hidden_effect = {
+			change_variable = {
+				which = temp_bid_price
+				value = 100000
+			}
+		} 
+
+	}
+}
+reset_bid_g ={
+	potential = {always = yes 	}
+	allow = { }
+	effect = {
+		hidden_effect = {
+			set_variable = {
+				which = temp_bid_price
+				value = event_target:cg_plus_slaver_country.highest_bid_price
+			}
+			change_variable = {
+				which = temp_bid_price
+				value = 1000
+			}
+		} 
+
+	}
+
+
+}
+
+confirm_bid = {
+	potential = {always = yes 	}
+	allow = {             
+		resource_stockpile_compare = { resource = energy value >= 1 mult = temp_bid_price }
+		fail_text = {
+			text = bid_higher
+			hidden_trigger = {
+				check_variable = {
+					which = temp_bid_price
+					value > event_target:cg_plus_slaver_country.highest_bid_price
+				}
+			}
+
+		}
+		fail_text = {
+			text = bid_over
+			hidden_trigger = {
+				 has_global_flag = cg_auction_started 
+			}
+		}
+	 }
+	effect = {
+		hidden_effect={
+			save_global_event_target_as = cg_plus_auction_highest_bidder
+			event_target:cg_plus_slaver_country = {	
+				set_variable = {
+					which = highest_bid_price
+					value = prev.temp_bid_price
+				}
+			}
+
+			remove_country_flag  = informed_not_highest
+		}
+		
+	}
+}
+
+
+
+
+
+

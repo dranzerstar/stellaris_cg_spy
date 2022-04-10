@@ -7,6 +7,9 @@ namespace = cg_plus_enclaves_art
 # 2000 ignored
 # 3xxx
 # 9xxx destroy events
+#firstcontact 4000
+
+
 
 
 
@@ -65,9 +68,7 @@ country_event = {
 	custom_gui = "enclave_artist_window"
 	custom_gui_option = "enclave_artist_option"
 	trigger = {
-		from = {
-			has_country_flag = cg_plus_colorful_artisan_country
-		}
+
 	}
 
 	immediate = {
@@ -197,17 +198,17 @@ country_event = {
 	option = {
 		name = cg_plus_enclaves_art.1000.a
 		
-		response_text = cg_plus_enclaves_art.1000.a.reply1
-		response_text = cg_plus_enclaves_art.1000.a.reply2 
+		response_text = cg_plus_enclaves_art.1000.random.text
+		#response_text = cg_plus_enclaves_art.1000.a.reply2 
 		
 
 		is_dialog_only = yes
-		trigger = {
-			event_target:cg_plus_colorful_artisan_country = {
-				check_variable = { which =reqest_free value < 10}
-			}
-			NOT={ has_modifier = cg_plus_artist_sponsor  }
-		}
+		# trigger = {
+		# 	event_target:cg_plus_colorful_artisan_country = {
+		# 		check_variable = { which =reqest_free value < 10}
+		# 	}
+		# 	NOT={ has_modifier = cg_plus_artist_sponsor  }
+		# }
 		hidden_effect = {
 			event_target:cg_plus_colorful_artisan_country = {
 				change_variable = {
@@ -217,50 +218,46 @@ country_event = {
 			}
 		}
 	}
-	option = {
-		name = cg_plus_enclaves_art.1000.a
+	# option = {
+	# 	name = cg_plus_enclaves_art.1000.a
 		
-		response_text = cg_plus_enclaves_art.1000.a.reply.c1
-		response_text = cg_plus_enclaves_art.1000.a.reply.c2
+	# 	response_text = cg_plus_enclaves_art.1000.random.text
 		
 
-		is_dialog_only = yes
-		trigger = {
-			event_target:cg_plus_colorful_artisan_country = {
-				check_variable = { which =reqest_free value < 10}
-			}
-			has_modifier = cg_plus_artist_sponsor  
-		}
-		hidden_effect = {
-			event_target:cg_plus_colorful_artisan_country = {
-				change_variable = {
-					which = reqest_free
-					value = 1
-				}
-			}
-		}
-	}
+	# 	is_dialog_only = yes
+	# 	trigger = {
+	# 		event_target:cg_plus_colorful_artisan_country = {
+	# 			check_variable = { which =reqest_free value < 10}
+	# 		}
+	# 		has_modifier = cg_plus_artist_sponsor  
+	# 	}
+	# 	hidden_effect = {
+	# 		event_target:cg_plus_colorful_artisan_country = {
+	# 			change_variable = {
+	# 				which = reqest_free
+	# 				value = 1
+	# 			}
+	# 		}
+	# 	}
+	# }
 
-	option = {
-		name = cg_plus_enclaves_art.1000.a
+	# option = {
+	# 	name = cg_plus_enclaves_art.1000.a
 
-			response_text = cg_plus_enclaves_art.1000.a.reply.b1
-			response_text = cg_plus_enclaves_art.1000.a.reply.b2
-			response_text = cg_plus_enclaves_art.1000.a.reply.d1
-			response_text = cg_plus_enclaves_art.1000.a.reply.d2
+	# 	response_text = cg_plus_enclaves_art.1000.random.text
 
-		is_dialog_only = yes
-		trigger = {
-			event_target:cg_plus_colorful_artisan_country = {
-				check_variable = { which =reqest_free value >= 10 }
-			}
-		}
-		hidden_effect = {
-			event_target:cg_plus_colorful_artisan_country = {
-				change_variable = { which = reqest_free value = 1 }
-			}
-		}
-	}
+	# 	is_dialog_only = yes
+	# 	trigger = {
+	# 		event_target:cg_plus_colorful_artisan_country = {
+	# 			check_variable = { which =reqest_free value >= 10 }
+	# 		}
+	# 	}
+	# 	hidden_effect = {
+	# 		event_target:cg_plus_colorful_artisan_country = {
+	# 			change_variable = { which = reqest_free value = 1 }
+	# 		}
+	# 	}
+	# }
 
 
 
@@ -318,7 +315,7 @@ country_event = {
 				event_target:cg_plus_colorful_artisan_country = {
 	 				trust = {
 	 					who = root
-	 					value >= 120
+	 					value >= 90
 	 				}
 	 			}
 			}
@@ -454,7 +451,7 @@ country_event = {
 		}
 		custom_tooltip = opinion20
 		hidden_effect = {
-			event_target:artist_enclave_country = {
+			event_target:cg_plus_colorful_artisan_country = {
 				add_trust = {
 					who = root
 					amount = 20
@@ -490,7 +487,7 @@ country_event = {
 		}
 		custom_tooltip = opinion20
 		hidden_effect = {
-			event_target:artist_enclave_country = {
+			event_target:cg_plus_colorful_artisan_country = {
 				add_trust = {
 					who = root
 					amount = 20
@@ -526,7 +523,7 @@ country_event = {
 		}
 		custom_tooltip = opinion20
 		hidden_effect = {
-			event_target:artist_enclave_country = {
+			event_target:cg_plus_colorful_artisan_country = {
 				add_trust = {
 					who = root
 					amount = 20
@@ -562,7 +559,7 @@ country_event = {
 		}
 		custom_tooltip = opinion20
 		hidden_effect = {
-			event_target:artist_enclave_country = {
+			event_target:cg_plus_colorful_artisan_country = {
 				add_trust = {
 					who = root
 					amount = 20
@@ -593,7 +590,7 @@ country_event = {
 		}
 		custom_tooltip = opinion20
 		hidden_effect = {
-			event_target:artist_enclave_country = {
+			event_target:cg_plus_colorful_artisan_country = {
 				add_trust = {
 					who = root
 					amount = 20

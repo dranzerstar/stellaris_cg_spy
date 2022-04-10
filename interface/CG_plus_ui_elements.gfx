@@ -155,4 +155,32 @@ spriteType = {
 	}
 	}
 
+
+
+	spriteType = {
+		name = "GFX_auction_window"
+		texturefile = "gfx/interface/auction_picture.dds"
+
+	}
+	portraitType = {
+		name = "GFX_cg_index_menu_portrait_gamesetup_mask"
+		masking_texture = "gfx/interface/auction_picture_mask.dds"
+		effectFile = "gfx/FX/buttonstate_rendertarget.lua"
+		type = room
+		character = yes
+	}
+	portraitType = {
+		name = "GFX_cg_index_menu_portrait_gamesetup_mask_blue"
+		masking_texture = "gfx/interface/auction_picture_mask_blue.dds"
+		effectFile = "gfx/FX/buttonstate_rendertarget.lua"
+		type = room
+		character = yes
+	}
+
+
+
+
+
+
+
 }

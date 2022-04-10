@@ -1,0 +1,452 @@
+guiTypes = {
+
+
+	containerWindowType = {
+		name = "index_button_close"
+		position = { x=0 y=-10 }
+		size = { width = 200 height = 100 }
+		moveable = no
+		
+		buttonType = {
+			name = "option_button"
+			quadTextureSprite = "GFX_close"
+			position = { x=1148 y=10 }
+			font = "cg_16b"
+			
+			text = "OPTION_TEXT"
+			#clicksound = "imas_buttons_sounds"
+		}
+	
+		OverlappingElementsBoxType = {
+			name = "trigger_icons"
+			position = { x = 0  y = 10 }
+			size = { x=65 y= 28 }
+		}
+	}
+
+
+
+
+
+	containerWindowType = {
+		name = "cg_plus_acution"
+		#orientation = UPPER_LEFT
+		orientation = center
+		origo = center
+		moveable = yes
+		
+		size = { width = 1200 height = 600 }
+		#position = { x= 500 y = 220 } #GFX_tiles_frame #GFX_tile_large_bg
+		background = { name = "background" quadTextureSprite ="GFX_tile_large_bg"  }
+
+		iconType = { name = "empire_header_line" quadTextureSprite = "GFX_line_long" position = { x = 0 y = 33 } alwaysTransparent = yes } #TITLE
+		#iconType = { name = "background" quadTextureSprite ="GFX_imas_combined_bg" position = { x = 150 y = 200 } alwaysTransparent = yes}
+		
+
+
+
+
+
+
+
+
+
+
+		# Custom header
+
+#--------------------------------------------------------------------------------
+#	  auction info ALL		
+		containerWindowType = {
+			name = "cg_plus_acution_info_global"
+			position = { x = 770 y = 50 }
+			size = { width=400 height=200 }
+			moveable = no
+			background = { # GFX_tiles_frame  GFX_transparent_black_backdrop
+				name = bg quadTextureSprite ="GFX_tiles_frame" 
+			}
+			instantTextBoxType = {
+				name = "bid_price_label"
+				font = "malgun_goth_24"
+				format = left
+				position = { x = 20 y = 20 }
+				text= "BID_PRICE"
+			}
+			instantTextBoxType = {
+				name = "bid_owner_label"
+				font = "malgun_goth_24"
+				format = left
+				position = { x = 20 y = 50 }
+				text= "BID_OWNER"
+			}
+			instantTextBoxType = {
+				name = "bid_time_left_label"
+				font = "malgun_goth_24"
+				format = left
+				position = { x = 20 y = 80 }
+				text= "BID_TIME_LEFT"
+			}
+			effectButtonType = {
+				name = "bid_price_value"
+				font="malgun_goth_24"
+				Orientation = "UPPER_LEFT"
+				position = { x = 160 y = 20 }
+				effect = "cg_plus_no_effect"
+				text = "bid_price_sr_text"
+				size = { x = 230 y = 26 }
+				format = "right"
+				alwaysTransparent = yes
+			}
+			effectButtonType = {
+				name = "bid_owner_value"
+				font="malgun_goth_24"
+				Orientation = "UPPER_LEFT"
+				position = { x = 160 y = 50 }
+				effect = "cg_plus_no_effect"
+				text = "bid_owner_sr_text"
+				size = { x = 230 y = 26 }
+				format = "right"
+				alwaysTransparent = yes
+			}
+			effectButtonType = {
+				name = "bid_time_left_value"
+				font="malgun_goth_24"
+				Orientation = "UPPER_LEFT"
+				position = { x = 160 y = 80 }
+				effect = "cg_plus_no_effect"
+				text = "bid_time_left_sr_text"
+				size = { x = 230 y = 26 }
+				format = "right"
+				#alwaysTransparent = yes
+			}
+			iconType = { name = "b1_frame" 
+			quadTextureSprite = "GFX_tiles_frame" 
+			position = { x = 1 y = 1 } 
+			size={ width=400 height=200 }
+			alwaysTransparent = yes }
+			
+
+		}
+
+#     auction info self
+
+containerWindowType = {
+	name = "cg_plus_acution_info_local"
+	position = { x = 770 y = 265 }
+	size = { width=400 height=300 }
+	moveable = no
+	background = {
+		name = bg quadTextureSprite ="GFX_tiles_frame" 
+	}
+	instantTextBoxType = {
+		name = "new_bid_price_label"
+		Font = "malgun_goth_24"
+		size = {
+			x = 100
+			y = 100
+		}
+		format = left
+		position = { x = 20 y = 20 }
+		text= "NEW_BID_PRICE"
+	}
+
+	effectButtonType = {
+		name = "new_bid_price_value"
+		buttonFont="malgun_goth_24"
+		quadTextureSprite="GFX_glow_tile_cyan_no_padding"
+		size = {
+			x = 230
+			y = 26
+		}
+		Orientation = "UPPER_LEFT"
+		position = { x = 160 y = 20 }
+		effect = "cg_plus_no_effect"
+		text = "new_bid_price_sr_text"
+	}
+
+	effectButtonType = {
+		name = "add10k"
+		quadTextureSprite="GFX_button_animated_110_34"
+		buttonfont = "malgun_goth_24"
+		Orientation = "UPPER_LEFT"
+		position = { x = 260 y = 60 }
+		effect = "add_bid_10K"
+		text = "button_bid_10K"
+		#text = "NEW_BID_PRICE"
+	}
+	effectButtonType = {
+		name = "add1M"
+		quadTextureSprite="GFX_button_animated_110_34"
+		Orientation = "UPPER_LEFT"
+		buttonfont = "malgun_goth_24"
+		position = { x = 260 y = 100 }
+		effect = "add_bid_1M"
+		text = "button_bid_1M"
+	}
+	effectButtonType = {
+		name = "add100M"
+		buttonfont = "malgun_goth_24"
+		quadTextureSprite="GFX_button_animated_110_34"
+		Orientation = "UPPER_LEFT"
+		position = { x = 260 y = 140 }
+		effect = "add_bid_100M"
+		text = "button_bid_100M"
+	}
+	effectButtonType = {
+		name = "reset_bid"
+		buttonfont = "malgun_goth_24"
+		quadTextureSprite="GFX_button_animated_110_34"
+		Orientation = "UPPER_LEFT"
+		position = { x = 140 y = 140 }
+		effect = "reset_bid_g"
+		text = "reset_bid"
+	}
+
+
+	effectButtonType = {
+		name = "confirm_bid"
+		quadTextureSprite="GFX_ship_design_entry_button"
+		Orientation = "UPPER_LEFT"
+
+		font="malgun_goth_24"
+		position = { x = 100 y = 200 }
+		effect = "confirm_bid"
+		text = "confirm_bid"
+	}
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+#--------------------------------------------------------------------------------
+		#TITLE 
+
+
+		# Description Section
+		iconType={
+			name = "alien_message_bg"
+			position = { x = -200 y = 390 }
+			#maxWidth = 400
+			#maxHeight = 500
+			#format = left
+			quadTextureSprite= "GFX_cg_index_menu_view_text_bg"
+		}
+		instantTextBoxType = {
+			name = "alien_message"
+			font = "malgun_goth_24"
+			#font = "malgun_goth_24"
+			text_color_code = "S"
+			position = { x = -230 y = 420 }
+			maxWidth = 400
+			maxHeight = 800
+			format = left
+			scrollbartype = "standardtext_slider"
+		}
+
+		iconType={
+			name = "title_bg"
+			position = { x = -200 y = 18 }
+			#maxWidth = 400
+			#maxHeight = 500
+			#format = left
+			quadTextureSprite= "GFX_cg_index_menu_title_bg"
+			alwaysTransparent=yes
+		}
+
+		# buttonType = {
+		# 	name = "close"
+		# 	quadTextureSprite = "GFX_close"
+		# 	position = { x= 745 y = 15 }
+			
+		# 	shortcut = "ESCAPE"
+		# 	clicksound = "back_click"
+		# }
+
+
+
+
+
+#-----------------------------------------------------------------
+
+
+
+				### ALL OF THIS IS HIDDEN OR DISPLACED ! ###
+				### EVENT DIPLO ###
+	
+		containerWindowType = {
+			name = "EVENT_DIPLO"
+			position = { x = 0 y = 0 }
+			#size = { width=563 height=220 }
+			moveable = no
+
+			instantTextBoxType={
+			 name = "action_title"
+			 font = "large_title_font"
+			 position = { x =20 y = 5 }
+			 maxWidth = 500
+			 #text_color_code = "W"
+			 alwaysTransparent = yes
+			}
+			instantTextBoxType={
+			 name = "action_desc"
+			 font = "malgun_goth_24"
+			 position = { x =-111110 y = 0 }
+			 maxWidth = 500
+			 maxHeight = 180
+			 Orientation = "UPPER_LEFT"
+			 format = center
+			 alwaysTransparent = yes
+			 text_color_code = "H"
+			}
+				
+			listboxType = {
+				name = "option_list"
+				position = { x = 10 y =  0}
+				
+				size = { x = 200 y = 600 }
+				scrollbartype = "standardlistbox_slider"
+				spacing = 100
+				borderSize = { x = 0 y = 0 }
+				Orientation = "CENTERED_UP"
+			}
+		}
+				instantTextBoxType = {
+					name = "irm_some_header"
+					font = "malgun_goth_24"
+					text = "ui_faction_header" 	# header text
+					position = { x = -20000 y = 5 }
+					maxWidth = 543
+					maxHeight = 22
+					fixedSize = yes
+					alwaysTransparent = yes
+				}
+		
+				buttonType = { name = "focus_button" position = { x = -1180 y = -1112 } spriteType = "GFX_fleetview_focus" } # hidden
+				instantTextBoxType = { name = "heading" font = "malgun_goth_24" position = { x = -1120 y = -115 } } # hidden
+				buttonType = { name = "alien_message_background" size = { x = 0 y = 0 } position = { x = -1110 y = -11430 } spriteType = "GFX_tiles_dark_area_cut_8" } # hidden
+				buttonType = { name = "confirm_button" quadTextureSprite = "GFX_standard_button_142_34_button" } # hidden
+				containerWindowType = {
+					name = "portrait_background"
+					position = { x = -1117 y = -1145 }
+					size = { width = 0 height = 0 } 	# hide portrait window
+					iconType = { name = "event_picture" spriteType = "GFX_diplomacy_portrait_frame" position = { x = -20000 y =200 }} # hidden
+					iconType = { name = "portrait" spriteType = "GFX_portrait_character" position = { x = -20000 y =200 }} # hidden
+				}
+
+
+			#portrait
+
+				
+
+				containerWindowType = {
+					name = "portrait"
+					position = { x = 150 y = 140 }
+					size = { width = 200 height = 200 } # hide portrait window
+					maxWidth = 200
+					#iconType = { name = "winB" spriteType = "GFX_cg_index_menu_view_window_bg" position = { x = 0 y =0 } }
+					iconType = { name = "portrait" alwaysTransparent = yes spriteType = "GFX_cg_index_menu_portrait_gamesetup_mask_blue" position = { x = -210 y =-50 }} # hidden
+					iconType = { name = "black_frame" spriteType = "GFX_diplomacy_portrait_shadow_frame" position = { x = -20000 y =200 } } # hidden
+					iconType = { name = "stripes_1" spriteType = "GFX_diplomacy_stripes_2" position = { x = -20000 y =200 } } # hidden
+					iconType = { name = "city_frame" spriteType = "GFX_diplomacy_portrait_frame" position = { x = -20000 y =200 } } # hidden
+					#iconType = { name = "winF" spriteType = "GFX_cg_index_menu_view_window_frame" position = { x = 0 y =0 } }
+					#iconType = { name = "winL" spriteType = "GFX_cg_index_menu_view_window_lines" position = { x = 0 y =0 } }
+				}
+				
+				iconType = { name = "stripes2" spriteType = "GFX_diplomacy_stripes_2" position = { x = -200 y = 70 } } 
+				
+				iconType = { name = "auction_pictre_ol" spriteType = "GFX_auction_window" position = { x = 10 y = 50 } } 
+					
+				containerWindowType = {
+					name = "cg_plus_acution_product_info"
+					position = { x = 10 y = 480 }
+					size = { width=320 height=60 }
+					moveable = no
+					background = {
+						name = bg quadTextureSprite ="GFX_transparent_black_backdrop" 
+					}
+					instantTextboxType = {
+						name = "product_name_label"
+						position = { x = 5 y = 5 }
+						font = "malgun_goth_24"
+						format = left
+						#text= "拍卖品："
+						#
+						text= "product_name_label"
+					}
+					instantTextboxType = {
+						name = "product_src_label"
+						 position = { x = 5 y = 25 }
+						font = "malgun_goth_24"
+						format = left
+						text= "product_src_label"
+					}
+					effectButtonType = {
+						name = "product_name"
+						buttonfont = "malgun_goth_24"
+						#quadTextureSprite="GFX_glow_tile_cyan_no_padding"
+						format = left
+						size = {
+							x = 200
+							y = 26
+						}
+						position = { x = 110 y = 5 }
+						effect = "cg_plus_no_effect"
+						text= "AUCTION_NAME"
+					}
+					effectButtonType = {
+						name = "product_country"
+						buttonfont = "malgun_goth_24"
+						#quadTextureSprite="GFX_glow_tile_cyan_no_padding"
+						size = {
+							x = 200
+							y = 26
+						}
+						format = left
+						position = { x = 110 y = 25 }
+						effect = "cg_plus_no_effect"
+						text= "AUCTION_COUNTRY"
+					}
+				}
+
+
+	
+
+
+				iconType = { name = "empire_info_bg" spriteType = "GFX_diplomacy_dark_fade_bg" } # hidden
+				instantTextBoxType={ name = "empire_name" font = "malgun_goth_24" } # hidden
+				instantTextBoxType={ name = "empire_government_type" font = "cg_16b" } # hidden
+				instantTextBoxType={ name = "empire_personality_type" font = "cg_16b" } # hidden
+				OverlappingElementsBoxType = { name = "empire_ethics_icons" position = { x = -1145 y = -11138 } } # hidden
+				iconType = { name = "empire_flag" spriteType = "GFX_empire_flag_128" position = { x = -1125 y = -11235 } } # hidden
+				containerWindowType = {
+					name = "leader_details"
+					position = { x = -1125 y = -1175 }
+					containerWindowType = { name = "empire_traits_box" } # hidden
+					instantTextBoxType = { name = "empire_traits_label" font = "cg_16b" } # hidden
+					overlappingElementsBoxType = { name = "leader_traits" } # hidden
+					instantTextBoxType = { name = "leader_name" font = "cg_16b" } # hidden
+					instantTextBoxType = { name = "leader_species" font = "cg_16b" } # hidden
+				}
+				containerWindowType = {
+					name = "opinion_window"
+					position = { x = -1127 y = -11110 }
+					size = { width = 94 height = 30 }
+					iconType = { name = "their_opinion_icon" spriteType = "GFX_diplomacy_opinion" } # hidden
+					instantTextBoxType = { name = "their_opinion" font = "cg_16b" }
+				}
+
+
+	}
+}
+
+
+

@@ -286,12 +286,17 @@ CG_school_uniform = {
 		}
 		valid = {
 			OR={
+			OR={
 			
 			is_active_resolution = "resolution_uniform_bunny"
 			is_materialist  = yes
 			
 			}
 			has_technology = tech_beauty_theory 
+			hidden_trigger={
+				has_country_flag= cg_plus_imf_zc_use_bunny
+			}
+			}
 		}
 	
 		modifier = {

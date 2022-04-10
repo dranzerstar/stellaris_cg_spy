@@ -37,4 +37,64 @@ cg_slave_price = {
 }
 
 
+#cg_imf_num
+
+cg_imf_resource_credit_mod={
+	base = 0
+	modifier = {
+		add = trigger:income
+	}
+	modifier = {
+		income > 100
+		mult = 1.5
+	}
+	
+	modifier = {
+		income > 500
+		mult = 1.5
+	}
+
+	modifier = {
+		income > 1000
+		mult = 1.5
+	}
+	modifier = {
+		income > 5000
+		mult = 2.5
+	}
+	floor =yes
+}
+
+cg_imf_pop_credit_mod = {
+	base = 50000
+	modifier = {
+		add = 20000
+		num_pops > 50
+	}
+	modifier = {
+		add = 20000
+		num_pops > 100
+	}
+	modifier = {
+		mult= 1.1
+		num_pops > 100
+	}
+	modifier = {
+		add = 40000
+		num_pops > 150
+	}	
+	modifier = {
+		mult= 1.2
+		num_pops > 150
+	}	
+	complex_trigger_modifier ={
+		trigger = num_pops
+		trigger_scope = Root
+		parameters = { limit = { num_pops > 200 } }
+		mode = add
+		mult = 500
+
+	}
+	floor = yes
+}
 

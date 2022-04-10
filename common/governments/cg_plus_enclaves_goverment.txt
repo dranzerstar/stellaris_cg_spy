@@ -28,13 +28,15 @@ gov_cg_plus_enclave_colorful_artists = {
 	}
 }
 
-gov_cg_plus_enclave_av_directors = {
-	ruler_title = RT_director
+
+
+gov_cg_IMF = {
+	ruler_title = RT_PRESIDENT
 
 	should_force_rename = yes
 
 	possible = {
-		has_valid_civic = civic_cg_av_directors
+		has_valid_civic = civic_cg_IMF
 	}
 
 	weight = {
@@ -55,6 +57,9 @@ gov_cg_plus_slave_traders = {
 		base = 100000
 	}
 }
+
+
+
 gov_cg_plus_holy_artifects = {
 	ruler_title = RT_priest
 

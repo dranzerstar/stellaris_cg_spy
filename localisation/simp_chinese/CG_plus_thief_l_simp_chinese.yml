@@ -143,7 +143,9 @@
  pocket_auction_museaum_adtive_desc:0 "傳送門 安全，高效，快速，點擊後即達，只是要花些許能源幣。"
  CG_plus_thief_event.003.name:0 "下个盗摄目标就是。。"
  CG_plus_thief_event.003.desc:0 "隐居子已經找到下一個獵物了，目標就是 [pantsteal_target.GetName] ！！ "
+ CG_plus_thief_event.003.desc.n:0 "现在好像没有目标了。。 "
  CG_plus_thief_event.003.o:0 "事不宜遲，去當地架設間諜網！"
+ CG_plus_thief_event.003.o.n:0 "寄"
 
 #auction screen ui elements
  enlarge:0 "点击放大"

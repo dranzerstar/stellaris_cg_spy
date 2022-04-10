@@ -10,9 +10,21 @@ on_yearly_pulse_country={
 
 	events = {
 		cg_plus_underidol.5000
+		cg_plus_enclave_slaver.8600
 	}
 
 }
+
+on_monthly_pulse_country ={
+	events = {
+
+		cg_plus_enclave_imf.1500
+	}
+
+}
+
+
+
 on_five_year_pulse_country  = {
 	events = {
 		CG_plus_policy_uniform.1000 #学园派送函数
@@ -34,12 +46,19 @@ on_decade_pulse_country  = {
 	
 }
 
+on_game_start_country   = {
+	events = {
+		CG_plus_enclaves.1010
+	}
+}
+
 
 on_custom_diplomacy = {
 	events = {
 		cg_plus_enclaves_art.0000
 		cg_plus_underidol.0000
 		cg_plus_enclave_slaver.0000
+		cg_plus_enclave_imf.0000
 	}
 }
 #This = destroyed country
@@ -57,6 +76,7 @@ on_post_communications_established = {
 		cg_plus_enclaves_art.1999
 		cg_plus_underidol.1999
 		cg_plus_enclave_slaver.1999
+		cg_plus_enclave_imf.1999
 	}
 }
 
@@ -80,3 +100,42 @@ on_fleet_destroyed_victim={
 	}
 
 }
+
+on_first_contact = {
+	events = {
+		CG_plus_enclaves.1000
+	}
+}
+
+
+
+
+
+# Triggered when a first contact process is finished
+# This = first contact scope
+# From = other country
+on_first_contact_finished = {
+	events = {
+		#tutorial.2004 #First Contact Established (setup)
+		#
+		#CG_plus_enclaves.1
+	}
+}
+
+
+#these three are fired from script, basically for modders who want to change how first contact works or add some extra flavour stories in without overwriting things
+# THIS = first_contact
+on_first_contact_started = {
+	events = {
+		#CG_plus_enclaves.1
+	}
+}
+
+#use for custom country types that need first contact paths
+# THIS = first_contact
+on_first_contact_stage_1_no_path = {
+	events = {
+		#CG_plus_enclaves.1
+	}
+}
+

@@ -31,18 +31,33 @@ event={
 		      limit={  	is_anime_species=yes
 						NOT = { has_country_flag = cg_plus_thief_target_empty }
 							is_country_type=default
+						is_ai=YES
 					}
 			set_country_flag = cg_plus_thief_target
-
 		}
-
 	}
-
-
 }
             
 
+country_event={
+	id=CG_plus_thief_event.004
+	is_triggered_only = yes
 
+	hide_window=yes
+
+	immediate= {
+		#set_variable={ which= total_panties value =  1 }
+		set_country_flag = collected_pantyshoot_01
+		every_playable_country={
+		      limit={  	is_anime_species=yes
+						NOT = { has_country_flag = cg_plus_thief_target_empty }
+							is_country_type=default
+						is_ai=NO
+					}
+			set_country_flag = cg_plus_thief_target
+		}
+	}
+}
 
 country_event={
 	id=CG_plus_thief_event.002
@@ -55,6 +70,9 @@ country_event={
 	hide_window=yes
 
 	immediate= {
+		
+
+
 		random_country={
 		      limit={  	
 							has_country_flag = cg_plus_thief_target
@@ -67,6 +85,12 @@ country_event={
 	}
 
 	after = {
+
+
+
+
+
+
 		country_event = {
 			id = CG_plus_thief_event.003 days = 30
 		}
@@ -78,15 +102,27 @@ country_event={
 country_event={
 	id=CG_plus_thief_event.003
 	title=CG_plus_thief_event.003.name
-	#picture=  GFX_ 
-	desc=  CG_plus_thief_event.003.desc
+	picture=  GFX_evt_thief_universe
+	desc = { trigger= { exists=event_target:pantsteal_target }  text= CG_plus_thief_event.003.desc}
+	desc = { trigger= { NOT={exists=event_target:pantsteal_target} }   text= CG_plus_thief_event.003.desc }
+	#desc=  CG_plus_thief_event.003.desc
 
 	is_triggered_only = yes
 
 	hide_window=no
 
 	option = {
+		trigger = {
+			exists=event_target:pantsteal_target
+		}
 		name =  CG_plus_thief_event.003.o
+	}
+
+	option = {
+		trigger = {
+			NOT={ exists=event_target:pantsteal_target }
+		}
+		name =  CG_plus_thief_event.003.o.n
 	}
 
 }

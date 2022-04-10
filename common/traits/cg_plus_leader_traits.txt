@@ -79,15 +79,15 @@ leader_trait_sailor_event = {
 # t1 trained trait
 leader_trait_captured={
 
-	cost = 1
+	cost = 0
 	#trait_tentacle_train
 	self_modifier = {
 		
 	}
 	initial = no 
 	randomized = no
-	icon = "gfx/interface/icons/traits/leader_traits/trait_live_with_master.dds"
-	custom_tooltip = leader_trait_captured_ct
+	icon = "gfx/interface/icons/traits/leader_traits/trait_forever_naughty.dds"
+
 	leader_class = { admiral scientist general governor }
 	leader_trait =  all 
 
@@ -96,15 +96,15 @@ leader_trait_captured={
 
 leader_trait_naked={
 
-	cost = 1
+	cost = 0
 	#trait_tentacle_train
 	self_modifier = {
 		leader_skill_levels = 2
 	}
 	initial = no 
 	randomized = no
-	icon = "gfx/interface/icons/traits/leader_traits/trait_live_with_master.dds"
-	custom_tooltip = leader_trait_naked_ct
+	icon = "gfx/interface/icons/traits/slave_trader/trait_clever_beauty.dds"
+
 	leader_class = { admiral scientist general governor }
 	leader_trait =  all 
 
@@ -113,15 +113,15 @@ leader_trait_naked={
 
 leader_trait_bondage={
 
-	cost = 1
+	cost = 0
 	#trait_tentacle_train
 	self_modifier = {
 		species_leader_exp_gain = -0.25
 	}
 	initial = no 
 	randomized = no
-	icon = "gfx/interface/icons/traits/leader_traits/trait_live_with_master.dds"
-	custom_tooltip = leader_trait_collared_ct
+	icon = "gfx/interface/icons/traits/slave_trader/trait_sexual_deprivation.dds"
+	
 	leader_class = { admiral scientist general governor }
 	leader_trait =  all 
 
@@ -129,15 +129,16 @@ leader_trait_bondage={
 
 leader_trait_obidient={
 
-	cost = 1
+	cost = 0
 	#trait_tentacle_train
 	self_modifier = {
 		leaders_upkeep_mult = -0.9
+		species_leader_exp_gain = 0.5
 	}
 	initial = no 
 	randomized = no
-	icon = "gfx/interface/icons/traits/leader_traits/trait_live_with_master.dds"
-	custom_tooltip = leader_trait_obidient_ct
+	icon = "gfx/interface/icons/traits/slave_trader/leader_trait_obidient.dds"
+	
 	leader_class = { admiral scientist general governor }
 	leader_trait =  all 
 
@@ -145,18 +146,17 @@ leader_trait_obidient={
 
 leader_trait_drug_enhance={
 
-	cost = 1
+	cost = 0
 	#trait_tentacle_train
 	self_modifier = {
 		leader_age=-20
 		species_leader_exp_gain = 2.0
 		leader_skill_levels =5
-
 	}
 	initial = no 
 	randomized = no
-	icon = "gfx/interface/icons/traits/leader_traits/trait_live_with_master.dds"
-	custom_tooltip = leader_trait_obidient_ct
+	icon = "gfx/interface/icons/traits/slave_trader/trait_adrenaline.dds"
+	
 	leader_class = { admiral scientist general governor }
 	leader_trait =  all 
 
@@ -164,12 +164,91 @@ leader_trait_drug_enhance={
 
 
 
+#############################################
+leader_trait_bride={
+	cost = 0
+	initial = no 
+	randomized = no
+	icon = "gfx/interface/icons/traits/slave_trader/leader_trait_bride.dds"
+	
+	leader_class = { admiral scientist general governor }
+	leader_trait =  all 
+}
+leader_trait_rbq={
+	cost = 0
+	initial = no 
+	randomized = no
+	icon = "gfx/interface/icons/traits/slave_trader/leader_trait_rbq.dds"
+	
+	leader_class = { admiral scientist general governor }
+	leader_trait =  all 
+}
+leader_trait_pet={
+	cost = 0
+	initial = no 
+	randomized = no
+	icon = "gfx/interface/icons/traits/slave_trader/leader_trait_pet.dds"
+	
+	leader_class = { admiral scientist general governor }
+	leader_trait =  all 
+}
+
+leader_trait_living_clothes={
+	cost = 0
+	initial = no 
+	randomized = no
+	icon = "gfx/interface/icons/traits/slave_trader/leader_trait_living_clothes.dds"
+	
+	leader_class = { admiral scientist general governor }
+	leader_trait =  all 
+}
+leader_trait_sense3000={
+	cost = 0
+	initial = no 
+	randomized = no
+	icon = "gfx/interface/icons/traits/slave_trader/leader_trait_sense3000.dds"
+	
+	leader_class = { admiral scientist general governor }
+	leader_trait =  all 
+}
+
+leader_trait_ero_cybrog={
+	cost = 0
+	initial = no 
+	randomized = no
+	icon = "gfx/interface/icons/traits/slave_trader/leader_trait_ero_cybrog.dds"
+	
+	leader_class = { admiral scientist general governor }
+	leader_trait =  all 
+}
+
+
+leader_trait_dr_corrupt={
+	cost = 0
+	initial = no 
+	randomized = no
+	icon = "gfx/interface/icons/traits/slave_trader/leader_trait_dr_corrupt.dds"
+	
+	leader_class = { admiral scientist general governor }
+	leader_trait =  all 
+}
+
+
+
+
+
+
+
+
+
+
+##############################################
 # t2 trained trait
 #admiral
 leader_trait_brainwash_admiral={
-	cost = 1
-	modification = no #TODO
-	icon = "gfx/interface/icons/traits/leader_traits_admiral/SOP_swarm_assault_2.dds"
+	cost = 0
+	
+	icon = "gfx/interface/icons/traits/slave_trader/trait_forever_naughty.dds"
 	modifier = {
 		ship_fire_rate_mult = 0.20
 		ship_speed_mult = 0.50
@@ -183,9 +262,9 @@ leader_trait_brainwash_admiral={
 }
 
 leader_trait_slave_admiral = {
-	cost = 1
-	modification = no
-	icon = "gfx/interface/icons/traits/leader_traits_admiral/SOP_poweroverwhelming_ssr.dds"
+	cost = 0
+	
+	icon = "gfx/interface/icons/traits/slave_trader/trait_forever_naughty.dds"
 	modifier = {
 		ships_upkeep_mult = -0.40
 		ship_hull_regen_add_perc = 0.6
@@ -200,9 +279,9 @@ leader_trait_slave_admiral = {
 
 #general
 leader_trait_brainwash_general={
-	cost = 1
-	modification = no #TODO
-	icon = "gfx/interface/icons/traits/leader_traits_admiral/SOP_swarm_assault_2.dds"
+	cost = 0
+	
+	icon = "gfx/interface/icons/traits/slave_trader/trait_forever_naughty.dds"
 	modifier = {
 		army_morale = 0.40
 		army_damage_mult = 0.40
@@ -215,9 +294,9 @@ leader_trait_brainwash_general={
 }
 
 leader_trait_slave_general = {
-	cost = 1
-	modification = no
-	icon = "gfx/interface/icons/traits/leader_traits_admiral/SOP_poweroverwhelming_ssr.dds"
+	cost = 0
+	
+	icon = "gfx/interface/icons/traits/slave_trader/trait_forever_naughty.dds"
 	modifier = {
 		armies_upkeep_mult = -0.40
 		army_experience_gain_mult = 2.00
@@ -232,9 +311,9 @@ leader_trait_slave_general = {
 #scientist
 
 leader_trait_brainwash_explorer={
-	cost = 1
-	modification = no #TODO
-	icon = "gfx/interface/icons/traits/leader_traits_admiral/SOP_swarm_assault_2.dds"
+	cost = 0
+	
+	icon = "gfx/interface/icons/traits/slave_trader/trait_forever_naughty.dds"
 	modifier = {
 		ship_sensor_range_add = 1
 		ship_hyperlane_range_add = 1
@@ -248,9 +327,9 @@ leader_trait_brainwash_explorer={
 }
 
 leader_trait_slave_researcher={
-	cost = 1
-	modification = no #TODO
-	icon = "gfx/interface/icons/traits/leader_traits_admiral/SOP_swarm_assault_2.dds"
+	cost = 0
+	
+	icon = "gfx/interface/icons/traits/slave_trader/trait_forever_naughty.dds"
 	modifier = {
 		all_technology_research_speed = 0.5
 	}
@@ -265,9 +344,9 @@ leader_trait_slave_researcher={
 #govener
 
 leader_trait_public_governer={
-	cost = 1
-	modification = no #TODO
-	icon = "gfx/interface/icons/traits/leader_traits_admiral/SOP_swarm_assault_2.dds"
+	cost = 0
+	
+	icon = "gfx/interface/icons/traits/slave_trader/trait_forever_naughty.dds"
 	modifier = {
 		planet_crime_add = -50
 		planet_jobs_excellent_slave_produces_mult = 0.3
@@ -283,9 +362,9 @@ leader_trait_public_governer={
 }
 
 leader_trait_toy_governer={
-	cost = 1
-	modification = no #TODO
-	icon = "gfx/interface/icons/traits/leader_traits_admiral/SOP_swarm_assault_2.dds"
+	cost = 0
+	
+	icon = "gfx/interface/icons/traits/slave_trader/trait_forever_naughty.dds"
 	modifier = {
 		
 		planet_jobs_consumer_goods_produces_mult = 0.15

@@ -11,6 +11,12 @@ RT_priest:0 "管理员"
 RT_warden:0 "狱长"
 RT_master:0 "主人"
 
+
+ NAME_IMF_spec: "宇宙大亨"
+ NAME_cg_plus_IMF_HOME: "银行宇宙"
+ NAME_cg_plus_slaver_starbase: "货币大楼"
+ NAME_slavetrader_leader: "行政总裁"
+
  NAME_cgplus_artisans_spec: "大触"
  NAME_cgplus_artisans_HOME: "深空色图库"
  NAME_cgplus_artisans_leader: "大触老师"

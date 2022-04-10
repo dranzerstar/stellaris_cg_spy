@@ -57,9 +57,7 @@ country_event = {
 	}
 
 	trigger = {
-		from = {
-			has_country_flag = 283p_under_home_country
-		}
+
 
 	}
 
@@ -112,7 +110,14 @@ country_event = {
 	}
 
 	immediate = {
+		event_target:283p_under_home_country = {
 
+		}
+
+		set_variable = {
+			which = underidolparty
+			value = 0
+		}
 	}
 
 	
@@ -196,6 +201,7 @@ country_event = {
 		}
 	}
 	option = {
+		allow = { NOT={has_modifier= mod_283p_under_member}  }
 		name = cg_plus_underidol.0001.b
 		hidden_effect = {
 			country_event = {
@@ -211,15 +217,13 @@ country_event = {
 		allow = {
 			
 		
-		custom_tooltip = {
-			fail_text = cg_plus_underidol.0001.c.opinion
-			event_target:283p_under_home_country = {
-				 trust = {
-					 who = root
-					 value >= 150
-				 }
-			 }
-		}
+			custom_tooltip = {
+				fail_text = cg_plus_underidol.0001.c.opinion
+				check_variable = {
+					which = underidolparty
+					value > 7
+				}
+			}
 		}
 		hidden_effect = {
 			country_event = {
@@ -395,6 +399,13 @@ country_event = {
 # 51xx individual event
 
 country_event = {
+	id = cg_plus_underidol.4999
+
+	is_triggered_only = yes
+}
+
+
+country_event = {
 	id = cg_plus_underidol.5000
 	title = cg_plus_underidol.5000.name
 	desc = cg_plus_underidol.5000.desc
@@ -424,6 +435,10 @@ country_event = {
 					who = root
 					amount = 20
 				}
+			}
+			change_variable = {
+				which = underidolparty
+				value = 1
 			}
 
 			set_timed_country_flag = {

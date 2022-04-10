@@ -54,7 +54,35 @@ guiTypes = {
 			position = { x = @portrait_x y = @portrait_y }
 			effect = "cg_plus_uniform_evt_pic_1200"
 		}
-	
+
+		effectButtonType = {
+			name = "cg_plus_evt_pic_7120"
+			quadTextureSprite = "GFX_evt_L_slaver_7120"
+			Orientation = "UPPER_LEFT"
+			position = { x = @portrait_x y = @portrait_y }
+			effect = "cg_plus_enclave_evt_pic_7120"
+		}
+		effectButtonType = {
+			name = "cg_plus_evt_pic_7130"
+			quadTextureSprite = "GFX_evt_L_slaver_7130"
+			Orientation = "UPPER_LEFT"
+			position = { x = @portrait_x y = @portrait_y }
+			effect = "cg_plus_enclave_evt_pic_7130"
+		}
+		effectButtonType = {
+			name = "cg_plus_evt_pic_7220"
+			quadTextureSprite = "GFX_evt_L_slaver_7220"
+			Orientation = "UPPER_LEFT"
+			position = { x = @portrait_x y = @portrait_y }
+			effect = "cg_plus_enclave_evt_pic_7220"
+		}	
+		effectButtonType = {
+			name = "cg_plus_evt_pic_9230"
+			quadTextureSprite = "GFX_evt_L_slaver_9230"
+			Orientation = "UPPER_LEFT"
+			position = { x = @portrait_x y = @portrait_y }
+			effect = "cg_plus_enclave_evt_pic_9230"
+		}	
 		
 		###########################
 		#picture area end
@@ -227,6 +255,63 @@ guiTypes = {
 			Orientation = "UPPER_LEFT"
 			position = { x = @portrait_x y = @portrait_y }
 			effect = "cg_plus_enclave_evt_pic_9027"
+		}	
+		effectButtonType = {
+			name = "cg_plus_evt_pic_7140"
+			quadTextureSprite = "GFX_evt_P_slaver_7140"
+			Orientation = "UPPER_LEFT"
+			position = { x = @portrait_x y = @portrait_y }
+			effect = "cg_plus_enclave_evt_pic_7140"
+		}
+		effectButtonType = {
+			name = "cg_plus_evt_pic_7210"
+			quadTextureSprite = "GFX_evt_P_slaver_7210"
+			Orientation = "UPPER_LEFT"
+			position = { x = @portrait_x y = @portrait_y }
+			effect = "cg_plus_enclave_evt_pic_7210"
+		}	
+		effectButtonType = {
+			name = "cg_plus_evt_pic_7230"
+			quadTextureSprite = "GFX_evt_P_slaver_7230"
+			Orientation = "UPPER_LEFT"
+			position = { x = @portrait_x y = @portrait_y }
+			effect = "cg_plus_enclave_evt_pic_7230"
+		}	
+		effectButtonType = {
+			name = "cg_plus_evt_pic_7240"
+			quadTextureSprite = "GFX_evt_P_slaver_7240"
+			Orientation = "UPPER_LEFT"
+			position = { x = @portrait_x y = @portrait_y }
+			effect = "cg_plus_enclave_evt_pic_7240"
+		}	
+		effectButtonType = {
+			name = "cg_plus_evt_pic_9210"
+			quadTextureSprite = "GFX_evt_P_slaver_9210"
+			Orientation = "UPPER_LEFT"
+			position = { x = @portrait_x y = @portrait_y }
+			effect = "cg_plus_enclave_evt_pic_9210"
+		}	
+		effectButtonType = {
+			name = "cg_plus_evt_pic_9211"
+			quadTextureSprite = "GFX_evt_P_slaver_9211"
+			Orientation = "UPPER_LEFT"
+			position = { x = @portrait_x y = @portrait_y }
+			effect = "cg_plus_enclave_evt_pic_9211"
+		}	
+
+		effectButtonType = {
+			name = "cg_plus_evt_pic_9220"
+			quadTextureSprite = "GFX_evt_P_slaver_9220"
+			Orientation = "UPPER_LEFT"
+			position = { x = @portrait_x y = @portrait_y }
+			effect = "cg_plus_enclave_evt_pic_9220"
+		}	
+		effectButtonType = {
+			name = "cg_plus_evt_pic_9240"
+			quadTextureSprite = "GFX_evt_P_slaver_9240"
+			Orientation = "UPPER_LEFT"
+			position = { x = @portrait_x y = @portrait_y }
+			effect = "cg_plus_enclave_evt_pic_9240"
 		}	
 
 		###########################

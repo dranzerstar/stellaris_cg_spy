@@ -13,6 +13,7 @@ assign_captured_normal_leader_to_slot={
 				event_target:cg_plus_slaver_country={ has_country_flag = slave_01_filled } }                                     
 			save_global_event_target_as = cg_plus_slaver_captured_01
 			Root={ save_global_event_target_as = cg_plus_slaver_captured_01_origin }
+			Root={ save_global_event_target_as = cg_plus_last_captured_origin }
 			save_global_event_target_as = cg_plus_slaver_last_captured
 			set_leader_flag = cg_plus_slaver_captured_01
 			set_timed_leader_flag ={ years =5 flag=player_exclusive }
@@ -25,6 +26,7 @@ assign_captured_normal_leader_to_slot={
 				event_target:cg_plus_slaver_country={ has_country_flag = slave_02_filled } }                                     
 			save_global_event_target_as = cg_plus_slaver_captured_02
 			Root={ save_global_event_target_as = cg_plus_slaver_captured_02_origin }
+			Root={ save_global_event_target_as = cg_plus_last_captured_origin }
 			save_global_event_target_as = cg_plus_slaver_last_captured
 			set_timed_leader_flag ={ years =5 flag=player_exclusive }
 			set_leader_flag = cg_plus_slaver_captured_02
@@ -35,6 +37,7 @@ assign_captured_normal_leader_to_slot={
 				event_target:cg_plus_slaver_country={ has_country_flag = slave_03_filled } }                                     
 			save_global_event_target_as = cg_plus_slaver_captured_03
 			Root={ save_global_event_target_as = cg_plus_slaver_captured_03_origin }
+			Root={ save_global_event_target_as = cg_plus_last_captured_origin }
 			save_global_event_target_as = cg_plus_slaver_last_captured
 			set_leader_flag = cg_plus_slaver_captured_03
 			set_timed_leader_flag ={ years =5 flag=player_exclusive }
@@ -45,6 +48,7 @@ assign_captured_normal_leader_to_slot={
 				event_target:cg_plus_slaver_country={ has_country_flag = slave_04_filled } }                                     
 			save_global_event_target_as = cg_plus_slaver_captured_04
 			Root={ save_global_event_target_as = cg_plus_slaver_captured_04_origin }
+			Root={ save_global_event_target_as = cg_plus_last_captured_origin }
 			save_global_event_target_as = cg_plus_slaver_last_captured
 			set_leader_flag = cg_plus_slaver_captured_04
 			set_timed_leader_flag ={ years =5 flag=player_exclusive }
@@ -55,6 +59,7 @@ assign_captured_normal_leader_to_slot={
 				event_target:cg_plus_slaver_country={ has_country_flag = slave_05_filled } }                                     
 			save_global_event_target_as = cg_plus_slaver_captured_05
 			Root={ save_global_event_target_as = cg_plus_slaver_captured_05_origin }
+			Root={ save_global_event_target_as = cg_plus_last_captured_origin }
 			save_global_event_target_as = cg_plus_slaver_last_captured
 			set_leader_flag = cg_plus_slaver_captured_05
 			set_timed_leader_flag ={ years =5 flag=player_exclusive }
@@ -114,3 +119,286 @@ clear_slave_leader_modification={
 
 
 }
+
+
+
+
+#chanage random portraits
+
+change_leader_portrait_group_LoliGirl={
+	random_list={
+		1={  change_leader_portrait = LoliGirl00 }
+		1={  change_leader_portrait = LoliGirl01 }
+		1={  change_leader_portrait = LoliGirl02 }
+		1={  change_leader_portrait = LoliGirl03 }
+		1={  change_leader_portrait = LoliGirl04 }
+		1={  change_leader_portrait = LoliGirl05 }
+		1={  change_leader_portrait = LoliGirl06 }
+		1={  change_leader_portrait = LoliGirl07 }
+		1={  change_leader_portrait = LoliGirl08 }
+		1={  change_leader_portrait = LoliGirl09 }
+		1={  change_leader_portrait = LoliGirl10 }
+		1={  change_leader_portrait = LoliGirl11 }
+		1={  change_leader_portrait = LoliGirl12 }
+		1={  change_leader_portrait = LoliGirl13 }
+		1={  change_leader_portrait = LoliGirl14 }
+		1={  change_leader_portrait = LoliGirl15 }
+		1={  change_leader_portrait = LoliGirl16 }
+		1={  change_leader_portrait = LoliGirl17 }
+		1={  change_leader_portrait = LoliGirl18 }
+		1={  change_leader_portrait = LoliGirl19 }
+		1={  change_leader_portrait = LoliGirl20 }
+		1={  change_leader_portrait = LoliGirl21 }
+		1={  change_leader_portrait = LoliGirl22 }
+		1={  change_leader_portrait = LoliGirl23 }
+		1={  change_leader_portrait = LoliGirl24 }
+		1={  change_leader_portrait = LoliGirl25 }
+		1={  change_leader_portrait = LoliGirl26 }
+		1={  change_leader_portrait = LoliGirl27 }
+		1={  change_leader_portrait = LoliGirl28 }
+		1={  change_leader_portrait = LoliGirl29 }
+		1={  change_leader_portrait = LoliGirl30 }
+		1={  change_leader_portrait = LoliGirl31 }
+		1={  change_leader_portrait = LoliGirl32 }
+		1={  change_leader_portrait = LoliGirl33 }
+		1={  change_leader_portrait = LoliGirl34 }
+		1={  change_leader_portrait = LoliGirl35 }
+		1={  change_leader_portrait = LoliGirl36 }
+		1={  change_leader_portrait = LoliGirl37 }
+		1={  change_leader_portrait = LoliGirl38 }
+		1={  change_leader_portrait = LoliGirl39 }
+		1={  change_leader_portrait = LoliGirl40 }
+		1={  change_leader_portrait = LoliGirl41 }
+		1={  change_leader_portrait = LoliGirl42 }
+		1={  change_leader_portrait = LoliGirl43 }
+		1={  change_leader_portrait = LoliGirl44 }
+		1={  change_leader_portrait = LoliGirl45 }
+		1={  change_leader_portrait = LoliGirl46 }
+		1={  change_leader_portrait = LoliGirl47 }
+		1={  change_leader_portrait = LoliGirl48 }
+		1={  change_leader_portrait = LoliGirl49 }
+		1={  change_leader_portrait = LoliGirl50 }
+		1={  change_leader_portrait = LoliGirl51 }
+		1={  change_leader_portrait = LoliGirl52 }
+		1={  change_leader_portrait = LoliGirl53 }
+		1={  change_leader_portrait = LoliGirl54 }
+		1={  change_leader_portrait = LoliGirl55 }
+		1={  change_leader_portrait = LoliGirl56 }
+		1={  change_leader_portrait = LoliGirl57 }
+		1={  change_leader_portrait = LoliGirl58 }
+		1={  change_leader_portrait = LoliGirl59 }
+		1={  change_leader_portrait = LoliGirl60 }
+
+	}
+}
+
+change_leader_portrait_group_Lolisuc={
+	random_list={
+		1={  change_leader_portrait = LOLISUC00 }
+		1={  change_leader_portrait = LOLISUC01 }
+		1={  change_leader_portrait = LOLISUC02 }
+		1={  change_leader_portrait = LOLISUC03 }
+		1={  change_leader_portrait = LOLISUC04 }
+		1={  change_leader_portrait = LOLISUC05 }
+		1={  change_leader_portrait = LOLISUC06 }
+		1={  change_leader_portrait = LOLISUC07 }
+		1={  change_leader_portrait = LOLISUC08 }
+		1={  change_leader_portrait = LOLISUC09 }
+		1={  change_leader_portrait = LOLISUC10 }
+		1={  change_leader_portrait = LOLISUC11 }
+		1={  change_leader_portrait = LOLISUC12 }
+		1={  change_leader_portrait = LOLISUC13 }
+		1={  change_leader_portrait = LOLISUC14 }
+		1={  change_leader_portrait = LOLISUC15 }
+		1={  change_leader_portrait = LOLISUC16 }
+		1={  change_leader_portrait = LOLISUC17 }
+		1={  change_leader_portrait = LOLISUC18 }
+		1={  change_leader_portrait = LOLISUC19 }
+		1={  change_leader_portrait = LOLISUC20 }
+		1={  change_leader_portrait = LOLISUC21 }
+		1={  change_leader_portrait = LOLISUC22 }
+		1={  change_leader_portrait = LOLISUC23 }
+		1={  change_leader_portrait = LOLISUC24 }
+		1={  change_leader_portrait = LOLISUC25 }
+		1={  change_leader_portrait = LOLISUC26 }
+		1={  change_leader_portrait = LOLISUC27 }
+		1={  change_leader_portrait = LOLISUC28 }
+		1={  change_leader_portrait = LOLISUC29 }
+		1={  change_leader_portrait = LOLISUC30 }
+		1={  change_leader_portrait = LOLISUC31 }
+		1={  change_leader_portrait = LOLISUC32 }
+		1={  change_leader_portrait = LOLISUC33 }
+		1={  change_leader_portrait = LOLISUC34 }
+		1={  change_leader_portrait = LOLISUC35 }
+		1={  change_leader_portrait = LOLISUC36 }
+		1={  change_leader_portrait = LOLISUC37 }
+		1={  change_leader_portrait = LOLISUC38 }
+		1={  change_leader_portrait = LOLISUC39 }
+		1={  change_leader_portrait = LOLISUC40 }
+		1={  change_leader_portrait = LOLISUC41 }
+		1={  change_leader_portrait = LOLISUC42 }
+		1={  change_leader_portrait = LOLISUC43 }
+		1={  change_leader_portrait = LOLISUC44 }
+		1={  change_leader_portrait = LOLISUC45 }
+		1={  change_leader_portrait = LOLISUC46 }
+		1={  change_leader_portrait = LOLISUC47 }
+		1={  change_leader_portrait = LOLISUC48 }
+		1={  change_leader_portrait = LOLISUC49 }
+		1={  change_leader_portrait = LOLISUC50 }
+		1={  change_leader_portrait = LOLISUC51 }
+		1={  change_leader_portrait = LOLISUC52 }
+		1={  change_leader_portrait = LOLISUC53 }
+		1={  change_leader_portrait = LOLISUC54 }
+		1={  change_leader_portrait = LOLISUC55 }
+		1={  change_leader_portrait = LOLISUC56 }
+		1={  change_leader_portrait = LOLISUC57 }
+		1={  change_leader_portrait = LOLISUC58 }
+		1={  change_leader_portrait = LOLISUC59 }
+		1={  change_leader_portrait = LOLISUC60 }
+		1={  change_leader_portrait = LOLISUC61 }
+		1={  change_leader_portrait = LOLISUC62 }
+		1={  change_leader_portrait = LOLISUC63 }
+		1={  change_leader_portrait = LOLISUC64 }
+		
+
+	}
+}
+
+
+change_leader_portrait_group_oppaiuc={
+	
+	random_list={
+		1={  change_leader_portrait = OPPAISUC00 }
+		1={  change_leader_portrait = OPPAISUC01 }
+		1={  change_leader_portrait = OPPAISUC02 }
+		1={  change_leader_portrait = OPPAISUC03 }
+		1={  change_leader_portrait = OPPAISUC04 }
+		1={  change_leader_portrait = OPPAISUC05 }
+		1={  change_leader_portrait = OPPAISUC06 }
+		1={  change_leader_portrait = OPPAISUC07 }
+		1={  change_leader_portrait = OPPAISUC08 }
+		1={  change_leader_portrait = OPPAISUC09 }
+		1={  change_leader_portrait = OPPAISUC10 }
+		1={  change_leader_portrait = OPPAISUC11 }
+		1={  change_leader_portrait = OPPAISUC12 }
+		1={  change_leader_portrait = OPPAISUC13 }
+		1={  change_leader_portrait = OPPAISUC14 }
+		1={  change_leader_portrait = OPPAISUC15 }
+		1={  change_leader_portrait = OPPAISUC16 }
+		1={  change_leader_portrait = OPPAISUC17 }
+		1={  change_leader_portrait = OPPAISUC18 }
+		1={  change_leader_portrait = OPPAISUC19 }
+		1={  change_leader_portrait = OPPAISUC20 }
+		1={  change_leader_portrait = OPPAISUC21 }
+		1={  change_leader_portrait = OPPAISUC22 }
+		1={  change_leader_portrait = OPPAISUC23 }
+		1={  change_leader_portrait = OPPAISUC24 }
+		1={  change_leader_portrait = OPPAISUC25 }
+		1={  change_leader_portrait = OPPAISUC26 }
+		1={  change_leader_portrait = OPPAISUC27 }
+		1={  change_leader_portrait = OPPAISUC28 }
+		1={  change_leader_portrait = OPPAISUC29 }
+		1={  change_leader_portrait = OPPAISUC30 }
+		1={  change_leader_portrait = OPPAISUC31 }
+		1={  change_leader_portrait = OPPAISUC32 }
+		1={  change_leader_portrait = OPPAISUC33 }
+		
+
+	}}
+
+
+change_leader_portrait_group_lustinn={
+		random_list={
+			1={  change_leader_portrait = LUSTINN000 }
+			1={  change_leader_portrait = LUSTINN001 }
+			1={  change_leader_portrait = LUSTINN002 }
+			1={  change_leader_portrait = LUSTINN003 }
+			1={  change_leader_portrait = LUSTINN004 }
+			1={  change_leader_portrait = LUSTINN005 }
+			1={  change_leader_portrait = LUSTINN006 }
+			1={  change_leader_portrait = LUSTINN007 }
+			1={  change_leader_portrait = LUSTINN008 }
+			1={  change_leader_portrait = LUSTINN009 }
+			1={  change_leader_portrait = LUSTINN010 }
+			1={  change_leader_portrait = LUSTINN011 }
+			1={  change_leader_portrait = LUSTINN012 }
+			1={  change_leader_portrait = LUSTINN013 }
+			1={  change_leader_portrait = LUSTINN014 }
+			1={  change_leader_portrait = LUSTINN015 }
+			1={  change_leader_portrait = LUSTINN016 }
+			1={  change_leader_portrait = LUSTINN017 }
+			1={  change_leader_portrait = LUSTINN018 }
+			1={  change_leader_portrait = LUSTINN019 }
+			1={  change_leader_portrait = LUSTINN020 }
+			1={  change_leader_portrait = LUSTINN021 }
+			1={  change_leader_portrait = LUSTINN022 }
+			1={  change_leader_portrait = LUSTINN023 }
+			1={  change_leader_portrait = LUSTINN024 }
+			1={  change_leader_portrait = LUSTINN025 }
+			1={  change_leader_portrait = LUSTINN026 }
+			1={  change_leader_portrait = LUSTINN027 }
+			1={  change_leader_portrait = LUSTINN028 }
+			1={  change_leader_portrait = LUSTINN029 }
+			1={  change_leader_portrait = LUSTINN030 }
+			1={  change_leader_portrait = LUSTINN031 }
+			1={  change_leader_portrait = LUSTINN032 }
+			1={  change_leader_portrait = LUSTINN033 }
+			1={  change_leader_portrait = LUSTINN034 }
+			1={  change_leader_portrait = LUSTINN035 }
+			
+
+
+		}}
+
+
+change_leader_portrait_group_ELF={
+			random_list={
+				1={  change_leader_portrait = ELF00 }
+				1={  change_leader_portrait = ELF01 }
+				1={  change_leader_portrait = ELF02 }
+				1={  change_leader_portrait = ELF03 }
+				1={  change_leader_portrait = ELF04 }
+				1={  change_leader_portrait = ELF05 }
+				1={  change_leader_portrait = ELF06 }
+				1={  change_leader_portrait = ELF07 }
+				1={  change_leader_portrait = ELF08 }
+				1={  change_leader_portrait = ELF09 }
+				1={  change_leader_portrait = ELF10 }
+				1={  change_leader_portrait = ELF11 }
+				1={  change_leader_portrait = ELF12 }
+				1={  change_leader_portrait = ELF13 }
+				1={  change_leader_portrait = ELF14 }
+				1={  change_leader_portrait = ELF15 }
+				1={  change_leader_portrait = ELF16 }
+				1={  change_leader_portrait = ELF17 }
+				1={  change_leader_portrait = ELF18 }
+				1={  change_leader_portrait = ELF19 }
+				1={  change_leader_portrait = ELF20 }
+				1={  change_leader_portrait = ELF21 }
+				1={  change_leader_portrait = ELF22 }
+				1={  change_leader_portrait = ELF23 }
+				1={  change_leader_portrait = ELF24 }
+				1={  change_leader_portrait = ELF25 }
+				1={  change_leader_portrait = ELF26 }
+				1={  change_leader_portrait = ELF27 }
+				1={  change_leader_portrait = ELF28 }
+				1={  change_leader_portrait = ELF29 }
+				1={  change_leader_portrait = ELF30 }
+				1={  change_leader_portrait = ELF31 }
+				1={  change_leader_portrait = ELF32 }
+				1={  change_leader_portrait = ELF33 }
+				1={  change_leader_portrait = ELF34 }
+				1={  change_leader_portrait = ELF35 }
+				1={  change_leader_portrait = ELF36 }
+				1={  change_leader_portrait = ELF37 }
+				1={  change_leader_portrait = ELF38 }
+				1={  change_leader_portrait = ELF39 }
+				1={  change_leader_portrait = ELF40 }
+				1={  change_leader_portrait = ELF41 }
+				
+			}
+
+		}
+
+
+

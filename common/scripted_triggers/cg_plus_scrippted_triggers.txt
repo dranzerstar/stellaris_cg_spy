@@ -19,6 +19,9 @@ is_anime_species = {
 			is_archetype = HKR 
 			is_archetype = JourneyofElaina 
 			is_archetype = Houkai3rd
+			is_archetype =DATEALIVE
+			is_archetype =LILY
+			is_archetype =KZ_VOY_TERRANOID
 		}
 	}
 }

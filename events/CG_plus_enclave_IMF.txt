@@ -1,0 +1,1260 @@
+namespace = cg_plus_enclave_imf
+
+
+
+# event_target:
+
+
+# npc country   event_target:cg_plus_IMF_country
+# 0000 diplo gate
+# 1999 1st esta
+# 1xxx diplo events
+# 2xxx notify 0 resources event
+# 3xxx lend events
+# 3100 lend sent
+# 3200 payment notification
+# 9xxx caluclate debts and interests
+# 5xxx payup events
+# 1500 low on credit notification
+
+
+country_event = {
+	id= cg_plus_enclave_imf.0000
+	hide_window=yes
+	is_triggered_only = yes
+
+	trigger = {
+		from = {
+			has_country_flag = cg_plus_IMF_country
+		}
+	}
+	immediate = {
+		if={ limit= {NOT={has_country_flag = cg_plus_imf_account_set } }
+				country_event={ id=cg_plus_enclave_imf.1998 }
+			}
+
+
+		if = {
+			limit = { exists = event_target:cg_plus_IMF_country  }
+			country_event = {
+				id = cg_plus_enclave_imf.1000
+			}
+		}
+	}
+}
+
+
+country_event = {
+	id = cg_plus_enclave_imf.1999
+	hide_window = no
+	title = cg_plus_enclave_imf.1000.name
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = "enclave_caravaneer_window"
+	custom_gui_option = "enclave_caravaneer_option"
+	picture_event_data = {
+		room = "no_video_feed_room"
+	}
+	trigger = {
+		from = {
+			has_country_flag = cg_plus_IMF_country
+		}
+	}
+
+	desc = cg_plus_enclave_imf.1999.desc.a
+	immediate = {
+
+	}
+	option = {
+		name = cg_plus_enclave_imf.1999.a
+	}
+	option = {
+		name = cg_plus_enclave_imf.1999.b
+	}
+	after={
+		hidden_effect={
+			country_event={ id=cg_plus_enclave_imf.1998 }
+		}
+	}
+}
+
+# init account
+country_event = {
+	id = cg_plus_enclave_imf.1998
+	hide_window = yes
+	is_triggered_only = yes
+	immediate={
+		set_country_flag = cg_plus_imf_account_set
+		set_variable={  which = cg_plus_imf_debt
+						value = 0 }
+		set_variable={  which = cg_plus_imf_lend
+						value = 0 }
+		set_variable={  which = cg_plus_imf_credit
+						value = 50000 }
+		set_variable={  which = cg_plus_imf_pay_time  #days
+						value = 1800 }
+		set_variable={  which = cg_plus_imf_interest
+						value = 0.05 }
+		set_variable={  which = cg_plus_imf_trust_level
+						value = 5 }
+		set_variable={  which = cg_plus_imf_past_due_count
+						value = 0 }
+		set_saved_date = { key = cg_plus_imf_payment_time days_from_present = 0 }
+	
+	}
+}
+
+
+
+
+country_event = {
+	id = cg_plus_enclave_imf.1000
+	hide_window = no
+	title = cg_plus_enclave_imf.1000.name
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = "enclave_caravaneer_window"
+	custom_gui_option = "enclave_caravaneer_option"
+	picture_event_data = {
+		portrait = event_target:cg_plus_IMF_country
+		room = enclave_trader_room
+	}
+
+	desc={ trigger={ 
+							check_variable={  which = cg_plus_imf_debt value = 0 } 
+							check_variable={  which = cg_plus_imf_past_due_count value < 3 } 
+					} 
+			text=cg_plus_enclave_imf.1000.desc.a } 
+	desc={ trigger={ 
+				check_variable={  which = cg_plus_imf_debt value = 0 } 
+				check_variable={  which = cg_plus_imf_past_due_count value < 3 } 
+		} 
+			text=cg_plus_enclave_imf.1000.desc.b } 
+
+
+	#---原版废话
+	option = {
+		name = SCUM
+		trigger = {
+			has_valid_civic = civic_fanatic_purifiers
+		}
+	}
+	option = {
+		name = TASTY
+	
+		trigger = {
+			has_valid_civic = civic_hive_devouring_swarm
+		}
+	}
+	option = {
+		name = EXTERMINATE
+
+		trigger = {
+			has_valid_civic = civic_machine_terminator
+		}
+	}
+
+	#------
+	# 关于           1010
+	# 申请贷款    1020     
+	# 查询欠款        1030
+	# 评估信用      1040 
+	# 再见
+	option={
+		name= cg_plus_enclave_imf.1000.a
+		trigger={ NOR={ has_valid_civic=civic_fanatic_purifiers
+					has_valid_civic = civic_hive_devouring_swarm 
+					has_valid_civic = civic_machine_terminator } }
+		hidden_effect={  country_event={ id=cg_plus_enclave_imf.1010 } }
+	}
+	option={
+		name= cg_plus_enclave_imf.1000.b
+		allow={ fail_text = {
+			text = cg_plus_enclave_imf.1000.b.f
+			hidden_trigger={
+				check_variable={  which = cg_plus_imf_debt value = 0 } 	
+			}
+		} }
+		trigger={ NOR={ has_valid_civic=civic_fanatic_purifiers
+					has_valid_civic = civic_hive_devouring_swarm 
+					has_valid_civic = civic_machine_terminator } }
+		hidden_effect={  country_event={ id=cg_plus_enclave_imf.1020 } }
+	}
+	option={
+		name= cg_plus_enclave_imf.1000.c
+		trigger={ NOR={ has_valid_civic=civic_fanatic_purifiers
+					has_valid_civic = civic_hive_devouring_swarm 
+					has_valid_civic = civic_machine_terminator } }
+		hidden_effect={  country_event={ id=cg_plus_enclave_imf.1030 } }
+	}
+	option={
+		name= cg_plus_enclave_imf.1000.d
+		trigger={ NOR={ has_valid_civic=civic_fanatic_purifiers
+					has_valid_civic = civic_hive_devouring_swarm 
+					has_valid_civic = civic_machine_terminator } }
+		hidden_effect={  country_event={ id=cg_plus_enclave_imf.1040 } }
+	}
+
+	option={ name= GOODBYE }
+}
+
+
+country_event = {
+	id = cg_plus_enclave_imf.1500
+	hide_window = no
+	title = cg_plus_enclave_imf.1000.name
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = "enclave_caravaneer_window"
+	custom_gui_option = "enclave_caravaneer_option"
+	picture_event_data = {
+		portrait = event_target:cg_plus_IMF_country
+		room = enclave_trader_room
+	}
+	trigger = {
+		has_communications = event_target:cg_plus_IMF_country
+		OR={
+			resource_stockpile_compare = {
+				resource = energy
+				value < 10000
+			}
+			
+			resource_revenue_compare = {
+				resource = energy
+				value < 50
+			}
+
+
+		}
+		NOT={ has_country_flag = cg_plus_enclave_imf_ad_cooldown }
+		check_variable={ which = cg_plus_imf_debt value <1  }
+		is_ai = no
+	}
+	desc = cg_plus_enclave_imf.1500.desc
+
+	option = {
+		name = cg_plus_enclave_imf.1500.a
+		hidden_effect={  }
+	}
+	option = {
+		name = cg_plus_enclave_imf.1999.b
+	}
+
+	after = {
+		set_timed_country_flag = {
+			flag = cg_plus_enclave_imf_ad_cooldown
+			years=2
+		}
+	}
+
+
+}
+
+country_event = {
+	id = cg_plus_enclave_imf.1010
+	hide_window = no
+	title = cg_plus_enclave_imf.1000.name
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = "enclave_caravaneer_window"
+	custom_gui_option = "enclave_caravaneer_option"
+	picture_event_data = {
+		portrait = event_target:cg_plus_IMF_country
+		room = enclave_trader_room
+	}
+
+	desc=cg_plus_enclave_imf.1010.desc
+
+	option = {
+		name = cg_plus_enclave_imf.1010.a.o
+		is_dialog_only = yes
+		response_text = cg_plus_enclave_imf.1010.a
+	}
+	option = {
+		name = cg_plus_enclave_imf.1010.b.o
+		is_dialog_only = yes
+		response_text = cg_plus_enclave_imf.1010.b
+	}
+	option = {
+		name = cg_plus_enclave_imf.1010.c.o
+		is_dialog_only = yes
+		response_text = cg_plus_enclave_imf.1010.c
+	}
+
+
+	option={ name= BACK }
+	after = {
+		country_event={ id=cg_plus_enclave_imf.1000 }
+	}
+}
+
+country_event = {
+	id = cg_plus_enclave_imf.1020
+	hide_window = no
+	title = cg_plus_enclave_imf.1000.name
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = "enclave_caravaneer_window"
+	custom_gui_option = "enclave_caravaneer_option"
+	picture_event_data = {
+		portrait = event_target:cg_plus_IMF_country
+		room = enclave_trader_room
+	}
+
+	immediate = {
+		set_variable = {
+			which = temp_lend
+			value = cg_plus_imf_credit
+		}
+		divide_variable = {
+			which = temp_lend
+			value = 2
+		}		
+
+
+	}
+
+
+	desc=cg_plus_enclave_imf.1020.desc
+
+	option={ name= add10K 
+				is_dialog_only = yes
+				response_text = cg_plus_enclave_imf.1020.desc
+				allow={
+					fail_text = {
+						text = cg_plus_enclave_imf_confirm_lend.f 
+						hidden_trigger = {
+							check_variable ={
+									which=temp_lend
+									
+									value < cg_plus_imf_credit
+							}
+						}
+					}
+				}
+			}
+	option={ name= minus10K
+						is_dialog_only = yes
+						response_text = cg_plus_enclave_imf.1020.desc
+					allow={
+						fail_text = {
+							text = cg_plus_enclave_imf_confirm_lend.f2 
+							hidden_trigger = {
+								check_variable ={
+										which=temp_lend
+									
+										value > 0
+								}
+							}
+						}
+					}
+			}
+
+	option={ name= cg_plus_enclave_imf_confirm_lend
+				allow = {
+					OR={
+						fail_text = {
+							text = cg_plus_enclave_imf_confirm_lend.f 
+							hidden_trigger = {
+								check_variable ={
+										which=temp_lend
+										
+										value < cg_plus_imf_credit
+								}
+							}
+						}
+
+						fail_text = {
+							text = cg_plus_enclave_imf_confirm_lend.f2 
+							hidden_trigger = {
+								check_variable ={
+										which=temp_lend
+									
+										value > 0
+								}
+							}
+						}
+					}
+
+				}
+				hidden_effect = {
+					country_event={ id=cg_plus_enclave_imf.1021 }
+				}
+			}
+
+	option={ name= BACK
+				country_event={ id=cg_plus_enclave_imf.1000 }
+			}
+	after = {
+		
+	}
+}
+
+country_event = {
+	id = cg_plus_enclave_imf.1021
+	hide_window = no
+	title = cg_plus_enclave_imf.1000.name
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = "enclave_caravaneer_window"
+	custom_gui_option = "enclave_caravaneer_option"
+	picture_event_data = {
+		portrait = event_target:cg_plus_IMF_country
+		room = enclave_trader_room
+	}
+
+	desc = cg_plus_enclave_imf.1021.desc
+
+	option = {
+		name = GOODBYE
+
+		
+	}
+
+	after={
+		country_event={ id= cg_plus_enclave_imf.3100 days=5 }
+	}
+
+}
+
+country_event = {
+	id = cg_plus_enclave_imf.1030
+	hide_window = no
+	title = cg_plus_enclave_imf.1000.name
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = "enclave_caravaneer_window"
+	custom_gui_option = "enclave_caravaneer_option"
+	picture_event_data = {
+		portrait = event_target:cg_plus_IMF_country
+		room = enclave_trader_room
+	}
+
+	desc={ trigger={ 
+			check_variable={  which = cg_plus_imf_debt value = 0 } 
+		
+			} 
+			text=cg_plus_enclave_imf.1030.desc.nodebt } 
+	desc={ trigger={ 
+			check_variable={  which = cg_plus_imf_debt value > 0 } 
+		
+			} 
+			text=cg_plus_enclave_imf.1030.desc.debt } 
+
+	option={ name= cg_plus_enclave_imf_paydebt 
+				trigger = {
+					check_variable={  which = cg_plus_imf_debt value > 0 } 
+					}
+				allow = {
+					resource_stockpile_compare = {
+						resource = energy
+						value > 1
+						mult = cg_plus_imf_debt
+					}
+				}
+				hidden_effect = {
+					set_variable = {
+						which = cg_plus_imf_debt
+						value = 0
+					}
+					set_variable = {
+						which = cg_plus_imf_lend
+						value = 0
+					}
+					add_resource={
+						energy=-1		
+						mult = cg_plus_imf_debt
+					}
+					change_variable={
+						which = cg_plus_imf_trust_level
+						value = 1
+					}
+
+				}
+				is_dialog_only = yes
+				response_text = cg_plus_enclave_imf.1030.desc.nodebt
+
+			}		
+
+	
+	option={ name= cg_plus_enclave_imf.3200.other 
+			hidden_effect = {
+				country_event={ id=cg_plus_enclave_imf.3220 }
+				set_country_flag = from_regular_event
+			}
+				
+			}
+	
+	
+	option={ name= BACK 
+	country_event={ id=cg_plus_enclave_imf.1000 }}
+	
+	
+
+
+	after = {
+		
+	}
+}
+
+country_event = {
+	id = cg_plus_enclave_imf.1040
+	hide_window = no
+	title = cg_plus_enclave_imf.1000.name
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = "enclave_caravaneer_window"
+	custom_gui_option = "enclave_caravaneer_option"
+	picture_event_data = {
+		portrait = event_target:cg_plus_IMF_country
+		room = enclave_trader_room
+	}
+
+	desc=cg_plus_enclave_imf.1040.desc
+	immediate = {
+		set_variable = {
+			which = recal_credit
+			value = 0
+		}
+
+	
+		change_variable={ which=recal_credit value=value:cg_imf_pop_credit_mod } 
+		change_variable={ which=recal_credit value=value:cg_imf_resource_credit_mod } 
+		
+		set_variable = {
+			which = cg_plus_imf_credit
+			value = recal_credit
+		}
+		
+		
+	}
+
+
+	option={ name= OK }
+	after = {
+		country_event={ id=cg_plus_enclave_imf.1000 }
+
+		clear_variable= recal_credit
+	}
+}
+
+
+
+
+
+country_event = {
+	id = cg_plus_enclave_imf.3100
+	hide_window = no
+	title = cg_plus_enclave_imf.1000.name
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = "enclave_caravaneer_window"
+	custom_gui_option = "enclave_caravaneer_option"
+	picture_event_data = {
+		portrait = event_target:cg_plus_IMF_country
+		room = enclave_trader_room
+	}
+
+
+	immediate = {
+		set_saved_date = {
+			key = cg_plus_imf_payment_time
+			days_from_present = cg_plus_imf_pay_time
+		}
+		set_variable = {
+			which = cg_plus_imf_debt
+			value = temp_lend
+		}
+		set_variable = {
+			which = cg_plus_imf_lend
+			value = temp_lend
+		}
+
+	}
+	desc = cg_plus_enclave_imf.3100.desc
+
+	option = {
+		name = GOOD
+		add_resource = {
+			energy = 1
+			mult = cg_plus_imf_lend
+		}
+	}
+
+	after={
+		hidden_effect = {
+			country_event={ id= cg_plus_enclave_imf.9000 days=360 }
+			country_event={ id= cg_plus_enclave_imf.3200 days=1800 }
+		}
+
+	}
+
+}
+# 3200 payment date
+# 3210 extend options
+# 3220 other settle options
+country_event = {
+	id = cg_plus_enclave_imf.3200
+	hide_window = no
+	title = cg_plus_enclave_imf.1000.name
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = "enclave_caravaneer_window"
+	custom_gui_option = "enclave_caravaneer_option"
+	picture_event_data = {
+		portrait = event_target:cg_plus_IMF_country
+		room = enclave_trader_room
+	}
+	trigger = {
+		check_variable={  which = cg_plus_imf_debt value > 0 } 
+	}
+
+	desc= cg_plus_enclave_imf.3200.desc
+
+	option={ name= cg_plus_enclave_imf_paydebt 
+				trigger = {
+					check_variable={  which = cg_plus_imf_debt value > 0 } 
+					}
+				allow = {
+					resource_stockpile_compare = {
+						resource = energy
+						value > 1
+						mult = cg_plus_imf_debt
+					}
+				}
+				hidden_effect = {
+					set_variable = {
+						which = cg_plus_imf_debt
+						value = 0
+					}
+					set_variable = {
+						which = cg_plus_imf_lend
+						value = 0
+					}
+					add_resource={
+						energy=-1		
+						mult = cg_plus_imf_debt
+					}
+					change_variable={
+							which = cg_plus_imf_trust_level
+							value = 1
+						}
+				}
+				is_dialog_only = yes
+				response_text = cg_plus_enclave_imf.1030.desc.nodebt
+
+			}	
+	option={ name= cg_plus_enclave_imf.3200.extent 
+				country_event={id= cg_plus_enclave_imf.3210 }
+			}
+
+	option={ name= cg_plus_enclave_imf.3200.other
+				hidden_effect = {
+					set_country_flag = from_deadline_event
+					country_event= { id=cg_plus_enclave_imf.3220 }
+					
+				}
+
+			}
+			
+
+	after={}
+	
+}
+
+#3210
+country_event = {
+	id = cg_plus_enclave_imf.3210
+	hide_window = no
+	title = cg_plus_enclave_imf.1000.name
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = "enclave_caravaneer_window"
+	custom_gui_option = "enclave_caravaneer_option"
+	picture_event_data = {
+		portrait = event_target:cg_plus_IMF_country
+		room = enclave_trader_room
+	}
+	desc=cg_plus_enclave_imf.3210.desc
+
+	immediate = {
+		set_variable = {
+			which = cg_plus_imf_interest_flat
+			value = cg_plus_imf_debt
+		}
+		subtract_variable = {
+			which = cg_plus_imf_interest_flat
+			value = cg_plus_imf_lend
+		}
+		set_variable = {
+			which = cg_plus_imf_interest_flat
+			value = temp_portion_pop
+		}
+		set_variable = {
+			which = cg_plus_imf_debt_portion
+			value = cg_plus_imf_debt
+		}		
+		multiply_variable = {
+			which = cg_plus_imf_debt_portion
+			value = 0.1
+		}
+		floor_variable = cg_plus_imf_debt_portion
+		export_trigger_value_to_variable = {
+			trigger = num_pops
+			variable = temp_portion_pop
+		}
+		multiply_variable ={
+			which = temp_portion_pop
+			value = 0.05
+		}
+		floor_variable = temp_portion_pop
+
+
+	}
+
+	option={ name = cg_plus_enclave_imf.3210.a
+		#trigger={ check_variable={ which=cg_plus_imf_trust_level value > 0  } }
+		custom_tooltip = cg_plus_enclave_imf.3210.a.ct
+		allow = {
+			resource_stockpile_compare = {
+				resource = energy
+				value > 1
+				mult = cg_plus_imf_debt_portion
+			}
+		}
+		hidden_effect = {
+			add_resource={
+				energy=-1		
+				mult = cg_plus_imf_debt_portion
+			}
+			country_event={  id=cg_plus_enclave_imf.3200 days = 360 }
+			set_saved_date = { key = cg_plus_imf_payment_time days_from_present = 360 }
+			subtract_variable = {
+				which = cg_plus_imf_debt
+				value = cg_plus_imf_debt_portion
+			}
+			subtract_variable = {
+				which = cg_plus_imf_trust_level
+				value = 1
+			}
+			change_variable = {
+				which = cg_plus_imf_past_due_count
+				value = 1
+			}
+			change_variable = {
+				which = cg_plus_imf_interest
+				value = 0.02
+			}	
+		}
+	}
+
+
+
+	option={ name = cg_plus_enclave_imf.3210.b
+		trigger={ check_variable={ which=cg_plus_imf_trust_level value > -5 } }
+		custom_tooltip = cg_plus_enclave_imf.3210.b.ct
+		allow = {
+			OR={
+				resource_stockpile_compare = {
+					resource = sr_christian 
+					value > 0.001
+					mult = cg_plus_imf_interest_flat
+				}
+				resource_stockpile_compare = {
+					resource = excellent_slave
+					value > 0.001
+					mult = cg_plus_imf_interest_flat
+				}
+			}
+		}
+		hidden_effect = {
+			if = {
+				limit = {	resource_stockpile_compare = {
+					resource = sr_christian 
+					value > 0.001
+					mult = cg_plus_imf_interest_flat
+				} }
+				add_resource={
+					sr_christian=-0.001	
+					mult = cg_plus_imf_interest_flat
+				}
+			}
+			if = {
+				limit = {	resource_stockpile_compare = {
+					resource = excellent_slave 
+					value > 0.001
+					mult = cg_plus_imf_interest_flat
+				} }
+				add_resource={
+					excellent_slave=-0.001	
+					mult = cg_plus_imf_interest_flat
+				}
+			}
+
+
+
+			country_event={  id=cg_plus_enclave_imf.3200 days = 360 }
+			set_saved_date = { key = cg_plus_imf_payment_time days_from_present = 360 }
+			subtract_variable = {
+				which = cg_plus_imf_debt
+				value = cg_plus_imf_interest_flat
+			}
+			subtract_variable = {
+				which = cg_plus_imf_trust_level
+				value = 2
+			}
+			change_variable = {
+				which = cg_plus_imf_past_due_count
+				value = 1
+			}
+		}
+	}
+
+	# bj
+	option = {
+		name = cg_plus_enclave_imf.3210.c
+		custom_tooltip = cg_plus_enclave_imf.3210.c.ct
+		trigger = {
+			is_anime_species = yes
+			NOT={ has_country_flag = cg_plus_imf_just_used_bj }
+			check_variable={ which=cg_plus_imf_trust_level value >0  }
+		}
+
+
+
+		hidden_effect = {
+			country_event={ id=cg_plus_enclave_imf.5001  }
+			set_timed_country_flag = { flag=cg_plus_imf_just_used_bj days= 1800 }
+			country_event={  id=cg_plus_enclave_imf.3200 days = 30 }
+			set_saved_date = { key = cg_plus_imf_payment_time days_from_present = 30 }
+			subtract_variable = {
+				which = cg_plus_imf_trust_level
+				value = 1
+			}
+			change_variable = {
+				which = cg_plus_imf_past_due_count
+				value = 1
+			}
+			change_variable = {
+				which = cg_plus_imf_interest
+				value = 0.02
+			}		
+		}
+	}
+	#pus
+	option = {
+		name = cg_plus_enclave_imf.3210.d
+		custom_tooltip = cg_plus_enclave_imf.3210.d.ct
+		trigger = {
+			check_variable={ which=cg_plus_imf_trust_level value >0  }
+			is_anime_species = yes
+			has_country_flag = cg_plus_imf_just_used_bj 
+			NOT={ has_country_flag = cg_plus_imf_just_used_hole }
+		}
+
+
+
+		hidden_effect = {
+			country_event={ id=cg_plus_enclave_imf.5002  }
+			set_timed_country_flag = { flag=cg_plus_imf_just_used_hole days= 1800 }
+			country_event={  id=cg_plus_enclave_imf.3200 days = 30 }
+			set_saved_date = { key = cg_plus_imf_payment_time days_from_present = 30 }
+			subtract_variable = {
+				which = cg_plus_imf_trust_level
+				value = 1
+			}
+			change_variable = {
+				which = cg_plus_imf_past_due_count
+				value = 1
+			}
+			change_variable = {
+				which = cg_plus_imf_interest
+				value = 0.02
+			}		
+		}
+	}
+	#gb
+	option = {
+		name = cg_plus_enclave_imf.3210.d
+		custom_tooltip = cg_plus_enclave_imf.3210.d.ct
+		trigger = {
+			check_variable={ which=cg_plus_imf_trust_level value >0  }
+			is_anime_species = yes
+			has_country_flag = cg_plus_imf_just_used_bj 
+			has_country_flag = cg_plus_imf_just_used_hole 
+			NOT ={has_country_flag = cg_plus_imf_just_used_gb}
+		}
+
+
+
+		hidden_effect = {
+			country_event={ id=cg_plus_enclave_imf.5003  }
+			set_timed_country_flag = { flag=cg_plus_imf_just_used_gb days= 1800 }
+			country_event={  id=cg_plus_enclave_imf.3200 days = 30 }
+			set_saved_date = { key = cg_plus_imf_payment_time days_from_present = 30 }
+			subtract_variable = {
+				which = cg_plus_imf_trust_level
+				value = 1
+			}
+			change_variable = {
+				which = cg_plus_imf_past_due_count
+				value = 1
+			}
+			change_variable = {
+				which = cg_plus_imf_interest
+				value = 0.02
+			}		
+		}
+	}
+	#black_mailed
+	option = {
+		name = cg_plus_enclave_imf.3210.d
+		custom_tooltip = cg_plus_enclave_imf.3210.d.ct
+		trigger = {
+			#check_variable={ which=cg_plus_imf_trust_level value >0  }
+			is_anime_species = yes
+			has_country_flag = cg_plus_imf_just_used_bj 
+			has_country_flag = cg_plus_imf_just_used_hole 
+			has_country_flag = cg_plus_imf_just_used_gb
+			NOT={ has_country_flag=cg_plus_imf_just_used_bm }
+		}
+
+
+
+		hidden_effect = {
+			country_event={ id=cg_plus_enclave_imf.5004  }
+			set_timed_country_flag = { flag=cg_plus_imf_just_used_bm days= 1800 }
+			country_event={  id=cg_plus_enclave_imf.3200 days = 180 }
+			set_saved_date = { key = cg_plus_imf_payment_time days_from_present = 180 }
+			subtract_variable = {
+				which = cg_plus_imf_trust_level
+				value = 1
+			}
+			change_variable = {
+				which = cg_plus_imf_past_due_count
+				value = 1
+			}
+			change_variable = {
+				which = cg_plus_imf_interest
+				value = 0.02
+			}		
+		}
+	}
+
+	#sell pops
+	option={ name = cg_plus_enclave_imf.3210.e
+			 trigger={ 
+				 
+				 	check_variable={ which=cg_plus_imf_trust_level value <= -5 }
+					 OR={
+			 			has_policy_flag = nomore_slave_flag
+						 has_policy_flag = mid_slave_flag
+						 has_policy_flag = lot_slave_flag 
+						 has_policy_flag = huge_slave_flag 
+						 has_policy_flag = most_slave_flag 
+					 }
+				 
+			 }
+			 custom_tooltip = cg_plus_enclave_imf.3210.e.ct
+			hidden_effect = {
+
+
+				while = {
+					count=temp_portion_pop
+					random_owned_pop={
+						limit={ is_enslaved = yes }
+						resettle_pop = {
+							pop = this
+							planet = event_target:cg_plus_IMF_home_planet
+						}
+					}
+				}
+
+				country_event={  id=cg_plus_enclave_imf.3200 days = 360 }
+				set_saved_date = { key = cg_plus_imf_payment_time days_from_present = 360 }
+				subtract_variable = {
+					which = cg_plus_imf_debt
+					value = cg_plus_imf_debt_portion
+				}
+				subtract_variable = {
+					which = cg_plus_imf_trust_level
+					value = 1
+				}
+				change_variable = {
+					which = cg_plus_imf_past_due_count
+					value = 1
+				}
+			}
+
+
+
+
+
+	}
+
+
+	option={ name=reconsider country_event= {id=cg_plus_enclave_imf.3200 } }
+
+	after = {
+		#adjust rates
+	}
+}
+
+#3220
+country_event = {
+	id = cg_plus_enclave_imf.3220
+	hide_window = no
+	title = cg_plus_enclave_imf.1000.name
+	is_triggered_only = yes
+	diplomatic = yes
+	custom_gui = "enclave_caravaneer_window"
+	custom_gui_option = "enclave_caravaneer_option"
+	picture_event_data = {
+		portrait = event_target:cg_plus_IMF_country
+		room = enclave_trader_room
+	}
+	immediate = {
+		#remove_country_flag = from_deadline_event
+		#remove_country_flag = from_regular_event
+	}
+	#enslave
+	option = {
+		name = cg_plus_enclave_imf.3220.a
+		custom_tooltip= cg_plus_enclave_imf.3220.a
+		trigger = {
+			has_policy_flag = slavery_not_allowed
+			NOT = {	has_country_flag=cg_plus_imf_zc_use_slaves  }
+		}
+		allow={
+			NOT = {	has_country_flag=cg_plus_imf_zc_use_slaves  }
+
+		}
+		hidden_effect = {
+			set_country_flag = cg_plus_imf_zc_use_slaves
+			set_policy = {
+				policy = slavery 
+				option = slavery_allowed
+				cooldown = yes
+			}
+			subtract_variable = {
+				  which = cg_plus_imf_debt value = 10000 
+			}
+		}
+	}
+	# sex enslave
+	option = {
+		name = cg_plus_enclave_imf.3220.b
+		custom_tooltip= cg_plus_enclave_imf.3220.b
+		trigger = {
+			has_policy_flag = CG_normal_treatment_flag
+			has_country_flag= carnalism_flag
+			NOT = {	has_country_flag=cg_plus_imf_zc_sex_slaves  }
+		}
+		allow={
+			#NOT = {	has_country_flag=cg_plus_imf_zc_sex_slaves  }
+		}
+		hidden_effect = {
+			set_country_flag = cg_plus_imf_zc_sex_slaves
+			give_technology = {
+				tech = tech_sex_slave_train
+			}
+			set_policy = {
+				policy = slave_how_to_use 
+				option = CG_sex_slave_treatment
+				cooldown = yes
+			}
+			subtract_variable = {
+				  which = cg_plus_imf_debt value = 20000 
+			}
+		}
+	}
+
+	#force slave
+	option = {
+		name = cg_plus_enclave_imf.3220.c
+		custom_tooltip= cg_plus_enclave_imf.3220.c
+		trigger = {
+			#has_policy_flag = CG_normal_treatment_flag
+			#has_country_flag= carnalism_flag
+			NOT = {	has_country_flag=cg_plus_imf_zc_force_slave  }
+		}
+		allow={
+			#NOT = {	has_country_flag=cg_plus_imf_zc_sex_slaves  }
+			OR={
+				has_policy_flag=mid_slave_flag
+				has_policy_flag=lot_slave_flag
+				has_policy_flag=huge_slave_flag
+				has_policy_flag=most_slave_flag
+			}
+		}
+		hidden_effect = {
+			set_country_flag = cg_plus_imf_zc_force_slave
+
+
+			multiply_variable = {
+				  which = cg_plus_imf_debt value = 0.7 
+			}
+		}
+	}
+
+    # force bunny
+	option = {
+		name = cg_plus_enclave_imf.3220.d
+		custom_tooltip= cg_plus_enclave_imf.3220.d
+		trigger = {
+			has_technology = tech_beauty_theory
+			NOT = {	has_country_flag=cg_plus_imf_zc_use_bunny  }
+		}
+		allow={
+			NOT = {	has_country_flag=cg_plus_imf_zc_use_bunny  }
+
+		}
+		hidden_effect = {
+			set_country_flag = cg_plus_imf_zc_use_bunny
+			
+			set_policy = {
+				policy = CG_school_uniform 
+				option = bunny_uniform
+				cooldown = yes
+			}
+			subtract_variable = {
+				  which = cg_plus_imf_debt value = 0.7  
+			}
+		}
+	}
+
+	# make resort
+
+
+	# switch to all slave
+	option = {
+		name = cg_plus_enclave_imf.3220.e
+		custom_tooltip= cg_plus_enclave_imf.3220.e
+
+
+
+
+
+		
+	}
+
+
+
+
+	option = {
+		name = BACK
+
+
+	}
+	after = {
+		hidden_effect = {
+			if = {
+				limit = {   has_country_flag= from_deadline_event      }
+				remove_country_flag = from_deadline_event
+				country_event={id=cg_plus_enclave_imf.3200}
+			}
+			if = {
+				limit = {  has_country_flag = from_regular_event     }
+				remove_country_flag = from_regular_event
+				country_event={id=cg_plus_enclave_imf.1030}
+			}	
+	}
+	}
+}
+
+
+
+
+
+
+
+#add interest
+country_event = {
+	id = cg_plus_enclave_imf.9000
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		multiply_variable = {
+			which = cg_plus_imf_debt
+			value = cg_plus_imf_interest
+		}
+		change_variable = {
+			which = cg_plus_imf_debt
+			value = cg_plus_imf_lend
+		}
+	}
+
+	after = {
+		if = {
+			limit = {  check_variable={ which=cg_plus_imf_debt value > 0  }   }
+			country_event={ id= cg_plus_enclave_imf.9000 days=360 }
+		}
+	}
+
+}
+
+
+
+
+# 5xxx H pay events
+
+country_event = {
+	id = cg_plus_enclave_imf.5001
+	is_triggered_only = yes
+	title =  cg_plus_enclave_imf.3210.c
+	picture = GFX_evt_imf_5001
+	desc = cg_plus_enclave_imf.5001.desc
+
+	option = {
+		name = cg_plus_enclave_imf.5001.o
+	}
+
+}
+
+country_event = {
+	id = cg_plus_enclave_imf.5002
+	is_triggered_only = yes
+	title =  cg_plus_enclave_imf.3210.d
+	picture = GFX_evt_imf_5002
+	desc = cg_plus_enclave_imf.5002.desc
+
+	option = {
+		name = cg_plus_enclave_imf.5001.o
+	}
+
+}
+
+country_event = {
+	id = cg_plus_enclave_imf.5003
+	is_triggered_only = yes
+	title =  cg_plus_enclave_imf.3210.d
+	picture = GFX_evt_imf_5003
+	desc = cg_plus_enclave_imf.5003.desc
+
+	option = {
+		name = cg_plus_enclave_imf.5001.o
+	}
+
+}
+
+#blackmailed
+country_event = {
+	id = cg_plus_enclave_imf.5004
+	is_triggered_only = yes
+	title =  cg_plus_enclave_imf.5004.desc
+	picture = GFX_evt_imf_5004
+	desc = cg_plus_enclave_imf.5004.desc
+
+	option = {
+		name = cg_plus_enclave_imf.5004.o
+		custom_tooltip = cg_plus_enclave_imf.5004.ct
+		hidden_effect = {
+			change_variable = {
+				which = cg_plus_imf_debt
+				value = 10000
+			}
+		}
+
+	}
+
+}

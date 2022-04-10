@@ -21,11 +21,11 @@ civic_cg_colorful_artists = {
 	modifier = { }
 }
 
-civic_cg_av_directors = {
+civic_cg_IMF = {
 	modification = no
 	icon = "gfx/interface/icons/governments/civics/civic_inwards_perfection.dds"
 	potential = {
-		country_type = { value = enclave }
+		country_type = { value = cg_plus_enclave_armed }
 		ethics = { NOT = { value = ethic_gestalt_consciousness } }
 	}
 	random_weight = { base = 5 }

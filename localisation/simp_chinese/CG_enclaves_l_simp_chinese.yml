@@ -15,6 +15,11 @@
  gov_cg_plus_slave_traders_desc:0 "非常奇妙的是，你会在这里找到所有被毁灭的国家的领袖，而她们通通在这里获得一种新的本领。"
  RT_queen:0 "奴隶主"
 
+ gov_cg_IMF:0 "§Y星海货币组织§!"
+ gov_cg_IMF_desc:0 "您是否经济凋敝、人口失业、舰队弱小、科研缓慢？您是否空有一系列伟大计划而却因为资金缺乏而迟迟无法推行？不要再等待了！敌人的舰队不会等待您，恐怖的天灾不会等待您，愚蠢的刁民不会等待您，是时候将梦想化为现实了！选择星海货币组织，选择希望的明天。"
+ gov_cg_IMF_desc:0 "说是经济援助组织，但是实质是高利贷，然后贷款条件动不动就是交出贞操，修改国家制度。信贷毁约最坏程况还会把国家领袖到平民都卖为性奴。"
+ RT_director:0 "总裁"
+
  gov_cg_plus_holy_artifects:0 "§P圣光遗物管理所§!"
  gov_cg_plus_holy_artifects_desc:0 "守备森验的圣遗物管理所，有人说古老圣歌国度的强大神器都藏在这里，但也有一种说法是这个管理所只是通往宝库的一道扇门，非常神秘呢。"
  RT_priest:0 "管理员"
@@ -27,8 +32,8 @@
  gov_cg_plus_prisons_desc:0 "独立魅魔成立的性奴调教营，有专门的调教的程序，可以令全宇宙中最崛强，高傲的女人也能调教成贴服的性奴，除此之外也会生产淫欲宝石和别国进行贸易。 "
  RT_master:0 "主人"
 
-
-
+ CG_plus_enclaves.1.desc:0 "你收到一个可疑的宣传单张和一个联络信号源。"
+ CG_plus_enclaves.1.desc.fin:0 "连上去看看！"
 
  civic_cg_prisons:0 "NPC用反VSC黄标用"
  civic_cg_prisons_desc:0 "NPC用反VSC黄标用"
@@ -46,7 +51,8 @@
  civic_cg_colorful_artists_desc:0 "NPC用反VSC黄标用"
  civic_cg_av_directors:0 "NPC用反VSC黄标用"
  civic_cg_av_directors_desc:0 "NPC用反VSC黄标用"
-
+ civic_cg_IMF:0 "NPC用反VSC黄标用"
+ civic_cg_IMF_desc:0 "NPC用反VSC黄标用"
 
 
 
@@ -87,11 +93,15 @@
  cg_plus_enclaves_art.1000.a.college:0 "大触老师可不是随便开网课的呢，便宜你们咯。"
 
  cg_plus_enclaves_art.1000.a:0 "来点色图！"
+
+
+ cg_plus_enclaves_art.1000.random.text:0 "[Root.Random_artist_response]"
+
  cg_plus_enclaves_art.1000.a.reply1:0 "这里不是做慈善，先资助！"
  cg_plus_enclaves_art.1000.a.reply2:0 "不要白嫖，先付费!"
 
  cg_plus_enclaves_art.1000.a.reply.c1:0 "在画了，别吵"
- cg_plus_enclaves_art.1000.a.reply.c2:0 "别烦我，别以为"
+ cg_plus_enclaves_art.1000.a.reply.c2:0 "别烦我!"
 
  cg_plus_enclaves_art.1000.a.reply.b1:0 "在吵我就举报你！"
  cg_plus_enclaves_art.1000.a.reply.b2:0 "烦死了！烦死了！"
@@ -430,7 +440,7 @@
  cg_plus_enclave_slaver.1000.d.o:0 "看看那个特殊的商品" 
  
 
- cg_plus_enclave_slaver.0102.desc:0 "這裏是我們的牢屋，[Root.GetRulerName]可以在這裏查看及選購我們的商品，你也可以嘗試與她們交流。但請注意她們都沒經過正式調教。" #[cg_plus_slaver_country.total_slaves]"
+ cg_plus_enclave_slaver.0102.desc:0 "這裏是我們的牢屋，[Root.GetRulerName]可以在這裏查看及選購我們的商品，你也可以嘗試與她們交流。但請注意她們都沒經過正式調教。"
 
  cg_plus_enclave_slaver.0102.list:0 "§S商品列表§!"
  cg_plus_enclave_slaver.0102.list.01:0 "牢屋 一"
@@ -439,31 +449,26 @@
  cg_plus_enclave_slaver.0102.list.04:0 "牢屋 四"
  cg_plus_enclave_slaver.0102.list.05:0 "牢屋 五"
  cg_plus_enclave_slaver.0201.name:0 "[cg_plus_slaver_captured_01.GetName]的牢屋"
- cg_plus_enclave_slaver.0201.desc:0 "名称：[cg_plus_slaver_captured_01.GetName]\n原国家：[cg_plus_slaver_captured_01_origin.GetName]\n种族：[cg_plus_slaver_captured_01.GetSpeciesClass]\n原职业：[cg_plus_slaver_captured_01.GetLeaderType]"
+ cg_plus_enclave_slaver.0201.desc:0 "名称：[cg_plus_slaver_captured_01.GetName]\n原国家：[cg_plus_slaver_captured_01_origin.GetName]\n种族：[cg_plus_slaver_captured_01.Species.GetName]\n原职业：[cg_plus_slaver_captured_01.GetLeaderType]"
  cg_plus_enclave_slaver.0202.name:0 "[cg_plus_slaver_captured_02.GetName]的牢屋"
- cg_plus_enclave_slaver.0202.desc:0 "名称：[cg_plus_slaver_captured_02.GetName]\n原国家：[cg_plus_slaver_captured_02_origin.GetName]\n种族：[cg_plus_slaver_captured_02.GetSpeciesClass]\n原职业：[cg_plus_slaver_captured_02.GetLeaderType]"
+ cg_plus_enclave_slaver.0202.desc:0 "名称：[cg_plus_slaver_captured_02.GetName]\n原国家：[cg_plus_slaver_captured_02_origin.GetName]\n种族：[cg_plus_slaver_captured_02.Species.GetName]\n原职业：[cg_plus_slaver_captured_02.GetLeaderType]"
  cg_plus_enclave_slaver.0203.name:0 "[cg_plus_slaver_captured_03.GetName]的牢屋"
- cg_plus_enclave_slaver.0203.desc:0 "名称：[cg_plus_slaver_captured_03.GetName]\n原国家：[cg_plus_slaver_captured_03_origin.GetName]\n种族：[cg_plus_slaver_captured_03.GetSpeciesClass]\n原职业：[cg_plus_slaver_captured_03.GetLeaderType]"
+ cg_plus_enclave_slaver.0203.desc:0 "名称：[cg_plus_slaver_captured_03.GetName]\n原国家：[cg_plus_slaver_captured_03_origin.GetName]\n种族：[cg_plus_slaver_captured_03.Species.GetName]\n原职业：[cg_plus_slaver_captured_03.GetLeaderType]"
  cg_plus_enclave_slaver.0204.name:0 "[cg_plus_slaver_captured_04.GetName]的牢屋"
- cg_plus_enclave_slaver.0204.desc:0 "名称：[cg_plus_slaver_captured_04.GetName]\n原国家：[cg_plus_slaver_captured_04_origin.GetName]\n种族：[cg_plus_slaver_captured_04.GetSpeciesClass]\n原职业：[cg_plus_slaver_captured_04.GetLeaderType]"
+ cg_plus_enclave_slaver.0204.desc:0 "名称：[cg_plus_slaver_captured_04.GetName]\n原国家：[cg_plus_slaver_captured_04_origin.GetName]\n种族：[cg_plus_slaver_captured_04.Species.GetName]\n原职业：[cg_plus_slaver_captured_04.GetLeaderType]"
  cg_plus_enclave_slaver.0205.name:0 "[cg_plus_slaver_captured_05.GetName]的牢屋"
- cg_plus_enclave_slaver.0205.desc:0 "名称：[cg_plus_slaver_captured_05.GetName]\n原国家：[cg_plus_slaver_captured_05_origin.GetName]\n种族：[cg_plus_slaver_captured_05.GetSpeciesClass]\n原职业：[cg_plus_slaver_captured_05.GetLeaderType]"
+ cg_plus_enclave_slaver.0205.desc:0 "名称：[cg_plus_slaver_captured_05.GetName]\n原国家：[cg_plus_slaver_captured_05_origin.GetName]\n种族：[cg_plus_slaver_captured_05.Species.GetName]\n原职业：[cg_plus_slaver_captured_05.GetLeaderType]"
 
  cg_plus_enclave_slaver.0300.name:0 "[cg_plus_slaver_captured_ruler.GetName]的牢屋"
- cg_plus_enclave_slaver.0300.desc:0 "名称：[cg_plus_slaver_captured_ruler.GetName]\n原国家：[cg_plus_slaver_captured_ruler_origin.GetName]\n种族：[cg_plus_slaver_captured_ruler.GetSpeciesClass]\n"
+ cg_plus_enclave_slaver.0300.desc:0 "名称：[cg_plus_slaver_captured_ruler.GetName]\n原国家：[LastKilledCountryName]\n种族：[cg_plus_slaver_captured_ruler.Species.GetName]\n"
 
 
- leader_trait_captured:0 "爱玩奴隶"
- leader_trait_captured_desc:0 "既然是个顺从的爱玩奴隶，自然也没有什么权利。"
- leader_trait_naked:0 "REPLACE_ME"
- leader_trait_naked_desc:0 "REPLACE_ME"
- leader_trait_collared:0 "REPLACE_ME"
- leader_trait_collared_desc:0 "REPLACE_ME"
+
 
  conversion:0 "交流"
 
  cg_plus_enclave_slaver.5201:0 "意外"
- cg_plus_enclave_slaver.5201.desc:0 "一首舰船在任务中遇到危险，需要紧急撤退，因此舰队上的 §Y[cg_plus_slaver_last_captured.GetName]§! 失去联络。"
+ cg_plus_enclave_slaver.5201.desc:0 "我们的一首舰船在任务中遇到危险，需要紧急撤退。可惜的是侧推的时候遇到意外，舰队上的 §Y[cg_plus_slaver_last_captured.GetName]§! 也失去联络。"
 
  cg_plus_enclave_slaver.5301:0 "紧急逃生"
  cg_plus_enclave_slaver.5301.desc:0 "我们在上一场舰队战斗中，舰队司令 §Y[cg_plus_slaver_last_captured.GetName]§! 再最后一次通信中报告自己成功使用紧急逃生舱逃脱，但是至今还是联络不上。"
@@ -472,11 +477,36 @@
  cg_plus_enclave_slaver.5101:0 "围城"
  cg_plus_enclave_slaver.5101.desc:0 "我们的星球被袭击， §Y在 [fromfrom.GetName]§! 的 §Y[cg_plus_slaver_last_captured.GetName]§! 使用了紧急飞行器逃离星球，但是在之后失去联络。"
 
- cg_plus_enclave_slaver.5401:0 "[cg_plus_slaver_captured_ruler_origin.GetName]灭亡"
- cg_plus_enclave_slaver.5401.desc:0 "[cg_plus_slaver_captured_ruler_origin.GetName]正式灭亡，但有消息指§Y[cg_plus_slaver_captured_ruler_origin.GetRulerTitle][cg_plus_slaver_captured_ruler_origin.GetRulerName]§!成功出逃了！或许我们可以在哪里再找到她。"
+ cg_plus_enclave_slaver.5401:0 "[LastKilledCountryName]灭亡"
+ cg_plus_enclave_slaver.5401.desc:0 "§Y[LastKilledCountryName]§!正式灭亡，但有消息指§Y[LastKilledCountryName.GetRulerTitle][cg_plus_slaver_captured_ruler.GetRulerName]§!成功出逃了！或许我们可以在哪里再找到她。"
 
 
- cg_plus_enclave_slaver.random.text:0 "咕。。。杀了我。。"
+ cg_plus_enclave_slaver.random.text:0 "[Root.Random_caputre_slave_response]"
+ randnum_response.1:0 "举报你哟，你有狗胆子买我，我要举报你喔！"
+ randnum_response.2:0 "快放我出去！！喂~~~~!"
+ randnum_response.3:0 "....你别过来喔。！"
+ randnum_response.4:0 "你别乱来，我可是统率200K效能舰队的指挥官，她们来到的时候你就知味道"
+ randnum_response.5:0 "毁灭吧。。。"
+ randnum_response.6:0 "你是谁？我在那里？这是做什么的？"
+ randnum_response.7:0 "？"
+ randnum_response.sp1:0 "快救我出来~~~~~"
+ randnum_response.sp2:0 "[Root.GetRulerName]大人，救救我，救我出，大人叫我去东，[conversation_with]就没有向西的，"
+ randnum_response.sp3:0 "别走呀~！我要回家~~！"
+ randnum_response.sp4:0 "哼！才不要你关心呢！"
+
+
+ randnum_response.l.1:0 "别急嘛，不就是想抱抱姐姐吗？"
+ randnum_response.l.2:0 "唔。。唔。。调教棒不要停。。要去了，要去了"
+ randnum_response.l.3:0 "喂！，把我困在这里又不给男仆算是什么东西？"
+ randnum_response.l.4:0 "这是。。这是什么监禁play吗？"
+ randnum_response.i.1:0 "咕。杀了我！"
+ randnum_response.i.2:0 "我是不会屈服的！"
+ randnum_response.i.3:0 "（笑）等我出了就把你沙了"
+ randnum_response.i.4:0 "圣歌会保佑她的信徒，圣歌会保佑她的信徒"
+ randnum_response.i.5:0 "贫尼的肉不好吃，施主还是过省下这钱吧。。"
+
+
+
 
 
  cg_plus_enclave_slaver.buy_slave:0 "确认购买"
@@ -487,23 +517,20 @@
  slave_sold:0 "已卖出"
  cg_plus_enclave_slaver.0105.1.r:0 "特殊商品會以拍賣形式出售，在拍賣期間和之前，您可以在通信中查看商品。\n拍賣開始時各方將會收到我們的信息，并可以通過通信進入拍賣場進行競標。\n拍賣會持續兩年，商品會由最後的最高競標這獲得。"
  cg_plus_enclave_slaver.8000.name:0 "購買詳細"
- cg_plus_enclave_slaver.8000.desc:0 "以下為商品價格詳細\n\n===============\n\n能源£energy£：[Root.temprpice_energy]\n能源£consumer_goods£：[Root.temprpice_consumer_goods]\n欲望珠£love_juice£：[Root.temprpice_love_juice]\n稀有文物£minor_artifacts£：[Root.temprpice_minor_artifact]\n稀有水晶£rare_crystals£：[Root.temprpice_rare_crystals]\n纳米机器人£nanites£：[Root.temprpice_nanites]\n暗物质£sr_dark_matter£：[Root.temprpice_dark_matter]"
+ cg_plus_enclave_slaver.8000.desc:0 "以下為商品價格詳細\n===============\n能源£energy£：[Root.temprpice_energy]\n能源£consumer_goods£：[Root.temprpice_consumer_goods]\n欲望珠£love_juice£：[Root.temprpice_love_juice]\n稀有文物£minor_artifacts£：[Root.temprpice_minor_artifact]\n稀有水晶£rare_crystals£：[Root.temprpice_rare_crystals]\n纳米机器人£nanites£：[Root.temprpice_nanites]\n暗物质£sr_dark_matter£：[Root.temprpice_dark_matter]"
  basic_modifications:0 "基本调教项目"
  advance_modifications:0 "特殊调教项目"
- knowledge_modification:0 "常识置换"
+ knowledge_modifications:0 "常识置换"
  appearence_modifications:0 "外貌体征改造"
  trait_modifications:0 "特质改造"
  species_modifications:0 "种族改造" 
  CONFRIM_PAYMENT:0 "确认付款"
  RECONSIDER:0 "再考虑"
  cg_plus_enclave_slaver.8100.name:0 "確認購買"
- cg_plus_enclave_slaver.8100.desc:0 "以下為最終價目\n\n===============\n\n能源£energy£：[Root.temprpice_energy]\n能源£consumer_goods£：[Root.temprpice_consumer_goods]\n欲望珠£love_juice£：[Root.temprpice_love_juice]\n稀有文物£minor_artifacts£：[Root.temprpice_minor_artifact]\n稀有水晶£rare_crystals£：[Root.temprpice_rare_crystals]\n纳米机器人£nanites£：[Root.temprpice_nanites]\n暗物质£sr_dark_matter£：[Root.temprpice_dark_matter]"
+ cg_plus_enclave_slaver.8100.desc:0 "以下為购买§Y[buy_target.GetName]§!最終價目\n===============\n能源£energy£：[Root.temprpice_energy]\n能源£consumer_goods£：[Root.temprpice_consumer_goods]\n欲望珠£love_juice£：[Root.temprpice_love_juice]\n稀有文物£minor_artifacts£：[Root.temprpice_minor_artifact]\n稀有水晶£rare_crystals£：[Root.temprpice_rare_crystals]\n纳米机器人£nanites£：[Root.temprpice_nanites]\n暗物质£sr_dark_matter£：[Root.temprpice_dark_matter]"
  PAY:0 "成交！"
 
- cg_plus_enclave_slaver.8500.desc:0 "交易成功！"
- cg_plus_enclave_slaver.8500.desc:0 "感谢光顾 ，我们根据下单项目对商品进行调教，课程完成后会进行通信和货运。其中调教记录也会以记录并转交阁下 "
-
- cg_plus_enclave_slaver.8500.desc:0 "交付成功！"
+ cg_plus_enclave_slaver.8500.name:0 "交易成功！"
  cg_plus_enclave_slaver.8500.desc:0 "感谢光顾 ，我们根据下单项目对商品进行调教，课程完成后会进行通信和货运。其中调教记录也会以记录并转交阁下 "
 
 
@@ -512,6 +539,353 @@
  cg_plus_enclave_slaver.0105.1.o:0 "哪怎么才能把她据为己有？"
  cg_plus_enclave_slaver.0105.2.o:0 "探访"
  cg_plus_enclave_slaver.0105.3.o:0 "进入竞标画面。"
+
+
+ basic_modification_selected:0 "已经选取 $basic_modifications$ 项目"
+ advanced_modification_selected:0 "已经选取 $advance_modifications$ 项目"
+ knowledge_modification_selected:0 "已经选取 $knowledge_modifications$ 项目"
+ appearence_modification_selected:0 "已经选取 $appearence_modifications$ 项目"
+ trait_modification_selected:0 "已经选取 $trait_modifications$ 项目"
+ species_modification_selected:0 "已经选取 $species_modifications$ 项目"
+ cg_plus_enclave_slaver.8001.desc:0 "$basic_modifications$\n==================\n以下为基础调教选项，你只可以选择其中一种或是不进行调教委托也可以。"
+ training_obidence_training:0 "顺从训练"
+ training_obidence_training.ct:0 "$training_obidence_training$\n把调教方针设置为完全主人服从命令为最终目标，我们会根据商品的原社会阶级和文化定制对应课程，最终达到出售后能完全听命于新主人。\n费用：£energy£5000"
+ training_wife_training:0 "妻妾训练"
+ training_wife_training.ct:0 "$training_wife_training$\n为宇宙普遍的少子化而制定的训练方案，至力把奴隶培育成为完美的妻妾，让她们可背负为主人繁衍后代的责任，此项服务非常受繁殖率较低的种族欢迎。\n费用：£consumer_goods£3000"
+ training_toilet_training:0 "肉便器调教"
+ training_toilet_training.ct:0 "$training_toilet_training$\n随随便便就被玩坏可就不是合格的肉便器了，本项目是为了提高奴隶在日夜不停的性爱不能会生存下来，还的保持一定的感度和反应。\n费用：£love_juice£4000"
+ training_pet_training:0 "爱玩宠物调教"
+ training_pet_training.ct:0 "$training_pet_training$\n使奴隶成为主人家养的小动物一样的爱玩宠物，此项调教会对奴隶进行绝育以及降智调整，但是相对反抗心和需求会大幅降低，只要每日投喂和定期做爱既可以。\n费用：£love_juice£2000,£energy£5000"
+
+ cg_plus_enclave_slaver.8002.desc:0 "$advance_modifications$\n==================\n以下为特殊调教选项，调教强度较高，相对的收费也会较高。每项调教会对商品产生对应的改变，请清楚阅读产品项目的描述。\n您只可以选择其中一种或是不进行调教委托也可以。"
+ training_tentacle_equipment:0 "触装训练"
+ training_tentacle_equipment.ct:0 "$training_tentacle_equipment$\n使用共生触手生物制作的外装甲外装对商品进行训练，会是奴隶的虚灵能力大大提高。   \n费用：£love_juice£5000  £rare_crystals£1000 £minor_artifacts£15"
+ training_sensitivity_mod:0 "感度改造"
+ training_sensitivity_mod.ct:0 "$training_sensitivity_mod$\n敏感度改变，最高能使个体的官能敏高度提高至3000倍！除了能够用作性爱高潮表演，也能作为生体型能量探测器\n费用：£love_juice£5000  £energy£10000 £minor_artifacts£15"
+ training_mecha_suit_training:0 "机装训练"
+ training_mecha_suit_training.ct:0 "$training_mecha_suit_training$\n此项目会对奴隶进行合成进化，大大提升该奴隶的体质能力，同时获得机器端口，主人可以透过端口进行绝对的指令。当然，奴隶的性器是会保留下来，但是普通生体人的肉棒可能已经满足不了她。\n费用：£nanites£30  £energy£20000 £rare_crystals£1000 £minor_artifacts£30"
+ training_corruption_mod:0 "洗脑恶堕"
+ training_corruption_mod.ct:0 "$training_corruption_mod$\n使用黑物质调制出来的黑泥以对宿主进行心灵堕落的洗脑技术，过程会使藏在奴隶内心深处的黑暗面具现。\n费用：£energy£20000 £sr_dark_matter£1000 £minor_artifacts£30"
+
+ cg_plus_enclave_slaver.8003.desc:0 "常识修改"
+ change_to_governer:0 "转职为总督"
+ change_to_governer.ct:0 "费用：£energy£5000 £minor_artifacts£5"
+ change_to_scientist:0 "转职为科学家"
+ change_to_scientist.ct:0 "费用：£energy£5000 £minor_artifacts£5"
+ change_to_admiral:0 "转职为舰队统帅"
+ change_to_admiral.ct:0 "费用：£energy£5000 £minor_artifacts£5"
+ change_to_general:0 "转职为陆军将军"
+ change_to_general.ct:0 "费用：£energy£5000 £minor_artifacts£5"
+
+ cg_plus_enclave_slaver.8004.desc:0 "样貌修缮"
+ change_appearence:0 "修改样貌"
+ change_appearence.ct:0 "反正有些人就是很喜欢小萝莉，所以就让客户套个喜欢的皮肤吧。/n费用：£energy£5000 £consumer_goods£5000  £rare_crystals£2000"
+
+ cg_plus_enclave_slaver.8005.desc:0 "增加种族特质"
+
+ cg_plus_enclave_slaver.8006.desc:0 "种族改造"
+
+ change_species:0 "把种族改造成为 [Root.GetSpeciesName]"
+ change_species.ct:0 "一个为有种族洁癖的客户准备的服务。\n费用：£energy£5000 £consumer_goods£5000 "
+
+ cg_plus_enclave_slaver.8501.name:0 "商品交付"
+ cg_plus_enclave_slaver.8501.desc:0 "[bought_slave.GetName]成功交付到[Root.GetName]手上。"
+ cg_plus_enclave_slaver.8501.desc.1:0 "【[bought_slave.GetName]是您，[Root.GetRulerName]最忠诚的仆人，仆人会完全听从主人的每一个指示，尽全心全灵去执行，不求回报，不惜代价，因仆人的全部都属于主人[Root.GetRulerName]】"
+ cg_plus_enclave_slaver.8501.desc.2:0 "【终于能见到达令[Root.GetRulerName]了，[bought_slave.GetName]好开心，我发喜就算去到天涯海阁也会永远跟着您。】"
+ cg_plus_enclave_slaver.8501.desc.3:0 "你收到一个印有[bought_slave.GetName]名字的能藏藏舱，上面写着有关你购入这个肉便器的交易记录。"
+ cg_plus_enclave_slaver.8501.desc.4:0 "【喵喵，[bought_slave.GetName]最喜欢主人了，当然主人的唧唧也喜欢咯。你说那个比较喜欢？当然都很喜欢喇。】"
+ cg_plus_enclave_slaver.8501.desc.5:0 "【Ph'nglui mglw'nafh Cthulhu R'lyeh wgah'nagl fhtagn.】是的[bought_slave.GetName]身上的寄生触装在和你说话。"
+ cg_plus_enclave_slaver.8501.desc.6:0 "【别碰我。。别！。！】你摸了一下受过敏感度改造的[bought_slave.GetName]，你很满意地看着被轻轻地碰一下而高潮至淫水四浅的奴隶。"
+ cg_plus_enclave_slaver.8501.desc.7:0 "【机兵。。报道。。。还是用端口通信把，这我不习惯】"
+ cg_plus_enclave_slaver.8501.desc.8:0 "【噶哈哈，[Root.GetRulerName]今天要杀谁呢？】"
+
+
+
+
+ cg_plus_enclave_slaver.1900:0 "我们这边找到一些新的小动物,要来看看吗？她们可是可遇不可求喔。"
+ cg_plus_enclave_slaver.1900.a:0 "现在就看看吧!"
+
+
+
+# 7xxx training events
+cg_plus_enclave_slaver.7110.name:0 "[buy_target.GetName]的服从训练"
+cg_plus_enclave_slaver.7110.desc:0 "调教记录#7110\n项目:[buy_target.GetName]的服从训练\n这是[buy_target.GetName]在舰船意外被抓之后第一次的调教，即时他已经被关押在这里的牢房已经一段时间，但是[buy_target.GetName]好像还没弄清楚自己的立场。\n为了保证我们商品和产品描述一至，今天调教员会让[buy_target.GetName]清楚明白自己轻松的软禁生活将会完结，而懂得服从主人的每一个命令之外没有其他选择。"
+
+
+cg_plus_enclave_slaver.7120.name:0 "[buy_target.GetName]的奴隶花嫁"
+cg_plus_enclave_slaver.7120.desc:0 "调教记录#7120\n项目:[buy_target.GetName]的奴隶花嫁\n繁星下一些种族受到美神的眷顾，是她们在众多其他种族也有着据为己有的欲望。今天，[buy_target.GetName]得知自己要被贩卖到[Root.GetName]心情显得压抑，当本是一个大有前途的[buy_target.GetLeaderType]，怎么可以沦为别人的爱玩妻妾？\n可是看到自己现在穿着的一些身华丽的嫁衣或许正在一点点地改变[buy_target.GetLeaderType]的想法。。。"
+
+
+cg_plus_enclave_slaver.7130.name:0 "肉便器[buy_target.GetName]"
+cg_plus_enclave_slaver.7130.desc:0 "调教记录#7130\n项目:肉便器[buy_target.GetName]\n本社并不是很推介这种服务，但是宇宙中就是有不少外星人爱这一套，找个一个有名望，知识的人很容易吗？不都是肉穴吗？然后还要让一堆不伦不类的人一起使用，干净又卫生呐！【别再记录上说废话了，注射营养药剂和兴奋剂然后打包吧。】"
+
+cg_plus_enclave_slaver.7140.name:0 "爱玩宠物[buy_target.GetName]"
+cg_plus_enclave_slaver.7140.desc:0 "调教记录#7140\n项目:爱玩宠物[buy_target.GetName]\n以前宠物只是单指人们为了消除孤寂或出于娱乐目的而豢养的动物。而现在最流行的宠物当然是把文明外星人转化为低智动物作为爱玩家宠物进行领养。除了可以为主人解闷，还可满足主人的性欲！"
+
+
+cg_plus_enclave_slaver.7210.name:0 "触手与[buy_target.GetName]的融合"
+cg_plus_enclave_slaver.7210.desc:0 "调教记录#7210\n项目:触手与[buy_target.GetName]的融合\n具记录记载，触手服装是通过魔法、诅咒、触手侵蚀或融合等方式将普通服装转化为触手服装，还有一些则是将触手、粘液等转化为服装的形式，但通过我们的深入研究，我们已经可以精准培育以及制作这些触手服装，拖过不同的基因样本，我们可以提升穿着者的能力，甚至可以提升穿着者的灵能能量，但是唯一的缺点就是完全融合之后就不能再分开了。"
+
+cg_plus_enclave_slaver.7220.name:0 "感度3000倍"
+cg_plus_enclave_slaver.7220.desc:0 "调教记录#7220\n项目:感度3000倍\n许多人误解了这种 【感度3000倍】 的状态并不意味着人类所有的感官都增加了3000倍，而是指整个身体变成了一个性区，其敏感性增加了3000倍，而其他感官（视觉、听觉、听觉等）也增加了3000倍。所以除了使当时人嗨翻天可还是有别的用途的。"
+
+
+cg_plus_enclave_slaver.7230.name:0 "[buy_target.GetName]的智械融合"
+cg_plus_enclave_slaver.7230.desc:0 "调教记录#7230\n项目:[buy_target.GetName]的智械融合\n【血肉苦难！除了色色之外！所以就把那些没用的东西都置换成不巧的机械吧！】这些煽情的宣传口号对那些合成种族还是非常靠谱的，那究竟他们需要色色还是不要色色？"
+
+
+cg_plus_enclave_slaver.7240.name:0 "[buy_target.GetName]的黑泥恶堕"
+cg_plus_enclave_slaver.7240.desc:0 "调教记录#7230\n项目:[buy_target.GetName]的黑泥恶堕\n通过研究暗物质，贩卖所掌握了暗物质练成黑泥的技术，这黑泥实质是原黑洞把宇宙负能量进行吸收的时候负能量的能量的凝聚物。需然物理质量和普通的物理界物种相若，但是其负能量的质量可是不合比例的重。而当这物质和有感情的有机智人在精神面上接触后会把其内在的压抑的负面能量唤醒。而这内在有多黑暗，当然要看每个人的经历了。"
+
+
+
+cg_plus_enclave_slaver.7310.name:0 "[buy_target.GetName]的通信"
+cg_plus_enclave_slaver.7310.desc:0 "记录#7310，种族置换装置。请确认要把目标置换成哪一个种族？"
+
+cg_plus_enclave_slaver.7310.a:0 "[buy_target.GetName]将成为我们！"
+cg_plus_enclave_slaver.7310.b:0 "成为便器吧！"
+cg_plus_enclave_slaver.7310.c:0 "让圣光灌注[buy_target.GetName]"
+
+cg_plus_enclave_slaver.7410.desc:0 "记录#7410\n星海整容助手Max7Pro,为了服务。请选择需要的体型和样貌，星海整容助手Max7Pro别定能把能把宇宙中最丑的生物也能变得完美无瑕！（机器详细使用请按F11建查看长达423的说明书，和341页的可能出现异常状况。）"
+
+cg_plus_enclave_slaver.7410.a:0 "我最喜欢萝莉了！"
+cg_plus_enclave_slaver.7410.b:0 "工口小屁孩！"
+cg_plus_enclave_slaver.7410.c:0 "諸君,我喜欢巨乳"
+cg_plus_enclave_slaver.7410.d:0 "淫堕魔大喜"
+cg_plus_enclave_slaver.7410.e:0 "人均1000岁精灵处女"
+cg_plus_enclave_slaver.7410.end:0 "确定要这个"
+
+
+cg_plus_enclave_slaver.7510.desc:0 "记录#7510\n知识变换仪器：\n直接把登记人的简历上的职业栏修改以下就行了是吧。"
+
+cg_plus_enclave_slaver.7510.a:0 "[buy_target.GetName]会成为一名出色的舰队司令"
+cg_plus_enclave_slaver.7510.b:0 "[buy_target.GetName]会成为一名出色的陆军司令"
+cg_plus_enclave_slaver.7510.c:0 "[buy_target.GetName]会成为一名出色的总督"
+cg_plus_enclave_slaver.7510.d:0 "[buy_target.GetName]会成为一名出色的科学家"
+
+
+ leader_trait_captured:0 "爱玩奴隶"
+ leader_trait_captured_desc:0 "既然是个顺从的爱玩奴隶，自然也没有什么权利。"
+ leader_trait_naked:0 "全裸PLAY"
+ leader_trait_naked_desc:0 "在被人贩子找到后被逼全裸生活几个月后有什么觉醒了"
+ leader_trait_collared:0 "奴隶项圈"
+ leader_trait_collared_desc:0 "被扣上了解不开的奴隶项圈"
+ leader_trait_bondage:0 "紧搏上瘾"
+ leader_trait_bondage_desc:0 "被抓的时候因为激烈反抗而被搏起来的时候有什么觉醒了"
+ leader_trait_obidient:0 "绝对服从"
+ leader_trait_obidient_desc:0 "受过专业的顺从训练"
+ leader_trait_drug_enhance:0 "REPLACE_ME"
+ leader_trait_drug_enhance_desc:0 "REPLACE_ME"
+
+ leader_trait_bride:0 "奴隶花嫁"
+ leader_trait_bride_desc:0 "被买下来的幸福"
+ leader_trait_rbq:0 "肉便器"
+ leader_trait_rbq_desc:0 "群友最喜欢的绒布球"
+ leader_trait_pet:0 "爱玩宠物"
+ leader_trait_pet_desc:0 "喵喵喵"
+ leader_trait_living_clothes:0 "触装共生"
+ leader_trait_living_clothes_desc:0 "Ph'nglui mglw'nafh Cthulhu R'lyeh wgah'nagl fhtagn"
+ leader_trait_sense3000:0 "感度3000倍"
+ leader_trait_sense3000_desc:0 "你有没有感觉到XX在分崩离析"
+ leader_trait_ero_cybrog:0 "机装改造"
+ leader_trait_ero_cybrog_desc:0 "【有什么都在端口上说就好了】"
+ leader_trait_dr_corrupt:0 "黑泥恶堕"
+ leader_trait_dr_corrupt_desc:0 "通通都沙了就可以了"
+ leader_trait_brainwash_admiral:0 "奴隶舰艇司令Alpha"
+ leader_trait_brainwash_admiral_desc:0 "在$gov_cg_plus_slave_traders$受过训练的领袖"
+ leader_trait_slave_admiral:0 "奴隶舰艇司令Beta"
+ leader_trait_slave_admiral_desc:0 "在$gov_cg_plus_slave_traders$受过训练的领袖"
+ leader_trait_brainwash_general:0 "奴隶陆军司令Alpha"
+ leader_trait_brainwash_general_desc:0 "在$gov_cg_plus_slave_traders$受过训练的领袖"
+ leader_trait_slave_general:0 "奴隶陆军司令Beta"
+ leader_trait_slave_general_desc:0 "在$gov_cg_plus_slave_traders$受过训练的领袖"
+ leader_trait_brainwash_explorer:0 "洗脑奴隶科学家"
+ leader_trait_brainwash_explorer_desc:0 "在$gov_cg_plus_slave_traders$受过训练的领袖"
+ leader_trait_slave_researcher:0 "奴隶科学家"
+ leader_trait_slave_researcher_desc:0 "在$gov_cg_plus_slave_traders$受过训练的领袖"
+ leader_trait_public_governer:0 "共用总督"
+ leader_trait_public_governer_desc:0 "在$gov_cg_plus_slave_traders$受过训练的领袖"
+ leader_trait_toy_governer:0 "爱玩总督"
+ leader_trait_toy_governer_desc:0 "在$gov_cg_plus_slave_traders$受过训练的领袖"
+
+#auction loc
+
+BID_PRICE:0 "最高竞标价："
+BID_OWNER:0 "竞标人："
+BID_TIME_LEFT:0 "竞标剩余时间："
+
+bid_price_sr_text:0 "§Y[cg_plus_slaver_country.highest_bid_price]£energy£"
+bid_owner_sr_text:0 "[cg_plus_auction_highest_bidder.GetName]"
+bid_time_left_sr_text:0 "[cg_plus_slaver_country.bid_time_left]日"
+
+AUCTION_NAME:0 "[cg_plus_slaver_captured_ruler.GetName]"
+AUCTION_COUNTRY:0 "[LastKilledCountryName]"
+
+
+NEW_BID_PRICE:0 "新叫价："
+new_bid_price_sr_text:0 "§Y[Root.temp_bid_price]£energy£"
+
+product_name_label:0 "拍卖品："
+product_src_label:0 "来源："
+
+button_bid_10K:0 "+1K"
+button_bid_1M:0 "+10K"
+button_bid_100M:0 "+100K"
+
+
+
+confirm_bid:0 "§Y叫价！"
+bid_higher:0 "叫价需要大于现在最高出价。"
+reset_bid:0 "重设出价"
+bid_over:0 "拍卖已经完结！"
+auction_not_started_yet:0 "§Y拍卖还没开始"
+
+cg_plus_enclave_slaver.9003.text:0 "您的竞标价被【[cg_plus_auction_highest_bidder.GetName]】超过了，剩余的期限还有【[cg_plus_slaver_country.bid_time_left]日】。\n要从新叫价吗？"
+cg_plus_enclave_slaver.9003.a:0 "进入拍卖会界面"
+cg_plus_enclave_slaver.9003.a.t:0 "进入拍卖会界面"
+
+cg_plus_enclave_slaver.9004.text:0 "拍卖[cg_plus_slaver_captured_ruler.GetName]的拍卖会正式开始了，有兴趣的记得来看看喔。"
+
+
+
+cg_plus_enclave_slaver.9100.name:0 "拍卖结束！"
+cg_plus_enclave_slaver.9100.desc:0 "恭喜 【[cg_plus_auction_highest_bidder.GetName]】以最高标价 $bid_price_sr_text$ 获得 $AUCTION_NAME$!"
+cg_plus_enclave_slaver.9050.name:0 "§P星海性奴拍卖会§!"
+
+cg_plus_enclave_slaver.9101.desc:0 "别以为你买下我就能为所欲为！"
+
+
+
+ cg_plus_enclave_slaver.9210.name:0 "成为欲神的修女"
+ cg_plus_enclave_slaver.9210.desc:0 "本为圣歌女王的§P[cg_plus_slaver_captured_ruler.GetName]§!有着强大的灵力，而这巨量的灵力当然可以用于供奉我们伟大的欲神。我们即将把我们用巨款买回来的前圣歌圣女安排到首都欲神神殿作为奉献修女。"
+ cg_plus_enclave_slaver.9211.desc:0 "凡人是不可能抵抗欲神的眷顾，在经过三个月的供奉§P[cg_plus_slaver_captured_ruler.GetName]§!和圣歌的连接已经完全切断，她的信仰完全被欲神取代，并会把她一生修炼的灵力，全部奉献给她新的神。"
+ cg_plus_slaver_9210:0 "欲神的祝福"
+ cg_plus_enclave_slaver.9211.a:0 "赞美！赞美！赞美！"
+
+ cg_plus_enclave_slaver.9220.name.o:0 "让他落难的屈辱"
+ cg_plus_enclave_slaver.9220.name:0 "屈辱的总司令"
+ cg_plus_enclave_slaver.9220.desc:0 "让其人之道，还其人之身，今天我们把曾经入侵过我们的§P[cg_plus_slaver_captured_ruler.GetName]§!前总司令脱光示众，让她也感受一下这种屈辱。"
+ g_plus_enclave_slaver.9220.o:0 "活该"
+ cg_plus_slaver_9220:0 "战利品回购"
+
+ cg_plus_enclave_slaver.9230.name.o:0 "有机物战利品"
+ cg_plus_enclave_slaver.9230.name:0 "有机物战利品"
+ cg_plus_enclave_slaver.9230.desc:0 "为了了解有机物种，我们通过我们丰厚的财力把前国家元首§P[cg_plus_slaver_captured_ruler.GetName]§!弄到手上，并进行多方面的研究。元首为有机国家的最高统领，是国家的核心，了解她的想法就能了解有机物国家的运行方式。\n为了实验，我们会对其进行各种素描和测试，当中也会研究有机物独特以肉体性爱以支配她人的技术。这会对我们未来以同样方式进行支配有很大的帮助。"
+ g_plus_enclave_slaver.9230.o:0 "有趣。"
+ cg_plus_slaver_9230:0 "战利品回购"
+
+
+
+ cg_plus_enclave_slaver.9240.name:0 "原始种族的女王"
+ cg_plus_enclave_slaver.9240.desc:0 "为了开发境内的原始人星球，我们决定为他们准备了一份大礼物，想必酋长收到这个豪华新孕袋一定会欢喜若狂，立即同意我们接下来的星球开发任务。\n§P[cg_plus_slaver_captured_ruler.GetName]§!：「我是千年王国前女王，如今的千年淫后§P[cg_plus_slaver_captured_ruler.GetName]§!，今晚，奉酋长陛下的旨意，轮奸受孕，我体内的黑水晶从昨天已经开始强制我的输卵管排卵，娼馆的医疗组确认过，若是我今晚被轮奸，怀孕几率将会接近100%，由于银水晶的加护，我怀孕后诞下的必然是女婴，请……请尽情在我的淫穴里内射，把尽量多的精子注射到我被污染过的子宫内，把……把我这头母猪的肚子肏大……根据《千年王国献身条约》，我生下的小公主由淫帝陛下把年龄在两年内催熟至14岁，和我这个母亲一样，终生沦为帝国的公主性奴，一起供人奸弄淫欲……千年王国的女人，包括我们母女，最后全部都要被帝国搞大肚子，无一幸免！」"
+ g_plus_enclave_slaver.9240.o:0 "好耶"
+ cg_plus_slaver_9240:0 "酋长的回礼"
+
+ cg_plus_enclave_slaver.9250.name.o:0 "转卖"
+ cg_plus_enclave_slaver.9250.name:0 "转卖"
+ cg_plus_enclave_slaver.9250.desc:0 "非常幸运的是§P[cg_plus_slaver_captured_ruler.GetName]§!的族人还存在宇宙，并很积极地联络我们，希望赎回§P[cg_plus_slaver_captured_ruler.GetName]§!本人，当然我们不是大慈善家，她们得当付出我们在拍卖场所用的竞标价格的翻倍的价钱。"
+ g_plus_enclave_slaver.9250.o:0 "赚！"
+ cg_plus_enclave_slaver.9100.a:0 "支付！§P[cg_plus_slaver_captured_ruler.GetName]§!是我的了"
+
+
+
+
+# imf
+#--------------------------------------------------------
+
+
+ cg_plus_enclave_imf.1000.name:0 "来自$gov_cg_IMF$的通信"
+ cg_plus_enclave_imf.1999.desc.a:0 "您是否经济凋敝、人口失业、舰队弱小、科研缓慢？您是 否空有一系列伟大计划而却因为资金缺乏而迟迟无法推行？不要再等待了！敌人的舰队不会等待您，恐怖的天灾不会等待您，愚蠢的刁民不会等待您，是时候将梦想化为现实了！选择星海货币组织，选择希望的明天。"
+ cg_plus_enclave_imf.1999.a:0 "需要周转的时候再说。"
+ cg_plus_enclave_imf.1999.b:0 "我们没有财政问题。"
+
+ cg_plus_enclave_imf.1500.desc:0 "只需一个通信，$gov_cg_IMF$就能解决你的问题。\n省时 能源币即即申请即批核\n易批 国家无论大少，体制都可以轻松拿到贷款\n低利息 利息清楚易明，没有隐藏条款"
+ cg_plus_enclave_imf.1500.a:0 "看看条件吧"
+
+
+ cg_plus_enclave_imf.1000.desc.a:0 "您好的[Root.GetRulerName]，是有什么鸿途大计需要我们的财务帮助吗？"
+ cg_plus_enclave_imf.1000.desc.b:0 "貸款在$gov_cg_IMF$可以简易快速完成，即时一批即过数，随时解决现金周转需要。"
+
+
+ cg_plus_enclave_imf.1000.a:0 "服务查询"
+ cg_plus_enclave_imf.1000.b:0 "申请贷款"
+ cg_plus_enclave_imf.1000.b.f:0 "需先偿还上期欠款"
+ cg_plus_enclave_imf.1000.c:0 "查询欠款"
+ cg_plus_enclave_imf.1000.d:0 "评估信用"
+
+ cg_plus_enclave_imf.1010.desc:0 "利息永远是贷款时最重要的考虑因素，利率越高，借钱成本亦会相应增加。所以，在决定申请私人贷款前，您最好先了解清楚该私人贷款产品是以什么方法计算利息。当然，您还需要考虑贷款额、还款期及应付贷款利息总额等等因素。"
+ cg_plus_enclave_imf.1010.a.o:0 "贷款详细"
+ cg_plus_enclave_imf.1010.a:0 "阁下可以在通信中申请贷款，并确认最高贷款额，利率，手续费，最低贷款和还款期。参考详细后可以设定所需要的贷款，手续完成阁下将获得全数款项，所以请事先确认自己的能源币仓库容量。"
+ cg_plus_enclave_imf.1010.b.o:0 "提升贷款额"
+ cg_plus_enclave_imf.1010.b:0 "$gov_cg_IMF$会以阁下的国家规模以及人口等多方面因素进行信用以和还款能力进行评估以制定客户的最高贷款额。"
+ cg_plus_enclave_imf.1010.c.o:0 "延期还款"
+ cg_plus_enclave_imf.1010.c:0 "如果阁下不幸在还款期无力偿还债务，$gov_cg_IMF$会提供多种底债条件以延长还款期限。当中包括，偿还利息部分，以各种资源底债，以特许商务合约作为减债条件等等。"
+
+
+ cg_plus_enclave_imf.1020.desc:0 "阁下的最高贷款额：§Y[Root.cg_plus_imf_credit]§!£energy£\n年利率为§Y[Root.cg_plus_imf_interest]§!\n还款期为：§Y[Root.cg_plus_imf_pay_time]§!日\n\n======================================\n请确认你的所需借贷金额:§Y[Root.temp_lend]§!£energy£"
+ add10K:0 "+1万"
+ minus10K:0 "-1万"
+
+ cg_plus_enclave_imf_confirm_lend:0 "确认贷款"
+ cg_plus_enclave_imf_confirm_lend.f:0 "§Y借款已超出最高贷款额!"
+ cg_plus_enclave_imf_confirm_lend.f2:0 "§Y借款不能为0!" 
+
+ cg_plus_enclave_imf.1021.desc:0 "我们收到您的贷款申请，批核后资金很快就会传入你的户口。"
+
+ cg_plus_enclave_imf.1030.desc.nodebt:0 "您现在没有任何欠款！"
+ cg_plus_enclave_imf.1030.desc.debt:0 "您现在的欠款为：§Y[Root.cg_plus_imf_debt|*0]§!£energy£\n年利率为§Y[Root.cg_plus_imf_interest]§! 最迟还款日期为：[Root.cg_plus_imf_payment_time]"
+
+
+
+ cg_plus_enclave_imf_paydebt:0 "偿还全数欠款!"
+
+
+ cg_plus_enclave_imf.1040.desc:0 "经过重新检视您所提交的资料,bing"
+
+
+
+
+
+
+ cg_plus_enclave_imf.3100.desc:0 "贷款已经成功批核！\n您的贷款金额为§Y[Root.cg_plus_imf_debt|*0]§!£energy£，还款期限为 [Root.cg_plus_imf_payment_time] 前。\n您可以随时以通信方式查询或是还款。"
+
+ cg_plus_enclave_imf.3200.desc:0 "您的还款期限已到，所需还款额为：§Y[Root.cg_plus_imf_debt]§!£energy£"
+
+
+
+ cg_plus_enclave_imf.3200.extent:0 "延长还款期。"
+ cg_plus_enclave_imf.3200.other:0 "重组债务"
+
+ cg_plus_enclave_imf.3210.desc:0 "您需要明白$gov_cg_IMF$不是慈善机构，请认真考虑以下宽限条件。"
+
+ cg_plus_enclave_imf.3210.a:0 "支付最低还款额"
+ cg_plus_enclave_imf.3210.a.ct:0 "支付债务最低还款额§Y[Root.cg_plus_imf_debt_portion]§!£energy£，以延长一年还款期限。"
+
+ cg_plus_enclave_imf.3210.b:0 "以特殊资源替代支付利息，延长一年还款期"
+ cg_plus_enclave_imf.3210.b.ct:0 "以$sr_christian$或$excellent_slave$1比1000£energy£替代"
+
+ cg_plus_enclave_imf.3210.c:0 "【口头说服】" 
+ cg_plus_enclave_imf.3210.c.ct:0 "尝试口头上说服延长宽限期。" 
+
+ cg_plus_enclave_imf.3210.d:0 "【行动说服】" 
+ cg_plus_enclave_imf.3210.d.ct:0 "尝试以实质行动说服延长宽限期。" 
+ 
+ cg_plus_enclave_imf.3210.e:0 "以奴隶底稍部分债务以及延长还款期" 
+ cg_plus_enclave_imf.3210.e.ct:0 "转移[Root.temp_portion_pop]个奴隶£pops£抵消[Root.cg_plus_imf_debt_portion]£energy£欠款" 
+
+
+
+
+
+ cg_plus_enclave_imf.5001.desc:0 "我们理解转移足够的能源币有一定的困难，我们愿意因能源币运输被耽搁而提供一个月的宽限期。"
+ cg_plus_enclave_imf.5002.desc:0 "我们需要再次强调，$gov_cg_IMF$不是慈善机构，这些规格以外的还款宽限期不会无条件提供。请您在下次还款期[Root.cg_plus_imf_payment_time]之前准备好应付的贷款。"
+ cg_plus_enclave_imf.5003.desc:0 "[Root.GetRulerName],你需要知道这些延期还款要求会严重影响[Root.GetName]的信贷评级以及会被追加惩罚性赔款。请你认真处理您的债务问题或是考虑我们的债务重组服务。"
+ cg_plus_enclave_imf.5004.desc:0 "[Root.GetRulerName]小姐，你已经多次使用合约规定以外的手法，想必这些手段如果在您国内曝光想必会严重影响你的声望。为了保障双方的利益，我们希望你能签下这份保密协议，确保你会在下一次期限来临前好好处理债务。"
+
+
+ cg_plus_enclave_imf.5001.o:0 "我们获得了一个月的还款宽限期。"
+ cg_plus_enclave_imf.5004.o:0 "需然获得到宽限期。。。"
+ cg_plus_enclave_imf.5004.ct:0 "被追加了惩罚性罚款。"
 
 
 

@@ -49,3 +49,28 @@ cg_plus_artist_destroy_mod_9026={
 	country_unity_produces_mult= 0.10
 
 }
+
+cg_plus_slaver_9210={
+
+	country_base_unity_produces_add = 5000
+
+}
+
+cg_plus_slaver_9220={
+
+	country_base_love_juices_produces_add = 1000
+
+}
+
+cg_plus_slaver_9230={
+
+	ROBOT_species_trait_points_add = 20
+	country_base_minerals_produces_add = 1000
+
+}
+
+cg_plus_slaver_9240={
+	country_alloys_produces_add = 1000
+	country_base_alloys_produces_add = 1000
+
+}
