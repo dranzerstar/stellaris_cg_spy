@@ -596,7 +596,7 @@ country_event = {
 country_event = {
 	id = cg_plus_enclave_imf.3200
 	hide_window = no
-	title = cg_plus_enclave_imf.1000.name
+	title = cg_plus_enclave_imf.3200.name
 	is_triggered_only = yes
 	diplomatic = yes
 	custom_gui = "enclave_caravaneer_window"
@@ -708,12 +708,12 @@ country_event = {
 			value = 0.05
 		}
 		floor_variable = temp_portion_pop
-
+		random_owned_leader={ save_global_event_target_as=random_sellable_leader }
 
 	}
-
+#pay interest
 	option={ name = cg_plus_enclave_imf.3210.a
-		#trigger={ check_variable={ which=cg_plus_imf_trust_level value > 0  } }
+		trigger={ check_variable={ which=cg_plus_imf_past_due_count value < 25  } }
 		custom_tooltip = cg_plus_enclave_imf.3210.a.ct
 		allow = {
 			resource_stockpile_compare = {
@@ -750,6 +750,7 @@ country_event = {
 
 
 
+# pay special resource
 	option={ name = cg_plus_enclave_imf.3210.b
 		trigger={ check_variable={ which=cg_plus_imf_trust_level value > -5 } }
 		custom_tooltip = cg_plus_enclave_imf.3210.b.ct
@@ -943,8 +944,7 @@ country_event = {
 
 	#sell pops
 	option={ name = cg_plus_enclave_imf.3210.e
-			 trigger={ 
-				 
+			 trigger={ 	 
 				 	check_variable={ which=cg_plus_imf_trust_level value <= -5 }
 					 OR={
 			 			has_policy_flag = nomore_slave_flag
@@ -992,6 +992,40 @@ country_event = {
 
 	}
 
+	#leader av
+	option={ name = cg_plus_enclave_imf.3210.f
+			 trigger={ 	 
+				 	check_variable={ which=cg_plus_imf_trust_level value <= -5 }
+					 check_variable={ which=cg_plus_imf_past_due_count value > 20 }
+				 
+			 }
+			 custom_tooltip = cg_plus_enclave_imf.3210.f.ct
+
+
+			hidden_effect={
+				country_event={  id=cg_plus_enclave_imf.3200 days = 360 }
+				country_event={ id=cg_plus_enclave_imf.5004  }
+
+				set_saved_date = { key = cg_plus_imf_payment_time days_from_present = 360 }
+				subtract_variable = {
+					which = cg_plus_imf_debt
+					value = 50000
+				}
+				subtract_variable = {
+					which = cg_plus_imf_trust_level
+					value = 1
+				}
+				change_variable = {
+					which = cg_plus_imf_past_due_count
+					value = 1
+				}
+			}
+			}
+
+	# random
+
+	#sell ruler
+
 
 	option={ name=reconsider country_event= {id=cg_plus_enclave_imf.3200 } }
 
@@ -1000,7 +1034,7 @@ country_event = {
 	}
 }
 
-#3220
+#3220 债务重组
 country_event = {
 	id = cg_plus_enclave_imf.3220
 	hide_window = no
@@ -1123,21 +1157,44 @@ country_event = {
 		}
 	}
 
-	# make resort
+	
 
 
 	# switch to all slave
 	option = {
 		name = cg_plus_enclave_imf.3220.e
 		custom_tooltip= cg_plus_enclave_imf.3220.e
+		trigger={ check_variable={ which=cg_plus_imf_past_due_count value > 25  } 
+					NOT={ has_valid_civic =  }
+				}
+		hidden_effect={
+			force_add_civic =
 
 
-
+		}
+		
 
 
 		
 	}
 
+
+	# make resort f
+	option = {
+		name = cg_plus_enclave_imf.3220.f
+		custom_tooltip= cg_plus_enclave_imf.3220.f
+		trigger={ check_variable={ which=cg_plus_imf_past_due_count value > 15  }
+					NOT={ has_country_flag = cg_plus_imf_resort_agrement } }
+		hidden_effect={
+			set_country_flag = cg_plus_imf_resort_agrement
+		}
+		effect={
+			begin_event_chain= { event_chain = cg_plus_enclave_imf_cg_resort_chain target = Root }
+		}
+
+
+		
+	}
 
 
 

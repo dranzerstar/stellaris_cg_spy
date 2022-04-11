@@ -401,6 +401,23 @@ country_event = {
 		name =  cg_plus_enclave_slaver.0102.list.05
 		country_event = { id = cg_plus_enclave_slaver.0205 }
 	}
+	
+	option={
+		name= cg_plus_enclave_slaver.0102.list.empty
+		trigger = {
+			event_target:cg_plus_slaver_country ={
+				NAND={
+					has_country_flag = slave_01_filled
+					has_country_flag = slave_02_filled
+					has_country_flag = slave_03_filled
+					has_country_flag = slave_04_filled	
+					has_country_flag = slave_05_filled  
+				}
+			}
+		}
+		is_dialog_only=yes
+		response_text=cg_plus_enclave_slaver.0102.desc
+	}
 
 
 
@@ -2860,7 +2877,7 @@ country_event = {
 	trigger = { exists = event_target:cg_plus_slaver_captured_ruler      }
 	immediate={
 		this.ruler={ save_global_event_target_as =  original_ruler         }
-		set_leader = event_target:cg_plus_slaver_captured_ruler
+		#set_leader = event_target:cg_plus_slaver_captured_ruler
 
 
 	}

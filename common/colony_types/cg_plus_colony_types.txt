@@ -1,0 +1,16 @@
+# cg Resort World
+col_cg_resort = {
+	icon = GFX_colony_type_resort
+
+	potential = {
+		has_modifier = cg_resort_colony
+	}
+
+	planet_modifier = {
+		planet_housing_add = 10
+	}
+
+	weight_modifier = {
+		base = 1000
+	}
+}

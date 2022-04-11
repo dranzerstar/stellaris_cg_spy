@@ -448,6 +448,7 @@
  cg_plus_enclave_slaver.0102.list.03:0 "牢屋 三"
  cg_plus_enclave_slaver.0102.list.04:0 "牢屋 四"
  cg_plus_enclave_slaver.0102.list.05:0 "牢屋 五"
+ cg_plus_enclave_slaver.0102.list.empty:0 "暂无商品"
  cg_plus_enclave_slaver.0201.name:0 "[cg_plus_slaver_captured_01.GetName]的牢屋"
  cg_plus_enclave_slaver.0201.desc:0 "名称：[cg_plus_slaver_captured_01.GetName]\n原国家：[cg_plus_slaver_captured_01_origin.GetName]\n种族：[cg_plus_slaver_captured_01.Species.GetName]\n原职业：[cg_plus_slaver_captured_01.GetLeaderType]"
  cg_plus_enclave_slaver.0202.name:0 "[cg_plus_slaver_captured_02.GetName]的牢屋"

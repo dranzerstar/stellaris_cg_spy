@@ -1,0 +1,15 @@
+cg_plus_enclave_imf_cg_resort_chain = {
+	picture = GFX_evt_ship_in_orbit
+	icon = "gfx/interface/icons/situation_log/situation_log_quest.dds"
+	counter = {
+		cg_resort_world_built = {
+				max = 1
+		}
+		cg_park_built={
+				max = 3
+		}
+		cg_casino_built={
+				max = 3 
+		}
+	}
+}

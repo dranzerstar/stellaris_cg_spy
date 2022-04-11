@@ -74,3 +74,15 @@ cg_plus_slaver_9240={
 	country_base_alloys_produces_add = 1000
 
 }
+
+
+cg_resort_colony = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_resort_planet.dds"
+	icon_frame = 1
+	pop_environment_tolerance = 1
+	job_clerk_per_pop = 0.5
+	custom_tooltip = cg_ #resort_colony_empire_effects
+	show_only_custom_tooltip = no
+	# This only works on timed planet modifiers!
+	apply_modifier_to_other_planets = resort_colony_other_planets
+}
