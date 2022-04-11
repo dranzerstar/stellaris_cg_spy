@@ -776,7 +776,7 @@ cg_plus_enclave_slaver.9101.desc:0 "别以为你买下我就能为所欲为！"
  cg_plus_slaver_9230:0 "战利品回购"
 
 
-
+ cg_plus_enclave_slaver.9240.name.o:0 "原始种族的女王"
  cg_plus_enclave_slaver.9240.name:0 "原始种族的女王"
  cg_plus_enclave_slaver.9240.desc:0 "为了开发境内的原始人星球，我们决定为他们准备了一份大礼物，想必酋长收到这个豪华新孕袋一定会欢喜若狂，立即同意我们接下来的星球开发任务。\n§P[cg_plus_slaver_captured_ruler.GetName]§!：「我是千年王国前女王，如今的千年淫后§P[cg_plus_slaver_captured_ruler.GetName]§!，今晚，奉酋长陛下的旨意，轮奸受孕，我体内的黑水晶从昨天已经开始强制我的输卵管排卵，娼馆的医疗组确认过，若是我今晚被轮奸，怀孕几率将会接近100%，由于银水晶的加护，我怀孕后诞下的必然是女婴，请……请尽情在我的淫穴里内射，把尽量多的精子注射到我被污染过的子宫内，把……把我这头母猪的肚子肏大……根据《千年王国献身条约》，我生下的小公主由淫帝陛下把年龄在两年内催熟至14岁，和我这个母亲一样，终生沦为帝国的公主性奴，一起供人奸弄淫欲……千年王国的女人，包括我们母女，最后全部都要被帝国搞大肚子，无一幸免！」"
  g_plus_enclave_slaver.9240.o:0 "好耶"
@@ -853,7 +853,7 @@ cg_plus_enclave_slaver.9101.desc:0 "别以为你买下我就能为所欲为！"
  cg_plus_enclave_imf.3200.desc:0 "您的还款期限已到，所需还款额为：§Y[Root.cg_plus_imf_debt]§!£energy£"
 
 
-
+ cg_plus_enclave_imf.3200.name:0 "支付通知"
  cg_plus_enclave_imf.3200.extent:0 "延长还款期。"
  cg_plus_enclave_imf.3200.other:0 "重组债务"
 
@@ -878,6 +878,39 @@ cg_plus_enclave_slaver.9101.desc:0 "别以为你买下我就能为所欲为！"
 
 
 
+
+
+
+
+ cg_plus_enclave_imf.3200.name:0 "REPLACE_ME"
+ cg_plus_enclave_imf.3210.f:0 "REPLACE_ME"
+ cg_plus_enclave_imf.3210.f.ct:0 "REPLACE_ME"
+ cg_plus_enclave_imf.3210.g:0 "REPLACE_ME"
+ cg_plus_enclave_imf.3210.g.ct:0 "REPLACE_ME"
+ cg_plus_enclave_imf.3220.a:0 "REPLACE_ME"
+ cg_plus_enclave_imf.3220.b:0 "REPLACE_ME"
+ cg_plus_enclave_imf.3220.c:0 "REPLACE_ME"
+ cg_plus_enclave_imf.3220.d:0 "REPLACE_ME"
+ cg_plus_enclave_imf.3220.e:0 "REPLACE_ME"
+ cg_plus_enclave_imf.3220.f:0 "REPLACE_ME"
+ cg_plus_enclave_imf_cg_resort_chain_title:0 "REPLACE_ME"
+ cg_plus_enclave_imf_cg_resort_chain_desc:0 "REPLACE_ME"
+ cg_plus_enclave_imf.5500.desc:0 "REPLACE_ME"
+ cg_plus_enclave_imf.5500.o:0 "REPLACE_ME"
+ cg_plus_enclave_imf.5500.ct:0 "REPLACE_ME"
+ cg_plus_enclave_imf.5501.name:0 "REPLACE_ME"
+ cg_plus_enclave_imf.5501.desc:0 "REPLACE_ME"
+
+ col_cg_resort:0 "REPLACE_ME"
+ col_cg_resort_desc:0 "REPLACE_ME"
+ cg_resort_colony:0 "REPLACE_ME"
+ cg_resort_colony_desc:0 "REPLACE_ME"
+ cg_resort_world_built:0 "REPLACE_ME"
+ cg_park_built:0 "REPLACE_ME"
+ cg_casino_built:0 "REPLACE_ME"
+
+
+
  cg_plus_enclave_imf.5001.desc:0 "我们理解转移足够的能源币有一定的困难，我们愿意因能源币运输被耽搁而提供一个月的宽限期。"
  cg_plus_enclave_imf.5002.desc:0 "我们需要再次强调，$gov_cg_IMF$不是慈善机构，这些规格以外的还款宽限期不会无条件提供。请您在下次还款期[Root.cg_plus_imf_payment_time]之前准备好应付的贷款。"
  cg_plus_enclave_imf.5003.desc:0 "[Root.GetRulerName],你需要知道这些延期还款要求会严重影响[Root.GetName]的信贷评级以及会被追加惩罚性赔款。请你认真处理您的债务问题或是考虑我们的债务重组服务。"
@@ -887,7 +920,3 @@ cg_plus_enclave_slaver.9101.desc:0 "别以为你买下我就能为所欲为！"
  cg_plus_enclave_imf.5001.o:0 "我们获得了一个月的还款宽限期。"
  cg_plus_enclave_imf.5004.o:0 "需然获得到宽限期。。。"
  cg_plus_enclave_imf.5004.ct:0 "被追加了惩罚性罚款。"
-
-
-
-

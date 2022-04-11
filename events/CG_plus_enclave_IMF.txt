@@ -957,7 +957,7 @@ country_event = {
 			 }
 			 custom_tooltip = cg_plus_enclave_imf.3210.e.ct
 			hidden_effect = {
-
+				country_event={ id=cg_plus_enclave_imf.5005  }
 
 				while = {
 					count=temp_portion_pop
@@ -984,6 +984,10 @@ country_event = {
 					which = cg_plus_imf_past_due_count
 					value = 1
 				}
+				change_variable = {
+					which = cg_plus_imf_interest
+					value = 0.02
+				}
 			}
 
 
@@ -992,19 +996,20 @@ country_event = {
 
 	}
 
-	#leader av
+	#random leader av
 	option={ name = cg_plus_enclave_imf.3210.f
 			 trigger={ 	 
 				 	check_variable={ which=cg_plus_imf_trust_level value <= -5 }
-					 check_variable={ which=cg_plus_imf_past_due_count value > 20 }
+					 check_variable={ which=cg_plus_imf_past_due_count value > 15 }
+					 check_variable={ which=cg_plus_imf_past_due_count value <= 25 }
 				 
 			 }
 			 custom_tooltip = cg_plus_enclave_imf.3210.f.ct
-
+			 # event_target:random_sellable_leader
 
 			hidden_effect={
 				country_event={  id=cg_plus_enclave_imf.3200 days = 360 }
-				country_event={ id=cg_plus_enclave_imf.5004  }
+				country_event={ id=cg_plus_enclave_imf.5006  }
 
 				set_saved_date = { key = cg_plus_imf_payment_time days_from_present = 360 }
 				subtract_variable = {
@@ -1019,12 +1024,50 @@ country_event = {
 					which = cg_plus_imf_past_due_count
 					value = 1
 				}
-			}
-			}
+				change_variable = {
+					which = cg_plus_imf_interest
+					value = 0.03
+				}
 
-	# random
+			}
+		}
+
+	# 
 
 	#sell ruler
+	option={ name = cg_plus_enclave_imf.3210.g
+		trigger={ 	 
+				check_variable={ which=cg_plus_imf_trust_level value <= -5 }
+				check_variable={ which=cg_plus_imf_past_due_count value > 25 }
+			
+		}
+		custom_tooltip = cg_plus_enclave_imf.3210.g.ct
+		# event_target:random_sellable_leader
+
+	hidden_effect={
+		country_event={  id=cg_plus_enclave_imf.3200 days = 360 }
+		country_event={ id=cg_plus_enclave_imf.5007  }
+
+		set_saved_date = { key = cg_plus_imf_payment_time days_from_present = 360 }
+		subtract_variable = {
+			which = cg_plus_imf_debt
+			value = 50000 # <-adjust this
+		}
+		subtract_variable = {
+			which = cg_plus_imf_trust_level
+			value = 1
+		}
+		change_variable = {
+			which = cg_plus_imf_past_due_count
+			value = 1
+		}
+		change_variable = {
+			which = cg_plus_imf_interest
+			value = 0.03
+		}
+
+	}
+	}
 
 
 	option={ name=reconsider country_event= {id=cg_plus_enclave_imf.3200 } }
@@ -1063,6 +1106,9 @@ country_event = {
 			NOT = {	has_country_flag=cg_plus_imf_zc_use_slaves  }
 
 		}
+		# 55xx
+		country_event={ id=cg_plus_enclave_imf.5500 }
+	
 		hidden_effect = {
 			set_country_flag = cg_plus_imf_zc_use_slaves
 			set_policy = {
@@ -1087,11 +1133,14 @@ country_event = {
 		allow={
 			#NOT = {	has_country_flag=cg_plus_imf_zc_sex_slaves  }
 		}
+
 		hidden_effect = {
 			set_country_flag = cg_plus_imf_zc_sex_slaves
 			give_technology = {
 				tech = tech_sex_slave_train
 			}
+
+			country_event={ id=cg_plus_enclave_imf.5501 }
 			set_policy = {
 				policy = slave_how_to_use 
 				option = CG_sex_slave_treatment
@@ -1121,6 +1170,7 @@ country_event = {
 				has_policy_flag=most_slave_flag
 			}
 		}
+		country_event={ id=cg_plus_enclave_imf.5502 }
 		hidden_effect = {
 			set_country_flag = cg_plus_imf_zc_force_slave
 
@@ -1143,6 +1193,7 @@ country_event = {
 			NOT = {	has_country_flag=cg_plus_imf_zc_use_bunny  }
 
 		}
+		country_event={ id=cg_plus_enclave_imf.5503 }
 		hidden_effect = {
 			set_country_flag = cg_plus_imf_zc_use_bunny
 			
@@ -1151,7 +1202,7 @@ country_event = {
 				option = bunny_uniform
 				cooldown = yes
 			}
-			subtract_variable = {
+			multiply_variable = {
 				  which = cg_plus_imf_debt value = 0.7  
 			}
 		}
@@ -1165,13 +1216,14 @@ country_event = {
 		name = cg_plus_enclave_imf.3220.e
 		custom_tooltip= cg_plus_enclave_imf.3220.e
 		trigger={ check_variable={ which=cg_plus_imf_past_due_count value > 25  } 
-					NOT={ has_valid_civic =  }
+					NOT={ has_valid_civic = civic_all_slave   }
 				}
-		hidden_effect={
-			force_add_civic =
 
+		country_event={ id=cg_plus_enclave_imf.5504 }
+		# c event to all slave civic
+		# force_add_civic = civic_all_slave 
+		# all slave reduce 0.3 debt
 
-		}
 		
 
 
@@ -1188,10 +1240,11 @@ country_event = {
 		hidden_effect={
 			set_country_flag = cg_plus_imf_resort_agrement
 		}
-		effect={
-			begin_event_chain= { event_chain = cg_plus_enclave_imf_cg_resort_chain target = Root }
-		}
-
+		
+		begin_event_chain= { event_chain = cg_plus_enclave_imf_cg_resort_chain target = Root }
+		
+		country_event={ id=cg_plus_enclave_imf.5505 }
+		# desc quest, add to debt, reduce debt when quest chain complete
 
 		
 	}
@@ -1254,7 +1307,8 @@ country_event = {
 
 
 # 5xxx H pay events
-
+# 50xx delay pay events
+# 55xx reorganize debt events
 country_event = {
 	id = cg_plus_enclave_imf.5001
 	is_triggered_only = yes
@@ -1314,4 +1368,51 @@ country_event = {
 
 	}
 
+}
+
+
+
+# 55xx
+
+
+country_event = {
+	id = cg_plus_enclave_imf.5500
+	is_triggered_only = yes
+	title =  cg_plus_enclave_imf.5500.desc
+	picture = GFX_evt_imf_5004
+	desc = cg_plus_enclave_imf.5500.desc
+
+	option = {
+		name = cg_plus_enclave_imf.5500.o
+		custom_tooltip = cg_plus_enclave_imf.5500.ct
+		hidden_effect = {
+			change_variable = {
+				which = cg_plus_imf_debt
+				value = 10000
+			}
+		}
+
+	}
+}
+
+country_event = {
+	id = cg_plus_enclave_imf.5501
+	#training_obidence_training
+	title =  cg_plus_enclave_imf.5501.name
+	desc =  cg_plus_enclave_imf.5501.desc
+	is_triggered_only = yes
+
+	diplomatic = yes
+	custom_gui = "cg_plus_evt_menu_enclave_p"
+	custom_gui_option = "cg_plus_evt_menu_button_e"
+	#TODO
+	immediate={
+		set_variable =  { which=cg_plus_enclave_evt_pic  value=5501  }
+	}
+	option = {
+		name = g_plus_enclave_slaver.9240.o
+		add_modifier = {
+			modifier = cg_plus_slaver_9240
+		}
+	}
 }

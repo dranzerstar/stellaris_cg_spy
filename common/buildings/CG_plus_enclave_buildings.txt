@@ -48,3 +48,67 @@ building_283p_nightclub = {
 		}
 	}
 }
+
+
+
+#resort
+
+# potential = {
+# 	has_modifier = resort_colony
+# }
+building_resort_nightclub = {
+	base_buildtime = 480
+	category = resource
+	can_build = no
+
+	#qs产业化
+	potential = {
+		has_modifier = resort_colony
+	}
+	ai_resource_production = {
+		trigger = {
+			always = yes
+		}
+		energy = 200
+	}
+	planet_modifier = {
+		job_prostitute_add = 5
+		job_nojob_sexslave_per_pop = 0.2
+	}
+	triggered_desc = {
+		text = job_prostitute_effect_desc
+	}
+	triggered_desc = {
+		text = job_nojob_sexslave_effect_desc
+	}
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 540
+		}
+		upkeep = {
+			energy = 5
+		}
+	}
+	on_built = {
+		hidden_effect = {
+			if={ limit={ owner={has_event_chain = cg_plus_enclave_imf_cg_resort_chain} }
+				owner={
+						add_event_chain_counter={ 
+							event_chain = cg_plus_enclave_imf_cg_resort_chain 
+							counter = cg_resort_world_built # cg_park_built
+							amount = 1 
+						}
+				}
+			}
+		}
+	}
+
+	destroy_trigger = {
+		owner = {
+			NOT = {
+				has_country_flag = carnalism_flag
+			}
+		}
+	}
+}

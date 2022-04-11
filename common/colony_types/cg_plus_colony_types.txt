@@ -11,6 +11,6 @@ col_cg_resort = {
 	}
 
 	weight_modifier = {
-		base = 1000
+		base = 1500
 	}
 }

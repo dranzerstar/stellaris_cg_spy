@@ -33,6 +33,7 @@ cg_plus_artist_destroy_mod_9023={
 	
 
 	planet_pop_happiness=0.10
+	
 	country_unity_produces_mult= 0.10
 
 }
@@ -81,8 +82,8 @@ cg_resort_colony = {
 	icon_frame = 1
 	pop_environment_tolerance = 1
 	job_clerk_per_pop = 0.5
-	custom_tooltip = cg_ #resort_colony_empire_effects
+	custom_tooltip = cg_resort_colony #resort_colony_empire_effects
 	show_only_custom_tooltip = no
 	# This only works on timed planet modifiers!
-	apply_modifier_to_other_planets = resort_colony_other_planets
+	#apply_modifier_to_other_planets = resort_colony_other_planets
 }

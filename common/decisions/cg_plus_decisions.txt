@@ -3,9 +3,7 @@
 decision_resort_colony = {
 	owned_planets_only = yes
 
-	prerequisites = {
-		
-	}
+
 
 	resources = {
 		category = decisions
@@ -15,14 +13,16 @@ decision_resort_colony = {
 	}
 
 	potential = {
-		has_country_flag=cg_plus_imf_resort_agrement
+		
 		is_capital = no
 		NOT = { has_modifier = penal_colony }
 		NOT = { has_modifier = slave_colony }
 		NOT = { has_modifier = resort_colony }
+		NOT = { has_modifier = cg_resort_colony }
 		NOT = { is_planet_class = pc_city }
 		owner = {
 			is_regular_empire = yes
+			has_country_flag=cg_plus_imf_resort_agrement
 		}
 		is_artificial = no
 	}
@@ -30,7 +30,7 @@ decision_resort_colony = {
 	allow = {
 		planet_size >= 15
 		custom_tooltip = {
-			fail_text = decision_cg_resort_colony_no_districts
+			fail_text = decision_resort_colony_no_districts
 			num_districts = { type = any value < 1 }
 			num_buildings = { type = any value < 2 }
 		}
@@ -43,15 +43,24 @@ decision_resort_colony = {
 
 	effect = {
 		add_modifier = {
+			modifier = resort_colony
+			days = -1
+		}
+		add_modifier = {
 			modifier = cg_resort_colony
 			days = -1
 		}
+
 		hidden_effect = {
 			remove_building = building_colony_shelter
-			if={ has_event_chain = cg_plus_enclave_imf_cg_resort_chain
-				add_event_chain_counter={ event_chain = cg_plus_enclave_imf_cg_resort_chain 
-				counter = cg_resort_world_built
-				ammount = 1 }
+			if={ limit={ owner={has_event_chain = cg_plus_enclave_imf_cg_resort_chain} }
+				owner={
+						add_event_chain_counter={ 
+							event_chain = cg_plus_enclave_imf_cg_resort_chain 
+							counter = cg_resort_world_built
+							amount = 1 
+						}
+				}
 			}
 			add_building = building_resort_capital
 			remove_all_districts  = yes
