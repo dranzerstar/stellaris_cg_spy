@@ -228,7 +228,12 @@ spriteTypes = {
 	}
 
 
-
+	spriteType = {
+		name = "GFX_evt_imf_5005"
+		texturefile = "gfx/event_pictures/enclaves_evt/imf_5005.dds" 
+		masking_texture = "gfx/interface/situation_log/event_mask.dds"
+		alwaystransparent = yes
+	}
 
 
 

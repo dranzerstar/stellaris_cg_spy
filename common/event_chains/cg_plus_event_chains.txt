@@ -5,10 +5,14 @@ cg_plus_enclave_imf_cg_resort_chain = {
 		cg_resort_world_built = {
 				max = 1
 		}
-		cg_park_built={
+		cg_resort_club_built={
 				max = 2
 		}
-		cg_casino_built={
+
+		cg_resort_park_built={
+				max = 2
+		}
+		cg_resort_casino_built={
 				max = 2 
 		}
 	}

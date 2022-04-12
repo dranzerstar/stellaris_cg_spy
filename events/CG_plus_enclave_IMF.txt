@@ -1222,7 +1222,7 @@ country_event = {
 	
 		
 		begin_event_chain= { event_chain = cg_plus_enclave_imf_cg_resort_chain target = Root }
-		
+			#5515 completed
 		country_event={ id=cg_plus_enclave_imf.5505 days= 30}
 		# desc quest, add to debt, reduce debt when quest chain complete
 
@@ -1371,6 +1371,24 @@ country_event = {
 	}
 
 }
+#sellpop
+country_event = {
+	id = cg_plus_enclave_imf.5005
+	is_triggered_only = yes
+	title =  cg_plus_enclave_imf.5005.name
+	picture = GFX_evt_imf_5005
+	desc = cg_plus_enclave_imf.5005.desc
+
+	option = {
+		name = cg_plus_enclave_imf.5005.o
+		
+
+
+	}
+
+}
+
+
 
 
 

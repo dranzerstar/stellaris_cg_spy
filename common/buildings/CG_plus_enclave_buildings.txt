@@ -65,14 +65,8 @@ building_resort_nightclub = {
 	potential = {
 		has_modifier = resort_colony
 	}
-	ai_resource_production = {
-		trigger = {
-			always = yes
-		}
-		energy = 200
-	}
 	planet_modifier = {
-		job_prostitute_add = 5
+		job_resortprostitute_add = 5
 		job_nojob_sexslave_per_pop = 0.2
 	}
 	triggered_desc = {
@@ -96,9 +90,10 @@ building_resort_nightclub = {
 				owner={
 						add_event_chain_counter={ 
 							event_chain = cg_plus_enclave_imf_cg_resort_chain 
-							counter = cg_resort_world_built # cg_park_built
+							counter = cg_resort_club_built # cg_park_built
 							amount = 1 
 						}
+						check_resort_chain_complete=yes
 				}
 			}
 		}

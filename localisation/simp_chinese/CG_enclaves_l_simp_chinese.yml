@@ -919,9 +919,9 @@ cg_plus_enclave_slaver.9101.desc:0 "别以为你买下我就能为所欲为！"
  cg_resort_colony_desc:0 "REPLACE_ME"
 
  cg_resort_world_built:0 "REPLACE_ME"
- cg_park_built:0 "REPLACE_ME"
- cg_casino_built:0 "REPLACE_ME"
-
+ cg_resort_park_built:0 "REPLACE_ME"
+ cg_resort_casino_built:0 "REPLACE_ME"
+ cg_resort_club_built:0 "REPLACE_ME"
 
 
  cg_plus_enclave_imf.5001.desc:0 "我们理解转移足够的能源币有一定的困难，我们愿意因能源币运输被耽搁而提供一个月的宽限期。"
@@ -933,7 +933,18 @@ cg_plus_enclave_slaver.9101.desc:0 "别以为你买下我就能为所欲为！"
  cg_plus_enclave_imf.5001.o:0 "我们获得了一个月的还款宽限期。"
  cg_plus_enclave_imf.5004.o:0 "需然获得到宽限期。。。"
  cg_plus_enclave_imf.5004.ct:0 "被追加了惩罚性罚款。"
+ 
+ cg_plus_enclave_imf.5005.name:0 "出售奴隶"
+ cg_plus_enclave_imf.5005.desc:0 "在别无他选下，我们以出售奴隶£pops£抵消了[Root.cg_plus_imf_debt_portion]£energy£欠款"
+ cg_plus_enclave_imf.5005.o:0 "得赶紧把贷款还清"
 
+ cg_plus_enclave_imf.5006.name:0 "[]"
+ cg_plus_enclave_imf.5006.desc:0 ""
+ cg_plus_enclave_imf.5006.o:0 ""
+
+ cg_plus_enclave_imf.5007.name:0 "[]"
+ cg_plus_enclave_imf.5007.desc:0 ""
+ cg_plus_enclave_imf.5007.o:0 ""
 
  cg_plus_enclave_imf.5500.desc:0 "REPLACE_ME"
  cg_plus_enclave_imf.5500.o:0 "REPLACE_ME"
