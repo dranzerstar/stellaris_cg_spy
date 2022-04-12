@@ -607,6 +607,7 @@ country_event = {
 	}
 	trigger = {
 		check_variable={  which = cg_plus_imf_debt value > 0 } 
+		exists=event_target:cg_plus_IMF_country
 	}
 
 	desc= cg_plus_enclave_imf.3200.desc
@@ -1097,7 +1098,7 @@ country_event = {
 	#enslave
 	option = {
 		name = cg_plus_enclave_imf.3220.a
-		custom_tooltip= cg_plus_enclave_imf.3220.a
+		custom_tooltip= cg_plus_enclave_imf.3220.a.ct
 		trigger = {
 			has_policy_flag = slavery_not_allowed
 			NOT = {	has_country_flag=cg_plus_imf_zc_use_slaves  }
@@ -1107,7 +1108,7 @@ country_event = {
 
 		}
 		# 55xx
-		country_event={ id=cg_plus_enclave_imf.5500 }
+		country_event={ id=cg_plus_enclave_imf.5500 days= 30}
 	
 		hidden_effect = {
 			set_country_flag = cg_plus_imf_zc_use_slaves
@@ -1124,7 +1125,7 @@ country_event = {
 	# sex enslave
 	option = {
 		name = cg_plus_enclave_imf.3220.b
-		custom_tooltip= cg_plus_enclave_imf.3220.b
+		custom_tooltip= cg_plus_enclave_imf.3220.b.ct
 		trigger = {
 			has_policy_flag = CG_normal_treatment_flag
 			has_country_flag= carnalism_flag
@@ -1140,7 +1141,7 @@ country_event = {
 				tech = tech_sex_slave_train
 			}
 
-			country_event={ id=cg_plus_enclave_imf.5501 }
+			country_event={ id=cg_plus_enclave_imf.5501 days= 30}
 			set_policy = {
 				policy = slave_how_to_use 
 				option = CG_sex_slave_treatment
@@ -1155,10 +1156,10 @@ country_event = {
 	#force slave
 	option = {
 		name = cg_plus_enclave_imf.3220.c
-		custom_tooltip= cg_plus_enclave_imf.3220.c
+		custom_tooltip= cg_plus_enclave_imf.3220.c.ct
 		trigger = {
 			#has_policy_flag = CG_normal_treatment_flag
-			#has_country_flag= carnalism_flag
+			has_country_flag= carnalism_flag
 			NOT = {	has_country_flag=cg_plus_imf_zc_force_slave  }
 		}
 		allow={
@@ -1170,7 +1171,7 @@ country_event = {
 				has_policy_flag=most_slave_flag
 			}
 		}
-		country_event={ id=cg_plus_enclave_imf.5502 }
+		country_event={ id=cg_plus_enclave_imf.5502 days= 30}
 		hidden_effect = {
 			set_country_flag = cg_plus_imf_zc_force_slave
 
@@ -1184,7 +1185,7 @@ country_event = {
     # force bunny
 	option = {
 		name = cg_plus_enclave_imf.3220.d
-		custom_tooltip= cg_plus_enclave_imf.3220.d
+		custom_tooltip= cg_plus_enclave_imf.3220.d.ct
 		trigger = {
 			has_technology = tech_beauty_theory
 			NOT = {	has_country_flag=cg_plus_imf_zc_use_bunny  }
@@ -1193,7 +1194,7 @@ country_event = {
 			NOT = {	has_country_flag=cg_plus_imf_zc_use_bunny  }
 
 		}
-		country_event={ id=cg_plus_enclave_imf.5503 }
+		country_event={ id=cg_plus_enclave_imf.5503 days= 30}
 		hidden_effect = {
 			set_country_flag = cg_plus_imf_zc_use_bunny
 			
@@ -1209,17 +1210,35 @@ country_event = {
 	}
 
 	
+	# make resort f
+	option = {
+		name = cg_plus_enclave_imf.3220.f
+		custom_tooltip= cg_plus_enclave_imf.3220.f.ct
+		trigger={ check_variable={ which=cg_plus_imf_past_due_count value > 15  }
+					NOT={ has_country_flag = cg_plus_imf_resort_agrement } }
+		hidden_effect={
+			set_country_flag = cg_plus_imf_resort_agrement
+		}
+	
+		
+		begin_event_chain= { event_chain = cg_plus_enclave_imf_cg_resort_chain target = Root }
+		
+		country_event={ id=cg_plus_enclave_imf.5505 days= 30}
+		# desc quest, add to debt, reduce debt when quest chain complete
+
+		
+	}
 
 
 	# switch to all slave
 	option = {
 		name = cg_plus_enclave_imf.3220.e
-		custom_tooltip= cg_plus_enclave_imf.3220.e
+		custom_tooltip= cg_plus_enclave_imf.3220.e.ct
 		trigger={ check_variable={ which=cg_plus_imf_past_due_count value > 25  } 
 					NOT={ has_valid_civic = civic_all_slave   }
 				}
 
-		country_event={ id=cg_plus_enclave_imf.5504 }
+		country_event={ id=cg_plus_enclave_imf.5504 days= 30}
 		# c event to all slave civic
 		# force_add_civic = civic_all_slave 
 		# all slave reduce 0.3 debt
@@ -1231,23 +1250,6 @@ country_event = {
 	}
 
 
-	# make resort f
-	option = {
-		name = cg_plus_enclave_imf.3220.f
-		custom_tooltip= cg_plus_enclave_imf.3220.f
-		trigger={ check_variable={ which=cg_plus_imf_past_due_count value > 15  }
-					NOT={ has_country_flag = cg_plus_imf_resort_agrement } }
-		hidden_effect={
-			set_country_flag = cg_plus_imf_resort_agrement
-		}
-		
-		begin_event_chain= { event_chain = cg_plus_enclave_imf_cg_resort_chain target = Root }
-		
-		country_event={ id=cg_plus_enclave_imf.5505 }
-		# desc quest, add to debt, reduce debt when quest chain complete
-
-		
-	}
 
 
 

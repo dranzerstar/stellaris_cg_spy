@@ -874,6 +874,11 @@ cg_plus_enclave_slaver.9101.desc:0 "别以为你买下我就能为所欲为！"
  cg_plus_enclave_imf.3210.e:0 "以奴隶底稍部分债务以及延长还款期" 
  cg_plus_enclave_imf.3210.e.ct:0 "转移[Root.temp_portion_pop]个奴隶£pops£抵消[Root.cg_plus_imf_debt_portion]£energy£欠款" 
 
+ cg_plus_enclave_imf.3210.f:0 "满足债权人的要求"
+ cg_plus_enclave_imf.3210.f.ct:0 "债权人对§Y[random_sellable_leader.GetName]§!非常有兴趣，并开出了债务辅助条件。"
+
+ cg_plus_enclave_imf.3210.g:0 "人仕转移要求"
+ cg_plus_enclave_imf.3210.g.ct:0 "债权人对§Y[random_sellable_leader.GetName]§!非常有兴趣，并希望你可以转移§Y[random_sellable_leader.GetName]§!的录用权。"
 
 
 
@@ -882,29 +887,37 @@ cg_plus_enclave_slaver.9101.desc:0 "别以为你买下我就能为所欲为！"
 
 
 
- cg_plus_enclave_imf.3200.name:0 "REPLACE_ME"
- cg_plus_enclave_imf.3210.f:0 "REPLACE_ME"
- cg_plus_enclave_imf.3210.f.ct:0 "REPLACE_ME"
- cg_plus_enclave_imf.3210.g:0 "REPLACE_ME"
- cg_plus_enclave_imf.3210.g.ct:0 "REPLACE_ME"
- cg_plus_enclave_imf.3220.a:0 "REPLACE_ME"
- cg_plus_enclave_imf.3220.b:0 "REPLACE_ME"
- cg_plus_enclave_imf.3220.c:0 "REPLACE_ME"
- cg_plus_enclave_imf.3220.d:0 "REPLACE_ME"
- cg_plus_enclave_imf.3220.e:0 "REPLACE_ME"
- cg_plus_enclave_imf.3220.f:0 "REPLACE_ME"
- cg_plus_enclave_imf_cg_resort_chain_title:0 "REPLACE_ME"
- cg_plus_enclave_imf_cg_resort_chain_desc:0 "REPLACE_ME"
- cg_plus_enclave_imf.5500.desc:0 "REPLACE_ME"
- cg_plus_enclave_imf.5500.o:0 "REPLACE_ME"
- cg_plus_enclave_imf.5500.ct:0 "REPLACE_ME"
- cg_plus_enclave_imf.5501.name:0 "REPLACE_ME"
- cg_plus_enclave_imf.5501.desc:0 "REPLACE_ME"
 
- col_cg_resort:0 "REPLACE_ME"
+
+ cg_plus_enclave_imf.3220.a:0 "奴隶制度合法化"
+ cg_plus_enclave_imf.3220.a.ct:0 "为了双方的利益，我们希望你可以调整阁下国家的政策，是奴隶制度合法化，提高生产利益。别担心，我们会同时提供债务轻减作为诱因。\n"
+
+ cg_plus_enclave_imf.3220.b:0 "奴隶性服务义务"
+ cg_plus_enclave_imf.3220.b.ct:0 "你要明白[Root.Species.GetName]的本钱就是自己身体，你哪能让你族白白浪费哪如此美妙的肉体？让奴隶的身体转换成利益吧。"
+
+ cg_plus_enclave_imf.3220.c:0 "强制奴役人口"
+ cg_plus_enclave_imf.3220.c.ct:0 "你们[Root.GetName]的国民们貌似对当性奴隶有着巨大的热情，何不为何不强制把部分的人口也强制成为性奴？没收是她们烦恼的能源币，成为奴隶，让她们不再操心不想操心的麻烦事。如果那么做的话，我们乐意因此而为你轻减债务。"
+
+ cg_plus_enclave_imf.3220.d:0 "调整绝艳校园课程"
+ cg_plus_enclave_imf.3220.d.ct:0 "你要知道我们的原始早先是游商，他们重娃娃起就开始学如何经商。所以我们特意希望注资绝艳学院，进行改革成培训专业的娱乐场所经营者。"
+
+ cg_plus_enclave_imf.3220.e:0 "全民性奴改革"
+ cg_plus_enclave_imf.3220.e.ct:0 "金钱使人烦恼，回去找寻那份对成为性奴的渴望，处理债务放心交给我们吧。"
+
+ cg_plus_enclave_imf.3220.f:0 "建造快乐度假星球"
+ cg_plus_enclave_imf.3220.f.ct:0 "[Root.Species.GetName]有着全宇宙也青睐的美体，不营运一个超级渡假星球，吸引全宇宙的资金那不是错失良机吗？我们现在一个建造渡假星球的方案，希望你可以好好考虑，建设的资金可以以债务的方式获得，按合约完成后可以依合约剔除，营运的利润当然也是部分归你的。"
+
+
+ cg_plus_enclave_imf_cg_resort_chain_title:0 "建设水龙敬渡假星球"
+ cg_plus_enclave_imf_cg_resort_chain_desc:0 "和$gov_cg_IMF$签订有关建造水龙敬渡假星球的合约，完成合约定名的建设就可以获得剔除部分债务。"
+
+
+
+ col_cg_resort:0 "水龙敬渡假星球" #colony_type
  col_cg_resort_desc:0 "REPLACE_ME"
- cg_resort_colony:0 "REPLACE_ME"
+ cg_resort_colony:0 "水龙敬渡假星球" #modifer
  cg_resort_colony_desc:0 "REPLACE_ME"
+
  cg_resort_world_built:0 "REPLACE_ME"
  cg_park_built:0 "REPLACE_ME"
  cg_casino_built:0 "REPLACE_ME"
@@ -920,3 +933,11 @@ cg_plus_enclave_slaver.9101.desc:0 "别以为你买下我就能为所欲为！"
  cg_plus_enclave_imf.5001.o:0 "我们获得了一个月的还款宽限期。"
  cg_plus_enclave_imf.5004.o:0 "需然获得到宽限期。。。"
  cg_plus_enclave_imf.5004.ct:0 "被追加了惩罚性罚款。"
+
+
+ cg_plus_enclave_imf.5500.desc:0 "REPLACE_ME"
+ cg_plus_enclave_imf.5500.o:0 "REPLACE_ME"
+ cg_plus_enclave_imf.5500.ct:0 "REPLACE_ME"
+
+ cg_plus_enclave_imf.5501.name:0 "REPLACE_ME"
+ cg_plus_enclave_imf.5501.desc:0 "REPLACE_ME"
