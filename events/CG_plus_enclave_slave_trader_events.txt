@@ -406,7 +406,7 @@ country_event = {
 		name= cg_plus_enclave_slaver.0102.list.empty
 		trigger = {
 			event_target:cg_plus_slaver_country ={
-				NAND={
+				NOR={
 					has_country_flag = slave_01_filled
 					has_country_flag = slave_02_filled
 					has_country_flag = slave_03_filled
@@ -2972,7 +2972,7 @@ country_event = {
 	after={
 		hidden_effect = {
 			
-			set_leader = event_target:cg_plus_slaver_captured_ruler
+			#set_leader = event_target:cg_plus_slaver_captured_ruler
 
 
 			country_event = {
@@ -2981,7 +2981,7 @@ country_event = {
 			}
 			country_event = {
 				id = cg_plus_enclave_slaver.9102
-				days = 5
+				days = 100
 			}
 		}
 	}
@@ -2993,10 +2993,14 @@ country_event={
 	hide_window = yes
 	is_triggered_only = yes
 	immediate={
-		event_target:cg_plus_slaver_captured_ruler={ unassign_leader = this }
+		#event_target:cg_plus_slaver_captured_ruler={ unassign_leader = this }
 	
-		set_leader = event_target:original_ruler         
+		set_leader = event_target:original_ruler  
+		event_target:cg_plus_slaver_country={
+			remove_country_flag = cg_plus_slaver_captured_ruler
+			clear_global_event_target = cg_plus_slaver_captured_ruler
 
+		}
 	}
 
 	after = {

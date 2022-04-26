@@ -1015,8 +1015,8 @@ cg_plus_enclave_slave_traders_init = {
 				name = "NAME_slavetrader_spec"
 				plural = "NAME_slavetrader_spec"
 				class = random_non_machine
-				
-				portrait = COLDSUC 
+				portrait = random 
+				#portrait = COLDSUC 
 
 				homeworld = this
 				effect = {
@@ -1734,10 +1734,10 @@ cg_plus_enclave_IMF_init = {
 
 	max_instances = 1
 	usage_odds = {
-		base = 100
+		base = 0
 		#temp disabled
 	}
-	spawn_chance = 100
+	spawn_chance = 0
 	
     #temp disabled
 	flags = { cg_plus_enclaves enclave cg_plus_IMF }

@@ -182,6 +182,12 @@ CG_plus_mod_add_bunny_spy_mod={
 	
 }
 
+CG_plus_mod_add_bunny_spy_envoy_mod={
+	envoys_add = 1
+	
+	
+}
+
 CG_plus_mod_add_bunny_re_bunny_mod={
 	planet_jobs_consumer_goods_produces_mult = 0.3
 	

@@ -53,7 +53,7 @@ country_event = {
 country_event = {
 	id=CG_plus_enclaves.1010
 	is_triggered_only = yes
-	
+	#fire_only_once = yes
 	hide_window = yes
 	trigger = {
 		is_country_type = default
@@ -113,6 +113,9 @@ country_event = {
 	id=CG_plus_enclaves.1014
 	is_triggered_only = yes
 	hide_window = yes
+	trigger = {
+		exists =  event_target:cg_plus_IMF_country
+	}
 	immediate = {
 		establish_communications = event_target:cg_plus_IMF_country
 	}

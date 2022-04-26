@@ -1745,9 +1745,13 @@ country_event={
 	option={
 		name= CG_plus_policy_uniform.1604.a
 		custom_tooltip =  CG_plus_policy_uniform.1604.a1
-		create_leader = {
-			name = "艳兔特工"
-			class = envoy
+		add_modifier = {
+			modifier = CG_plus_mod_add_bunny_spy_envoy_mod
+		}
+
+		random_envoy = { 
+			set_name = "艳兔特工"
+		
 		}
 
 	}
