@@ -59,7 +59,7 @@
 
  CG_plus_thief_event.510.desc.inn:0 "这里是圣歌少女的国家，所以这里对偷拍行为的就受都非常低，警觉性也较高，建议出手和脱离越快越好。"
  CG_plus_thief_event.510.desc.suc:0 "这里是魅魔的国家，非常开放，基本上是随便拍照的，你需要担心的反而是不要被抓住，被要求当她们的专属摄影师。"
- CG_plus_thief_event.510.desc.kan:0 "这里是舰娘的国家,接受度因人而异，但是因为每个人也是以兵器的身份纯在，行动还是比较小心为妙。"
+ CG_plus_thief_event.510.desc.kan:0 "这里是舰娘的国家，接受度因人而异，但是因为每个人也是以兵器的身份纯在，行动还是比较小心为妙。"
  CG_plus_thief_event.510.desc.gfl:0 "这里是仿生人形国家，其实除了一些高级主管型AI，普遍的人形都没什么危险，给点糖果就可以分散她们的注意力。"
  CG_plus_thief_event.510.desc.nyto:0 "逾期说是偷拍这个行为不被接受，我还是认为涅托本身就对外星人有非常高的警惕性，行动的时候小心为上。"
  CG_plus_thief_event.510.desc.ak:0 "这里是人型生物的国家，但是每一个人也有独特的野兽特精，所以本来就文化很多元，所以做了什么得罪本地人的时候，编个说自己是外乡人的习俗就行了。"
@@ -184,7 +184,7 @@
  CG_plus_thief_auction_screen_events.1001.desc.04:0 "拍照地点:[ptowner04.GetName]\n颜色:粉\n备注:无论如何，穿粉红的一定是个淫乱的孩子"
  CG_plus_thief_auction_screen_events.1001.desc.05:0 "拍照地点:[ptowner05.GetName]\n颜色:红\n备注:[ptowner05.GetName]贵族少女的伴次，说不好是手工定制款式，最后还是超色的"
  CG_plus_thief_auction_screen_events.1001.desc.06:0 "拍照地点:[ptowner06.GetName]\n颜色:白\n备注:听说是来自[ptowner06.GetName]的一名标兵，短裙配护甲高靴，永恒的绝配"
- CG_plus_thief_auction_screen_events.1001.desc.07:0 "拍照地点:[ptowner07.GetName]\n颜色:白\n备注:[ptowner07.GetSpeciesName]的圣骑士就是喜欢穿的轻飘飘,和被击败后节操都变得轻飘飘的一样。"
+ CG_plus_thief_auction_screen_events.1001.desc.07:0 "拍照地点:[ptowner07.GetName]\n颜色:白\n备注:[ptowner07.GetSpeciesName]的圣骑士就是喜欢穿的轻飘飘，和被击败后节操都变得轻飘飘的一样。"
  CG_plus_thief_auction_screen_events.1001.desc.08:0 "拍照地点:[ptowner08.GetName]\n颜色:黑\n备注:听说是一名[ptowner08.GetSpeciesName]的现役魔法学院的公主，但是重点不在这，而是我发现他很喜欢坐着的时候把一脚也放椅子上面，肯定是个姬，还要是个一"
  CG_plus_thief_auction_screen_events.1001.desc.09:0 "拍照地点:[ptowner09.GetName]\n颜色:黑\n备注:黑丝连身袜配白胖次，但是对不起，人家是白丝派。"
  CG_plus_thief_auction_screen_events.1001.desc.10:0 "拍照地点:[ptowner10.GetName]\n颜色:黑\n备注:黑衣皮黑皮黑伴次"

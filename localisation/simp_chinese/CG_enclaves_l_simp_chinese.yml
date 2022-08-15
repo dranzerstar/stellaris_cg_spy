@@ -236,7 +236,7 @@
  cg_plus_artist_destroy_mod_90222_desc:0 "“这副画的点睛之笔就是我捡到了她的眼睛”——一位肉泥绘画大赛获奖者"
 
  cg_plus_artist_destroy_mod_9023:0 "充满灵感的色图创作"
- cg_plus_artist_destroy_mod_9023_desc:0 "“有谁能拒绝这样的生活呢?不管是读者还是作者。"
+ cg_plus_artist_destroy_mod_9023_desc:0 "“有谁能拒绝这样的生活呢？不管是读者还是作者。"
 
  cg_plus_artist_destroy_mod_9024:0 "毒瘾精神病人的色图创作"
  cg_plus_artist_destroy_mod_9024_desc:0 "艺术家疯一点才够格。不过，现在的色图我们看不懂了。"
@@ -296,7 +296,7 @@
 
 
  cg_plus_underidol.5000.name:0 "闪耀偶像感谢祭"
- cg_plus_underidol.5000.desc:0 "巡回闪耀偶像感谢祭终于到了，[Root.GetName],身为黑金会员的[Root.GetRulerName]当然受到邀请。 这是一个可以近距离接触宇宙超级偶像的机会，机会难逢！\n当然，入场费也是黑金级的。"
+ cg_plus_underidol.5000.desc:0 "巡回闪耀偶像感谢祭终于到了，[Root.GetName]，身为黑金会员的[Root.GetRulerName]当然受到邀请。 这是一个可以近距离接触宇宙超级偶像的机会，机会难逢！\n当然，入场费也是黑金级的。"
  PARTY:0 "参加"
  NOT_NOW:0 "拒绝邀请"
 
@@ -384,12 +384,12 @@
  cg_plus_enclave_slaver.1000.name:0 "和$gov_cg_plus_slave_traders$的通信"
 
 
- cg_plus_enclave_slaver.1000.desc.a:0 "欢迎来到，$gov_cg_plus_slave_traders$ ,[Root.GetRulerName],有看上哪一只可爱的小猫咪吗？"
- cg_plus_enclave_slaver.1000.desc.b:0 "欢迎来到，$gov_cg_plus_slave_traders$ ,[Root.GetRulerName],有看上哪一国的公主了吗？"
+ cg_plus_enclave_slaver.1000.desc.a:0 "欢迎来到，$gov_cg_plus_slave_traders$ ，[Root.GetRulerName]，有看上哪一只可爱的小猫咪吗？"
+ cg_plus_enclave_slaver.1000.desc.b:0 "欢迎来到，$gov_cg_plus_slave_traders$ ，[Root.GetRulerName]，有看上哪一国的公主了吗？"
  cg_plus_enclave_slaver.1000.desc.c:0 "[Root.GetRulerName]，我能保证这里的商品都是受过专业调教，贴贴服服的优质品，当然除了你有另类的要求。"
  cg_plus_enclave_slaver.1000.desc.d:0 "无论是最倔强的女骑士，最圣洁的修女在经过这里的调教也会成为最服从爱玩奴隶。"
 
- cg_plus_enclave_slaver.1999.desc.a:0 "欢迎来到，$gov_cg_plus_slave_traders$ ,[Root.GetRulerName]。你可以在这里找到来自整个宇宙中的宠物。"
+ cg_plus_enclave_slaver.1999.desc.a:0 "欢迎来到，$gov_cg_plus_slave_traders$ ，[Root.GetRulerName]。你可以在这里找到来自整个宇宙中的宠物。"
  cg_plus_enclave_slaver.1999.a.o:0 "有女骑士吗？"
  cg_plus_enclave_slaver.1999.a.r:0 "都有都有，记得经常来我们的太空站看看。"
  cg_plus_enclave_slaver.1999.b.o:0 "可恶的人贩子！"
@@ -603,7 +603,7 @@
 
 
 
- cg_plus_enclave_slaver.1900:0 "我们这边找到一些新的小动物,要来看看吗？她们可是可遇不可求喔。"
+ cg_plus_enclave_slaver.1900:0 "我们这边找到一些新的小动物，要来看看吗？她们可是可遇不可求喔。"
  cg_plus_enclave_slaver.1900.a:0 "现在就看看吧!"
 
 
@@ -647,11 +647,11 @@ cg_plus_enclave_slaver.7310.a:0 "[buy_target.GetName]将成为我们！"
 cg_plus_enclave_slaver.7310.b:0 "成为便器吧！"
 cg_plus_enclave_slaver.7310.c:0 "让圣光灌注[buy_target.GetName]"
 
-cg_plus_enclave_slaver.7410.desc:0 "记录#7410\n星海整容助手Max7Pro,为了服务。请选择需要的体型和样貌，星海整容助手Max7Pro别定能把能把宇宙中最丑的生物也能变得完美无瑕！（机器详细使用请按F11建查看长达423的说明书，和341页的可能出现异常状况。）"
+cg_plus_enclave_slaver.7410.desc:0 "记录#7410\n星海整容助手Max7Pro，为了服务。请选择需要的体型和样貌，星海整容助手Max7Pro别定能把能把宇宙中最丑的生物也能变得完美无瑕！（机器详细使用请按F11建查看长达423的说明书，和341页的可能出现异常状况。）"
 
 cg_plus_enclave_slaver.7410.a:0 "我最喜欢萝莉了！"
 cg_plus_enclave_slaver.7410.b:0 "工口小屁孩！"
-cg_plus_enclave_slaver.7410.c:0 "諸君,我喜欢巨乳"
+cg_plus_enclave_slaver.7410.c:0 "諸君，我喜欢巨乳"
 cg_plus_enclave_slaver.7410.d:0 "淫堕魔大喜"
 cg_plus_enclave_slaver.7410.e:0 "人均1000岁精灵处女"
 cg_plus_enclave_slaver.7410.end:0 "确定要这个"
@@ -841,7 +841,7 @@ cg_plus_enclave_slaver.9101.desc:0 "别以为你买下我就能为所欲为！"
  cg_plus_enclave_imf_paydebt:0 "偿还全数欠款!"
 
 
- cg_plus_enclave_imf.1040.desc:0 "经过重新检视您所提交的资料,bing"
+ cg_plus_enclave_imf.1040.desc:0 "经过重新检视您所提交的资料，bing"
 
 
 
@@ -926,7 +926,7 @@ cg_plus_enclave_slaver.9101.desc:0 "别以为你买下我就能为所欲为！"
 
  cg_plus_enclave_imf.5001.desc:0 "我们理解转移足够的能源币有一定的困难，我们愿意因能源币运输被耽搁而提供一个月的宽限期。"
  cg_plus_enclave_imf.5002.desc:0 "我们需要再次强调，$gov_cg_IMF$不是慈善机构，这些规格以外的还款宽限期不会无条件提供。请您在下次还款期[Root.cg_plus_imf_payment_time]之前准备好应付的贷款。"
- cg_plus_enclave_imf.5003.desc:0 "[Root.GetRulerName],你需要知道这些延期还款要求会严重影响[Root.GetName]的信贷评级以及会被追加惩罚性赔款。请你认真处理您的债务问题或是考虑我们的债务重组服务。"
+ cg_plus_enclave_imf.5003.desc:0 "[Root.GetRulerName]，你需要知道这些延期还款要求会严重影响[Root.GetName]的信贷评级以及会被追加惩罚性赔款。请你认真处理您的债务问题或是考虑我们的债务重组服务。"
  cg_plus_enclave_imf.5004.desc:0 "[Root.GetRulerName]小姐，你已经多次使用合约规定以外的手法，想必这些手段如果在您国内曝光想必会严重影响你的声望。为了保障双方的利益，我们希望你能签下这份保密协议，确保你会在下一次期限来临前好好处理债务。"
 
 
